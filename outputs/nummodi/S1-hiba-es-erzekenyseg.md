@@ -3,7 +3,7 @@ tags: [synthesis]
 sources: [tetel-01-lebegopont.md, tetel-02-hibaszamitas.md, tetel-13-matrixnormak-1.md, tetel-14-matrixnormak-2.md, tetel-15-frobenius-norma.md, tetel-16-ler-erzekenysege-jobboldal.md, tetel-17-ler-erzekenysege-matrix.md]
 updated: 2026-06-09
 ---
-p
+
 # S1 – Hiba és érzékenység
 
 Egyetlen szál fűzi össze a hét tételt: **a pontatlanság mérése a bittől a rendszerig — a relatív hiba és annak felerősödése.** Ugyanaz a kérdés tér vissza három egyre magasabb szinten: mekkora *erősítési faktorral* terjed tovább egy kis relatív hiba, és mikor robban fel.
