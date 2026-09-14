@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.1.1–4.1.3. Tétel, 4.2. viii)–ix), xii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Differenciálási szabályok több változóban
@@ -53,6 +53,24 @@ Ha $f \in \mathbb{R}^n \to \mathbb{R}^m$, $f \in D\{a\}$ és $A \in \mathbb{R}^{
 $$F'(a) = A f'(a).$$
 
 Az indoklás a mátrixnorma szubmultiplikativitása: $\|A\eta(h)\|_\bullet \le \|A\|_{(\bullet,*)}\|\eta(h)\|_* \to 0$. Speciális esetként a [[concepts/analiii/koordinatafuggvenyek-differencialhatosaga|koordinátafüggvények]] deriváltjait kapjuk, ha $A$ egy sorvektor.
+
+### Polinom- és racionális törtfüggvények
+
+A fenti szabályok azonnali következménye, hogy két nagy függvényosztály mindig — feltétel-ellenőrzés nélkül — differenciálható.
+
+Egy $P \colon \mathbb{R}^n \to \mathbb{R}$ függvény **$n$-változós polinomfüggvény**, ha véges sok tagú összeg alakjában írható:
+
+$$P(x) := \sum_{i_1,\dots,i_n} a_{i_1\dots i_n}\, x_1^{i_1}\cdots x_n^{i_n} \qquad (x \in \mathbb{R}^n),$$
+
+ahol az $a_{i_1\dots i_n}$ együtthatók valósak és a kitevők nemnegatív egészek. Ha $P, Q$ két $n$-változós polinom és $A := \{x \in \mathbb{R}^n \mid Q(x) = 0\}$, akkor az $R(x) := P(x)/Q(x)$ ($x \in \mathbb{R}^n \setminus A$) függvény **$n$-változós racionális törtfüggvény**.
+
+**Tétel.**
+1. Az $n$-változós polinomfüggvények mindenütt differenciálhatóak.
+2. Az $n$-változós racionális törtfüggvények differenciálhatóak az értelmezési tartományuk minden pontjában.
+
+*Bizonyítás.* Egy $P$ polinom minden parciálisderivált-függvénye maga is polinom (a hatványfüggvény tagonkénti deriválásával), tehát mindenütt folytonos. A [[concepts/analiii/differencialhatosag-elegseges-feltetele|differenciálhatóság elégséges feltétele]] szerint innen $P \in D$ következik. Egy $R = P/Q$ racionális törtfüggvény parciálisderivált-függvényei — a hányadosszabály miatt — szintén racionális törtfüggvények, ezért folytonosak $R$ értelmezési tartományának minden pontjában; ugyanaz az elégséges feltétel adja $R \in D$-t az egész értelmezési tartományon. $\square$
+
+Ez azt jelenti, hogy a gyakorlatban előforduló elemi (polinomokból és hányadosaikból felépülő) többváltozós függvények differenciálhatósága sosem igényel külön ellenőrzést — csak azt kell tudni, hogy a függvény ilyen alakú.
 
 ### Hogyan általánosít az egyváltozós esethez képest
 

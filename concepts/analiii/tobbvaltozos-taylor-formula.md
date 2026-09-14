@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 06_ea_An3_2022_tavasz.pdf, 07_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.3.2. és 4.3.4. Tétel"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Többváltozós Taylor-formula
@@ -41,6 +41,8 @@ azaz másképp írva
 $$\frac{f(x) - T_{a,s}f(x)}{\|x-a\|^s} \to 0 \qquad (\|x - a\| \to 0).$$
 
 Az $s = 1$ eset pontosan az $f \in D\{a\}$ definíció; az általános eset $s$ szerinti indukció.
+
+**Az indukciós lépés vázlata.** $f \in C^s\{a\}$ mellett minden $|i| = s$ multiindexre $\partial^i f(a+h) = \partial^i f(a) + \varepsilon_i(h)$, ahol $\varepsilon_i(h) \to 0$ ($h \to \theta_n$) — ez maga a $D\{a\}$ feltétel az $s-1$-edrendű deriváltakra. Az $(s-1)$-edrendű Lagrange-maradéktagos formulát felírva egy $\nu \in (0,1)$-gyel, majd a maradéktagba behelyettesítve $\partial^i f(a+\nu h) = \partial^i f(a) + \varepsilon_i(\nu h)$-t, a $\eta(h) := \sum_{|i|=s} \frac{\varepsilon_i(\nu h)}{i!}\cdot\frac{h^i}{\|h\|^s}$ függvényre $|\eta(h)| \le M \cdot \sum_{|i|=s}\frac{|\varepsilon_i(\nu h)|}{i!} \to 0$ adódik, ahol $M$ a $\frac{h^i}{\|h\|^s}$ hányadosok korlátja (pl. $\|\cdot\|_\infty$ normában $M=1$).
 
 **Miért ez a hasznosabb.** Kevesebbet tesz fel (egy pontban $D^s$, nem egy környezetben $D^{s+1}$), és a hibát nagyságrendben adja meg, nem egy ismeretlen $c$ pont deriváltjaival. Az $s = 2$ eset
 

@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 2.1. vi) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Korlátos lineáris leképezés és operátornorma
@@ -46,6 +46,11 @@ Az operátornorma tehát $f$ **legkisebb korlátja**.
 $$\|f(x) - f(z)\|_* = \|f(x-z)\|_* \le \|f\|\cdot\|x-z\|_\bullet \le \|f\|\cdot\varepsilon.$$
 
 Az operátornorma tehát a lineáris modell **hibafelerősítési tényezője**.
+
+<!-- src: 04_ea_An3_2022_tavasz.pdf -->
+### $\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\cong\mathbb{R}^{m\times n}$: a lineáris leképezések és a mátrixok izomorfiája
+
+Véges dimenzióban minden $L:\mathbb{R}^n\to\mathbb{R}^m$ lineáris leképezés — nem csak a korlátosak — automatikusan előáll $L(x)=Ax$ alakban egyértelmű $A\in\mathbb{R}^{m\times n}$ mátrixszal (ha $e_1,\dots,e_n$ a kanonikus bázis, $A$ oszlopai az $L(e_i)$ vektorok). A $\varphi:L\mapsto A$ megfeleltetés bijekció és mindkét irányban lineáris ($\varphi(\alpha L+\beta S)=\alpha\varphi(L)+\beta\varphi(S)$), tehát **izomorfizmus** az $\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)$ és az $\mathbb{R}^{m\times n}$ terek között: $\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\cong\mathbb{R}^{m\times n}$. Innen adódik, hogy $\mathbb{R}^n\to\mathbb{R}^m$ lineáris leképezésekről és $m\times n$-es mátrixokról algebrai szempontból felcserélhetően lehet beszélni — ez teszi jogossá a norma és az operátornorma $\|A\|_{m,n}:=\max_{\|x\|^{(n)}\le 1}\|Ax\|^{(m)}$ általi bevezetését közvetlenül a mátrixtéren.
 
 ### Mátrixnormák
 

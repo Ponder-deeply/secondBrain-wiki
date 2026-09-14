@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 06_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.3.1. Tétel"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Young-tétel
@@ -35,6 +35,16 @@ $$\varphi(t) = \lim_{\tau\to 0}\frac{f(\tau,t)}{\tau} = \lim_{\tau\to 0}\frac{t(
 és $\varphi(0) = 0$, tehát $\varphi(t) = -t$ minden $t$-re, azaz $\varphi'(0) = -1$. A szimmetrikus számolás $\partial_{21}f(0,0) = 1$-et ad.
 
 **A tanulság.** A puszta létezés nem elég; a felcserélhetőséghez a **környezetbeli, elég sokszori** differenciálhatóság kell. Ugyanaz a mintázat, mint a [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja|differenciálhatósági fogalmaknál]]: az egydimenziós (parciális) információ nem határozza meg a kétdimenziós viselkedést.
+
+### Bizonyítás vázlata ($n=2$, $s=2$ esetre visszavezetve)
+
+Legyen $r>0$ úgy, hogy $K_r(a) \subset D_f$, és $u,v \in (-r,r)$ esetén
+
+$$\Delta(u,v) := f(a_1+u, a_2+v) - f(a_1+u,a_2) - f(a_1,a_2+v) + f(a_1,a_2).$$
+
+Rögzített $v$-re a $\varphi(u) := f(a_1+u,a_2+v) - f(a_1+u,a_2)$ függvényre $\Delta(u,v) = \varphi(u) - \varphi(0)$, és a feltételek miatt $\varphi$ differenciálható, tehát a Lagrange-középértéktétellel $\exists \xi$ a $0$ és $u$ között, hogy $\varphi(u)-\varphi(0) = \varphi'(\xi)\cdot u = \big(\partial_1 f(a_1+\xi,a_2+v) - \partial_1 f(a_1+\xi,a_2)\big)u$. Mivel $\partial_1 f$ maga is differenciálható $a$-ban, ez a lineáris közelítés tételével $\partial_{12}f(a)\cdot uv$-hez tart, amikor $u,v \to 0$; így adódik, hogy $\lim_{u\to 0} \Delta(u,u)/u^2 = \partial_{12}f(a)$.
+
+Szimmetrikusan, $v$ szerint felírva $\Delta$-t (rögzített $u$-val, majd a $\partial_2 f$-re alkalmazva ugyanezt), ugyanaz a $\Delta(v,v)/v^2$ határérték $\partial_{21}f(a)$-hoz tart. Mivel a két határérték ugyanannak a kifejezésnek ($\Delta(u,u)/u^2$, illetve annak átjelölése) a limesze, $\partial_{12}f(a) = \partial_{21}f(a)$.
 
 ### Mit tesz lehetővé
 

@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # A lebontási tétel

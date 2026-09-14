@@ -42,3 +42,4 @@ A Cantor-axióma (egymásba skatulyázott zárt intervallumokra) ennek speciáli
 - [[concepts/analiii/kompakt-halmazok]] — a korlátosság és zártság párosa
 - [[concepts/analiii/nyilt-es-zart-halmazok]] — a zártság sorozatos jellemzése, amit a bizonyítás használ
 - [[concepts/analiii/ekvivalens-normak]] — a normaekvivalencia bizonyítása szintén Bolzano–Weierstrassra épül
+- [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel]] — a tétel véges dimenziós érvényessége és végtelen dimenziós ellenpéldája

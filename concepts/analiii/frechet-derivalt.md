@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1. szakasz és 3.2. i)–iii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Frécht-derivált: a többváltozós differenciálhatóság fogalma
@@ -78,8 +78,14 @@ $$\frac{\|f(a+h) - f(a) - A(h)\|_Y}{\|h\|_X} \to 0 \qquad (\|h\|_X \to 0).$$
 
 Az így egyértelműen létező $A$ az $f$ **Fréchet-deriváltja** $a$-ban. A véges dimenziós eset ennek az a speciális esete, amelyben $\mathcal{L}(\mathbb{R}^n, \mathbb{R}^m) \approx \mathbb{R}^{m\times n}$ miatt a derivált mátrixszal reprezentálható.
 
+<!-- src: 04_ea_An3_2022_tavasz.pdf -->
+### A lineáris közelítés mint geometriai kép
+
+A definíció tartalma szemléletesen: az $a$ pont körüli $h\mapsto A\cdot h$ **lineáris leképezés** jól közelíti az $f(a+h)-f(a)$ megváltozást, ha $h\approx\theta_n$. Egyváltozós, ill. $\mathbb{R}^2\to\mathbb{R}$ esetben ennek geometriai megfelelője az érintőegyenes, ill. az [[concepts/analiii/fuggvenygrafikon-erintosikja|érintősík]]: a totális differenciálhatóság pontosan azt garantálja, hogy a grafikonnak van a pontban minden irányban elsőrendben illeszkedő érintő affin sokasága.
+
 ## Kapocs
 
+- [[concepts/analiii/fuggvenygrafikon-erintosikja]] — a differenciálhatóság geometriai jelentése $\mathbb{R}^2\to\mathbb{R}$ függvényekre.
 - [[concepts/analiii/jacobi-matrix]] — a derivált mátrixreprezentációja, a gradiens és a deriváltvektor.
 - [[concepts/analiii/koordinatafuggvenyek-differencialhatosaga]] — a definíció visszavezetése $m$ darab skalárértékű függvényre.
 - [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]] — hova illeszkedik ez a fogalom a folytonosság, az iránymenti és a parciális deriválhatóság mellé.

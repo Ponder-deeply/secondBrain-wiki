@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 10_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # Polárkoordinátás helyettesítés
@@ -35,6 +35,22 @@ $$t(B(0,R)) = \int_A r\,\mathrm{d}r\,\mathrm{d}\varphi = \int_{r=0}^{R}\left(\in
 
 A helyettesítés haszna éppen ez: egy bonyolult alakú tartomány (körlap) helyett egy téglalapon integrálunk, ahol a szukcesszív integrálás akadálytalanul elvégezhető.
 
+### Példa: $\iint_T x^2 y \,\mathrm{d}x\,\mathrm{d}y$ körgyűrűcikken
+
+Legyen $T$ az
+
+$$1 \leqslant x^2+y^2 \leqslant 4, \qquad y \geqslant 0, \qquad x \geqslant 0$$
+
+egyenlőtlenségekkel meghatározott korlátos síkrész (egy negyed körgyűrű). Polárkoordinátás helyettesítéssel $T = g\bigl([1,2] \times [0,\pi/2]\bigr)$, tehát
+
+$$\iint_T x^2 y \,\mathrm{d}x\,\mathrm{d}y = \iint_{[1,2]\times[0,\pi/2]} (r\cos\varphi)^2 \cdot (r\sin\varphi) \cdot r \,\mathrm{d}r\,\mathrm{d}\varphi = \iint_{[1,2]\times[0,\pi/2]} r^4 \sin\varphi \cos^2\varphi \,\mathrm{d}r\,\mathrm{d}\varphi.$$
+
+A szukcesszív integrálás szorzattá esik szét, mert az integrandus $r$-ben és $\varphi$-ben szorzat alakú, és a tartomány is téglalap:
+
+$$= \left(\int_1^2 r^4\,\mathrm{d}r\right) \cdot \left(\int_0^{\pi/2} \sin\varphi \cos^2\varphi\,\mathrm{d}\varphi\right) = \left[\frac{r^5}{5}\right]_1^2 \cdot \left[-\frac{\cos^3\varphi}{3}\right]_0^{\pi/2} = \left(\frac{32}{5} - \frac{1}{5}\right) \cdot \frac{1}{3} = \frac{31}{15}.$$
+
+Ez a példa jól mutatja a módszer erejét: a körgyűrűcikken vett integrál polárkoordinátákban egy téglalapon vett, szorzat alakú integrandusú integrállá esik szét, amit a szukcesszív integrálás azonnal kezel.
+
 ### Mikor érdemes polárkoordinátázni?
 
 - Ha az **integrálási tartomány** forgásszimmetrikus (körlap, körgyűrű, körcikk).
@@ -46,4 +62,6 @@ A leképezés a $r > 0$, $0 < \varphi < 2\pi$ nyílt téglalapon injektív; a t�
 
 - [[concepts/analiii/mertek-es-integraltranszformacio]] — az az általános tétel, amelynek ez a helyettesítés a legfontosabb speciális esete.
 - [[concepts/analiii/gauss-integral]] — a $\int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x$ kiszámítása polárkoordinátákkal.
+- [[concepts/analiii/hengerkoordinatas-helyettesites]] — a térbeli megfelelője: ugyanez a helyettesítés az $(x,y)$-síkon, a $z$ koordinátával kiegészítve.
+- [[concepts/analiii/gombi-koordinatas-helyettesites]] — a másik térbeli általánosítás, origó körüli gömbszimmetriára.
 - [[concepts/analii/sikido-terulete]] — az egyváltozós integrállal kiszámított síkidomterület; a körlap területe ott is megkapható, itt viszont a transzformáció maga végzi el a munkát.

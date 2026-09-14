@@ -49,3 +49,4 @@ Az $f$ nívóvonalai koncentrikus körök, a $g$ épp az egységkör paramétere
 - [[concepts/analiii/iranymenti-derivalt]] — a merőlegesség másik megfogalmazása.
 - [[concepts/analiii/felteteles-szelsoertek]] — ott ugyanez a merőlegesség lesz a Lagrange-szabály geometriai tartalma.
 - [[concepts/analiii/implicitfuggveny]] — a nívófelület lokálisan függvénygrafikon.
+- [[concepts/analiii/fuggvenygrafikon-erintosikja]] — a merőlegesség speciális esete, amikor a nívófelület maga egy függvénygrafikon.

@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 01_ea_An3_2025_osz.pdf]
 references: ["Simon Péter: Analízis II., 1.2. vi) és 1.6. v) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Skaláris szorzat tér, euklideszi tér, Hilbert-tér
@@ -75,6 +75,14 @@ ahol a zárójeles tag eltűnik. $\blacksquare$
 $$\|x+y\|_p^2 + \|x-y\|_p^2 = \|(1,1)\|_p^2 + \|(1,-1)\|_p^2 = 2^{1+2/p}, \qquad 2\bigl(\|x\|_p^2+\|y\|_p^2\bigr) = 4,$$
 
 így a paralelogramma-szabály a $2^{1+2/p} = 4$ egyenletre redukálódik, amiből $p=2$. A $p=\infty$ esetben a bal oldal $2$, a jobb oldal $4$, tehát a szabály nem teljesül: $\|\cdot\|_\infty$ nem skaláris szorzatból származik. $\blacksquare$
+
+### Neumann–Jordan-tétel
+
+A fenti gondolatmenet csak a szükségességet mutatja: ha a norma skaláris szorzatból származik, akkor teljesül a paralelogramma-azonosság. A megfordítás — hogy ez a feltétel **elégséges** is — jóval mélyebb tétel.
+
+**Tétel (Neumann János – Ernst Pascual Jordan, 1935).** Egy $(X, \|\cdot\|)$ normált térben a norma akkor és csak akkor származik egy $\langle\cdot,\cdot\rangle$ skaláris szorzatból a $\|x\| = \sqrt{\langle x,x\rangle}$ összefüggés szerint, ha a norma a tér bármely két $x,y$ elemére teljesíti a paralelogramma-azonosságot.
+
+A szükségesség a fenti számolás; az elégségesség bizonyítása lényegesen hosszabb (a skaláris szorzatot magából a normából kell polarizációval visszaállítani). A tételből azonnal adódik, hogy a $(\mathbb{R}^n, \|\cdot\|_p)$ és a $(C[a,b], \|\cdot\|_p)$ terek normája pontosan $p=2$ esetén származtatható skaláris szorzatból.
 
 ### Hilbert-tér
 

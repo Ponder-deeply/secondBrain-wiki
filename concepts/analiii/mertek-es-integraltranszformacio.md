@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 10_ea_An3_2022_tavasz.pdf, 11_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # Mérték- és integráltranszformáció
@@ -54,6 +54,18 @@ Vagyis a $\bigl|\det g'\bigr|$ tényező az egyváltozós $\bigl|g'\bigr|$ álta
 
 Az előadáson a tétel **bizonyítás nélkül** szerepelt (a bizonyítás az LTS2 anyagában található).
 
+### Alternatív alak: $T = g[H]$ jelöléssel
+
+A (IT) képlet a $T = g[H]$ jelöléssel a következő, gyakran kényelmesebb alakban is írható:
+
+$$\int_T f(\mathbf{x})\,\mathrm{d}\mathbf{x} = \int_H f(g(\mathbf{t})) \cdot \bigl|\det g'(\mathbf{t})\bigr|\,\mathrm{d}\mathbf{t}. \tag{IT1}$$
+
+Az (IT1) alak tetszőleges $g$ helyettesítő függvényre igaz. Az alkalmazáskor kétféle úton lehet elindulni: vagy a $T$ tartományhoz keresünk olyan $g$-t, amely egy egyszerűbb $H$ halmazon (pl. téglalapon) van értelmezve, vagy megfordítva, egy adott $g$-hez próbálunk olyan $f \circ g \cdot |\det g'|$ integrandust találni, amely egyszerűbb, mint $f$ maga.
+
+Két dimenzióban, $(x,y)$ derékszögű és $(u,v)$ helyettesítő koordinátákkal, $g = (g_1, g_2)$ Jacobi-mátrixával az (IT1) képlet az alábbi, kiírt alakot ölti (ITR):
+
+$$\iint_T f(x,y)\,\mathrm{d}x\,\mathrm{d}y = \iint_H f\bigl(g_1(u,v), g_2(u,v)\bigr) \cdot \left|\det\begin{bmatrix}\partial_1 g_1 & \partial_2 g_1 \\ \partial_1 g_2 & \partial_2 g_2\end{bmatrix}(u,v)\right| \mathrm{d}u\,\mathrm{d}v.$$
+
 ### Megjegyzések a feltételekhez
 
 - Az injektivitást elég az $\operatorname{int} A$ **belsején** megkövetelni: a határon való átfedés nullmértékű, ezért nem számít. Ez teszi használhatóvá a polárkoordinátás helyettesítést, ahol a $\varphi = 0$ és $\varphi = 2\pi$ élek egymásra képződnek.
@@ -63,5 +75,7 @@ Az előadáson a tétel **bizonyítás nélkül** szerepelt (a bizonyítás az L
 
 - [[concepts/analii/hatarozott-integral-helyettesites]] — az egyváltozós helyettesítéses integrálás; a mostani tétel ennek a többváltozós általánosítása, ahol $g'$ helyére $\bigl|\det g'\bigr|$ lép, és az irányított határok helyére halmazok.
 - [[concepts/analiii/polarkoordinatas-helyettesites]] — a tétel legfontosabb konkrét alkalmazása.
+- [[concepts/analiii/hengerkoordinatas-helyettesites]] — térbeli alkalmazás: a polárkoordináták a $z$ tengellyel kiegészítve.
+- [[concepts/analiii/gombi-koordinatas-helyettesites]] — másik térbeli alkalmazás, origó körüli gömbszimmetriára.
 - [[concepts/analiii/gauss-integral]] — a transzformációs tétel egy nevezetes következménye.
 - [[concepts/analiii/szorzathalmaz-merteke-es-integralja]] — a szorzathalmazok mértéke és a szorzatfüggvények integrálja.

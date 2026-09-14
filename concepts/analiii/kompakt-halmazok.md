@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 03_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Kompakt halmazok
@@ -26,6 +26,12 @@ Legyen $(M,d)$ metrikus tér. A $K \subset M$ halmaz **kompakt**, ha minden nyí
 *Zártság.* Elég belátni, hogy minden $c \in M \setminus K$ külső pontja $K$-nak. A $G_r = M \setminus \overline{B}(c,r)$ halmazok nyíltak, uniójuk $M \setminus \{c\}$, tehát fedik $K$-t. Véges sok közül a legbővebb egyedül is fedi: van olyan $r$, hogy $K \subset G_r$. De akkor $K$ diszjunkt $B(c,r)$-től, tehát $c \in \operatorname{ext} K$. $\blacksquare$
 
 A megfordítás általános metrikus térben nem igaz; $\mathbb{R}^p$-ben viszont igen, ez a [[concepts/analiii/heine-borel-tetel]].
+
+**Ellenpélda végtelen dimenzióban.** Legyen $\ell_\infty := \{x = (x_k) : \mathbb{N} \to \mathbb{R} \mid \sup_k |x_k| < \infty\}$ a korlátos valós sorozatok tere, a szokásos $(+,\cdot)$ műveletekkel ellátott lineáris tér, a $\|x\|_\infty := \sup_k |x_k|$ normával. A
+
+$$A := \{(x_k) \in \ell_\infty \mid x_k \in \{0,1\}\ (k \in \mathbb{N})\} \subset \ell_\infty$$
+
+halmaz korlátos és zárt, de **nem kompakt**: bármely két különböző eleme $1$ távolságra van egymástól, ezért egyetlen $A$-beli sorozatnak sincs Cauchy- (tehát konvergens) részsorozata. Ez mutatja, hogy a „kompakt $\Leftrightarrow$ korlátos és zárt" ekvivalencia $\mathbb{R}^p$ véges dimenziójának lényegi következménye.
 
 ### Kompakt és zárt halmaz távolsága
 

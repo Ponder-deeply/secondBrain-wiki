@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 11_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # A többszörös integrál fizikai alkalmazásai
@@ -48,4 +48,5 @@ A félgömb súlypontja tehát az alaplaptól a sugár $3/8$ részére esik.
 - [[concepts/analiii/szukcessziv-integralas]] — a számolás technikája: a hármas integrált egyváltozós integrálásokra bontjuk
 - [[concepts/analiii/jordan-mertek-szeletelessel]] — a példában a $z$ magasságú szeletek területével dolgozunk
 - [[concepts/analiii/grafikon-alatti-halmaz-terfogata]] — a $\varrho \equiv 1$ eset, amikor a tömeg éppen a térfogat
+- [[concepts/analiii/gombi-koordinatas-helyettesites]] — gömbszimmetrikus testek (pl. félgömb) tömegének, súlypontjának számítása gyakran gömbi koordinátákban egyszerűbb
 - [[concepts/analii/kozeptertekek]] — a tömegközéppont formálisan egy súlyozott integrálközép; az egyváltozós integrálközép-tételek ennek egydimenziós előképei

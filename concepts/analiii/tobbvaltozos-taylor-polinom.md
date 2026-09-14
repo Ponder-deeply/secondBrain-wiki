@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 06_ea_An3_2022_tavasz.pdf, 07_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.3. szakasz, multiindexes jelölés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Többváltozós Taylor-polinom és a multiindexes jelölés
@@ -23,6 +23,16 @@ $$|i| := \|i\|_1 = \sum_{j=1}^n i_j, \qquad i! := \prod_{j=1}^n i_j!, \qquad x^i
 **A jelölés csak a [[concepts/analiii/young-tetel|Young-tétel]] miatt jóldefiniált**: $f \in D^{|i|}\{a\}$ mellett az $|i|$ hosszú $1\dots1\dots n\dots n$ jelsorozat bármely permutációja ugyanazt a deriváltat adja, ezért elég megmondani, melyik változó szerint hányszor deriválunk — a sorrendet nem kell.
 
 Ha $n = 1$, akkor $i = i_1 \in \mathbb{N}$, $|i| = i$, $i!$ a szokásos faktoriális, $x^i$ a szokásos hatvány: a jelölés visszaadja az egyváltozós esetet.
+
+### Homogén polinomok
+
+Rögzített $s$-re a Taylor-polinom $k = s$-hez tartozó tagja, $\sum_{|i|=s} \frac{\partial^i f(a)}{i!}(x-a)^i$, épp egy **$n$-változós $s$-edfokú homogén polinom** $(x-a)$-ban: ha $|i| = s$ és $a_i \in \mathbb{R}$ nem mind nulla, akkor $x \mapsto \sum_{|i|=s} a_i x^i$ ilyen. Példák:
+
+- $n=1$: $P_{1,s}(x) = a\cdot x^s$ — az egyváltozós hatványtag.
+- $n=2$, $s=1$: $i \in \{(1,0),(0,1)\}$, tehát $P_{2,1}(x_1,x_2) = ax_1 + bx_2$.
+- $n=2$, $s=2$: $i \in \{(2,0),(1,1),(0,2)\}$, tehát $P_{2,2}(x_1,x_2) = ax_1^2 + bx_1x_2 + cx_2^2$.
+
+Ez mutatja meg konkrétan, miért indexeli a Taylor-polinom $k$-adik tagját éppen az $|i|=k$ feltételű multiindexek összege: a tag maga egy $k$-adfokú homogén polinom.
 
 ### Szakasz
 

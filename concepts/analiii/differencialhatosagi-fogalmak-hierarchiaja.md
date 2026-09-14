@@ -1,9 +1,9 @@
 ---
 tags: [synthesis]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.2. ii), iv), x), xi), xii) megjegyzés"]
 derivation: inferred
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # A differenciálhatósági fogalmak hierarchiája
@@ -54,6 +54,16 @@ Mind $\mathbb{R}^2 \to \mathbb{R}$, az $a = (0,0)$ pontban. A közös séma: a f
 $$|\eta(x,y)| = \frac{|x^3 y|}{(x^2+y^4)\sqrt{x^2+y^2}} \le \frac{x^2\sqrt{x^2+y^2}}{2(x^2+y^4)} \le \sqrt{x^2+y^2} \to 0,$$
 
 a 3. esetben viszont $\eta(x,y) = \frac{xy}{x^2+y^2}$, és $\eta(x,x) = \frac{1}{2}$ minden $x \ne 0$-ra, tehát nincs nulla határérték. Ugyanaz a levezetés dönt mindkét irányba — csak a becslés sikere vagy kudarca különbözteti meg őket.
+
+<!-- src: 04_ea_An3_2022_tavasz.pdf -->
+### Két további ellenpélda
+
+| # | Függvény | Mi teljesül | Mi nem | A trükk |
+|---|---|---|---|---|
+| 5 | $f(x,y) = \sqrt{\lvert xy\rvert}$ | folytonos $(0,0)$-ban, $\partial_1 f(0,0) = \partial_2 f(0,0) = 0$ | $\notin D\{(0,0)\}$ | az $y=x$ átlón $f(x,x)=\lvert x\rvert$, ami $x=0$-ban nem differenciálható egyváltozóban sem — a hibafüggvény $\eta(x,x)=1\not\to 0$ |
+| 6 | $f(x,y) = \dfrac{xy^2}{x^2+y^2}$, $f(0,0)=0$ | folytonos, minden $\partial_e f(0,0)$ létezik | $\notin D\{(0,0)\}$ | ugyanaz a séma, mint a 3. példánál: a becslés az $y=x$ átlón elromlik |
+
+Az 5. példa azért tanulságos, mert itt már a **legegyszerűbb** — a koordinátatengelyeken kívüli — átlós viselkedés bukik el: a $\sqrt{\lvert xy\rvert}$ függvény szimmetrikus, mégsem differenciálható, mert az egyváltozós $t\mapsto\lvert t\rvert$ függvény maga sem az a $0$-ban.
 
 ### Amit az ellenpéldák tanítanak
 

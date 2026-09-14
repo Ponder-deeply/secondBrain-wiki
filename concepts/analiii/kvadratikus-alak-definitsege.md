@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.4. iv)–vii), xv) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Kvadratikus alak definitsége

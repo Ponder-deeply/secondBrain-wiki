@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 08_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 2.4. Tétel"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Weierstrass-tétel: folytonos kép kompakt halmazon
@@ -40,7 +40,7 @@ Az $m \in R_f$ állítás ugyanígy adódik. A szélsőértéket tehát $f$ **fe
 
 ### Mire használjuk
 
-Ez a tétel a többváltozós szélsőérték-feladatok létezési fele: korlátos és zárt (tehát $\mathbb{R}^p$-ben a [[concepts/analiii/heine-borel-tetel|Heine–Borel-tétel]] szerint kompakt) tartományon folytonos függvény szélsőértéke garantáltan létezik, és már csak a helyét kell megkeresni a [[concepts/analiii/lokalis-szelsoertek-feltetelei|lokális feltételekkel]] és a peremvizsgálattal.
+Ez a tétel a többváltozós szélsőérték-feladatok létezési fele: korlátos és zárt (tehát $\mathbb{R}^p$-ben a [[concepts/analiii/heine-borel-tetel|Heine–Borel-tétel]] szerint kompakt) tartományon folytonos függvény szélsőértéke garantáltan létezik, és már csak a helyét kell megkeresni a [[concepts/analiii/lokalis-szelsoertek-feltetelei|lokális feltételekkel]] és a peremvizsgálattal. Ezt a keresési eljárást a $\mathbb{R}^n \to \mathbb{R}$ esetre az [[concepts/analiii/abszolut-szelsoertek|abszolút szélsőérték]] lapja írja le részletesen.
 
 ## Kapocs
 
@@ -50,3 +50,4 @@ Ez a tétel a többváltozós szélsőérték-feladatok létezési fele: korlát
 - [[concepts/analiii/folytonos-inverz-kompakt-halmazon]] — a kompakt tartomány másik következménye
 - [[concepts/analiii/egyenletes-folytonossag-metrikus-terben]] — a Heine-tétel, a kompaktság harmadik következménye
 - [[concepts/analiii/bolzano-tetel-osszefuggo-halmazon]] — az összefüggőségre vonatkozó párja
+- [[concepts/analiii/abszolut-szelsoertek]] — a tétel gyakorlati alkalmazása $\mathbb{R}^n \to \mathbb{R}$ függvények abszolút szélsőértékének megkeresésére

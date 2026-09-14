@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1. szakasz és 3.2. v), vii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Jacobi-mátrix, gradiens, deriváltvektor
@@ -67,6 +67,10 @@ Ha $f \in D\{a\}$, ez a **parciális deriváltmátrix** éppen az $f'(a)$ Jacobi
 $$f'(a) = [\,\partial_1 f(a) \ \ \partial_2 f(a)\,].$$
 
 Ez a particionálás az implicitfüggvény-tétel szokásos írásmódjának alapja. Az $s = 1$ eset a közönséges [[concepts/analiii/parcialis-derivalt|parciális derivált]].
+
+### A mátrixreprezentáció mint izomorfizmus
+
+A Jacobi-mátrix létezése azon múlik, hogy a $\varphi:\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\to\mathbb{R}^{m\times n}$, $L\mapsto A$ (ahol $L(x)=Ax$) megfeleltetés **izomorfizmus**: bijektív és mindkét irányban lineáris. Ezért a derivált — mint korlátos lineáris leképezés — és a Jacobi-mátrix — mint annak konkrét számtömbje — ugyanazt az objektumot írja le két nyelven; a Jacobi-mátrix erre az izomorfizmusra hivatkozva vezethető be a [[concepts/analiii/frechet-derivalt|Fréchet-derivált]] definíciójából.
 
 ## Kapocs
 

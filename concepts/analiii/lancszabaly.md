@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.1.4. Tétel, 4.2. i), vi), vii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Láncszabály
@@ -51,6 +51,24 @@ Az [[concepts/analiii/iranymenti-derivalt|iránymenti derivált]] és a derivál
 ### Ellenőrző példa
 
 $g(t) := (t, t^2)$, $f(x,y) := x + y$. Ekkor $(f\circ g)(t) = t + t^2$, tehát $(f\circ g)'(t) = 1 + 2t$. Másfelől $g'(t) = (1, 2t)$ és $\operatorname{grad} f \equiv (1,1)$, így $\langle (1,1), (1,2t)\rangle = 1 + 2t$. Egyezik.
+
+### Egy összetettebb példa: ellenőrzés közvetlen behelyettesítéssel
+
+Legyen $f(u,v,w) := u + vw$ és $g(x_1,x_2,x_3) := \bigl(x_1^2+x_2^2+x_3^2,\ x_1x_2x_3,\ x_1\bigr) \in \mathbb{R}^3 \to \mathbb{R}^3$. Mivel $f$ és $g$ koordinátafüggvényei polinomok, mindkettő [[concepts/analiii/differencialasi-szabalyok-tobbvaltozos|mindenütt differenciálható]], tehát $F := f \circ g \in \mathbb{R}^3 \to \mathbb{R}$ is az, és a láncszabály szerint $F'(x) = f'(g(x))\cdot g'(x)$.
+
+Mivel $f'(u,v,w) = \begin{bmatrix} 1 & w & v\end{bmatrix}$ és
+
+$$g'(x) = \begin{bmatrix} 2x_1 & 2x_2 & 2x_3 \\ x_2x_3 & x_1x_3 & x_1x_2 \\ 1 & 0 & 0\end{bmatrix},$$
+
+behelyettesítve $f'(g(x)) = \begin{bmatrix}1 & x_1 & x_1x_2x_3\end{bmatrix}$, és a szorzat elvégzése után
+
+$$F'(x) = \begin{bmatrix} 2x_1 + 2x_1x_2x_3 & 2x_2 + x_1^2x_3 & 2x_3 + x_1^2x_2\end{bmatrix}.$$
+
+**Ellenőrzés.** Kis $n$, $m$, $s$ esetén a láncszabály megkerülhető: $F$ közvetlenül felírható a behelyettesítéssel, és tagonként deriválható. Itt $F(x) = g_1(x) + g_2(x)g_3(x) = x_1^2+x_2^2+x_3^2 + x_1^2x_2x_3$, amiből
+
+$$\partial_1 F(x) = 2x_1 + 2x_1x_2x_3, \qquad \partial_2 F(x) = 2x_2 + x_1^2x_3, \qquad \partial_3 F(x) = 2x_3 + x_1^2x_2,$$
+
+ami pontosan megegyezik a láncszabállyal kapott eredménnyel. A közvetlen módszer itt egyszerűbb volt, de bonyolultabb $f$, $g$ esetén a láncszabály lényegesen kevesebb számolást igényel — ez a gyakorlati oka annak, hogy nem behelyettesítéssel, hanem a tétellel dolgozunk.
 
 ## Kapocs
 

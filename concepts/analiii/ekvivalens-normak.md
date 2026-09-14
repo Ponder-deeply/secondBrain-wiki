@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 02_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Ekvivalens normák
@@ -30,6 +30,8 @@ $$\|x\|_1 = 1\cdot|x_1| + \dots + 1\cdot|x_p| \leq \sqrt{p\cdot 1^2}\cdot\sqrt{|
 - $C[0,1]$-en $\|\cdot\|_1$ és $\|\cdot\|_\infty$ **nem** ekvivalensek.
 - Ugyanezen a téren $\|f\|_{(2)} = \int_0^1 x|f(x)|\,\mathrm{d}x$ és $\|f\|_{(3)} = \int_0^1 (1-x)|f(x)|\,\mathrm{d}x$ két olyan norma, amelyek aránya sem alulról, sem felülről nem korlátos.
 
+**Példa — a konvergencia normafüggő.** Legyen $f_k(x) := x^k$ ($x\in[0,1]$, $k\in\mathbb{N}$) a $C[0,1]$ lineáris tér eleme. Ekkor $(f_k)$ konvergens a $\|\cdot\|_1$ normában (a $0$ függvényhez, mert $\|f_k\|_1 = \int_0^1 x^k\,\mathrm dx = \frac1{k+1}\to 0$), de **divergens** a $\|\cdot\|_\infty$ normában: pontonként $f_k(x)\to 0$ minden $x\in[0,1)$-re, de $f_k(1)=1$ minden $k$-ra, így egyetlen folytonos limeszfüggvény sem illeszkedne mindkét feltételhez. Ez éppen azt mutatja, hogy $\|\cdot\|_1 \not\sim \|\cdot\|_\infty$ ezen a téren: ekvivalens normák esetén ugyanis egy sorozat vagy mindkettőben konvergens (ugyanazzal a limesszel), vagy egyikben sem — ez közvetlenül következik az ekvivalencia definíciójából.
+
 ### A normák ekvivalenciájának tétele
 
 **Tétel.** $\mathbb{R}^p$-ben bármely $\|\cdot\|$ norma ekvivalens az $|\cdot|$ euklideszi normával: léteznek $c_1, c_2 > 0$, hogy minden $x \in \mathbb{R}^p$-re $c_1|x| \leq \|x\| \leq c_2|x|$.
@@ -55,6 +57,8 @@ Véges dimenziós vektorterekben
 
 Ez az a szerkezeti tény, ami miatt $\mathbb{R}^p$-ben soha nem kell megmondani, melyik normát használjuk.
 
+**Tyihonov-tétel.** A fenti tétel általánosabb alakja: tetszőleges véges dimenziós $X$ lineáris téren bármely két norma ekvivalens egymással. Mivel minden $n$-dimenziós $X$ tér algebrailag izomorf $\mathbb{R}^n$-nel, ez visszavezethető a fenti, $\mathbb{R}^p$-re szóló tételre. A [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel|Bolzano–Weierstrass-féle kiválasztási tétel]] éppen ebből következően igaz minden véges dimenziós normált térben, és éppen ezért nem automatikus végtelen dimenzióban.
+
 ## Kapocs
 
 - [[concepts/analiii/normalt-vektorter]] — a norma fogalma és az $L^q$-normák
@@ -63,3 +67,4 @@ Ez az a szerkezeti tény, ami miatt $\mathbb{R}^p$-ben soha nem kell megmondani,
 - [[concepts/analiii/cantor-metszettetel]] — a bizonyításban használt Bolzano–Weierstrass-tétel
 - [[concepts/analiii/cauchy-sorozat-es-teljes-ter]] — a normaekvivalencia miatt a Cauchy-tulajdonság is normafüggetlen
 - [[concepts/analiii/ekvivalens-metrikak]] — ugyanez a fogalom metrikákra, normastruktúra nélkül
+- [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel]] — a Tyihonov-tétel folyománya: véges dimenzióban minden korlátos sorozatnak van konvergens részsorozata, végtelen dimenzióban általában nem

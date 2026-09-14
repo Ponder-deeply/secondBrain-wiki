@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1.3. és 3.1.4. Tétel"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # A gradiens és a Jacobi-mátrix a parciális deriváltakból
@@ -57,6 +57,7 @@ Egy $\mathbb{R}^2 \to \mathbb{R}^3$ függvény Jacobi-mátrixa tehát $3\times 2
 
 ## Kapocs
 
+- [[concepts/analiii/fuggvenygrafikon-erintosikja]] — az $n=2$, $m=1$ eset: a gradiens az érintősík normálvektorának első két koordinátája.
 - [[concepts/analiii/parcialis-derivalt]] — a mátrixelemek definíciója és kiszámítása.
 - [[concepts/analiii/koordinatafuggvenyek-differencialhatosaga]] — a másik fele a 3.1.4. Tételnek.
 - [[concepts/analiii/jacobi-matrix]] — a mátrix mint a derivált reprezentációja.

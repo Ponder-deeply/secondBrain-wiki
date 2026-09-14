@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1. szakasz és 3.2. xiii), xiv) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Parciális derivált
@@ -50,6 +50,17 @@ Ezek differenciálhatók, $h_{a,1}'(t) = 2t + 2v^2 + 1$ és $h_{a,2}'(t) = 4ut +
 
 $$\partial_1 h(a) = 2u + 2v^2 + 1, \qquad \partial_2 h(a) = 4uv + 3 .$$
 
+<!-- src: 04_ea_An3_2022_tavasz.pdf -->
+**Második példa.** Legyen $f(x,y) := xe^{x^2+y^2} - 3y$ és $a=(a_1,a_2)\in\mathbb{R}^2$. A szekciófüggvényeket $x$-ben, illetve $y$-ban rögzítve és egyváltozóban deriválva:
+
+$$\partial_x f(a_1,a_2) = \bigl(xe^{x^2+a_2^2} - 3a_2\bigr)'_{x=a_1} = \bigl(e^{x^2+a_2^2} + x\cdot 2xe^{x^2+a_2^2}\bigr)_{x=a_1} = (1+2a_1^2)\,e^{a_1^2+a_2^2},$$
+
+$$\partial_y f(a_1,a_2) = \bigl(a_1 e^{a_1^2+y^2} - 3y\bigr)'_{y=a_2} = \bigl(a_1\cdot 2y e^{a_1^2+y^2} - 3\bigr)_{y=a_2} = 2a_1 a_2\, e^{a_1^2+a_2^2} - 3.$$
+
+### Szekciófüggvény és a parciális deriváltfüggvény
+
+A lap fenti $h_{a,i}$ jelölése mellett a gyakorlatban a $G_i(t) := f(a_1,\dots,a_{i-1},t,a_{i+1},\dots,a_n)$ **szekciófüggvény** elnevezés is használatos — ugyanaz az objektum, csak $t$-t az $i$-edik koordináta helyén futtatva. A $\partial_i f(a)$ éppen $G_i'(a_i)$.
+
 ### Jelölésváltozatok
 
 A $\partial_i h$, illetve $\partial_i h(a)$ mellett használatos a $\partial_{x_i} h$, $\partial_x h$, $\partial_y h$, illetve a klasszikus
@@ -80,3 +91,4 @@ Ez a [[concepts/analiii/vektormezo-primitiv-fuggvenye|primitív függvény]] ker
 - [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]] — a parciális derivált gyengesége: ellenpéldák.
 - [[concepts/analiii/jacobi-matrix]] — a vektorváltozó szerinti (multiindexes) általánosítás.
 - [[concepts/analii/derivalt-fogalma]] — az egyváltozós derivált, amelyre a definíció visszavezet.
+- [[concepts/analiii/fuggvenygrafikon-erintosikja]] — a parciális deriváltak mint az érintősík normálvektorának koordinátái.

@@ -1,10 +1,10 @@
 ---
 tags:
   - subject
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, 01_ea_An3_2025_osz.pdf, 02_ea_An3_2022_tavasz.pdf, 03_ea_An3_2022_tavasz.pdf, 04_ea_An3_2022_tavasz.pdf, 05_ea_An3_2022_tavasz.pdf, 06_ea_An3_2022_tavasz.pdf, 07_ea_An3_2022_tavasz.pdf, 08_ea_An3_2022_tavasz.pdf, 09_ea_An3_2022_tavasz.pdf, 10_ea_An3_2022_tavasz.pdf, 11_ea_An3_2022_tavasz.pdf, 12_ea_An3_2022_tavasz.pdf, 13_ea_An3_2022_tavasz.pdf]
 references: ["Kós Géza: Analízis 3 előadásjegyzet, 2024", "Simon Péter: Analízis II., 3–4. fejezet", "Fridli Sándor: Analízis III. tematika"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 state: "[[V]]"
 ---
 
@@ -51,6 +51,7 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 ### Kompaktság és összefüggőség
 
 - [[concepts/analiii/cantor-metszettetel]] — egymásba skatulyázott zárt halmazok metszete; Bolzano–Weierstrass
+- [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel]] — a kiválasztási tétel véges dimenzióban igaz, végtelen dimenzióban általában nem
 - [[concepts/analiii/kompakt-halmazok]] — fedéses kompaktság; kompakt $\Rightarrow$ korlátos és zárt
 - [[concepts/analiii/kompaktsag-ekvivalens-jellemzesei]] — a fedéses, sorozatos és torlódási pontos definíció egyenértékűsége
 - [[concepts/analiii/heine-borel-tetel]] — $\mathbb{R}^p$-ben a megfordítás is igaz; Lindelöf-lemma
@@ -93,6 +94,7 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 - [[concepts/analiii/lancszabaly]] — $(f\circ g)'(a) = f'(g(a))g'(a)$; a fejezet legfontosabb tétele
 - [[concepts/analiii/nivofelulet-es-gradiens]] — a gradiens merőleges a nívófelületre
 - [[concepts/analiii/euler-tetel-homogen-fuggvenyekre]] — homogenitás mint differenciálegyenlet
+- [[concepts/analiii/fuggvenygrafikon-erintosikja]] — kétváltozós függvény grafikonjának érintősíkja a gradiensből
 
 ### Magasabb rendű deriváltak
 
@@ -108,6 +110,7 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 
 - [[concepts/analiii/kvadratikus-alak-definitsege]] — az öt kategória, az egységgömbös becslés, Sylvester-kritérium
 - [[concepts/analiii/lokalis-szelsoertek-feltetelei]] — elsőrendű szükséges, másodrendű elégséges és szükséges feltétel
+- [[concepts/analiii/abszolut-szelsoertek]] — korlátos zárt halmazon: belső stacionárius pontok + perem összevetése
 - [[concepts/analiii/felteteles-szelsoertek]] — Lagrange-multiplikátorok
 - [[concepts/analiii/felteteles-szelsoertek-masodrendu-feltetelei]] — feltételes definitség a magtéren
 
@@ -157,6 +160,8 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 
 - [[concepts/analiii/mertek-es-integraltranszformacio]] — a többváltozós helyettesítés; Jacobi-determináns
 - [[concepts/analiii/polarkoordinatas-helyettesites]] — a legfontosabb konkrét eset
+- [[concepts/analiii/hengerkoordinatas-helyettesites]] — polárkoordináta plusz egy változatlan tengely, Jacobi-determináns $r$
+- [[concepts/analiii/gombi-koordinatas-helyettesites]] — térbeli polárkoordináta, Jacobi-determináns $r^2\sin\theta$
 - [[concepts/analiii/gauss-integral]] — $\int_{-\infty}^{\infty} e^{-x^2} = \sqrt{\pi}$ polárkoordinátákkal
 - [[concepts/analiii/parameteres-integral]] — $F(t) = \int_a^b f(t,x)\,\mathrm{d}x$; a folytonosság öröklődése
 - [[concepts/analiii/parameteres-integral-integralhatosaga]] — az integrálási sorrend felcserélhetősége
@@ -207,9 +212,20 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 - [[concepts/analiii/gauss-osztrogradszkij-tetel]] — a divergencia integrálja egyenlő a határon vett fluxussal
 - [[concepts/analiii/stokes-tetel]] — a rotáció integrálja egyenlő a határon vett cirkulációval
 
+### Görbék
+
+- [[concepts/analiii/parameteres-gorbe]] — görbe mint folytonos $[a,b]\to\mathbb{R}^m$ függvény értékkészlete
+- [[concepts/analiii/gorbe-erintoje]] — egyszerű sima görbe és az érintő fogalma
+- [[concepts/analiii/sikgorbe-megadasi-modok]] — explicit, implicit, paraméteres és polárkoordinátás alak
+- [[concepts/analiii/sikgorbe-ivhossza]] — rektifikálhatóság, ívhossz paraméteres és polárkoordinátás alakban
+- [[concepts/analiii/szektorterulet-polarkoordinatakban]] — $t(T)=\tfrac12\int r^2\,\mathrm{d}\varphi$
+- [[concepts/analiii/bezier-gorbe]] — Bernstein-polinomok, Weierstrass- és Bernstein-approximáció, Bézier-görbe
+
 ### Felületek és térbeli integráltételek
 
-- [[concepts/analiii/parameteres-felulet]] — felületelem, felszínelem, a lampion-ellenpélda
+- [[concepts/analiii/parameteres-felulet]] — felületelem, felszínelem, a lampion-ellenpélda, a felület megadásának három módja
+- [[concepts/analiii/feluleti-gorbe]] — a paramétertartományban futó görbe képe a felületen
+- [[concepts/analiii/feluleti-erintosik]] — a felület pontbeli érintősíkja a felületi görbék érintőiből
 - [[concepts/analiii/feluleti-integral]] — felszín szerinti integrál és fluxus
 - [[concepts/analiii/green-tetel-harom-dimenzioban]] — minden térbeli integráltétel közös építőköve
 - [[concepts/analiii/altalanos-stokes-tetel]] — a négy térbeli tétel közös alakja bilineáris szorzással
@@ -220,16 +236,24 @@ Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, prim
 
 ## Hiányzó anyagrészek
 
-A tárgyleírás alábbi tételei még egyetlen laphoz sem tartoznak.
+A tárgyleírás alábbi tétele még egyetlen laphoz sem tartozik.
 
-- **Henger- és gömbi koordináták.** Csak a
-  [[concepts/analiii/polarkoordinatas-helyettesites]] létezik, a tematika mindhármat
-  megnevezi.
-- **Differenciálgeometriai alapok.** Ívhossz, görbület, Frenet-formulák. A
-  [[concepts/analiii/parameteres-felulet]] és a
-  [[concepts/analiii/szakaszonkent-c1-gorbe]] az integrálás előfeltételei, nem
-  görbeelmélet.
-- **Paraméteres görbe** mint önálló fogalom — felületre van lap, görbére nincs.
+- **Görbék görbülete, Frenet-formulák.** A görbék oldalán a
+  [[concepts/analiii/parameteres-gorbe]], [[concepts/analiii/gorbe-erintoje]]
+  és [[concepts/analiii/sikgorbe-megadasi-modok]], a felületek oldalán a
+  [[concepts/analiii/parameteres-felulet]], [[concepts/analiii/feluleti-gorbe]]
+  és [[concepts/analiii/feluleti-erintosik]] immár lefedi a megadási módokat és
+  az érintősíkot; a görbék görbülete és a Frenet-apparátus továbbra sincs
+  laphoz kötve. A 12. előadás (`12_ea_An3_2022_tavasz.pdf`) a Bézier-görbéknél
+  megáll, nem tárgyalja.
 
-Mindhárom forrása az ELTE-IK `Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf`,
-amely még konvertálatlan.
+Forrása az ELTE-IK `Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf`, amely még
+konvertálatlan.
+
+Megjegyzés a henger- és gömbi koordinátákhoz: [[concepts/analiii/hengerkoordinatas-helyettesites]]
+és [[concepts/analiii/gombi-koordinatas-helyettesites]] lapja immár létezik, de
+`derivation: unsourced` — a `11_ea_An3_2022_tavasz.pdf` diasora e két témát csak
+névvel (definíció/tétel felsorolásként) említi, tényleges levezetés nélkül, így
+egyetlen vaultbeli forrás sem fedi a tényleges tárgyalásukat. A „Paraméteres
+görbe mint önálló fogalom" hiány a [[concepts/analiii/parameteres-gorbe]] és
+[[concepts/analiii/gorbe-erintoje]] lapok létrejöttével megoldódott.

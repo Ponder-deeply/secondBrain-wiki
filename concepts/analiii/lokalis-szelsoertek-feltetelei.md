@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.5.1.1–4.5.1.3. Tétel"]
 derivation: source
-updated: 2026-09-07
+updated: 2026-09-14
 ---
 
 # Lokális szélsőérték feltételei több változóban
@@ -59,6 +59,21 @@ $$f(a + th) - f(a) = \frac{t^2}{2}\left(Q^f_a(h) + 2\eta(th)\|h\|^2\right),$$
 
 A szemidefinit-de-nem-definit eset **eldöntetlen**: ilyenkor a másodrendű közelítés nem elég, magasabb rendű tagokat kell nézni. Ez pontosan az egyváltozós $f''(a) = 0$ eset megfelelője, ahol szintén tovább kell derivélni. Az $n = 1$ esetben $Q^f_a(x) = f''(a)x^2$, tehát a definitség az $f''(a)$ előjele — a fenti három tétel az egyváltozós elmélet szó szerinti átirata, csak „előjel" helyett „definitség" áll benne.
 
+### Az $n=2$ speciális eset
+
+Két változóban a $2\times 2$-es szimmetrikus mátrixok definitsége elemi eszközzel — a determináns előjelével — jellemezhető, ami az elégséges feltételt közvetlenül kimondhatóvá teszi $Q^f_a$ kikerülésével.
+
+Legyen $f \in \mathbb{R}^2 \to \mathbb{R}$, $a \in \operatorname{int} D_f$, $f \in C^2\{a\}$, $\operatorname{grad} f(a) = (0,0)$, és jelölje
+
+$$D(a) := \det f''(a) = \det \begin{bmatrix} \partial_{11}f(a) & \partial_{12}f(a) \\ \partial_{21}f(a) & \partial_{22}f(a)\end{bmatrix}.$$
+
+Ekkor:
+
+1. ha $D(a) > 0$ és $\partial_{11}f(a) > 0$ (ill. $< 0$), akkor $f$-nek $a$-ban lokális minimuma (ill. maximuma) van;
+2. ha $D(a) < 0$, akkor $f$-nek $a$-ban **nincs** lokális szélsőértéke — az ilyen $a$ pontot **nyeregpontnak** nevezzük.
+
+Az 1. pont a másodrendű elégséges feltétel speciális esete a $2\times 2$-es Sylvester-kritériummal ($d_1 = \partial_{11}f(a) > 0$, $d_2 = D(a) > 0$ pozitív definitséget ad); a 2. pont a másodrendű szükséges feltételből következik, hiszen $D(a) < 0$ épp azt jelenti, hogy $Q^f_a$ indefinit, ami sem pozitív, sem negatív szemidefinit — tehát a szükséges feltétel sérül. A $D(a) = 0$ eset — akárcsak az általános $n$-ben a szemidefinit-de-nem-definit eset — eldöntetlen marad.
+
 ### A gyakorlati recept
 
 1. Old meg a $\operatorname{grad} f(x) = 0$ egyenletrendszert — ezek a **stacionárius pontok**.
@@ -71,4 +86,5 @@ A szemidefinit-de-nem-definit eset **eldöntetlen**: ilyenkor a másodrendű kö
 - [[concepts/analiii/kvadratikus-alak-definitsege]] — a döntési kritérium.
 - [[concepts/analiii/hesse-matrix]] — a vizsgálandó mátrix.
 - [[concepts/analiii/felteteles-szelsoertek]] — ugyanez korlátozó feltételekkel.
+- [[concepts/analiii/abszolut-szelsoertek]] — ugyanez a szükséges feltétel, korlátos zárt halmazon a globális szélsőérték keresésének első lépéseként.
 - [[concepts/analii/lokalis-szelsertekek]] — az egyváltozós eredeti.

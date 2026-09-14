@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 08_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # Paraméteres integrál integrálhatósága
@@ -40,6 +40,26 @@ $$\int_c^d F - \varepsilon < \int_{t=c}^{d}\left(\int_{x=a}^{b} f(t,x)\,\mathrm{
 Mivel ez minden $\varepsilon > 0$-ra és minden elég bő $[a,b]$-re teljesül,
 
 $$\int_{x=\alpha}^{\beta}\left(\int_{t=c}^{d} f(t,x)\,\mathrm{d}t\right)\mathrm{d}x = \lim_{a\searrow\alpha,\; b\nearrow\beta}\int_{x=a}^{b}\left(\int_{t=c}^{d} f(t,x)\,\mathrm{d}t\right)\mathrm{d}x = \int_{t=c}^{d} F(t)\,\mathrm{d}t.$$
+
+### Másik bizonyítás az (a) esetre — segédfüggvényekkel
+
+A kompakt téglalapon vett esetre ((a), $f : [a,b]\times[c,d] \to \mathbb{R}$ folytonos) van egy második, direkt $\varepsilon$-becslés nélküli bizonyítás is, amely a [[concepts/analiii/parameteres-integral-differencialasa|paraméteres integrál deriválhatóságára]] vonatkozó tételre vezeti vissza az állítást.
+
+Legyen $I := [a,b]\times[c,d]$, és vezessük be a
+$$h(u,v) := \int_c^v f(u,s)\,\mathrm{d}s \qquad \bigl((u,v)\in I\bigr)$$
+függvényt. Mivel $f$ folytonos és $I$ [[concepts/analiii/kompakt-halmazok|kompakt]], a [[concepts/analiii/egyenletes-folytonossag-metrikus-terben|Heine-tétel]] szerint $f$ egyenletesen folytonos, ebből következik, hogy $h \in C(I)$. A valós-valós függvények integrálfüggvényének deriválhatóságára vonatkozó tételből
+$$\frac{\partial h}{\partial v}(u,v) = f(u,v) \qquad \bigl((u,v)\in I\bigr),$$
+és ez a parciális deriváltfüggvény is folytonos $I$-n.
+
+Vezessünk be még két függvényt. Rögzített $y \in [c,d]$ esetén legyen
+$$F(y) := \int_a^b h(x,y)\,\mathrm{d}x = \int_a^b\left(\int_c^y f(x,v)\,\mathrm{d}v\right)\mathrm{d}x, \qquad G(y) := \int_c^y\left(\int_a^b f(x,v)\,\mathrm{d}x\right)\mathrm{d}v.$$
+A paraméteres integrál deriválhatóságára vonatkozó tétel szerint
+$$F'(y) = \int_a^b \frac{\partial h}{\partial y}(x,y)\,\mathrm{d}x = \int_a^b f(x,y)\,\mathrm{d}x,$$
+és ismét a valós-valós integrálfüggvények deriválhatóságára vonatkozó tétel szerint
+$$G'(y) = \int_a^b f(x,y)\,\mathrm{d}x.$$
+Tehát $F' - G' \equiv 0$, azaz $F - G$ állandó; mivel $F(c) = G(c) = 0$, ezért $F(y) = G(y)$ minden $y \in [c,d]$-re. A $y = d$ választással éppen az (a) állítást kapjuk.
+
+Ez a bizonyítás a fejezet másik két tételét (a folytonossági és a deriválhatósági tételt) egyszerre használja, míg a fenti közvetlen bizonyítás csak a folytonossági tételre és a Heine-tételre épít.
 
 ### Szerepe
 

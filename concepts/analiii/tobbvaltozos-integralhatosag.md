@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-06
+updated: 2026-09-14
 ---
 
 # Többváltozós integrálhatóság és kritériumai
@@ -21,6 +21,21 @@ $$\Omega(f,\mathcal{F}) = \sum_{i=1}^n t_p(B_i)\left(\sup_{B_i} f - \inf_{B_i} f
 
 - $f$ akkor és csak akkor integrálható, ha minden $\varepsilon > 0$-hoz van olyan $\mathcal{F}$ felosztás, hogy $\Omega(f,\mathcal{F}) < \varepsilon$.
 - $f$ akkor és csak akkor integrálható, ha minden végtelenül finomodó $\mathcal{F}_n$ felosztássorozatra $\Omega(f,\mathcal{F}_n) \to 0$.
+
+### Érzéketlenség véges halmazon való módosításra
+
+**Tétel.** Legyen $I \subset \mathbb{R}^n$ ($n \in \mathbb{N}^+$) intervallumon értelmezett $f, g : I \to \mathbb{R}$ korlátos függvény, és tegyük fel, hogy az
+
+$$A := \{x \in I \mid f(x) \neq g(x)\}$$
+
+halmaz véges. Ekkor
+
+- $f \in R(I) \iff g \in R(I)$,
+- ha $f \in R(I)$, akkor $\int_I f = \int_I g$.
+
+Ez azt fejezi ki, hogy az integrálhatóság és az integrál értéke „érzéketlen" a függvény véges halmazon való megváltoztatására — ugyanaz a jelenség, amit az egyváltozós esetben is megszokhattunk, csak itt a véges ponthalmaz Jordan-mértéke $0$ garantálja az állítást.
+
+Ennek folyománya, hogy folytonos függvény mindig integrálható: ha $f \in C(I)$, akkor $f$ triviálisan (üres kivételhalmazzal) az alábbi, nullmértékű kivételt is megengedő tétel feltételét teljesíti, tehát $C(I) \subset R(I)$.
 
 ### Elegendő feltétel: majdnem mindenütt folytonosság
 
