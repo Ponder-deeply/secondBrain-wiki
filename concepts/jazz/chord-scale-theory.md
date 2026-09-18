@@ -61,16 +61,16 @@ Négylépéses eljárás:
 
 Példák:
 
-| Szimbólum | Kontextus | Skála |
-|---|---|---|
-| Dm7 | ii. fok C-dúrban | D dorian |
-| G7 | V. fok C-dúrban | G mixolydian |
-| Cmaj7 | I. fok C-dúrban | C ionian |
-| Fmaj7 | IV. fok C-dúrban | F lydian |
-| G7alt | V. fok C-mollban | G altered (Ab melodikus moll) |
-| Bm7b5 | ii. fok A-mollban | B locrian |
-| A7 | V/ii C-dúrban (secondary dominant) | A mixolydian b9 b13 (D harmonikus moll 5. módusa) |
-| Bb7 | backdoor domináns C-dúrban | Bb lydian dominant |
+| Szimbólum | Kontextus                          | Skála                                             |
+| --------- | ---------------------------------- | ------------------------------------------------- |
+| Dm7       | ii. fok C-dúrban                   | D dorian                                          |
+| G7        | V. fok C-dúrban                    | G mixolydian                                      |
+| Cmaj7     | I. fok C-dúrban                    | C ionian                                          |
+| Fmaj7     | IV. fok C-dúrban                   | F lydian                                          |
+| G7alt     | V. fok C-mollban                   | G altered (Ab melodikus moll)                     |
+| Bm7b5     | ii. fok A-mollban                  | B locrian                                         |
+| A7        | V/ii C-dúrban (secondary dominant) | A mixolydian b9 b13 (D harmonikus moll 5. módusa) |
+| Bb7       | backdoor domináns C-dúrban         | Bb lydian dominant                                |
 
 A 2. lépés a legfontosabb és a legkönnyebben elrontható. Ugyanaz az akkordszimbólum különböző funkcióban különböző skálát kap: a Cmaj7 mint I. fok ionian, mint IV. fok lydian. Erről szól a [[concepts/jazz/dur-skala-modusai|dur-skala-modusai]] lap.
 

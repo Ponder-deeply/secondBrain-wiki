@@ -33,7 +33,7 @@ Legyenek $a, b$ egészek ($b \neq 0$), és $a = b\cdot q + r$ a fenti felbontás
 
 *Hány óra lesz 123 óra múlva, ha most 9 óra van?* $123 = 24\cdot 5 + 3$, tehát $9 + 3 = 12$: dél lesz. *104 óra múlva?* $104 = 24 \cdot 4 + 20$, tehát $9 + 20 = 29$, újabb redukcióval $29 = 24\cdot 1 + 5$: hajnali 5 óra.
 
-*Milyen napra esik jövőre szeptember 16?* A napokat számozzuk $\text{hétfő} \mapsto 0, \dots, \text{vasárnap} \mapsto 6$ szerint. $365 = 7\cdot 52 + 1$, tehát szerda $+\,1$ nap $= 2 + 1 = 3 = $ csütörtök. Visszafelé, két évet lépve szökőévvel: $-(365 + 366) = -731 = 7\cdot(-104) - 3$, azaz vasárnap $-\,3$ nap $= 6 - 3 = 3 = $ csütörtök.
+*Milyen napra esik jövőre szeptember 16?* A napokat számozzuk $\text{hétfő} \mapsto 0, \dots, \text{vasárnap} \mapsto 6$ szerint. $365 = 7\cdot 52 + 1$, tehát szerda $+\,1$ nap $= 2 + 1 = 3 =$ csütörtök. Visszafelé, két évet lépve szökőévvel: $-(365 + 366) = -731 = 7\cdot(-104) - 3$, azaz vasárnap $-\,3$ nap $= 6 - 3 = 3 =$ csütörtök.
 
 A maradékos osztás az alapja a [[concepts/dimatii/szamrendszerek]] felírási tételének, az [[concepts/dimatii/euklideszi-algoritmus]]nak és a [[concepts/dimatii/kongruencia]] fogalmának egyaránt.
 
