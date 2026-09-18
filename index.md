@@ -19,7 +19,7 @@ Kereséshez: `qmd query "kérdés" -c wiki`.
 | [[subjects/logika]]           | 49    | Logika és számításelmélet: ítéletlogika és elsőrendű logika szintaxisa és szemantikája, bizonyításelmélet, szekvent-, tabló- és rezolúciós kalkulus, temporális logika (Kripke, LTL, CTL) |
 | [[subjects/nummodi]]          | 24    | Numerikus módszerek 1.: gépi számábrázolás, LER direkt/iteratív módszerek, mátrixfelbontások, kondícionáltság, nemlineáris egyenletek + 28 vizsgatétel                                    |
 | [[subjects/jogalap]]          | 14    | Jogi alapok: polgári jog, társasági jog, szerződések, személyiségi jogok, adatvédelem                                                                                                     |
-| [[subjects/jazz]]             | 49    | Jazzelmélet: chord-scale theory, akkordok és skálák, funkciós harmónia, voicingok, improvizáció (nem egyetemi tárgy)                                                                      |
+| [[subjects/jazz]]             | 54    | Jazzelmélet: chord-scale theory, akkordok és skálák, funkciós harmónia, voicingok, improvizáció (nem egyetemi tárgy)                                                                      |
 | [[subjects/linalg]]           | 1     | Lineáris algebra: vizuális szemléltetések a numerikus módszerekhez (kiegészítő anyag)                                                                                                     |
 | [[subjects/ptibsc-modellezo]] | 1     | PTI BSc Modellező (A) specializáció: képzési struktúra, tantervi háló, kredit-bontás                                                                                                      |
 

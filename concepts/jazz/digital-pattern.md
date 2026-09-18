@@ -93,3 +93,4 @@ Elméleti kerete: a digital pattern **gyakorlóeszköz**, nem improvizációs ny
 - [[concepts/jazz/ritmikus-eltolas]] — a mechanikusság ritmikai ellenszere
 - [[concepts/jazz/guide-tone-line]] — a mintáknál elvontabb, harmóniaközpontú váz
 - [[concepts/jazz/ii-v-i-durban]] — a szekvenciálás alapterepe
+- [[concepts/jazz/pentaton-cellak]] — az 1-2-3-5 minta szabadon választott alaphangú pentatonból

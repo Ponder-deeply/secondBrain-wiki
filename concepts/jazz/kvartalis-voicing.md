@@ -70,3 +70,4 @@ George Russell Lydian Chromatic Concept-je a kvartális hangzást nem "terc nél
 - [[concepts/jazz/drop-2-drop-3]] — másfajta nyitott elrendezés, tercalapon
 - [[concepts/jazz/szuperimponalas]] — pentaton és kvartsorozatok szólóban
 - [[concepts/jazz/comping]] — mikor indokolt a funkciósan semleges kíséret
+- [[concepts/jazz/pentaton-skalak]] — ugyanaz a kvintsor skálaként

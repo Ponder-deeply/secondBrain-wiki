@@ -96,3 +96,4 @@ Ez a Berklee/Levine olvasat. Megjegyzendő, hogy a Russell-féle Lydian Chromati
 - [[concepts/jazz/coltrane-changes]] — sűrű harmóniamozgás, ami rávetíthető
 - [[concepts/jazz/post-bop-harmonia]] — a stílusréteg, ahol rendszeressé válik
 - [[concepts/jazz/guide-tone-line]] — a visszaérkezés célpontjai
+- [[concepts/jazz/pentaton-outside]] — pentatonok rávetítése és eltolása mint outside anyag

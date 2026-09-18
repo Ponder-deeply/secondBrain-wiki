@@ -60,3 +60,4 @@ Ellenszerül a blues scale-t érdemes a [[concepts/jazz/guide-tone-line|guide-to
 - [[concepts/jazz/chord-scale-theory]] — a versengő, akkordonkénti logika
 - [[concepts/jazz/bebop-skalak]] — a kromatikus hangok másik rendszere
 - [[concepts/jazz/guide-tone-line]] — hogyan tartsuk a harmóniát blues scale mellett
+- [[concepts/jazz/pentaton-skalak]] — a moll pentaton, amelyből a blues scale származik

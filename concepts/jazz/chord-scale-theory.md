@@ -107,3 +107,4 @@ Ezek nem cáfolják egymást, de más szótárt használnak. Egy leíráson bel�
 - [[concepts/jazz/szimmetrikus-skalak]] — diminished és whole tone
 - [[concepts/jazz/bebop-skalak]] — a nem-akkordhangok metrikus kezelése
 - [[concepts/jazz/ii-v-i-durban]] — a hozzárendelés tipikus gyakorlóterepe
+- [[concepts/jazz/pentaton-akkordhozzarendeles]] — a hozzárendelés pentatonos változata
