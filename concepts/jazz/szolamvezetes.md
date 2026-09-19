@@ -31,7 +31,7 @@ Cmaj7 – A7alt – Dm7 – G7alt – Cmaj7, alaphang nélküli formákkal (a ba
 | Akkord | Voicing | Hangfunkciók |
 |---|---|---|
 | Cmaj9 | E, G, B, D | 3, 5, 7, 9 |
-| A7b9(b13) | F, G, Bb, C# | b13, b7, b9, 3 |
+| A7b9(b13) | F, G, Bb, C♯ | b13, b7, b9, 3 |
 | Dm9 | F, A, C, E | b3, 5, b7, 9 |
 | G7alt | F, Ab, B, Eb | b7, b9, 3, b13 |
 | Cmaj9 | E, G, B, D | 3, 5, 7, 9 |
@@ -41,14 +41,14 @@ Szólamonként követve:
 - **1. (alsó) szólam:** E – F – F – F – E
 - **2. szólam:** G – G – A – Ab – G
 - **3. szólam:** B – Bb – C – B – B
-- **4. (felső) szólam:** D – C# – E – Eb – D
+- **4. (felső) szólam:** D – C♯ – E – Eb – D
 
 Megfigyelések:
 
 - A Cmaj9 → A7b9 lépésnél három szólam fél hangot mozdul, egy marad. A domináns "belopakodik" a tonika helyére.
-- Az egyetlen nagyobb ugrás az A7 → Dm9 felső szólamában (C# → E, kis terc). A cél nem a nulla mozgás, hanem az összesített minimum; egy nagyobb lépés elfogadható, ha cserébe a többi szólam helyben marad.
+- Az egyetlen nagyobb ugrás az A7 → Dm9 felső szólamában (C♯ → E, kis terc). A cél nem a nulla mozgás, hanem az összesített minimum; egy nagyobb lépés elfogadható, ha cserébe a többi szólam helyben marad.
 - A G7alt → Cmaj9 lépésnél mind a négy szólam fél hangot mozdul lefelé vagy marad — ez a klasszikus alterált feloldás.
-- A felső szólam vonala D – C# – E – Eb – D: önmagában is dallam, kromatikus közelítésekkel. Lásd [[concepts/jazz/guide-tone-line|guide-tone-line]] és [[concepts/jazz/approach-note|approach-note]].
+- A felső szólam vonala D – C♯ – E – Eb – D: önmagában is dallam, kromatikus közelítésekkel. Lásd [[concepts/jazz/guide-tone-line|guide-tone-line]] és [[concepts/jazz/approach-note|approach-note]].
 
 ## Kétkezes esetek
 

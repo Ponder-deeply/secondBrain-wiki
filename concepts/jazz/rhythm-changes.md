@@ -27,7 +27,7 @@ AABA, minden szakasz 8 ütem, összesen 32. Az utolsó A-szakasz nem vezet vissz
 
 | Ütem | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|
-| Fok | I7 | IV – #iv°7 | I/V – VI7 | ii7 – V7 |
+| Fok | I7 | IV – ♯iv°7 | I/V – VI7 | ii7 – V7 |
 | Bb-ben | Bb7 | Eb – E°7 | Bb/F – G7 | Cm7 – F7 |
 
 Az első négy ütem lényegében kétszer egymás után lejátszott [[concepts/jazz/turnaround|turnaround]]: I–vi–ii–V, majd a vi helyén iii–VI7. A 3. ütem Dm7–G7-je ugyanazt a funkciót tölti be, mint a Gm7 — tonikahelyettes plusz a ii fok dominánsa.
@@ -46,7 +46,7 @@ Az A-szakasz 5–6. ütemét sokféleképpen töltik ki, ugyanazon a vázon:
 
 - **bVII7 (Ab7):** az Eb helyén vagy után, backdoor-megoldásként vissza a Bb-re — lásd [[concepts/jazz/backdoor-ii-v|backdoor-ii-v]]. Sötétebb, bebopos szín.
 - **ivm7 (Ebm7):** az Eb után moll-változatban, szintén backdoor logika, kromatikus szólamvezetéssel (G – Gb – F).
-- **#iv°7 (E°7):** a fenti alapváltozat átmenő diminishede.
+- **♯iv°7 (E°7):** a fenti alapváltozat átmenő diminishede.
 - **biii°7 (Db°7):** a 6. ütem második felén, ha a 7. ütem Bb/F-re érkezik.
 
 Az első négy ütemben szintén elterjedt a tritone subokkal kromatizált turnaround: Bb – Db7 – Cm7 – B7 helyett vagy mellett bármely V7 lecserélhető a bII7-jére, lásd [[concepts/jazz/tritone-substitution|tritone-substitution]]. Gyors tempón viszont gyakori az ellenkező irány: a ritmusszekció **leegyszerűsíti** az A-t, sokszor csak Bb és F7 váltakozására.

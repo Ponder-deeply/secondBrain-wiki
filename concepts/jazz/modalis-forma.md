@@ -78,11 +78,11 @@ A felületre kiírt akkord egy módust jelöl, nem több lehetséges skálát:
 |---|---|---|
 | m7 (modális kontextusban) | dorian | ♮13 |
 | m7 sötétebb színnel | aeolian vagy phrygian | b13, illetve b9 |
-| maj7#11 | lydian | #11 |
+| maj7♯11 | lydian | ♯11 |
 | 7sus4 | mixolydian vagy dorian a 5. fokról | nincs terc |
-| maj7 pedálon | ionian vagy lydian | 4 vs. #11 döntés |
+| maj7 pedálon | ionian vagy lydian | 4 vs. ♯11 döntés |
 
-A módus **karakterhangja** kulcsfontosságú: dorianban a ♮13, lydianban a #11, phrygianban a b9. Ezek különböztetik meg a módust a rokonaitól, tehát az improvizációnak ki kell emelnie őket — máskülönben a felület azonosíthatatlan marad. Az avoid note-fogalom itt gyengébben érvényes, mint funkciós környezetben: hosszú felületen a „kerülendő" hang inkább késleltetés, mint hiba. Lásd [[concepts/jazz/dur-skala-modusai|dur-skala-modusai]] és [[concepts/jazz/chord-scale-theory|chord-scale-theory]].
+A módus **karakterhangja** kulcsfontosságú: dorianban a ♮13, lydianban a ♯11, phrygianban a b9. Ezek különböztetik meg a módust a rokonaitól, tehát az improvizációnak ki kell emelnie őket — máskülönben a felület azonosíthatatlan marad. Az avoid note-fogalom itt gyengébben érvényes, mint funkciós környezetben: hosszú felületen a „kerülendő" hang inkább késleltetés, mint hiba. Lásd [[concepts/jazz/dur-skala-modusai|dur-skala-modusai]] és [[concepts/jazz/chord-scale-theory|chord-scale-theory]].
 
 Megjegyzés más iskolákról: a Russell-féle Lydian Chromatic Concept a modális felületeket nem a dúrskála módusaiként, hanem lydian-központú tonális gravitáció mentén rendezi el, és a felület-improvizációt „vertical/horizontal" viszonyokban írja le. Ez összefüggő, de külön rendszer — nem keverendő a fenti Berklee-féle chord-scale leírással.
 

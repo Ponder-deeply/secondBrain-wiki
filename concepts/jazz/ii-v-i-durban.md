@@ -53,8 +53,8 @@ Berklee chord-scale theory szerint C-dúrban mindhárom akkord ugyanannak a dúr
 
 Ez a „diatonikus" olvasat. A gyakorlatban két szokásos eltérés van:
 
-- **G7 alterálva:** ha a lánc erős oldást akar, a G7 fölé altered skála (7. módus a melodikus mollból, itt Ab melodic minor) vagy fél–egész diminished skála kerül, b9/#9/#11/b13 tension-ökkel. Lásd [[concepts/jazz/alteraciok|alteraciok]].
-- **Cmaj7 lydian:** ha a I fok nem végleges zárás, hanem lebegő felület, a 11 helyett #11 (C lydian).
+- **G7 alterálva:** ha a lánc erős oldást akar, a G7 fölé altered skála (7. módus a melodikus mollból, itt Ab melodic minor) vagy fél–egész diminished skála kerül, b9/♯9/♯11/b13 tension-ökkel. Lásd [[concepts/jazz/alteraciok|alteraciok]].
+- **Cmaj7 lydian:** ha a I fok nem végleges zárás, hanem lebegő felület, a 11 helyett ♯11 (C lydian).
 
 A ii fokon alteráció ritka: a Dm7 funkciója az előkészítés, nem a feszültségkeltés.
 

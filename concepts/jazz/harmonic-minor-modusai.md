@@ -21,10 +21,10 @@ C harmonikus mollból (C D Eb F G Ab B):
 |---|---|---|---|---|
 | I | harmonikus moll | C | 1 2 b3 4 5 b6 7 | mMaj7 |
 | II | locrian ♮6 | D | 1 b2 b3 4 b5 6 b7 | m7b5 |
-| III | ionian #5 | Eb | 1 2 3 4 #5 6 7 | maj7#5 |
-| IV | dorian #4 | F | 1 2 b3 #4 5 6 b7 | m7#11 |
+| III | ionian ♯5 | Eb | 1 2 3 4 ♯5 6 7 | maj7♯5 |
+| IV | dorian ♯4 | F | 1 2 b3 ♯4 5 6 b7 | m7♯11 |
 | V | phrygian dominant | G | 1 b2 3 4 5 b6 b7 | 7b9b13 |
-| VI | lydian #2 | Ab | 1 #2 3 #4 5 6 7 | maj7#11 |
+| VI | lydian ♯2 | Ab | 1 ♯2 3 ♯4 5 6 7 | maj7♯11 |
 | VII | altered dim7 | B | 1 b2 b3 b4 b5 b6 bb7 | dim7 |
 
 A gyakorlatban ebből három számít érdemben: a I. fok (moll tonika), a II. fok (moll ii) és mindenekelőtt az V. fok.
@@ -48,20 +48,20 @@ Mindkettő moll ii-V-i dominánsán állhat. A különbség:
 | | phrygian dominant | altered |
 |---|---|---|
 | forrás | harmonikus moll V. | melodikus moll VII. |
-| kvint | tiszta 5 | nincs (b5/#5) |
-| 9 | csak b9 | b9 és #9 |
-| 11 | ♮11 (avoid) | #11 |
+| kvint | tiszta 5 | nincs (b5/♯5) |
+| 9 | csak b9 | b9 és ♯9 |
+| 11 | ♮11 (avoid) | ♯11 |
 | 13 | b13 | b13 |
 | karakter | hagyományosabb, funkcionálisabb | modernebb, feszesebb |
 
-A phrygian dominant „bebop előtti", erősen funkciós hangzás; az altered a bebop utáni alapértelmezés. Egy ii-V-n belül nem keverendők, mert a ♮5 és a #11 ütközik.
+A phrygian dominant „bebop előtti", erősen funkciós hangzás; az altered a bebop utáni alapértelmezés. Egy ii-V-n belül nem keverendők, mert a ♮5 és a ♯11 ütközik.
 
 ## A többi módus
 
 - **Locrian ♮6 (II. fok)** — m7b5 a moll ii. fokán. Alternatívája a melodikus mollból jövő locrian ♮2; utóbbi gyakoribb, mert a ♮9 hasznosabb tension, mint a ♮13.
-- **Ionian #5 (III. fok)** — maj7#5, ritka; a moll hangnem bIII. fokán jelenhet meg.
-- **Dorian #4 (IV. fok)** — m7 akkordon #11-gyel; modális színezés, lásd [[concepts/jazz/modalis-jazz-harmonia|modalis-jazz-harmonia]].
-- **Lydian #2 (VI. fok)** — maj7 akkordon, egzotikus szín, gyakorlatilag csak a skála teljességéhez tartozik.
+- **Ionian ♯5 (III. fok)** — maj7♯5, ritka; a moll hangnem bIII. fokán jelenhet meg.
+- **Dorian ♯4 (IV. fok)** — m7 akkordon ♯11-gyel; modális színezés, lásd [[concepts/jazz/modalis-jazz-harmonia|modalis-jazz-harmonia]].
+- **Lydian ♯2 (VI. fok)** — maj7 akkordon, egzotikus szín, gyakorlatilag csak a skála teljességéhez tartozik.
 - **VII. módus** — dim7 akkordon. A gyakorlatban a dim7-re inkább a whole-half diminished skálát használjuk (lásd [[concepts/jazz/szimmetrikus-skalak|szimmetrikus-skalak]]), mert az szimmetrikus és egyszerűbb.
 
 ## Használati összefoglaló

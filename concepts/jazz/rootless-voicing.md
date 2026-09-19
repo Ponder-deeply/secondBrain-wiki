@@ -42,7 +42,7 @@ Megjegyzések:
 
 - Dominánson a "A forma" alsó hangja a gyakorlatban a b7, nem a 3 — a szokásos G13 A forma F, A, B, E. A névadás a ii–V-en belüli fekvésigazodást követi: a Dm9 A formájából (F, A, C, E) egyetlen hang mozdul.
 - m7b5-nél a b5 kötelező, a 9 (locrian ♮2 esetén) csak akkor jöhet, ha a dallam engedi. Lásd [[concepts/jazz/melodic-minor-modusai|melodic-minor-modusai]].
-- Alterált dominánson a b9/#9 és b13 az 9/13 helyére lép; a készlet szerkezete változatlan. Lásd [[concepts/jazz/alteraciok|alteraciok]].
+- Alterált dominánson a b9/♯9 és b13 az 9/13 helyére lép; a készlet szerkezete változatlan. Lásd [[concepts/jazz/alteraciok|alteraciok]].
 
 ## Váltás ii–V–I alatt
 

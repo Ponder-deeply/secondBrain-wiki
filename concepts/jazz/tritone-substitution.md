@@ -26,7 +26,7 @@ A tritonusz szimmetrikus, ezért a hat lehetséges tritonusz mindegyike pontosan
 
 | Pár | Pár | Pár | Pár | Pár | Pár |
 |---|---|---|---|---|---|
-| C7 – F#7 | Db7 – G7 | D7 – Ab7 | Eb7 – A7 | E7 – Bb7 | F7 – B7 |
+| C7 – F♯7 | Db7 – G7 | D7 – Ab7 | Eb7 – A7 | E7 – Bb7 | F7 – B7 |
 
 ## Jelölés és fokszám
 
@@ -48,16 +48,16 @@ A ii fok is helyettesíthető együtt a V-tel („kettős sub"): Abm7 – Db7 �
 
 ## Chord-scale: lydian dominant
 
-A subV7 alapértelmezett skálája a **lydian dominant** (a melodikus moll 4. módusa): 1 2 3 #4 5 6 b7.
+A subV7 alapértelmezett skálája a **lydian dominant** (a melodikus moll 4. módusa): 1 2 3 ♯4 5 6 b7.
 
 Db lydian dominant: Db – Eb – F – G – Ab – Bb – Cb.
 
-Miért ez: a Db7 fölött a természetes 4 (Gb) avoid note lenne, a #11 (G) viszont éppen a helyettesített G7 alaphangja, és diatonikusan illeszkedik a célhangnembe. Sőt a Db lydian dominant hangkészlete jórészt egybeesik a G altered skáláéval — ugyanaz az Ab melodikus moll két módusa. Ezért a tritone sub és az alterált domináns hangzásban közel áll egymáshoz; a különbség a basszusban van.
+Miért ez: a Db7 fölött a természetes 4 (Gb) avoid note lenne, a ♯11 (G) viszont éppen a helyettesített G7 alaphangja, és diatonikusan illeszkedik a célhangnembe. Sőt a Db lydian dominant hangkészlete jórészt egybeesik a G altered skáláéval — ugyanaz az Ab melodikus moll két módusa. Ezért a tritone sub és az alterált domináns hangzásban közel áll egymáshoz; a különbség a basszusban van.
 
 | Akkord | Skála | Forrás |
 |---|---|---|
 | G7alt | G altered | Ab melodikus moll 7. módusa |
-| Db7#11 | Db lydian dominant | Ab melodikus moll 4. módusa |
+| Db7♯11 | Db lydian dominant | Ab melodikus moll 4. módusa |
 
 Ez a rokonság ad gyakorlati fogást: aki G7 fölött altered skálát játszik, hangkészletben ugyanazt teszi, mintha Db7-re gondolna. Alternatívák: Db mixolydian (ha egyszerűbb szín kell), Db HW diminished (sűrűbb kromatika).
 
@@ -73,7 +73,7 @@ Ez a rokonság ad gyakorlati fogást: aki G7 fölött altered skálát játszik,
 
 - az akkord nem oldódik tovább, hanem statikus domináns felület (pl. blues I. foka) — ekkor a helyettesítés csak elrontja a tonikaérzetet
 - sus akkordot helyettesítenénk: a sus4 nem tartalmaz tercet, tehát tritonusza sincs, így a csere alapja hiányzik
-- a dallam a domináns alaphangját vagy kvintjét tartja hosszan (G7 fölött G vagy D): a Db7 fölött ezek #11 és b9 lesznek, ami erős súrlódás — nem hiba, de tudatos döntést kíván
+- a dallam a domináns alaphangját vagy kvintjét tartja hosszan (G7 fölött G vagy D): a Db7 fölött ezek ♯11 és b9 lesznek, ami erős súrlódás — nem hiba, de tudatos döntést kíván
 - a basszus más irányba mozogna a formában, és a kromatikus lépés a formai tagolást elmossa
 
 **Fordított irányban** is használható: egy leírt bII7-et visszaértelmezhetünk V7-nek, és az arra illő ii–V-vel bővíthetjük ki. Ez a reharmonizáció visszabontó lépése.

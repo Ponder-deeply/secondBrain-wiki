@@ -57,7 +57,7 @@ Négylépéses eljárás:
 1. **Akkordtípus** — a szimbólumból leolvasva megvan az 1, 3, 5, 7.
 2. **Funkció** — mi az akkord szerepe a környezetben? Tonika, szubdomináns, domináns, átmenő?
 3. **Hangnem** — melyik skálához tartozik a környezet? A diatonikus alapkészlet innen jön.
-4. **Explicit tension a szimbólumban** — ha a szimbólum kiír egy tensiont (#11, b9, alt), az felülírja a diatonikus alapértelmezést.
+4. **Explicit tension a szimbólumban** — ha a szimbólum kiír egy tensiont (♯11, b9, alt), az felülírja a diatonikus alapértelmezést.
 
 Példák:
 

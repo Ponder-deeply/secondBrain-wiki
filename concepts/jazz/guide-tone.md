@@ -14,7 +14,7 @@ A guide tone-ok az akkord terce és szeptimje: az a két hang, amely eldönti az
 Négy akkordhangból (1, 3, 5, 7) kettő elhagyható információveszteség nélkül:
 
 - Az **alaphang** a basszus vagy a hangszerelés dolga; harmóniai szempontból redundáns, mert a kontextus (funkció, előző akkord) úgyis kijelöli. Lásd [[concepts/jazz/rootless-voicing|rootless-voicing]].
-- A **kvint** tiszta kvint esetén semleges: nem különbözteti meg a dúrt a molltól, sem a maj7-et a dominánstól. Csak akkor informatív, ha módosított (b5, #5) — ekkor viszont már alterációként viselkedik, lásd [[concepts/jazz/alteraciok|alteraciok]].
+- A **kvint** tiszta kvint esetén semleges: nem különbözteti meg a dúrt a molltól, sem a maj7-et a dominánstól. Csak akkor informatív, ha módosított (b5, ♯5) — ekkor viszont már alterációként viselkedik, lásd [[concepts/jazz/alteraciok|alteraciok]].
 
 Marad a 3 és a 7. A négy alapvető szeptimtípus pontosan ezen a két hangon különül el:
 

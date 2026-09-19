@@ -48,13 +48,13 @@ Az oldás jellege ezért lágy, „plagális"-szerű: nem a tritonusz kényszer�
 |---|---|---|
 | Fm7 | F dorian | a 13 (D) diatonikus a cél C-dúrban |
 | Fm7 | F aeol | sötétebb, ha b13 (Db) kell |
-| Bb7 | Bb lydian dominant | a #11 (E) a cél tonika 3-a |
+| Bb7 | Bb lydian dominant | a ♯11 (E) a cél tonika 3-a |
 | Bb7 | Bb mixolydian | egyszerűbb; a 4 (Eb) avoid |
 | Cmaj7 | C ionian | — |
 
-A **lydian dominant** a preferált választás a bVII7 fölött, mert #11-e (E) a cél tonikájának terce, tehát a hangkészlet előrevetíti a feloldást. A mixolydian természetes 4-e (Eb) idegen a C-dúrtól és avoid note-ként viselkedik.
+A **lydian dominant** a preferált választás a bVII7 fölött, mert ♯11-e (E) a cél tonikájának terce, tehát a hangkészlet előrevetíti a feloldást. A mixolydian természetes 4-e (Eb) idegen a C-dúrtól és avoid note-ként viselkedik.
 
-Fontos: a bVII7 fölött **nem** szokás altered skálát használni. Az altered a kvintlépéses oldást készíti elő; a backdoorban nincs ilyen oldás, és a b9/#9 elrontaná a jellegzetesen puha színt.
+Fontos: a bVII7 fölött **nem** szokás altered skálát használni. Az altered a kvintlépéses oldást készíti elő; a backdoorban nincs ilyen oldás, és a b9/♯9 elrontaná a jellegzetesen puha színt.
 
 ## Összevetés a normál ii–V-vel
 

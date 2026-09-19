@@ -39,8 +39,8 @@ C Eb F Gb Bb. A moll pentaton, amelyben az 5 helyén b5 áll — félig a [[conc
 
 C D E G Ab. Az egyetlen módosítás (6 → b6) egy „sötét" félhangot tesz a pentaton tetejére (G–Ab). Két fontos alkalmazás:
 
-- **Alterált dominánson a b13-ról:** G7alt fölött Eb dúr b6 pentaton = Eb F G Bb B → b13 b7 1 #9 3. Az alterált színt adja, miközben az alaphang és a terc is benne van — ettől az alterált anyag „kapaszkodót" kap a hallgató fülének.
-- **Lydian dominanton a 9-ről:** G7#11 fölött A dúr b6 pentaton = A B C# E F → 9 3 #11 13 b7. Az öt hangban benne van a skála mindkét jellegzetes hangja (#11 és b7).
+- **Alterált dominánson a b13-ról:** G7alt fölött Eb dúr b6 pentaton = Eb F G Bb B → b13 b7 1 ♯9 3. Az alterált színt adja, miközben az alaphang és a terc is benne van — ettől az alterált anyag „kapaszkodót" kap a hallgató fülének.
+- **Lydian dominanton a 9-ről:** G7♯11 fölött A dúr b6 pentaton = A B C♯ E F → 9 3 ♯11 13 b7. Az öt hangban benne van a skála mindkét jellegzetes hangja (♯11 és b7).
 
 ### Domináns pentaton
 
@@ -48,7 +48,7 @@ C D E G Bb. A dúr pentaton b7-tel: egy domináns szeptimakkord arpeggiója (1 3
 
 ### Miért hasznos a módosítás
 
-Az eredeti pentaton **félhang nélküli**, ezért nem fér bele olyan skálába, amelynek karakterét éppen egy félhang adja (a melodikus moll 7–8-a, az alterált b9–#9 viszonya). A módosított változat pontosan egy félhangot enged be, és azt a szülőskála jellemző pontjára teszi. Így megmarad a pentaton gyakorlási előnye — kicsi, szimmetrikusan transzponálható alak, cellákra bontható —, de a hangkészlet már követi a harmóniát.
+Az eredeti pentaton **félhang nélküli**, ezért nem fér bele olyan skálába, amelynek karakterét éppen egy félhang adja (a melodikus moll 7–8-a, az alterált b9–♯9 viszonya). A módosított változat pontosan egy félhangot enged be, és azt a szülőskála jellemző pontjára teszi. Így megmarad a pentaton gyakorlási előnye — kicsi, szimmetrikusan transzponálható alak, cellákra bontható —, de a hangkészlet már követi a harmóniát.
 
 ## Kapocs
 

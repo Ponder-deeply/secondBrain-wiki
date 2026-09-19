@@ -38,11 +38,11 @@ Ezek nem külön trükkök, hanem ugyanannak az elvnek a változatai: **minden c
 
 ## Alterált dominánsok
 
-Ha a menetben sok a domináns, akkor a dominánsok színezése lesz a fő harmóniai kifejezőeszköz. A bebopban a domináns akkordon rendszeresen megjelennek az alterált tensionök (b9, #9, #11, b13), és ezek nem esetlegesek: **a feloldás iránya szabja meg őket**.
+Ha a menetben sok a domináns, akkor a dominánsok színezése lesz a fő harmóniai kifejezőeszköz. A bebopban a domináns akkordon rendszeresen megjelennek az alterált tensionök (b9, ♯9, ♯11, b13), és ezek nem esetlegesek: **a feloldás iránya szabja meg őket**.
 
 | Domináns szerepe | Tipikus skála | Jellemző hangzás |
 |---|---|---|
-| V7 → dúr I | mixolydian, esetleg b9 vagy #11 színnel | tiszta, funkciós |
+| V7 → dúr I | mixolydian, esetleg b9 vagy ♯11 színnel | tiszta, funkciós |
 | V7 → moll i | altered, vagy mixolydian b9 b13 | erősen feszült |
 | V7/x (secondary) | mixolydian b9 b13, ha a cél moll akkord | átmeneti feszültség |
 | tritóneszhelyettes | lydian dominant | lebegőbb, kromatikus basszus |

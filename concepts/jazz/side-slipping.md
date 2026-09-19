@@ -54,7 +54,7 @@ Mindkét irány működik, de nem egyenrangúak:
 - **Fölfelé (fél hanggal magasabb anyag).** Emelkedő feszültség, természetesebb visszaoldás lefelé. Ez a gyakoribb.
 - **Lefelé.** Sötétebb, „belapulós" hatás; a visszatérés fölfelé mozdul, ami erősebb lökést ad.
 
-Dominánsakkordon a fölfelé való elcsúszás gyakran egybeesik az alterált hangkészlettel: G7 fölött Ab-anyag játszása a b9, #9, b13 hangokat érinti, tehát részben visszavezethető a [[concepts/jazz/alteraciok|alteraciok]] logikájára. Moll- és maj7-akkordokon ilyen mentség nincs — ott tisztán a kontúr-hatásra épül.
+Dominánsakkordon a fölfelé való elcsúszás gyakran egybeesik az alterált hangkészlettel: G7 fölött Ab-anyag játszása a b9, ♯9, b13 hangokat érinti, tehát részben visszavezethető a [[concepts/jazz/alteraciok|alteraciok]] logikájára. Moll- és maj7-akkordokon ilyen mentség nincs — ott tisztán a kontúr-hatásra épül.
 
 ## Elhatárolás
 

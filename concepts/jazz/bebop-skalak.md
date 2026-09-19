@@ -38,9 +38,9 @@ Használat: minden domináns akkordon, a ii-V-I V. fokán, illetve dominánslán
 
 ## Bebop dúr
 
-Ionian + #5. C-ből: **C D E F G G# A B**.
+Ionian + ♯5. C-ből: **C D E F G G♯ A B**.
 
-A kromatikus átmenőhang az 5 és a 6 között (G–G#–A). Akkordhangok: **C E G A** — vagyis a C6, nem a Cmaj7. Ez lényeges: a bebop dúr skála a hatos akkordhoz igazodik, nem a nagy szeptimeshez.
+A kromatikus átmenőhang az 5 és a 6 között (G–G♯–A). Akkordhangok: **C E G A** — vagyis a C6, nem a Cmaj7. Ez lényeges: a bebop dúr skála a hatos akkordhoz igazodik, nem a nagy szeptimeshez.
 
 Ez az a pont, ahol a **Barry Harris**-féle sixth-diminished megközelítés a leginkább rokon: az is a C6 akkordot tekinti tonikai alapnak, és a köztes hangokat egy diminished akkordból származtatja (C6 és Bdim7 váltakozása) — nem skálahangként, hanem akkordként gondolva rájuk. A Berklee-keret ugyanezt a hangkészletet átmenőhangos skálaként írja le. Ugyanaz a hangzás, más szótár; egy elemzésen belül nem keverendők.
 
@@ -61,7 +61,7 @@ Létezik **bebop harmonikus moll** is: harmonikus moll + kis szeptim (C D Eb F G
 | Skála | Alap | Hozzáadott hang | Célakkord | Akkordhangok |
 |---|---|---|---|---|
 | bebop dominant | mixolydian | ♮7 (b7 és 1 közé) | 7 | 1 3 5 b7 |
-| bebop dúr | ionian | #5 (5 és 6 közé) | maj7 / 6 | 1 3 5 6 |
+| bebop dúr | ionian | ♯5 (5 és 6 közé) | maj7 / 6 | 1 3 5 6 |
 | bebop dorian | dorian | ♮3 (b3 és 4 közé) | m7 | 1 b3 5 b7 |
 | bebop harmonikus moll | harmonikus moll | b7 (b6 és 7 közé) | mMaj7 | 1 b3 5 7 |
 

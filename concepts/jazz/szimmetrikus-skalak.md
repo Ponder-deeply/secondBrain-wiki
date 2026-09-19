@@ -31,15 +31,15 @@ Ugyanaz a nyolcfokú hangkészlet két néven fut aszerint, hogy hol kezdjük.
 
 ### Half-whole (fél-egész)
 
-C-ről: **C Db Eb E F# G A Bb**. Minta: 1-2-1-2-1-2-1-2.
+C-ről: **C Db Eb E F♯ G A Bb**. Minta: 1-2-1-2-1-2-1-2.
 
 Dominánsakkordon használjuk. C7 fölött a fokok:
 
-| Skálahang | C | Db | Eb | E | F# | G | A | Bb |
+| Skálahang | C | Db | Eb | E | F♯ | G | A | Bb |
 |---|---|---|---|---|---|---|---|---|
-| Fok | 1 | b9 | #9 | 3 | #11 | 5 | 13 | b7 |
+| Fok | 1 | b9 | ♯9 | 3 | ♯11 | 5 | 13 | b7 |
 
-Tehát: **b9, #9, #11, ♮13** — plusz tiszta kvint. Ez a „diminished dominant" hangzás. Megkülönböztető jegye az altered skálához képest, hogy megtartja a tiszta kvintet és a natural 13-at.
+Tehát: **b9, ♯9, ♯11, ♮13** — plusz tiszta kvint. Ez a „diminished dominant" hangzás. Megkülönböztető jegye az altered skálához képest, hogy megtartja a tiszta kvintet és a natural 13-at.
 
 Tipikus jelölése: C7b9. Szimmetria miatt ugyanez a skála szolgálja az Eb7b9, Gb7b9 és A7b9 akkordokat is — a négy kis tercre lévő domináns közös.
 
@@ -55,15 +55,15 @@ Megjegyzés: a half-whole és a whole-half ugyanaz a három hangkészlet, csak m
 
 ## Whole tone
 
-C-ről: **C D E F# G# Bb**. Csupa nagy szekund; nincs benne tiszta kvint és nincs benne kis szekund.
+C-ről: **C D E F♯ G♯ Bb**. Csupa nagy szekund; nincs benne tiszta kvint és nincs benne kis szekund.
 
 C7 fölött a fokok:
 
-| Skálahang | C | D | E | F# | G# | Bb |
+| Skálahang | C | D | E | F♯ | G♯ | Bb |
 |---|---|---|---|---|---|---|
-| Fok | 1 | 9 | 3 | #11 | b13 (#5) | b7 |
+| Fok | 1 | 9 | 3 | ♯11 | b13 (♯5) | b7 |
 
-Tehát: **♮9, #11, b13**, tiszta kvint és 13 nélkül. Akkordja C7#5 vagy C7+.
+Tehát: **♮9, ♯11, b13**, tiszta kvint és 13 nélkül. Akkordja C7♯5 vagy C7+.
 
 Karaktere lebegő, iránytalan — mert nincs benne fél hang, nincs vezetőhang sem, tehát a skálának magának nincs gravitációs központja. Emiatt jól szól ott, ahol a domináns feszültségét inkább elbizonytalanítani, mint fokozni akarjuk, illetve rövid, felfelé futó színfoltként.
 
@@ -74,10 +74,10 @@ Csak két whole tone skála van; a C-ből és a Db-ből indított kettő együtt
 | Skála | 9 | 11 | 13 | 5 | Karakter |
 |---|---|---|---|---|---|
 | mixolydian | ♮9 | avoid | ♮13 | ♮5 | semleges, diatonikus |
-| lydian dominant | ♮9 | #11 | ♮13 | ♮5 | lebegő, nem oldódó |
-| half-whole dim | b9 #9 | #11 | ♮13 | ♮5 | feszes, de megtartja az 5-öt |
-| whole tone | ♮9 | #11 | b13 | nincs | iránytalan |
-| altered | b9 #9 | #11 | b13 | nincs | maximálisan feszes |
+| lydian dominant | ♮9 | ♯11 | ♮13 | ♮5 | lebegő, nem oldódó |
+| half-whole dim | b9 ♯9 | ♯11 | ♮13 | ♮5 | feszes, de megtartja az 5-öt |
+| whole tone | ♮9 | ♯11 | b13 | nincs | iránytalan |
+| altered | b9 ♯9 | ♯11 | b13 | nincs | maximálisan feszes |
 
 ## Zongorás gyakorlat
 
@@ -86,7 +86,7 @@ A szimmetria miatt a szimmetrikus skálák fogásai kis tercenként (diminished)
 ## Kapocs
 
 - [[concepts/jazz/chord-scale-theory]] — a keret
-- [[concepts/jazz/alteraciok]] — a b9/#9/#11/b13 tensionök
+- [[concepts/jazz/alteraciok]] — a b9/♯9/♯11/b13 tensionök
 - [[concepts/jazz/melodic-minor-modusai]] — az altered mint versengő választás
 - [[concepts/jazz/diminished-passing-chords]] — a whole-half skála harmóniai terepe
 - [[concepts/jazz/harmonic-major-modusai]] — a másik b9+♮13 megoldás

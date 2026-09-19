@@ -44,7 +44,7 @@ Nem cserélünk, hanem közbeiktatunk.
 |---|---|---|
 | related ii beszúrása | G7 → Dm7 G7 | [[concepts/jazz/secondary-dominant]] |
 | másodlagos domináns beszúrása | Dm7 → A7 Dm7 | [[concepts/jazz/secondary-dominant]] |
-| átmenő dim7 | Cmaj7 Dm7 → Cmaj7 C#dim7 Dm7 | [[concepts/jazz/diminished-passing-chords]] |
+| átmenő dim7 | Cmaj7 Dm7 → Cmaj7 C♯dim7 Dm7 | [[concepts/jazz/diminished-passing-chords]] |
 | ii–V beszúrása egy hosszú akkord helyére | 2 ütem Cmaj7 → Cmaj7 Gm7 C7 (Fmaj7 felé) | [[concepts/jazz/ii-v-i-durban]] |
 
 A betoldás a legbiztonságosabb reharm-fajta: az eredeti akkordok megmaradnak, csak mozgalmasabb lesz a menet.
@@ -64,7 +64,7 @@ Tipikus célvonalak C-dúrban:
 | kromatikus ereszkedés C-től | Cmaj7 – B7 – Bb7 – A7 – Abmaj7 – G7 |
 | pedálpont G-n | Cmaj7/G – Dm7/G – Ebmaj7/G – G7 |
 | lépcsős ereszkedés | Cmaj7 – Cmaj7/B – Am7 – Am7/G – Fmaj7 |
-| kromatikus emelkedés | Cmaj7 – C#dim7 – Dm7 – D#dim7 – Em7 |
+| kromatikus emelkedés | Cmaj7 – C♯dim7 – Dm7 – D♯dim7 – Em7 |
 
 A slash chordok és a pedálpont ide tartoznak: a basszus rögzített, fölötte a harmónia szabadon mozog. Erős, azonnal hallható hatás, mert a fül a basszusvonalat követi.
 

@@ -32,7 +32,7 @@ Két akkord összefűzhető anélkül, hogy az egyik a másik dominánsa vagy sz
 | lépő (szekund) | nagy vagy kis szekund | nincs közös hang, tiszta színváltás |
 | konstans szerkezet | bármi | ugyanaz az akkordtípus tolva, a típus a kötőanyag |
 
-A **konstans szerkezet** (constant structure) külön kiemelendő: egy akkordfajta — például maj7#11 vagy egy kvartos rakás — végigmozgatása nem diatonikus alaphangokon. Az összetartó erő itt nem a hangnem, hanem a hangzat állandó belső szerkezete.
+A **konstans szerkezet** (constant structure) külön kiemelendő: egy akkordfajta — például maj7♯11 vagy egy kvartos rakás — végigmozgatása nem diatonikus alaphangokon. Az összetartó erő itt nem a hangnem, hanem a hangzat állandó belső szerkezete.
 
 A nagyterc-mozgás legrendszerezettebb esete a [[concepts/jazz/coltrane-changes|coltrane-changes]]: az oktáv három egyenlő részre osztása, ahol mindhárom központ egyenrangú, tehát a tonika fogalma szimmetriává oldódik. Ez formailag még funkciós (V7–I kapcsolatok láncolata), hallásban viszont már központ nélküli.
 
@@ -42,7 +42,7 @@ A post-bop egyik jellegzetes jelölésmódja a **slash chord**: egy fölső stru
 
 Két esetet érdemes megkülönböztetni:
 
-1. **Akkordfordítás vagy leírható tercakkord.** D/C valójában C-en álló akkord 9-cel és #11-gyel — visszavezethető egy tercépítkezésű szimbólumra. A slash-írásmód itt csak kényelmesebb és pontosabb a voicingra nézve.
+1. **Akkordfordítás vagy leírható tercakkord.** D/C valójában C-en álló akkord 9-cel és ♯11-gyel — visszavezethető egy tercépítkezésű szimbólumra. A slash-írásmód itt csak kényelmesebb és pontosabb a voicingra nézve.
 2. **Hibrid akkord (valódi hibrid).** A fölső struktúra nem alkot a basszussal tercekben leírható egységet, vagy a leírás annyira erőltetett lenne, hogy nem segít. Ilyenkor az akkord szándékosan típus nélküli: nincs eldöntve, hogy dúr vagy moll, van-e benne domináns funkció.
 
 A hibrid akkord ugyanazt szolgálja, mint a modális nyelvben a kvartális rakás: **hangzást ad funkciójelölés nélkül.** A különbség, hogy itt a basszus mozog, tehát van harmóniai esemény — csak nem funkciós esemény.

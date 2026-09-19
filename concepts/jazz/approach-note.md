@@ -20,7 +20,7 @@ Ha a viszony megfordul, az approach note tartott disszonanciának hallatszik. Az
 
 ## Típusok
 
-**Kromatikus alulról.** A leggyakoribb és legerősebb. A célhang alatti félhang, klasszikus értelemben vezetőhang. Cmaj7 3-ára (E): D# – **E**. Domináns akkordokon szinte kötelező érzetű.
+**Kromatikus alulról.** A leggyakoribb és legerősebb. A célhang alatti félhang, klasszikus értelemben vezetőhang. Cmaj7 3-ára (E): D♯ – **E**. Domináns akkordokon szinte kötelező érzetű.
 
 **Diatonikus felülről.** A célhang fölötti skálahang az aktuális chord-scale-ből. Cmaj7 3-ára C ionianból: F – **E**. Lágyabb, „skálaszerű" hatás, mert nem visz be idegen hangot.
 
@@ -28,7 +28,7 @@ Ez az aszimmetria (alul kromatikus, fölül diatonikus) a jazzvonal alapértelme
 
 **Kromatikus felülről.** Ritkább, de érvényes — és csak ott értelmezhető, ahol a diatonikus felső szomszéd egészhangnyira van. Cmaj7 kvintjére (G): a diatonikus felső szomszéd A, a kromatikus Ab. Az Ab – **G** élesebb, az A – **G** semlegesebb. A Cmaj7 tercénél (E) a felső szomszéd eleve félhang (F), tehát ott a diatonikus és a kromatikus felső közelítés egybeesik.
 
-**Kettős kromatikus.** Két félhang ugyanabból az irányból, lépcsőzetesen. Célhang E, alulról: D – D# – **E**. Fölülről: F# – F – **E**. Ez már három hangot foglal, ezért ritmikailag egy egész nyolcadhármas-nyi helyet igényel a célhang előtt.
+**Kettős kromatikus.** Két félhang ugyanabból az irányból, lépcsőzetesen. Célhang E, alulról: D – D♯ – **E**. Fölülről: F♯ – F – **E**. Ez már három hangot foglal, ezért ritmikailag egy egész nyolcadhármas-nyi helyet igényel a célhang előtt.
 
 **Diatonikus felülről + kromatikus alulról** — ez már nem approach note, hanem enclosure, mert két irányból érkezik.
 
@@ -54,7 +54,7 @@ A puszta skálafutam két okból hallatszik gyakorlatnak, nem zenének:
 
 Az approach note mindkettőt kezeli. Egy beszúrt közelítő hang **eggyel eltolja** a paritást, így a következő akkordhang újra súlyra kerül; egyben mikroszintű irányváltást is ad.
 
-Példa, Dm7 fölött, D dorian, nyolcadokban ereszkedve az 1. ütem 1-étől: D – C – B – A – G – F – E – D. A 3. nyolcadon a B (13) esik súlytalanra, de az 5.-en a G (11) súlyra kerül — az akkord elhomályosul. Beszúrt kromatikus approach note-tal: D – C – B – A – G – F# – F – E, ahol az F# az F-hez vezető kromatikus felső közelítés; a következő ütem 1-én már újra akkordhang (D vagy F) érkezik.
+Példa, Dm7 fölött, D dorian, nyolcadokban ereszkedve az 1. ütem 1-étől: D – C – B – A – G – F – E – D. A 3. nyolcadon a B (13) esik súlytalanra, de az 5.-en a G (11) súlyra kerül — az akkord elhomályosul. Beszúrt kromatikus approach note-tal: D – C – B – A – G – F♯ – F – E, ahol az F♯ az F-hez vezető kromatikus felső közelítés; a következő ütem 1-én már újra akkordhang (D vagy F) érkezik.
 
 Ugyanez a logika áll a [[concepts/jazz/bebop-skalak|bebop-skalak]] mögött is: ott a kromatikus átmenőhang rendszerszerűen, nem alkalmilag van beépítve a skálába.
 

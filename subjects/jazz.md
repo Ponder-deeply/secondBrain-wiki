@@ -26,7 +26,7 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 
 - [[concepts/jazz/akkordepites]] — hármashangzat → seventh chord; akkordtípusok tercépítkezésből, akkordszimbólum-olvasás
 - [[concepts/jazz/extensions]] — 9, 11, 13 mint a tercépítkezés folytatása; a 11 problémája dúr akkordon
-- [[concepts/jazz/alteraciok]] — b9, #9, #11, b13; melyik akkordtípuson mi elérhető; az altered dominant összképe
+- [[concepts/jazz/alteraciok]] — b9, ♯9, ♯11, b13; melyik akkordtípuson mi elérhető; az altered dominant összképe
 - [[concepts/jazz/chord-scale-theory]] — a témakör gerince: akkord → skála levezetés, available tension vs avoid note, a fél hang szabály
 - [[concepts/jazz/dur-skala-modusai]] — a hét módus, intervallumszerkezet, characteristic note, akkordmegfeleltetés
 - [[concepts/jazz/melodic-minor-modusai]] — altered (super locrian), lydian dominant, locrian ♮2 és a többi módus

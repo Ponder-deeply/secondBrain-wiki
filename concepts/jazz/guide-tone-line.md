@@ -42,7 +42,7 @@ Dm7 (1. ütem) – G7 (2. ütem) – Cmaj7 (3. ütem), célhangok az ütemek 1. 
 
 1. **Váz:** F (Dm7 b3) → F (G7 b7) → E (Cmaj7 3).
 2. **Approach note-tal:** az 1. ütem 4. nyolcadára E kerül (kromatikus alsó váltó az F-hez), a 2. ütem előtti nyolcadra Gb (kromatikus felső váltó a G7 F-jéhez), a 3. ütem előtti nyolcadra Eb (kromatikus alsó váltó a Cmaj7 E-jéhez).
-3. **Enclosure-rel:** a Cmaj7 E-je elé F – D# – E hármas kerül, a 2. ütem utolsó három nyolcadán: felső diatonikus váltó, alsó kromatikus váltó, majd a célhang az ütemsúlyra.
+3. **Enclosure-rel:** a Cmaj7 E-je elé F – D♯ – E hármas kerül, a 2. ütem utolsó három nyolcadán: felső diatonikus váltó, alsó kromatikus váltó, majd a célhang az ütemsúlyra.
 
 A díszítés bármilyen sűrű lehet — attól még a fül a vázhangokat hallja meg, mert azok esnek a hangsúlyos ütemrészekre. Lásd [[concepts/jazz/approach-note|approach-note]] és [[concepts/jazz/enclosure|enclosure]].
 

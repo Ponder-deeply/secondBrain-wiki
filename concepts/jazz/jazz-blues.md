@@ -20,7 +20,7 @@ F-dúrban:
 
 | Ütem | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|
-| Fok | IV7 | #iv°7 | I7 | VI7 |
+| Fok | IV7 | ♯iv°7 | I7 | VI7 |
 | F-ben | Bb7 | B°7 | F7 | D7 |
 
 | Ütem | 9 | 10 | 11 | 12 |
@@ -34,7 +34,7 @@ F-dúrban:
 
 **4. ütem: Cm7 – F7.** A IV7 előkészítése. Az 5. ütem Bb7-je itt már nem szubdomináns, hanem ideiglenes cél: a Cm7–F7 egy ii–V, ami Bb-re old. A F7 tehát ebben az ütemben átértékelődik I7-ből secondary dominánssá (V7/IV), lásd [[concepts/jazz/secondary-dominant|secondary-dominant]]. Ez a legelső pont, ahol a blues elhagyja a tiszta bluesnyelvet és funkciós harmóniává válik.
 
-**6. ütem: B°7 (#iv°7).** Átmenő diminished akkord a IV7 és az I7 között. A basszus kromatikusan lép: Bb – B – C (a 7. ütem F7-ét gyakran F/C fordításban játsszák), a felső szólamok pedig minimálisan mozdulnak. Funkciója pusztán szólamvezetési, nem kadenciális. Lásd [[concepts/jazz/diminished-passing-chords|diminished-passing-chords]]. Alternatíva ugyanitt a Bbm7 – Eb7 (backdoor ii–V, lásd [[concepts/jazz/backdoor-ii-v|backdoor-ii-v]]), ami sötétebb színt ad.
+**6. ütem: B°7 (♯iv°7).** Átmenő diminished akkord a IV7 és az I7 között. A basszus kromatikusan lép: Bb – B – C (a 7. ütem F7-ét gyakran F/C fordításban játsszák), a felső szólamok pedig minimálisan mozdulnak. Funkciója pusztán szólamvezetési, nem kadenciális. Lásd [[concepts/jazz/diminished-passing-chords|diminished-passing-chords]]. Alternatíva ugyanitt a Bbm7 – Eb7 (backdoor ii–V, lásd [[concepts/jazz/backdoor-ii-v|backdoor-ii-v]]), ami sötétebb színt ad.
 
 **8. ütem: D7 (VI7).** Ez indítja el a záró kadenciát. A D7 a Gm7 (9. ütem) secondary dominánsa, tehát a 8. ütemtől a 10-ig folyamatos kvintkörös lánc fut: D7 → Gm7 → C7 → (F7). A D7-nek szinte mindig alterált tension-jei vannak (b9, b13), mivel moll akkordra old — lásd [[concepts/jazz/alteraciok|alteraciok]]. Nélküle a 9. ütem ii foka előkészítetlenül érkezne.
 

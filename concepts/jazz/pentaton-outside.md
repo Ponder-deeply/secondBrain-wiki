@@ -27,13 +27,13 @@ Hogy egy pentaton mennyire van kint, az kiszámolható: hány hangja esik az akk
 |---|---|---|
 | D, A, E | — | 5 |
 | G | Bb | 4 |
-| B | F# | 4 |
+| B | F♯ | 4 |
 | C | Eb, Bb | 3 |
-| F# | F#, C# | 3 |
+| F♯ | F♯, C♯ | 3 |
 | F | Ab, Eb, Bb | 2 |
-| C# | F#, C#, G# | 2 |
+| C♯ | F♯, C♯, G♯ | 2 |
 | Bb | Db, Ab, Eb, Bb | 1 |
-| G# | F#, C#, G#, D# | 1 |
+| G♯ | F♯, C♯, G♯, D♯ | 1 |
 | **Eb** | mind az öt | **0** |
 
 A minta szabályos: a három inside pentatontól **kvintlépésenként egy idegen hang** jön be, bármely irányban. A két irány a tritonusz-távolságban, az Eb moll pentatonban találkozik, amely a dorian hangkészlettel egyetlen közös hangot sem tartalmaz.
@@ -41,12 +41,12 @@ A minta szabályos: a három inside pentatontól **kvintlépésenként egy idege
 Ebből gyakorlati skála következik az eltávolodás adagolására:
 
 - **1 idegen hang** (G vagy B moll) — alig kint, színezésnek hallatszik.
-- **2–3 idegen hang** (C, F#, F, C# moll) — egyértelműen kint, de van kapaszkodó.
+- **2–3 idegen hang** (C, F♯, F, C♯ moll) — egyértelműen kint, de van kapaszkodó.
 - **5 idegen hang** (Eb moll) — teljes kilépés.
 
 ### Félhangos eltolás
 
-A legismertebb eset a teljes kilépés félhanggal feljebb: D moll pentaton → Eb moll pentaton → D moll pentaton. Ez formailag a [[concepts/jazz/side-slipping|side-slipping]] egy alesete, de a pentatonnál különösen erős, mert a fenti táblázat szerint a félhangos eltolás (Eb) maximálisan kint van, közös hang nélkül — a feszültség nem elmosódott, hanem tiszta. Ugyanez fél hanggal lejjebb (C# moll) csak két közös hangot hagy.
+A legismertebb eset a teljes kilépés félhanggal feljebb: D moll pentaton → Eb moll pentaton → D moll pentaton. Ez formailag a [[concepts/jazz/side-slipping|side-slipping]] egy alesete, de a pentatonnál különösen erős, mert a fenti táblázat szerint a félhangos eltolás (Eb) maximálisan kint van, közös hang nélkül — a feszültség nem elmosódott, hanem tiszta. Ugyanez fél hanggal lejjebb (C♯ moll) csak két közös hangot hagy.
 
 ### Motívum-transzpozíció
 

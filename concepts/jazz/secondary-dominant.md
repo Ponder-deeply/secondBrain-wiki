@@ -17,11 +17,11 @@ C-dúrban:
 
 | Jelölés | Akkord | Cél | A cél foka | Hangnemen kívüli hang |
 |---|---|---|---|---|
-| V7/ii | A7 | Dm7 | ii | C# |
-| V7/iii | B7 | Em7 | iii | D#, F# |
+| V7/ii | A7 | Dm7 | ii | C♯ |
+| V7/iii | B7 | Em7 | iii | D♯, F♯ |
 | V7/IV | C7 | Fmaj7 | IV | Bb |
-| V7/V | D7 | G7 | V | F# |
-| V7/vi | E7 | Am7 | vi | G# |
+| V7/V | D7 | G7 | V | F♯ |
+| V7/vi | E7 | Am7 | vi | G♯ |
 
 A vii. fokhoz (Bm7b5) nincs használható másodlagos domináns, mert a fok nem stabil, nem hallható ideiglenes tonikának.
 
@@ -49,9 +49,9 @@ A szabály oka egyszerű: a b9 és a b13 azok a hangok, amelyek a *célakkord* m
 
 Kiegészítő lehetőségek:
 
-- **Lydian dominant (#11):** ha a domináns nem lefelé kvintbe oldódik, vagy tritone subként értelmezhető.
+- **Lydian dominant (♯11):** ha a domináns nem lefelé kvintbe oldódik, vagy tritone subként értelmezhető.
 - **Altered:** bármelyik másodlagos domináns fölött használható, ha erős feszültséget akarunk; moll célnál különösen természetes.
-- **HW diminished:** dúr célnál, ha b9/#9 kell 13 mellé.
+- **HW diminished:** dúr célnál, ha b9/♯9 kell 13 mellé.
 
 Az egyetlen szigorú megszorítás: a domináns 4-e (11) avoid note, mert a 3-mal fél hangot súrol — kivéve ha sus akkordként kezeljük.
 

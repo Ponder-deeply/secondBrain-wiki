@@ -27,7 +27,7 @@ C-dúrban, a párhuzamos mollból (C természetes moll):
 | bVII7 | Bb7 | Bm7b5 (vii) | backdoor kadencia | Bb lydian dominant |
 | bVImaj7 | Abmaj7 | Am7 (vi) | zárás előtti sötét szín | Ab lydian |
 | bIIImaj7 | Ebmaj7 | Em7 (iii) | bIII–bVI–bVII lánc | Eb lydian |
-| iim7b5 | Dm7b5 | Dm7 (ii) | mollos ii–V dúrban | D locrian #2 |
+| iim7b5 | Dm7b5 | Dm7 (ii) | mollos ii–V dúrban | D locrian ♯2 |
 | im7 / imMaj7 | Cm7 / Cm(maj7) | Cmaj7 (I) | tonika elmollosítása | C dorian / C mel. minor |
 | bVI7 | Ab7 | — | subV7/V szerepben is | Ab lydian dominant |
 

@@ -29,11 +29,11 @@ G7 fölött:
 | Rávetített triád | Hangok | G7-hez képest | Hatás |
 |---|---|---|---|
 | D moll | D – F – A | 5, b7, 9 | semleges, diatonikus |
-| A dúr | A – C# – E | 9, #11, 13 | lydian dominant szín |
+| A dúr | A – C♯ – E | 9, ♯11, 13 | lydian dominant szín |
 | Ab dúr | Ab – C – Eb | b9, 11, b13 | alterált, sötét |
 | Db dúr | Db – F – Ab | b5, b7, b9 | tritone sub szín |
-| Eb dúr | Eb – G – Bb | b13, 1, #9 | alterált |
-| B dúr | B – D# – F# | 3, b13, maj7 | nyugtalan, kilóg |
+| Eb dúr | Eb – G – Bb | b13, 1, ♯9 | alterált |
+| B dúr | B – D♯ – F♯ | 3, b13, maj7 | nyugtalan, kilóg |
 
 A felső triádok logikája azonos a [[concepts/jazz/upper-structure-triad|upper-structure-triad]] voicingokéval — csak ott egyszerre, akkordként szólal meg, itt egymás után, dallamként. Ugyanaz a hangkészlet két megjelenési formában; érdemes párhuzamosan gyakorolni: bal kézben az USB voicing, jobb kézben ugyanannak a triádnak az arpeggiója.
 

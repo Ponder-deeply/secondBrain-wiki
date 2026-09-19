@@ -20,7 +20,7 @@ Az eszközök, amelyekkel ez történik:
 - **Pedálhang.** Egy tartott basszushang alatt a fölötte mozgó akkordok elveszítik az önálló funkciójukat, és színváltozássá válnak.
 - **Kevés vezetőhang-mozgás.** A fél hangos leoldás a funkció legerősebb hallható jele; ha a szólamvezetés inkább nagy szekundokban jár, a hallás nem hall kadenciát.
 
-Ami marad, az nem funkció, hanem **modális szín**: a módus jellegzetes hangja (dorian ♮6, lydian #11, phrygian b2, mixolydian b7) az, ami azonosítja a hangkészletet.
+Ami marad, az nem funkció, hanem **modális szín**: a módus jellegzetes hangja (dorian ♮6, lydian ♯11, phrygian b2, mixolydian b7) az, ami azonosítja a hangkészletet.
 
 ## Lassú harmóniai ritmus
 

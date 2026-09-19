@@ -58,7 +58,7 @@ A **Cmaj7 – Eb7 – Ab7 – Db7** változatban minden akkord domináns, és a 
 
 - Cmaj7 – B7 – Bb7 – A7 – (Abm7 – Db7 vagy Dm7 – G7): kromatikus ereszkedés a VI7-ig.
 - Em7 – Ebdim7 – Dm7 – Db7 – Cmaj7: dim7 átmenőakkorddal, lásd [[concepts/jazz/diminished-passing-chords|diminished-passing-chords]].
-- Cmaj7 – C#dim7 – Dm7 – D#dim7 – Em7: emelkedő kromatikus, ha a turnaround nem visszavezet, hanem továbbvisz.
+- Cmaj7 – C♯dim7 – Dm7 – D♯dim7 – Em7: emelkedő kromatikus, ha a turnaround nem visszavezet, hanem továbbvisz.
 
 **bIII7-es turnaround.** Cmaj7 – Eb7 – Dm7 – G7 vagy Cmaj7 – Ebdim7 – Dm7 – G7: a második helyen egy nem funkciós színakkord áll, ami erős kromatikát ad, mégis megőrzi a végső ii–V-t.
 

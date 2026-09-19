@@ -28,7 +28,7 @@ A kérdés mindig az: a diatonikus környezetben az adott extension fél hangra 
 | Akkordtípus | Természetes extensionök | Kerülendő | Megjegyzés |
 |---|---|---|---|
 | maj7 (I. fok) | 9, 13 | 11 | a 11 fél hangra van a 3-tól |
-| maj7 (IV. fok, lydian) | 9, #11, 13 | 11 | lydian környezet, a #11 természetes |
+| maj7 (IV. fok, lydian) | 9, ♯11, 13 | 11 | lydian környezet, a ♯11 természetes |
 | m7 (ii. fok, dorian) | 9, 11 | 13 vitatott | a 13 (natural 6) dorian szín, nem hiba |
 | m7 (iii. fok, phrygian) | 11 | b9, b13 | a b9 miatt szegényes; gyakran átértelmezzük |
 | m7 (vi. fok, aeolian) | 9, 11 | b13 | |
@@ -45,7 +45,7 @@ A természetes 11 (a 4. fok) fél hangra fekszik a nagy tercétől. Cmaj7-en az 
 Három szokásos kezelés:
 
 1. **Elhagyjuk.** Cmaj7 esetén a 9 és a 13 marad, a 11 avoid note.
-2. **#11-re emeljük.** Ezzel lydian (maj7 fölött) vagy lydian dominant (7 fölött) színt kapunk. A #11 nem ütközik a 3-mal, és nem a hangnem tonikáját sérti, hanem gazdagítja. Lásd [[concepts/jazz/dur-skala-modusai|dur-skala-modusai]] és [[concepts/jazz/melodic-minor-modusai|melodic-minor-modusai]].
+2. **♯11-re emeljük.** Ezzel lydian (maj7 fölött) vagy lydian dominant (7 fölött) színt kapunk. A ♯11 nem ütközik a 3-mal, és nem a hangnem tonikáját sérti, hanem gazdagítja. Lásd [[concepts/jazz/dur-skala-modusai|dur-skala-modusai]] és [[concepts/jazz/melodic-minor-modusai|melodic-minor-modusai]].
 3. **A 3-at hagyjuk el.** Ekkor sus4 akkordot kapunk (C7sus4): a 4 nem tension, hanem akkordhang. A sus4 domináns saját, lebegő karakterű hangzás, gyakran a domináns késleltetett feloldásaként.
 
 Moll akkordon a 11 nem problémás: a b3-tól nagy szekundra van, tehát szabadon szólhat. Ez az egyik oka, hogy a kvartális voicingok (lásd [[concepts/jazz/kvartalis-voicing|kvartalis-voicing]]) moll akkordokon annyira természetesek.
@@ -54,7 +54,7 @@ Moll akkordon a 11 nem problémás: a b3-tól nagy szekundra van, tehát szabado
 
 Zongorán ritkán szólal meg minden hang. A szokásos munkamegosztás: a bal kéz a guide tone-okat (3 és 7) hozza, a jobb kéz az extensionöket. A 9 és 13 a jobb kéz felső szólamában szólva ad a hangzásnak jazzes karaktert anélkül, hogy az akkord funkcióját elhomályosítaná. Részletek: [[concepts/jazz/rootless-voicing|rootless-voicing]] és [[concepts/jazz/guide-tone|guide-tone]].
 
-Az alteráció (b9, #9, #11, b13) az extensionök módosított változata; azoknak külön lapja van: [[concepts/jazz/alteraciok|alteraciok]].
+Az alteráció (b9, ♯9, ♯11, b13) az extensionök módosított változata; azoknak külön lapja van: [[concepts/jazz/alteraciok|alteraciok]].
 
 ## Kapocs
 

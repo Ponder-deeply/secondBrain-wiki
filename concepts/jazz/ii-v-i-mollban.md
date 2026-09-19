@@ -30,15 +30,15 @@ Ha ehhez a 6. fokot is felemeljük, **melodikus mollt** kapunk; ennek 7. módusa
 | Akkord | Chord-scale | Származás | Jellemző tension |
 |---|---|---|---|
 | Dm7b5 | D locrian | C természetes moll 2. módusa | b9 (kényes), 11, b13 |
-| Dm7b5 | D locrian #2 | Eb melodikus moll 6. módusa | 9, 11, b13 |
-| G7alt | G altered | Ab melodikus moll 7. módusa | b9 #9 #11 b13 |
-| G7b9 | G HW diminished | fél–egész szimmetrikus | b9 #9 #11 13 |
+| Dm7b5 | D locrian ♯2 | Eb melodikus moll 6. módusa | 9, 11, b13 |
+| G7alt | G altered | Ab melodikus moll 7. módusa | b9 ♯9 ♯11 b13 |
+| G7b9 | G HW diminished | fél–egész szimmetrikus | b9 ♯9 ♯11 13 |
 | G7b9b13 | G phrygian dominant | C harmonikus moll 5. módusa | b9, b13 |
 | Cm(maj7) | C melodikus moll | — | 9, 11, 13 |
 | Cm7 | C dorian | — | 9, 11, 13 |
 | Cm7 | C aeol | — | 9, 11, b13 |
 
-A ii fokon a **locrian #2** (más néven locrian natural 9) a preferált választás, mert a locrian b9-e avoid note-ként ütközik az akkord alaphangjával; a #2 ezt feloldja és használható 9-et ad.
+A ii fokon a **locrian ♯2** (más néven locrian natural 9) a preferált választás, mert a locrian b9-e avoid note-ként ütközik az akkord alaphangjával; a ♯2 ezt feloldja és használható 9-et ad.
 
 A V fokon a választás fő szempontja: az **altered** skála 13-at nem tartalmaz (csak b13-at), és nem tartalmaz tiszta 5-öt sem — teljesen feszült, nem-hármashangzatos hangzás. A **phrygian dominant** megtartja a tiszta 5-öt, tradicionálisabb, „harmonikus moll"-ízű. A **HW diminished** természetes 13-at ad b9 mellé, ami dúrosabb, kevésbé mollos színt eredményez, ezért moll kadenciában ritkábban ideális.
 
@@ -71,7 +71,7 @@ Az alterált tension-ök gyakran önálló szólamot alkotnak: a G7alt b13-a (Eb
 ## Kapocs
 
 - [[concepts/jazz/ii-v-i-durban]] — a dúr alapeset, ehhez képest értelmezendő
-- [[concepts/jazz/melodic-minor-modusai]] — az altered és a locrian #2 forrása
+- [[concepts/jazz/melodic-minor-modusai]] — az altered és a locrian ♯2 forrása
 - [[concepts/jazz/harmonic-minor-modusai]] — a phrygian dominant forrása
 - [[concepts/jazz/alteraciok]] — a V7alt tension-készlete
 - [[concepts/jazz/moll-blues]] — a moll ii–V tipikus formai környezete

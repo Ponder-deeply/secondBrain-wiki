@@ -1,5 +1,4 @@
 ---
-tags: [research, sources]
 topic: Jazz chord building technique, improvisational repertoire building, fully free only
 created: 2026-06-21
 count: 7

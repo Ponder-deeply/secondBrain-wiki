@@ -58,7 +58,7 @@ Minden domináns elé beszúrható a saját ii foka, ekkor a séma ii–V–I mo
 T1maj7 | iim7/T2  V7/T2 | T2maj7 | iim7/T3  V7/T3 | T3maj7 | iim7/T1  V7/T1 | T1maj7
 ```
 
-C-vel: Cmaj7 | Bbm7 Eb7 | Abmaj7 | F#m7 B7 | Emaj7 | Dm7 G7 | Cmaj7.
+C-vel: Cmaj7 | Bbm7 Eb7 | Abmaj7 | F♯m7 B7 | Emaj7 | Dm7 G7 | Cmaj7.
 
 Ez már ütemenként két akkordot jelent, gyors tempóban rendkívül sűrű.
 

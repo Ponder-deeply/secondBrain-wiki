@@ -18,7 +18,7 @@ C-dúr hangkészletéből (C D E F G A B) származtatva:
 | I   | ionian     | C        | 1 2 3 4 5 6 7            | maj7        |
 | II  | dorian     | D        | 1 2 b3 4 5 6 b7          | m7          |
 | III | phrygian   | E        | 1 b2 b3 4 5 b6 b7        | m7          |
-| IV  | lydian     | F        | 1 2 3 #4 5 6 7           | maj7        |
+| IV  | lydian     | F        | 1 2 3 ♯4 5 6 7           | maj7        |
 | V   | mixolydian | G        | 1 2 3 4 5 6 b7           | 7           |
 | VI  | aeolian    | A        | 1 2 b3 4 5 b6 b7         | m7          |
 | VII | locrian    | B        | 1 b2 b3 4 b5 b6 b7       | m7b5        |
@@ -31,10 +31,10 @@ A módus karakterét az a hang adja, amelyben a szomszédos, ugyanolyan minősé
 
 | Módus      | Jellemző hang  | Mihez képest                       |
 | ---------- | -------------- | ---------------------------------- |
-| ionian     | 4 (mint avoid) | a lydian #4-jével szemben          |
+| ionian     | 4 (mint avoid) | a lydian ♯4-jével szemben          |
 | dorian     | ♮6             | az aeolian b6-jával szemben        |
 | phrygian   | b2             | az aeolian ♮2-jével szemben        |
-| lydian     | #4             | az ionian ♮4-ével szemben          |
+| lydian     | ♯4             | az ionian ♮4-ével szemben          |
 | mixolydian | b7             | az ionian ♮7-ével szemben          |
 | aeolian    | b6             | a dorian ♮6-jával szemben          |
 | locrian    | b5             | a többi mollszerű módussal szemben |
@@ -64,7 +64,7 @@ A gyakorlati hozzárendelés funkcionális harmóniában:
 - **I. fok maj7** → ionian; a 4 kerülendő
 - **ii. fok m7** → dorian
 - **iii. fok m7** → phrygian; a b9 miatt szegényes, gyakran I. fok helyettesként kezeljük és ionian marad a hangkészlet
-- **IV. fok maj7** → lydian; ez a leggyakoribb pont, ahol a #11 természetesen adódik
+- **IV. fok maj7** → lydian; ez a leggyakoribb pont, ahol a ♯11 természetesen adódik
 - **V. fok 7** → mixolydian; a 4 kerülendő
 - **vi. fok m7** → aeolian
 - **vii. fok m7b5** → locrian; funkcionálisan gyakran inkább V7b9 helyettes

@@ -27,9 +27,9 @@ Cmaj7 fölött, célhang E (3), C ionian anyagból: F – D – E. A felső vál
 
 **Kromatikus.** A körbejáró hangok félhang távolságra vannak a célhangtól, függetlenül a skálától. Élesebb, bebop-hangzású.
 
-Ugyanaz a célhang: F – D# – E. Itt az alsó váltó nem a diatonikus D, hanem a félhanggal alatta lévő D#. A felső oldalon a C-dúrban a diatonikus szekund (F) eleve félhangnyira van, tehát ott a két lehetőség egybeesik.
+Ugyanaz a célhang: F – D♯ – E. Itt az alsó váltó nem a diatonikus D, hanem a félhanggal alatta lévő D♯. A felső oldalon a C-dúrban a diatonikus szekund (F) eleve félhangnyira van, tehát ott a két lehetőség egybeesik.
 
-A gyakorlatban a **vegyes** forma a legelterjedtebb: fölül diatonikus, alul kromatikus. Ennek oka, hogy a félhangos alsó váltó vezetőhangként hat, a felső oldalon viszont a skálahang nem visz be idegen színt. Cmaj7 kvintjére (G): A (diatonikus felülről) – F# (kromatikus alulról) – **G**.
+A gyakorlatban a **vegyes** forma a legelterjedtebb: fölül diatonikus, alul kromatikus. Ennek oka, hogy a félhangos alsó váltó vezetőhangként hat, a felső oldalon viszont a skálahang nem visz be idegen színt. Cmaj7 kvintjére (G): A (diatonikus felülről) – F♯ (kromatikus alulról) – **G**.
 
 A skálaidegen hangok itt nem hibák: átmenő díszítések, amelyek azonnal feloldódnak. A chord-scale theory kereteit nem sértik, mert nem hangsúlyos helyen és nem tartva szólalnak meg.
 
@@ -37,17 +37,17 @@ A skálaidegen hangok itt nem hibák: átmenő díszítések, amelyek azonnal fe
 
 Jelölés: **C** = célhang, **f** = fölötte lévő hang, **a** = alatta lévő hang.
 
-**Háromhangos, f–a–C.** A legalapvetőbb. Célhang E: F – D# – E.
+**Háromhangos, f–a–C.** A legalapvetőbb. Célhang E: F – D♯ – E.
 
-**Háromhangos, a–f–C.** Fordított irány, kevésbé konvencionális hangzású. Célhang E: D# – F – E.
+**Háromhangos, a–f–C.** Fordított irány, kevésbé konvencionális hangzású. Célhang E: D♯ – F – E.
 
-**Négyhangos, kettős felső + egyszeres alsó (f2–f1–a–C).** A célhang fölött két lépcsőben ereszkedünk, majd alulról érkezünk. Célhang E: G – F – D# – E.
+**Négyhangos, kettős felső + egyszeres alsó (f2–f1–a–C).** A célhang fölött két lépcsőben ereszkedünk, majd alulról érkezünk. Célhang E: G – F – D♯ – E.
 
-**Négyhangos, „szendvics" (f–C'–a–C).** A célhang egyszer megvillan a körbejárás közben. Célhang E: F – E – D# – E.
+**Négyhangos, „szendvics" (f–C'–a–C).** A célhang egyszer megvillan a körbejárás közben. Célhang E: F – E – D♯ – E.
 
-**Négyhangos, kettős alsó megközelítéssel (f–a2–a1–C).** Célhang E: F – D – D# – E. Az alsó oldal két lépcsőben építkezik fölfelé: diatonikus szekund, majd kromatikus váltó.
+**Négyhangos, kettős alsó megközelítéssel (f–a2–a1–C).** Célhang E: F – D – D♯ – E. Az alsó oldal két lépcsőben építkezik fölfelé: diatonikus szekund, majd kromatikus váltó.
 
-**Ötöshangos, kettős megközelítés mindkét oldalról.** Célhang E: F# – F – D – D# – E. Fölül F# – F (kromatikus lépcső), alul D – D#. Öt hang, ezért csak lassabb tempóban vagy fél-idős érzetben fér el.
+**Ötöshangos, kettős megközelítés mindkét oldalról.** Célhang E: F♯ – F – D – D♯ – E. Fölül F♯ – F (kromatikus lépcső), alul D – D♯. Öt hang, ezért csak lassabb tempóban vagy fél-idős érzetben fér el.
 
 ## Metrikai elhelyezés
 
@@ -67,9 +67,9 @@ Ha ez a viszony megfordul — a kromatikus váltó kerül súlyra és a célhang
 Kidolgozott példa, Dm7 – G7 – Cmaj7, akkordonként egy ütem, minden akkord 3-át célozva:
 
 - 1. ütem: F (Dm7 b3) a súlyon, a menet folytatódik.
-- 1. ütem vége: G – A# – B, azaz felső diatonikus (G, a G7-ből), alsó kromatikus (A#), majd
+- 1. ütem vége: G – A♯ – B, azaz felső diatonikus (G, a G7-ből), alsó kromatikus (A♯), majd
 - 2. ütem 1: **B** (G7 3-a).
-- 2. ütem vége: F – D# – E, ugyanaz a séma, majd
+- 2. ütem vége: F – D♯ – E, ugyanaz a séma, majd
 - 3. ütem 1: **E** (Cmaj7 3-a).
 
 A vonal így két enclosure-rel köti össze a guide tone line három vázhangját. Ugyanez a séma működik 7-ekre célozva is.

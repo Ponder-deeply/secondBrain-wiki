@@ -20,7 +20,7 @@ Hármashangzat-típusok:
 | dúr | nagy + kis terc | 1 3 5 |
 | moll | kis + nagy terc | 1 b3 5 |
 | szűkített (diminished) | kis + kis terc | 1 b3 b5 |
-| bővített (augmented) | nagy + nagy terc | 1 3 #5 |
+| bővített (augmented) | nagy + nagy terc | 1 3 ♯5 |
 
 ## A hét alapvető seventh chord
 

@@ -34,7 +34,7 @@ A 2. ütemben állhat quick change (ivm7, azaz Fm7), de a dúr blueshoz képest 
 
 Ez a forma egyetlen valóban változó pontja. Három szokásos megoldás:
 
-**bVI7 – V7alt (Ab7 – G7alt).** A leggyakoribb. Az Ab7 a G7 tritone subjának *ellentéte*: nem helyettesíti, hanem elé kerül, félhanggal fölülről csúszva rá. A basszus Ab – G – C lépése erős, és az Ab7 #11-es tension-je (D) közös hang a Cm7-tel. Ez adja a moll blues jellegzetes „lecsúszó" kadenciáját.
+**bVI7 – V7alt (Ab7 – G7alt).** A leggyakoribb. Az Ab7 a G7 tritone subjának *ellentéte*: nem helyettesíti, hanem elé kerül, félhanggal fölülről csúszva rá. A basszus Ab – G – C lépése erős, és az Ab7 ♯11-es tension-je (D) közös hang a Cm7-tel. Ez adja a moll blues jellegzetes „lecsúszó" kadenciáját.
 
 **iim7b5 – V7alt (Dm7b5 – G7alt).** Szabályos moll ii–V, lásd [[concepts/jazz/ii-v-i-mollban|ii-v-i-mollban]]. Funkciósabb, bebopos hangzás; akkor jó, ha a szólista ii–V-frázisokat akar használni. Elveszti viszont a bVI7 kromatikus becsúszását.
 
@@ -58,8 +58,8 @@ A 12. ütem visszavezetése szinte mindig V7alt (G7alt) — a moll tonika erős,
 |---|---|---|
 | Cm7 (im7) | C dorian vagy C aeolian | dorian a ♮13 miatt nyitottabb, aeolian sötétebb; a választás stílusdöntés |
 | Fm7 (ivm7) | F dorian | a hangnemhez tartozó természetes választás |
-| Ab7 (bVI7) | Ab lydian b7 | a #11 (D) közös hang a tonikával |
-| G7alt (V7) | G altered (Ab melodic minor 7. módusa) | b9, #9, b13 — a moll tonika kívánja |
+| Ab7 (bVI7) | Ab lydian b7 | a ♯11 (D) közös hang a tonikával |
+| G7alt (V7) | G altered (Ab melodic minor 7. módusa) | b9, ♯9, b13 — a moll tonika kívánja |
 | Dm7b5 (iim7b5) | D locrian ♮2 | ha ii–V-s megoldás |
 
 Horizontálisan végig működik a C moll pentaton és a C blues scale, és itt kevesebb ütközést okoz, mint dúrban — ez a moll blues egyik oka a népszerűségre kezdő improvizálóknál. A kivétel a 9–10. ütem: ott a pentaton önmagában elmossa a kadenciát, az alterált hangokat vertikálisan kell kezelni. Lásd [[concepts/jazz/alteraciok|alteraciok]].
