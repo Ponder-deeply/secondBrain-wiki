@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Extensions (9, 11, 13)
 
 Az extension a tercépítkezés folytatása a szeptim fölött: 9, 11, 13. Ezek nem díszítések, hanem az akkord teljes értékű alkotórészei — a jazzhangzás színét jórészt ők adják.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 9 (Scale Theory), p. 59-60 -->
 
 ## Származtatás
 

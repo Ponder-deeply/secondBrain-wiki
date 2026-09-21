@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # A melodikus moll módusai
 
 A jazzben használt melodikus moll a felfelé-lefelé egyaránt azonos alakú („jazz minor"): dúr skála leszállított tercel, 1 2 b3 4 5 6 7. Hét módusa közül három a modern jazzharmónia alapkészlete: az altered, a lydian dominant és a locrian ♮2.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 9 (Melodic minor scale harmony), p. 68-75 -->
 
 ## A hét módus
 

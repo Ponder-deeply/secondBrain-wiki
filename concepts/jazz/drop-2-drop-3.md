@@ -56,3 +56,4 @@ Gyakorlati munkamegosztás: a bal kéz kompakt rootless formákat használ, mert
 - [[concepts/jazz/szolamvezetes]] — a fordítások láncolása dallam alá
 - [[concepts/jazz/kvartalis-voicing]] — alternatív, nem tercépítkezésű nyitott hangzás
 - [[concepts/jazz/akkordepites]] — a close position kiindulópontja
+- [[concepts/jazz/block-chord]] — ugyanaz a drop mechanika egy négyeshangzatos skálára (four-way close) alkalmazva

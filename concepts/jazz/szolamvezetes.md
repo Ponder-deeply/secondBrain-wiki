@@ -62,3 +62,5 @@ Ha a jobb kéz felső triádot fog ([[concepts/jazz/upper-structure-triad|upper-
 - [[concepts/jazz/drop-2-drop-3]] — dallamharmonizálás fordításokkal
 - [[concepts/jazz/comping]] — a szólamvezetés ritmikai beágyazása
 - [[concepts/jazz/turnaround]] — a példában használt akkordmenet
+- [[concepts/jazz/block-chord]] — párhuzamos mozgás és kromatikus közelítés négyeshangzatos rakásokban
+- [[concepts/jazz/stride-es-bud-powell-voicing]] — a walking tenths lépésenkénti hangvezetése

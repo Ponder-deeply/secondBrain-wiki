@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # ii–V–I dúrban
 
 A jazz alapkadenciája: a szubdomináns–domináns–tonika funkciólánc seventh chordokra átírva. A jazzstandard-repertoár harmóniai anyagának túlnyomó része ii–V–I egységekre bontható, ezért ez a legkisebb önálló elemzési és gyakorlási egység.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 2 (The Major Modes and II-V-I), p. 13-16 -->
 
 ## A fokok és a funkciók
 

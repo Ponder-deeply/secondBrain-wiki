@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Guide tone (3 és 7)
 
 A guide tone-ok az akkord terce és szeptimje: az a két hang, amely eldönti az akkord minőségét és funkcióját. Minden zongora-voicing lényegében ezen a két hangon nyugszik.
+
+Levine ugyanezt a két hangot a three-note voicing tárgyalásának középpontjába állítja, bár a "guide tone" terminust az itt olvasott fejezetekben nem használja külön névként — nála egyszerűen "a harmadik és a hetedik". <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 3, p. 17 -->
 
 ## Miért ez a két hang
 
@@ -32,7 +34,7 @@ A 3 és 7 közötti intervallum tritonus a dominánsokon, és éppen ez a triton
 
 ## Szerepcsere a ii–V–I-ben
 
-Kvintlépéses akkordmozgásban a guide tone-ok fél hangos lépésekkel fonódnak egymásba. C-dúrban:
+Kvintlépéses akkordmozgásban a guide tone-ok fél hangos lépésekkel fonódnak egymásba. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 3, p. 17-18 --> C-dúrban:
 
 | Akkord | 3 | 7 |
 |---|---|---|

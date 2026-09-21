@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # A dúr skála módusai
 
 A dúr skála hét hangjának mindegyikéről indítható egy-egy módus. Ugyanaz a hangkészlet, más alaphang — és ezzel más intervallumszerkezet, más akkordtípus, más karakter.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 2 (The Major Modes and II-V-I), p. 13; ch. 9 (Major scale harmony), p. 60-67 -->
 
 ## A hét módus
 
@@ -70,6 +72,8 @@ A gyakorlati hozzárendelés funkcionális harmóniában:
 - **vii. fok m7b5** → locrian; funkcionálisan gyakran inkább V7b9 helyettes
 
 Fontos: a hozzárendelés a **funkciótól** függ, nem az akkordtípustól. Egy maj7 lehet ionian vagy lydian aszerint, hogy I. vagy IV. fok; egy m7 lehet dorian, phrygian vagy aeolian aszerint, hogy hányadik fok.
+
+A iii. fokon a phrygian és a dorian valódi stílusdöntés, nem hibalehetőség: egy III-VI-II-V menetben (C-dúrban E-7 A7 D-7 G7) az E-7 fölé phrygian és dorian egyaránt játszható, csak más színt ad — a phrygian sötétebb, spanyolosabb, a dorian simább. Ugyanez a phrygian szín jellemzi a spanyol zenéből átvett F/E-akkordot (F triász E basszus fölött, gyakran E-dúrra oldva) — Gil Evans és Miles Davis a *Sketches of Spain* lemezen építette erre a hangzásra.
 
 ## Korlátok
 

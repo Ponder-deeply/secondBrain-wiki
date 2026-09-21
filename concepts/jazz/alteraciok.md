@@ -1,13 +1,13 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Alterációk (b9, ♯9, ♯11, b13)
 
-Az alteráció a felső extensionök kromatikus módosítása. Szinte kizárólag domináns akkordon fordul elő, mert a domináns funkciója a feszültségkeltés, és az alteráció ezt fokozza.
+Az alteráció a felső extensionök kromatikus módosítása. Szinte kizárólag domináns akkordon fordul elő, mert a domináns funkciója a feszültségkeltés, és az alteráció ezt fokozza. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 8, p. 50 -->
 
 ## A négy alteráció
 
@@ -34,6 +34,8 @@ Két pár enharmonikusan egybeesik egy másik funkcióval: a ♯11 és a b5 ugya
 
 A választás nem szabad: a b9 és a ♯9 együtt csak diminished vagy altered kontextusban áll meg. A natural 9 és a b9 együtt szólva viszont ütközik.
 
+Levine az "alt" jelölést kifejezetten négy alterációként definiálja (b9, ♯9, ♯11, b13), és megkülönbözteti attól az esettől, amikor a szimbólum csak +9-et és b13-at ír ki: "alt" ennél mindig többet jelent. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 8, p. 50 -->
+
 **m7b5:** a b13 (a locrian b6-ja) benne van a skálában, a b9 avoid note. Ha a b9 helyett natural 9-et akarunk, locrian ♮2 skálát használunk — lásd [[concepts/jazz/melodic-minor-modusai|melodic-minor-modusai]].
 
 **m7, mMaj7:** nem alterálunk. A moll akkord színét a módus adja, nem az alteráció.
@@ -52,7 +54,7 @@ Az akkord ezért nem tartalmaz egyetlen természetes felső extensiont sem — t
 
 Praktikus levezetés zongorán: a C7alt fölött játszd a Db melodikus mollt, vagy gondolj rá úgy, hogy a C7alt felső struktúrája egy Db akkord (lásd [[concepts/jazz/upper-structure-triad|upper-structure-triad]]).
 
-Az alteráció és a [[concepts/jazz/tritone-substitution|tritone-substitution]] szorosan összefügg: a C7alt és az Gb7 (a tritonusz-helyettes) hangkészlete jórészt fedi egymást — a C7 b9/♯11/b13 tensionjei az Gb7 alaphangjai, tercei, kvintjei. Ezért hangzik a tritone sub és az altered skála „ugyanannak" a két leírásaként.
+Az alteráció és a [[concepts/jazz/tritone-substitution|tritone-substitution]] szorosan összefügg: a C7alt és az Gb7 (a tritonusz-helyettes) hangkészlete jórészt fedi egymást — a C7 b9/♯11/b13 tensionjei az Gb7 alaphangjai, tercei, kvintjei. Ezért hangzik a tritone sub és az altered skála „ugyanannak" a két leírásaként. Levine konkrét voicing-szinten mutatja meg ugyanezt G7alt és Db7 rootless formáin: a két akkord bal kezes voicingja hangról hangra megegyezik, csak a kotta írásmódja (pl. A♯ vs Bb) tér el. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 8, p. 50 -->
 
 ## Miért nem alterálunk maj7-et ugyanígy
 

@@ -3,7 +3,7 @@ tags:
   - subject
 sources: []
 derivation: unsourced
-updated: 2026-09-18
+updated: 2026-09-21
 ---
 
 # Jazzelmélet
@@ -18,7 +18,7 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 
 ## Témakörök
 
-54 fogalomlap hat témakörben, mind a `concepts/jazz/` mappában.
+62 fogalomlap hét témakörben, mind a `concepts/jazz/` mappában.
 
 **Belépési pontok:** a [[concepts/jazz/chord-scale-theory|chord-scale-theory]] az egész anyag gerince (a legtöbb lap ide hivatkozik vissza); a [[concepts/jazz/ii-v-i-durban|ii-v-i-durban]] a funkciós harmónia kiindulása; a [[concepts/jazz/harmoniai-nyelvek-osszevetese|harmoniai-nyelvek-osszevetese]] pedig felülnézetből köti össze a témaköröket.
 
@@ -27,6 +27,7 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 - [[concepts/jazz/akkordepites]] — hármashangzat → seventh chord; akkordtípusok tercépítkezésből, akkordszimbólum-olvasás
 - [[concepts/jazz/extensions]] — 9, 11, 13 mint a tercépítkezés folytatása; a 11 problémája dúr akkordon
 - [[concepts/jazz/alteraciok]] — b9, ♯9, ♯11, b13; melyik akkordtípuson mi elérhető; az altered dominant összképe
+- [[concepts/jazz/sus-es-phrygian-akkordok]] — sus és phrygian akkord; a negyed mint tercpótlás, és a II–V egyetlen akkordra vonása
 - [[concepts/jazz/chord-scale-theory]] — a témakör gerince: akkord → skála levezetés, available tension vs avoid note, a fél hang szabály
 - [[concepts/jazz/dur-skala-modusai]] — a hét módus, intervallumszerkezet, characteristic note, akkordmegfeleltetés
 - [[concepts/jazz/melodic-minor-modusai]] — altered (super locrian), lydian dominant, locrian ♮2 és a többi módus
@@ -35,6 +36,7 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 - [[concepts/jazz/szimmetrikus-skalak]] — diminished (half-whole, whole-half) és whole tone; transzpozíciós szimmetria
 - [[concepts/jazz/blues-scale]] — felépítés, viszony a moll pentatonhoz, blue note-ok, korlátok
 - [[concepts/jazz/bebop-skalak]] — a kromatikus átmenőhang logikája és metrikus következménye
+- [[concepts/jazz/negyhangu-skalak]] — négyhangú részhalmazok; a minor sixth scale
 - [[concepts/jazz/pentaton-skalak]] — kvintekből épülő, félhang nélküli skála; öt módus; miért nincs avoid note
 - [[concepts/jazz/modositott-pentatonok]] — moll 6, moll b5, dúr b6 és domináns pentaton; szülőskálák
 - [[concepts/jazz/pentaton-akkordhozzarendeles]] — melyik alaphangú pentaton melyik akkordra; ii–V–I lánc
@@ -60,10 +62,13 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 - [[concepts/jazz/shell-voicing]] — alaphang + 3 és 7; a legegyszerűbb működő kíséret
 - [[concepts/jazz/rootless-voicing]] — A és B forma akkordtípusonként; váltás minimális mozgással
 - [[concepts/jazz/drop-2-drop-3]] — a close position szétnyitása; kombináció a két kéz között
+- [[concepts/jazz/block-chord]] — locked hands; négyszólamú zárt harmonizálás, Shearing- és Garland-változatok
+- [[concepts/jazz/stride-es-bud-powell-voicing]] — a stride bal kéz és az azt felváltó csontvázas bebop-alak
 - [[concepts/jazz/kvartalis-voicing]] — kvartokból épített rakások; a So What voicing; modális kontextus
 - [[concepts/jazz/upper-structure-triad]] — felső triád a domináns váza fölött; tension-kombinációk
 - [[concepts/jazz/szolamvezetes]] — közös hang, legkisebb mozgás, ellenmozgás, felső szólam mint dallam
 - [[concepts/jazz/comping]] — ritmikai szerep, sűrűség és tér, kézfelosztás előadói helyzetenként
+- [[concepts/jazz/voicing-stilusonkent]] — melyik voicing melyik ritmikai karakterben: swing, ballada, bossa, latin, keringő, funk
 
 ### Formák
 
@@ -92,7 +97,13 @@ A gyakorlati oldal (voicingok, comping, kéz-felosztás) **zongorára** van hang
 - [[concepts/jazz/bebop-harmonia]] — sűrű harmóniai ritmus és a belőle következő dallami nyelv
 - [[concepts/jazz/modalis-jazz-harmonia]] — a funkciós vonzás felfüggesztése; miért kvartális a voicing
 - [[concepts/jazz/post-bop-harmonia]] — lebegő tonalitás, nem funkciós kapcsolatok, hibrid akkordok
+- [[concepts/jazz/salsa-latin-montuno]] — a montuno mint kötött ostinato; clave, tumbao, és miért nem comping
 - [[concepts/jazz/harmoniai-nyelvek-osszevetese]] — a három nyelv összevetése; hidak a többi témakörhöz
+
+### Gyakorlás
+
+- [[concepts/jazz/skalagyakorlas]] — a root-bias problémája; belépési pontok és szekvenciálás
+- [[concepts/jazz/gyakorlasi-modszertan]] — általános gyakorlási elvek, transzkripció, technika
 
 <!-- gen_hub_graph: topic graph — GENERATED, do not edit by hand -->
 
@@ -108,10 +119,11 @@ graph TD
   Forma["FORMÁK"]
   Vonal["VONALÉPÍTÉS / IMPROV"]
   Eloadas["ELŐADÁS"]
+  Alapok ===|29| Skalak
   Reharm ===|26| iiVI
-  Alapok ===|25| Skalak
-  Alapok ===|18| Voicing
-  Alapok ===|16| iiVI
+  Alapok ===|25| Voicing
+  Alapok ===|17| iiVI
+  Eloadas ===|15| Voicing
   Reharm ---|11| Skalak
   Skalak ---|10| Vonal
   Alapok ---|9| Reharm
@@ -120,14 +132,13 @@ graph TD
   Blues ---|8| iiVI
   Reharm ---|8| Stilus
   Skalak ---|8| iiVI
-  Eloadas ---|7| Voicing
   Forma ---|7| iiVI
   Skalak ---|7| Stilus
+  Alapok ---|6| Eloadas
   Alapok ---|6| Vonal
   Blues ---|6| Forma
   Blues ---|6| Skalak
   Blues ---|5| Reharm
-  Reharm ---|5| Vonal
 ```
 
 <!-- gen_hub_graph: page graph -->
@@ -137,193 +148,210 @@ graph TD
   subgraph Alapok["ALAPOK"]
     n1["akkordepites.md"]
     n2["alteraciok.md"]
-    n10["chord-scale-theory.md"]
-    n19["extensions.md"]
-    n20["funkciocsoportok.md"]
-    n21["guide-tone.md"]
-    n49["szolamvezetes.md"]
+    n11["chord-scale-theory.md"]
+    n20["extensions.md"]
+    n21["funkciocsoportok.md"]
+    n22["guide-tone.md"]
+    n54["sus-es-phrygian-akkordok.md"]
+    n56["szolamvezetes.md"]
   end
   subgraph Skalak["SKÁLÁK / MODUSZOK"]
     n6["bebop-skalak.md"]
-    n9["blues-scale.md"]
-    n16["dur-skala-modusai.md"]
-    n24["harmonic-major-modusai.md"]
-    n25["harmonic-minor-modusai.md"]
-    n30["melodic-minor-modusai.md"]
-    n34["modositott-pentatonok.md"]
-    n36["pentaton-akkordhozzarendeles.md"]
-    n39["pentaton-skalak.md"]
-    n48["szimmetrikus-skalak.md"]
+    n10["blues-scale.md"]
+    n17["dur-skala-modusai.md"]
+    n26["harmonic-major-modusai.md"]
+    n27["harmonic-minor-modusai.md"]
+    n32["melodic-minor-modusai.md"]
+    n36["modositott-pentatonok.md"]
+    n38["negyhangu-skalak.md"]
+    n39["pentaton-akkordhozzarendeles.md"]
+    n42["pentaton-skalak.md"]
+    n55["szimmetrikus-skalak.md"]
   end
   subgraph Voicing["VOICINGÖK"]
-    n15["drop-2-drop-3.md"]
-    n29["kvartalis-voicing.md"]
-    n44["rootless-voicing.md"]
-    n46["shell-voicing.md"]
-    n53["upper-structure-triad.md"]
+    n8["block-chord.md"]
+    n16["drop-2-drop-3.md"]
+    n31["kvartalis-voicing.md"]
+    n47["rootless-voicing.md"]
+    n50["shell-voicing.md"]
+    n53["stride-es-bud-powell-voicing.md"]
+    n60["upper-structure-triad.md"]
   end
   subgraph iiVI["ii–V–I & FUNKCIÓS"]
     n4["backdoor-ii-v.md"]
-    n18["extended-dominant.md"]
-    n22["guide-tone-line.md"]
-    n26["ii-v-i-durban.md"]
-    n27["ii-v-i-mollban.md"]
-    n45["secondary-dominant.md"]
-    n52["turnaround.md"]
+    n19["extended-dominant.md"]
+    n23["guide-tone-line.md"]
+    n28["ii-v-i-durban.md"]
+    n29["ii-v-i-mollban.md"]
+    n49["secondary-dominant.md"]
+    n59["turnaround.md"]
   end
   subgraph Reharm["REHARMONIZÁCIÓ"]
-    n11["coltrane-changes.md"]
-    n14["diminished-passing-chords.md"]
-    n31["modal-interchange.md"]
-    n41["reharmonizacio.md"]
-    n51["tritone-substitution.md"]
+    n12["coltrane-changes.md"]
+    n15["diminished-passing-chords.md"]
+    n33["modal-interchange.md"]
+    n44["reharmonizacio.md"]
+    n58["tritone-substitution.md"]
   end
   subgraph Blues["BLUES"]
     n7["bird-blues.md"]
-    n8["blues-forma.md"]
-    n28["jazz-blues.md"]
-    n35["moll-blues.md"]
+    n9["blues-forma.md"]
+    n30["jazz-blues.md"]
+    n37["moll-blues.md"]
   end
   subgraph Stilus["STÍLUSRÉTEGEK"]
     n5["bebop-harmonia.md"]
-    n23["harmoniai-nyelvek-osszevetese.md"]
-    n33["modalis-jazz-harmonia.md"]
-    n40["post-bop-harmonia.md"]
+    n25["harmoniai-nyelvek-osszevetese.md"]
+    n35["modalis-jazz-harmonia.md"]
+    n43["post-bop-harmonia.md"]
   end
   subgraph Forma["FORMÁK"]
     n0["aaba-abac.md"]
-    n32["modalis-forma.md"]
-    n42["rhythm-changes.md"]
+    n34["modalis-forma.md"]
+    n45["rhythm-changes.md"]
   end
   subgraph Vonal["VONALÉPÍTÉS / IMPROV"]
     n3["approach-note.md"]
-    n13["digital-pattern.md"]
-    n17["enclosure.md"]
-    n37["pentaton-cellak.md"]
-    n38["pentaton-outside.md"]
-    n43["ritmikus-eltolas.md"]
-    n47["side-slipping.md"]
-    n50["szuperimponalas.md"]
+    n14["digital-pattern.md"]
+    n18["enclosure.md"]
+    n40["pentaton-cellak.md"]
+    n41["pentaton-outside.md"]
+    n46["ritmikus-eltolas.md"]
+    n51["side-slipping.md"]
+    n57["szuperimponalas.md"]
   end
   subgraph Eloadas["ELŐADÁS"]
-    n12["comping.md"]
+    n13["comping.md"]
+    n24["gyakorlasi-modszertan.md"]
+    n48["salsa-latin-montuno.md"]
+    n52["skalagyakorlas.md"]
+    n61["voicing-stilusonkent.md"]
   end
-  n0 --- n8
-  n0 --- n32
-  n0 --- n42
-  n1 --- n10
-  n1 --- n19
-  n2 --- n10
-  n2 --- n19
-  n2 --- n30
-  n2 --- n48
-  n2 --- n51
-  n2 --- n53
-  n3 --- n13
-  n3 --- n17
-  n3 --- n22
-  n4 --- n31
-  n4 --- n41
+  n0 --- n9
+  n0 --- n34
+  n0 --- n45
+  n1 --- n11
+  n1 --- n20
+  n2 --- n11
+  n2 --- n20
+  n2 --- n32
+  n2 --- n55
+  n2 --- n58
+  n2 --- n60
+  n3 --- n14
+  n3 --- n18
+  n3 --- n23
+  n4 --- n33
+  n4 --- n44
   n5 --- n6
-  n5 --- n23
-  n5 --- n33
-  n5 --- n40
-  n6 --- n9
+  n5 --- n25
+  n5 --- n35
+  n5 --- n43
   n6 --- n10
-  n7 --- n8
-  n7 --- n28
-  n8 --- n9
-  n8 --- n28
-  n8 --- n35
-  n8 --- n42
-  n8 --- n52
-  n9 --- n35
-  n9 --- n39
-  n10 --- n16
-  n10 --- n19
-  n10 --- n25
-  n10 --- n26
-  n10 --- n30
-  n10 --- n36
-  n10 --- n48
-  n11 --- n18
-  n11 --- n40
-  n11 --- n41
-  n12 --- n29
+  n6 --- n11
+  n7 --- n9
+  n7 --- n30
+  n8 --- n16
+  n8 --- n53
+  n8 --- n56
+  n9 --- n10
+  n9 --- n30
+  n9 --- n37
+  n9 --- n45
+  n9 --- n59
+  n10 --- n37
+  n10 --- n42
+  n11 --- n17
+  n11 --- n20
+  n11 --- n27
+  n11 --- n28
+  n11 --- n32
+  n11 --- n39
+  n11 --- n55
+  n12 --- n19
   n12 --- n43
   n12 --- n44
-  n12 --- n46
-  n12 --- n49
-  n13 --- n17
-  n13 --- n37
-  n13 --- n43
-  n14 --- n28
-  n14 --- n41
-  n14 --- n48
-  n14 --- n52
-  n15 --- n29
+  n13 --- n31
+  n13 --- n46
+  n13 --- n47
+  n13 --- n48
+  n13 --- n50
+  n13 --- n56
+  n13 --- n61
+  n14 --- n18
+  n14 --- n40
+  n14 --- n46
+  n15 --- n30
   n15 --- n44
-  n15 --- n49
-  n16 --- n19
-  n16 --- n25
-  n16 --- n30
+  n15 --- n55
+  n15 --- n59
   n16 --- n31
-  n16 --- n33
-  n17 --- n22
-  n18 --- n42
-  n18 --- n45
-  n18 --- n51
-  n18 --- n52
-  n19 --- n44
-  n20 --- n26
-  n20 --- n31
-  n20 --- n52
-  n21 --- n22
-  n21 --- n44
-  n21 --- n46
-  n21 --- n49
-  n23 --- n33
-  n23 --- n40
-  n24 --- n25
-  n24 --- n48
-  n25 --- n27
-  n25 --- n30
+  n16 --- n47
+  n16 --- n56
+  n17 --- n20
+  n17 --- n27
+  n17 --- n32
+  n17 --- n33
+  n17 --- n35
+  n18 --- n23
+  n19 --- n45
+  n19 --- n49
+  n19 --- n58
+  n19 --- n59
+  n20 --- n47
+  n21 --- n28
+  n21 --- n33
+  n21 --- n59
+  n22 --- n23
+  n22 --- n47
+  n22 --- n50
+  n22 --- n56
+  n24 --- n52
+  n25 --- n35
+  n25 --- n43
   n26 --- n27
-  n26 --- n46
-  n26 --- n51
-  n26 --- n52
-  n27 --- n30
-  n27 --- n31
-  n27 --- n35
-  n28 --- n35
+  n26 --- n55
+  n27 --- n29
+  n27 --- n32
+  n28 --- n29
+  n28 --- n50
+  n28 --- n58
+  n28 --- n59
   n29 --- n32
   n29 --- n33
-  n29 --- n39
-  n30 --- n51
-  n31 --- n40
-  n31 --- n41
-  n32 --- n33
-  n32 --- n35
-  n33 --- n40
-  n33 --- n47
-  n34 --- n36
-  n34 --- n39
-  n36 --- n37
+  n29 --- n37
+  n30 --- n37
+  n31 --- n34
+  n31 --- n35
+  n31 --- n42
+  n31 --- n54
+  n32 --- n58
+  n33 --- n43
+  n33 --- n44
+  n34 --- n35
+  n34 --- n37
+  n35 --- n43
+  n35 --- n51
   n36 --- n39
-  n37 --- n38
-  n37 --- n39
-  n38 --- n39
-  n38 --- n50
-  n41 --- n45
-  n41 --- n51
-  n41 --- n52
-  n42 --- n52
-  n43 --- n47
-  n44 --- n46
-  n45 --- n51
+  n36 --- n42
+  n39 --- n40
+  n39 --- n42
+  n40 --- n41
+  n40 --- n42
+  n41 --- n42
+  n41 --- n57
+  n44 --- n49
+  n44 --- n58
+  n44 --- n59
+  n45 --- n59
+  n46 --- n51
   n47 --- n50
-  n50 --- n53
-  n51 --- n52
+  n49 --- n58
+  n51 --- n57
+  n53 --- n56
+  n53 --- n61
+  n57 --- n60
+  n58 --- n59
 ```
 
 <!-- /gen_hub_graph -->

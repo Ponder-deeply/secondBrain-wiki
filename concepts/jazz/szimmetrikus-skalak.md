@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Szimmetrikus skálák
 
 A szimmetrikus skálák intervallumszerkezete egy ismétlődő mintából áll, ezért transzponálva önmagukba mennek át. Két ilyen szerepel érdemben a jazzben: a diminished (nyolcfokú) és a whole tone (hatfokú).
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 9 (Diminished / Whole-tone scale harmony), p. 76-84 -->
 
 ## Transzpozíciós szimmetria
 
@@ -52,6 +54,8 @@ Szűkített akkordon (dim7) használjuk. Cdim7 hangjai (C Eb Gb A) a skála pár
 Ez a skála a [[concepts/jazz/diminished-passing-chords|diminished-passing-chords]] természetes hangkészlete.
 
 Megjegyzés: a half-whole és a whole-half ugyanaz a három hangkészlet, csak más kiindulóponttal. C half-whole = Db whole-half.
+
+Gyakorlati következmény: mivel egy G7b9 és a hozzá tartozó Fº (F dim7) ugyanabból a nyolchangú skálából származik, a dim7 akkord gyakran egyszerűen a b9-es domináns helyettesítője kromatikus basszusmenet kedvéért — Duke Ellington „Sophisticated Lady" hídjában a G#º ugyanaz, mint az E7b9 az alaphang nélkül. Van kivétel is: „irreguláris" dim7, amely nem a következő akkord dominánsának helyettese, hanem önálló átmenő akkord (pl. Jobim „Wave" második üteme) — ilyenkor a szimmetrikus olvasat nem old fel semmit, csak színez.
 
 ## Whole tone
 

@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: []
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
 references: ["Levine: The Jazz Theory Book (pentaton fejezet)", "Bergonzi: Inside Improvisation Vol. 2 — Pentatonics"]
-derivation: unsourced
-updated: 2026-09-18
+derivation: source
+updated: 2026-09-21
 ---
 
 # Pentaton skálák
@@ -15,6 +15,7 @@ A pentaton skála ötfokú, félhanglépés nélküli (anhemiton) skála: négy 
 ### Felépítés
 
 C dúr pentaton: **C D E G A** — fokok: 1 2 3 5 6. Lépésközök: egész, egész, kis terc, egész, kis terc.
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 126 -->
 
 A moll pentaton ugyanennek a hangkészletnek a párhuzamos mollja: A moll pentaton **A C D E G** — fokok: 1 b3 4 5 b7. A kettő viszonya azonos a dúr skála és a párhuzamos moll viszonyával, és ugyanaz, mint a [[concepts/jazz/blues-scale|blues-scale]] lapon tárgyalt dúr és moll blues scale-é.
 
@@ -27,10 +28,14 @@ A C–G–D–A–E kvintsor öt hangja adja a C dúr pentatont. Ebből három s
 3. **Kvartokba rendezhető.** Ugyanez a sor megfordítva kvartsor (E–A–D–G–C), ezért a pentaton közvetlenül kvartális hangzatot ad. Lásd [[concepts/jazz/kvartalis-voicing|kvartalis-voicing]].
 
 A pentaton tehát a dúr skála **félhangok nélküli magja**. Ebből következik az alkalmazás legfontosabb tulajdonsága: a dúr akkordon avoid note-nak számító 4. fok (F C-ben) eleve nincs benne. Lásd [[concepts/jazz/chord-scale-theory|chord-scale-theory]].
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 127 — Levine: a C dúr hangnem I., IV. és V. pentatonja (C, F, G) mindegyike a C-dúr hangkészletből épül; a D-7 akkordon egyik pentatonnak sincs avoid note-ja, G7-en a C, Cmaj7-en az F az avoid note. -->
+
+Ugyanez a logika adja meg, hogy egy hangnem melyik pentatonja szólal meg avoid note nélkül a hangnem bármely akkordján — ez a [[concepts/jazz/pentaton-akkordhozzarendeles|pentaton-akkordhozzarendeles]] módszerének kiinduló megfigyelése.
 
 ### A pentaton öt módusa
 
 Ugyanaz az öt hang öt különböző alaphangról:
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 126 — Levine a pentaton öt módusát mutatja be; az ötödik módust nevezi "minor pentatonic"-nak, mert ez a leggyakrabban használt forma. -->
 
 | Kezdőhang (C dúr pentaton készletén) | Hangok | Fokok | Jellemző akkord |
 |---|---|---|---|
@@ -50,6 +55,7 @@ A pentaton rávetítése nem a skála alaphangjának akkordjához kötött: a l�
 
 - **Nem hordozza a funkciót.** Tritonusz híján a pentaton maga nem különbözteti meg a V7-et a Imaj7-től — ugyanaz a korlát, amit a [[concepts/jazz/blues-scale|blues-scale]] lap is leír. A funkciót az alaphang megválasztása (melyik pentatont választjuk az adott akkordra) és a [[concepts/jazz/guide-tone-line|guide-tone-line]] érkezési pontjai viszik.
 - **Szimmetrikus skálákba nem fér.** A pentaton három egymást követő hangja két egész hangnyi lépést tartalmaz (pl. C–D–E), a half-whole diminished skálában viszont egész és fél lépés váltakozik — egyik transzpozíció sem illeszkedik. A whole tone skálába a kis terc miatt nem fér. Lásd [[concepts/jazz/szimmetrikus-skalak|szimmetrikus-skalak]].
+  <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 134 — Levine kimondottan leírja: "No pentatonic scales occur naturally in diminished or whole-tone harmony." -->
 - **Hamar klisé.** Öt hang, kevés intervallumfajta; önmagában hosszan játszva unalmas. Az ellenszer a cellákra bontás ([[concepts/jazz/pentaton-cellak|pentaton-cellak]]) és az alaphang tudatos váltogatása.
 
 ### Stílustörténeti helye

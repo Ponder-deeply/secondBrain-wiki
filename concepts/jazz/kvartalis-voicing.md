@@ -1,8 +1,8 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Kvartális voicing
@@ -21,6 +21,7 @@ Emiatt a kvartális voicing nem kadenciát épít, hanem síkot: egy skálakész
 
 ## So What voicing
 
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 12, p. 97 -->
 Öt hang, alulról három tiszta kvart és a tetején egy nagy terc. D-n:
 
 **D, G, C, F, A** — a D-hez képest 1, 11, b7, b3, 5.
@@ -28,6 +29,10 @@ Emiatt a kvartális voicing nem kadenciát épít, hanem síkot: egy skálakész
 Kézfelosztás: bal kéz D, G (esetleg D, G, C), jobb kéz C, F, A vagy F, A. Fekvés: az alsó D a nagy oktáv felső részén vagy a kis oktávban (kb. D3), a felső A az egyvonalas fölött (A4) körül.
 
 A voicing Dm11-ként hallható, de a legfelső nagy terc miatt nem teljesen semleges: az F–A terc a moll karaktert rögzíti. A tipikus modális használat a párhuzamos eltolás (planing): ugyanezt az alakot fél vagy egész hanggal odébb tolva más modális síkra lépünk, a belső szerkezet változatlanul. A nevet gyakran egyetlen ismert modális darabhoz kötik, de az alak önmagában általános kvartális formula.
+
+Az alakzat ötszólamú, ezért öt megfordítása van; egy hosszan kitartott akkordon (pl. tizenhat ütemnyi D-7) ezeken végigmenve variálható a hangzás anélkül, hogy a harmónia változna. Az egyik megfordításban a terc teljesen kimarad, és minden hangköz tiszta kvart lesz — ez már átvezet a tisztán kvartépítésű, terc nélküli akkordokhoz. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 12, p. 104 -->
+
+A So What alakzat diatonikusan végigvezethető a skála minden fokán (a kvartsorozat-táblázat logikája szerint): néhány fok tiszta kvartokat ad nagy terccel, más fokokon a legfelső hangköz kis tercre, az alsó szerkezetben pedig tritonuszra vált. Ezek a disszonánsabb alakok szándékos feszültségkeltésre valók egy hosszan egy akkordon álló modális szakaszban (pl. "So What", "Little Sunflower", "Impressions" hosszú D-7 részei), hogy a kíséret ne unja magát tizenkilenc korus után. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 12, p. 98 -->
 
 ## Kvartsorozat skálákra
 
@@ -43,7 +48,13 @@ Egy skálából diatonikus kvarthármasok építhetők minden fokra. C-dúrban, 
 | A | A, D, G | két tiszta kvart |
 | B | B, E, A | két tiszta kvart |
 
-A hét fokból ötön tiszta kvartok állnak; a kimaradó kettőben a skála tritonusa (F–B) jelenik meg. Ez a két alak élesebb, dominánsabb színű — dúr környezetben gyakran kerüljük, domináns akkordon viszont jól használható.
+A hét fokból ötön tiszta kvartok állnak; a kimaradó kettőben a skála tritonusa (F–B) jelenik meg. Ez a két alak élesebb, dominánsabb színű — dúr környezetben gyakran kerüljük, domináns akkordon viszont jól használható. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 13, p. 106 -->
+
+## A kvartakkord család további tagjai
+
+A C-dúr 6/9 akkord (C, E, G, A, D) kvartokba rendezve — alulról terc, szext, nóna, kvint, alaphang — ugyanaz a "négy-négy-négy nagyterc" szerkezet, mint a So What voicingnál, csak más alaphangról nézve. A cikluson körbevezetve (kvintkörön gyakorolva) ez az akkord két másik funkcióban is felismerhető: a D-6/9 voicing hangkészlete megegyezik a G7 (7, 3, 13, 9, 5 sorrendben alulról) hangkészletével, egy kvarttal bővítve pedig a hatfokú, "kövér hangzású" domináns akkordot adja (b7, 3, 13, 9, 5 alulról) — ez gyakori nyitóakkord egy blues elején. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 13, p. 106 -->
+
+McCoy Tyner kétkezes kvartakkordok mellett háromhangos, csak balkezes kvartalakokat is használ, jellemzően azután, hogy az ütem első ütésén oktávot vagy oktáv+kvintet üt le — ez könnyebben kezelhető sűrű kíséretre, mint a teljes ötös-hatos alak. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 13, p. 107 -->
 
 Termékeny alapskálák:
 
@@ -71,3 +82,4 @@ George Russell Lydian Chromatic Concept-je a kvartális hangzást nem "terc nél
 - [[concepts/jazz/szuperimponalas]] — pentaton és kvartsorozatok szólóban
 - [[concepts/jazz/comping]] — mikor indokolt a funkciósan semleges kíséret
 - [[concepts/jazz/pentaton-skalak]] — ugyanaz a kvintsor skálaként
+- [[concepts/jazz/sus-es-phrygian-akkordok]] — a sus hangzat rokon, kvart-alapú színe

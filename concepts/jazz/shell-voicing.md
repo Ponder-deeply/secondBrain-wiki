@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Shell voicing
 
 Háromhangú bal kezes voicing: alaphang + a két guide tone (3 és 7). A legkisebb elrendezés, amely egyértelműen közli az akkordot, ezért a zongorakíséret alapesete.
+
+Levine ugyanezt a redukciót **three-note voicing** néven vezeti be, de nála a három hang két kézre oszlik: az alaphang a bal kézben, a terc és a szeptim a jobb kézben — nem mind a három egy kézben, ahogy ez a lap tárgyalja. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 3, p. 17 --> A hangkészlet és a szólamvezetési logika (lásd lent) viszont pontosan megegyezik; a két kéz közötti elosztás előadói döntés, nem elvi különbség.
 
 ## Szerkezet
 
@@ -39,7 +41,7 @@ Amit szándékosan nem közöl: a színt. Ez nem hiány, hanem munkamegosztás. 
 
 ## Hozzáadott színek
 
-A shell könnyen bővíthető egyetlen negyedik hanggal, jellemzően a jobb kézzel vagy a bal kéz kisujjával feljebb:
+A shell könnyen bővíthető egyetlen negyedik hanggal, jellemzően a jobb kézzel vagy a bal kéz kisujjával feljebb. Levine erre alapértelmezett receptet ad alteráció nélküli ii–V–I-re: a ii akkordhoz kvintet, a V-hez nónát (vagy b9-et), a I-hez kvintet és nónát adunk. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 5, p. 27 --> Ez a lenti táblázat logikáját erősíti meg — a hozzáadott hang funkciója, nem a konkrét hangneve a lényeg:
 
 | Akkordtípus | Shell (1–7–3) | Hozzáadott hang | Eredmény |
 |---|---|---|---|
@@ -53,7 +55,7 @@ Az m7b5 kivétel: ott a b5 nem elhagyható, mert a guide tone-ok nem különböz
 
 ## Szólamvezetés shellekkel
 
-Mivel a felső két hang guide tone, a shellek automatikusan jól vezetnek. C-dúr ii–V–I, 1–7–3 formában:
+Mivel a felső két hang guide tone, a shellek automatikusan jól vezetnek. Levine ugyanezt a jelenséget "a szeptim mindig fél hangot lép lefelé" szabályként tanítja, és a kvintkör mind a tizenkét hangnemén végiggyakoroltatja. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 3, p. 17-18 --> C-dúr ii–V–I, 1–7–3 formában:
 
 - Dm7: D, C, F
 - G7: G, F, B

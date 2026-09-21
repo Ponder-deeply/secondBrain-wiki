@@ -37,7 +37,7 @@ A stílusrétegek különbsége harmóniai és formai. Néhány dolog viszont v�
 - **Szólamvezetés.** Két akkord közötti sima átmenet minden nyelvben ugyanaz a probléma és ugyanaz a megoldás: közös hang tartása, a többi legkisebb lépéssel. Lásd [[concepts/jazz/szolamvezetes|szolamvezetes]] és [[concepts/jazz/guide-tone|guide-tone]].
 - **Célirányos dallamépítés.** Az [[concepts/jazz/enclosure|enclosure]] és az [[concepts/jazz/approach-note|approach-note]] hangnemfüggetlen technikák; működnek funkciós menetben, álló módus fölött és hibrid akkordon egyaránt.
 - **Ritmikai elsőbbség.** A [[concepts/jazz/ritmikus-eltolas|ritmikus-eltolas]] és a frazírozás minden rétegben erősebben határozza meg a hallható stílust, mint a hangkészlet.
-- **A voicing feladata.** Zongorán mindig ugyanaz a kérdés: mennyit mondjon el a kíséret a harmóniából. A shell keveset és egyértelműen, a kvartos rakás sokat és bizonytalanul.
+- **A voicing feladata.** Zongorán mindig ugyanaz a kérdés: mennyit mondjon el a kíséret a harmóniából. A shell keveset és egyértelműen, a kvartos rakás sokat és bizonytalanul. A harmóniai nyelv mellett a ritmikai karakter is dönt a rakásról — lásd [[concepts/jazz/voicing-stilusonkent|voicing-stilusonkent]].
 
 ## Hogyan keverednek a gyakorlatban
 

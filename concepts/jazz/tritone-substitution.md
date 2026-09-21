@@ -1,13 +1,13 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Tritone substitution
 
-Bármely domináns szeptim helyettesíthető azzal a domináns szeptimmel, amelynek alaphangja tritonusz-távolságra van tőle. Az elv alapja, hogy a két akkord ugyanazt a tritonuszt tartalmazza, csak fordított szereposztásban. Jelölése subV7 (vagy subV7/x, ha a helyettesített akkord másodlagos domináns volt).
+Bármely domináns szeptim helyettesíthető azzal a domináns szeptimmel, amelynek alaphangja tritonusz-távolságra van tőle. Az elv alapja, hogy a két akkord ugyanazt a tritonuszt tartalmazza, csak fordított szereposztásban. Jelölése subV7 (vagy subV7/x, ha a helyettesített akkord másodlagos domináns volt). <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 6, p. 37 -->
 
 ## Az elv: a közös tritonusz
 
@@ -44,7 +44,7 @@ C-dúrban:
 
 A ii–V–I-ből ereszkedő kromatikus vonal lesz. Hosszabb menetekben ez folytonos kromatikát ad, lásd [[concepts/jazz/extended-dominant|extended-dominant]].
 
-A ii fok is helyettesíthető együtt a V-tel („kettős sub"): Abm7 – Db7 – Cmaj7, ahol az Abm7 a Db7 related ii-je. Ekkor az egész ii–V modul félhanggal feljebb kerül, és onnan lép le a tonikára.
+A ii fok is helyettesíthető együtt a V-tel („kettős sub"): Abm7 – Db7 – Cmaj7, ahol az Abm7 a Db7 related ii-je. Ekkor az egész ii–V modul félhanggal feljebb kerül, és onnan lép le a tonikára. Levine pontosan ezt a Ab-7–Db7–C∆ példát adja meg a bebop korszak jellemző fogásaként. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 6, p. 40 -->
 
 ## Chord-scale: lydian dominant
 

@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Akkordépítés
 
 A jazzharmónia alapegysége nem a hármashangzat, hanem a seventh chord: a tercépítkezés négy hangig vitt formája. Ez a lap az akkordtípusok tercszerkezetét és az akkordszimbólumok olvasását tárgyalja.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 1 (Intervals and Triads), p. 1-12; ch. 2 (The Major Modes and II-V-I), p. 13-16 -->
 
 ## Tercépítkezés
 

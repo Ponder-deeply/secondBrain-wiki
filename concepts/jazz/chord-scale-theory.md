@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Chord-scale theory
 
 A Berklee-féle chord-scale theory központi állítása: minden akkordhoz tartozik egy skála, amely az akkord összes hangját és az adott kontextusban elérhető tension-öket tartalmazza. Az akkord és a skála ugyanannak a hangkészletnek két elrendezése — az akkord függőlegesen, a skála vízszintesen.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 9 (Scale Theory), p. 59 -->
 
 ## Az alapazonosság
 
@@ -21,6 +23,8 @@ A tercépítkezést hét hangig folytatva egy teljes hétfokú skálát kapunk:
 Vagyis a „melyik extension szólhat" és a „melyik skála illik" kérdés ugyanaz a kérdés. Ha tudom, hogy Cmaj7-en a 9 és a 13 elérhető, a 11 nem, akkor tudom, hogy a skála C ionian, de az F kerülendő.
 
 Ez az elmélet ereje és korlátja is: minden akkordpillanathoz egyetlen hangkészletet rendel, ezért kiválóan alkalmas a harmónia leképezésére, de statikusabb képet ad, mint amennyire a valódi frazírozás az.
+
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 9, p. 62-64 -->
 
 ## Available tension vs. avoid note
 

@@ -1,13 +1,15 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-08-05
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
+derivation: source
+updated: 2026-09-21
 ---
 
 # Rootless voicing (A és B forma)
 
 Négyhangú, alaphang nélküli bal kezes voicingok, amelyek a guide tone-okat két színhanggal egészítik ki. Két standard elrendezésük van, az A és a B forma; gyakran Bill Evans nevéhez kötik őket.
+
+Levine "left-hand voicing" néven tárgyalja ugyanezt, és a névadást is pontosan erre a két elrendezésre alapozza: az "A" pozícióban a kisujj a tercen, a "B" pozícióban a szeptimen ül. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 7, p. 42-43 -->
 
 ## Miért maradhat el az alaphang
 
@@ -22,7 +24,7 @@ A négy szólam mindig ugyanaz a készlet, csak a legalsó hang dönti el a form
 - **A forma**: legalul a 3 áll — alulról 3, 5, 7, 9.
 - **B forma**: legalul a 7 áll — alulról 7, 9, 3, 5.
 
-A két forma ugyanannak a négyhangú halmaznak két fordítása; egymástól nagyjából fél oktávnyira fekszenek. Dominánson a 5 helyett a 13 lép be (a tiszta kvint semleges és zsúfol), moll-hangzáson maradhat az 5.
+A két forma ugyanannak a négyhangú halmaznak két fordítása; egymástól nagyjából fél oktávnyira fekszenek. Dominánson a 5 helyett a 13 lép be (a tiszta kvint semleges és zsúfol), moll-hangzáson maradhat az 5. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 7, p. 41-42 -->
 
 ## Formák akkordtípusonként
 
@@ -43,6 +45,16 @@ Megjegyzések:
 - Dominánson a "A forma" alsó hangja a gyakorlatban a b7, nem a 3 — a szokásos G13 A forma F, A, B, E. A névadás a ii–V-en belüli fekvésigazodást követi: a Dm9 A formájából (F, A, C, E) egyetlen hang mozdul.
 - m7b5-nél a b5 kötelező, a 9 (locrian ♮2 esetén) csak akkor jöhet, ha a dallam engedi. Lásd [[concepts/jazz/melodic-minor-modusai|melodic-minor-modusai]].
 - Alterált dominánson a b9/♯9 és b13 az 9/13 helyére lép; a készlet szerkezete változatlan. Lásd [[concepts/jazz/alteraciok|alteraciok]].
+
+## Több forma egy akkordhoz
+
+A m7b5, az alterált domináns és néhány ritkább akkordtípus esetén nem csak A/B forma közül lehet választani, hanem több, egymással egyenrangú négyhangú elrendezés is létezik ugyanarra a hangzásra — a döntést a szomszédos akkordokhoz való közelség és a fekvés dönti el, nem egy rögzített szabály. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 8, p. 49 -->
+
+- **m7b5 (Dø)**: a szokásos A/B forma mellett (3. vagy 7. a kisujjban) létezik olyan elrendezés is, ahol a kisujj az alaphangon vagy a b5-ön ül — ez utóbbi teszi lehetővé, hogy a voicing a billentyűzet közepén maradjon, amikor a szomszédos akkordok is oda húznak.
+- **Alterált domináns (G7alt)**: a b9/+9/b13 beírása a rootless formába ugyanazokat a hangokat adja, mint a tritonusz-helyettes domináns rootless formája — G7alt és Db7 rootless voicingjai hangkészletben megegyeznek. Ez konkrét, hangonkénti bizonyítéka a [[concepts/jazz/tritone-substitution|tritone-substitution]] és az alteráció rokonságának. <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 8, p. 50 -->
+- **Minor-major (D-Δ, tonika moll)**: a moll-dúr szeptim akkord rootless formája hangkészletben megegyezik a vele tritonusz-távolságra lévő domináns +11 formájával — ismét a tritonusz-rokonság jele, most moll és domináns között.
+- **Szűkített szeptim (dim7)**: a rootless forma megegyezik egy b9 domináns szeptim rootless formájával egy hanggal feljebb.
+- **Sus és Phrygian**: a sus akkord (Gsus, azaz D-7/G) rootless formája a mögötte rejlő ii–V rootless formáinak felel meg; a Phrygian akkord (pl. Eb Phrygian, azaz Gb7/Eb) rootless formája alulról b9–4–5. Lásd [[concepts/jazz/sus-es-phrygian-akkordok|sus-es-phrygian-akkordok]].
 
 ## Váltás ii–V–I alatt
 
@@ -78,5 +90,7 @@ Ha a jobb kéz is részt vesz, a bal kéz veheti a formát és a jobb kéz egy t
 - [[concepts/jazz/shell-voicing]] — az alaphangos, egyszerűbb változat
 - [[concepts/jazz/extensions]] — honnan jön a 9 és a 13
 - [[concepts/jazz/alteraciok]] — alterált dominánsformák
+- [[concepts/jazz/tritone-substitution]] — a G7alt és Db7 rootless formáinak azonossága
+- [[concepts/jazz/sus-es-phrygian-akkordok]] — a sus és Phrygian rootless formák
 - [[concepts/jazz/drop-2-drop-3]] — ugyanaz a négy hang szétnyitva
 - [[concepts/jazz/comping]] — a formák ritmikai alkalmazása

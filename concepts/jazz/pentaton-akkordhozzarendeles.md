@@ -1,9 +1,9 @@
 ---
 tags: [concept]
-sources: []
+sources: ["The Jazz Piano Book - PDF Room.pdf"]
 references: ["Levine: The Jazz Theory Book (pentaton fejezet)", "Bergonzi: Inside Improvisation Vol. 2 — Pentatonics"]
-derivation: unsourced
-updated: 2026-09-18
+derivation: source
+updated: 2026-09-21
 ---
 
 # Pentaton–akkord hozzárendelés
@@ -19,6 +19,10 @@ A pentaton hozzárendelés a [[concepts/jazz/chord-scale-theory|chord-scale-theo
 3. Annak megkeresése, mely alaphangokról indított dúr (vagy moll, vagy [[concepts/jazz/modositott-pentatonok|módosított]]) pentaton öt hangja fér bele a maradékba.
 
 Mivel a [[concepts/jazz/pentaton-skalak|pentaton]] a dúr skála félhang nélküli magja, egy diatonikus hangkészletbe mindig **pontosan három** dúr pentaton fér bele: a hangnem I., IV. és V. fokáról indítva. (C dúr hangkészletében: C, F és G dúr pentaton — a párhuzamos mollokkal A, D és E moll pentaton.) Egy akkordon ezek közül az avoid note-ot tartalmazót kell elhagyni.
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 127 -->
+
+Levine ugyanezt fordítva is megfogalmazza: a hangnem avoid note-jait (Cmaj7-en F, G7-en C) kivéve a dúr skálából éppen az V. fokú pentaton hangjai maradnak — a **V pentaton a dúr skála avoid note nélküli formája**, ezért ez az, amelyik a hangnem mindhárom diatonikus fő akkordján (a ii-en, az V-en és a I-en egyaránt) avoid note nélkül szól.
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 133 -->
 
 ### Táblázat (C, D, G alaphangú akkordokon)
 
@@ -46,7 +50,11 @@ A fokszámok az akkord alaphangjához képest értendők.
 | **Bm7b5** | D moll 6 | D F G A B | b3 b5 b13 b7 1 | locrian és locrian ♮2 |
 | | B moll b5 | B D E F A | 1 b3 11 b5 b7 | alaphangról |
 
-Kiemelendő a **G dúr pentaton Cmaj7-en** (a 4-et elkerüli, a maj7-et hozza), a **Db dúr pentaton G7alt-on** (a tritonusz-helyettes alaphangjáról indított dúr pentaton — az alterált skála részhalmaza, alaphang és terc nélkül; lásd [[concepts/jazz/tritone-substitution|tritone-substitution]]) és a **D dúr pentaton Cmaj7-en** (a lydian ♯11 egyetlen idegen hang nélkül).
+Kiemelendő a **G dúr pentaton Cmaj7-en** (a 4-et elkerüli, a maj7-et hozza), a **Db dúr pentaton G7alt-on** (a tritonusz-helyettes alaphangjáról indított dúr pentaton — az alterált skála részhalmaza, alaphang és terc nélkül; lásd [[concepts/jazz/tritone-substitution|tritone-substitution]]) és a **D dúr pentaton Cmaj7-en** (a lydian ♯11 egyetlen idegen hang nélkül). Levine ez utóbbit a hangnem **II. fokú pentatonjának** nevezi: a dúr skála 2. fokára épített dúr pentaton a I. fokú akkordon mindig lydian színt ad, mert a #11-et hordozza.
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 133 -->
+
+Hasonlóan Levine-nél a **Cm(maj7)-en szereplő F dúr pentaton** (a táblázatban 11 5 13 1 9) a melodikus moll hangkészletben az egyetlen természetesen előforduló pentaton — a IV. fokra épített dúr pentaton, amely a moll-tonikán a szeptim és a nónusz felé nyit.
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 133 -->
 
 ### Ahol nem működik
 
@@ -65,6 +73,9 @@ A hozzárendelés akkordonként végigvihető egy kadencián. Egy jól szóló, 
 Az alaphangok (F → Db → G) nem a basszust követik, hanem a pentatonok közti **félhangos kapcsolódást** biztosítják: az F dúr pentaton C-je félhanggal lép a Db-re, a Db dúr pentaton Ab-je félhanggal a G-re. Ez a lánc a [[concepts/jazz/pentaton-cellak|pentaton-cellak]] lapon négyhangos cellákra bontva is szerepel.
 
 Az egyszerűbb, egyetlen pentatonos megoldás (C dúr pentaton mindhárom akkordon) G7-en a C miatt sus-színt ad — ez nem hiba, de a domináns funkciót elmossa, ugyanúgy, ahogy a [[concepts/jazz/blues-scale|blues-scale]] korlátai között is szerepel.
+
+Levine egy még egyszerűbb megoldást is leír: mivel a **G dúr pentaton** (az V. fok) egyik fő akkordon sem tartalmaz avoid note-ot, önmagában végigjátszható a teljes Dm7–G7–Cmaj7 kadencián — ez az az eset, amikor a ii–V–I-et egyetlen pentatonnal lehet lefedni, és pontosan ezt a logikát viszi tovább az azonos fokú pentaton más hangnemváltásokon is (pl. Coltrane "Giant Steps"-jének három hangnemén, ahol hangnemenként egyetlen V pentaton fedi le a ii–V–I-t vagy V–I-et).
+<!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 128 -->
 
 ## Kapocs
 
