@@ -14,6 +14,7 @@ Kereséshez: `qmd query "kérdés" -c wiki`.
 | [[subjects/bvszam]]           | 61    | Bevezetés a számításelméletbe: formális nyelvek, grammatikák, automaták, Chomsky-hierarchia, Turing gépek, eldönthetőség, bonyolultságelmélet                                             |
 | [[subjects/dimatii]]          | 73    | Diszkrét matematika II.: elemi számelmélet és kongruenciák, RSA és Diffie–Hellman, algebrai struktúrák, polinomelmélet és véges testek, forráskódolás és hibajavító kódok                 |
 | [[subjects/esemalk]]          | 132   | Eseményvezérelt alkalmazások: C#/.NET alapok, WinForms (statikus/dinamikus UI, grafika, architektúra és tesztelés, többszálúság), WPF (MVVM, erőforrások/stílusok), AvaloniaUI, reaktív programozás (Rx.NET), lokalizáció |
+| [[subjects/francia]]          | 15    | Francia nyelv A1: kiejtés (orrhangzók, liaison), alapnyelvtan (névelők, jelen/múlt/közeli jövő, tagadás, kérdés), beszédhelyzetek, páros tanulási módszer (nem egyetemi tárgy) |
 | [[subjects/funprog]]          | 41    | Funkcionális programozás (Haskell): lusta kiértékelés, currying, mintaillesztés, polimorfizmus, ADT, típusosztály, HOF, ZF-kifejezés                                                      |
 | [[subjects/kript]]            | 16    | Kriptográfia és biztonság: klasszikus titkosítók, tökéletes biztonság, szimmetrikus primitívek, hash, MAC, titokmegosztás                                                                 |
 | [[subjects/logika]]           | 49    | Logika és számításelmélet: ítéletlogika és elsőrendű logika szintaxisa és szemantikája, bizonyításelmélet, szekvent-, tabló- és rezolúciós kalkulus, temporális logika (Kripke, LTL, CTL) |
@@ -23,7 +24,7 @@ Kereséshez: `qmd query "kérdés" -c wiki`.
 | [[subjects/linalg]]           | 1     | Lineáris algebra: vizuális szemléltetések a numerikus módszerekhez (kiegészítő anyag)                                                                                                     |
 | [[subjects/ptibsc-modellezo]] | 1     | PTI BSc Modellező (A) specializáció: képzési struktúra, tantervi háló, kredit-bontás                                                                                                      |
 
-Összesen 722 fogalomlap 14 tárgyban.
+Összesen 737 fogalomlap 15 tárgyban.
 
 Első ingestre váró aktív tárgyak: `oprend`, `ivmen`.
 
