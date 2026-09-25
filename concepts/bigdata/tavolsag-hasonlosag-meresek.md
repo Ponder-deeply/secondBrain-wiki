@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/gepi-tanulas-alapfogalmak-es-elokeszites]
 sources: [BDAEM-2022-EA9.pptx]
 references: ["Slides based on Eamonn Keogh's clustering lecture"]
 derivation: source

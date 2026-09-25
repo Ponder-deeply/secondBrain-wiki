@@ -14,7 +14,6 @@ sources:
   - DimatIIEa10.pdf
 derivation: source
 updated: 2026-09-08
-state: "[[V]]"
 ---
 
 # Diszkrét matematika II. (dimatii)

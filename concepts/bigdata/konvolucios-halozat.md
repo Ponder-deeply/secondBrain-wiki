@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/deep-learning-bevezetes]
 sources: [BDAEM-2022-EA12.pdf]
 references: ["LeCun, Bottou, Bengio, Haffner: Gradient-Based Learning Applied to Document Recognition, Proceedings of the IEEE, 86(11):2278-2324, 1998"]
 derivation: source

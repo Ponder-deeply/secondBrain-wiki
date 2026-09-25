@@ -5,7 +5,6 @@ sources: [01_ea_an_ii_a_b_merged.pdf]
 references: ["An II A/B 1. előadás", "An II A/B 3. előadás", "An II A/B 4. előadás", "An II A/B 5. előadás", "An II A/B 6. előadás", "An II A/B 7. előadás", "An II A/B 8. előadás", "An II A/B 9. előadás", "An II A/B 10. előadás", "An II A/B 11. előadás"]
 derivation: source
 updated: 2026-09-04
-state: "[[IV]]"
 ---
 
 # Analízis II.

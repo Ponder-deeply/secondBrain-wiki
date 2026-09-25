@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/lokalizacio]
 sources: [elte_eva_ea12_localization.pdf]
 derivation: source
 updated: 2026-09-13

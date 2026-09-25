@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/iteletlogika-szemantika]
 sources: [iteletlogika.pdf]
 references: [Pásztorné Varga Katalin – Várterész Magda, A matematikai logika alkalmazásszemléletű tárgyalása]
 derivation: source

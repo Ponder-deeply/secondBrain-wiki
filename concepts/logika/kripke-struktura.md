@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/temporalis-logika]
 sources: [LTL_CTL.pdf]
 derivation: source
 updated: 2026-09-08

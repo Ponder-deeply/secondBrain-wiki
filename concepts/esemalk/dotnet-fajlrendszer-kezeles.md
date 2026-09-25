@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/winforms-dinamikus-ui]
 sources: [elte_eva_ea03_winforms_dynamic.pdf]
 derivation: source
 updated: 2026-09-13

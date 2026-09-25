@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/csharp-nyelvi-alapok]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
 updated: 2026-09-12

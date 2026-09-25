@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/hibakorlatozo-es-linearis-kodok]
 sources: [DimatIIEa09.pdf, DimatIIEa10.pdf]
 derivation: source
 updated: 2026-09-08

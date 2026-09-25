@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/rezolucio-iteletlogika]
 sources: [Rezolúció_I.pdf]
 references: [Tk. 225-227. o.]
 derivation: source

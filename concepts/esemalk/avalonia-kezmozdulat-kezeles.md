@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/avaloniaui-halado-temak]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
 updated: 2026-09-13

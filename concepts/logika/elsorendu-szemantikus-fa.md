@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/elsorendu-logika-szemantika]
 sources: [Elsőrendű_logika_szemantika.pdf]
 derivation: source
 updated: 2026-09-08

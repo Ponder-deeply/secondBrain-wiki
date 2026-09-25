@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/lu-felbontas]
 sources: [NM1_ea03.pdf]
 derivation: source
 updated: 2026-08-05

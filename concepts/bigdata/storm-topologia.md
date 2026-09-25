@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/storm-stream-feldolgozas]
 sources: [EA5_storm.pdf]
 derivation: source
 updated: 2026-09-12

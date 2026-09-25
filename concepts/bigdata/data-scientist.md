@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/bevezetes]
 sources: [EA1_bevezetes.pdf]
 derivation: source
 updated: 2026-09-12

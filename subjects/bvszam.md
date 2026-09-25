@@ -16,7 +16,6 @@ sources:
   - 12.md
 derivation: source
 updated: 2026-08-05
-state: "[[IV]]"
 ---
 
 # Bevezetés a számításelméletbe (bvszam)

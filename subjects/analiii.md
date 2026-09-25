@@ -5,7 +5,6 @@ sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, 01_ea_A
 references: ["Kós Géza: Analízis 3 előadásjegyzet, 2024", "Simon Péter: Analízis II., 3–4. fejezet", "Fridli Sándor: Analízis III. tematika"]
 derivation: source
 updated: 2026-09-23
-state: "[[V]]"
 ---
 
 # Analízis III.

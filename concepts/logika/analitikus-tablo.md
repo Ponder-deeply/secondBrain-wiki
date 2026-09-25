@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/tablokalkulus]
 sources: [Tablókalkulus.pdf]
 derivation: source
 updated: 2026-09-08

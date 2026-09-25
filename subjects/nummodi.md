@@ -16,7 +16,6 @@ sources:
   - NM1_ea13.pdf
 derivation: source
 updated: 2026-08-05
-state: "[[IV]]"
 ---
 
 # Numerikus módszerek 1. (nummodi)

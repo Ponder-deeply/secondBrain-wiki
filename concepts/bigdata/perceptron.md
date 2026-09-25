@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/deep-learning-bevezetes]
 sources: [BDAEM-2022-EA12.pdf]
 derivation: source
 updated: 2026-09-12

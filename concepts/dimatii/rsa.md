@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/alkalmazasok-kriptografia]
 sources: [DimatIIEa03.pdf]
 derivation: source
 updated: 2026-09-08

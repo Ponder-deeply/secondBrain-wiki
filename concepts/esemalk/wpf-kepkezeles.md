@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/wpf-alapok]
 sources: [elte_eva_ea06_wpf_basics.pdf]
 derivation: source
 updated: 2026-09-13

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/ler-erzekenysege-es-kondicionaltsag]
 sources: [NM1_ea07.pdf]
 derivation: source
 updated: 2026-08-05

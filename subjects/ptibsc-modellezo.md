@@ -5,7 +5,6 @@ sources:
   - Modellezo halo.pdf
 derivation: source
 updated: 2026-04-07
-state: "[[Final]]"
 ---
 
 # Programtervező informatikus BSc – Modellező (A) specializáció

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/gentzen-stilusu-kalkulusok]
 sources: ["Természetes levezetés.pdf"]
 derivation: source
 updated: 2026-09-08

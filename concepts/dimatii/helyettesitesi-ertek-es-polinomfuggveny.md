@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/polinomok]
 sources: [DimatIIEa05.pdf]
 derivation: source
 updated: 2026-09-08

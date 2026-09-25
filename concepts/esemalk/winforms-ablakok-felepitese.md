@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/winforms-statikus-ui]
 sources: [elte_eva_ea01_winforms_static.pdf]
 derivation: source
 updated: 2026-09-12

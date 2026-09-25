@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/qr-felbontas-es-ortogonalizacio]
 sources: [NM1_ea05.pdf]
 derivation: source
 updated: 2026-09-04

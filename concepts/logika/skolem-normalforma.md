@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/rezolucio-elsorendu-logika]
 sources: [Rezolúció_II.pdf]
 derivation: source
 updated: 2026-09-08

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/rezolucio-iteletlogika]
 sources: [Rezolúció_I.pdf]
 derivation: source
 updated: 2026-09-08

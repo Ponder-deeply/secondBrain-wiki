@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/spark-graphx]
 sources: [EA4_spark_graphx.pdf]
 derivation: source
 updated: 2026-09-12

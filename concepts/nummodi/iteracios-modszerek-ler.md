@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/iterativ-modszerek-ler-re]
 sources: [NM1_ea08.pdf]
 derivation: source
 updated: 2026-08-05

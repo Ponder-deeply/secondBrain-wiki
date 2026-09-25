@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/reaktiv-programozas]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
 updated: 2026-09-13

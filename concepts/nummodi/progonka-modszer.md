@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/megmaradasi-tetelek-es-specialis-felbontasok]
 sources: [NM1_ea04.pdf]
 derivation: source
 updated: 2026-08-05

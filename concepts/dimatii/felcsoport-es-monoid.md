@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/algebrai-strukturak]
 sources: [DimatIIEa03.pdf, DimatIIEa04.pdf]
 derivation: source
 updated: 2026-09-08

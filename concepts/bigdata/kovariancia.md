@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/gepi-tanulas-klaszterezes-es-dimenziocsokkentes]
 sources: [BDAEM-2022-EA10.pptx]
 derivation: source
 updated: 2026-09-12

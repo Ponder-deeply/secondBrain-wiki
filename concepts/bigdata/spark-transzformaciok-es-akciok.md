@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/spark]
 sources: [EA3_spark.pdf, gyak7.pdf]
 derivation: source
 updated: 2026-09-12

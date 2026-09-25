@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/hadoop-okoszisztema]
 sources: [EA2_hadoop.pdf]
 derivation: source
 updated: 2026-09-12

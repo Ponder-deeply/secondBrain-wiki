@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/bizonyitaselmelet]
 sources: ["Szintaktikus következmény.pdf"]
 derivation: source
 updated: 2026-09-08

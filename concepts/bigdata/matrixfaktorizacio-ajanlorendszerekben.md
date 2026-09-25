@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/ajanlorendszerek]
 sources: [BDAEM-2022-EA11.pdf]
 references: ["Y. Koren, R. Bell, C. Volinsky. Matrix factorization techniques for recommender systems. Computer, 42(8):30-37, 2009."]
 derivation: source

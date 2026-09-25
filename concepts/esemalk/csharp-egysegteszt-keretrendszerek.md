@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/winforms-architektura-es-teszteles]
 sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
 derivation: source
 updated: 2026-09-13

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/storm-stream-feldolgozas]
 sources: [EA5_storm.pdf]
 references: ["Chintapalli et al., Benchmarking Streaming Computation Engines: Storm, Flink and Spark Streaming, IEEE IPDPS Workshops 2016"]
 derivation: source

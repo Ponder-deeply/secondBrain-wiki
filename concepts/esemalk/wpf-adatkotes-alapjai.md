@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/wpf-architektura]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
 updated: 2026-09-13

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/ajanlorendszerek]
 sources: [BDAEM-2022-EA11.pdf]
 derivation: source
 updated: 2026-09-12

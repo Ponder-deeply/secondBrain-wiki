@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/forraskodolas]
 sources: [DimatIIEa08.pdf]
 derivation: source
 updated: 2026-09-08

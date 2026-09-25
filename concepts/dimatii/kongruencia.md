@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, dimatii/kongruenciak]
 sources: [DimatIIEa01.pdf, DimatIIEa02.pdf]
 derivation: source
 updated: 2026-09-08

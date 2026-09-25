@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, logika/rezolucio-elsorendu-logika]
 sources: [Rezolúció_II.pdf]
 references: [Tk. 6.3.80, Tk. 6.3.83, Tk. 6.3.88, Tk. 278. o./6.3.90. példa]
 derivation: source

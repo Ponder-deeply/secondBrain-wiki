@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/spark-graphx]
 sources: [EA4_spark_graphx.pdf]
 references: ["Valiant, L. G. (1990): A bridging model for parallel computation — Bulk Synchronous Parallel (BSP) modell eredeti forrása"]
 derivation: source

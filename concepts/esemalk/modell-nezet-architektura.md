@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/architektura-es-esemenykezeles]
 sources: [elte_eva_ea02_winforms_mv.pdf]
 derivation: source
 updated: 2026-09-13

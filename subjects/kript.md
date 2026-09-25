@@ -17,7 +17,6 @@ sources:
   - tökéletes_biztonság_feladatok.pdf
 derivation: source
 updated: 2026-09-04
-state: "[[IV]]"
 ---
 
 # Kriptográfia és biztonság

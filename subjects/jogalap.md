@@ -17,7 +17,6 @@ sources:
   - 13_HKR_reszletek.md
 derivation: source
 updated: 2026-09-04
-state: "[[III]]"
 ---
 
 # Jogi alapok

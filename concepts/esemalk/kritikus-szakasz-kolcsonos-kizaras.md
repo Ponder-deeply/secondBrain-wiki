@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
 sources: [elte_eva_ea05_winforms_multithread.pdf]
 derivation: source
 updated: 2026-09-13

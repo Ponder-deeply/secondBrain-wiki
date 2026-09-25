@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
 sources: [gyak4.pdf]
 derivation: inferred
 updated: 2026-09-12

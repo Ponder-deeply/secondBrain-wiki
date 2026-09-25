@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, nummodi/vektor-es-matrixnormak]
 sources: [NM1_ea06.pdf]
 derivation: source
 updated: 2026-08-05

@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/gepi-tanulas-alapfogalmak-es-elokeszites]
 sources: [gyak2.pdf]
 derivation: source
 updated: 2026-09-12

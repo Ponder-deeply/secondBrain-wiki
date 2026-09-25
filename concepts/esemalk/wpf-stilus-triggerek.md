@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
 updated: 2026-09-13

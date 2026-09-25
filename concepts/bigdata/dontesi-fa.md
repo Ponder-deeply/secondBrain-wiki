@@ -1,5 +1,5 @@
 ---
-tags: [concept]
+tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
 sources: [BDAEM-2022-EA7.pptx]
 derivation: source
 updated: 2026-09-12
