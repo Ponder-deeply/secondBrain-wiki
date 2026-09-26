@@ -1,9 +1,5 @@
 ---
-
 title: Bizonyítandó tételek
-subtitle: Bevezetés a számításelméletbe
-author: bvszam wiki
-date: 2026-05-15
 ---
 
 # Bizonyítandó tételek

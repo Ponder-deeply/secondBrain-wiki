@@ -142,4 +142,3 @@ Zajos csatorna: mikor vehető észre és mikor javítható a hiba, és hogyan te
 
 - [[subjects/kript]] — a kriptográfiai alkalmazások (Caesar-kód, tökéletes biztonság, titokmegosztás) önálló tárgyalása
 - [[subjects/bvszam]] — ábécé és szavak, valamint a FACTORING bonyolultsági elhelyezése
-- [[subjects/linalg]] — a lineáris kódok mögötti altér- és mátrixapparátus

@@ -28,29 +28,29 @@ Levine ugyanezt fordítva is megfogalmazza: a hangnem avoid note-jait (Cmaj7-en 
 
 A fokszámok az akkord alaphangjához képest értendők.
 
-| Akkord | Pentaton | Hangok | Fokok | Szín |
-|---|---|---|---|---|
-| **Cmaj7** | C dúr | C D E G A | 1 9 3 5 13 | alap, inside |
-| | G dúr | G A B D E | 5 13 7 9 3 | maj7-tel, világosabb |
-| | D dúr | D E F♯ A B | 9 3 ♯11 13 7 | lydian |
-| **Dm7** | D moll | D F G A C | 1 b3 11 5 b7 | alap |
-| | A moll | A C D E G | 5 b7 1 9 11 | 9-cel |
-| | E moll | E G A B D | 9 11 5 13 1 | dorian (13) |
-| **G7** | G dúr | G A B D E | 1 9 3 5 13 | mixolydian |
-| | G domináns | G A B D F | 1 9 3 5 b7 | arpeggio-szerű |
-| | D moll 6 | D F G A B | 5 b7 1 9 3 | biztonságos, avoid nélkül |
-| **G7sus4** | F dúr (= D moll) | F G A C D | b7 1 9 11 5 | sus alap |
-| | C dúr | C D E G A | 11 5 13 1 9 | sus13 |
-| **G7♯11** | A dúr b6 | A B C♯ E F | 9 3 ♯11 13 b7 | lydian dominant |
-| **G7alt** | Db dúr (= Bb moll) | Db Eb F Ab Bb | b5 b13 b7 b9 ♯9 | alterált, terc nélkül |
-| | Eb dúr b6 | Eb F G Bb B | b13 b7 1 ♯9 3 | alterált, terccel |
-| **Cm(maj7)** | F dúr | F G A C D | 11 5 13 1 9 | melodikus moll |
-| | C moll 6 | C Eb F G A | 1 b3 11 5 13 | alap |
-| | G dúr b6 | G A B D Eb | 5 13 7 9 b3 | a maj7-et is hozza |
-| **Bm7b5** | D moll 6 | D F G A B | b3 b5 b13 b7 1 | locrian és locrian ♮2 |
-| | B moll b5 | B D E F A | 1 b3 11 b5 b7 | alaphangról |
+| Akkord       | Pentaton           | Hangok        | Fokok           | Szín                      |
+| ------------ | ------------------ | ------------- | --------------- | ------------------------- |
+| **Cmaj7**    | C dúr              | C D E G A     | 1 9 3 5 13      | alap, inside              |
+|              | G dúr              | G A B D E     | 5 13 7 9 3      | maj7-tel, világosabb      |
+|              | D dúr              | D E F♯ A B    | 9 3 ♯11 13 7    | lydian                    |
+| **Dm7**      | D moll             | D F G A C     | 1 b3 11 5 b7    | alap                      |
+|              | A moll             | A C D E G     | 5 b7 1 9 11     | 9-cel                     |
+|              | E moll             | E G A B D     | 9 11 5 13 1     | dorian (13)               |
+| **G7**       | G dúr              | G A B D E     | 1 9 3 5 13      | mixolydian                |
+|              | G domináns         | G A B D F     | 1 9 3 5 b7      | arpeggio-szerű            |
+|              | D moll 6           | D F G A B     | 5 b7 1 9 3      | biztonságos, avoid nélkül |
+| **G7sus4**   | F dúr (= D moll)   | F G A C D     | b7 1 9 11 5     | sus alap                  |
+|              | C dúr              | C D E G A     | 11 5 13 1 9     | sus13                     |
+| **G7♯11**    | A dúr b6           | A B C♯ E F    | 9 3 ♯11 13 b7   | lydian dominant           |
+| **G7alt**    | Db dúr (= Bb moll) | Db Eb F Ab Bb | b5 b13 b7 b9 ♯9 | alterált, terc nélkül     |
+|              | Eb dúr b6          | Eb F G Bb B   | b13 b7 1 ♯9 3   | alterált, terccel         |
+| **Cm(maj7)** | F dúr              | F G A C D     | 11 5 13 1 9     | melodikus moll            |
+|              | C moll 6           | C Eb F G A    | 1 b3 11 5 13    | alap                      |
+|              | G dúr b6           | G A B D Eb    | 5 13 7 9 b3     | a maj7-et is hozza        |
+| **Bm7b5**    | D moll 6           | D F G A B     | b3 b5 b13 b7 1  | locrian és locrian ♮2     |
+|              | B moll b5          | B D E F A     | 1 b3 11 b5 b7   | alaphangról               |
 
-Kiemelendő a **G dúr pentaton Cmaj7-en** (a 4-et elkerüli, a maj7-et hozza), a **Db dúr pentaton G7alt-on** (a tritonusz-helyettes alaphangjáról indított dúr pentaton — az alterált skála részhalmaza, alaphang és terc nélkül; lásd [[concepts/jazz/tritone-substitution|tritone-substitution]]) és a **D dúr pentaton Cmaj7-en** (a lydian ♯11 egyetlen idegen hang nélkül). Levine ez utóbbit a hangnem **II. fokú pentatonjának** nevezi: a dúr skála 2. fokára épített dúr pentaton a I. fokú akkordon mindig lydian színt ad, mert a #11-et hordozza.
+Kiemelendő a **G dúr pentaton Cmaj7-en** (a 4-et elkerüli, a maj7-et hozza), a **Db dúr pentaton G7alt-on** (a tritonusz-helyettes alaphangjáról indított dúr pentaton — az alterált skála részhalmaza, alaphang és terc nélkül; lásd [[concepts/jazz/tritone-substitution|tritone-substitution]]) és a **D dúr pentaton Cmaj7-en** (a lydian ♯11 egyetlen idegen hang nélkül). Levine ez utóbbit a hangnem **II. fokú pentatonjának** nevezi: a dúr skála 2. fokára épített dúr pentaton a I. fokú akkordon mindig lydian színt ad, mert a ♯11-et hordozza.
 <!-- src: The Jazz Piano Book - PDF Room.pdf, ch. 15, p. 133 -->
 
 Hasonlóan Levine-nél a **Cm(maj7)-en szereplő F dúr pentaton** (a táblázatban 11 5 13 1 9) a melodikus moll hangkészletben az egyetlen természetesen előforduló pentaton — a IV. fokra épített dúr pentaton, amely a moll-tonikán a szeptim és a nónusz felé nyit.

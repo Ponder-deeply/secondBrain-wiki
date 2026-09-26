@@ -68,4 +68,3 @@ $$\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \qquad \frac{1}{\sqrt{2}}\begin{
 - [[concepts/nummodi/householder-transzformacio]] — speciális ortogonális mátrixok (tükrözések)
 - [[concepts/nummodi/haromszogmatrixok]] — felső háromszögmátrixok, a QR másik tényezője
 - [[subjects/nummodi]] — kurzus áttekintése
-- [[concepts/linalg/szemleltetesek]] — az ortogonális leképezések geometriai szemléltetése (Gram–Schmidt/QR jelenet)

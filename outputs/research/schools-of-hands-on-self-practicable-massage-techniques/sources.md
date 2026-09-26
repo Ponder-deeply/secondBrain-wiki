@@ -1,7 +1,5 @@
 ---
 topic: schools of hands-on, self-practicable massage techniques
-created: 2026-06-14
-count: 15
 ---
 
 # Sources: schools of hands-on, self-practicable massage techniques

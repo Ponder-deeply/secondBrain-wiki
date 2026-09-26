@@ -144,4 +144,3 @@ A 28 vizsgatétel kidolgozása, egy lap tételenként — lásd [[concepts/nummo
 ## Kapocs
 
 - [[subjects/analii]] — a derivált és a Taylor-formula, amire a numerikus módszerek épülnek
-- [[subjects/linalg]] — a mátrixfelbontások és normák vizuális szemléltetése

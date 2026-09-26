@@ -1,8 +1,6 @@
 ---
-tags: [research, sources]
+tags:
 topic: learning French from Hungarian and/or English, as a beginner couple aiming to speak together
-created: 2026-09-23
-count: 18
 ---
 
 # Sources: Learning French from Hungarian and/or English

@@ -1,16 +1,5 @@
 ---
-title: "Analízis II — Integrál képletgyűjtemény"
-author: ""
-date: ""
-geometry: margin=1.2cm
-fontsize: 9pt
-classoption: a4paper
-header-includes:
-  - \usepackage{multicol}
-  - \setlength{\columnsep}{0.6cm}
-  - \pagestyle{empty}
-  - \setlength{\parskip}{2pt}
-  - \setlength{\parindent}{0pt}
+title: Analízis II — Integrál képletgyűjtemény
 ---
 
 # Analízis II — Integrál képletgyűjtemény

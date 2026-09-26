@@ -1,9 +1,5 @@
 ---
-
 title: Vizsgán legvalószínűbb tételek
-subtitle: Bevezetés a számításelméletbe
-author: bvszam wiki
-date: 2026-06-04
 ---
 
 # Vizsgán legvalószínűbb tételek

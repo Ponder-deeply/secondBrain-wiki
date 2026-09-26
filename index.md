@@ -21,7 +21,6 @@ Kereséshez: `qmd query "kérdés" -c wiki`.
 | [[subjects/nummodi]]          | 24    | Numerikus módszerek 1.: gépi számábrázolás, LER direkt/iteratív módszerek, mátrixfelbontások, kondícionáltság, nemlineáris egyenletek + 28 vizsgatétel                                    |
 | [[subjects/jogalap]]          | 14    | Jogi alapok: polgári jog, társasági jog, szerződések, személyiségi jogok, adatvédelem                                                                                                     |
 | [[subjects/jazz]]             | 62    | Jazzelmélet: chord-scale theory, akkordok és skálák, funkciós harmónia, voicingok, improvizáció (nem egyetemi tárgy)                                                                      |
-| [[subjects/linalg]]           | 1     | Lineáris algebra: vizuális szemléltetések a numerikus módszerekhez (kiegészítő anyag)                                                                                                     |
 | [[subjects/ptibsc-modellezo]] | 1     | PTI BSc Modellező (A) specializáció: képzési struktúra, tantervi háló, kredit-bontás                                                                                                      |
 
 Összesen 737 fogalomlap 15 tárgyban.
