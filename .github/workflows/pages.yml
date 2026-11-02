@@ -4,8 +4,9 @@ name: Build and deploy site
 # and publishes it to GitHub Pages. Runs after every sync from the private
 # vault. The sync never touches .github/, so this file lives here only.
 #
-# Setup (once): Settings -> Pages -> Build and deployment -> Source:
-# "GitHub Actions".
+# The built site is force-pushed as a single commit to the gh-pages branch.
+# Setup (once): Settings -> Pages -> Source: "Deploy from a branch",
+# branch gh-pages, folder / (root).
 
 on:
   push:
@@ -13,9 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -82,16 +81,16 @@ jobs:
         working-directory: quartz
         run: npx quartz build
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: quartz/public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # .nojekyll: serve the HTML as built, without a Jekyll pass.
+      - name: Publish to gh-pages
+        working-directory: quartz/public
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          touch .nojekyll
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Site build from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
