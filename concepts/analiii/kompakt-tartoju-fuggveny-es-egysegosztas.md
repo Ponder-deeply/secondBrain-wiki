@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 2.10. Tétel és a hozzá tartozó lemma"]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-07
 ---
 

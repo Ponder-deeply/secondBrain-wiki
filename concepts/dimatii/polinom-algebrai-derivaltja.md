@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/polinomok]
-sources: [DimatIIEa05.pdf, DimatIIEa06.pdf]
+tags: [concept]
+sources: [DimatIIEa05.pdf, DimatIIEa06.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Polinom algebrai deriváltja
@@ -54,6 +56,9 @@ $$n\cdot r = 0 \iff p \mid n.$$
 
 Ez az állítás a multiplicitás és a derivált kapcsolatában döntő: pontosan akkor „vész el” egy tényező a deriváláskor, ha a karakterisztika osztja a multiplicitást.
 
+### Farkas-diák megfogalmazása
+
+A diák a deriválást úgy definiálja, mint $R[x]$ önmagába való leképezését, amely kielégíti: $c' = 0$ konstansra, $(f+g)' = f' + g'$, $(fg)' = f'g + fg'$, $(ex)' = e$; az $f'$ az $f$ (algebrai) **deriváltpolinomja**, $f' = a_1 + 2a_2 x + \ldots + n a_n x^{n-1}$.
 ## Kapocs
 
 - [[concepts/dimatii/polinomgyuru]] — a deriválás $R[x]$-et önmagába képezi

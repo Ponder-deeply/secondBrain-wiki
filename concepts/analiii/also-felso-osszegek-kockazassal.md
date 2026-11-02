@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf, RopzhKerdesek.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-22
 ---
 
 # Alsó és felső összegek kockázással
@@ -57,3 +59,4 @@ Ez teszi lehetővé, hogy az integrált egyetlen alkalmasan választott feloszt�
 - [[concepts/analiii/jordan-mertek-kockazassal]] — ugyanez a rácskockás technika halmazok mértékére
 - [[concepts/analiii/jordan-nullmerteku-halmazok]] — a bizonyításban a felosztás darabjainak határa nullmértékű, ezért hagyható el
 - [[concepts/analiii/tobbvaltozos-integralhatosag]] — a végtelenül finomodó sorozatok az oszcillációs kritérium megfogalmazásában is szerepelnek
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

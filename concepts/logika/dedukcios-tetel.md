@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/bizonyitaselmelet]
+tags: [concept]
 sources: ["Szintaktikus következmény.pdf"]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-08
 ---
 

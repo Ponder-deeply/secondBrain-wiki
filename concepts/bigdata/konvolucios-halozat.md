@@ -1,9 +1,11 @@
 ---
-tags: [concept, bigdata/deep-learning-bevezetes]
+tags: [concept]
 sources: [BDAEM-2022-EA12.pdf]
 references: ["LeCun, Bottou, Bengio, Haffner: Gradient-Based Learning Applied to Document Recognition, Proceedings of the IEEE, 86(11):2278-2324, 1998"]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: water
+updated: 2026-09-30
 ---
 
 # Konvolúciós neurális hálózat (ConvNet)
@@ -80,7 +82,7 @@ jellemződetektorrá válásáról.
 A forrás az MNIST kézzel írott számjegy-adathalmazon mért teszthibát idézi:
 60 000 eredeti tanítópéldával 0,95%, míg 540 000 mesterségesen torzított
 példával kiegészítve (összesen 600 000 tanítópélda) 0,8% teszthiba érhető
-el. A félrekvantosított példák (Misclassified examples) diája azt mutatja,
+el. A félreosztályozott példák (Misclassified examples) diája azt mutatja,
 hogy a hibák jellemzően vizuálisan is összetéveszthető számjegypárok között
 (pl. 4→9, 3→5, 9→4) fordulnak elő.
 

@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/elsorendu-logika-szemantika]
+tags: [concept]
 sources: [Elsőrendű_logika_szemantika.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

@@ -1,19 +1,50 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
-sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
+tags: [concept]
+sources: [elte_eva_ea04_winforms_architecture_testing.pdf, elte_eva_ea03_winforms_dynamic.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-25
 ---
 
-# Adatfolyam-alapú fájlkezelés (Stream)
+# Fájlkezelés .NET-ben: fájlrendszer és adatfolyamok (Stream)
 
 A .NET-ben az adatfolyamok (*stream*) kezelése egységes formátumban adott,
 így azonos módon kezelhetők fájlok, hálózati adatforrások, memória stb.;
 ez a réteg a fájlok *tartalmának* olvasására/írására szolgál, szemben a
-[[concepts/esemalk/dotnet-fajlrendszer-kezeles]] által kezelt
-fájlrendszer-műveletekkel (másolás, listázás, könyvtárkezelés).
+`File`/`Directory`/`Path` osztályok által kezelt fájlrendszer-műveletekkel
+(másolás, listázás, könyvtárkezelés), amelyeket az első szakasz tárgyal.
 
 ## Tartalom
+
+### Fájlrendszer-műveletek (`File`, `Directory`, `Path`)
+
+A fájlokkal és a fájlrendszerrel kapcsolatos műveletek a `System.IO`
+névtérben helyezkednek el.
+
+Fájlműveleteket a `File`, könyvtárműveleteket a `Directory` osztály statikus
+műveleteivel hajthatunk végre, például:
+
+```csharp
+Directory.CreateDirectory(@"c:\Data");            // könyvtár létrehozása
+String[] paths = Directory.GetFiles(@"c:\Data");  // könyvtár listázása
+File.Copy(@"c:\data.txt", @"c:\Data\data.txt");   // fájl másolása
+```
+
+Az elérési útvonallal kapcsolatos műveletek (pl. szülő könyvtár lekérdezése)
+a `Path` osztályban találhatóak:
+
+```csharp
+Path.GetParent(@"c:\Data"); // szülő lekérdezése
+```
+
+Egy kidolgozott példában (mozgókép-megjelenítő alkalmazás) a képek
+megnyitásához könyvtárböngésző dialógust (`FolderBrowserDialog`) használunk,
+amely a felhasználó által kiválasztott könyvtár elérési útját adja vissza; a
+könyvtár tartalmának lekérdezéséhez a fenti `Directory`/`Path` műveletek
+szolgálnak (lásd [[concepts/esemalk/winforms-kepek-megjelenitese]]).
+
+### Adatfolyamok (`Stream`, `StreamReader`, `StreamWriter`)
 
 Az adatfolyamok ősosztálya a `Stream`, amely binárisan írható/olvasható.
 Szöveges adatfolyamok írását, olvasását a `StreamReader` és
@@ -63,12 +94,12 @@ teljes állomány nem férne el a memóriában).
 
 ## Kapocs
 
-- [[concepts/esemalk/dotnet-fajlrendszer-kezeles]] — fájlrendszer-műveletek
-  (`File`, `Directory`, `Path`), szemben a fájltartalom stream-alapú
-  kezelésével
 - [[concepts/esemalk/idisposable-eroforras-felszabaditasa]] — a
   `StreamReader`/`StreamWriter` erőforrásainak biztonságos
   felszabadítása
 - [[concepts/esemalk/tictactoe-haromreteg-pelda]] — a `TextFilePersistence`
   megvalósítása `StreamReader`-rel
 - [[subjects/esemalk]]
+- [[concepts/esemalk/winforms-kepek-megjelenitese]] — a projektbe beágyazott
+  erőforrások kezelése, szemben a futásidőben elért fájlrendszeri
+  fájlokkal

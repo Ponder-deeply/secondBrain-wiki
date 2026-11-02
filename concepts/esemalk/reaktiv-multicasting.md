@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
+kind: comparison
+element: earth
 updated: 2026-09-13
 ---
 
@@ -60,6 +62,5 @@ Ebben a terminológiában a multicast használata (`Publish()`) a cold observabl
 ## Kapocs
 
 - [[concepts/esemalk/reaktiv-szenzor-pelda]] — a `sensorStream` mint alapesetben cold observable
-- [[concepts/esemalk/reaktiv-feliratkozas]] — a `Subscribe()` eljárás alapjai
-- [[concepts/esemalk/rx-observable-alapok]] — az `IObservable<T>` modell, amelyre a cold/hot megkülönböztetés vonatkozik
+- [[concepts/esemalk/rx-observable-alapok]] — a `Subscribe()` eljárás alapjai
 - [[subjects/esemalk]] — a kurzus áttekintése

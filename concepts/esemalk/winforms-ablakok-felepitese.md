@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/winforms-statikus-ui]
+tags: [concept]
 sources: [elte_eva_ea01_winforms_static.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # WinForms ablakok felépítése
@@ -24,7 +26,7 @@ tulajdonságokkal szabályozható a megjelenésük, pl. vezérlő eszköztár
 ### Parciális osztály, három fájl
 
 Az ablakok általában parciális (`partial`) osztályok, amelyek két `.cs`
-fájlban helyezkednek el:
+fájlban helyezkednek el, a harmadik fájl pedig az erőforrásfájl (`.resx`):
 
 - `<osztálynév>.cs` — a programozott rész (saját kód, eseménykezelők,
   dinamikusan létrehozott vezérlők);
@@ -56,9 +58,9 @@ namespace MyFormsApplication
 {
     partial class MyForm {
         // parciális ablak osztály másik része
-        public void Dispose() { … }
+        protected override void Dispose(bool disposing) { … }
             // ablak megsemmisítése
-        public void InitializeComponent(){ … }
+        private void InitializeComponent(){ … }
             // vezérlők inicializálása
         // … vezérlők mezői
     }

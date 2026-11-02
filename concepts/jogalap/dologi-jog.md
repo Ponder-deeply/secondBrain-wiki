@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [07_Dologi_jog.md]
 derivation: source
+kind: definition
+element: water
 updated: 2026-08-12
 ---
 

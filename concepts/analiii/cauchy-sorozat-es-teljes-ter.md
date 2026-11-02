@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 03_gyak_An_III_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Cauchy-sorozat, teljes metrikus tér, Banach-tér
@@ -56,6 +58,17 @@ sorozat Cauchy, de nem tart semmilyen folytonos függvényhez (a „limesz" az e
 
 Ez a hiányosság mutatja, hogy a Riemann-integrál nem elég általános — a kiterjesztése a Mértékelmélet tárgya.
 
+### Feladatok
+
+*Forrás: An_III_Gyak_2022_tavasz.pdf 3. gyakorlat; gyakorlat.pdf „Metrikus terek" 10–11, 15.*
+
+- **A diszkrét metrikus tér teljes** (a Cauchy-sorozat végül konstans); a Hamming-térben $(\{0,1\}^n,\rho_n)$ ugyanígy.
+- **Nem teljes terek $\mathbb N$-en.** $\rho(n,m)=2^{-\min(n,m)}$ és $\rho(m,n)=\frac1{1+\min\{m,n\}}$ ($m\neq n$) esetén a $k\mapsto k$ sorozat Cauchy ($\rho(k,l)\to0$, mert $\min(k,l)\to\infty$), de nem konvergens: egy konvergens sorozat végül konstans, mert rögzített $n$-re $\rho(m,n)\ge\rho(n,n+1)>0$ minden $m\neq n$-re, így $\rho(m,n)\to0$ csak végül $m=n$ esetén lehet.
+- **$C[0,1]$ a $\max|f-g|$ metrikával teljes** (a tétel szerepel fent); házi feladat a bizonyítás önálló felírása: koordinátánként Cauchy ⇒ pontonkénti limesz ⇒ egyenletes limesz ⇒ folytonos.
+- **Nem teljes tér ⇒ van benne korlátos, zárt, nem kompakt halmaz.** Legyen $(x_n)$ nem konvergens Cauchy-sorozat, $A=\{x_n\}$. $A$ korlátos; zárt, mert ha lenne torlódási pontja, abból egy konvergens részsorozat, és így a Cauchy-tulajdonság miatt $x_n$ maga is konvergálna; nem kompakt, mert $(x_n)$-nek nincs konvergens részsorozata ([[concepts/analiii/kompakt-halmazok]]).
+
+- **Diszkrét tér teljessége (3. gyak 1. feladat).** Cauchy-sorozatra $\varepsilon<1$-gyel van $k_0$, hogy $k,l>k_0$ esetén $\rho(x_k,x_l)<\varepsilon<1$, azaz $x_k=x_l$: a sorozat $k_0+1$-től konstans, tehát kvázikonstans, és konvergens ([[concepts/analiii/konvergencia-metrikus-terben]]). A diszkrét metrikus tér teljes metrikus tér.
+
 ## Kapocs
 
 - [[concepts/analiii/konvergencia-metrikus-terben]] — a limesz fogalma, amit a Cauchy-tulajdonság belsővé tesz
@@ -66,3 +79,4 @@ Ez a hiányosság mutatja, hogy a Riemann-integrál nem elég általános — a 
 - [[concepts/analiii/metrikus-terek-szorzata]] — a szorzattér akkor teljes, ha mindkét tényezője az
 - [[concepts/analiii/felmetrikus-ter]] — az $R[a,b]$-beli faktorizálás pontos kerete
 - [[concepts/analii/integralhato-fuggvenyek]] — a Riemann-integrálhatóság, amelynek korlátaira az utolsó példa mutat rá
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

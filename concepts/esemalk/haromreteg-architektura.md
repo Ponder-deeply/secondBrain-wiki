@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
+tags: [concept]
 sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-13
 ---
 
@@ -74,8 +76,6 @@ Egy kidolgozott, háromrétegű architektúrában megvalósított példát lásd
 - [[concepts/esemalk/modell-nezet-architektura]] — a kétrétegű
   architektúra, amelyből a perzisztencia réteg leválasztásával jön
   létre a háromrétegű felépítés
-- [[concepts/esemalk/monolitikus-architektura]] — a legegyszerűbb,
-  rétegezetlen felépítés, amelynek korlátait a rétegzés oldja fel
 - [[concepts/esemalk/fuggoseg-befecskendezes]] — a rétegek közötti
   függőségek lazítására szolgáló technika
 - [[concepts/esemalk/tictactoe-haromreteg-pelda]] — kidolgozott példa

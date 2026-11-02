@@ -2,6 +2,8 @@
 tags: [synthesis]
 sources: [tökéletes_biztonság.pdf, véletlenek.pdf, blokktitkosítók.pdf, folyam_titkositok.pdf, hash.pdf, mac_feladatok.pdf, Titokmegosztás.pdf, történelmi_titkosítók.pdf, enigma.pdf]
 derivation: source
+kind: overview
+element: water
 updated: 2026-09-04
 ---
 

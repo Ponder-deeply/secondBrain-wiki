@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/gentzen-stilusu-kalkulusok]
+tags: [concept]
 sources: [Szekventkalkulus.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

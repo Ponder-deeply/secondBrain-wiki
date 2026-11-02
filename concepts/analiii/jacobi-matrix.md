@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 05_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1. szakasz és 3.2. v), vii) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Jacobi-mátrix, gradiens, deriváltvektor
@@ -72,6 +74,12 @@ Ez a particionálás az implicitfüggvény-tétel szokásos írásmódjának ala
 
 A Jacobi-mátrix létezése azon múlik, hogy a $\varphi:\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\to\mathbb{R}^{m\times n}$, $L\mapsto A$ (ahol $L(x)=Ax$) megfeleltetés **izomorfizmus**: bijektív és mindkét irányban lineáris. Ezért a derivált — mint korlátos lineáris leképezés — és a Jacobi-mátrix — mint annak konkrét számtömbje — ugyanazt az objektumot írja le két nyelven; a Jacobi-mátrix erre az izomorfizmusra hivatkozva vezethető be a [[concepts/analiii/frechet-derivalt|Fréchet-derivált]] definíciójából.
 
+### Feladatok
+
+Ellenőrzés a definíció szerinti $f'(a)$-ra: a Jacobi-mátrix sorai az $f_i$ komponensek gradiensei, $f'=\begin{bmatrix}\partial_1f_1&\partial_2f_1\\\partial_1f_2&\partial_2f_2\\\partial_1f_3&\partial_2f_3\end{bmatrix}$. Példa: $f=(x^3+xy,\,x-y^2,\,1+y)$: $f'(x,y)=\begin{bmatrix}3x^2+y&x\\1&-2y\\0&1\end{bmatrix}$, mind a $6$ eleme polinom, tehát folytonos, így $f\in D$, és $f'(1,2)=\begin{bmatrix}5&1\\1&-4\\0&1\end{bmatrix}$ megegyezik a definícióból kapottal. További példák: [[concepts/analiii/frechet-derivalt]]. A mátrix- és lineáris leképezés közti megfeleltetés: $\mathcal L(\mathbb{R}^n,\mathbb{R}^m)\cong\mathbb{R}^{m\times n}$.
+
+- **A tétel (gyak 5. lap).** Ha $f=(f_1,f_2)\in\mathbb{R}^2\to\mathbb{R}^2$, $f\in D\{a\}$, akkor léteznek a $\partial_jf_i(a)$ és $f'(a)=\begin{bmatrix}\partial_1f_1(a)&\partial_2f_1(a)\\\partial_1f_2(a)&\partial_2f_2(a)\end{bmatrix}$; skalárértékű esetben $f'(a)=[\partial_1f(a)\ \ \partial_2f(a)]$. Példa ellenőrzéssel: $f=(x^2+xy,\,y^2-2x^2)$ Jacobi-mátrixa $\begin{bmatrix}2x+y&x\\-4x&2y\end{bmatrix}$, az $a=(-1,1)$-ben $\begin{bmatrix}-1&-1\\4&2\end{bmatrix}$ — egyezik a definícióból kapottal. A megjegyzés szerint a definícióból a deriválhatóság vizsgálata általában nem egyszerű, ezért kell az elégséges feltétel ([[concepts/analiii/differencialhatosag-elegseges-feltetele]]).
+
 ## Kapocs
 
 - [[concepts/analiii/frechet-derivalt]] — a derivált definíciója és egyértelműsége; ez a lap annak mátrixalakja.
@@ -80,3 +88,4 @@ A Jacobi-mátrix létezése azon múlik, hogy a $\varphi:\mathcal{L}(\mathbb{R}^
 - [[concepts/analiii/parcialis-derivalt]] — a mátrixelemek kiszámításának eszköze.
 - [[concepts/analiii/rotaciomentes-vektormezo]] — a Jacobi-mátrix szimmetriája mint a primitív függvény szükséges feltétele.
 - [[concepts/analiii/mertek-es-integraltranszformacio]] — a Jacobi-determináns szerepe a helyettesítéses integrálásban.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

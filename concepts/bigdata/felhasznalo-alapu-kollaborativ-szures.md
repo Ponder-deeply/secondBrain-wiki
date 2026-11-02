@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/ajanlorendszerek]
+tags: [concept]
 sources: [BDAEM-2022-EA11.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: fire
+updated: 2026-09-30
 ---
 
 # Felhasználó-alapú kollaboratív szűrés
@@ -15,7 +17,7 @@ user) leginkább hasonló ízlésű felhasználók (szomszédság) értékelése
 
 ### A probléma felállítása
 
-Adott $m$ felhasználó és $n$ elem (film, könyv, dal, ...) listája, valamint egy
+Adott $n$ felhasználó és $m$ elem (film, könyv, dal, ...) listája, valamint egy
 $n \times m$ értékelési mátrix $v_{ij}$, ahol $v_{ij} = ?$, ha az $i$.
 felhasználó nem értékelte a $j$. elemet. A visszajelzés lehet **explicit**
 (értékelés) vagy **implicit** (vásárlás, kattintás). A feladat: minden
@@ -34,7 +36,7 @@ alapfeltevéssel, hogy **hasonló visszajelzés ↔ hasonló ízlés**.
 
 ### A CF "hozzávalói"
 
-- $m$ felhasználó és $n$ elem listája.
+- $n$ felhasználó és $m$ elem listája.
 - Minden felhasználóhoz egy elemlista, hozzárendelt véleménnyel: **explicit**
   (értékelési pontszám) vagy **implicit** (vásárlási rekordok, lejátszások).
 - A célfelhasználó (active user), akire az előrejelzést végezzük.

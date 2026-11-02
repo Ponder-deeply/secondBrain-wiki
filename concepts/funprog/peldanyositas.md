@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 8, "LYAH \"Making Our Own Typeclasses\""]
 derivation: unsourced
+kind: procedure
+element: earth
 updated: 2026-05-18
 ---
 

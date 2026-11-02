@@ -1,0 +1,823 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "1-eloadas-metrikus-es-normalt-terek",
+	"unitTitle": "1. előadás — Metrikus és normált terek",
+	"type": "tf",
+	"batches": [
+		{
+			"at": "2026-10-21T21:20:05.007Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T12:39:26.238Z",
+			"model": "opus",
+			"direction": "",
+			"added": 93
+		}
+	],
+	"questions": [
+		{
+			"id": "7oc1jj9o",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"q": "Metrikus térben nyílt halmazok tetszőleges (akár végtelen) rendszerének metszete is nyílt.",
+			"answer": false,
+			"explain": "Csak véges sok nyílt halmaz metszete nyílt biztosan; tetszőleges rendszernek az uniója nyílt. Ellenpélda: $\\mathbb{R}^p$-ben $\\bigcap_n B(0,1/n)=\\{0\\}$, ami nem nyílt."
+		},
+		{
+			"id": "2txe34y3",
+			"page": "concepts/analiii/normalt-vektorter",
+			"q": "Ha $X\\neq\\{\\theta\\}$ normált tér és $K_r(a)\\subset K_R(b)$, akkor $r\\le R$.",
+			"answer": true,
+			"explain": "Igaz: $a\\ne b$ esetén az $a$-ból $a-b$ irányba induló félegyenest vizsgálva $r+\\|a-b\\|\\le R$ adódik, $a=b$ esetén közvetlenül. Normált térben tehát nincs olyan gömb, amelynek nagyobb sugarú gömb a valódi része (metrikus térben ez előfordulhat)."
+		},
+		{
+			"id": "r1g1xrih",
+			"page": "concepts/analiii/normalt-vektorter",
+			"q": "Az $\\|x\\|_q=\\bigl(|x_1|^q+\\dots+|x_p|^q\\bigr)^{1/q}$ függvény minden $0<q<\\infty$ esetén norma $\\mathbb{R}^p$-n.",
+			"answer": false,
+			"explain": "Csak $q\\ge 1$ esetén norma; $0<q<1$-re a háromszög-egyenlőtlenség sérül: $\\|(1,1)\\|_q=2^{1/q}>2=\\|(1,0)\\|_q+\\|(0,1)\\|_q$."
+		},
+		{
+			"id": "6s7xku24",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"q": "Egy $H$-beli pont lehet egyszerre izolált pontja és torlódási pontja a $H$ halmaznak.",
+			"answer": false,
+			"explain": "Az izolált pont és a torlódási pont kizárja egymást: egy $H$-beli pont vagy izolált, vagy torlódási pontja $H$-nak."
+		},
+		{
+			"id": "tfr47cux",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"q": "Az $a$ pont a $H$ torlódási pontja, ha bármely $r>0$ esetén $B(a,r)\\cap H\\neq\\emptyset$.",
+			"answer": false,
+			"explain": "Ez az érintkezési pont (a lezárt eleme) jellemzése. Torlódási pontnál minden $r>0$-ra $|B(a,r)\\cap H|=\\infty$ kell, ami ekvivalens azzal, hogy $(B(a,r)\\setminus\\{a\\})\\cap H\\neq\\emptyset$."
+		},
+		{
+			"id": "nkenlrdd",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"q": "$C[0,1]$-ben az $f_n(x)=1-nx$ ($x<1/n$), $f_n(x)=0$ ($x\\ge 1/n$) függvények $\\{f_1,f_2,\\dots\\}$ halmaza az $L^\\infty$-normában zárt, az $L^1$-normában viszont nem zárt.",
+			"answer": true,
+			"explain": "Igaz: $\\|f_n\\|_1=\\frac{1}{2n}\\to0$, ezért $L^1$-ben a konstans $0$ torlódási pont, de nem eleme a halmaznak. $L^\\infty$-ben $\\|f_n\\|_\\infty=1$, a halmaznak nincs torlódási pontja, tehát zárt."
+		},
+		{
+			"id": "dmr7mc80",
+			"page": "concepts/analiii/metrikus-ter",
+			"q": "A Hamming-távolsággal ellátott $\\mathcal K^n$ térben pontosan a végül konstans sorozatok konvergensek.",
+			"answer": true,
+			"explain": "Igaz: a távolság egész szám, és $1$-nél kisebb értéke csak $0$ lehet. Így ha $\\varepsilon<1$-re a tagok elég közel vannak a limeszhez, akkor egyenlők vele."
+		},
+		{
+			"id": "wkzmbgai",
+			"page": "concepts/analiii/metrikus-ter",
+			"q": "A metrika axiómái közül a szimmetria és a nemnegativitás levezethető abból, hogy $\\rho(x,y)=0\\iff x=y$ és $\\rho(x,y)\\le\\rho(x,z)+\\rho(y,z)$ minden $x,y,z$-re.",
+			"answer": true,
+			"explain": "Igaz: $z:=x$-szel $\\rho(x,y)\\le\\rho(y,x)$, és felcserélve egyenlőséget kapunk (szimmetria). Ugyanebből az egyenlőtlenségből $0=\\rho(x,x)\\le 2\\rho(x,y)$, ami a nemnegativitás."
+		},
+		{
+			"id": "8wf1dp0s",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "base",
+			"q": "A metrikus tér definíciója megengedi, hogy a ponthalmaz üres legyen.",
+			"answer": false,
+			"explain": "A metrikus tér egy nemüres ponthalmaz és egy metrika párja: $M\\neq\\emptyset$."
+		},
+		{
+			"id": "m871o8mg",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "base",
+			"q": "Az Analízis III. konvergencia-, nyíltság-, teljesség- és kompaktságfogalma a metrikus tér definíciójára épül.",
+			"answer": true,
+			"explain": "Az összefoglaló szerint a teljes topológiai apparátus ezen az egyetlen definíción nyugszik."
+		},
+		{
+			"id": "f635isyq",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Definíció",
+			"q": "Ha egy függvény szimmetrikus és teljesíti a háromszög-egyenlőtlenséget, akkor $d(x,y)=0$ már $x\\neq y$ esetén is megengedett, és a függvény metrika.",
+			"answer": false,
+			"explain": "Az első axióma szerint $d(x,y)=0\\iff x=y$, tehát különböző pontok távolsága pozitív."
+		},
+		{
+			"id": "5he17tr7",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Definíció",
+			"q": "A háromszög-egyenlőtlenségnek minden $x,y,z\\in M$ hármasra teljesülnie kell, nem csak páronként különbözőkre.",
+			"answer": true,
+			"explain": "Az axióma $\\forall x,y,z\\in M$ hármasra szól."
+		},
+		{
+			"id": "5xus2m3j",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Példák",
+			"q": "A diszkrét metrika csak véges halmazon értelmezhető.",
+			"answer": false,
+			"explain": "A diszkrét metrika tetszőleges $M$ halmazon értelmezhető: $d(x,y)=1$, ha $x\\ne y$, és $0$, ha $x=y$."
+		},
+		{
+			"id": "xb6qs91b",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Példák",
+			"q": "Ugyanazon a halmazon több, lényegesen különböző metrika is élhet, és ezektől a konvergencia is függhet.",
+			"answer": true,
+			"explain": "Például $C[0,1]$-en az $L^1$- és az $L^\\infty$-metrika más-más konvergenciát ad."
+		},
+		{
+			"id": "ggjghvxf",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "Diszkrét metrikájú térben $K_r(a)=M$ minden $r>1$ esetén.",
+			"answer": true,
+			"explain": "Minden pont távolsága $a$-tól legfeljebb $1<r$, így $r>1$ esetén a gömb az egész tér. Ugyanakkor $K_1(a)=\\{a\\}$."
+		},
+		{
+			"id": "20j1f9x5",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "Az $|x^2-y^2|$ függvény metrika $\\mathbb{R}$-en, mert szimmetrikus és teljesíti a háromszög-egyenlőtlenséget.",
+			"answer": false,
+			"explain": "Nem metrika, mert $\\rho(1,-1)=0$, holott $1\\neq-1$."
+		},
+		{
+			"id": "qucn2dtk",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "base",
+			"q": "A norma értelmezéséhez a ponthalmaznak vektortérnek kell lennie, mert a norma a vektorok hosszát méri.",
+			"answer": true,
+			"explain": "A normált tér olyan vektortér, amelyen a vektorok „hossza” mérhető."
+		},
+		{
+			"id": "ezx2zh44",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Definíció",
+			"q": "A norma homogenitása $\\|cx\\|=c\\,\\|x\\|$ alakban szól minden skalárra.",
+			"answer": false,
+			"explain": "A helyes alak $\\|cx\\|=|c|\\cdot\\|x\\|$: a skalárnak az abszolút értéke kerül ki."
+		},
+		{
+			"id": "glrlkwgn",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Definíció",
+			"q": "A normaaxiómák egyike, hogy $\\|x\\|=0$ pontosan akkor, ha $x=0$.",
+			"answer": true,
+			"explain": "Ez az első axióma: $\\|x\\|\\ge0$, és $\\|x\\|=0\\iff x=0$."
+		},
+		{
+			"id": "27w4k9f2",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Az $L^q$-norma",
+			"q": "Az $1\\le q\\le\\infty$ esetben $\\|\\cdot\\|_q$ háromszög-egyenlőtlenségét a Hölder- és a Minkowski-egyenlőtlenség adja.",
+			"answer": true,
+			"explain": "Ez a háromszög-egyenlőtlenség nem triviális; a Hölder-egyenlőtlenségből levezetett Minkowski-egyenlőtlenség igazolja."
+		},
+		{
+			"id": "j52qnxhk",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Az $L^q$-norma",
+			"q": "$\\mathbb{R}^p$-ben $\\|x\\|_\\infty$ a koordináták abszolút értékeinek összege.",
+			"answer": false,
+			"explain": "$\\|x\\|_\\infty=\\max(|x_1|,\\dots,|x_p|)$. Az abszolút értékek összege $\\|x\\|_1$."
+		},
+		{
+			"id": "0tm6p5ml",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Normák $C[a,b]$-n",
+			"q": "$C[a,b]$-n az $\\|f\\|_q=\\bigl(\\int_a^b|f|^q\\bigr)^{1/q}$ normát $q\\ge1$ esetén értelmezzük.",
+			"answer": true,
+			"explain": "Az integrálnormák $q\\ge1$-re normák."
+		},
+		{
+			"id": "26lxrats",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Normák $C[a,b]$-n",
+			"q": "$C[a,b]$-n az index nélküli $\\|f\\|$ jelölés általában az $L^1$-normát jelenti.",
+			"answer": false,
+			"explain": "A jelölés a maximumnormát jelenti: $\\|f\\|=\\|f\\|_\\infty=\\max|f|$."
+		},
+		{
+			"id": "bhz8i0m5",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Sorozatterek",
+			"q": "Az $\\ell^p$ tér $0<p<1$ esetén is normált tér az $\\|x\\|_p$ normával.",
+			"answer": false,
+			"explain": "Az $\\ell^p$ halmaz $0<p<\\infty$-re értelmezett, de normált (sőt Banach-) tér csak $1\\le p\\le\\infty$ esetén."
+		},
+		{
+			"id": "jkbny42r",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Sorozatterek",
+			"q": "Az $\\ell^\\infty$ elemei pontosan a korlátos számsorozatok.",
+			"answer": true,
+			"explain": "$\\ell^\\infty$ a korlátos sorozatok tere, a $\\sup|x_n|$ normával."
+		},
+		{
+			"id": "vaflgbut",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Feladatok",
+			"q": "A norma Lipschitz-1 folytonos függvény $X\\to\\mathbb{R}$, mert $\\bigl|\\|x\\|-\\|y\\|\\bigr|\\le\\|x-y\\|$.",
+			"answer": true,
+			"explain": "Ez a fordított háromszög-egyenlőtlenség, és belőle közvetlenül adódik a folytonosság."
+		},
+		{
+			"id": "625rav9g",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Feladatok",
+			"q": "Az $\\|x\\|=\\max\\{|2x_1-x_2|,|4x_1|\\}$ nem norma $\\mathbb{R}^2$-n, mert nemnulla $x$-re is lehet $\\|x\\|=0$.",
+			"answer": false,
+			"explain": "Norma: $\\|x\\|=0$-ból $x_1=0$, majd $x_2=0$ következik (a determináns $4\\neq0$). A homogenitás és a háromszög-egyenlőtlenség a lineáris funkcionálok miatt azonnal teljesül."
+		},
+		{
+			"id": "65gthoow",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "base",
+			"q": "A Hölder-egyenlőtlenséget a Minkowski-egyenlőtlenségből vezetjük le.",
+			"answer": false,
+			"explain": "Fordítva: a Minkowski-egyenlőtlenséget vezetjük le a Hölder-egyenlőtlenségből."
+		},
+		{
+			"id": "fl7m6cjp",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "base",
+			"q": "A két egyenlőtlenség együtt igazolja, hogy $\\|\\cdot\\|_q$ minden $1\\le q\\le\\infty$ esetén norma.",
+			"answer": true,
+			"explain": "A Minkowski-egyenlőtlenség maga a háromszög-egyenlőtlenség, és a Hölder-egyenlőtlenségre épül."
+		},
+		{
+			"id": "a5352x4f",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Hölder-egyenlőtlenség",
+			"q": "A Hölder-egyenlőtlenség a $q=1$, $r=\\infty$ kitevőpárral is érvényes.",
+			"answer": true,
+			"explain": "$(\\sum|a_i|)\\cdot\\max|b_i|\\ge\\sum|a_ib_i|$, ez a speciális eset."
+		},
+		{
+			"id": "ledy3rzu",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Hölder-egyenlőtlenség",
+			"q": "Konjugált $q,r$ kitevőkre a Hölder-egyenlőtlenség szerint $\\sum|a_ib_i|\\ge\\|a\\|_q\\|b\\|_r$.",
+			"answer": false,
+			"explain": "Az irány fordított: $\\|a\\|_q\\|b\\|_r\\ge\\sum|a_ib_i|$."
+		},
+		{
+			"id": "jade7uig",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Cauchy–Bunyakovszkij–Schwarz-egyenlőtlenség",
+			"q": "A Cauchy–Bunyakovszkij–Schwarz-láncban $\\sum|a_ib_i|\\le|\\langle a,b\\rangle|$.",
+			"answer": false,
+			"explain": "A lánc $\\|a\\|_2\\|b\\|_2\\ge\\sum|a_ib_i|\\ge|\\langle a,b\\rangle|$, tehát $|\\langle a,b\\rangle|\\le\\sum|a_ib_i|$."
+		},
+		{
+			"id": "qofalv66",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Cauchy–Bunyakovszkij–Schwarz-egyenlőtlenség",
+			"q": "$|\\langle a,b\\rangle|\\le\\|a\\|_2\\|b\\|_2$ következik abból, hogy $\\sum|a_ib_i|$ a két $2$-norma szorzata alatt marad.",
+			"answer": true,
+			"explain": "$|\\langle a,b\\rangle|\\le\\sum|a_ib_i|\\le\\|a\\|_2\\|b\\|_2$."
+		},
+		{
+			"id": "4hwqpzvi",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Minkowski-egyenlőtlenség",
+			"q": "A $q=\\infty$ esetben a Minkowski-egyenlőtlenség a $\\max|a_i+b_i|\\le\\max(|a_i|+|b_i|)\\le\\max|a_i|+\\max|b_i|$ láncból adódik.",
+			"answer": true,
+			"explain": "Ez a $q=\\infty$ speciális eset bizonyítása."
+		},
+		{
+			"id": "vp70mjmz",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Minkowski-egyenlőtlenség",
+			"q": "A Minkowski-bizonyítás általános esetében a végén $\\|a+b\\|_q^{q}$-val osztunk le.",
+			"answer": false,
+			"explain": "$\\|a+b\\|_q^{q-1}$-nel osztunk: $\\|a+b\\|_q^q\\le(\\|a\\|_q+\\|b\\|_q)\\|a+b\\|_q^{q-1}$-ből."
+		},
+		{
+			"id": "r55ri6we",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Feladatok",
+			"q": "A síkbeli $\\sqrt{(x+u)^2+(y+v)^2}\\le\\sqrt{x^2+y^2}+\\sqrt{u^2+v^2}$ egyenlőtlenség négyzetre emelés után a kétdimenziós Cauchy–Schwarz-egyenlőtlenségre redukálódik.",
+			"answer": true,
+			"explain": "Négyzetre emelés után az $xu+yv\\le\\sqrt{x^2+y^2}\\sqrt{u^2+v^2}$ egyenlőtlenség marad."
+		},
+		{
+			"id": "3pdsnz9z",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Feladatok",
+			"q": "A Minkowski-egyenlőtlenség Cauchy–Schwarzból: $\\|x+y\\|^2=\\|x\\|^2+2\\langle x,y\\rangle+\\|y\\|^2\\ge(\\|x\\|+\\|y\\|)^2$.",
+			"answer": false,
+			"explain": "A helyes irány $\\le(\\|x\\|+\\|y\\|)^2$, mert $\\langle x,y\\rangle\\le\\|x\\|\\|y\\|$."
+		},
+		{
+			"id": "lpb2cvho",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "base",
+			"q": "Egy pont lehet egyszerre belső pontja és határpontja ugyanannak a $H$ halmaznak.",
+			"answer": false,
+			"explain": "A belső, a külső és a határpontok osztálya diszjunkt: minden pont pontosan egy osztályba tartozik."
+		},
+		{
+			"id": "8dqwx8pw",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "base",
+			"q": "A belső, külső, határ, derivált halmaz és lezárt adja azt a szótárat, amelyben a nyíltság és a zártság kimondható.",
+			"answer": true,
+			"explain": "Az összefoglaló szerint ezek a halmazok alkotják a nyíltság és a zártság szótárát."
+		},
+		{
+			"id": "spuk4hgw",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/A pontok osztályozása",
+			"q": "$a$ pontosan akkor határpontja $H$-nak, ha minden $r>0$ esetén $B(a,r)$ belemetsz $H$-ba és $M\\setminus H$-ba is.",
+			"answer": true,
+			"explain": "Ez a határpont ekvivalens jellemzése: $a$ sem nem belső, sem nem külső pont."
+		},
+		{
+			"id": "6oh37gzy",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/A pontok osztályozása",
+			"q": "Egy izolált pontja $H$-nak nem feltétlenül eleme $H$-nak.",
+			"answer": false,
+			"explain": "Mindig eleme: a $B(a,r)\\cap H=\\{a\\}$ feltétel miatt $a\\in H$."
+		},
+		{
+			"id": "08wx43em",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Derivált halmaz és lezárt",
+			"q": "$H$ lezártja a $H$-t tartalmazó nyílt halmazok metszete.",
+			"answer": false,
+			"explain": "A lezárt a $H$-t tartalmazó zárt halmazok metszete, vagyis a legszűkebb $H$-t tartalmazó zárt halmaz."
+		},
+		{
+			"id": "apnswh89",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Derivált halmaz és lezárt",
+			"q": "$b$ pontosan akkor érintkezési pontja $H$-nak, ha minden $K(b)$ környezetre $K(b)\\cap H\\neq\\emptyset$.",
+			"answer": true,
+			"explain": "Az érintkezési pontok a lezárt elemei: $\\operatorname{cl}H=H\\cup H'$."
+		},
+		{
+			"id": "sqnepbr0",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$A=\\{(\\tfrac1n,\\tfrac1m)\\}\\subset\\mathbb{R}^2$ esetén az origó torlódási pontja $A$-nak, mert a $(\\tfrac1n,\\tfrac1n)$ sorozat limesze.",
+			"answer": true,
+			"explain": "Az origó $A'$-ben van; az $A$-beli $(\\tfrac1n,\\tfrac1n)$ sorozat hozzá tart."
+		},
+		{
+			"id": "whqmo0zj",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Az $A=\\{(\\tfrac1n,\\tfrac1m):n,m\\in\\mathbb{N}^+\\}$ halmaznak a $(\\tfrac1n,0)$ pontok izolált pontjai.",
+			"answer": false,
+			"explain": "A $(\\tfrac1n,0)$ pontok nem elemei $A$-nak; torlódási pontok, az $m\\to\\infty$ sorozatok limeszei."
+		},
+		{
+			"id": "y2awjhoy",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "base",
+			"q": "Metrikus térben minden halmaz vagy nyílt, vagy zárt.",
+			"answer": false,
+			"explain": "A nyíltság és a zártság nem kimerítő: van olyan halmaz, amely egyik sem."
+		},
+		{
+			"id": "lk90iq2x",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Definíciók",
+			"q": "Ha $H=(\\operatorname{int}H)\\cup(\\partial H)$, akkor $H$ zárt.",
+			"answer": true,
+			"explain": "Ez a zártság egyik egyenértékű feltétele."
+		},
+		{
+			"id": "dnfvvset",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Definíciók",
+			"q": "$H$ pontosan akkor zárt, ha $H\\subset\\partial H$.",
+			"answer": false,
+			"explain": "A helyes feltétel $\\partial H\\subset H$: a halmaz tartalmazza a határát."
+		},
+		{
+			"id": "cfri3tws",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Példák",
+			"q": "$\\mathbb{R}^p$-ben az egypontú halmazok nyíltak.",
+			"answer": false,
+			"explain": "Az egypontú halmazok zártak, de $\\mathbb{R}^p$-ben nem nyíltak."
+		},
+		{
+			"id": "fskzq6md",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Példák",
+			"q": "$\\mathbb{R}^p$-ben az $(a_1,b_1)\\times\\dots\\times(a_p,b_p)$ nyílt téglák nyíltak, de nem zártak.",
+			"answer": true,
+			"explain": "A forrás ezt példaként mondja ki."
+		},
+		{
+			"id": "s0ipucl9",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Műveleti tulajdonságok",
+			"q": "Véges sok zárt halmaz uniója zárt.",
+			"answer": true,
+			"explain": "Igaz; végtelen sok zárt halmaz uniója viszont nem feltétlenül zárt."
+		},
+		{
+			"id": "5x2mfl1w",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Műveleti tulajdonságok",
+			"q": "$\\mathbb{R}^p$-ben a $\\overline B(0,1-1/n)$ zárt gömbök uniója a zárt egységgömb.",
+			"answer": false,
+			"explain": "Az unió az egységgömb belseje (a nyílt egységgömb), ami nem zárt."
+		},
+		{
+			"id": "skb2wt95",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/A topológia metrikafüggése",
+			"q": "$C[0,1]$-ben az $f_n(x)=1-nx$ ($x<1/n$), $0$ ($x\\ge1/n$) sorozat $L^\\infty$-ben is a $0$-hoz tart.",
+			"answer": false,
+			"explain": "$\\|f_n\\|_\\infty=1$ minden $n$-re, tehát $L^\\infty$-ben nem tart a $0$-hoz; csak $L^1$-ben."
+		},
+		{
+			"id": "fandkqe9",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/A topológia metrikafüggése",
+			"q": "A $C[0,1]$-beli példa szerint nemcsak a konvergencia, hanem maga a topológia is függ a metrikától.",
+			"answer": true,
+			"explain": "Ugyanaz a halmaz az egyik metrikában zárt, a másikban nem."
+		},
+		{
+			"id": "o2ygigmz",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "Az $(A,\\rho|_{A\\times A})$ altérben $K^A_r(a)=K_r(a)\\cap A$.",
+			"answer": true,
+			"explain": "Az altér gömbjei a teljes tér gömbjeinek $A$-val vett metszetei."
+		},
+		{
+			"id": "l1uzw7n6",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "Ha $A$ zárt, egy $A$-beli konvergens sorozat limesze mindig a sorozat valamelyik tagja.",
+			"answer": false,
+			"explain": "A limesz vagy a sorozat valamelyik tagja, vagy $A$ torlódási pontja; zárt halmaz esetén mindkét esetben $A$-ban van."
+		},
+		{
+			"id": "bbcnpnhp",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "base",
+			"q": "Végtelen dimenziós vektortérben bármely két norma ekvivalens.",
+			"answer": false,
+			"explain": "Ez véges dimenzióban igaz; végtelen dimenzióban általában nem."
+		},
+		{
+			"id": "3di85sek",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "base",
+			"q": "Két norma már akkor ekvivalens, ha a különbségük egy additív konstanssal korlátos.",
+			"answer": false,
+			"explain": "Az ekvivalencia kölcsönös becslés konstans szorzóval: $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$."
+		},
+		{
+			"id": "vr6f7oxy",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Definíció",
+			"q": "A normák ekvivalenciájához elég, ha $\\|x\\|'\\le c_2\\|x\\|$ valamely $c_2>0$-ra minden $x$-re.",
+			"answer": false,
+			"explain": "Mindkét irányú becslés kell: $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$, $c_1,c_2>0$."
+		},
+		{
+			"id": "tuq9vcn9",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Definíció",
+			"q": "Az ekvivalencia definíciójában a $c_1,c_2$ konstansok nem függhetnek az $x$ vektortól.",
+			"answer": true,
+			"explain": "A $c_1,c_2>0$ számok előre rögzítettek, és minden $x$-re ugyanazok."
+		},
+		{
+			"id": "nqjn3agy",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Példa — az $L^1$, $L^2$, $L^\\infty$ normák",
+			"q": "Minden $x\\in\\mathbb{R}^p$-re $\\|x\\|_\\infty\\le\\|x\\|_1$.",
+			"answer": true,
+			"explain": "A legnagyobb abszolút értékű koordináta legfeljebb akkora, mint az összes koordináta abszolút értékének összege."
+		},
+		{
+			"id": "7x6uhgyp",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Példa — az $L^1$, $L^2$, $L^\\infty$ normák",
+			"q": "$\\mathbb{R}^p$-ben $\\frac1{\\sqrt p}|x|\\le\\|x\\|_\\infty$ azért igaz, mert $\\frac1{\\sqrt p}|x|$ az $|x_i|^2$ számok átlagának gyöke.",
+			"answer": true,
+			"explain": "$\\sqrt{\\text{átlag}}\\le\\sqrt{\\max|x_i|^2}=\\|x\\|_\\infty$."
+		},
+		{
+			"id": "yw4ns8tr",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Végtelen dimenzióban nem áll fenn",
+			"q": "$C[0,1]$-ben az $f_k(x)=x^k$ sorozat a $\\|\\cdot\\|_1$ normában a $0$ függvényhez konvergál.",
+			"answer": true,
+			"explain": "$\\|f_k\\|_1=\\frac1{k+1}\\to0$."
+		},
+		{
+			"id": "elf60p9r",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Végtelen dimenzióban nem áll fenn",
+			"q": "Két ekvivalens norma közül az egyikben konvergens lehet egy sorozat, miközben a másikban divergens.",
+			"answer": false,
+			"explain": "Ekvivalens normákban egy sorozat vagy mindkettőben konvergens, ugyanazzal a limesszel, vagy egyikben sem."
+		},
+		{
+			"id": "rpg5bybn",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/A normák ekvivalenciájának tétele",
+			"q": "A $\\|x\\|\\le c_2|x|$ felső becslés bizonyítása a háromszög-egyenlőtlenségen és a homogenitáson múlik.",
+			"answer": true,
+			"explain": "$\\|\\sum x_ie_i\\|\\le\\sum|x_i|\\|e_i\\|$, majd $|x_i|\\le|x|$."
+		},
+		{
+			"id": "4ektnig4",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/A normák ekvivalenciájának tétele",
+			"q": "Az alsó becslés indirekt bizonyítása a már igazolt felső becslést nem használja fel.",
+			"answer": false,
+			"explain": "Felhasználja: $\\|x_{n_k}-y\\|\\le c_2|x_{n_k}-y|\\to0$, és ez kell az ellentmondáshoz."
+		},
+		{
+			"id": "nxydxbqn",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Következmény",
+			"q": "Véges dimenziós vektortérben egy halmaz határa függhet a választott normától.",
+			"answer": false,
+			"explain": "Véges dimenzióban a topológia normafüggetlen, így a belső, a külső és a határ is."
+		},
+		{
+			"id": "yf1zl6az",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Következmény",
+			"q": "A Tyihonov-tétel az $\\mathbb{R}^p$-re szóló tételre vezethető vissza, mert minden $n$-dimenziós tér algebrailag izomorf $\\mathbb{R}^n$-nel.",
+			"answer": true,
+			"explain": "Az izomorfia átviszi a normákat, így a tétel az $\\mathbb{R}^p$-beli esetre vezethető vissza."
+		},
+		{
+			"id": "sy5c2f6b",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Feladatok",
+			"q": "A $\\|x\\|=\\max|\\lambda_i|$ bázisnormára bármely $\\|\\cdot\\|^*$ normával $\\|x\\|^*\\le M\\|x\\|$, ahol $M=\\sum\\|e_i\\|^*$.",
+			"answer": true,
+			"explain": "$\\|x\\|^*\\le\\sum|\\lambda_i|\\|e_i\\|^*\\le\\max|\\lambda_i|\\cdot\\sum\\|e_i\\|^*$."
+		},
+		{
+			"id": "e0f17mxe",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Feladatok",
+			"q": "A vázlatbizonyításban az egységgömb felülete azért kompakt, mert nyílt és korlátos.",
+			"answer": false,
+			"explain": "A felület zárt és korlátos, ezért kompakt."
+		},
+		{
+			"id": "y4h5biu4",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "base",
+			"q": "Ekvivalens metrikák esetén megmarad, hogy egy sorozat konvergens-e, de a határértéke megváltozhat.",
+			"answer": false,
+			"explain": "A határérték is megmarad: ekvivalens metrikákban ugyanazok a sorozatok konvergensek, ugyanazzal a limesszel."
+		},
+		{
+			"id": "3kiy4evy",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Definíció",
+			"q": "Az $X$-en értelmezett metrikák halmazán a $\\sim$ reláció tranzitív.",
+			"answer": true,
+			"explain": "A $\\sim$ ekvivalenciareláció, tehát tranzitív is."
+		},
+		{
+			"id": "sx5cmcn8",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Definíció",
+			"q": "$\\rho\\sim\\sigma$ teljesüléséhez elég, hogy $\\sigma\\le C\\rho$ valamely $C>0$-ra.",
+			"answer": false,
+			"explain": "Kétirányú becslés kell: $c\\rho\\le\\sigma\\le C\\rho$, $c,C>0$."
+		},
+		{
+			"id": "9u3hneio",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/A $\\rho_p$ metrikák $p \\geq 1$ esetén ekvivalensek",
+			"q": "$\\mathbb{K}^n$-ben $\\rho_\\infty(x,y)\\le\\rho_p(x,y)$ minden $1\\le p<\\infty$ esetén.",
+			"answer": true,
+			"explain": "Minden $i$-re $\\rho_p(x,y)\\ge|x_i-y_i|$, így a maximumra is."
+		},
+		{
+			"id": "747eijtk",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/A $\\rho_p$ metrikák $p \\geq 1$ esetén ekvivalensek",
+			"q": "$\\mathbb{K}^3$-ban $\\rho_1\\le\\sqrt3\\,\\rho_\\infty$ a bizonyításban kapott becslés.",
+			"answer": false,
+			"explain": "A becslés $\\rho_1\\le n^{1/1}\\rho_\\infty=3\\rho_\\infty$; a $\\sqrt3$ a $p=2$-höz tartozik."
+		},
+		{
+			"id": "gcdolmy1",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/$p < 1$ esetén elromlik",
+			"q": "$0<p<q<1$ esetén $\\rho_p\\le C\\rho_q$ egyetlen $C>0$ konstanssal sem teljesülhet $\\mathbb{K}^2$-n.",
+			"answer": true,
+			"explain": "$x=(u,0)$, $y=0$ mellett $u^{p-q}\\le C$ kellene, de ez $u\\to0+$ esetén végtelenhez tart."
+		},
+		{
+			"id": "3ur6x8o0",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/$p < 1$ esetén elromlik",
+			"q": "A $0<p<q<1$ ellenpéldában az $u\\to+\\infty$ határátmenet adja az ellentmondást.",
+			"answer": false,
+			"explain": "Az $u\\to0+$ adja: ekkor $u^{p-q}\\to+\\infty$, mert $p-q<0$."
+		},
+		{
+			"id": "9yjvgfrp",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Mit őriz meg az ekvivalencia?",
+			"q": "$\\rho\\sim\\sigma$ esetén $\\mathcal{K}_\\rho(X)=\\mathcal{K}_\\sigma(X)$, azaz ugyanazok a halmazok kompaktak.",
+			"answer": true,
+			"explain": "A kompaktság a konvergencián keresztül fogalmazható meg, a konvergencia pedig megmarad."
+		},
+		{
+			"id": "loar7s8i",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Mit őriz meg az ekvivalencia?",
+			"q": "A $K^{(\\sigma)}_{cr}(a)\\subset K^{(\\rho)}_r(a)$ tartalmazás a $\\sigma\\le C\\rho$ becslésből következik.",
+			"answer": false,
+			"explain": "A $c\\rho\\le\\sigma$ becslésből következik: $\\sigma(x,a)<cr$ esetén $\\rho(x,a)\\le\\sigma(x,a)/c<r$."
+		},
+		{
+			"id": "jb2pnypd",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Geometriai kép",
+			"q": "$\\mathbb{R}^2$-ben a $\\rho_\\infty$ metrika gömbjei körlemezek.",
+			"answer": false,
+			"explain": "A $\\rho_\\infty$-gömbök négyzetek; a körlemezek a $\\rho_2$-gömbök."
+		},
+		{
+			"id": "xl1qmoi9",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Geometriai kép",
+			"q": "$\\mathbb{R}^2$-ben bármely $a$ középpontú $\\rho_2$-körlemezbe illeszthető $a$ középpontú $\\rho_\\infty$-négyzet.",
+			"answer": true,
+			"explain": "Ekvivalens metrikák környezetei kölcsönösen egymásba illeszthetők."
+		},
+		{
+			"id": "ashqy855",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Feladatok",
+			"q": "$\\mathbb{R}$-en $\\sigma=\\min\\{1,|x-y|\\}$ és $\\rho=|x-y|$ esetén van olyan $C>0$, hogy $\\sigma\\le C\\rho$.",
+			"answer": true,
+			"explain": "$C=1$ megfelel; az ekvivalencia a másik irányon, a $c\\rho\\le\\sigma$ becslésen bukik el."
+		},
+		{
+			"id": "co607c6o",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Feladatok",
+			"q": "Van olyan $\\mathbb{R}$-beli sorozat, amely a $|x-y|$ metrikában konvergens, de a $\\min\\{1,|x-y|\\}$ metrikában nem.",
+			"answer": false,
+			"explain": "A két metrika ugyanazokat a sorozatokat találja konvergensnek, mert kis távolságokra megegyeznek."
+		},
+		{
+			"id": "ju6mx8u1",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "base",
+			"q": "A skaláris szorzat a $\\|x\\|=\\langle x,x\\rangle$ képlettel generál normát.",
+			"answer": false,
+			"explain": "A helyes képlet $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$."
+		},
+		{
+			"id": "a156rhid",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "base",
+			"q": "A skaláris szorzat erősebb struktúra a normánál: minden skaláris szorzat normát generál, de nem minden norma származik skaláris szorzatból.",
+			"answer": true,
+			"explain": "Például a $\\|\\cdot\\|_p$ normák közül csak a $p=2$ származik skaláris szorzatból."
+		},
+		{
+			"id": "6qsgnraa",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Definíció",
+			"q": "Valós euklideszi térben $\\langle x,\\lambda y\\rangle=\\lambda\\langle x,y\\rangle$.",
+			"answer": true,
+			"explain": "Valós esetben elmarad a konjugálás."
+		},
+		{
+			"id": "1hl5o5f2",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Definíció",
+			"q": "Komplex euklideszi térben is $\\langle x,\\lambda y\\rangle=\\lambda\\langle x,y\\rangle$.",
+			"answer": false,
+			"explain": "Komplex térben $\\langle x,\\lambda y\\rangle=\\overline\\lambda\\langle x,y\\rangle$, vagyis a második változóban konjugáltan homogén."
+		},
+		{
+			"id": "pilrvb5o",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Példák",
+			"q": "Az $n=1$ esetben $\\langle x,y\\rangle=x\\overline y$ és $\\|x\\|=|x|$.",
+			"answer": true,
+			"explain": "A $\\mathbb{K}^n$-beli képlet $n=1$-re ezt adja."
+		},
+		{
+			"id": "eb822cto",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Példák",
+			"q": "$\\ell^2$-n a $\\sum x_n\\overline{y_n}$ skaláris szorzat által indukált norma az $\\ell^\\infty$-norma.",
+			"answer": false,
+			"explain": "Mindhárom példában az indukált norma az $L^2$-norma: $\\|x\\|_2=\\sqrt{\\langle x,x\\rangle}$."
+		},
+		{
+			"id": "46jzrugq",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Az indukált norma és a Cauchy–Bunyakovszkij-egyenlőtlenség",
+			"q": "Tetszőleges euklideszi térben $\\|x\\|:=\\sqrt{\\langle x,x\\rangle}$ norma.",
+			"answer": true,
+			"explain": "Ez a tétel; a háromszög-egyenlőtlenség bizonyításának kulcsa a Cauchy–Bunyakovszkij-egyenlőtlenség."
+		},
+		{
+			"id": "bbkyvq9l",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Az indukált norma és a Cauchy–Bunyakovszkij-egyenlőtlenség",
+			"q": "A Cauchy–Bunyakovszkij-egyenlőtlenség szerint $|\\langle x,y\\rangle|\\ge\\|x\\|\\cdot\\|y\\|$.",
+			"answer": false,
+			"explain": "A helyes irány $|\\langle x,y\\rangle|\\le\\|x\\|\\cdot\\|y\\|$."
+		},
+		{
+			"id": "jfw6q6da",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Paralelogramma-szabály: mely norma származik skaláris szorzatból?",
+			"q": "$p=\\infty$, $x=(1,0)$, $y=(0,1)$ esetén a paralelogramma-szabály bal oldala $2$, a jobb oldala $4$.",
+			"answer": true,
+			"explain": "$\\|(1,\\pm1)\\|_\\infty=1$, így a bal oldal $1+1=2$, a jobb oldal $2(1+1)=4$."
+		},
+		{
+			"id": "eonle1id",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Paralelogramma-szabály: mely norma származik skaláris szorzatból?",
+			"q": "A paralelogramma-szabály bizonyításában a $\\langle x,y\\rangle$ és $\\langle y,x\\rangle$ vegyes tagok összeadódnak.",
+			"answer": false,
+			"explain": "A vegyes tagok kiejtik egymást: $\\langle x,y\\rangle+\\langle y,x\\rangle-\\langle x,y\\rangle-\\langle y,x\\rangle=0$."
+		},
+		{
+			"id": "0n8i317p",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Neumann–Jordan-tétel",
+			"q": "A Neumann–Jordan-tételben a paralelogramma-azonosság szükségessége az egyszerűbb irány, az elégségesség a mélyebb.",
+			"answer": true,
+			"explain": "A szükségesség egy rövid számolás; az elégségességhez a skaláris szorzatot polarizációval kell visszaállítani."
+		},
+		{
+			"id": "knc0zw5r",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Neumann–Jordan-tétel",
+			"q": "A $(C[a,b],\\|\\cdot\\|_1)$ tér normája skaláris szorzatból származtatható.",
+			"answer": false,
+			"explain": "$(C[a,b],\\|\\cdot\\|_p)$ normája pontosan $p=2$ esetén származik skaláris szorzatból."
+		},
+		{
+			"id": "eofvu86m",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Hilbert-tér",
+			"q": "$C[a,b]$ az $L^2$-normára nézve nem teljes.",
+			"answer": true,
+			"explain": "Emiatt $(C[a,b],\\langle\\cdot,\\cdot\\rangle)$ nem Hilbert-tér."
+		},
+		{
+			"id": "854z2pak",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Hilbert-tér",
+			"q": "$(\\ell^2,\\langle\\cdot,\\cdot\\rangle)$ nem Hilbert-tér, mert végtelen dimenziós.",
+			"answer": false,
+			"explain": "$\\ell^2$ Hilbert-tér; a végtelen dimenzió nem zárja ki a teljességet."
+		},
+		{
+			"id": "lx41hi92",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/A skaláris szorzat sorozatfolytonossága",
+			"q": "Ha euklideszi térben $x_n\\to\\alpha$ és $y_n\\to\\beta$, akkor $\\langle x_n,y_n\\rangle\\to\\langle\\alpha,\\beta\\rangle$.",
+			"answer": true,
+			"explain": "Ez a skaláris szorzat sorozatfolytonossága."
+		},
+		{
+			"id": "3ucxhb2w",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/A skaláris szorzat sorozatfolytonossága",
+			"q": "A skaláris szorzat sorozatfolytonosságának bizonyítása a paralelogramma-szabályon alapul.",
+			"answer": false,
+			"explain": "A bizonyítás a Cauchy–Bunyakovszkij-egyenlőtlenségen és az $(x_n)$ korlátosságán alapul."
+		},
+		{
+			"id": "4xtburwi",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "$p=4$ esetén $\\|e_1+e_2\\|_4^2=\\sqrt2$.",
+			"answer": true,
+			"explain": "$\\|e_1+e_2\\|_4^2=2^{2/4}=\\sqrt2$, ami nem egyenlő $2$-vel, így a paralelogramma-azonosság nem teljesül."
+		},
+		{
+			"id": "6hqnfotf",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "$1\\le p<\\infty$ esetén $\\|e_1\\pm e_2\\|_p^2=2^{1/p}$.",
+			"answer": false,
+			"explain": "$\\|e_1\\pm e_2\\|_p=2^{1/p}$, tehát a négyzete $2^{2/p}$."
+		}
+	]
+}

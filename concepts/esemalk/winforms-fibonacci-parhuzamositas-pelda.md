@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
+tags: [concept]
 sources: [elte_eva_ea05_winforms_multithread.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # WinForms alkalmazások párhuzamosítása — Fibonacci-generátor példa
@@ -46,7 +48,7 @@ $$F(n) = \begin{cases} 1 & \text{ha } n < 3 \\ F(n-1) + F(n-2) & \text{ha } n \g
 public Int64 Generate(Int32 number) {
     if (number < 1)
         throw new ArgumentOutOfRangeException(…);
-    if (number > 100)
+    if (number > 92) // F(93) már nem fér el Int64-ben
         throw new ArgumentOutOfRangeException(…);
 
     if (number < 3)

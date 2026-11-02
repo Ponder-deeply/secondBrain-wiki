@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/linearis-egyenletrendszerek-es-gauss-eliminacio]
+tags: [concept]
 sources: [NM1_ea02.pdf]
 derivation: source
+kind: overview
+element: air
 updated: 2026-08-05
 ---
 

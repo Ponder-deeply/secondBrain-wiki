@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/iterativ-modszerek-ler-re]
+tags: [concept]
 sources: [NM1_ea08.pdf]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-08-05
 ---
 
@@ -166,3 +168,5 @@ A példa mutatja, hogy $\omega = 1$ (eredeti Jacobi) adja a legjobb konvergenci�
 - [[concepts/nummodi/matrixnormak]] — $\|\cdot\|_\infty$ (sornorma), spektrálsugár $\varrho$
 - [[concepts/nummodi/kondicioszam]] — kondíciószám, LER érzékenysége
 - [[concepts/nummodi/relativ-maradek]] — maradékvektor $r = b - Ax^{(k)}$, iterációs megállási kritérium
+- [[concepts/nummodi/gauss-seidel-iteracio]] — $P = D + L$: az új komponenseket azonnal felhasználó változat
+- [[concepts/nummodi/richardson-iteracio]] — $R(p)$ a $D^{-1}$-gyel skálázott LER-en éppen $J(p)$

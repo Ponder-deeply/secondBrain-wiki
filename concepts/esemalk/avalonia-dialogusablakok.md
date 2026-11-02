@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -68,7 +70,7 @@ mentéssel.
 - [[concepts/esemalk/avalonia-platformfuggetlen-perzisztencia]] — az
   alkalmazás saját, automatikus állapotmentése `System.IO`-val és
   `Environment.SpecialFolder`-rel
-- [[concepts/esemalk/avalonia-eletciklus-kezeles]] — a mentést kiváltó
+- [[concepts/esemalk/avalonia-mobil-alkalmazaskornyezet-eletciklus]] — a mentést kiváltó
   életciklus-események
 - [[concepts/esemalk/avalonia-xaml-felulet]] — az `.axaml` felületleírás,
   `UserControl`/`Window`, amelyek a visual tree elemei

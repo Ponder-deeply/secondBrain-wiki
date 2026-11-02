@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [wiki.haskell.org/Referential_transparency]
 derivation: unsourced
+kind: definition
+element: water
 updated: 2026-05-18
 ---
 

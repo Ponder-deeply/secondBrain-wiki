@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [folyam_titkositok.pdf]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-04-22
 ---
 

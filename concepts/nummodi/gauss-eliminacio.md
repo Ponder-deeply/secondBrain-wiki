@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/linearis-egyenletrendszerek-es-gauss-eliminacio]
+tags: [concept]
 sources: [NM1_ea02.pdf, NM1_ea03.pdf]
 derivation: source
-updated: 2026-08-05
+kind: procedure
+element: water
+updated: 2026-10-21
 ---
 
 # Gauss-elimináció

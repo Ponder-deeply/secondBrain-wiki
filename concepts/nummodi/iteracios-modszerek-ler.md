@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/iterativ-modszerek-ler-re]
+tags: [concept]
 sources: [NM1_ea08.pdf]
 derivation: source
+kind: overview
+element: water
 updated: 2026-08-05
 ---
 
@@ -64,3 +66,7 @@ ahol $\varrho(B) = \max_i |\lambda_i(B)|$ az átmenetmátrix [[concepts/nummodi/
 - [[concepts/nummodi/lu-felbontas]] — LU-felbontás (ne keverjük az $L+D+U$ felbontással!)
 - [[concepts/nummodi/matrixnormak]] — spektrálsugár $\varrho(B)$ és indukált normák
 - [[concepts/nummodi/kondicioszam]] — kondíciószám és az iterációs módszerek pontossága
+- [[concepts/nummodi/gauss-seidel-iteracio]] — $P = L + D$
+- [[concepts/nummodi/relaxalt-gauss-seidel-iteracio]] — $S(\omega)$, a $0 < \omega < 2$ szükséges feltétel
+- [[concepts/nummodi/richardson-iteracio]] — $P = \tfrac1p I$, szimmetrikus pozitív definit mátrixra
+- [[concepts/nummodi/ilu-felbontas]] — $P = LU$ részleges LU-felbontásból; általános kétrétegű iteráció

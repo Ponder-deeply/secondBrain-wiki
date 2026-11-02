@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
+kind: definition
+element: earth
 updated: 2026-09-12
 ---
 

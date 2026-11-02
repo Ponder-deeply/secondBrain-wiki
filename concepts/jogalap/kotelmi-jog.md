@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [08_Kotelmi_jog.md]
 derivation: source
+kind: definition
+element: water
 updated: 2026-08-12
 ---
 

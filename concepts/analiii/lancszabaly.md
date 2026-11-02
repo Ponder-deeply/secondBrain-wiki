@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.1.4. Tétel, 4.2. i), vi), vii) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: fire
+updated: 2026-10-21
 ---
 
 # Láncszabály
@@ -70,6 +72,17 @@ $$\partial_1 F(x) = 2x_1 + 2x_1x_2x_3, \qquad \partial_2 F(x) = 2x_2 + x_1^2x_3,
 
 ami pontosan megegyezik a láncszabállyal kapott eredménnyel. A közvetlen módszer itt egyszerűbb volt, de bonyolultabb $f$, $g$ esetén a láncszabály lényegesen kevesebb számolást igényel — ez a gyakorlati oka annak, hogy nem behelyettesítéssel, hanem a tétellel dolgozunk.
 
+### Feladatok
+
+- $F(x)=f(g_1(x),g_2(x))$, $f,g$ mindenütt differenciálható: $F'(x)=\partial_1f(g(x))g_1'(x)+\partial_2f(g(x))g_2'(x)$ (az $f'\cdot g'$ szorzat: $1\times2$ és $2\times1$ mátrix). $g:\mathbb{R}^2\to\mathbb{R}^2$ esetén $F'=f'(g)\cdot g'$, azaz $\partial_jF=\sum_i\partial_if(g)\,\partial_jg_i$.
+- $f=ye^{x^2}$, $g(u,v)=(uv^2,\,u+v^2)$: $F=(u+v^2)e^{u^2v^4}$, $\partial_uF=e^{u^2v^4}\bigl(1+2uv^4(u+v^2)\bigr)$, $\partial_vF=e^{u^2v^4}\bigl(2v+4u^2v^3(u+v^2)\bigr)$.
+- $f=x^2+2y^2$, $g(u,v)=(u-v^2,\,uv)$, $a=(a_1,a_2)$: $f'(g(a))=(2(a_1-a_2^2),\,4a_1a_2)$, $g'(a)=\begin{bmatrix}1&-2a_2\\a_2&a_1\end{bmatrix}$, így $(f\circ g)'(a)=\bigl(2a_1-2a_2^2+4a_1a_2^2,\;-4a_1a_2+4a_2^3+4a_1^2a_2\bigr)$.
+- Ha $F\in D$ és $f=y\,F(x^2-y^2)$, akkor $y^2\partial_xf+xy\,\partial_yf=xf$: $\partial_xf=2xyF'$, $\partial_yf=F-2y^2F'$, behelyettesítve $2xy^3F'+xyF-2xy^3F'=xyF=xf$.
+- $f\in D^3$, $F(x,y,z)=f(xyz)$: $\partial_{123}F=g(xyz)$ a $g(t)=f'(t)+3tf''(t)+t^2f'''(t)$ függvénnyel (lépésenként: $\partial_3F=xyf'$, $\partial_2\partial_3F=xf'+x^2yzf''$, majd $\partial_1$).
+- A hőegyenlet: $f(x,t)=\dfrac1{2a\sqrt{\pi t}}\exp\bigl(-\tfrac{(x-b)^2}{4a^2t}\bigr)$ kielégíti $\partial_tf=a^2\partial_{xx}f$ (közvetlen deriválással).
+
+- **Típusellenőrzés és kétféle láncszabály (gyak 6. lap 5–6. feladat).** (i) $f:\mathbb{R}^2\to\mathbb{R}$, $g:\mathbb{R}\to\mathbb{R}^2$ mindenütt differenciálható $\Rightarrow F=f\circ g$ az, és $F'(x)=\underbrace{[\partial_1f(g)\ \ \partial_2f(g)]}_{1\times2}\begin{bmatrix}g_1'\\g_2'\end{bmatrix}=\partial_1f(g)g_1'+\partial_2f(g)g_2'$. (ii) $g:\mathbb{R}^2\to\mathbb{R}^2$ esetén $F'=[\partial_1F\ \ \partial_2F]=[\partial_1f(g)\ \ \partial_2f(g)]\begin{bmatrix}\partial_1g_1&\partial_2g_1\\\partial_1g_2&\partial_2g_2\end{bmatrix}$, azaz $\partial_jF=\partial_1f(g)\,\partial_jg_1+\partial_2f(g)\,\partial_jg_2$. Általában $(f\circ g)'(a)\in\mathbb{R}^{s\times n}$, mert $f'(g(a))\in\mathbb{R}^{s\times m}$ és $g'(a)\in\mathbb{R}^{m\times n}$.
+
 ## Kapocs
 
 - [[concepts/analiii/differencialasi-szabalyok-tobbvaltozos]] — a szorzat- és hányadosszabály, amelyek ennek speciális esetei.
@@ -78,3 +91,4 @@ ami pontosan megegyezik a láncszabállyal kapott eredménnyel. A közvetlen mó
 - [[concepts/analiii/nivofelulet-es-gradiens]] — a gradiens merőlegessége szintén láncszabály-következmény.
 - [[concepts/analiii/tobbvaltozos-taylor-formula]] — a bizonyítása az $F(t) = f(a+th)$ függvényre alkalmazza a láncszabályt.
 - [[concepts/analii/derivalasi-szabalyok]] — az egyváltozós összetett-függvény-szabály.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

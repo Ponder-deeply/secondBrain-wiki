@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/bevezetes]
+tags: [concept]
 sources: [EA1_bevezetes.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-12
 ---
 

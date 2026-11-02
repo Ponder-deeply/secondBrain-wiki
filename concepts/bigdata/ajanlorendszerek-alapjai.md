@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/ajanlorendszerek]
+tags: [concept]
 sources: [BDAEM-2022-EA11.pdf]
 derivation: source
+kind: overview
+element: water
 updated: 2026-09-12
 ---
 

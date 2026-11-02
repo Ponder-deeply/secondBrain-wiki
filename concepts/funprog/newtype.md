@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton, wiki.haskell.org/Newtype]
 derivation: unsourced
+kind: comparison
+element: air
 updated: 2026-05-18
 ---
 

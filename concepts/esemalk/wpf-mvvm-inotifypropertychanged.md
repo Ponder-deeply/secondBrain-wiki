@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
+tags: [concept]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Adatkötés változáskövetéssel (`INotifyPropertyChanged`)
@@ -76,7 +78,7 @@ mutatja be a mintát:
 - `Student` — a modell osztály, amely megvalósítja az
   `INotifyPropertyChanged` interfészt (`FirstName`, `LastName`,
   `StudentCode`, származtatott `FullName` tulajdonsággal).
-- `StudentsViewModel` — a nézetmodell, amely egy `ObservableCollection<Student>`
+- `StudentViewModel` — a nézetmodell, amely egy `ObservableCollection<Student>`
   tulajdonságban (`Students`) tárolja a változásfigyelt gyűjteményt.
 - `MainWindow` — a nézet, amely `ItemsControl`-lal és `DataTemplate`-tel
   jeleníti meg a gyűjtemény elemeit:
@@ -90,7 +92,7 @@ mutatja be a mintát:
             <TextBox Text="{Binding FirstName}" Width="100" Margin="5"/>
             <!-- adatkötés a tulajdonságokhoz -->
         </StackPanel>
-    </ItemsControl.ItemTemplate></DataTemplate>
+    </DataTemplate></ItemsControl.ItemTemplate>
 </ItemsControl>
 ```
 
@@ -102,7 +104,7 @@ mutatja be a mintát:
 private void App_Startup(…) {
     MainWindow window = new MainWindow(); // nézet létrehozása
     StudentViewModel viewModel = new StudentViewModel(); // nézetmodell létrehozása
-    window.DataContext = viewModel; // nézetmodell és modell társítása
+    window.DataContext = viewModel; // nézet és nézetmodell társítása
     window.Show();
 }
 ```

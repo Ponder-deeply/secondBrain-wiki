@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/qr-felbontas-es-ortogonalizacio]
+tags: [concept]
 sources: [NM1_ea05.pdf]
 derivation: source
-updated: 2026-08-05
+kind: theorem
+element: water
+updated: 2026-09-30
 ---
 
 # QR-felbontás
@@ -68,7 +70,7 @@ Tegyük fel, hogy az $Ax = b$ LER megoldható és rendelkezésre áll az $A = QR
 
 Együtt: oldjuk meg az $Rx = Q^\top b$ LER-t.
 
-**Előállítás:** $\frac{2}{3}n^3 + \mathcal{O}(n^2)$ — ugyanannyi, mint a Gauss-elimináció (Num. mód. 2A tétel).
+**Előállítás:** $2n^3 + \mathcal{O}(n^2)$, Householder-transzformációkkal $\frac{8}{3}n^3 + \mathcal{O}(n^2)$ (és $2(n-1)$ gyökvonás) — drágább a Gauss-eliminációnál ($\frac{2}{3}n^3$).
 
 **Előny:** Ha sokszor ugyanaz az $A$ jobboldala változik, a QR-felbontást elég egyszer elvégezni. Numerikusan **stabilabb**, mint a közvetlen GE (különösen Householder-transzformációkkal).
 
@@ -77,7 +79,7 @@ Együtt: oldjuk meg az $Rx = Q^\top b$ LER-t.
 | Felbontás | Feltétel | Tényezők |
 |---|---|---|
 | [[concepts/nummodi/lu-felbontas]] | $\det(A_k)\neq 0$ | $L \in \mathcal{L}_1$, $U \in \mathcal{U}$ |
-| [[concepts/nummodi/ldu-felbontas]] | szimmetrikus, pos. def. | $L, D, U$ ill. $LL^\top$ |
+| [[concepts/nummodi/ldu-felbontas]] | $\det(A_k)\neq 0$ (az $LL^\top$ alakhoz: szimmetrikus, pos. def.) | $L, D, U$ ill. $LL^\top$ |
 | QR | $\det(A) \neq 0$ | $Q$ ortogonális, $R \in \mathcal{U}$ |
 
 ## Kapocs

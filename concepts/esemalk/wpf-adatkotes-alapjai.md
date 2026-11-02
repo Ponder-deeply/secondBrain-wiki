@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
+tags: [concept]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # WPF adatkötés (Binding) alapjai
@@ -47,15 +49,16 @@ A kötés többféleképpen paraméterezhető:
 
 - a kötés módja (`Mode`) lehet egyirányú (`OneWay`), kétirányú (`TwoWay`,
   ekkor mindkét objektum változása kihat a másikra), egyszeres (`OneTime`), …
-- a cél frissítése (`UpdateSourceTrigger`) lehet változtatásra
+- a forrás frissítésének időpontja (`UpdateSourceTrigger`, azaz mikor íródik
+  vissza a cél értéke a forrásba) lehet változtatásra
   (`PropertyChanged`), fókuszváltásra (`LostFocus`), …
 
 ```xml
 <TextBox Name="textAnotherName"
     Text="{Binding ElementName=textBoxName,
-           Path=Text, Mode=OneWay,
+           Path=Text, Mode=TwoWay,
            UpdateSourceTrigger=LostFocus}" />
-<!-- egyirányú kötés fókuszváltásra -->
+<!-- kétirányú kötés, a forrás fókuszváltáskor frissül -->
 ```
 
 ### Adatkötés objektumértékekhez

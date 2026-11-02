@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [4.-myhill-nerode-és-minimál-automata.md]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-06-09
 ---
 

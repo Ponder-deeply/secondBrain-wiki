@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3.7, wiki.haskell.org/Polymorphism]
 derivation: unsourced
+kind: definition
+element: air
 updated: 2026-05-18
 ---
 

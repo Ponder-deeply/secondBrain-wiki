@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 1.2. vii), 1.4. v), 1.6. vii), 1.8. vi)–vii), xiv) megjegyzés"]
 derivation: source
+kind: definition
+element: water
 updated: 2026-09-07
 ---
 

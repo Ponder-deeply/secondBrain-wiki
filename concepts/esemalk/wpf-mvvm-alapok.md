@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
+tags: [concept]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-13
 ---
 

@@ -1,9 +1,11 @@
 ---
-tags: [concept, bigdata/spark-graphx]
+tags: [concept]
 sources: [EA4_spark_graphx.pdf]
 references: ["Valiant, L. G. (1990): A bridging model for parallel computation — Bulk Synchronous Parallel (BSP) modell eredeti forrása"]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: water
+updated: 2026-09-30
 ---
 
 # Pregel modell (superstep, üzenetküldés)
@@ -18,7 +20,10 @@ szemlélettel, ahol a számítás egymást követő superstepekben, csúcsok kö
 ### Bulk Synchronous Parallel (BSP) modell
 
 A BSP modellt eredetileg Valiant vezette be (1990) párhuzamos számítási
-modellként. Alapelve: "think like a vertex" — a programozó egyetlen csúcs
+modellként: a számítás superstepekből áll, amelyeket globális
+szinkronizációs pontok (barrier) választanak el. A "think like a vertex"
+szemlélet nem Valiant-tól, hanem a BSP-re épülő Pregeltől (Malewicz et al.,
+2010) származik (a forrásdia a BSP-nek tulajdonítja, ami pontatlan): a programozó egyetlen csúcs
 szemszögéből fogalmazza meg a logikát, és ez a logika minden csúcson
 párhuzamosan, egymástól függetlenül fut le egy-egy körben (superstepben). A
 superstepek szinkronizációs pontokkal (barrier) választódnak el: egy

@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
+tags: [concept]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -81,6 +83,6 @@ public App() { // konstruktor
   cél, forrás, `Mode`, `UpdateSourceTrigger`, `DataContext`
 - [[concepts/esemalk/wpf-mvvm-alapok]] — az MVVM architektúra, amelyben a
   nézetmodell `ObservableCollection`-jeit jellemzik ezek a kötések
-- [[concepts/esemalk/wpf-vezerlok-tartalmazasa]] — `ContentControl` vs.
+- [[concepts/esemalk/wpf-vezerlok-tulajdonsagai]] — `ContentControl` vs.
   `ItemsControl` tartalmazás, amelyre a gyűjtemény-kötés épül
 - [[subjects/esemalk]]

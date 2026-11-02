@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [szóbeli-tételjegyzék 1.md]
 derivation: source
+kind: overview
+element: water
 updated: 2026-08-05
 ---
 

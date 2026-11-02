@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
 # Kifejezés törzsű tagok (expression body)
@@ -25,7 +27,7 @@ struct Rational {
     } // nevező tulajdonsága
 
     public Double ToDouble() {
-        return num / denom;
+        return (Double)num / denom;
     } // konvertálás lebegőpontos értékre
 }
 ```
@@ -41,7 +43,7 @@ struct Rational {
         set => denom = (value == 0) ? 1 : value;
     } // nevező tulajdonsága
 
-    public Double ToDouble() => num / denom;
+    public Double ToDouble() => (Double)num / denom;
     // konvertálás lebegőpontos értékre
 }
 ```

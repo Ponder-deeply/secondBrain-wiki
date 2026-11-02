@@ -1,7 +1,9 @@
 ---
-tags: [concept, dimatii/forraskodolas]
+tags: [concept]
 sources: [DimatIIEa08.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-08
 ---
 

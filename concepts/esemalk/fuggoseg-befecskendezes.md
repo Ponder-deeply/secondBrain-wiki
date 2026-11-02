@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
-sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
+tags: [concept]
+sources: [elte_eva_ea04_winforms_architecture_testing.pdf, elte_eva_gy04_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Függőség-befecskendezés
@@ -17,7 +19,7 @@ ez teszi lehetővé a rétegek/komponensek közötti laza csatolást
 
 Amikor egy komponens (pl. egy rétegben lévő osztály) felhasználja egy
 másik komponens funkcionalitását, közöttük *függőség* (*dependency*)
-alakul ki. A cél a minél kisebb függőség elérése: a függőséget úgy
+alakul ki. A cél az, hogy ez a függőség minél kisebb legyen: úgy
 valósítjuk meg, hogy a felhasználó komponens ne a konkrét
 megvalósítástól, csak annak felületétől (interfészétől) függjön.
 
@@ -58,18 +60,22 @@ Dependant d =
 ### Alkalmazás háromrétegű architektúrában
 
 A [[concepts/esemalk/haromreteg-architektura]] esetén a
-függőség-befecskendezést jellemzően a modell, illetve az adatkezelés
-esetén használjuk: a perzisztencia réteg felületét (`PersistenceInterface`)
-elválasztjuk a megvalósítástól (`PersistenceImplementation`), utóbbit a
-nézet fecskendezi be a modellbe — a modell így csak a felületet ismeri,
-a konkrét adattárolási módtól független marad.
+függőség-befecskendezést jellemzően a modellben, illetve az adatkezelésben
+használjuk: a perzisztenciaréteg felületét (`PersistenceInterface`)
+elválasztjuk a megvalósítástól (`PersistenceImplementation`), utóbbit pedig a
+nézet fecskendezi be a modellbe. A modell így csak a felületet ismeri, és
+független marad a konkrét adattárolási módtól.
+
+### Gyakorlati példa és tárolók (4. gyakorlat)
+
+A DocuStat modell konstruktora `IFileManager`-t vár; a konkrét megvalósítást (`TextFileManager`, `PdfFileManager`) a `FileManagerFactory.CreateForPath` gyártófüggvény választja a fájl kiterjesztése alapján. Sok függőség esetén a példányosítást IoC tárolóra (`ServiceCollection`) bízhatjuk. Lásd [[concepts/esemalk/docustat-perzisztencia-filemanager]], [[concepts/esemalk/ioc-tarolo-servicecollection]].
 
 ## Kapocs
 
 - [[concepts/esemalk/haromreteg-architektura]] — az architektúra, amelynek
   rétegei közötti laza csatolást a függőség-befecskendezés biztosítja
-- [[concepts/esemalk/csharp-interfeszek]] — az interfészek, amelyeken
+- [[concepts/esemalk/csharp-oroklodes]] — az interfészek, amelyeken
   keresztül a függőségeket absztraháljuk
 - [[concepts/esemalk/tictactoe-haromreteg-pelda]] — konkrét példa a
-  perzisztencia réteg befecskendezésére
+  perzisztenciaréteg befecskendezésére
 - [[subjects/esemalk]]

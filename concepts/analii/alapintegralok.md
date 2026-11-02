@@ -3,6 +3,8 @@ tags: [concept]
 sources: [01_ea_an_ii_a_b_merged.pdf]
 references: ["An II A/B 6. előadás"]
 derivation: source
+kind: overview
+element: air
 updated: 2026-09-04
 ---
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
+tags: [concept]
 sources: [elte_eva_ea05_winforms_multithread.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Szál létrehozása és kezelése C#-ban
@@ -25,7 +27,10 @@ thread.Start();
   végrehajtandó metódust (`ThreadStart` delegált).
 - A gyerekszálon futó feladat végrehajtása a szülőszálon bevárható a
   `Thread` objektum `Join()` metódusával.
-- Dönthetünk a gyerekszál terminálása mellett is (`Abort()`).
+- Dönthetünk a gyerekszál terminálása mellett is (`Abort()`) — ez azonban
+  csak .NET Frameworkön működik; .NET Core / .NET 5+ alatt
+  `PlatformNotSupportedException`-t dob, helyette kooperatív leállítás
+  (`CancellationToken`) ajánlott.
 - A szálak végrehajtási sorrendje **nem determinisztikus**: két, egymástól
   független szál kiírásai tetszőleges sorrendben jelenhetnek meg (pl. a fő
   szál és egy `Thread.Sleep`-pel elaltatott gyerekszál kiírásai

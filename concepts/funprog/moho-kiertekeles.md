@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [wiki.haskell.org/Performance/Strictness, Hutton ch 12]
 derivation: unsourced
+kind: comparison
+element: water
 updated: 2026-05-18
 ---
 

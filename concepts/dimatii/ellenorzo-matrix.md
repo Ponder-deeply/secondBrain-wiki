@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/hibakorlatozo-es-linearis-kodok]
-sources: [DimatIIEa09.pdf, DimatIIEa10.pdf]
+tags: [concept]
+sources: [DimatIIEa09.pdf, DimatIIEa10.pdf, dm2gy12.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Ellenőrző mátrix
@@ -44,6 +46,21 @@ Tehát bármely $u$ kódolandó szóra $\mathbf{H}(\mathbf{G}u) = 0$, vagyis $\m
 **Következmény.** A kód távolsága a legkisebb pozitív egész $\ell$, amire létezik az ellenőrző mátrixnak $\ell$ darab lineárisan összefüggő oszlopa.
 
 **Példa.** A $(*)$ kód fenti $\mathbf{H}$ mátrixában egyik oszlopvektor sem a nullvektor, így nincs 1 darab lineárisan összefüggő oszlop; egyik oszlopvektor sem többszöröse egy másiknak, így nincs 2 darab sem. Az 1., 3. és 5. oszlop lineárisan összefüggő, így a kód távolsága 3.
+
+### Feladattípusok és módszerek: $[n,k,d]$ létezése az ellenőrző mátrix oszlopaiból (2024. 12. sorozat)
+
+**Elv.** $d\ge3\iff\mathbf H$ oszlopai nem nullák és páronként lineárisan függetlenek (egyik sem skalárszorosa egy másiknak). Ha $\mathbf H$-nak $r=n-k$ sora van, a páronként független oszlopok száma legfeljebb $\frac{q^r-1}{q-1}$ (a projektív tér pontjai). $r=2$ esetén ez $q+1$.
+
+**Létezik-e $\mathbb{F}_q$ fölött $[n,k,d]$ kód?**
+
+- $[7,6,2]_5$: létezik, a paritásellenőrző kód $c_7=-(c_1+\dots+c_6)$ ($\mathbf H=(1\ 1\ \cdots\ 1)$); Singleton-egyenlőség, MDS.
+- $[8,6,3]_2$: **nem**, mert $r=2$, és $\mathbb{F}_2^2$-ben csak $q+1=3$ páronként független oszlop van, nem $8$ (a Hamming-korlát is kizárja: $2^6(1+8)=576>2^8$).
+- $[8,6,3]_9$: **létezik**, mert $q+1=10\ge8$ oszlop választható (MDS kód).
+- $[6,4,3]_2$: **nem** ($3<6$ oszlop; Hamming-korlát: $2^4\cdot7=112>2^6$).
+- $[6,4,3]_5$: **létezik**, $q+1=6\ge6$ (MDS).
+- $n=5,k=2,d=4$: Singleton szerint $d\le n-k+1=4$, tehát MDS kód kellene. A generátormátrix öt sora $\mathbb{F}_q^2$-ben páronként nem arányos nem nulla vektor kell legyen (különben egy üzenet két helyen is nullát adna, így $w\le3$), ezért $5\le q+1$, azaz $q\ge4$. $q=2$ és $q=3$ kizárt, $q=4$-re létezik (mind az $5=q+1$ pont kell), és minden $q\ge4$ prímhatványra is.
+
+**Tipikus hiba.** A Singleton-korlát *teljesülésénél* megállni (az csak szükséges feltétel: $[8,6,3]_2$ megfelel neki, mégsem létezik); $d$-t az $\mathbf H$ sorainak számával keverni.
 
 ## Kapocs
 

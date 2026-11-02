@@ -1,15 +1,18 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
-# C# megjegyzések
+# C# megjegyzések, előfordítási direktívák és attribútumok
 
 A C# kétféle megjegyzést különböztet meg: az egyszerű megjegyzések fordításkor
-törlődnek, a *dokumentációs megjegyzések* viszont fordításra kerülnek, és
-utólag előhívhatóak a lefordított tartalomból.
+törlődnek, a *dokumentációs megjegyzések* viszont fordításkor egy külön XML
+dokumentációs fájlba gyűjthetők ki (a lefordított szerelvénybe nem kerülnek
+bele), és onnan utólag feldolgozhatók (pl. súgó, dokumentációgenerálás).
 
 ## Tartalom
 
@@ -39,10 +42,47 @@ struct Rational {
 }
 ```
 
+### Előfordítási direktívák és régiók
+
+A nyelv *előfordítási direktívákat* tartalmaz, amelyek előzetesen kerülnek
+feldolgozásra, még a tényleges fordítás előtt.
+
+Az előfordítási direktívák lehetőséget adnak bizonyos kódsorok feltételes
+fordítására, hibajelzésre, környezetfüggő beállítások lekérdezésére, pl.
+`#if`, `#define`, `#error`, `#line`.
+
+Mivel C#-ban nem választható szét a deklaráció a definíciótól, a kód
+tagolását a *régiók* segítik elő, amelyek tetszőleges kódblokkokat foghatnak
+közre:
+
+```csharp
+#region <név>
+...
+#endregion
+```
+
+A régiók nem befolyásolják a lefordított kódot, csupán a
+fejlesztőkörnyezetben (összecsukható blokkként) érhetőek el.
+
+### Attribútumok
+
+Az *attribútumok* (`attribute`) olyan speciális osztályok, amelyek elsősorban
+a virtuális gépnek (CLR) szolgálnak információkat (úgynevezett *metaadat*okat),
+kiegészítve a kód deklarációit.
+
+Az attribútumok segítségre lehetnek a kód kezelésében, *reflexió*
+segítségével kezelhetőek (lekérdezhetők futásidőben). A deklaráció elé,
+szögletes zárójelben adjuk meg őket, alkalmazhatóak osztályra, metódusra,
+paraméterre és más nyelvi elemekre is.
+
+```csharp
+[Serializable] // attribútumok
+[ComVisible(true)]
+class SomeClass { ... }
+```
+
 ## Kapocs
 
-- [[concepts/esemalk/csharp-eloforditasi-direktivak]] — a régiókhoz
-  hasonlóan a megjegyzések sem befolyásolják a lefordított kódot
 - [[concepts/esemalk/csharp-osztaly-szerkezete]] — dokumentációs
   megjegyzések osztályok és tagjaik deklarációjánál
 - [[subjects/esemalk]] — a kurzus áttekintése

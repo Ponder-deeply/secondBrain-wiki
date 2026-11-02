@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-12
 ---
 
@@ -61,6 +63,6 @@ kivétel, és attól is, hogy azt lekezelte-e valamelyik `catch` ág.
 
 ## Kapocs
 
-- [[concepts/esemalk/csharp-osztalyok]] — a kivétel is egy osztály
+- [[concepts/esemalk/csharp-osztaly-szerkezete]] — a kivétel is egy osztály
   (`Exception` leszármazottja) példánya
 - [[subjects/esemalk]] — a kurzus áttekintése

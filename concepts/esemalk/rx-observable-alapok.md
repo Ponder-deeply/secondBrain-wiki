@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # ReactiveX és az Observable alapjai
@@ -76,6 +78,32 @@ definiálását:
 A felsorolt elemeket operátorokkal szűrhetjük, transzformálhatjuk,
 csoportosíthatjuk — lásd [[concepts/esemalk/rx-operatorok]].
 
+### Feliratkozás (`Subscribe`)
+
+A `Subscribe()` eljárás kapcsolja össze a megfigyelőt (observer) a megfigyelhető felsorolóval (observable); három opcionális callback-et vehet át.
+
+A ReactiveX (Rx.NET) mintában egy megfigyelhető felsorolóra (`IObservable<T>`) a `Subscribe()` eljárással lehet feliratkozni:
+
+```csharp
+subscription = myObservable.Subscribe(
+    param => /* … */, // onNext
+    ex => /* … */,    // onError
+    () => /* … */     // onSuccess
+);
+```
+
+- `onNext` — minden egyes kibocsátott elemre lefut
+- `onError` — hiba esetén hívódik meg (kivétel a folyamban)
+- `onCompleted` — a felsorolás sikeres végén fut le (a diasoron `onSuccess` néven, ami az RxJava elnevezése)
+
+A hibakezelő és a befejezést jelző callback megadása opcionális; a legegyszerűbb feliratkozás csak az `onNext` callback-et adja meg:
+
+```csharp
+subscription = myObservable.Subscribe(
+    param => Console.WriteLine(param)
+);
+```
+
 ## Kapocs
 
 - [[concepts/esemalk/reaktiv-iterator-tervezesi-minta]] — az Iterator
@@ -90,7 +118,7 @@ csoportosíthatjuk — lásd [[concepts/esemalk/rx-operatorok]].
   programozás, kontrasztban az `Observable`-alapú modellel
 - [[concepts/esemalk/stream-alapu-fajlkezeles]] — a `StreamReader`-alapú
   fájlolvasás, amit a példa `Observable.Create` felhasznál
-- [[concepts/esemalk/reaktiv-feliratkozas]] — a `Subscribe()` eljárás
-  `onNext`/`onError`/`onSuccess` callback-jei
 - [[concepts/esemalk/reaktiv-multicasting]] — multicasting és a cold/hot
   observable megkülönböztetés
+- [[subjects/esemalk]] — a kurzus áttekintése
+- [[concepts/esemalk/reaktiv-szenzor-pelda]] — feliratkozás egy konkrét, feldolgozott adatfolyamra

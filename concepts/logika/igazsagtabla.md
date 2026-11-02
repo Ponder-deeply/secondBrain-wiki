@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/iteletlogika-szemantika]
-sources: [iteletlogika.pdf]
+tags: [concept]
+sources: [iteletlogika.pdf, Ítéletlogika_alapjai.pdf]
 references: [Pásztorné Varga Katalin – Várterész Magda, A matematikai logika alkalmazásszemléletű tárgyalása]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Igazságtábla
@@ -56,3 +58,4 @@ Formulahalmaz vizsgálatakor a halmaz elemeit egyetlen közös táblázatban is 
 - [[concepts/logika/zarojelelhagyas]] — a táblázatban szereplő formulák tömör, zárójel nélküli alakja
 - [[concepts/logika/szemantikus-kovetkezmeny]] — kielégíthetőség, tautológia és szemantikus következmény igazságtáblával
 - [[concepts/logika/kovetkeztetesforma]] — a következtetésforma helyességének igazságtáblás ellenőrzése
+- [[concepts/logika/iteletlogikai-formalizalas]] — végigvitt példa: formalizálás és következtetés közös igazságtáblával

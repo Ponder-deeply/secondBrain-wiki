@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 08_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 09_gyak_An_III_2022_tavasz.pdf, 08_ea_An3_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 2.4. Tétel"]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Weierstrass-tétel: folytonos kép kompakt halmazon
@@ -42,6 +44,10 @@ Az $m \in R_f$ állítás ugyanígy adódik. A szélsőértéket tehát $f$ **fe
 
 Ez a tétel a többváltozós szélsőérték-feladatok létezési fele: korlátos és zárt (tehát $\mathbb{R}^p$-ben a [[concepts/analiii/heine-borel-tetel|Heine–Borel-tétel]] szerint kompakt) tartományon folytonos függvény szélsőértéke garantáltan létezik, és már csak a helyét kell megkeresni a [[concepts/analiii/lokalis-szelsoertek-feltetelei|lokális feltételekkel]] és a peremvizsgálattal. Ezt a keresési eljárást a $\mathbb{R}^n \to \mathbb{R}$ esetre az [[concepts/analiii/abszolut-szelsoertek|abszolút szélsőérték]] lapja írja le részletesen.
 
+### Ha a tartomány nem kompakt
+
+A feltételek nem hagyhatók el: nyílt tartományon (pl. $\{x>0,y>0\}$) a tétel nem alkalmazható. A gyakorlaton ilyenkor a keresett szélsőértéket egy kompakt szintvonal-halmazra ($\{f\le f(P)\}$ lezárása) szűkítik, és ott alkalmazzák a tételt (gyak 9. lap, tartályfeladat; lásd [[concepts/analiii/abszolut-szelsoertek]]).
+
 ## Kapocs
 
 - [[concepts/analiii/kompakt-halmazok]] — a kompaktság definíciója és alaptulajdonságai
@@ -51,3 +57,4 @@ Ez a tétel a többváltozós szélsőérték-feladatok létezési fele: korlát
 - [[concepts/analiii/egyenletes-folytonossag-metrikus-terben]] — a Heine-tétel, a kompaktság harmadik következménye
 - [[concepts/analiii/bolzano-tetel-osszefuggo-halmazon]] — az összefüggőségre vonatkozó párja
 - [[concepts/analiii/abszolut-szelsoertek]] — a tétel gyakorlati alkalmazása $\mathbb{R}^n \to \mathbb{R}$ függvények abszolút szélsőértékének megkeresésére
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

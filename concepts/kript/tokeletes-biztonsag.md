@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [tökéletes_biztonság.pdf, tökéletes_biztonság_feladatok.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-04-22
 ---
 

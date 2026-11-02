@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-09-14
+sources: [An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf]
+derivation: inferred
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Hengerkoordinátás helyettesítés
@@ -34,6 +36,11 @@ $$\iiint_{g[H]} f(x,y,z)\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z = \iiint_H f(r\c
 ### Mikor érdemes használni
 
 Hengerkoordináták akkor egyszerűsítik a számolást, ha a tartomány vagy az integrandus az $Oz$ tengely körül forgásszimmetrikus (pl. henger, kúp, forgástest), de a $z$ irányú kiterjedés nem gömbszerűen, hanem függetlenül változik a sugártól.
+
+### Feladatok
+
+- $\iiint_H(x^2+y^2)\,\mathrm{d}V$, $H$ az $x^2+y^2=2z$ paraboloid és a $z=2$ sík között: $r\le2$, $\frac{r^2}{2}\le z\le2$; $2\pi\int_0^2r^3\left(2-\frac{r^2}2\right)\mathrm{d}r=\frac{16\pi}{3}$. *(gyakorlat.pdf, Többdimenziós integrálok 13c)*
+- A Viviani-test térfogata (hengerkoordinátákban $0\le r\le R\cos\varphi$, $|z|\le\sqrt{R^2-r^2}$), lásd [[concepts/analiii/grafikon-alatti-halmaz-terfogata]]. *(An III gyak. 12.)*
 
 ## Kapocs
 

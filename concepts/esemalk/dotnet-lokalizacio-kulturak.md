@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/lokalizacio]
+tags: [concept]
 sources: [elte_eva_ea12_localization.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -72,7 +74,7 @@ további lehetőségeket a `ResourceManager` típus biztosít.
 
 ## Kapocs
 
-- [[concepts/esemalk/dotnet-eroforraskezeles]] — az erőforrásfájlok (`.resx`)
+- [[concepts/esemalk/winforms-kepek-megjelenitese]] — az erőforrásfájlok (`.resx`)
   általános szerepe a projektben (content vs. embedded resource); ez a lap a
   kultúra-specifikus (lokalizációs) felhasználásukat mutatja be
 - [[concepts/esemalk/xaml-lokalizacio-x-static]] — a lokalizált erőforrások

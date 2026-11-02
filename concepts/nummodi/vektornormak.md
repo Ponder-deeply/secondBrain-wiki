@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/vektor-es-matrixnormak]
+tags: [concept]
 sources: [NM1_ea06.pdf]
 derivation: source
-updated: 2026-08-05
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Vektornormák

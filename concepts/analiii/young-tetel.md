@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 06_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 06_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, gyakorlat.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.3.1. Tétel"]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Young-tétel
@@ -52,6 +54,12 @@ Szimmetrikusan, $v$ szerint felírva $\Delta$-t (rögzített $u$-val, majd a $\p
 - A [[concepts/analiii/tobbvaltozos-taylor-polinom|multiindexes jelölést]]: a $\partial^i f$ szimbólum csak akkor jóldefiniált, ha a sorrend közömbös.
 - A [[concepts/analiii/rotaciomentes-vektormezo|rotációmentesség]] $\partial_i f_j = \partial_j f_i$ szükséges feltételét primitív függvény létezéséhez.
 
+### Feladatok
+
+**A tétel feltétel nélkül hamis.** $f=xy\dfrac{x^2-y^2}{x^2+y^2}$, $f(0,0)=0$. $\partial_2f(x,0)=\lim_{y\to0}\dfrac{f(x,y)}{y}=x$, így $\partial_{21}f(0,0)=\partial_1(\partial_2f)(0,0)=\lim_{x\to0}\dfrac{x}{x}=1$. Hasonlóan $\partial_1f(0,y)=-y$, tehát $\partial_{12}f(0,0)=\partial_2(\partial_1f)(0,0)=-1$ (a lap jelölése: $\partial_{ij}=\partial_j\partial_i$). CORRECTION: korábban $\partial_{12}=1$, $\partial_{21}=-1$ állt, ami a lap saját jelölésével ellentmondott; a gyak 6. lap 4. feladata szerint $\partial_{12}f(0,0)=-1$, $\partial_{21}f(0,0)=1$. A két vegyes derivált létezik, de nem egyenlő; ezért $f$ nem kétszer differenciálható az origóban (a Young-tétel feltétele, a $D^2\{a\}$, nem teljesül).
+
+- **Hivatalos megoldás (gyak 6. lap 4. feladat).** $\partial_1f(0,0)=\partial_2f(0,0)=0$ (a $f(t,0)=f(0,t)=0$ miatt). $(x,y)\ne0$ esetén $\partial_1f=y\frac{x^2-y^2}{x^2+y^2}+\frac{4x^2y^3}{(x^2+y^2)^2}$, $\partial_2f=x\frac{x^2-y^2}{x^2+y^2}-\frac{4x^3y^2}{(x^2+y^2)^2}$. A másodrendűek a definícióból: $\partial_{12}f(0,0)=\lim_{t\to0}\frac{\partial_1f(0,t)-\partial_1f(0,0)}{t}=\frac{-t}t=-1$, $\partial_{21}f(0,0)=\lim\frac{\partial_2f(t,0)-0}t=1$. Ha $f$ kétszer differenciálható lenne az origóban, a Young-tétel szerint egyezniük kellene — tehát nem az.
+
 ## Kapocs
 
 - [[concepts/analiii/magasabbrendu-parcialis-derivaltak]] — a felcserélendő deriváltak definíciója.
@@ -59,3 +67,4 @@ Szimmetrikusan, $v$ szerint felírva $\Delta$-t (rögzített $u$-val, majd a $\p
 - [[concepts/analiii/tobbvaltozos-taylor-polinom]] — a multiindexes jelölés jogalapja.
 - [[concepts/analiii/rotaciomentes-vektormezo]] — ahol a szimmetria szükséges feltételként jelenik meg.
 - [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]] — ugyanaz az „egydimenziós információ kevés" mintázat.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

@@ -2,6 +2,7 @@
 tags: [subject]
 sources: [Wiki/sources/funprog/tanterv.pdf, Wiki/sources/funprog/kviz-minta.pdf]
 derivation: source
+math: 20
 updated: 2026-08-05
 ---
 

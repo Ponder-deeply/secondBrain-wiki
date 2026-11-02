@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, RopzhKerdesek.pdf]
 references: ["Simon Péter: Analízis II., 1.7.10. Tétel, 1.8. x), xii)–xvi) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-22
 ---
 
 # A kompaktság három ekvivalens megfogalmazása
@@ -75,3 +77,4 @@ Metrikus térben az alábbi három állítás ekvivalens:
 - [[concepts/analiii/cantor-metszettetel]] — a skatulyázott metszettétel konkrét alakja
 - [[concepts/analiii/halmaz-pontjai-metrikus-terben]] — a torlódási pont és a derivált halmaz
 - [[concepts/analiii/metrikus-terek-szorzata]] — kompaktság a szorzattérben
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

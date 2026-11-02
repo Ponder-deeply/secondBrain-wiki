@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/storm-stream-feldolgozas]
+tags: [concept]
 sources: [EA5_storm.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: water
+updated: 2026-09-30
 ---
 
 # Storm megbízható feldolgozás (at-least-once, ack/fail)
@@ -18,7 +20,7 @@ keresztül.
 
 - **At-least-once (legalább egyszer)** — a topológiába bemenő minden
   tuple-t legalább egyszer feldolgoz a rendszer.
-- **At-most-once (legfeljebb egyszer)** — minden tuple-t pontosan
+- **At-most-once (legfeljebb egyszer)** — minden tuple-t legfeljebb
   egyszer dolgoz fel, vagy hiba esetén eldob (nem próbálja újra).
 
 ### Garantált feldolgozás mechanizmusa

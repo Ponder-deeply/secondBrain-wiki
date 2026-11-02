@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/lu-felbontas]
+tags: [concept]
 sources: [NM1_ea03.pdf]
 derivation: source
-updated: 2026-08-05
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Háromszögmátrixok
@@ -59,7 +61,7 @@ ahol $l_{ik} = \dfrac{a_{ik}^{(k-1)}}{a_{kk}^{(k-1)}}$ ($i = k+1,\ldots,n$) a GE
 $$L_k^{-1} = I + \ell_k e_k^\top.$$
 
 **Bizonyítás:**
-$$L_k \cdot L_k^{-1} = (I - \ell_k e_k^\top)(I + \ell_k e_k^\top) = I - \ell_k \underbrace{e_k^\top \ell_k}_{0} e_k^\top - \ell_k \underbrace{e_k^\top \ell_k}_{0} e_k^\top = I. \quad \square$$
+$$L_k \cdot L_k^{-1} = (I - \ell_k e_k^\top)(I + \ell_k e_k^\top) = I + \ell_k e_k^\top - \ell_k e_k^\top - \ell_k \underbrace{e_k^\top \ell_k}_{0} e_k^\top = I. \quad \square$$
 
 (A szorzat zéró, mert $e_k^\top \ell_k = (\ell_k)_k = 0$.)
 

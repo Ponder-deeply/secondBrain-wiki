@@ -1,14 +1,17 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: overview
+element: air
+updated: 2026-09-25
 ---
 
 # C# nyelv jellemzői
 
 A *C#* tisztán objektumorientált programozási nyelv, amely teljes mértékben a
-[[concepts/esemalk/csharp-dotnet-platform]]ra támaszkodik.
+[[concepts/esemalk/csharp-dotnet-platform]]ra támaszkodik. Ez a lap a nyelv
+alapjellemzői mellett a névtereket és a vezérlési szerkezeteket is tárgyalja.
 
 ## Tartalom
 
@@ -70,9 +73,66 @@ A Visual Studio 2022 alapértelmezett nyelvi verziói célplatformonként
 eltérőek: .NET Framework esetén C# 7.3, .NET Core 3.1 esetén C# 8.0, .NET
 Standard 2.1 esetén C# 8.0, .NET 8 esetén C# 12.0.
 
+### Névterek
+
+A névterek biztosítják a kód logikai felbontását: minden osztálynak névtérben
+kell elhelyezkednie.
+
+- Hierarchikusan egymásba ágyazhatóak, ponttal jelölve (pl. `System.Collections.Generic`).
+- Van egy globális névtér is (`global`).
+- Névtereket a `using <névtér>;` utasítással lehet használatba venni; az
+  utasítás hatóköre a fájl. Pl.:
+
+```csharp
+using System;
+using System.Collections.Generic;
+```
+
+- Az osztálynév elé is megadható a névtér (így nem szükséges `using`), pl.:
+
+```csharp
+System.Console.WriteLine("Hello, World!");
+```
+
+#### Névterek automatikus használata
+
+.NET 6 óta lehetőség van a leggyakrabban használt névterek automatikus
+betöltésére: az `<ImplicitUsings>enable</ImplicitUsings>` direktívát kell
+elhelyezni a projektállományban (`.csproj`). Projekttípustól függően tölt be
+automatikusan névtereket — konzolos alkalmazásoknál például:
+
+```csharp
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+```
+
+### Vezérlési szerkezetek
+
+A C# nyelv vezérlési szerkezetei a szekvenciától a bejáró cikluson át
+szokásos, C-szerű elemkészletet nyújtanak.
+
+- **Szekvencia**: a `;` tagolja az utasításokat.
+- **Programblokk**: `{ <utasítások> }`
+- **Elágazás**: lehet kétágú (`if`), illetve többágú (`switch`); utóbbinál az
+  ágakat le kell zárni (`break`, `goto`, `return`).
+- **Ciklus**:
+  - számláló (`for`), előtesztelő (`while`), utántesztelő (`do … while`)
+  - bejáró (egy `IEnumerable` gyűjtemény elemein halad végig):
+
+    ```csharp
+    foreach (<deklaráció> in <gyűjtemény>)
+        <utasítás>;
+    ```
+
 ## Kapocs
 
 - [[concepts/esemalk/csharp-dotnet-platform]] — a nyelv a .NET platform
   köztes nyelvére (IL) fordul, a CLR alatt fut
-- [[concepts/esemalk/csharp-nevterek]] — a kód logikai felbontása névterekbe
-- [[concepts/esemalk/csharp-osztalyok]] — az osztály mint minden típus alapja
+- [[concepts/esemalk/csharp-osztaly-szerkezete]] — az osztály mint minden típus alapja
+- [[concepts/esemalk/csharp-tipusok]] — az `IEnumerable` gyűjtemény elemeinek
+  típusa a bejáró ciklusban

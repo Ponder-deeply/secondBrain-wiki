@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [02_ea_An3_2022_tavasz.pdf]
+sources: [02_ea_An3_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Bolzano–Weierstrass-féle kiválasztási tétel normált terekben
@@ -44,3 +46,4 @@ A Bolzano–Weierstrass-féle kiválasztási tétel tehát nem topológiai, hane
 - [[concepts/analiii/cauchy-sorozat-es-teljes-ter]] — a rokon jelenség: $C[a,b]$ teljessége is normafüggő
 - [[concepts/analiii/normalt-vektorter]] — a $C[a,b]$ tér és a maximumnorma, amelyben az ellenpélda él
 - [[concepts/analiii/kompaktsag-ekvivalens-jellemzesei]] — a sorozatos kompaktság általános metrikus téri fogalma, amelynek ez a tétel az $\mathbb{R}^n$-beli speciális esete
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

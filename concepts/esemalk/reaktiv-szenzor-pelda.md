@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Szimulált szenzoradat feldolgozása Rx.NET-tel
@@ -94,8 +96,7 @@ A külső `Subscribe` minden új szenzorcsoport megjelenésekor fut le, a belső
 
 ## Kapocs
 
-- [[concepts/esemalk/reaktiv-feliratkozas]] — a `Subscribe()` eljárás és az `onNext`/`onError`/`onSuccess` callback-ek
+- [[concepts/esemalk/rx-observable-alapok]] — a `Subscribe()` eljárás és az `onNext`/`onError`/`onCompleted` callback-ek
 - [[concepts/esemalk/reaktiv-multicasting]] — mi történik, ha ugyanerre a `sensorStream`-re több helyen iratkozunk fel
-- [[concepts/esemalk/rx-observable-alapok]] — az `Observable.Interval`/`Observable.Create` gyártó műveletek
 - [[concepts/esemalk/rx-operatorok]] — a `Where`/`Select`/`GroupBy` operátorok általános leírása
 - [[subjects/esemalk]] — a kurzus áttekintése

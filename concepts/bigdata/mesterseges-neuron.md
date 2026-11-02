@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/deep-learning-bevezetes]
+tags: [concept]
 sources: [BDAEM-2022-EA12.pdf]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: air
+updated: 2026-09-30
 ---
  
 # Mesterséges neuron és feedforward hálózat
@@ -35,9 +37,9 @@ ahol:
 - $x_1, \dots, x_n$ — a bemenetek,
 - $w_1, \dots, w_n$ — a hozzájuk tartozó súlyok,
 - $w_0$ — a **bias** (eltolás), amelyet egy állandó $1$ értékű bemenethez
-  ("bias node") rendelt súlyként modelleznek, hogy a $\mathbf{w}^\top
-  \mathbf{x}$ jelölésbe belefeledjen a bemeneti vektor kibővítése nélkül is
-  szükséges legyen,
+  ("bias node") rendelt súlyként modelleznek: a bemeneti vektort egy $x_0 = 1$
+  komponenssel kibővítve a bias is a $\mathbf{w}^\top \mathbf{x}$ skaláris
+  szorzat része lesz, így $y = f(\mathbf{w}^\top \mathbf{x})$,
 - a **summation** (összegzés) lépés adja a neuron nettó bemenetét,
 - $f(\cdot)$ a **nemlineáris aktivációs függvény**, kimenete a neuron
   aktivációja — lásd [[concepts/bigdata/aktivacios-fuggvenyek]].

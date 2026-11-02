@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Avalonia UI eszközfüggő viselkedés (eszközkezelés)
@@ -22,14 +24,18 @@ típusa, és arra megfelelően reagálhatunk:
 ```csharp
 if (OperatingSystem.IsAndroid() ||
     OperatingSystem.IsIOS()) {
-    image.Source =
-        ImageSource.FromFile("small.jpg");
+    image.Source = new Bitmap(AssetLoader.Open(
+        new Uri("avares://MyApp/Assets/small.jpg")));
 } else {
-    image.Source =
-        ImageSource.FromFile("large.jpg");
+    image.Source = new Bitmap(AssetLoader.Open(
+        new Uri("avares://MyApp/Assets/large.jpg")));
 }
 // táblagépen nagyobb képet használunk
 ```
+
+A diasoron itt a MAUI-s `ImageSource.FromFile(…)` szerepel, ami Avaloniában
+nem létezik; ott a képet `Bitmap`-ként, az `AssetLoader` segítségével
+töltjük be.
 
 ### Eszközfüggő értékek XAML-ből (`OnPlatform`)
 

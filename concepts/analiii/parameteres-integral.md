@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 4.5.6.1. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Paraméteres integrál
@@ -84,3 +86,4 @@ A bizonyítás ugyanaz a séma, mint az egyparaméteres esetben: a $G_r := \{y \
 - [[concepts/analii/improprius-integral]] — az improprius integrál egyváltozós fogalma; itt ugyanez, de paramétersereggel, és a konvergencia egyenletességét a domináns függvény biztosítja.
 - [[concepts/analiii/folytonosan-differencialhato-fuggveny]] — a vektorparaméteres változat 3. pontjában szereplő $C^1$ osztály.
 - [[concepts/analii/egyenletes-folytonossag]] — a bizonyítás kulcslépése a kompakt téglalapon vett egyenletes folytonosság.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

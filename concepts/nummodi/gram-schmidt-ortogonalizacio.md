@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/qr-felbontas-es-ortogonalizacio]
+tags: [concept]
 sources: [NM1_ea05.pdf]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-08-05
 ---
 

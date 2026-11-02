@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf, 02_gyak_An_III_2024_25_Ifelev.pdf]
 references: ["Simon Péter: Analízis II., 1.2. viii)–xiv) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: procedure
+element: water
+updated: 2026-10-21
 ---
 
 # Új metrikák előállítása meglévőkből
@@ -71,6 +73,17 @@ leszűkítés metrika, azaz $(Y,\sigma)$ is metrikus tér — az $(X,\rho)$ tér
 $$\rho(f,g) := \sup\{|f(x)-g(x)| : x \in A\}$$
 
 metrikával. Ha $A = [a,b]$, akkor $C[a,b] \subset X$, és $\rho$ leszűkítése $C[a,b]$-re éppen a maximumnorma metrikája: $\rho_\infty = \rho|_{C[a,b]^2}$.
+
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 3–7. feladat; An_III_Gyak_2022_tavasz.pdf 2. gyakorlat 3–4., Gyakorló 1.*
+
+- **$f\circ\rho$ ellenőrzése.** A három feltétel ellenőrzése $f$-re: $\sqrt{x}$ (monoton, és $\sqrt{x+y}\le\sqrt x+\sqrt y$ minden $x,y\ge0$-ra; a korábbi „$0<r\le1$ eset" megszorítás fölösleges volt), $\frac{x}{1+x}$ és $\ln(1+x)$. Ez utóbbinál: monoton, $\ln(1+x+y)\le\ln(1+x)+\ln(1+y)$, mert $1+x+y\le(1+x)(1+y)$.
+- **Visszahúzás bijekcióval.** Ha $f:Y\to X$ bijekció, $\sigma(x,y)=\rho(f(x),f(y))$ metrika. Speciálisan $f$ szigorúan monoton $\mathbb R\to\mathbb R$ esetén $|f(x)-f(y)|$ metrika; $f=\operatorname{arctg}$ esetén két szám távolsága sosem éri el $\pi$-t.
+- **$\overline{\mathbb R}$ más metrizálása** (saját ötlet a „definiálhatnánk-e másképp?" kérdésre): $\rho(x,y)=|\operatorname{arctg}x-\operatorname{arctg}y|$, $\operatorname{arctg}(\pm\infty):=\pm\frac\pi2$ — ez a visszahúzás a $[-\tfrac\pi2,\tfrac\pi2]$ szakasz szokásos metrikájából.
+- **Sorozatterek metrikái** ($\sup$ és $\sum 2^{-n}$ alak): koordinátánként a $\frac{t}{1+t}$ metrikatrükk; részletek: [[concepts/analiii/metrikus-ter]] Feladatok.
+
+- **A 2. gyakorlat megoldása (3–4. feladat).** Ha $f:[0,\infty)\to[0,\infty)$ monoton növő, $f(x)=0\iff x=0$ és $f(x+y)\le f(x)+f(y)$, akkor $f\circ\rho$ metrika: a háromszög-egyenlőtlenség $f(\rho(x,y))\le f(\rho(x,z)+\rho(z,y))\le f(\rho(x,z))+f(\rho(z,y))$ (monotonitás, majd szubadditivitás). Ellenőrzés: $\sqrt{\cdot}$ ($f'>0$, $\sqrt{x+y}\le\sqrt x+\sqrt y$); $\frac x{1+x}$ ($f'=\frac1{(1+x)^2}>0$, $\frac{x+y}{1+x+y}=\frac x{1+x+y}+\frac y{1+x+y}\le\frac x{1+x}+\frac y{1+y}$); $\ln(1+x)$ ($f'=\frac1{1+x}>0$, szubadditív $\iff1+x+y\le1+x+y+xy$).
 
 ## Kapocs
 

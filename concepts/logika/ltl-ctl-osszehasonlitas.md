@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/temporalis-logika]
+tags: [concept]
 sources: [LTL_CTL.pdf]
 derivation: source
-updated: 2026-09-08
+kind: comparison
+element: water
+updated: 2026-09-30
 ---
 
 # LTL és CTL összehasonlítása
@@ -35,7 +37,7 @@ Az első három kifejezés ekvivalens, de a negyedik, $AFAXp$, nem. Az $AFAXp$ a
 
 **$FGp \not\equiv AFAGp$**
 
-Van olyan modell, amely kielégíti $FGp$-t ("valamikor a jövőben $p$ már mindig igaz marad" — egy konkrét úton), de nem elégíti ki $AFAGp$-t ("minden állapotból indulva, minden úton elérünk egy olyan pontot, ahonnan minden rákövetkező kielégíti $p$-t"). Ha van egy állapot, amelyen keresztül ciklikusan visszatérő út fut úgy, hogy azon a cikluson mindig lesz $\neg p$-t kielégítő lehetséges rákövetkező, akkor $AFAGp$ sérül, miközben a cikluson kívüli konkrét út még kielégítheti $FGp$-t.
+Van olyan modell, amely kielégíti $FGp$-t ("minden úton valamikor a jövőben $p$ már mindig igaz marad"), de nem elégíti ki $AFAGp$-t ("minden úton elérünk egy olyan állapotot, ahonnan minden úton mindig $p$ teljesül"). Ellenpélda: $s_0$ ($p$) hurokéllel és egy $s_1$ ($\neg p$) felé vezető éllel, $s_1 \to s_2$, ahol $s_2$ ($p$) szintén hurokéllel. Minden út vagy örökre $s_0$-ban marad, vagy $s_2$-ben köt ki, így $FGp$ teljesül. Az örökre $s_0$-ban maradó úton viszont egyik állapotban sem igaz $AGp$ (mert $s_0$-ból mindig elérhető $s_1$), ezért $AFAGp$ sérül.
 
 **$GFp \equiv AGAFp$, de $(GFp \Rightarrow GFq) \not\equiv (AGAFp \Rightarrow AGAFq)$**
 

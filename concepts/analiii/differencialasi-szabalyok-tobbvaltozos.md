@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 05_ea_An3_2022_tavasz.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, RopzhKerdesek.pdf]
 references: ["Simon Péter: Analízis II., 4.1.1–4.1.3. Tétel, 4.2. viii)–ix), xii) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: fire
+updated: 2026-10-22
 ---
 
 # Differenciálási szabályok több változóban
@@ -86,3 +88,4 @@ Az [[concepts/analii/derivalasi-szabalyok]] alakja formálisan változatlan, de 
 - [[concepts/analiii/jacobi-matrix]] — a derivált mátrixalakja, amelyben a szabályok érvényesek.
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — a $\operatorname{grad}$ jelölés tartalma.
 - [[concepts/analii/derivalasi-szabalyok]] — az egyváltozós eredeti.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

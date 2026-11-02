@@ -2,6 +2,8 @@
 tags: [concept]
 sources: ["5.-környezetfüggetlen-gramm,-cnf,-cyk-pumpálási-lemma.md"]
 derivation: source
+kind: theorem
+element: fire
 updated: 2026-04-07
 ---
 

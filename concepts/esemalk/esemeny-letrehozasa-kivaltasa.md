@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
-sources: [elte_eva_ea02_winforms_mv.pdf]
+tags: [concept]
+sources: [elte_eva_ea02_winforms_mv.pdf, elte_eva_gy03_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # Esemény létrehozása és kiváltása C#-ban
@@ -41,12 +43,14 @@ Az esemény kiváltása az esemény meghívásával történik, ahol átadjuk a
 megfelelő paramétereket. Esemény csak akkor váltható ki, ha van hozzárendelve
 eseménykezelő — különben az esemény `null` értéknek felel meg, és ennek
 meghívása kivételt dob. Emiatt a kiváltást explicit `null`-ellenőrzéssel
-szokás védeni, általában külön metódusban:
+szokás védeni, általában külön metódusban. Az esemény csak a deklaráló
+osztályon belül váltható ki (kívülről csak fel- és leiratkozni lehet rá),
+ezért a kiváltó kód az `EventClass` egy metódusában áll:
 
 ```csharp
-if (ec.MyEvent != null)
+if (MyEvent != null)
     // ha van hozzárendelve eseménykezelő
-    ec.MyEvent(this, new MyEventArgs{ … });
+    MyEvent(this, new MyEventArgs{ … });
     // kiváltjuk: a küldő az aktuális objektum,
     // az eseményargumentumokat megadjuk
 ```
@@ -56,7 +60,7 @@ használatával, amellyel egy objektum tagja csak akkor kerül kiértékelésre,
 az objektum nem `null` érték volt:
 
 ```csharp
-ec.MyEvent?.Invoke(this, new MyEventArgs{ … });
+MyEvent?.Invoke(this, new MyEventArgs{ … });
 // kiváltjuk az eseményt,
 // ha van hozzárendelve eseménykezelő
 ```
@@ -74,6 +78,13 @@ A forrás számológép-példájában a modell (`CalculatorModel`) egy
 `CalculatorEventArgs` argumentummal (amely az eredményt és a szöveges
 leírást hordozza), így a nézetnek (`CalculatorForm`) nem kell lekérdeznie a
 számítás eredményét — automatikusan megkapja azt az eseményen keresztül.
+
+### Push és pull stílusú események, őrfeltétel (3. gyakorlat)
+
+- *Pull*: az esemény csak jelez (`EventArgs.Empty`), a nézet kiolvassa a modell tulajdonságát — egyszerű, sok összefüggő adatnál kényelmes.
+- *Push*: egyedi `EventArgs` szállítja az adatot (csak olvasható tulajdonságok); a kezelő mindig érvényes adatot kap, nem kell a modellre hivatkoznia.
+- Az állapotváltozást jelző esemény csak tényleges változáskor váltódjon ki (a setter `if (_value == value) return;`), különben a felesleges értesítések fölösleges frissítéseket okoznak.
+- Haladást jelző esemény sok, gyors egymásutánban kiváltott eseményt jelent; ilyenkor ritkítani kell (pl. századonként). Részletek: [[concepts/esemalk/docustat-winforms-nezet-esemenyek]], [[concepts/esemalk/docustat-tobbfajlos-aszinkron-betoltes]].
 
 ## Kapocs
 

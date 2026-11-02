@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 1.4. vi)–ix) és 1.8. ii)–v) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Ekvivalens metrikák
@@ -71,6 +73,12 @@ Az ekvivalencia a környezetek egymásba illeszthetőségét jelenti: bármely $
 $$K^{(\sigma)}_u(a) \subset K^{(\rho)}_r(a) \subset K^{(\sigma)}_v(a).$$
 
 $\mathbb{R}^2$-ben ez azt mondja, hogy az $a$ középpontú $\rho_1$-**rombuszok**, $\rho_2$-**körlemezek** és $\rho_\infty$-**négyzetek** kölcsönösen egymásba illeszthetők.
+
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 12. feladat.*
+
+- **Ugyanazok a konvergens sorozatok ⇏ ekvivalens metrikák.** A $\rho(x,y)=|x-y|$ és $\sigma=\min\{1,|x-y|\}$ metrika $\mathbb R$-en ugyanazokat a sorozatokat találja konvergensnek (a távolság kicsi része azonos), de nem ekvivalensek: $\sigma\le1$ korlátos, $\rho$ nem, így nincs $c>0$ a $c\rho\le\sigma$-hoz. Az ekvivalencia tehát erősebb a konvergencia egyezésénél.
 
 ## Kapocs
 

@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-14
 ---
 

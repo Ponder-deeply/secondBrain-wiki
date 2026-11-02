@@ -1,0 +1,1389 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "3-eloadas-folytonossag-kompaktsag",
+	"unitTitle": "3. előadás — Folytonosság, kompaktság",
+	"type": "mcq",
+	"batches": [
+		{
+			"at": "2026-10-22T13:41:26.783Z",
+			"model": "opus",
+			"direction": "",
+			"added": 98
+		}
+	],
+	"questions": [
+		{
+			"id": "nvyv1x2e",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "base",
+			"q": "Mit állít az átviteli elv az $f$ függvény $a$-beli folytonosságáról?",
+			"choices": [
+				"Van $a$-hoz tartó $D_f$-beli $(x_n)$, amelyre $f(x_n)\\to f(a)$",
+				"Minden $a$-hoz tartó $D_f$-beli $(x_n)$-re $f(x_n)\\to f(a)$",
+				"Minden $f(x_n)\\to f(a)$ esetén $x_n\\to a$ is teljesül",
+				"Minden $a$-hoz tartó $D_f$-beli $(x_n)$-re $(f(x_n))$ korlátos"
+			],
+			"correct": 1,
+			"explain": "Az elv szerint $f\\in C\\{a\\}$ pontosan akkor, ha minden $D_f$-beli, $a$-hoz tartó sorozat képe $f(a)$-hoz tart. Egyetlen jó sorozat nem elég, a feltételnek minden sorozatra teljesülnie kell."
+		},
+		{
+			"id": "ufk3xsrg",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "base",
+			"q": "Mi teszi lehetővé, hogy a sorozatokra vonatkozó műveleti szabályokat függvények folytonosságára és határértékére átemeljük?",
+			"choices": [
+				"A Lindelöf-lemma",
+				"A Cantor-metszettétel",
+				"Az átviteli elv",
+				"A Lebesgue-szám lemma"
+			],
+			"correct": 2,
+			"explain": "Az átviteli elv a folytonosságot és a határértéket sorozatok konvergenciájára fordítja le, így a sorozatos szabályok közvetlenül alkalmazhatók. A többi állítás kompaktsági eszköz, ilyen szerepe nincs."
+		},
+		{
+			"id": "l6njumhs",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/2.2. Tétel — a folytonosság átviteli elve",
+			"q": "Milyen feltételt ír elő a 2.2. Tétel az $a$ pontra?",
+			"choices": [
+				"$a\\in D_f$",
+				"$a\\in D_f'$, de $a\\in D_f$ nem kell",
+				"$a\\in D_f'\\setminus D_f$",
+				"$a$ belső pontja $D_f$-nek"
+			],
+			"correct": 0,
+			"explain": "A folytonosság átviteli elve $a\\in D_f$ mellett szól, hiszen $f(a)$-nak léteznie kell. A $D_f'$ feltétel a határérték átviteli elvéhez tartozik."
+		},
+		{
+			"id": "fheyk3eb",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A határérték átviteli elve",
+			"q": "A határérték átviteli elvében milyen sorozatokat kell vizsgálni, ha $a\\in D_f'$?",
+			"choices": [
+				"$(x_n):\\mathbb{N}\\to D_f$, $x_n\\to a$",
+				"$(x_n):\\mathbb{N}\\to D_f\\setminus\\{a\\}$, $x_n\\to a$",
+				"$(x_n):\\mathbb{N}\\to X$, $x_n\\to a$",
+				"$(x_n):\\mathbb{N}\\to D_f\\setminus\\{a\\}$, monoton"
+			],
+			"correct": 1,
+			"explain": "Határértéknél az $a$ pontot kizárjuk, ezért a sorozatok $D_f\\setminus\\{a\\}$-beliek. A $D_f$-beli sorozat a folytonossághoz tartozó változat."
+		},
+		{
+			"id": "bt50xb3f",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A határérték átviteli elve",
+			"q": "Miért fésüljük össze a bizonyításban az $(x_n)$ és $(\\tilde x_n)$ sorozatot?",
+			"choices": [
+				"Hogy a képsorozat korlátos legyen",
+				"Hogy $a\\in D_f$ teljesüljön",
+				"Hogy a határérték ne függjön a sorozattól",
+				"Hogy monoton részsorozatot kapjunk"
+			],
+			"correct": 2,
+			"explain": "Az összefésült sorozat képének van határértéke, és két részsorozata $(f(x_n))$ és $(f(\\tilde x_n))$, így a két határérték megegyezik. Az $a\\in D_f$ itt nem is feltétel."
+		},
+		{
+			"id": "dy63p9ie",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Mire jó",
+			"q": "A Banach-fixponttételben az $\\alpha=\\lim(x_n)$ fixpont-tulajdonságánál melyik lépés az átviteli elv?",
+			"choices": [
+				"$\\alpha=\\lim(x_n)=\\lim(x_{n+1})$",
+				"$\\lim(x_{n+1})=\\lim(f(x_n))$",
+				"$x_{n+1}=f(x_n)$ definíció szerint",
+				"$\\lim(f(x_n))=f(\\lim(x_n))$"
+			],
+			"correct": 3,
+			"explain": "A $\\lim f(x_n)=f(\\lim x_n)$ csere az átviteli elv (folytonosság) alkalmazása. Az $\\lim(x_n)=\\lim(x_{n+1})$ csupán a részsorozat (eltolt sorozat) határértéke."
+		},
+		{
+			"id": "vxk439qe",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Mire jó",
+			"q": "A Weierstrass-tétel bizonyításában mit „viszünk át” az átviteli elvvel?",
+			"choices": [
+				"A kompaktságból nyert konvergens részsorozatot",
+				"A nyílt fedésből kiválasztott véges fedést",
+				"A Cauchy-sorozatok teljességét",
+				"A racionális gömbök felsorolását"
+			],
+			"correct": 0,
+			"explain": "A kompaktság konvergens részsorozatot ad, és ennek képére alkalmazzuk az átviteli elvet. A véges fedés a fedéses megfogalmazás eszköze, itt nem szerepel."
+		},
+		{
+			"id": "z99plhmi",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A tagadás használható alakja",
+			"q": "Mit jelent, hogy $f$-nek az $a\\in D_f'$ helyen nincs határértéke?",
+			"choices": [
+				"$\\exists A\\;\\exists\\varepsilon\\;\\forall\\delta$: van rossz $x$",
+				"$\\forall A\\;\\exists\\varepsilon\\;\\forall\\delta$: van rossz $x$",
+				"$\\forall A\\;\\forall\\varepsilon\\;\\exists\\delta$: van rossz $x$",
+				"$\\exists\\varepsilon\\;\\forall A\\;\\forall\\delta$: minden $x$ rossz"
+			],
+			"correct": 1,
+			"explain": "Minden $A\\in Y$ jelölthöz van $\\varepsilon>0$, hogy minden $\\delta$-hoz van $0<\\rho(x,a)<\\delta$ hely, ahol $\\sigma(f(x),A)\\ge\\varepsilon$. Egyetlen $A$ cáfolata csak azt mutatja, hogy az az $A$ nem határérték."
+		},
+		{
+			"id": "zrvzejwa",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A tagadás használható alakja",
+			"q": "A tagadásban $\\delta:=1/n$ választással milyen sorozatot kapunk egy rögzített $A$-hoz?",
+			"choices": [
+				"$x_n\\to a$, $x_n\\ne a$, $\\sigma(f(x_n),A)<\\varepsilon$",
+				"$x_n\\to a$, $x_n=a$, $\\sigma(f(x_n),A)\\ge\\varepsilon$",
+				"$x_n\\to a$, $x_n\\ne a$, $\\sigma(f(x_n),A)\\ge\\varepsilon$",
+				"$f(x_n)\\to A$, $\\rho(x_n,a)\\ge\\varepsilon$"
+			],
+			"correct": 2,
+			"explain": "A $0<\\rho(x_n,a)<1/n$ pontok $a$-hoz tartanak, $a$-tól különböznek, és a képük $\\varepsilon$-nál messzebb marad $A$-tól. A $<\\varepsilon$ változat éppen a határérték-feltétel volna."
+		},
+		{
+			"id": "65cqs5wg",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$f=\\dfrac{2xy}{x^2+y^2}$, $f(0,0)=0$. Mi $f$ határértéke az $(\\tfrac1n,\\tfrac1n)$ sorozaton, és mi következik ebből?",
+			"choices": [
+				"$0$; $f$ folytonos az origóban",
+				"$\\tfrac12$; nem dönthető el",
+				"$2$; $f$ nem folytonos az origóban",
+				"$1$; $f$ nem folytonos az origóban"
+			],
+			"correct": 3,
+			"explain": "Az $y=x$ egyenesen $f\\equiv1$, tehát a képsorozat $1\\ne0=f(0,0)$-hoz tart, így az átviteli elv szerint $f$ nem folytonos. Egyetlen ilyen sorozat is elég a cáfolathoz."
+		},
+		{
+			"id": "32tqipmc",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$f=\\dfrac{x^2}{x^2+y^2}$ esetén mihez tart $f$ az $(\\tfrac1n,0)$, ill. a $(0,\\tfrac1n)$ sorozaton?",
+			"choices": [
+				"$1$ és $0$",
+				"$0$ és $1$",
+				"$1$ és $\\tfrac12$",
+				"$\\tfrac12$ és $0$"
+			],
+			"correct": 0,
+			"explain": "Az $(\\tfrac1n,0)$ sorozaton $f=1$, a $(0,\\tfrac1n)$ sorozaton $f=0$, ezért a határérték nem létezik. A $\\tfrac12$ az $y=x$ átlón kapott érték lenne."
+		},
+		{
+			"id": "rl0r7v0d",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "base",
+			"q": "Milyen pontban értelmezzük az $f\\in X\\to Y$ függvény határértékét?",
+			"choices": [
+				"$D_f$ belső pontjában",
+				"$D_f$ torlódási pontjában",
+				"$D_f$ izolált pontjában",
+				"Csak $a\\in D_f$ pontban"
+			],
+			"correct": 1,
+			"explain": "A határértéket $a\\in D_f'$, azaz torlódási pontban értelmezzük. Belső pontság nem kell, és $a\\in D_f$ sem számít."
+		},
+		{
+			"id": "9yhuwnx9",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "base",
+			"q": "Az alábbiak közül melyik nem befolyásolja $\\lim_a f$ létezését és értékét?",
+			"choices": [
+				"$f$ értékei $a$ egy kipontozott környezetén",
+				"$D_f$ pontjai $a$ közelében",
+				"Az $f(a)$ helyettesítési érték",
+				"Az $Y$ téren adott metrika"
+			],
+			"correct": 2,
+			"explain": "A határérték lokális fogalom, $f(a)$ értéke (és az $a\\in D_f$ kérdés) nem számít. A kipontozott környezeten felvett értékek viszont éppen meghatározzák."
+		},
+		{
+			"id": "lsbig5qj",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Definíció",
+			"q": "$\\mathbb{R}^2\\to\\mathbb{R}$ esetben melyik ekvivalens azzal, hogy $\\lim_{(a_1,a_2)}f=A$?",
+			"choices": [
+				"$f$ folytonos $(a_1,a_2)$-ben",
+				"$f(a_1,a_2)=A$",
+				"$\\tilde f$ folytonos, ahol $\\tilde f=f$ máshol, $\\tilde f(a_1,a_2)=A$",
+				"$f$ korlátos $(a_1,a_2)$ egy környezetén"
+			],
+			"correct": 2,
+			"explain": "A folytonos kiterjesztéses megfogalmazás: az $(a_1,a_2)$-ben $A$-val újradefiniált függvény folytonos ott. Maga $f$ nem feltétlenül folytonos, sőt lehet, hogy nincs is értelmezve."
+		},
+		{
+			"id": "vy9v4lgp",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Az egyértelműség",
+			"q": "Az egyértelműség bizonyításában $B\\ne A$ esetén milyen $r$ mellett diszjunkt $K_r(A)$ és $K_r(B)$?",
+			"choices": [
+				"$0<r<\\sigma(A,B)/2$",
+				"$r=\\sigma(A,B)$",
+				"$\\sigma(A,B)/2<r<\\sigma(A,B)$",
+				"$r>\\sigma(A,B)$"
+			],
+			"correct": 0,
+			"explain": "$r<\\sigma(A,B)/2$ esetén $y\\in K_r(A)$-ra $\\sigma(y,B)>\\sigma(A,B)-r>r$. Ha $r>\\sigma(A,B)/2$, a két gömb átfedhet."
+		},
+		{
+			"id": "u7emqeqo",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Az egyértelműség",
+			"q": "Melyik eszköz mutatja meg, hogy $K_r(A)$ és $K_r(B)$ diszjunkt?",
+			"choices": [
+				"A Cauchy–Schwarz-egyenlőtlenség",
+				"A háromszög-egyenlőtlenség",
+				"A Bolzano–Weierstrass-tétel",
+				"A Cantor-metszettétel"
+			],
+			"correct": 1,
+			"explain": "$\\sigma(y,B)\\ge\\sigma(A,B)-\\sigma(y,A)$ a háromszög-egyenlőtlenség átrendezése. A Cauchy–Schwarz belső szorzatot igényelne, ami metrikus térben nincs."
+		},
+		{
+			"id": "i6khcos9",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Lokalitás",
+			"q": "Mi biztosítja, hogy ($a\\in D_f'\\cap D_g'$ esetén) $\\lim_a f$ és $\\lim_a g$ egyszerre létezzen, és egyenlők legyenek?",
+			"choices": [
+				"$f(a)=g(a)$",
+				"$f$ és $g$ folytonos $a$-ban",
+				"$f=g$ az egész $D_f$-en",
+				"$f=g$ $a$ egy kipontozott környezetén"
+			],
+			"correct": 3,
+			"explain": "A lokalitás szerint elég, ha $f=g$ a $D=(k(a)\\setminus\\{a\\})\\cap D_f=(k(a)\\setminus\\{a\\})\\cap D_g$ halmazon. Az $a$-beli érték egyezése érdektelen."
+		},
+		{
+			"id": "5ms23uf7",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Lokalitás",
+			"q": "Létezik $\\lim_a f=L$ ($a\\in D_f$). $g$ úgy készül $f$-ből, hogy $f(a)$-t $L+1$-re cseréljük. Mi $\\lim_a g$?",
+			"choices": [
+				"$L+1$",
+				"$L$",
+				"Nem létezik",
+				"$L+\\tfrac12$"
+			],
+			"correct": 1,
+			"explain": "$f$ és $g$ megegyezik $a$ kipontozott környezetén, ezért a határértékük azonos: $L$. Az $a$-beli érték nem számít bele."
+		},
+		{
+			"id": "7asmrfeo",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Kapcsolat a folytonossággal",
+			"q": "$f:\\mathbb{N}\\to\\mathbb{R}$ tetszőleges ($\\mathbb{N}\\subset\\mathbb{R}$ a szokásos metrikával). Mi igaz az $a=3$ pontban?",
+			"choices": [
+				"$f$ folytonos, határértékről nem beszélünk",
+				"$f$ folytonos, és $\\lim_3 f=f(3)$",
+				"Csak monoton $f$ esetén folytonos",
+				"$f$ nem folytonos, mert nincs határérték"
+			],
+			"correct": 0,
+			"explain": "$3$ izolált pontja $D_f$-nek, ezért $f$ automatikusan folytonos ott, de mivel nem torlódási pont, határérték nincs értelmezve."
+		},
+		{
+			"id": "2hlbvde9",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Kapcsolat a folytonossággal",
+			"q": "$a\\in D_f\\cap D_f'$, $\\lim_a f=5$ és $f(a)=3$. Mi igaz?",
+			"choices": [
+				"$f$ folytonos $a$-ban",
+				"$f$ nem folytonos $a$-ban",
+				"$f$ folytonossága nem dönthető el",
+				"A határérték nem lehet $5$"
+			],
+			"correct": 1,
+			"explain": "Torlódási pontban $f\\in C\\{a\\}$ pontosan akkor, ha $\\lim_a f=f(a)$, és itt $5\\ne3$. A határérték létezése egymagában nem elég."
+		},
+		{
+			"id": "x8womwm9",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Műveletek",
+			"q": "Milyen feltétel kell $a$-ra a $\\lim_a(f+\\lambda g)=A+\\lambda B$ szabályban?",
+			"choices": [
+				"$a\\in D_f'\\cup D_g'$",
+				"$a\\in D_f\\cap D_g$",
+				"$a\\in D_f'\\cap D_g'$",
+				"$a\\in(D_f\\cap D_g)'$"
+			],
+			"correct": 3,
+			"explain": "Az összeg értelmezési tartománya $D_f\\cap D_g$, ennek kell $a$ torlódási pontjának lennie. Az $a\\in D_f'\\cap D_g'$ gyengébb: a metszet $a$ közelében akár üres is lehet."
+		},
+		{
+			"id": "t4haud7o",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Műveletek",
+			"q": "Milyen struktúrát feltételez a jegyzet az $Y$ értékkészlettérről a $\\lim_a(f+\\lambda g)$ szabálynál?",
+			"choices": [
+				"Tetszőleges metrikus tér",
+				"Teljes metrikus tér",
+				"Normált tér, $\\sigma(y,z)=\\|y-z\\|$",
+				"Rendezett test"
+			],
+			"correct": 2,
+			"explain": "Az $f+\\lambda g$ értelmezéséhez lineáris struktúra kell, ezért $Y$ normált tér a $\\|y-z\\|$ metrikával. Puszta metrikus térben nincs összeadás."
+		},
+		{
+			"id": "47yddb7o",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Koordinátánként",
+			"q": "$f=(f_1,f_2)$, $\\lim_a f_1=2$, de $\\lim_a f_2$ nem létezik. Mi igaz $\\lim_a f$-re?",
+			"choices": [
+				"Nem létezik",
+				"$(2,0)$",
+				"$2$",
+				"Létezik, de nem számolható ki"
+			],
+			"correct": 0,
+			"explain": "$\\lim_a f$ pontosan akkor létezik, ha mindkét koordinátahatárérték létezik. Ha az egyik hiányzik, $f$-nek sincs határértéke."
+		},
+		{
+			"id": "7ggsqh9a",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Koordinátánként",
+			"q": "$f=(f_1,f_2)\\in X\\to Y\\times Z$. Mikor létezik $\\lim_a f$?",
+			"choices": [
+				"Ha legalább az egyik $\\lim_a f_i$ létezik",
+				"Ha $\\lim_a f_1$ és $\\lim_a f_2$ is létezik",
+				"Ha $f_1$ és $f_2$ folytonos $a$-ban",
+				"Ha $\\lim_a(f_1+f_2)$ létezik"
+			],
+			"correct": 1,
+			"explain": "Szorzattérben a határérték létezése ekvivalens mindkét koordinátahatárérték létezésével, ekkor $\\lim_a f=(A_1,A_2)$. Folytonosság nem kell, $a\\in D_f$ sem."
+		},
+		{
+			"id": "6r5cheu2",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Mennyi $\\lim_{(1,2)}\\dfrac{x^2+xy}{x+y^2}$?",
+			"choices": [
+				"$\\tfrac12$",
+				"$\\tfrac34$",
+				"$\\tfrac25$",
+				"$\\tfrac35$"
+			],
+			"correct": 3,
+			"explain": "A függvény folytonos $(1,2)$-ben, így behelyettesítünk: $\\frac{1+2}{1+4}=\\frac35$. A $\\frac34$ akkor jönne ki, ha a nevezőben $y$ állna $y^2$ helyett."
+		},
+		{
+			"id": "2lqi6dl6",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$\\dfrac{(x+y)^3}{5x^3+y^3}$: mihez tart a függvény az $y=0$, ill. az $x=0$ mentén az origóban?",
+			"choices": [
+				"$1$ és $\\tfrac15$",
+				"$\\tfrac15$ és $1$",
+				"$\\tfrac15$ és $\\tfrac15$",
+				"$\\tfrac18$ és $1$"
+			],
+			"correct": 1,
+			"explain": "$y=0$-nál $\\frac{x^3}{5x^3}=\\frac15$, $x=0$-nál $\\frac{y^3}{y^3}=1$, ezért nincs határérték. Az első lehetőség a két értéket felcseréli."
+		},
+		{
+			"id": "cuqpcgvz",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "base",
+			"q": "Az egyváltozós $\\varepsilon$–$\\delta$ folytonosságból mi lényeges a metrikus terekre való átvitelhez?",
+			"choices": [
+				"A számtest rendezése",
+				"Csak a távolságfogalom",
+				"Az algebrai műveletek",
+				"A tér teljessége"
+			],
+			"correct": 1,
+			"explain": "A definícióban csak a távolságok szerepelnek, ezért szó szerint átvihető. A rendezés és az algebrai struktúra nem játszik szerepet."
+		},
+		{
+			"id": "cimpbx68",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "base",
+			"q": "Mivel ekvivalens az $f\\in X\\to Y$ függvény globális folytonossága?",
+			"choices": [
+				"Minden nyílt halmaz képe nyílt",
+				"Minden zárt halmaz képe zárt",
+				"Minden nyílt halmaz ősképe korlátos",
+				"Minden nyílt halmaz ősképe (relatív) nyílt"
+			],
+			"correct": 3,
+			"explain": "A folytonosság az ősképekkel jellemezhető: minden nyílt halmaz ősképe relatív nyílt. A képekre ilyen állítás nem igaz."
+		},
+		{
+			"id": "4eybw81q",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Definíció",
+			"q": "Melyik a helyes feltétel az $f\\in C\\{a\\}$ definíciójában ($x\\in D_f$)?",
+			"choices": [
+				"$\\rho(x,a)<\\delta\\Rightarrow\\sigma(f(x),f(a))<\\varepsilon$",
+				"$\\sigma(x,a)<\\delta\\Rightarrow\\rho(f(x),f(a))<\\varepsilon$",
+				"$\\rho(x,a)<\\varepsilon\\Rightarrow\\sigma(f(x),f(a))<\\delta$",
+				"$0<\\rho(x,a)<\\delta\\Rightarrow\\sigma(f(x),f(a))<\\delta$"
+			],
+			"correct": 0,
+			"explain": "Az $X$-beli távolság $\\rho$, az $Y$-beli $\\sigma$; $\\delta$ a bemenetet, $\\varepsilon$ a kimenetet korlátozza. A második lehetőség a két metrikát cseréli fel."
+		},
+		{
+			"id": "f14zdro8",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Definíció",
+			"q": "Melyik a folytonosság környezetes átfogalmazása?",
+			"choices": [
+				"$f[(k(a)\\setminus\\{a\\})\\cap D_f]\\subset K(f(a))$",
+				"$f[k(a)]\\subset K(f(a))$",
+				"$f[k(a)\\cap D_f]\\subset K(f(a))$",
+				"$f^{-1}[K(f(a))]\\subset k(a)$"
+			],
+			"correct": 2,
+			"explain": "Minden $K(f(a))$-hoz van $k(a)$, hogy $f[k(a)\\cap D_f]\\subset K(f(a))$; az $a$ pontot itt nem zárjuk ki. A kipontozott változat a határértéké."
+		},
+		{
+			"id": "9d97z5fy",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/2.1. Tétel — a nyílt halmazos jellemzés",
+			"q": "A 2.1. Tétel ($\\Rightarrow$) irányában mi lesz az a nyílt $A$, amelyre $f^{-1}[Z]=A\\cap D_f$?",
+			"choices": [
+				"$A:=\\bigcap_{a\\in f^{-1}[Z]}k(a)$",
+				"$A:=\\bigcup_{a\\in f^{-1}[Z]}k(a)$",
+				"$A:=f^{-1}[Z]$",
+				"$A:=X\\setminus D_f$"
+			],
+			"correct": 1,
+			"explain": "A pontonként kapott $k(a)$ környezetek uniója nyílt halmazok uniójaként nyílt. A metszetük végtelen sok halmaz esetén nem feltétlenül nyílt."
+		},
+		{
+			"id": "f8tokaei",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/2.1. Tétel — a nyílt halmazos jellemzés",
+			"q": "Nem mindenütt értelmezett $f\\in X\\to Y$ esetén mi a folytonosság helyes jellemzése nyílt $Z\\subset Y$-ra?",
+			"choices": [
+				"$f^{-1}[Z]$ nyílt $X$-ben",
+				"$f[Z]$ nyílt $Y$-ban",
+				"$f^{-1}[Z]=A\\cup D_f$, $A$ nyílt",
+				"$f^{-1}[Z]=A\\cap D_f$, $A$ nyílt"
+			],
+			"correct": 3,
+			"explain": "Az őskép csak relatív nyílt: egy $X$-beli nyílt halmaz és $D_f$ metszete. Hogy $f^{-1}[Z]$ magában $X$-ben is nyílt, az csak mindenütt értelmezett $f$-re mondható."
+		},
+		{
+			"id": "yx3hfuoe",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/2.3. Tétel — kompozíció",
+			"q": "Melyik feltételrendszer adja a 2.3. Tétel szerint, hogy $f\\circ g\\in C\\{a\\}$?",
+			"choices": [
+				"$g\\in C\\{a\\}$, $f\\in C\\{a\\}$",
+				"$g(a)\\in D_f$, $f\\in C\\{g(a)\\}$, $g$ tetszőleges",
+				"$g\\in C\\{a\\}$, $g(a)\\in D_f$, $f\\in C\\{g(a)\\}$",
+				"$f\\in C\\{g(a)\\}$, $g$ korlátos $a$ körül"
+			],
+			"correct": 2,
+			"explain": "$f$-nek a $g(a)$ pontban kell folytonosnak lennie, $g$-nek $a$-ban, és $g(a)\\in D_f$ kell. Az $f\\in C\\{a\\}$ rossz pontban követeli a folytonosságot."
+		},
+		{
+			"id": "k331tcd3",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/2.3. Tétel — kompozíció",
+			"q": "Hogyan bizonyítja a jegyzet a kompozíció folytonosságát?",
+			"choices": [
+				"Az átviteli elv kétszeri alkalmazásával",
+				"A nyílt halmazos jellemzés megfordításával",
+				"Lipschitz-becsléssel",
+				"A Bolzano–Weierstrass-tétellel"
+			],
+			"correct": 0,
+			"explain": "$x_n\\to a$ esetén $g(x_n)\\to g(a)$, majd $f(g(x_n))\\to f(g(a))$, vagyis kétszer alkalmazzuk az átviteli elvet. Lipschitz-tulajdonság nincs feltéve."
+		},
+		{
+			"id": "l0og3v2p",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Műveletek folytonos függvényekkel",
+			"q": "$Y=\\mathbb{K}$, $f,g\\in C\\{a\\}$. Mi kell ahhoz, hogy $f/g\\in C\\{a\\}$ is teljesüljön?",
+			"choices": [
+				"$f(a)\\ne0$",
+				"$g(a)\\ne0$",
+				"$g$ korlátos $a$ körül",
+				"$f(a)=g(a)$"
+			],
+			"correct": 1,
+			"explain": "A hányados folytonosságához a nevező értéke nem lehet nulla: $g(a)\\ne0$. A számlálóra nincs megkötés."
+		},
+		{
+			"id": "hxqo4bv9",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Műveletek folytonos függvényekkel",
+			"q": "Hogyan öröklődnek a műveleti állítások (összeg, szorzat, hányados) az egyváltozós esetből?",
+			"choices": [
+				"A nyílt halmazos jellemzés révén",
+				"Ekvivalens metrikák cseréjével",
+				"Kompaktsági érveléssel",
+				"Az átviteli elven keresztül, szó szerint"
+			],
+			"correct": 3,
+			"explain": "Az átviteli elv sorozatokra fordítja le az állítást, és a sorozatos szabályok közvetlenül alkalmazhatók. Kompaktság itt nem szerepel."
+		},
+		{
+			"id": "rfgleu9a",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Nevezetes folytonos függvények",
+			"q": "Rögzített $a$ mellett melyik függvény folytonos tetszőleges metrikus térben?",
+			"choices": [
+				"$x\\mapsto\\rho(x,a)$",
+				"$x\\mapsto\\|x-a\\|$",
+				"$x\\mapsto\\langle x,a\\rangle$",
+				"$x\\mapsto\\|x\\|$"
+			],
+			"correct": 0,
+			"explain": "A $\\rho(x,a)$ csak metrikát igényel. A norma normált teret, a belső szorzat euklideszi teret feltételez."
+		},
+		{
+			"id": "gjwupc3a",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Nevezetes folytonos függvények",
+			"q": "Milyen térben szerepel nevezetes folytonos függvényként az $x\\mapsto\\langle x,a\\rangle$?",
+			"choices": [
+				"Tetszőleges metrikus térben",
+				"Euklideszi térben",
+				"Teljes metrikus térben",
+				"Diszkrét metrikus térben"
+			],
+			"correct": 1,
+			"explain": "Belső szorzat csak euklideszi térben van, ott ez a függvény folytonos. Metrikus térben a $\\langle\\cdot,\\cdot\\rangle$ nem is értelmes."
+		},
+		{
+			"id": "ti1sphpe",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Ekvivalens metrikák és izolált pontok",
+			"q": "Miért automatikusan folytonos $f$ a $D_f$ egy izolált $a$ pontjában?",
+			"choices": [
+				"Mert $f$ ott korlátos",
+				"Mert $\\lim_a f=f(a)$",
+				"Mert van $v>0$, hogy $k_v(a)\\cap D_f=\\{a\\}$",
+				"Mert $a$ belső pontja $D_f$-nek"
+			],
+			"correct": 2,
+			"explain": "A $k_v(a)$ környezetben csak maga $a$ van $D_f$-ből, és $\\sigma(f(a),f(a))=0<\\varepsilon$. Határérték izolált pontban nincs is értelmezve."
+		},
+		{
+			"id": "657nees8",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Ekvivalens metrikák és izolált pontok",
+			"q": "$\\mathbb{K}^s\\to\\mathbb{K}^m$ függvény folytonosságának vizsgálatánál melyik metrika használható?",
+			"choices": [
+				"Csak $\\rho_2$ mindkét oldalon",
+				"Csak $\\rho_\\infty$ mindkét oldalon",
+				"Csak azonos $p$ mindkét oldalon",
+				"Bármelyik $\\rho_p$ mindkét oldalon"
+			],
+			"correct": 3,
+			"explain": "A $\\rho_p$ metrikák ekvivalensek, és ekvivalens metrikák cseréje nem változtat a folytonosságon. Még a két oldalon azonos $p$ sem kell."
+		},
+		{
+			"id": "o1l52ro5",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Zárt szinthalmazok",
+			"q": "Az $X_y=\\{f=y\\}$ zártságának bizonyításában ($x_n\\in X_y$, $x_n\\to\\alpha$) mi adja $f(\\alpha)=y$-t?",
+			"choices": [
+				"A folytonosság: $f(\\alpha)=\\lim f(x_n)=y$",
+				"$X$ teljessége",
+				"$f$ injektivitása",
+				"$X_y$ korlátossága"
+			],
+			"correct": 0,
+			"explain": "A folytonosság (átviteli elv) miatt $f(\\alpha)=\\lim f(x_n)$, és ez $y$, mert minden tag $y$. Teljesség nem kell, a határérték létezése adott."
+		},
+		{
+			"id": "0idp2kem",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Zárt szinthalmazok",
+			"q": "Nem mindenütt értelmezett folytonos $f\\in X\\to Y$ esetén mi biztosítja, hogy a szinthalmazok zártak?",
+			"choices": [
+				"$D_f$ nyílt",
+				"$D_f$ korlátos",
+				"$D_f$ zárt",
+				"$f$ korlátos"
+			],
+			"correct": 2,
+			"explain": "Ha $D_f$ zárt, a szinthalmazbeli sorozat $\\alpha$ határértéke $D_f$-ben marad, így alkalmazható a folytonosság. Nyílt $D_f$ esetén $\\alpha$ kieshet az értelmezési tartományból."
+		},
+		{
+			"id": "3pbmx28i",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$f=\\dfrac{xy}{x^2+xy+y^2}$: milyen értéket vesz fel $f$ az $y=x$ egyenes mentén?",
+			"choices": [
+				"$\\tfrac12$",
+				"$1$",
+				"$0$",
+				"$\\tfrac13$"
+			],
+			"correct": 3,
+			"explain": "$y=x$-re $\\frac{x^2}{3x^2}=\\frac13$, az $y=0$ mentén viszont $0$, ezért $f$ nem folytonos az origóban. Az $\\frac12$ akkor jönne ki, ha a nevezőből hiányozna az $xy$ tag."
+		},
+		{
+			"id": "zkrhnxx7",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$f=\\dfrac{x^2y^3}{2x^2+y^2}$, $f(0,0)=0$ folytonosságának $\\varepsilon$–$\\delta$ bizonyításában melyik $\\delta$ jó?",
+			"choices": [
+				"$\\delta\\in(0,\\varepsilon)$",
+				"$\\delta\\in(0,\\min\\{1,\\sqrt\\varepsilon\\})$",
+				"$\\delta\\in(0,\\sqrt\\varepsilon)$",
+				"$\\delta\\in(0,\\min\\{1,\\varepsilon^2\\})$"
+			],
+			"correct": 1,
+			"explain": "A becslés $|f|\\le|y|^3\\le|y|^2\\le\\|(x,y)\\|^2<\\varepsilon$, ahol a $|y|^3\\le|y|^2$ lépéshez $|y|<1$ kell. Ezért szükséges a $\\min\\{1,\\cdot\\}$, a puszta $\\sqrt\\varepsilon$ nem elég."
+		},
+		{
+			"id": "f0h3lt2j",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "base",
+			"q": "Mikor folytonos egy vektorértékű függvény egy pontban?",
+			"choices": [
+				"Ha legalább egy koordinátafüggvénye folytonos ott",
+				"Ha a normája folytonos ott",
+				"Ha minden koordinátafüggvénye folytonos ott",
+				"Ha az első koordinátafüggvénye folytonos ott"
+			],
+			"correct": 2,
+			"explain": "A tétel szerint pontosan akkor, ha minden koordinátafüggvény folytonos. A norma folytonosságából ez nem következik."
+		},
+		{
+			"id": "cy7dr8q6",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "base",
+			"q": "Minek a folytonosságán múlik a koordinátafüggvényekről szóló tétel?",
+			"choices": [
+				"A projekciókén",
+				"A belső szorzatén",
+				"Az inverz függvényén",
+				"A normák ekvivalenciájáén"
+			],
+			"correct": 0,
+			"explain": "A koordinátafüggvények a projekciók és $f$ kompozíciói, így a tétel a projekciók folytonosságán múlik. A normaekvivalencia csak a metrikaválasztás szabadságát adja."
+		},
+		{
+			"id": "bc53kiud",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Koordinátafüggvények",
+			"q": "Mikor nevezzük az $f\\in\\mathbb{K}_1^s\\to\\mathbb{K}_2^m$ függvényt vektorfüggvénynek?",
+			"choices": [
+				"Ha $s>1$",
+				"Ha $m>1$",
+				"Ha $s=m$",
+				"Ha $s>1$ és $m>1$"
+			],
+			"correct": 1,
+			"explain": "$m>1$ esetén vektorfüggvény, $s>1$ esetén többváltozós függvény. A kettő független egymástól."
+		},
+		{
+			"id": "xaj33pnv",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Koordinátafüggvények",
+			"q": "$f(x,y)=(x+y,\\,xy,\\,x-y)$, $D_f=\\mathbb{R}^2$. Mi az $f_2$ koordinátafüggvény?",
+			"choices": [
+				"$f_2:\\mathbb{R}\\to\\mathbb{R}$, $f_2(y)=y$",
+				"$f_2:\\mathbb{R}^2\\to\\mathbb{R}$, $f_2=x-y$",
+				"$f_2:\\mathbb{R}^2\\to\\mathbb{R}^2$, $f_2=(x,y)$",
+				"$f_2:\\mathbb{R}^2\\to\\mathbb{R}$, $f_2=xy$"
+			],
+			"correct": 3,
+			"explain": "$f_i:D_f\\to\\mathbb{K}_2$ az $f(x)$ $i$-edik komponense, tehát $f_2=xy$, értelmezési tartománya $D_f=\\mathbb{R}^2$. Az $x-y$ a harmadik koordináta."
+		},
+		{
+			"id": "qqowpfy3",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/2.9. Tétel",
+			"q": "Milyen metrikák mellett érvényes a 2.9. Tétel a $(\\mathbb{K}_1^s,\\rho_p)$, $(\\mathbb{K}_2^m,\\rho_q)$ terekben?",
+			"choices": [
+				"Csak $p=q=2$ esetén",
+				"Csak $p=q$ esetén",
+				"Bármely $p$ és $q$ mellett",
+				"Csak $p=q=\\infty$ esetén"
+			],
+			"correct": 2,
+			"explain": "A $\\rho_p$ metrikák ekvivalensek, ezért a tétel bármely $p,q$ párra érvényes. A $\\rho_2$ csak kényelmes választás."
+		},
+		{
+			"id": "bfpq7498",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/2.9. Tétel",
+			"q": "Az átviteli elv után melyik állításra vezeti vissza a 2.9. Tétel bizonyítása az állítást?",
+			"choices": [
+				"A koordinátánkénti konvergencia tételére",
+				"A Bolzano–Weierstrass-tételre",
+				"A Cantor-metszettételre",
+				"A nyílt halmazos jellemzésre"
+			],
+			"correct": 0,
+			"explain": "$(f_i(x_n))$ éppen $(f(x_n))$ $i$-edik koordinátasorozata, így a sorozatok koordinátánkénti konvergenciája adja az állítást. Kompaktság nem kell hozzá."
+		},
+		{
+			"id": "80tdc3zw",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Szorzattér és projekciók",
+			"q": "Hogyan írható fel az $f=(f_1,f_2)\\in X\\to Y\\times Z$ első koordinátafüggvénye?",
+			"choices": [
+				"$f_1=f\\circ P_1$",
+				"$f_1=P_2\\circ f$",
+				"$f_1=P_1\\circ f$",
+				"$f_1=P_1^{-1}\\circ f$"
+			],
+			"correct": 2,
+			"explain": "Előbb $f$-et alkalmazzuk, aztán az első tényezőre vetítünk: $f_1=P_1\\circ f$. Az $f\\circ P_1$ értelmetlen, mert $P_1$ az $Y\\times Z$ téren van értelmezve."
+		},
+		{
+			"id": "znezi83z",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Szorzattér és projekciók",
+			"q": "Mikor korlátos egy $A\\subset\\mathbb{K}^s$ halmaz?",
+			"choices": [
+				"Ha legalább egy $P_i[A]$ korlátos",
+				"Ha minden $P_i[A]$ vetülete korlátos",
+				"Ha $P_1[A]$ zárt",
+				"Ha minden $P_i[A]$ véges"
+			],
+			"correct": 1,
+			"explain": "$A$ pontosan akkor korlátos, ha minden koordinátavetülete korlátos. Ha csak egy vetület korlátos, a többi irányban $A$ még nem lehet korlátos."
+		},
+		{
+			"id": "kwl6s4wc",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Feladatok",
+			"q": "Melyik becslés mutatja, hogy a $P_i(x)=x_i$ projekció $\\mathbb{R}^n\\to\\mathbb{R}$ folytonos?",
+			"choices": [
+				"$|P_i(x)-P_i(y)|\\ge\\|x-y\\|$",
+				"$|P_i(x)-P_i(y)|\\le n\\|x-y\\|^2$",
+				"$\\|x-y\\|\\le|P_i(x)-P_i(y)|$",
+				"$|P_i(x)-P_i(y)|\\le\\|x-y\\|$"
+			],
+			"correct": 3,
+			"explain": "$|x_i-y_i|\\le\\|x-y\\|$, tehát $P_i$ Lipschitz, így folytonos. A fordított irányú egyenlőtlenség hamis, és folytonosságot nem is adna."
+		},
+		{
+			"id": "dsd6jhb7",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Feladatok",
+			"q": "$g:I\\to\\mathbb{R}$ folytonos. Miért folytonos $F(x)=(x,g(x))$?",
+			"choices": [
+				"Mert mindkét koordinátafüggvénye ($x\\mapsto x$ és $g$) folytonos",
+				"Mert $g$ monoton",
+				"Mert $I$ kompakt",
+				"Mert $F$ injektív"
+			],
+			"correct": 0,
+			"explain": "A koordinátánkénti tétel szerint $F$ akkor folytonos, ha koordinátái azok, márpedig az identitás és $g$ is folytonos. Injektivitás és kompaktság itt nem kell."
+		},
+		{
+			"id": "327ehdkm",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "base",
+			"q": "Mi következik tetszőleges metrikus térben egy halmaz kompaktságából?",
+			"choices": [
+				"Csak a korlátosság",
+				"A korlátosság és a zártság",
+				"A végesség",
+				"A nyíltság"
+			],
+			"correct": 1,
+			"explain": "Minden metrikus térben a kompakt halmaz korlátos és zárt. A csak korlátosság hiányos, és a kompakt halmaz nem feltétlenül véges."
+		},
+		{
+			"id": "q6xfjfuz",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "base",
+			"q": "Hol igaz, hogy minden korlátos és zárt halmaz kompakt?",
+			"choices": [
+				"Minden metrikus térben",
+				"Minden normált térben",
+				"Az $\\ell_\\infty$ térben",
+				"Az $\\mathbb{R}^p$ térben"
+			],
+			"correct": 3,
+			"explain": "A megfordítás $\\mathbb{R}^p$-ben igaz (Heine–Borel). Az $\\ell_\\infty$ normált tér, és ott van korlátos, zárt, nem kompakt halmaz."
+		},
+		{
+			"id": "sxqiuack",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Definíció",
+			"q": "Milyen számosságú nyílt fedésekre kell a kompaktság definíciójának teljesülnie?",
+			"choices": [
+				"Csak megszámlálható fedésekre",
+				"Csak véges fedésekre",
+				"Tetszőleges számosságú fedésekre",
+				"Csak gömbökből álló fedésekre"
+			],
+			"correct": 2,
+			"explain": "A $G_i$ ($i\\in I$) rendszer tetszőlegesen nagy számosságú lehet. A megszámlálhatóra szűkítés $\\mathbb{R}^p$-ben külön tétel (Lindelöf)."
+		},
+		{
+			"id": "oh76oqwd",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Definíció",
+			"q": "Mit jelent, hogy a $K$ halmaz nem kompakt?",
+			"choices": [
+				"Van nyílt fedése, amelyből nem választható ki véges fedés",
+				"Egyetlen nyílt fedéséből sem választható ki véges fedés",
+				"Van nyílt fedése, amely végtelen sok halmazból áll",
+				"Nincs véges nyílt fedése"
+			],
+			"correct": 0,
+			"explain": "A „minden fedésből választható véges” tagadása: létezik fedés, amelyből nem választható. Végtelen fedése minden halmaznak lehet, ez nem jelent semmit."
+		},
+		{
+			"id": "8wttg05y",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Minden kompakt halmaz korlátos és zárt",
+			"q": "Melyik nyílt fedést használja a jegyzet a kompakt $K$ korlátosságának bizonyításához ($a\\in M$ rögzített)?",
+			"choices": [
+				"$G_r=M\\setminus\\overline B(a,r)$, $r>0$",
+				"$B(a,r)$, $r>0$",
+				"$B(x,1)$, $x\\in K$",
+				"$B(a,1/n)$, $n\\ge1$"
+			],
+			"correct": 1,
+			"explain": "A $B(a,r)$ gömbök uniója $M$, így fedik $K$-t; a véges sok közül a legnagyobb egymaga is lefedi $K$-t. Az $M\\setminus\\overline B$ halmazok a zártság bizonyításához kellenek."
+		},
+		{
+			"id": "eku43f60",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Minden kompakt halmaz korlátos és zárt",
+			"q": "A zártság bizonyításában $c\\in M\\setminus K$ esetén milyen halmazok fedik $K$-t?",
+			"choices": [
+				"$B(c,r)$, $r>0$",
+				"$\\overline B(c,r)$, $r>0$",
+				"$M\\setminus B(c,r)$, $r>0$",
+				"$G_r=M\\setminus\\overline B(c,r)$, $r>0$"
+			],
+			"correct": 3,
+			"explain": "A $G_r$ halmazok nyíltak, uniójuk $M\\setminus\\{c\\}\\supset K$; a legbővebb is lefedi $K$-t, így $B(c,r)\\cap K=\\emptyset$. Az $M\\setminus B(c,r)$ zárt, ezért nem nyílt fedés."
+		},
+		{
+			"id": "1xgp308v",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Kompakt és zárt halmaz távolsága",
+			"q": "Mi garantálja $\\mathbb{R}^p$-ben, hogy diszjunkt, nemüres $K,Z$ halmazokra $\\operatorname{dist}(K,Z)>0$?",
+			"choices": [
+				"$K$ és $Z$ is zárt",
+				"$K$ és $Z$ is korlátos",
+				"$K$ nyílt, $Z$ zárt",
+				"$K$ kompakt, $Z$ zárt"
+			],
+			"correct": 3,
+			"explain": "A tétel kompakt $K$-ra és zárt $Z$-re szól; ekkor az infimum felvétetik, és diszjunkt esetben $a\\ne b$. Két zárt halmaz esetén a tétel nem alkalmazható, mert egyik sem kompakt."
+		},
+		{
+			"id": "cv9t6ddk",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Kompakt és zárt halmaz távolsága",
+			"q": "Melyik tételt alkalmazza kétszer a $\\operatorname{dist}(K,Z)$ felvételének bizonyítása?",
+			"choices": [
+				"A Cantor-metszettételt",
+				"A Bolzano–Weierstrass-tételt",
+				"A Lindelöf-lemmát",
+				"A Lebesgue-szám lemmát"
+			],
+			"correct": 1,
+			"explain": "Előbb $(x_n)$-ből, majd a korlátos $(y_{n_i})$-ből választunk konvergens részsorozatot Bolzano–Weierstrass szerint. A Cantor-tétel itt nem szerepel."
+		},
+		{
+			"id": "pb5u87ux",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "Miért kompakt kompakt halmazok $A_\\gamma$ ($\\Gamma\\ne\\emptyset$) rendszerének metszete?",
+			"choices": [
+				"Mert zárt részhalmaza egy kompakt halmaznak",
+				"Mert véges sok halmaz metszete",
+				"Mert minden $A_\\gamma$ nyílt",
+				"Mert a metszet mindig véges"
+			],
+			"correct": 0,
+			"explain": "A metszet zárt halmazok metszeteként zárt, és része bármely $A_\\gamma$-nak, így kompakt. Itt $\\Gamma$ végessége nem kell, az csak az unióhoz szükséges."
+		},
+		{
+			"id": "5aynuxjh",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "Mi a kulcslépése annak, hogy véges sok kompakt halmaz uniója kompakt?",
+			"choices": [
+				"Az unió minden pontja belső pont",
+				"Az unió zárt, tehát kompakt",
+				"Egy sorozatnak végtelen sok tagja esik valamelyik $A_\\gamma$-ba",
+				"Minden sorozat konvergens az unióban"
+			],
+			"correct": 2,
+			"explain": "Véges sok halmaz közül valamelyikbe végtelen sok tag esik, és abban van konvergens részsorozat. A zártság magában nem ad kompaktságot."
+		},
+		{
+			"id": "bggir9hu",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "base",
+			"q": "Melyik a Borel-féle kompaktság?",
+			"choices": [
+				"Minden sorozatnak van konvergens részsorozata",
+				"Minden nyílt fedésből kiválasztható véges fedés",
+				"Minden végtelen részhalmaznak van torlódási pontja",
+				"Minden Cauchy-sorozat konvergens"
+			],
+			"correct": 1,
+			"explain": "A Borel-féle a fedéses megfogalmazás, a Bolzano–Weierstrass-féle a sorozatos. A Cauchy-sorozatos tulajdonság a teljesség, nem kompaktság."
+		},
+		{
+			"id": "3ladfl5q",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Sorozatos kompaktság",
+			"q": "A sorozatos kompaktság definíciójában mit követelünk tetszőleges $(x_n):\\mathbb{N}\\to A$ sorozattól?",
+			"choices": [
+				"Legyen konvergens részsorozata $X$-beli határértékkel",
+				"Legyen Cauchy-részsorozata",
+				"Legyen konvergens részsorozata $A$-beli határértékkel",
+				"Legyen korlátos részsorozata"
+			],
+			"correct": 2,
+			"explain": "A részsorozat határértékének $A$-ban kell lennie, különben a nem zárt halmazok is átmennének. A Cauchy-részsorozat nem teljes térben nem konvergál."
+		},
+		{
+			"id": "1xt5n4f3",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Sorozatos kompaktság",
+			"q": "Miért kompakt minden véges, nemüres $A$ halmaz?",
+			"choices": [
+				"Mert minden véges halmaz nyílt",
+				"Mert van $a\\in A$ és $(\\nu_n)$, hogy $x_{\\nu_n}=a$ minden $n$-re",
+				"Mert minden $A$-beli sorozat konvergens",
+				"Mert $A$ minden pontja torlódási pont"
+			],
+			"correct": 1,
+			"explain": "Végtelen sok tag véges sok értékre esik, így valamelyik $a$ végtelen sokszor szerepel, és a konstans részsorozat $a\\in A$-hoz tart. Maga a sorozat nem feltétlenül konvergens."
+		},
+		{
+			"id": "0d3ibs4y",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Nyílt lefedés",
+			"q": "Mikor nyílt lefedése $A$-nak a $\\{T_\\gamma:\\gamma\\in\\Gamma\\}$ rendszer?",
+			"choices": [
+				"$\\Gamma\\ne\\emptyset$, $T_\\gamma\\subset X$ nyíltak, $A\\subset\\bigcup T_\\gamma$",
+				"$\\Gamma$ véges, $T_\\gamma$ nyíltak, $A=\\bigcup T_\\gamma$",
+				"$T_\\gamma\\subset A$ nyíltak, $A=\\bigcup T_\\gamma$",
+				"$\\Gamma\\ne\\emptyset$, $T_\\gamma$ zártak, $A\\subset\\bigcup T_\\gamma$"
+			],
+			"correct": 0,
+			"explain": "A $T_\\gamma$ nyílt halmazok $X$-ben vannak, és uniójuk tartalmazza $A$-t. Nem kell sem $A$ részhalmazának lenniük, sem végesnek lennie a rendszernek."
+		},
+		{
+			"id": "au20hwut",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Nyílt lefedés",
+			"q": "Mikor mondjuk, hogy egy nyílt lefedésből kiválasztható véges lefedés?",
+			"choices": [
+				"Ha $\\Gamma$ véges",
+				"Ha minden véges $\\Gamma_0$-ra $A\\subset\\bigcup_{\\Gamma_0}T_\\gamma$",
+				"Ha van véges $\\Gamma_0$, hogy $\\bigcup_{\\Gamma_0}T_\\gamma\\subset A$",
+				"Ha van véges $\\Gamma_0\\subset\\Gamma$, hogy $A\\subset\\bigcup_{\\Gamma_0}T_\\gamma$"
+			],
+			"correct": 3,
+			"explain": "Elég egyetlen véges $\\Gamma_0$ részindexhalmaz, amelynek halmazai lefedik $A$-t. A „minden véges $\\Gamma_0$” túl erős, a fordított tartalmazás pedig nem fedés."
+		},
+		{
+			"id": "z33yrfbd",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/A fő tétel",
+			"q": "Mit állít a Lebesgue-szám lemma kompakt $A$ és nyílt lefedése esetén?",
+			"choices": [
+				"Minden $a$-hoz van $r>0$, hogy $K_r(a)$ egy $T_\\gamma$-ban van",
+				"Van $r>0$, hogy minden $a\\in A$-ra $K_r(a)$ egy $T_\\gamma$-ban van",
+				"Van $r>0$, hogy $A\\subset K_r(a)$ egy $a$-ra",
+				"Van $\\gamma$, hogy minden $a$-ra $K_r(a)\\subset T_\\gamma$"
+			],
+			"correct": 1,
+			"explain": "Az $r$ egységes, nem függ $a$-tól; a $\\gamma$ index viszont igen. A pontonkénti $r$ a nyíltságból triviálisan adódna."
+		},
+		{
+			"id": "bym4clml",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/A fő tétel",
+			"q": "A szükségesség bizonyításában miért nincs a konstruált $(x_n)$ sorozatnak konvergens részsorozata?",
+			"choices": [
+				"Mert $\\rho(x_n,x_m)\\ge r$ ($n\\ne m$), így nincs Cauchy-részsorozata",
+				"Mert a sorozat nem korlátos",
+				"Mert a tagjai kívül esnek $A$-n",
+				"Mert a sorozat monoton csökkenő"
+			],
+			"correct": 0,
+			"explain": "A tagok páronként legalább $r$ távolságra vannak, így egyetlen részsorozat sem Cauchy, tehát nem konvergens. A tagok $A$-ban vannak, a korlátosság nem a döntő érv."
+		},
+		{
+			"id": "kpx15x9e",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/A torlódási pontos jellemzés",
+			"q": "A torlódási pontos jellemzés szerint $A$ akkor kompakt, ha milyen $B\\subset A$ részhalmazainak van $A$-beli torlódási pontja?",
+			"choices": [
+				"Minden nyílt $B$-nek",
+				"Minden véges $B$-nek",
+				"Minden végtelen $B$-nek",
+				"Minden zárt $B$-nek"
+			],
+			"correct": 2,
+			"explain": "A feltétel: minden végtelen $B\\subset A$-ra $B'\\cap A\\ne\\emptyset$. Véges halmaznak nincs torlódási pontja, így arra a feltétel nem is teljesülhetne."
+		},
+		{
+			"id": "5lee48vx",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/A torlódási pontos jellemzés",
+			"q": "Miért teljesül automatikusan a torlódási pontos feltétel véges $A$ halmazra?",
+			"choices": [
+				"Mert $A$ minden pontja torlódási pont",
+				"Mert $A'=A$",
+				"Mert $A$ zárt",
+				"Mert $A$-nak nincs végtelen részhalmaza"
+			],
+			"correct": 3,
+			"explain": "A feltétel csak végtelen részhalmazokra szól, véges $A$-nak pedig ilyen nincs. Véges halmaznak egyébként egyáltalán nincs torlódási pontja."
+		},
+		{
+			"id": "69uwlev2",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Összefoglalva",
+			"q": "Mit állít a Borel-lefedési tétel $\\mathbb{R}$-ben?",
+			"choices": [
+				"Ha nyílt halmazok fedik $[a,b]$-t, véges sok is fedi",
+				"Ha nyílt halmazok fedik $(a,b)$-t, véges sok is fedi",
+				"Ha zárt intervallumok fedik $[a,b]$-t, véges sok is fedi",
+				"Ha nyílt halmazok fedik $\\mathbb{R}$-et, véges sok is fedi"
+			],
+			"correct": 0,
+			"explain": "A tétel a korlátos zárt $[a,b]$ intervallumra szól. Nyílt intervallumra vagy $\\mathbb{R}$-re nem igaz, mert ezek nem kompaktak."
+		},
+		{
+			"id": "tt1uxew1",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Összefoglalva",
+			"q": "Melyik nem tartozik a kompaktság három ekvivalens megfogalmazása közé?",
+			"choices": [
+				"Minden nyílt lefedésből kiválasztható véges lefedés",
+				"Minden végtelen részhalmaznak van $A$-beli torlódási pontja",
+				"Minden $A$-beli sorozat konvergens, határértéke $A$-ban van",
+				"Minden $A$-beli sorozatnak van $A$-ban konvergens részsorozata"
+			],
+			"correct": 2,
+			"explain": "A sorozatos jellemzés részsorozatot követel, nem azt, hogy maga a sorozat konvergáljon. A többi három a felsorolt ekvivalens feltétel."
+		},
+		{
+			"id": "nbikdw72",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Két öröklődési szabály",
+			"q": "$A$ kompakt, $B\\subset A$ zárt. Miért van egy $B$-beli sorozat konvergens részsorozatának határértéke $B$-ben?",
+			"choices": [
+				"Mert $A$ korlátos",
+				"Mert $B$ zárt",
+				"Mert $B$ véges",
+				"Mert $A$ nyílt"
+			],
+			"correct": 1,
+			"explain": "$A$ kompaktsága ad $A$-beli határértékű részsorozatot, és $B$ zártsága miatt ez a határérték $B$-ben van. A korlátosság ehhez nem elég."
+		},
+		{
+			"id": "ki922vyc",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Két öröklődési szabály",
+			"q": "Mit mond az egymásba skatulyázott kompaktokról szóló állítás $\\emptyset\\ne A_{n+1}\\subset A_n$ esetén?",
+			"choices": [
+				"$\\bigcap A_n$ egyelemű",
+				"$\\bigcap A_n$ lehet üres",
+				"$\\bigcup A_n$ kompakt",
+				"$\\bigcap A_n$ nemüres és kompakt"
+			],
+			"correct": 3,
+			"explain": "A metszet nemüres és kompakt, ez a Cantor-metszettétel absztrakt változata. Egyelemű csak külön feltétellel (pl. ha az átmérők nullához tartanak) lenne."
+		},
+		{
+			"id": "akte2792",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "base",
+			"q": "Mi a Lindelöf-lemma szerepe Borel tételének fő bizonyításában?",
+			"choices": [
+				"Tetszőleges nyílt fedést megszámlálhatóra szűkít",
+				"Tetszőleges nyílt fedést végesre szűkít",
+				"Korlátos sorozatból konvergens részsorozatot ad",
+				"Egymásba skatulyázott halmazok metszetét adja"
+			],
+			"correct": 0,
+			"explain": "A Lindelöf-lemma megszámlálható részfedést ad, a végességet már a Cantor-metszettétel biztosítja. Végesre közvetlenül nem szűkít."
+		},
+		{
+			"id": "zd4rjl0s",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "base",
+			"q": "Mi jellemzi $\\mathbb{R}^p$-ben a fedéses értelemben kompakt halmazokat?",
+			"choices": [
+				"A korlátosság",
+				"A zártság",
+				"A korlátosság és a zártság együtt",
+				"A nyíltság és a korlátosság"
+			],
+			"correct": 2,
+			"explain": "$\\mathbb{R}^p$-ben a kompaktság pontosan a korlátosság és a zártság együttese. Egyik feltétel sem elég egyedül: $\\mathbb{R}$ zárt, $(0,1)$ korlátos, de egyik sem kompakt."
+		},
+		{
+			"id": "z6svm1eq",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Racionális gömbök",
+			"q": "Mikor racionális gömb a $B(a,r)\\subset\\mathbb{R}^p$ gömb?",
+			"choices": [
+				"Ha $r\\in\\mathbb{Q}$",
+				"Ha $a\\in\\mathbb{Q}^p$",
+				"Ha $a\\in\\mathbb{Q}^p$ vagy $r\\in\\mathbb{Q}$",
+				"Ha $a\\in\\mathbb{Q}^p$ és $r\\in\\mathbb{Q}$"
+			],
+			"correct": 3,
+			"explain": "A középpontnak és a sugárnak is racionálisnak kell lennie, csak így lesz megszámlálhatóan sok ilyen gömb. Csak racionális sugár esetén kontinuum sok gömb volna."
+		},
+		{
+			"id": "u9eznwmm",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Racionális gömbök",
+			"q": "A lemma bizonyításában $B(a,r)\\subset G$ esetén hogyan választjuk a $B(b,s)$ racionális gömböt?",
+			"choices": [
+				"$b\\in B(a,r/2)\\cap\\mathbb{Q}^p$, $r/2<s<r$",
+				"$b\\in B(a,r/3)\\cap\\mathbb{Q}^p$, $r/3<s<2r/3$",
+				"$b\\in B(a,r)\\cap\\mathbb{Q}^p$, $s<r$",
+				"$b\\in B(a,r/3)\\cap\\mathbb{Q}^p$, $0<s<r/3$"
+			],
+			"correct": 1,
+			"explain": "$|a-b|<r/3<s$ miatt $a\\in B(b,s)$, és $|x-a|<2r/3+r/3=r$ miatt $B(b,s)\\subset B(a,r)$. Ha $s<r/3$ lenne, az $a$ pont kieshetne a gömbből."
+		},
+		{
+			"id": "rd69cuhm",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Lindelöf-lemma",
+			"q": "Mit állít a Lindelöf-lemma $\\mathbb{R}^p$-beli nyílt $G_i$ ($i\\in I$) rendszerre?",
+			"choices": [
+				"Van megszámlálható $J\\subset I$ ugyanazzal az unióval",
+				"Van véges $J\\subset I$ ugyanazzal az unióval",
+				"Van megszámlálható $J\\subset I$, hogy a $G_i$-k diszjunktak",
+				"Az $I$ indexhalmaz megszámlálható"
+			],
+			"correct": 0,
+			"explain": "Megszámlálható részrendszer adja ugyanazt az uniót. Véges részrendszer általában nincs, ahhoz kompaktság kell."
+		},
+		{
+			"id": "r5d5k1jy",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Lindelöf-lemma",
+			"q": "A Lindelöf-lemma bizonyításában hogyan kapjuk a $J$ indexhalmazt?",
+			"choices": [
+				"Minden $i\\in I$-hez egy racionális gömböt választunk",
+				"Minden $k$-hoz, ahol $B_k$ valamely $G_i$-ben van, egy ilyen $i_k$-t választunk",
+				"$J$-be a legnagyobb $G_i$ halmazok indexeit tesszük",
+				"$J:=\\{k:B_k\\cap G_k\\ne\\emptyset\\}$"
+			],
+			"correct": 1,
+			"explain": "$K=\\{k:\\exists i,\\,B_k\\subset G_i\\}$, minden $k\\in K$-hoz egy $i_k$, és $J=\\{i_k\\}$ megszámlálható. Az $I$ felől indulva nem kapnánk megszámlálható halmazt."
+		},
+		{
+			"id": "bcs8f7k0",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Borel tétele",
+			"q": "Borel tételének bizonyításában hogyan definiáljuk a $K_n$ halmazokat?",
+			"choices": [
+				"$K_n=K\\cap(G_{i_1}\\cup\\dots\\cup G_{i_n})$",
+				"$K_n=K\\cap G_{i_n}$",
+				"$K_n=K\\setminus(G_{i_1}\\cup\\dots\\cup G_{i_n})$",
+				"$K_n=(G_{i_1}\\cup\\dots\\cup G_{i_n})\\setminus K$"
+			],
+			"correct": 2,
+			"explain": "$K_n$ a $K$ azon része, amelyet az első $n$ halmaz még nem fed le; ez zárt, korlátos, és a sorozat csökkenő. A metszetes változat növekvő volna."
+		},
+		{
+			"id": "gnmvqomm",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Borel tétele",
+			"q": "Melyik tétel adja Borel tételének bizonyításában, hogy nemüres $K_n$-ek esetén $K_\\infty\\ne\\emptyset$?",
+			"choices": [
+				"A Bolzano–Weierstrass-tétel",
+				"A Lebesgue-szám lemma",
+				"A Weierstrass-tétel",
+				"A Cantor-metszettétel"
+			],
+			"correct": 3,
+			"explain": "Csökkenő, nemüres, korlátos, zárt halmazok metszete nemüres: ez a Cantor-metszettétel. A Lebesgue-szám lemma már kompaktságot feltételezne."
+		},
+		{
+			"id": "hwdhlp8z",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Alternatív bizonyítás, Lindelöf-lemma nélkül (kockafelezés)",
+			"q": "Mikor „rossz” egy halmaz a kockafelezéses bizonyításban?",
+			"choices": [
+				"Ha nem korlátos",
+				"Ha a $G_i$-k közül semelyik véges sok nem fedi le",
+				"Ha egyetlen $G_i$ sem tartalmazza egészében",
+				"Ha üres"
+			],
+			"correct": 1,
+			"explain": "Rossz az a halmaz, amelyet a $G_i$-k közül semelyik véges sok sem fed le. Ha csak egyetlen $G_i$ nem fedi, attól még véges sok lefedheti."
+		},
+		{
+			"id": "9zyf82w3",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Alternatív bizonyítás, Lindelöf-lemma nélkül (kockafelezés)",
+			"q": "Hány részkockára bontjuk $D_n$-et a felezéskor $\\mathbb{R}^p$-ben?",
+			"choices": [
+				"$2p$",
+				"$p^2$",
+				"$2^p$",
+				"$2$"
+			],
+			"correct": 2,
+			"explain": "Minden tengelyre merőlegesen felezünk, így $2^p$ feleakkora zárt kocka keletkezik. $2p$ a kocka lapjainak száma, nem a részkockáké."
+		},
+		{
+			"id": "9di8mkxd",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "base",
+			"q": "Mi mondható kompakt halmaz folytonos képéről?",
+			"choices": [
+				"Kompakt",
+				"Nyílt",
+				"Zárt, de nem feltétlenül korlátos",
+				"Véges"
+			],
+			"correct": 0,
+			"explain": "Kompakt halmaz folytonos képe kompakt, tehát korlátos és zárt is. A zártság magában gyengébb állítás."
+		},
+		{
+			"id": "exizrcs0",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/A tétel",
+			"q": "Mi a 2.4. Tétel (Weierstrass) feltétele az $f\\in X\\to Y$ függvényre?",
+			"choices": [
+				"$f$ folytonos és $D_f$ zárt",
+				"$f$ folytonos és $D_f$ korlátos",
+				"$f$ folytonos és $R_f$ kompakt",
+				"$f$ folytonos és $D_f$ kompakt"
+			],
+			"correct": 3,
+			"explain": "A tétel folytonos $f$-et és kompakt $D_f$-et feltételez, és ebből következik $R_f$ kompaktsága. Az $R_f$ kompaktsága a következmény, nem a feltétel."
+		},
+		{
+			"id": "iybk8e0c",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/A tétel",
+			"q": "Mit állít a 2.4. Tétel speciálisan $f\\in X\\to\\mathbb{R}$ esetén?",
+			"choices": [
+				"$R_f$ egy nyílt intervallum",
+				"$R_f$-nek van legkisebb és legnagyobb eleme",
+				"$f$ egyenletesen folytonos",
+				"$f$ injektív"
+			],
+			"correct": 1,
+			"explain": "Valós értékű esetben $R_f$-nek van minimuma és maximuma. Hogy $R_f$ intervallum, az összefüggőséget igényelne, és nem is nyílt."
+		},
+		{
+			"id": "d83ho3mz",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Bizonyítás",
+			"q": "A kompaktság melyik megfogalmazását használja a 2.4. Tétel bizonyítása?",
+			"choices": [
+				"A fedéses (Borel-féle)",
+				"A torlódási pontos",
+				"A sorozatos (sorozatkompaktság)",
+				"A korlátos és zárt jellemzést"
+			],
+			"correct": 2,
+			"explain": "Egy $R_f$-beli sorozathoz $R_f$-beli határértékű konvergens részsorozatot keresünk. A korlátos és zárt jellemzés csak $\\mathbb{R}^p$-ben ekvivalens, a tétel általános metrikus terekre szól."
+		},
+		{
+			"id": "oix1xgqz",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Bizonyítás",
+			"q": "A Weierstrass-tétel bizonyításában hol használjuk az átviteli elvet?",
+			"choices": [
+				"$\\lim f(x_{\\nu_n})=f(a)$, ahol $a=\\lim x_{\\nu_n}$",
+				"$y_n=f(x_n)$ felírásánál",
+				"$a\\in D_f$ igazolásánál",
+				"Az $(x_{\\nu_n})$ kiválasztásánál"
+			],
+			"correct": 0,
+			"explain": "Mivel $f\\in C\\{a\\}$, az átviteli elv adja $f(x_{\\nu_n})\\to f(a)$-t. Az $a\\in D_f$ és a részsorozat kiválasztása $D_f$ kompaktságából jön."
+		},
+		{
+			"id": "khxyanmr",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/A valós értékű eset",
+			"q": "Miért valós szám az $M=\\sup R_f$ ($f\\in X\\to\\mathbb{R}$, $D_f$ kompakt, $f$ folytonos)?",
+			"choices": [
+				"Mert $f$ korlátos minden halmazon",
+				"Mert $D_f$ zárt",
+				"Mert $f$ monoton",
+				"Mert $R_f$ kompakt, tehát korlátos"
+			],
+			"correct": 3,
+			"explain": "$R_f$ kompakt, így korlátos, ezért a szuprémum véges. A $D_f$ zártsága önmagában semmit nem mond $R_f$ korlátosságáról."
+		},
+		{
+			"id": "q1xz6hr9",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/A valós értékű eset",
+			"q": "Hogyan választjuk az $M$-hez tartó $(y_n)$ sorozatot a valós értékű esetben?",
+			"choices": [
+				"$M<y_n<M+\\frac1n$",
+				"$M-\\frac1n<y_n\\le M$",
+				"$y_n=M$ minden $n$-re",
+				"$M-n<y_n\\le M$"
+			],
+			"correct": 1,
+			"explain": "A szuprémum tulajdonsága miatt van $y_n\\in R_f$ az $(M-\\frac1n,M]$ intervallumban, így $y_n\\to M$. $M$ fölött nincs $R_f$-beli elem, és $y_n=M$ éppen a bizonyítandó állítást tételezné fel."
+		},
+		{
+			"id": "xxgm1aby",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Mire használjuk",
+			"q": "Mit ad a Weierstrass-tétel egy többváltozós abszolút szélsőérték-feladatban?",
+			"choices": [
+				"A szélsőérték helyét",
+				"A szélsőérték értékét",
+				"A szélsőérték létezését",
+				"A lokális szélsőértékek számát"
+			],
+			"correct": 2,
+			"explain": "A tétel a létezési fele a feladatnak; a helyet lokális feltételekkel és peremvizsgálattal kell megkeresni. Maga a tétel nem konstruktív."
+		},
+		{
+			"id": "twu4v39z",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Mire használjuk",
+			"q": "Miért alkalmazható a tétel egy $\\mathbb{R}^p$-beli korlátos és zárt tartományon?",
+			"choices": [
+				"A Heine–Borel-tétel szerint az ilyen halmaz kompakt",
+				"Mert minden zárt halmaz kompakt",
+				"Mert a tartomány nyílt",
+				"Mert a függvény korlátos"
+			],
+			"correct": 0,
+			"explain": "$\\mathbb{R}^p$-ben a korlátos és zárt halmazok a Heine–Borel-tétel szerint kompaktak. A zártság egymagában nem elég."
+		},
+		{
+			"id": "w2v68fss",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Ha a tartomány nem kompakt",
+			"q": "Hogyan jár el a gyakorlat, ha a szélsőérték-feladat tartománya nem kompakt (pl. tartályfeladat)?",
+			"choices": [
+				"Elhagyja a folytonossági feltételt",
+				"A tartomány belsejére szűkít",
+				"A tartományt kiterjeszti $\\mathbb{R}^p$-re",
+				"Kompakt halmazra, $\\{f\\le f(P)\\}$ lezárására szűkít"
+			],
+			"correct": 3,
+			"explain": "A szélsőértéket egy kompakt szintvonal-halmazra, $\\{f\\le f(P)\\}$ lezárására szűkítik, és ott alkalmazzák a tételt. A belső rész nyílt, így ott a tétel nem alkalmazható."
+		},
+		{
+			"id": "p7gi16cv",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Ha a tartomány nem kompakt",
+			"q": "Melyik tartományon nem alkalmazható közvetlenül a Weierstrass-tétel?",
+			"choices": [
+				"$[0,1]\\times[0,1]$",
+				"$\\{x>0,\\,y>0\\}$",
+				"$\\{x^2+y^2\\le4\\}$",
+				"$[-1,1]\\times[2,3]$"
+			],
+			"correct": 1,
+			"explain": "A nyílt negyedsík sem nem zárt, sem nem korlátos, tehát nem kompakt. A többi tartomány korlátos és zárt, így kompakt."
+		}
+	]
+}

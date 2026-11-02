@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [1.-bevezetés.md, 6.-veremauto-és-környezetfüggetlen-nyelv.md, szelmJegyzet.pdf]
 derivation: source
+kind: overview
+element: air
 updated: 2026-08-05
 ---
 

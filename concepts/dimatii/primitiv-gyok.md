@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/alkalmazasok-kriptografia]
-sources: [DimatIIEa03.pdf]
+tags: [concept]
+sources: [DimatIIEa03.pdf, dm2gy05.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-22
 ---
 
 # Primitív gyök (generátor)
@@ -37,9 +39,16 @@ Vagyis a generátorság nem a modulus, hanem a konkrét elem tulajdonsága: adot
 
 A generátor létezése miatt értelmezhető a [[concepts/dimatii/diszkret-logaritmus]], és ezen alapul a [[concepts/dimatii/diffie-hellman-kulcscsere]] is: ott $g$ egy nagy $p$ prímhez tartozó generátor, és a nyilvános paraméterek épp a $(p, g)$ pár.
 
+### Gyakorló példák
+
+**Modulo $7$.** A $4$ hatványai: $4, 2, 1, 4, 2, 1$, tehát $4$ nem generátor (rendje $3$). Az $5$ hatványai: $5, 4, 6, 2, 3, 1$, az összes nemnulla maradékot bejárja, tehát $5$ generátor. Bármely $g$ generátorra $\log_g 6 = 3$, mert $6 \equiv -1 = g^{(p-1)/2}$.
+
+**Modulo $11$, $g = 2$.** A hatványok $2^0, \dots, 2^9$: $1, 2, 4, 8, 5, 10, 9, 7, 3, 6$ — mind a tíz nemnulla maradék, tehát $2$ generátor.
+
 ## Kapocs
 
 - [[concepts/dimatii/diszkret-logaritmus]] — a $g$ generátorhoz tartozó kitevő mint „logaritmus"
 - [[concepts/dimatii/diffie-hellman-kulcscsere]] — nyilvános paraméterként használ egy generátort
 - [[concepts/dimatii/gyors-hatvanyozas]] — a $g^n \bmod p$ hatványok hatékony kiszámítása
 - [[concepts/dimatii/csoport]] — $\mathbb{Z}_p^*$ a szorzásra Abel-csoport, a generátor létezése annak ciklikusságát jelenti
+- [[concepts/dimatii/diszkret-logaritmus]] — a generátor hatványainak táblázata az index

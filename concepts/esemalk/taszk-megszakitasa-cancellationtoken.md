@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
-sources: [elte_eva_ea05_winforms_multithread.pdf]
+tags: [concept]
+sources: [elte_eva_ea05_winforms_multithread.pdf, elte_eva_gy07_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # Aszinkron tevékenységek megszakítása (`CancellationToken`)
@@ -42,6 +44,10 @@ if (token.IsCancellationRequested) { ... }
 A megszakítás tehát kooperatív: a taszknak magának kell rendszeresen
 ellenőriznie a tokent, és ennek megfelelően félbeszakítania a saját
 végrehajtását.
+
+### Példa: megszakítható képletöltés
+
+A WPF képletöltőben a `WebPage` modell `CancellationTokenSource`-t és tokent tart, a `CancelLoad()` hívja a `Cancel()`-t; a képeket bejáró ciklus minden elem előtt vizsgálja az `IsCancellationRequested`-et, és a HTML letöltése is megkapja a tokent (`client.GetAsync(url, token)`). Lásd [[concepts/esemalk/wpf-kepletolto-modell-nezet]].
 
 ## Kapocs
 

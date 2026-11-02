@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 4.5.3. szakasz bevezetése"]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-07
 ---
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/algebrai-strukturak]
-sources: [DimatIIEa03.pdf, DimatIIEa04.pdf]
+tags: [concept]
+sources: [DimatIIEa03.pdf, DimatIIEa04.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Művelettartó leképezés
@@ -30,6 +32,8 @@ $$(k + n) \bmod m = (k \bmod m) +_m (n \bmod m).$$
 A művelettartó leképezés az algebrai struktúrák közötti *homomorfizmus* fogalmának alapesete: a struktúrák akkor tekinthetők „ugyanolyannak", ha van közöttük művelettartó bijekció.
 
 ## Kapocs
+
+- [[concepts/dimatii/homomorfizmus-es-izomorfizmus]] — a művelettartó leképezések elnevezései és tulajdonságai
 
 - [[concepts/dimatii/muvelet]] — a leképezés által megőrzött szerkezet
 - [[concepts/dimatii/algebrai-struktura]] — a keret, amelyben a művelettartás értelmezhető

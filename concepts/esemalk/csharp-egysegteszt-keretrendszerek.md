@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/winforms-architektura-es-teszteles]
-sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
+tags: [concept]
+sources: [elte_eva_ea04_winforms_architecture_testing.pdf, elte_eva_gy05_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: comparison
+element: air
+updated: 2026-10-21
 ---
 
 # MSTest, NUnit, xUnit egységteszt-keretrendszerek
@@ -30,6 +32,8 @@ tesztosztály konstruktora játssza ezt a szerepet, a takarítást pedig az
 `IDisposable` interfész `Dispose` metódusa végzi el (egy új tesztosztály-
 példány jön létre minden egyes teszteset előtt).
 
+Az 5. gyakorlat további xUnit-különbségeket is kiemel: az `Assert` függvényei másképp hívhatók (`Equal` az `AreEqual`, `True` az `IsTrue` helyett), külön vizsgálat van az egy elemű és az üres gyűjteményre (`Assert.Single`, `Assert.Empty`), a paraméterezett teszt a `[Theory]`. Lásd [[concepts/esemalk/docustat-egysegtesztek]].
+
 **Példa (TicTacToe):** a korábbi, `MSTest` alapú `TicTacToeGame.Test` projekt
 mellett készíthető `TicTacToeGame.Test.NUnit` és `TicTacToeGame.Test.xUnit`
 projekt is ugyanahhoz a játékhoz — a tesztesetek logikája azonos, csak az
@@ -44,5 +48,5 @@ valóban meghívta-e a várt műveletet a várt paraméterekkel (pl.
 ## Kapocs
 
 - [[subjects/esemalk]] — a kurzus áttekintése
-- [[concepts/esemalk/csharp-attributumok]] — a tesztkeretrendszerek attribútumai
+- [[concepts/esemalk/csharp-megjegyzesek]] — a tesztkeretrendszerek attribútumai
   (`[TestClass]`, `[TestMethod]`, ...) a C# attribútum mechanizmusára épülnek

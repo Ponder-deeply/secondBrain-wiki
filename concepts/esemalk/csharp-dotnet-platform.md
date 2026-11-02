@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: overview
+element: air
+updated: 2026-09-30
 ---
 
 # .NET platform
@@ -18,7 +20,7 @@ együttes, amelynek központi programozási nyelve a [[concepts/esemalk/csharp-n
 - A programok egy közös köztes nyelvű kódra (*Intermediate Language*, IL)
   fordulnak, amely platformfüggetlen.
 - A köztes nyelvű kódot a virtuális gép (*Common Language Runtime*, CLR)
-  interpretálja, amely biztosítja a futás felügyeletét (pl. szemétgyűjtés) és a
+  futásidőben gépi kódra fordítja (JIT) és futtatja, amely biztosítja a futás felügyeletét (pl. szemétgyűjtés) és a
   dinamikus programozás támogatását (pl. reflexió).
 - Több nyelvet támogat (C#, Visual C++, Visual Basic.NET, F#), de a központi
   nyelve a C#.
@@ -42,7 +44,7 @@ A Microsoft historikus okokból két keretrendszert készített:
   WPF).
 - A .NET Core 3.1 utáni verzió a *.NET 5* nevet kapta (a verziózásból adódó
   félreértések elkerülése végett — nem esik egybe a .NET Framework
-  verziószámozásával). Jelenleg a .NET 8 (LTS) és a .NET 9 az aktuális kiadások.
+  verziószámozásával). Jelenleg (2026) a .NET 10 (LTS, 2025. november) a legfrissebb kiadás.
 
 ### .NET Standard
 

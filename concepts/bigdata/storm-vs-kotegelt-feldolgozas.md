@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/storm-stream-feldolgozas]
+tags: [concept]
 sources: [EA5_storm.pdf]
 references: ["Chintapalli et al., Benchmarking Streaming Computation Engines: Storm, Flink and Spark Streaming, IEEE IPDPS Workshops 2016"]
 derivation: source
+kind: comparison
+element: water
 updated: 2026-09-12
 ---
 
@@ -89,4 +91,4 @@ felépítés megnehezíti a hibakeresést.
 - [[concepts/bigdata/mapreduce]] — a Hadoop kötegelt feldolgozási
   paradigmája, amellyel a Storm szembeállítható
 - [[concepts/bigdata/spark-architektura]] — a Spark futtatási modellje
-</content>
+- [[concepts/bigdata/spark-structured-streaming]] — a Spark DataFrame-alapú stream-feldolgozása, a DStream utódja

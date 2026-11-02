@@ -1,7 +1,9 @@
 ---
-tags: [concept, dimatii/alkalmazasok-kriptografia]
+tags: [concept]
 sources: [DimatIIEa03.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

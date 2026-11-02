@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [11b_Adatvedelem.md]
 derivation: source
+kind: overview
+element: water
 updated: 2026-08-12
 ---
 

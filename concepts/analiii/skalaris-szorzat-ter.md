@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 01_ea_An3_2025_osz.pdf]
+sources: [SimonP-Anal2.pdf, 01_ea_An3_2025_osz.pdf, An_III_Gyak_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 1.2. vi) és 1.6. v) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Skaláris szorzat tér, euklideszi tér, Hilbert-tér
@@ -102,6 +104,12 @@ A másodikhoz a $C := \sup\{\|x_n\| : n \in \mathbb{N}\} < \infty$ korláttal
 
 $$\bigl|\langle x_n,y_n\rangle - \langle\alpha,\beta\rangle\bigr| \leq \bigl|\langle x_n, y_n-\beta\rangle\bigr| + \bigl|\langle x_n-\alpha,\beta\rangle\bigr| \leq C\|y_n-\beta\| + \|x_n-\alpha\|\|\beta\| \to 0 . \qquad \blacksquare$$
 
+### Feladatok
+
+*Forrás: An_III_Gyak_2022_tavasz.pdf 3. gyakorlat, További feladatok 1.*
+
+- **$(\mathbb R^n,\|\cdot\|_p)$ normája akkor és csak akkor származik skaláris szorzatból, ha $p=2$.** Neumann–Jordan-tétellel, $x=e_1$, $y=e_2$: $\|e_1\pm e_2\|_p^2=2^{2/p}$ ($p<\infty$), ezért a paralelogramma-azonosság $2\cdot2^{2/p}=2\cdot(1+1)$, azaz $2^{2/p}=2$, $p=2$. $p=\infty$-re $\|e_1\pm e_2\|_\infty=1$, a bal oldal $2\neq4$.
+
 ## Kapocs
 
 - [[concepts/analiii/normalt-vektorter]] — a norma, amit a skaláris szorzat generál
@@ -109,3 +117,4 @@ $$\bigl|\langle x_n,y_n\rangle - \langle\alpha,\beta\rangle\bigr| \leq \bigl|\la
 - [[concepts/analiii/cauchy-sorozat-es-teljes-ter]] — a teljesség, ami a Hilbert-tér definíciójában szerepel
 - [[concepts/analiii/metrikus-terek-szorzata]] — euklideszi terek szorzata is euklideszi tér
 - [[concepts/analiii/konvergencia-metrikus-terben]] — a sorozatfolytonossághoz használt limeszfogalom
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

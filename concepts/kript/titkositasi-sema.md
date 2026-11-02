@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [történelmi_titkosítók.pdf]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-04
 ---
 

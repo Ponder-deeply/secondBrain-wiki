@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [07.md, 08.md, 08.md]
 derivation: source
+kind: definition
+element: water
 updated: 2026-08-28
 ---
 

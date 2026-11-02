@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/avaloniaui-alapok]
+tags: [concept]
 sources: [elte_eva_ea09_avaloniaui.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Avalonia MVVM Toolkit
@@ -59,19 +61,19 @@ public IRelayCommand SomethingCommand =>
 
 **Tulajdonság generálása mezőből** (`[ObservableProperty]`): az attribútum
 adattag (mező) attribútumaként alkalmazható, és a `SetProperty()` metódust
-(az `OnPropertyChanged()` korábbi megfelelőjét) használó tulajdonságot
+(amely az `OnPropertyChanged()` hívását is elvégzi) használó tulajdonságot
 generál. A `SetProperty(ref name, value)` beállítja a mezőt, majd kiváltja
 rá a `PropertyChanged` eseményt.
 
 ```csharp
 [ObservableProperty] // Data property
-private string _data { /* ... */ }
+private string? _data;
 ```
 
 ```csharp
 // generált kód
 public string? Data {
-    get => name;
+    get => _data;
     set => SetProperty(ref _data, value);
 }
 ```

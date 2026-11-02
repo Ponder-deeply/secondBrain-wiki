@@ -1,18 +1,43 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
-updated: 2026-09-13
+kind: model
+element: water
+updated: 2026-09-25
 ---
 
-# Avalonia UI mobil alkalmazáskörnyezet és életciklus
+# Avalonia UI alkalmazás-életciklus és mobil alkalmazáskörnyezet
 
 A mobil platformokon futó Avalonia UI-alkalmazások egy zárt (sandboxolt)
 környezetben futnak, és más életciklust követnek, mint az asztali
 alkalmazások: a futás alatti és a terminált állapot mellett megjelenik a
-felfüggesztett állapot is, amelyet a keretrendszer egységesen kezel.
+felfüggesztett állapot is, amelyet a keretrendszer egységesen kezel. Az
+asztali életciklus (`Startup`/`Exit`) kezelése az első szakaszban szerepel.
 
 ## Tartalom
+
+### Asztali életciklus-kezelés (`Startup`/`Exit`)
+
+Az Avalonia UI-ban az alkalmazás elindítása és leállítása asztali környezetben
+(Windows, Linux) életciklus-eseményekként kezelhető, az `App` osztály
+felüldefiniált metódusán keresztül.
+
+Az `App` osztály `OnFrameworkInitializationCompleted` metódusát
+felüldefiniálva eseménykezelőkkel adható meg, hogy mi történjen az alkalmazás
+elindításakor és leállításakor. A klasszikus asztali (desktop) élettartam-
+objektumon a `Startup` és `Exit` eseményekre lehet feliratkozni:
+
+```csharp
+desktop.Startup += (sender, args) =>
+{
+    // ...
+};
+```
+
+Ez az életciklus-kezelés az alapja annak, hogy egy alkalmazás induláskor
+visszatöltse, leállításkor pedig elmentse az állapotát — lásd
+[[concepts/esemalk/avalonia-platformfuggetlen-perzisztencia]].
 
 ### Alkalmazáskörnyezet (sandbox)
 
@@ -78,10 +103,6 @@ if (Application.Current
 
 ## Kapocs
 
-- [[concepts/esemalk/avalonia-eletciklus-kezeles]] — az asztali (Windows/
-  Linux) alkalmazás-életciklus kezelése (`Startup`/`Exit`); ez a lap a
-  mobil (Android/iOS) oldali életciklust (futás alatt/felfüggesztve/
-  leállítva) írja le
 - [[concepts/esemalk/avalonia-eszkozfuggo-viselkedes]] — az eszköztípus
   lekérdezése és a platformfüggő viselkedés, amely a mobil
   alkalmazáskörnyezethez szorosan kapcsolódik
@@ -91,3 +112,9 @@ if (Application.Current
 - [[concepts/esemalk/avalonia-idozites]] — a háttérszálon futó időzítők és a
   UI-szálra való szinkronizálás, amely a felfüggesztett állapotban futó
   tevékenységek leállításával is összefügg
+- [[concepts/esemalk/avalonia-bevezetes]] — az Avalonia UI keretrendszer
+  áttekintése
+- [[concepts/esemalk/avalonia-platformfuggetlen-perzisztencia]] — az
+  életciklus-eseményekhez kötött állapotmentés és -betöltés
+- [[concepts/esemalk/wpf-idozites]] — a `Dispatcher`/időzítés WPF-es
+  megfelelője szálbiztos felületfrissítéshez

@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3.9, "LYAH \"Typeclasses 101\""]
 derivation: unsourced
+kind: overview
+element: air
 updated: 2026-05-18
 ---
 

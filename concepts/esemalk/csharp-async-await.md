@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
-sources: [elte_eva_ea05_winforms_multithread.pdf]
+tags: [concept]
+sources: [elte_eva_ea05_winforms_multithread.pdf, elte_eva_gy06_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # `async`/`await` — aszinkron programozás C#-ban
@@ -31,12 +33,13 @@ private async void ReadStreamAsync(Stream str) {
 
 Egy `async` metódus az első `await` utasításig **szinkron** módon fut le:
 
-- az `await` utasítás elérésekor az adott `Task` egy másik szálon kerül
-  kiértékelésre,
-- közben a tartalmazó metódus felfüggesztésre kerül, és a vezérlés a hívó
-  eljáráshoz kerül vissza,
+- az `await` utasítás elérésekor, ha az adott `Task` még nem fejeződött be,
+  a tartalmazó metódus felfüggesztésre kerül (az `await` maga nem indít új
+  szálat; a `Task` pl. `Task.Run` esetén a szálkészlet egy szálán fut),
+- közben a vezérlés a hívó eljáráshoz kerül vissza,
 - a `Task` befejezésekor az `await` utasítást tartalmazó metódus további
-  része a második szálon kerül végrehajtásra.
+  része folytatódik: szinkronizációs kontextus (pl. UI szál) esetén az
+  eredeti szálon, egyébként a szálkészlet egy szálán.
 
 ### Elnevezési konvenció és interfészek
 
@@ -67,14 +70,14 @@ becsomagolásával implementálható:
 
 ```csharp
 class AsyncImplementation : IAsyncInterface {
-    private void Process(); // szinkron művelet
+    private void Process() { … } // szinkron művelet
 
     public async Task ProcessAsync() {
         await Task.Run(() => Process());
             // a tevékenység aszinkron végrehajtása
     }
     public async Task<Int32> ComputeAsync() {
-        await Task.Run(() => { … return value; });
+        return await Task.Run(() => { … return value; });
     }
 }
 ```
@@ -104,6 +107,13 @@ class Program {
     }
 }
 ```
+
+### Gyakorlati minták (6. gyakorlat)
+
+- Nem aszinkron könyvtári művelet (pl. PDF-feldolgozás) taszkba foglalható: `return await Task.Run(() => { ... });`.
+- Több feladat párhuzamos indítása: a `Task`-okat `List<Task>`-ba gyűjtjük, majd `await Task.WhenAll(tasks)`; minden feladat külön `await`-elése sorban futtatná őket.
+- Eseménykezelő `async void` lehet (az eseménytípus miatt), egyébként `Task` visszatérés javasolt; az `Async` utótag konvenció, az interfész deklarációjában nincs `async` kulcsszó.
+- Példa: [[concepts/esemalk/docustat-tobbfajlos-aszinkron-betoltes]], [[concepts/esemalk/wpf-kepletolto-modell-nezet]].
 
 ## Kapocs
 

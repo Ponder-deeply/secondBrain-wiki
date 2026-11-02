@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [gyak3.pdf]
 derivation: inferred
+kind: model
+element: water
 updated: 2026-09-12
 ---
 

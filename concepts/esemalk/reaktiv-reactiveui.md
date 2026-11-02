@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -24,5 +26,5 @@ Hasonló szemlélettel a parancsok (`ICommand` interfész) végrehajthatósága 
 
 - [[concepts/esemalk/wpf-mvvm-inotifypropertychanged]] — az `INotifyPropertyChanged` interfész hagyományos (nem reaktív) használata
 - [[concepts/esemalk/wpf-mvvm-parancsok-icommand]] — az `ICommand` interfész és a `CanExecute`/`CanExecuteChanged` pár
-- [[concepts/esemalk/reaktiv-feliratkozas]] — a `Subscribe()` alapjai az Rx.NET-ben, amelyre a ReactiveUI épül
+- [[concepts/esemalk/rx-observable-alapok]] — a `Subscribe()` alapjai az Rx.NET-ben, amelyre a ReactiveUI épül
 - [[subjects/esemalk]] — a kurzus áttekintése

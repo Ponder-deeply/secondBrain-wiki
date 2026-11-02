@@ -1,16 +1,36 @@
 ---
-tags: [concept, esemalk/wpf-alapok]
+tags: [concept]
 sources: [elte_eva_ea06_wpf_basics.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
-# WPF elemi grafika (DrawingContext)
+# WPF képkezelés és elemi grafika
 
 WPF-ben lehetőség van elemi alakzatok rajzolására egy rajzeszköz
 (`DrawingContext`) segítségével, bár ez a mód nem az ajánlott megoldás.
 
 ## Tartalom
+
+### Képkezelés (`BitmapImage`, `WriteableBitmap`)
+
+A képek memóriabeli kezelését WPF-ben több osztály segíti, amelyek speciális
+eszközöket biztosítanak.
+
+- Alapvető képtípus a `BitmapImage`, amely felhasználható különböző felületi
+  elemeken (pl. `Image` vezérlő, vagy `ImageBrush` ecset).
+- Amennyiben pixelszintű manipulációra van szükség, a `WriteableBitmap`
+  biztosít írási/olvasási lehetőségeket.
+- WPF-ben minden elérési útvonal `Uri` segítségével van megfogalmazva, pl.:
+
+```csharp
+Uri iUri = new Uri(@"Images\smiley.png", UriKind.Relative);
+BitmapImage bImage = new BitmapImage(iUri);
+```
+
+### Elemi rajzolás (`DrawingContext`)
 
 - A rajzoláshoz számtalan rajzolómetódus használható, pl. `DrawRectangle`,
   `DrawText`, `DrawImage`, `DrawVideo`.
@@ -38,7 +58,9 @@ myImage.Source = img;                          // kirajzolás
 
 ## Kapocs
 
-- [[concepts/esemalk/wpf-kepkezeles]] — a `BitmapImage`/`WritableBitmap`
-  raszteres képkezelés a vektoros `DrawingContext`-tel szemben
 - [[concepts/esemalk/winforms-grafika-alapok]] — a WinForms `Graphics`
   osztálya a hasonló szerepű, de más keretrendszerbeli rajzoló API
+- [[concepts/esemalk/wpf-vezerlok-megjelenese]] — a betöltött kép (`ImageBrush`)
+  transzformálására szolgáló példa
+- [[concepts/esemalk/winforms-kepek-megjelenitese]] — a WinForms `Image`/
+  `Bitmap`/`PictureBox` a hasonló szerepű, de más keretrendszerbeli megoldás

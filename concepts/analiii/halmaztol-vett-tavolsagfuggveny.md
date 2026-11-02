@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 2.1. viii)–ix) megjegyzések"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Halmaztól vett távolságfüggvény
@@ -41,6 +43,13 @@ $$|f(x) - f(y)| \le \rho(x,y) \qquad (x,y \in X). \qquad \blacksquare$$
 ($\supset$) $A \subset \{f = 0\}$ nyilvánvaló. Ha $z \in \overline{A}\setminus A$, akkor $z \in A'$, így alkalmas $(a_n) : \mathbb{N}\to A$ sorozattal $z = \lim(a_n)$; ekkor minden $\varepsilon > 0$-hoz van olyan $a_n$, hogy $\rho(z,a_n) < \varepsilon$, tehát $f(z) < \varepsilon$, azaz $f(z) = 0$. $\blacksquare$
 
 Ez egyben mutatja, hogy $\overline{A}$ egy folytonos függvény zérushalmazaként zárt, és hogy zárt $A$ esetén $f(x) = 0 \iff x \in A$ — a távolságfüggvény tehát az $A$ halmaz „karakterisztikus függvényének" folytonos helyettesítője.
+
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 22. feladat.*
+
+- **Kompakt $A$-ra a távolság „felvétetik".** $\rho(x,A)=\rho(x,a_0)$ valamely $a_0\in A$-ra: $\rho(x,a_k)\to\rho(x,A)$ egy minimalizáló sorozatra, ennek van $A$-beli konvergens részsorozata, és $\rho(x,\cdot)$ folytonossága adja az egyenlőséget.
+- **Rögzített $A$-ra $x\mapsto\rho(x,A)$ folytonos (1-Lipschitz).** $\rho(x,a)\le\rho(x,y)+\rho(y,a)$, $a\in A$ szerinti infimum: $\rho(x,A)\le\rho(x,y)+\rho(y,A)$, így $|\rho(x,A)-\rho(y,A)|\le\rho(x,y)$.
 
 ## Kapocs
 

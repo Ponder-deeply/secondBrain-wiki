@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 8, "LYAH \"Making Our Own Types\""]
 derivation: unsourced
+kind: definition
+element: earth
 updated: 2026-05-18
 ---
 

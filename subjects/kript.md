@@ -16,6 +16,7 @@ sources:
   - mac_feladatok.pdf
   - tökéletes_biztonság_feladatok.pdf
 derivation: source
+math: 55
 updated: 2026-09-04
 ---
 

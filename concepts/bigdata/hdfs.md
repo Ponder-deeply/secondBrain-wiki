@@ -1,8 +1,11 @@
 ---
-tags: [concept, bigdata/hadoop-okoszisztema]
-sources: [EA2_hadoop.pdf]
+tags: [concept]
+sources: [EA2_hadoop.pdf, "2026_27_1 ESATL8-IP-18KVIBDAG - Big Data architektúrák és elemző módszerek Gy_ Gyakorlat 1 _ ELTE Moodle.md"]
+references: ["hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html"]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: water
+updated: 2026-10-07
 ---
 
 # HDFS (Hadoop Distributed File System)
@@ -86,13 +89,54 @@ A Hadoop 1.x architektúrában a HDFS két fő komponense:
 
 - **NameNode**: a HDFS könyvtárstruktúráját kezeli, ellenőrzi a fájlok
   meglétét (replikaszám, hiányzó blokkok), és az összes ezzel kapcsolatos
-  információt memóriában tartja. Egy klaszterben lehet belőle kettő (aktív +
-  standby jellegű redundancia).
+  információt memóriában tartja. Hadoop 1.x-ben klaszterenként egy van (single point of failure); a mellette
+  futó Secondary NameNode csak checkpointol (összefésüli a metaadat-naplót),
+  nem standby. Aktív + standby NameNode-párral (HA) csak a Hadoop 2.x-től
+  lehet redundanciát kialakítani.
 - **DataNode**: a tényleges fájlblokkokat tárolja a HDFS-en.
 
 Ezek a szerepkörök a Hadoop 2.x/3.x YARN-alapú architektúrában is megmaradnak —
 a NameNode/DataNode a tárolási réteg, míg a feladatütemezést a YARN veszi át
 (lásd [[concepts/bigdata/yarn]]).
+
+### Gyakorlat: parancsok és DataNode-kiesés
+
+A 2026-os gyakorlat HDFS-parancsai (NameNode webes felület: port 9870 —
+Configured Capacity, DFS Used, Live Nodes, Utilities → Browse the file system):
+
+| Parancs | Mit csinál |
+|---|---|
+| `hdfs dfs -ls /` | gyökérkönyvtár listázása; paraméter nélkül a home (`/user/<név>`) |
+| `hdfs dfs -mkdir -p /data/raw/sensors` | könyvtár létrehozása (köztes könyvtárakkal) |
+| `hdfs dfs -put -f <lokális> <HDFS>` | feltöltés (`-f`: felülírás) |
+| `hdfs dfs -head <fájl>` | a fájl eleje — olvashatóság ellenőrzése |
+| `hdfs dfs -du -h <könyvtár>` | fájlméret és a HDFS-ben foglalt hely (replikációval nagyobb) |
+| `hdfs dfsadmin -report` | Live DataNode-ok, kapacitás, használt hely, under-replicated blokkok |
+| `hdfs fsck <fájl> -files -blocks -locations` | blokkok száma, mérete, replikái és DataNode-helye |
+| `hdfs dfs -D dfs.blocksize=67108864 -put ...` | blokkméret felülbírálása feltöltéskor (64 MB) |
+
+**Blokkméret a gyakorlaton:** a Docker környezetben oktatási célból **1 MB**
+(az alapértelmezett 128 MB helyett), hogy egy 10–100 MB-os fájl blokkokra
+bontása jól látszódjon. Egy 100 MB-os fájl 1 MB-os blokkmérettel ~100 blokk,
+64 MB-ossal 2 blokk (64 + 36 MB). A feladat kérdései: hány blokk, mekkora egy
+blokk, hány DataNode-on, hány példányban (replikaszám) tárolódnak — mind az
+`fsck` kimenetéből olvasható le.
+
+**DataNode kiesése (megfigyelések):**
+
+1. A NameNode a **heartbeat** üzenetek alapján érzékeli a kiesést, ezért
+   közvetlenül a leállítás után a `-report` még a régi Live DataNode-számot
+   mutathatja; csak a timeout letelte után jelöli kiesettnek.
+2. Ha a blokkoknak van replikája egy másik DataNode-on, a fájl továbbra is
+   olvasható — egy DataNode kiesése nem okoz adatvesztést.
+3. Kiesés közben is lehet írni, ha a NameNode és legalább egy DataNode él; a
+   blokkok ilyenkor **under-replicated** állapotba kerülnek (a kívánt számú
+   replika nincs meg).
+4. A DataNode visszaindítása után újra csatlakozik, és a NameNode pótolja a
+   hiányzó replikákat.
+
+**Buktató:** az elosztott *tárolás* nem elosztott *feldolgozás* — a HDFS csak az
+adatot osztja szét; a számítást MapReduce vagy Spark végzi.
 
 ### Korlátok
 
@@ -101,6 +145,22 @@ kis fájlokra (a blokkméretnél lényegesen kisebb fájlokra) nem hatékony: a
 NameNode minden fájlhoz metaadatot tárol, ami sok kis fájl esetén aránytalanul
 nagy memóriaterhelést jelent. Lásd bővebben:
 [[concepts/bigdata/hadoop-korlatai]].
+
+### Paraméterek
+
+*Dokumentáció alapján, nem a gyakorlati forrásból.*
+
+- `-mkdir -p` — a köztes könyvtárakat is létrehozza; ha a könyvtár már létezik, nem dob hibát.
+- `-put -f` — felülírja a célt; `-f` nélkül létező célfájlnál hibát dob.
+- `-du -h` — ember által olvasható egységekben ír. Az első oszlop a fájlméret, a második a replikákkal együtt foglalt hely (≈ méret × replikaszám).
+- `fsck <út> -files -blocks -locations`
+  - `-files`: fájlonként listáz.
+  - `-blocks`: blokkonként listáz.
+  - `-locations`: a blokkokat tároló DataNode-ok címe; csak `-blocks` mellett van értelme.
+- `-D kulcs=érték` — egyetlen parancsra felülír egy beállítást.
+  - `dfs.blocksize` bájtban adandó meg (64 MB = 67108864), és íráskor fájlonként rögzül.
+  - `dfs.replication` a fájl replikaszáma.
+- `-setrep -w <n> <út>` — utólag módosítja a replikaszámot; `-w` megvárja, amíg a replikálás elkészül.
 
 ## Kapocs
 

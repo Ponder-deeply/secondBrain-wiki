@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, 04_gyak_An_III_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 2. fejezet, 2.1. és 2.3. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Folytonosság metrikus terek között
@@ -77,6 +79,19 @@ $$X_y := \{x \in X : f(x) = y\}$$
 
 halmaz zárt. Valóban, ha $x_n \in X_y$ és $x_n \to \alpha$, akkor $f(\alpha) = \lim f(x_n) = y$, tehát $\alpha \in X_y$. Ugyanez igaz $f \in X \to Y$ esetén is, ha $D_f$ zárt. Speciálisan zárt halmazon értelmezett folytonos $f \in \mathbb{K}^s \to \mathbb{K}^m$ függvény **zérushelyeinek** halmaza zárt — ennek az egyenletek közelítő megoldási módszereiben van jelentősége.
 
+### Feladatok
+
+Módszer: a $(0,0)$-beli folytonosság $f(0,0)=\lim_{(0,0)} f$ ellenőrzése; a részletes eszköztár: [[concepts/analiii/tobbvaltozos-hatarertek-modszerei]].
+
+- **Projekció folytonos.** $P_i(x)=x_i$: $|P_i(x)-P_i(y)|\le\|x-y\|$, tehát Lipschitz, így folytonos. Ebből kompozícióval és műveletekkel következik, hogy a polinomok és a racionális törtfüggvények (ahol a nevező nem nulla) folytonosak. Hasonlóan: ha $g:I\to\mathbb{R}$ és $f:I\times J\to\mathbb{R}$ folytonos, akkor $F(x)=(x,g(x))$ is az, mert koordinátái azok.
+- **Folytonos az origóban:** $f=\dfrac{x^2y^3}{2x^2+y^2}$, $f(0,0)=0$: $\dfrac{x^2}{2x^2+y^2}\le\tfrac12$, ezért $|f|\le |y|^3/2\to0$. Hasonlóan $\dfrac{x^4y}{(x^2+y^2)^2}$ ($|f|\le|y|$), és $\dfrac{x^3y^2}{3x^2+2y^2}$ ($|f|\le |x|^3/2$).
+- **Nem folytonos az origóban:** $\dfrac{2xy}{x^2+y^2}$ (az $y=0$ mentén $0$, az $y=x$ mentén $1$); $\dfrac{xy}{x^2+xy+y^2}$ ($0$ és $\tfrac13$); $\dfrac{x^2y^3}{2x^2+y^2}$, ha $f(0,0):=1$ lenne (a határérték $0\ne1$).
+- **Külön-külön folytonos, együtt nem.** $f=\dfrac{xy}{x^2+y^2}$ (vagy $\dfrac{2xy}{x^2+y^2}$), $f(0,0)=0$: minden rögzített $y_0$-ra $x\mapsto f(x,y_0)$ folytonos (ha $y_0=0$ azonosan $0$, különben racionális törtfüggvény nem nulla nevezővel), és fordítva is; de az $y=x$ mentén a határérték $\tfrac12$ ($xy/(x^2+y^2)$-nél), illetve $1$ ($2xy/(x^2+y^2)$-nél), nem $0$. Tehát a koordinátánkénti folytonosság nem elég.
+- **Minden origón átmenő egyenesen folytonos, mégsem folytonos.** $f=\dfrac{x^2y}{x^4+y^2}$, $f(0,0)=0$: az $x=0$ mentén $f=0$; az $y=mx$ mentén $\dfrac{mx}{x^2+m^2}\to0$ ($m\ne0$); az $x$-tengelyen $0$. De az $y=x^2$ parabola mentén $f=\dfrac{x^4}{2x^4}=\tfrac12\ne0$. Tanulság: egyenesekkel nem lehet cáfolni, görbékkel kell. A gyak 4. lap (4. feladat) három esetet különböztet meg az egyeneseknél: $x=0$ ($f\equiv0$), $y=0$ ($f\equiv0$), $y=mx$, $m\ne0$ ($l(x)=\tfrac{mx}{x^2+m^2}$, $x\ne0$, $l(0)=0$, és $\lim_{x\to0}l=0=l(0)$, tehát $l$ folytonos); a cáfoláshoz az $y=mx^2$ parabolacsalád szolgál: $f(x,mx^2)=\dfrac{m}{1+m^2}$ nem függ $x$-től, $m=1$-re $\bigl(\tfrac1n,\tfrac1{n^2}\bigr)\to(0,0)$ és $f\to\tfrac12\ne0$ (átviteli elv 2$^o$).
+- **Teljes $\varepsilon$–$\delta$ bizonyítás (gyak 4. lap, 2. feladat).** $f=\dfrac{x^2y^3}{2x^2+y^2}$, $f(0,0)=0$. Rögzített $\varepsilon>0$-ra $(0,0)$-ban $|f-f(0,0)|=0<\varepsilon$; $(x,y)\ne(0,0)$-ra, ha $\|(x,y)\|<1$: $|f|\le\dfrac{x^2}{x^2+y^2}|y|^3\le|y|^3\le|y|^2\le x^2+y^2=\|(x,y)\|^2<\varepsilon$. Így $\delta\in\bigl(0,\min\{1,\sqrt\varepsilon\}\bigr)$ jó. A $\delta$-ba tehát kell a $\min\{1,\cdot\}$, mert a $|y|^3\le|y|^2$ lépés csak $|y|<1$-re igaz. Hasonlóan $\dfrac{x^4y}{(x^2+y^2)^2}$-re $|f|\le|y|\le\|(x,y)\|<\varepsilon$, $\delta\in(0,\varepsilon)$.
+- **Nyeregfelület (gyak 4. lap, 1. feladat).** $f(x,y)=y^2-x^2$ grafikonját a koordinátasíkokkal párhuzamos metszetekből szemléltetjük: $x=k$ síkban $z=y^2-k^2$ felfelé nyíló parabola, $y=k$ síkban $z=k^2-x^2$ lefelé nyíló parabola, $z=k$ síkban $y^2-x^2=k$ hiperbola (szinthalmaz).
+- **Hibás tipp elkerülése.** Az egyenesek mentén kapott közös érték csak szükséges feltétel; bizonyítani csak $\varepsilon$–$\delta$-val vagy közrefogással lehet.
+
 ## Kapocs
 
 - [[concepts/analiii/atviteli-elv-metrikus-terben]] — a folytonosság sorozatos jellemzése; a fenti bizonyítások motorja
@@ -85,3 +100,4 @@ halmaz zárt. Valóban, ha $x_n \in X_y$ és $x_n \to \alpha$, akkor $f(\alpha) 
 - [[concepts/analiii/nyilt-es-zart-halmazok]] — a 2.1. Tétel nyílt halmazai és a zárt szinthalmazok
 - [[concepts/analiii/koordinatafuggvenyek-folytonossaga]] — a vektorértékű eset visszavezetése koordinátánként
 - [[concepts/analiii/egyenletes-folytonossag-metrikus-terben]] — az erősebb, $a$-tól független változat
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

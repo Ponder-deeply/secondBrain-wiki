@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-klaszterezes-es-dimenziocsokkentes]
+tags: [concept]
 sources: [BDAEM-2022-EA9.pptx]
 references: ["Slides based on Eamonn Keogh's clustering lecture"]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-09-12
 ---
 

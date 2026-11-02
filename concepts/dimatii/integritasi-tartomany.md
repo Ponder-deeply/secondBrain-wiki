@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/algebrai-strukturak]
-sources: [DimatIIEa04.pdf]
+tags: [concept]
+sources: [DimatIIEa04.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy06_2020_Algebra.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Integritási tartomány
@@ -15,7 +17,7 @@ Kommutatív, nullosztómentes gyűrű — az a legszűkebb keret, amelyben az os
 
 A kommutatív, nullosztómentes gyűrűt **integritási tartománynak** nevezzük.
 
-Példa: $(\mathbb{Z}; +, \cdot)$.
+Példa: $(\mathbb{Z}; +, \cdot)$. A Farkas-diák szerint az integritási tartomány legalább kételemű. Véges integritási tartomány test. A diák hierarchiájában az egységelemes integritási tartomány után a Gauss-gyűrű (UFD), a főideálgyűrű és az euklideszi gyűrű következik; főideálgyűrű: [[concepts/dimatii/reszgyuru-es-idealok]].
 
 ### Oszthatóság
 
@@ -29,9 +31,17 @@ Nem szabad összekeverni az *egységelem* és az *egység* fogalmát: egységele
 
 $\mathbb{Z}$-ben például az egységelem az $1$, az egységek pedig a $1$ és a $-1$.
 
+### Az egységek csoportja és az egységelem megléte (előadásdiák)
+
+Egységelemes integritási tartományban az egységek halmaza, $U(R)$, a szorzásra csoportot alkot; az asszociáltság ekvivalenciareláció, és két elem asszociáltságának szükséges és elégséges feltétele a kölcsönös oszthatóság. Integritási tartományban akkor és csak akkor létezik egységelem, ha létezik egység (lásd [[concepts/dimatii/euklideszi-gyuru]]). A hierarchia: Gauss-gyűrű $\subset$ egységelemes integritási tartomány ([[concepts/dimatii/gauss-gyuru]]).
+
 ### Miért fontos
 
 Ez a fogalmi réteg készíti elő az oszthatóságelméletet: a legnagyobb közös osztó, a felbonthatatlan és a prímelem fogalma mind integritási tartományban fogalmazódik meg, és ezt a keretet használja a polinomok oszthatóságelmélete is.
+
+### Feladattípusok és módszerek (gyakorlati feladatsor, 2020 ősz, 6. sor)
+
+Véges, legalább két elemű integritási tartomány test: minden $a\ne0$-ra az $x\mapsto ax$ injektív, ezért véges halmazon bijektív, így van $x$, amelyre $ax=1$ (részletesebben a [[concepts/dimatii/test]] lap feladattípusai között). A tétel a $\mathbb{Z}_p$ test voltának egy másik indoka is: $\mathbb{Z}_p$ véges és ($p$ prím esetén) nullosztómentes.
 
 ## Kapocs
 

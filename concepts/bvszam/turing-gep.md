@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [07.md, szelmJegyzet.pdf]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-08-05
 ---
 

@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 2.1. xix) megjegyzés"]
 derivation: source
+kind: theorem
+element: air
 updated: 2026-09-07
 ---
 

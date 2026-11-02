@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/bevezetes]
+tags: [concept]
 sources: [EA1_bevezetes.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: air
+updated: 2026-09-30
 ---
 
 # Big Data 5V
@@ -18,8 +20,10 @@ számít "nagynak", és milyen jellegű feldolgozást igényel.
 Az adat mérete. Illusztrációk: a globális informatikai forgalom volumene
 2020-ra becslés szerint 44 zettabájt, a 2020-ig évente létrehozott adat
 mennyisége 40 zettabájt (a 2015-ös érték 300%-a), és becslések szerint az
-emberiség naponta kb. 2,3 zettabájt adatot termel. Történeti érdekesség: Bill
-Gates 1981-es, azóta megcáfolt mondása szerint "640 KB elegendő kell legyen
+emberiség naponta kb. 2,3–2,5 exabájt adatot termel (a forrásdián 2,3
+zettabájt szerepel, ami pontatlan: az évi 40 ZB-tal csak az exabájtos
+nagyságrend fér össze). Történeti érdekesség: a Bill Gatesnek tulajdonított,
+1981-re datált — általa cáfolt, valószínűleg apokrif — mondás szerint "640 KB elegendő kell legyen
 bárkinek" — a mai adatmennyiséghez képest ez a korlát nevetségesen kicsi.
 
 ### Velocity (sebesség)

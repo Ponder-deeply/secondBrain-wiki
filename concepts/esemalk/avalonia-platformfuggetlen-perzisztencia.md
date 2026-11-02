@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -37,7 +39,7 @@ platformfüggően mást jelenthetnek:
   specifikus
 
 **Példa — vizsgatétel generáló alkalmazás:** az alkalmazást életciklus-
-kezeléssel egészítjük ki ([[concepts/esemalk/avalonia-eletciklus-kezeles]]):
+kezeléssel egészítjük ki ([[concepts/esemalk/avalonia-mobil-alkalmazaskornyezet-eletciklus]]):
 a modell állapotát és a generálás állapotát az alkalmazás lokális
 könyvtárába JSON formátumban szerializálva tároljuk el. Mivel nincs külön
 perzisztencia réteg, közvetlenül a modelltől kérjük el az információkat, és
@@ -57,12 +59,12 @@ mentés.
 
 ## Kapocs
 
-- [[concepts/esemalk/avalonia-eletciklus-kezeles]] — az életciklus-
+- [[concepts/esemalk/avalonia-mobil-alkalmazaskornyezet-eletciklus]] — az életciklus-
   eseményekhez (indítás/leállítás) kötött állapotmentés és -betöltés
 - [[concepts/esemalk/avalonia-dialogusablakok]] — felhasználó által
   választott útvonalra történő mentés/betöltés fájlválasztó dialógussal
-- [[concepts/esemalk/dotnet-fajlrendszer-kezeles]] — a `System.IO` alapú
+- [[concepts/esemalk/stream-alapu-fajlkezeles]] — a `System.IO` alapú
   fájlrendszer-kezelés WinForms kontextusban
-- [[concepts/esemalk/avalonia-alkalmazas-tulajdonsagok-kihelyezes]] — az
+- [[concepts/esemalk/avalonia-projekt-felepites]] — az
   `AndroidManifest.xml` és más platformspecifikus leírók szerepe a
   kihelyezésben

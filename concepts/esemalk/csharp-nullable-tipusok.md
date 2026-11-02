@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
 # C# nullable típusok
@@ -35,8 +37,9 @@ A tárolt értéket a `Value` tulajdonság adja meg, a meglétét a `HasValue`
 jelzi:
 
 ```csharp
-if (x.HasValue) // x típusa int?
+if (x.HasValue) { // x típusa int?
     int y = x.Value; // x.Value típusa int
+}
 ```
 
 **Nullable referencia szerinti típusok.** Újabban (C# 8.0, 2019, .NET Core
@@ -60,7 +63,7 @@ Ha `null` értéket adunk egy `T` típusú változónak, fordítási idejű
 figyelmeztetést kapunk:
 
 ```csharp
-string str = null; // fordítási idejű hiba
+string str = null; // fordítási idejű figyelmeztetés
 ```
 
 Kivétel a *null-forgiving* operátor használata: `string str = null!;`. Ha

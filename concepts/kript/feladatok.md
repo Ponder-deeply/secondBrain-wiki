@@ -8,6 +8,8 @@ sources:
   - mac_feladatok.pdf
   - tökéletes_biztonság_feladatok.pdf
 derivation: source
+kind: overview
+element: fire
 updated: 2026-09-04
 ---
 # Kriptográfia — feladatsorok

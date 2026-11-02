@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
+tags: [concept]
 sources: [Rezolúció_II.pdf]
 references: [Tk. 251-254. o.]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-09-30
 ---
 
 # Elsőrendű klóz
@@ -28,13 +30,13 @@ A feladat: tetszőleges elsőrendű formula átírása elsőrendű klózok konju
 
 **Példa:** a $\forall x \forall y \forall y_1\big((\lnot P(x,y) \vee Q(y_1)) \wedge (R(y, f(x)) \vee P(x,a)) \wedge (P(x,y_1) \vee \lnot R(x,y))\big)$ Skolem formula elsőrendű klózok konjunkciós lánc alakja:
 
-$$\forall x \forall y \forall y_1(\lnot P(x,y) \vee Q(y_1)) \wedge \forall x \forall y \forall y_1(R(y, f(x)) \vee P(x,a)) \wedge \forall x \forall y \forall y_1(P(x,y_1) \vee R(x,y))$$
+$$\forall x \forall y \forall y_1(\lnot P(x,y) \vee Q(y_1)) \wedge \forall x \forall y \forall y_1(R(y, f(x)) \vee P(x,a)) \wedge \forall x \forall y \forall y_1(P(x,y_1) \vee \lnot R(x,y))$$
 
 ### Változóidegenné tétel
 
 Mivel egy kvantált formula értéke nem függ a benne szereplő kötött változó nevétől, a klózok kötött változói egymástól függetlenül átnevezhetők — **változóidegen klózok konjunkciója** áll elő. Ezután az egyes klózok magja önmagában, a közös prefixum nélkül is felírható klózhalmazként, pl.
 
-$$\{(\lnot P(x,y) \vee \lnot Q(y_1)),\ (R(w, f(z)) \vee P(z,a)),\ (P(v,y_3) \vee \lnot R(v,z_1))\}$$
+$$\{(\lnot P(x,y) \vee Q(y_1)),\ (R(w, f(z)) \vee P(z,a)),\ (P(v,y_3) \vee \lnot R(v,z_1))\}$$
 
 ### Kielégíthetőség és a mag kifejtése
 

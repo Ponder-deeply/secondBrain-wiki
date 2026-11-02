@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3.6, "LYAH \"Curried functions\""]
 derivation: unsourced
+kind: definition
+element: water
 updated: 2026-05-18
 ---
 

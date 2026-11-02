@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/polinomok]
-sources: [DimatIIEa05.pdf, DimatIIEa06.pdf]
+tags: [concept]
+sources: [DimatIIEa05.pdf, DimatIIEa06.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy08_Polinomok.pdf]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Gyöktényező és a gyökök száma
@@ -51,9 +53,18 @@ vagyis egy másodfokú polinomnak négy gyöke van: $0, 2, 3, 5$.
 
 **Következmény.** Ha $R$ **végtelen** egységelemes integritási tartomány, akkor két különböző $R[x]$-beli polinomhoz nem tartozik ugyanaz a polinomfüggvény — ellenkező esetben a különbségüknek végtelen sok gyöke lenne.
 
+### A gyökök száma függ $R$-től (Farkas-diák)
+
+Az $f(x) = x^2 + 1$ gyökei: $\mathbb{Z}[x]$, $\mathbb{Q}[x]$, $\mathbb{R}[x]$ fölött nincs; $\mathbb{C}[x]$ fölött kettő ($i$ és $-i$); $\mathbb{Z}_2[x]$ fölött egy ($1$); $\mathbb{Z}_3[x]$ fölött nincs; $\mathbb{Z}_5[x]$ fölött kettő ($2$ és $3$). A felső korlát ($\le \deg f$) mindegyik esetben teljesül.
+
+### Feladattípusok és módszerek: gyökök száma véges gyűrűben (gyakorlati feladatsor, 8. hét)
+
+**Példa a korlát csődjére:** az $x^2+4x+3\in\mathbb{Z}_8[x]$ polinom összes gyökének meghatározásához mind a $8$ elemet be kell helyettesíteni: az értékek $x=0,\dots,7$ esetén $3,0,7,0,3,0,7,0$, így a gyökök $1,3,5,7$ — **négy gyök egy másodfokú polinomnak**. A „legfeljebb $\deg f$ gyök” tétel $\mathbb{Z}_8$-ban nem érvényes, mert a gyűrű nem integritási tartomány ($x^2+4x+3=(x+1)(x+3)$, és $2\cdot4=0$). Szabály: nullosztós gyűrűben a gyöktényezős felbontásból nem következik, hogy minden gyököt megtaláltunk, ezért kimerítő behelyettesítés kell.
+
 ## Kapocs
 
 - [[concepts/dimatii/polinomok-maradekos-osztasa]] — az itteni állítások mind ennek következményei
 - [[concepts/dimatii/helyettesitesi-ertek-es-polinomfuggveny]] — a polinom és a polinomfüggvény viszonya itt dől el
 - [[concepts/dimatii/gyok-multiplicitasa]] — a gyöktényező magasabb hatványainak vizsgálata
 - [[concepts/dimatii/lagrange-interpolacio]] — az egyértelműséget kimondó következmény párja a létezésről
+- [[concepts/dimatii/nemlinearis-kongruencia]] — ugyanez a jelenség kongruenciák megoldásánál

@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 4.5.3.1–4.5.3.3. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-22
 ---
 
 # Implicitfüggvény-tétel
@@ -53,6 +55,10 @@ $f(x,y) := x^2 + y^2 - 1$, $(a,b) = (0,1)$. Itt $\partial_2 f(0,1) = 2 \ne 0$, t
 $$g'(x) = -\frac{\partial_1 f}{\partial_2 f} = -\frac{2x}{2y} = -\frac{x}{\sqrt{1-x^2}}.$$
 
 A $(1,0)$ pontban viszont $\partial_2 f(1,0) = 0$ — és valóban, ott a kör nem grafikonja semmilyen $y = g(x)$ függvénynek.
+
+### Gyakorló feladatok
+
+Az $x_1,x_2,x_3$ kifejezhető-e az $x_4$ implicit függvényeként egy lineáris egyenletrendszerből: az együtthatómátrix megfelelő $3\times3$-as részmátrixának determinánsa $\ne0$ kell legyen. Nemlineáris rendszernél a Jacobi-mátrix $x_2,x_3$ szerinti blokkját vizsgáljuk a megadott pontban.
 
 ## Kapocs
 

@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/winforms-dinamikus-ui]
+tags: [concept]
 sources: [elte_eva_ea03_winforms_dynamic.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 

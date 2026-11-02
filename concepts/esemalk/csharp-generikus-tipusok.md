@@ -1,15 +1,18 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
 # C# generikus típusok
 
 Generikus programozásra futási időben feldolgozott sablon típusok
-(*generic*-ek) segítségével van lehetőség: osztály, metódus és delegált lehet
-sablonos, a sablon (típusparaméter) csak osztály lehet.
+(*generic*-ek) segítségével van lehetőség: osztály, struktúra, interfész,
+metódus és delegált lehet sablonos, a sablon paramétere csak típus lehet
+(érték nem, mint C++-ban), de bármilyen típus, struktúra is.
 
 ## Tartalom
 
@@ -43,8 +46,8 @@ class Rational<T> where T : struct, IComparable,
 
 ## Kapocs
 
-- [[concepts/esemalk/csharp-osztalyok]] — a generikus típus is osztály
+- [[concepts/esemalk/csharp-osztaly-szerkezete]] — a generikus típus is osztály
   (vagy `struct`), csak típusparaméterezve
-- [[concepts/esemalk/csharp-interfeszek]] — a `where` megszorítás
+- [[concepts/esemalk/csharp-oroklodes]] — a `where` megszorítás
   interfészekre hivatkozva bővíti a sablonra alkalmazható műveletkört
 - [[subjects/esemalk]] — a kurzus áttekintése

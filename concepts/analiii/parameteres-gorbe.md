@@ -1,8 +1,14 @@
 ---
-tags: [concept]
-sources: [01_ea_An3_2025_osz.pdf]
+tags:
+  - concept
+sources:
+  - 01_ea_An3_2025_osz.pdf
+  - gyakorlat.pdf
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: air
+updated: 2026-10-21
+studied: true
 ---
 
 # Paraméteres görbe
@@ -32,6 +38,15 @@ Legyen $f \in \mathbb{R} \to \mathbb{R}^m$ ($1 < m \in \mathbb{N}$) függvény, 
 ### Kapcsolódás a többváltozós függvényekhez
 
 A görbe az $\mathbb{R} \to \mathbb{R}^m$ (vektorértékű) függvények speciális esete. Az általánosabb $f \in \mathbb{R}^n \to \mathbb{R}^m$ ($1 < n, m$) leképezéseket **vektor-vektor függvényeknek** hívjuk; ezek is koordinátafüggvényekkel írhatók fel. Az $n$-változós, skalárértékű ($m=1$) esetben két nevezetes ponthalmazt szokás vizsgálni: az $f : H \to \mathbb{R}$ ($H \subset \mathbb{R}^n$) **grafikonja** az $\{(x_1,\dots,x_n,f(x_1,\dots,x_n)) : x \in H\} \subset \mathbb{R}^{n+1}$ halmaz, a **szintvonala** (nívóvonala) pedig egy adott $c$ értékhez tartozó $\{x \in D_f : f(x) = c\}$ halmaz — ez utóbbi a [[concepts/analiii/nivofelulet-es-gradiens]] lapon tárgyalt nívófelület speciális ($n=2$) esete.
+
+### Feladatok
+
+**Ábrázolás és paraméterkiküszöbölés** *(gyakorlat.pdf, Differenciálgeometria 1–6.)*
+
+- A paraméter kiküszöbölése: a) $x=\sin^2\theta$, $y=\cos^2\theta$ $\Rightarrow$ $x+y=1$ ($0\le x\le1$); b) $x=\cos t$, $y=\cos2t=2x^2-1$; c) $x=\ln t$, $y=\sqrt t$ $\Rightarrow$ $y=e^{x/2}$, $x\ge0$; d) $x=\cosh t$, $y=\sinh t$ $\Rightarrow$ $x^2-y^2=1$, $x>0$ (hiperbola jobb ága).
+- Ciklois $x=r(\theta-\sin\theta)$, $y=r(1-\cos\theta)$: $\dot x=r(1-\cos\theta)$, $\dot y=r\sin\theta$. $\theta=\frac\pi3$-nál az érintő iránytangense $\frac{\dot y}{\dot x}=\sqrt3$, a pont $\left(r\left(\frac\pi3-\frac{\sqrt3}2\right),\frac r2\right)$. Vízszintes az érintő, ha $\sin\theta=0$, $\cos\theta\ne1$: $\theta=\pi+2k\pi$ (a tetőpontok, $y=2r$); a $\theta=2k\pi$ pontok a csúcsok, ott $\dot x=\dot y=0$ és az érintő függőleges. Egy ív alatti terület $3\pi r^2$.
+- $x=t^2$, $y=t^3-3t$ (hurkos görbe): a $(3,0)$ pont $t=\pm\sqrt3$ paraméternél adódik, két érintője van, $\frac{\mathrm dy}{\mathrm dx}=\frac{3t^2-3}{2t}=\pm\sqrt3$. Vízszintes az érintő, ha $t=\pm1$ (pontok $(1,\mp2)$), függőleges, ha $t=0$ (az origó, ahol $\dot x=0$, $\dot y=-3\ne0$).
+- Polárgörbék: $r=\cos\theta$ egy kör, $r=1+\sin\theta$ kardioid, $r=\cos2\theta$ négyszirmú rózsa.
 
 ## Kapocs
 

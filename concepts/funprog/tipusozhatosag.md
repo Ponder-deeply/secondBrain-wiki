@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3, LYAH]
 derivation: unsourced
+kind: pitfall
+element: fire
 updated: 2026-05-18
 ---
 

@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -54,7 +56,7 @@ Példa:
 
 - [[concepts/esemalk/wpf-fuggosegi-tulajdonsagok]] — az animáció mindig egy
   függőségi tulajdonságot módosít folyamatosan
-- [[concepts/esemalk/wpf-transzformaciok]] — a `RenderTransform` altulajdonságai
+- [[concepts/esemalk/wpf-vezerlok-megjelenese]] — a `RenderTransform` altulajdonságai
   (pl. `ScaleTransform.ScaleX`) gyakori animációs célpontok, összetett
   céltulajdonság-útvonalon keresztül
 - [[concepts/esemalk/wpf-stilus-triggerek]] — a forgatókönyvek végrehajtása

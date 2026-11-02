@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/winforms-statikus-ui]
+tags: [concept]
 sources: [elte_eva_ea01_winforms_static.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-12
 ---
 
@@ -85,14 +87,14 @@ A forrás egy `CalculatorForm` osztályt mutat be, amely öt gombot
 tartalmaz; a négy alapművelet gombjaihoz egyetlen közös eseménykezelő
 (`Button_Click`) tartozik, amely a `sender` felirata alapján dönt a
 végrehajtandó műveletről. A műveletet egy felsorolási típus (`Operation`)
-tárolja el (lásd [[concepts/esemalk/csharp-felsorolasi-tipus]]).
+tárolja el (lásd [[concepts/esemalk/csharp-ertek-referencia-osztalyok]]).
 
 ## Kapocs
 
 - [[concepts/esemalk/esemeny-letrehozasa-kivaltasa]] — ez a lap a
   vezérlők *beépített* eseményeinek feliratkozását tárgyalja; a saját
   esemény létrehozása és kiváltása külön lapon szerepel
-- [[concepts/esemalk/csharp-felsorolasi-tipus]] — a példában a művelet
+- [[concepts/esemalk/csharp-ertek-referencia-osztalyok]] — a példában a művelet
   tárolására használt `enum`
 - [[concepts/esemalk/billentyuzetkezeles-winforms]] — analóg mintázat a
   billentyűzet-eseményekre

@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [06_Cegeljaras.md]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-04
 ---
 

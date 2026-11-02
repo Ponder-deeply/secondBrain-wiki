@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [Titokmegosztás.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-04-22
 ---
 

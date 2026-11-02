@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/megmaradasi-tetelek-es-specialis-felbontasok]
+tags: [concept]
 sources: [NM1_ea04.pdf]
 derivation: source
-updated: 2026-08-05
+kind: procedure
+element: water
+updated: 2026-10-21
 ---
 
 # Progonka módszer (rövidített GE)
@@ -76,17 +78,15 @@ $$x_n := g_n, \qquad x_i = f_i x_{i+1} + g_i \quad (i = n-1, n-2, \ldots, 1).$$
 
 **1. lépés (előre):**
 - $f_1, g_1$: 2 művelet.
-- $i = 2, \ldots, n-1$ ciklus: $f_i$ kiszámítása 2 db, $g_i$ kiszámítása 3 db = 5 db/lépés, összesen $5(n-2)$ művelet.
-- $g_n$: 3 db.
+- $i = 2, \ldots, n-1$ ciklus: a közös nevező 2 db, $f_i$ még 1 db (osztás), $g_i$ még 3 db = 6 db/lépés, összesen $6(n-2)$ művelet.
+- $g_n$: 5 db (nevező 2, számláló 2, osztás 1).
 
-Összesen az 1. lépésben: $2 + 5(n-2) + 3 = 5n - 5$ művelet.
+Összesen az 1. lépésben: $2 + 6(n-2) + 5 = 6n - 5$ művelet.
 
 **2. lépés (vissza):**
 - $i = n-1, n-2, \ldots, 1$ esetén: $2(n-1)$ művelet.
 
-**Összesen:** $5n - 5 + 2 + 2(n-1) = 7n - 5 = 8n + \mathcal{O}(1)$ (ha $f_n$-t is tároljuk: a ciklus indexelése egységesíthető, pontos szám: $8n - 7$).
-
-Az előadáson megadott teljes számolás: $2 + 6(n-2) + 5 + 2(n-1) = 8n - 7 = 8n + \mathcal{O}(1)$. $\square$
+**Összesen:** $2 + 6(n-2) + 5 + 2(n-1) = 8n - 7 = 8n + \mathcal{O}(1)$, egyezésben az előadáson megadott számolással. $\square$
 
 ## Alkalmazás — köbös spline
 

@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
+kind: pitfall
+element: earth
 updated: 2026-09-13
 ---
 

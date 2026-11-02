@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-alapok]
+tags: [concept]
 sources: [elte_eva_ea06_wpf_basics.pdf]
 derivation: source
-updated: 2026-09-13
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
 # WPF függőségi tulajdonságok (dependency property)
@@ -16,9 +18,9 @@ rugalmasabb módon köthető a környezethez.
 - Lehetővé teszi, hogy egy adott objektum tulajdonságait más objektumon
   keresztül definiáljuk, és úgy szabjunk rá értéket, hogy az a
   környezettől függően változzon.
-- A `DependencyObject` statikus `GetValue` és `SetValue` metódusaival
-  kezelhetők a tulajdonság átadásával, amely statikus tulajdonságként
-  (attached property) definiált.
+- A `DependencyObject` (példány szintű) `GetValue` és `SetValue`
+  metódusaival kezelhetők a tulajdonság átadásával, amely statikus mezőként
+  (`…Property`, pl. `Canvas.LeftProperty`) definiált (attached property).
 - A legtöbb WPF-beli tulajdonság függőségi tulajdonság, és XAML-ben is
   kihasználható — például lehetőséget ad a szülőelemek tulajdonságainak
   elérésére és beállítására.
@@ -54,7 +56,7 @@ Ugyanez XAML-ben:
 
 - [[concepts/esemalk/wpf-panelek]] — a `Canvas.Left`/`Top` és `Grid.Row`/
   `Column` csatolt tulajdonságok a panelek elrendezési logikáját vezérlik
-- [[concepts/esemalk/wpf-transzformaciok]] — a transzformációk tulajdonságai
+- [[concepts/esemalk/wpf-vezerlok-megjelenese]] — a transzformációk tulajdonságai
   (pl. `Angle`) is függőségi tulajdonságok
 - [[concepts/esemalk/csharp-tulajdonsagok]] — a hagyományos C# tulajdonságok
   (`property`), amelyekhez képest a függőségi tulajdonság kiegészítő

@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 05_gyak_An_III_2022_tavasz.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1. szakasz és 3.2. xiii), xiv) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Parciális derivált
@@ -83,6 +85,20 @@ $$f(x,y) = \frac{x^3 y}{3} + y + c \qquad (c \in \mathbb{R}).$$
 
 Ez a [[concepts/analiii/vektormezo-primitiv-fuggvenye|primitív függvény]] keresésének elemi esete.
 
+### Feladatok
+
+Módszer: a $k$-adik változó szerint a többit konstansnak tekintjük, és az egyváltozós szabályokkal deriválunk; az origó (vagy két ág találkozási pontja) környezetében a definícióból kell számolni.
+
+- $f=\dfrac{x^2-y^3}{xy}=\dfrac xy-\dfrac{y^2}{x}$ ($x,y>0$): $\partial_xf=\dfrac1y+\dfrac{y^2}{x^2}$, $\partial_yf=-\dfrac{x}{y^2}-\dfrac{2y}{x}$.
+- **Visszafelé.** $\partial_xf=x^2y$, $\partial_yf=1+\tfrac{x^3}{3}$: $f=\tfrac{x^3}{3}y+c(y)$, a másodikba helyettesítve $c'(y)=1$, tehát $f(x,y)=\tfrac{x^3y}{3}+y+c$ ($c\in\mathbb{R}$). A jegyzet kiemeli: nem csak „$+c$"; többváltozósnál az integrációs „állandó" a másik változó függvénye, és a végén ki kell esniük a megfelelő tagoknak.
+- **Hely szerinti másodrendű.** $f=x^3y+x^2y^2+x+y^2$ az $(1,0)$-ban: $\partial_{xx}f=6xy+2y^2=0$, $\partial_{xy}f=\partial_{yx}f=3x^2+4xy=3$, $\partial_{yy}f=2x^2+2=4$.
+- **Szakadási pont a képletben.** $\sqrt{xy}$-szerű ágaknál a $0$-beli parciálist a definícióból számoljuk: $f=\sqrt{|xy|}$-re $\partial_1f(0,0)=\lim\dfrac{f(x,0)-f(0,0)}{x}=0$, és $\partial_2f(0,0)=0$ is. A $\sqrt{3(x-1)^4+2y^2}$ függvénynek az $(1,0)$-ban $\partial_xf$ létezik ($=0$), de $\partial_yf$ nem ($\sim\sqrt2\,|y|$, csúcs).
+- **Tipikus hiba:** ha a függvény ágankénti, a $0$ pontbeli deriváltat nem lehet a képlet deriválásával kapni, és a környezetet is értelmezni kell.
+- **Parciálisok folytonossága.** $f=(x^2+y^2)\sin\tfrac1{x^2+y^2}$, $f(0,0)=0$: $\partial_1f=2x\sin\tfrac1{x^2+y^2}-\tfrac{2x}{x^2+y^2}\cos\tfrac1{x^2+y^2}$ ($\ne0$ pont), $\partial_1f(0,0)=\lim x\sin\tfrac1{x^2}=0$; az $y=0$ mentén az $x_n=1/\sqrt{2n\pi}$ sorozaton $\partial_1f(x_n,0)=-2\sqrt{2n\pi}\to-\infty$, tehát $\partial_1f\notin C\{(0,0)\}$ (és $\partial_2f$ is). Mégis $f$ differenciálható $0$-ban: [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]].
+
+- **Geometria (5. gyak).** $f\in\mathbb{R}^2\to\mathbb{R}$ grafikonja a $z=f(x,y)$ felület; az $y=a_2$ síkkal ($xz$-síkkal párhuzamos) vett metszetgörbe az $F(t)=f(a_1+t,a_2)$ függvény grafikonja, és $\partial_xf(a)=F'(0)$. A másodrendű jelölés: $\partial_{ij}f(a):=\partial_j(\partial_if)(a)$, vagyis előbb $i$, aztán $j$ szerint deriválunk (gyak 5. lap).
+- **Hányados és kimaradó változó (gyak 5. lap megoldása szerint).** A hányadosszabállyal $\partial_xf=\dfrac{x^2+y^3}{x^2y}$ és $\partial_yf=-\dfrac{x^2+2y^3}{xy^2}$ — ez egyezik a fenti $\tfrac1y+\tfrac{y^2}{x^2}$, ill. $-\tfrac x{y^2}-\tfrac{2y}x$ alakkal. Az origóban a második ($\sin$-os) példára a 6. gyakorlat ugyanezt a sorozatot $x_n=y_n=\tfrac1{2\sqrt{n\pi}}$-nel is használja: $\partial_xf(x_n,y_n)=-2\sqrt{n\pi}\to-\infty$ (gyak 6. lap).
+
 ## Kapocs
 
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — differenciálhatóságból következik a parciális deriválhatóság, és $\operatorname{grad} h(a) = (\partial_1 h(a), \dots, \partial_n h(a))$.
@@ -92,3 +108,4 @@ Ez a [[concepts/analiii/vektormezo-primitiv-fuggvenye|primitív függvény]] ker
 - [[concepts/analiii/jacobi-matrix]] — a vektorváltozó szerinti (multiindexes) általánosítás.
 - [[concepts/analii/derivalt-fogalma]] — az egyváltozós derivált, amelyre a definíció visszavezet.
 - [[concepts/analiii/fuggvenygrafikon-erintosikja]] — a parciális deriváltak mint az érintősík normálvektorának koordinátái.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

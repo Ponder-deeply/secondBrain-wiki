@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/ajanlorendszerek]
+tags: [concept]
 sources: [BDAEM-2022-EA11.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-12
 ---
 

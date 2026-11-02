@@ -1,8 +1,11 @@
 ---
-tags: [concept, bigdata/spark]
-sources: [EA3_spark.pdf, gyak7.pdf]
+tags: [concept]
+sources: [EA3_spark.pdf, gyak7.pdf, "2026_27_1 ESATL8-IP-18KVIBDAG - Big Data architektúrák és elemző módszerek Gy_ 2. Gyakorlat _ ELTE Moodle.md"]
+references: ["spark.apache.org/docs/latest/api/python/reference/pyspark.html#rdd-apis"]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-10-07
 ---
 
 # Spark transzformációk és akciók
@@ -54,8 +57,32 @@ akciók:
   (általánosított összesítés, ahol a partíción belüli és a partíciók közötti
   kombinálás külön függvénnyel adható meg).
 
+### Gyakorlati műveletek részletesen (2026-os gyakorlat)
+
+- `map(f)` — minden elem átalakítása 1:1 (`rdd.map(lambda x: x*2)`, `rdd2.map(len)`). `filter(p)` — a feltételt teljesítő elemek (`x%2==0`, `"Buda" in x`).
+- `zipWithIndex()` — `(elem, index)` párokat ad; így a pár `[1]` komponensére szűrhető (`x[1] > 5`).
+- `flatMap(f)` — a függvény listát ad, az eredmény lapított: `["one two","two three"]` + `split(" ")` → `one, two, two, three`; `flatMap(list)` egy stringet karakterekre bont. Különbség: `map` után listák listája marad.
+- `reduce(f)` — akció; az `f`-nek **asszociatívnak és kommutatívnak** kell lennie, mert a partíciók párhuzamosan dolgoznak és a sorrend nem garantált (összeg, maximum: `a if a>b else b`; stringek összefűzése sorrendfüggő eredményt adhat).
+- `fold(zero, f)` — mint a `reduce`, de kezdőértékkel. A `zero` **minden partícióban** és az összevonásnál is bekerül, ezért nem-semleges értéknél az eredmény a partíciószámtól függ: `rdd.fold(-5, +)` = az összeg $-5\cdot(\text{partíciók száma}+1)$-gyel eltolva.
+- `aggregate(zero, seqOp, combOp)` — az eredm,ény típusa eltérhet az elemétől: `seqOp` egy partíción belül az akkumulátorba olvaszt, `combOp` a partíciók akkumulátorait egyesíti. Átlag: `zero=(0,0)`, `seqOp=(s+x, n+1)`, `combOp=(s1+s2, n1+n2)`, majd `s/n`; min és max egyszerre: `zero=(inf,-inf)`.
+- `distinct()` — duplikátumok eltávolítása (shuffle); `sortBy(keyfunc, ascending=...)` — tetszőleges kulcs szerinti rendezés (`sortBy(len)`, `sortBy(lambda x: x[1])`).
+- Kulcs-érték műveletek (`reduceByKey`, `groupByKey`, `join` változatok): [[concepts/bigdata/spark-kulcs-ertek-muveletek]].
+- `cache()` önmagában nem számol: lusta, az első akció tölti fel — lásd [[concepts/bigdata/spark-perzisztencia]].
+
+### Paraméterek
+
+*Dokumentáció alapján, nem a gyakorlati forrásból.*
+
+- `take(n)` — csak annyi partíciót olvas, amennyi `n` elemhez kell; a `collect()` mindent a driverre hoz.
+- `sample(withReplacement, fraction, seed=None)` — `fraction` a várható arány (nem pontos darabszám); a `seed` teszi megismételhetővé.
+- `union(other)` — nincs shuffle és nincs duplikátumszűrés.
+- `countByKey()`, `countByValue()` — az eredmény a driverre kerül, Python dictként; csak kevés különböző érték mellett használható.
+- `saveAsTextFile(path)` — könyvtárat ír, partíciónként egy `part-*` fájllal; ha a könyvtár már létezik, hibát dob.
+
 ## Kapocs
 
 - [[concepts/bigdata/rdd]] — az a szerkezet, amelyen a transzformációk és akciók dolgoznak
 - [[concepts/bigdata/lusta-kiertekeles-es-dag-utemezes]] — mikor és hogyan hajtódnak végre ténylegesen a transzformációk
 - [[concepts/bigdata/spark-perzisztencia]] — ismételt akciók előtt érdemes cache-elni egy RDD-t
+- [[concepts/bigdata/spark-kulcs-ertek-muveletek]] — `reduceByKey` vs `groupByKey`, join-ok, feladatminták
+- [[concepts/bigdata/spark-particionalas]] — a partíciószám és az újraparticionálás

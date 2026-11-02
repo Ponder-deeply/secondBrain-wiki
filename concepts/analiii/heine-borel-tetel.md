@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, RopzhKerdesek.pdf]
 derivation: source
-updated: 2026-09-06
+kind: theorem
+element: water
+updated: 2026-10-22
 ---
 
 # Borel tétele: kompaktság $\mathbb{R}^p$-ben
@@ -55,3 +57,4 @@ Ez ellentmondás: a rossz $D_n\cap K$ halmazt egyetlen $G_i$ lefedte. $\blacksqu
 - [[concepts/analiii/cantor-metszettetel]] — mindkét bizonyítás záró lépése
 - [[concepts/analiii/sehol-sem-suru-halmazok]] — a $\mathbb{Q}^p$ sűrűsége, amin a racionális gömbök lemmája múlik
 - [[concepts/analiii/nyilt-es-zart-halmazok]] — a nyílt halmazok szerkezete
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

@@ -1,8 +1,13 @@
 ---
-tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+tags:
+  - concept
+sources:
+  - Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-06
+studied: true
 ---
 
 # Skalármező és vektormező

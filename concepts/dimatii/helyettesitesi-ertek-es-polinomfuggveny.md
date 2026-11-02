@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/polinomok]
-sources: [DimatIIEa05.pdf]
+tags: [concept]
+sources: [DimatIIEa05.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy08_Polinomok.pdf]
 derivation: source
-updated: 2026-09-08
+kind: pitfall
+element: water
+updated: 2026-10-21
 ---
 
 # Helyettesítési érték és polinomfüggvény
@@ -36,6 +38,16 @@ A megkülönböztetés lényeges: más tárgyakban gyakran az itt polinomfüggv�
 **Végtelen elemszámú nullosztómentes $R$ esetén** hiába van végtelen sok $R \to R$ függvény és végtelen sok $R[x]$-beli polinom, mégis lesznek olyan függvények, amelyek egyetlen polinomhoz sem tartozhatnak polinomfüggvényként (a számosságok nem esnek egybe).
 
 A pozitív irányú állítás — hogy **végtelen egységelemes integritási tartomány fölött két különböző polinomhoz nem tartozhat ugyanaz a polinomfüggvény** — a gyökök számára vonatkozó korlátból következik, lásd [[concepts/dimatii/gyoktenyezo-es-gyokok-szama]].
+
+### Farkas-diák példája
+
+Két különböző polinom polinomfüggvénye megegyezhet: $R = \mathbb{Z}_3$ fölött $f = x^4 + x + 2 \neq g = x^3 + x^2 + 2$, de $f(0) = 2 = g(0)$, $f(1) = 1 = g(1)$, $f(2) = 2 = g(2)$. A diák a helyettesítést általánosabban definiálják: $S$ egységelemes integritási tartomány, $R \le S$ részgyűrű, amely tartalmazza $S$ egységelemét, $f \in R[x]$ és $c \in S$.
+
+### Feladattípusok és módszerek (gyakorlati feladatsor, 8. hét)
+
+**A helyettesítés szorzattartása kommutativitást kíván.** $R$ kommutatív gyűrűben $(fg)(r)=f(r)g(r)$. Nemkommutatív $R$ fölött ez elromolhat: $f=x$, $g=bx$ ($b\in R$) esetén $fg=bx^2$, így $(fg)(r)=br^2$, míg $f(r)g(r)=r\,b\,r$, és ez eltér, ha $rb\ne br$. Ellenpélda: $R=\mathbb{Z}^{2\times2}$, $b=\begin{pmatrix}0&0\\1&0\end{pmatrix}$, $r=\begin{pmatrix}0&1\\0&0\end{pmatrix}$: $r^2=0$, így $br^2=0$, viszont $rb=\begin{pmatrix}1&0\\0&0\end{pmatrix}$ és $rbr=\begin{pmatrix}0&1\\0&0\end{pmatrix}\ne0$. (Tipp a feladatban: nemkommutatív gyűrűk között érdemes keresni.)
+
+A helyettesítési érték kiszámításának módszere a [[concepts/dimatii/horner-elrendezes]] (számpéldák ott).
 
 ## Kapocs
 

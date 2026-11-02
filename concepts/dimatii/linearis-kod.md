@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/hibakorlatozo-es-linearis-kodok]
-sources: [DimatIIEa09.pdf, DimatIIEa10.pdf]
+tags: [concept]
+sources: [DimatIIEa09.pdf, DimatIIEa10.pdf, dm2gy11.pdf, dm2gy12.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Lineáris kód
@@ -45,6 +47,16 @@ Egy szó súlya megegyezik a $0$-tól vett távolságával: $w(u) = d(u, (0,0,\d
 *Bizonyítás.* $d(u,v) = w(u-v)$, és mivel $K$ linearitása miatt $u, v \in K$ esetén $u - v \in K$, ezért a minimumok is megegyeznek. $\square$
 
 Ez a lineáris kódok gyakorlati előnye: a kód távolságát nem kell az összes kódszópáron végignézni, elég a nem-nulla kódszavak súlyainak minimumát meghatározni.
+
+### Feladattípusok és módszerek: lineáris-e a kód? (2024. 11–12. sorozat)
+
+**Döntés.** A kód pontosan akkor lineáris, ha a kódszavak halmaza altér, azaz a kódolás minden komponense az $(c_1,\dots,c_k)$ üzenet **lineáris formája** a test fölött. Gyors nemlinearitási tesztek: (i) a $0$ üzenet nem a $0$ kódszóra megy (konstans tag, pl. $c_1+c_2+c_3+1$); (ii) egy komponens szorzat vagy $\max$ ($c_2c_3$, $\max\{c_1,c_2\}$, $1-c_2c_3$); (iii) két kódszó összege nem kódszó. Lineáris: $(c_1,c_2,c_3,c_1+c_2+c_3)$ és $(c_1,c_2,c_3,\,2c_1+3c_2,\,c_1+4c_3)$ $\mathbb{F}_5$ fölött (ez $n=5$, $k=3$, $d=2$).
+
+**Nem lineáris kód példája: permutációk.** $\mathcal C=\{(c_1,\dots,c_7)\in\mathbb{F}_7^7:\{c_1,\dots,c_7\}=\{1,\dots,7\}\}$ nem lineáris: a $\mathbf 0$ nem kódszó (nem permutáció), és két kódszó összege általában nem az: $(1,2,\dots,7)+(7,6,\dots,1)=(8,8,\dots,8)=(1,1,\dots,1)$, ami nem permutáció. A kódtávolság $2$: két különböző permutáció legalább két helyen tér el, és egy transzpozíció pontosan kettőn.
+
+**Súly = távolság.** Lineáris kódnál $d=\min\{w(v):v\in C,\,v\neq0\}$, mert $d(u,v)=w(u-v)$ és $u-v$ is kódszó; ezért elég a kódszavak súlyait nézni.
+
+**Tipikus hibák.** A linearitást a paritásbites alak alapján „megérezni” a próba nélkül; $\mathbb{Z}_4$-es („modulo 4”) kódolást lineáris kódnak tekinteni testtel megegyezően (a gyűrű nem test, a Singleton-féle állítások nem érvényesek); a súly–távolság azonosságot nemlineáris kódra alkalmazni.
 
 ## Kapocs
 

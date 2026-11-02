@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/deep-learning-bevezetes]
+tags: [concept]
 sources: [BDAEM-2022-EA12.pdf]
 references: ["https://hmkcode.com/ai/backpropagation-step-by-step/"]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-12
 ---
 

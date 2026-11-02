@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-13
 ---
 

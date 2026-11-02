@@ -1,7 +1,9 @@
 ---
-tags: [concept, dimatii/forraskodolas]
+tags: [concept]
 sources: [DimatIIEa08.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

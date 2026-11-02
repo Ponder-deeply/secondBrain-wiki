@@ -3,6 +3,8 @@ tags: [concept]
 sources: [01_ea_an_ii_a_b_merged.pdf]
 references: ["An II A/B 10. előadás"]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-04
 ---
 

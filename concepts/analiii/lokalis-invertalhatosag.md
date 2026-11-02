@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 4.5.2.1. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-22
 ---
 
 # Lokális invertálhatóság
@@ -45,6 +47,10 @@ tehát $\Phi_y$ **kontrakció** minden $y$-ra, és $\|y\|_\infty < r/2$ esetén 
 ### Amit a tétel nem mond
 
 A feltétel **nem elégséges globális** invertálhatósághoz: $f(x,y) := (e^x\cos y, e^x \sin y)$ mindenütt kielégíti $\det f' \ne 0$-t, de $2\pi$ szerint periodikus a második változóban. A lokalitás lényegi, nem technikai korlát.
+
+### Gyakorló feladatok
+
+Mutassuk meg, hogy $f(u,v)=(e^u+u\sin v,\ e^u-u\cos v)$ lokálisan invertálható, és adjuk meg a lokális inverz deriváltját: $(f^{-1})'=(f')^{-1}$, amihez elég $\det f'\ne0$.
 
 ## Kapocs
 

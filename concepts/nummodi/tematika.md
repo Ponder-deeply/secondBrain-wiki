@@ -2,7 +2,9 @@
 tags: [concept]
 sources: [NM1_ea00.pdf]
 derivation: source
-updated: 2026-08-05
+kind: overview
+element: air
+updated: 2026-10-21
 ---
 
 # Numerikus módszerek I. — Tematika
@@ -47,7 +49,7 @@ Az $f(x) = 0$ egyenlet gyökeinek közelítő meghatározása:
 
 | Módszer | Jelleg |
 |---|---|
-| Intervallumfelezés | Biszekcló; garantáltan konvergál, ha $f$ előjelet vált |
+| Intervallumfelezés | Biszekció; garantáltan konvergál, ha $f$ előjelet vált |
 | Fixpont-iteráció | $x_{n+1} = g(x_n)$; Banach fixponttétel ad konvergenciát |
 | Newton-módszer | $x_{n+1} = x_n - f(x_n)/f'(x_n)$; kvadratikus konvergencia |
 | Szelőmódszer | Numerikus derivált (két pont); szuperlineáris konvergencia |

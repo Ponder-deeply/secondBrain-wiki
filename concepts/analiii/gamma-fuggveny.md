@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 01_gyak_An_III_2024_25_Ifelev.pdf]
 derivation: source
-updated: 2026-09-06
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Gamma-függvény
@@ -50,6 +52,10 @@ Ugyanez az érvelés — csak $f$-re és nem a deriváltjára — adja a $\Gamma
 ### A lokalizálás mint minta
 
 A „nincs globális domináns függvény, tehát kompakt paraméterrészeken dolgozunk, majd az uniót vesszük" lépés a paraméteres integrálok elméletének standard fogása, és a $\Gamma$-nál látszik a legtisztábban, hogy miért kell: a $c$ és a $d$ a két végtelen végén más-más okból korlátoz.
+
+### A konvergencia és a funkcionálegyenlet elemi bizonyítása (1. gyak)
+
+Az 1. gyakorlatlap (6. feladat) a $\Gamma(x)$ konvergenciáját az integrál 1-nél való kettévágásával mutatja meg, $x>0$ esetén. A $(0,1]$ szakaszon $t^{x-1}e^{-t}<t^{x-1}=1/t^{1-x}$, és $1-x<1$, így konvergens majoráns van; a $[1,\infty)$ szakaszon $t^{x-1}e^{-t}<1/t^2$ elég nagy $t$-re, mert $t^{x+1}e^{-t}\to0$. A $\Gamma(x+1)=x\Gamma(x)$ parciális integrálással jön ki, a határérték-tag $s^xe^{-s}\to0$ miatt tűnik el, és indukcióval $\Gamma(n+1)=n!$. Az improprius integrál alapjai az [[subjects/analii]] anyagához tartoznak.
 
 ## Kapocs
 

@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 4.6, wiki.haskell.org/Let_vs._Where]
 derivation: unsourced
+kind: comparison
+element: earth
 updated: 2026-05-18
 ---
 

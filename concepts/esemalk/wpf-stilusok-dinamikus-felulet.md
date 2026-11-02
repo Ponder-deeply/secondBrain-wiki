@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -66,7 +68,7 @@ kerüljön a megjelenítő rácsban.
   alapmechanizmus, amelyet az `ItemContainerStyle` egy tárolóra alkalmaz
 - [[concepts/esemalk/wpf-adatkotes-gyujtemenyek-teljesfelulet]] — az
   `ItemsSource` és `ItemTemplate` adatkötés gyűjteményekre
-- [[concepts/esemalk/wpf-vezerlok-tartalmazasa]] — az `ItemsControl` mint
+- [[concepts/esemalk/wpf-vezerlok-tulajdonsagai]] — az `ItemsControl` mint
   tartalmazó vezérlő
 - [[concepts/esemalk/wpf-panelek]] — a `Grid`/`UniformGrid`, amelyeket
   `ItemsPanel`-ként gyakran használnak

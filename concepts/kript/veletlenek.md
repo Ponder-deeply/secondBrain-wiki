@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [véletlenek.pdf, véletlenek_feladatsor.pdf]
 derivation: source
+kind: pitfall
+element: water
 updated: 2026-09-04
 ---
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
-sources: [elte_eva_ea07_wpf_architecture.pdf]
+tags: [concept]
+sources: [elte_eva_ea07_wpf_architecture.pdf, elte_eva_gy08_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # Általános célú parancs (`DelegateCommand`)
@@ -51,10 +53,10 @@ public class MyViewModel
     : INotifyPropertyChanged // nézetmodell
 {
     // parancs elhelyezése a nézetmodellben
-    public DelegateCommand MyCommand { get; set; };
+    public DelegateCommand MyCommand { get; set; }
 
     public void Write(Object? parameter) {
-        MessageBox.Show(parameter); // tevékenység
+        MessageBox.Show(parameter?.ToString()); // tevékenység
     }
     …
     MyCommand = new DelegateCommand(x => Write(x));
@@ -74,3 +76,4 @@ helyett a nézetmodellen belül, a tevékenységhez közel történhet.
 - [[concepts/esemalk/wpf-mvvm-inotifypropertychanged]] — a nézetmodell
   változáskövetése
 - [[subjects/esemalk]]
+- [[concepts/esemalk/wpf-kepletolto-mvvm]] — a `DelegateCommand` gyakorlati használata a képletöltő nézetmodelljében

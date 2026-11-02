@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [04_ea_An3_2022_tavasz.pdf]
+sources: [04_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: []
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Függvénygrafikon érintősíkja
@@ -44,6 +46,17 @@ A puszta parciális deriválhatóság nem elég: az $(\ast)$ sík csak akkor kö
 
 A gradiens $(\partial_1 f(x_0,y_0), \partial_2 f(x_0,y_0))$ vetülete ugyanaz a vektor, amely a $z=f(x,y)$ felület $F(x,y,z):=f(x,y)-z$ alakú nívófelületére merőleges — az érintősík normálvektora $\mathbf{n}=(\operatorname{grad}f(x_0,y_0),-1)$ tehát a [[concepts/analiii/nivofelulet-es-gradiens|nívófelület-gradiens merőlegesség]] speciális esete, ahol az egyik "koordináta" maga $z$.
 
+### Feladatok
+
+Módszer: $z=f(a)+f'(a)(x-a)$, normálvektor $(\partial_1f(a),\partial_2f(a),-1)$.
+
+- $z=\sqrt{x^2-2y^2}$ a $P_0(3,2)$ pontban: $f(3,2)=1$, $\partial_xf=\tfrac xf=3$, $\partial_yf=\tfrac{-2y}{f}=-4$. Érintősík: $z=1+3(x-3)-4(y-2)$; normálvektor $(3,-4,-1)$.
+- $z=x^2+3y^2$ a $(3,2)$ pontban: $f=21$, $f'(3,2)=(6,12)$; $z=21+6(x-3)+12(y-2)$, normálvektor $(6,12,-1)$.
+- A jegyzet megjegyzése: az $x^2+y^2$ forgásparaboloidhoz az $z=0$ (origó) pontban érintősík illeszthető (vízszintes sík); a kúp $\sqrt{x^2+y^2}$ csúcsában nem, mert ott nem differenciálható.
+- A másodfokú Taylor-polinom első fokú része pontosan az érintősík: $T_1f(x,y)=f(a)+\partial_1f(a)(x-a_1)+\partial_2f(a)(y-a_2)$. Lásd [[concepts/analiii/tobbvaltozos-taylor-polinom]].
+
+- **Teljes számolási séma (gyak 6. lap).** $z=\sqrt{x^2-2y^2}$ ($x^2>2y^2$): $\partial_1f=\dfrac{x}{\sqrt{x^2-2y^2}}$, $\partial_2f=\dfrac{-2y}{\sqrt{x^2-2y^2}}$; ezek a nyílt értelmezési tartományon léteznek és folytonosak, tehát $f$ totálisan deriválható és az érintősík létezik. A $P_0(3,2,1)$-ben az egyenlet $z-1=3(x-3)-4(y-2)\iff3x-4y-z=0$, normálvektor $(3,-4,-1)$.
+
 ## Kapocs
 
 - [[concepts/analiii/feluleti-erintosik]] — az általános, tetszőleges paraméterezésű felület érintősíkja; ez a lap ennek explicit (függvénygrafikonos) speciális esete.
@@ -52,3 +65,4 @@ A gradiens $(\partial_1 f(x_0,y_0), \partial_2 f(x_0,y_0))$ vetülete ugyanaz a 
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — a normálvektor első két koordinátája mint gradiens.
 - [[concepts/analiii/nivofelulet-es-gradiens]] — a merőlegességi állítás általánosabb kontextusa.
 - [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]] — miért nem elég a parciális deriválhatóság az érintősík létezéséhez.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

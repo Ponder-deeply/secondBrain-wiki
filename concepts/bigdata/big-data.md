@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/bevezetes]
+tags: [concept]
 sources: [EA1_bevezetes.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: air
+updated: 2026-09-30
 ---
 
 # Big Data
@@ -32,7 +34,7 @@ A hagyományos rendszerek jellemzően:
 A probléma akkor jelentkezik, amikor az adat mérete meghaladja egy gép
 kapacitását. Klasszikus illusztráció (Google-példa): napi 10 milliárd weblap
 feldolgozása, átlagosan 20 KB méretben, összesen 200 TB adatot jelent. Egyetlen
-lemez ~50 MB/s olvasási sebessége mellett ennek beolvasása kb. 4 milliárd
+lemez ~50 MB/s olvasási sebessége mellett ennek beolvasása kb. 4 millió
 másodpercig, azaz 46+ napig tartana — egyetlen gépen kivitelezhetetlen.
 
 A kapacitás növelésének két útja van:

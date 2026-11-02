@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/forraskodolas]
+tags: [concept]
 sources: [DimatIIEa08.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-09-30
 ---
 
 # Prefix kód
@@ -15,7 +17,7 @@ Tekintsük az injektív $\varphi : A \to B^+$ leképezést, illetve az általa m
 
 - Ha $\mathrm{rng}(\varphi)$ prefixmentes halmaz, akkor **prefix kódról** beszélünk.
 - Ha $\mathrm{rng}(\varphi)$ elemei azonos hosszúságúak, akkor **egyenletes kódról**, **fix hosszúságú kódról**, esetleg **blokk-kódról** beszélünk.
-- **Vesszős kódról** beszélünk, ha van egy olyan $\vartheta \in B^+$ szó (a **vessző**), amely minden kódszónak szuffixe, de egyetlen kódszó sem áll elő $\alpha\vartheta\beta$ alakban üres $\beta$ szóval.
+- **Vesszős kódról** beszélünk, ha van egy olyan $\vartheta \in B^+$ szó (a **vessző**), amely minden kódszónak szuffixe, de egyetlen kódszó sem áll elő $\alpha\vartheta\beta$ alakban nemüres $\beta$ szóval.
 
 ### Prefix kód felbontható
 

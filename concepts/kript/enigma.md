@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [enigma.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-04-22
 ---
 

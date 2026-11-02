@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/winforms-architektura-es-teszteles]
+tags: [concept]
 sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
 derivation: source
+kind: definition
+element: earth
 updated: 2026-09-13
 ---
 

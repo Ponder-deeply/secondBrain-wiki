@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 03_gyak_An_III_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Nyílt és zárt halmazok
@@ -49,6 +51,17 @@ $$f_n(x) = \begin{cases} 1 - nx & x < 1/n \\ 0 & x \geq 1/n \end{cases}$$
 
 sorozatra $\|f_n\|_1 = \int_0^1 |f_n| = \frac{1}{2n} \to 0$, tehát $L^1$-ben a konstans $0$-hoz tart; $L^\infty$-ben viszont $\|f_n\|_\infty = 1$, tehát nem tart hozzá. Ennek megfelelően az $\{f_1, f_2, \dots\}$ halmaz $L^\infty$-ben zárt (nincs torlódási pontja), $L^1$-ben viszont nem az (a konstans $0$ torlódási pontja, de nem eleme).
 
+### Feladatok
+
+*Forrás: An_III_Gyak_2022_tavasz.pdf 3. gyakorlat 2.; gyakorlat.pdf „Metrikus terek" 14, 21.*
+
+- **A nyílt gömb nyílt, a zárt gömb zárt.** Ha $x\in K_r(a)$, akkor $K_{r-\|x-a\|}(x)\subset K_r(a)$ a háromszög-egyenlőtlenség miatt. Ha $\|y-a\|>r$, akkor $K_{\|y-a\|-r}(y)$ nem metszi $\overline K_r(a)$-t, így a komplementer nyílt.
+- **Zártság sorozatokkal.** $A$ zárt $\iff$ minden $x:\mathbb N\to A$ konvergens sorozat limesze $A$-ban van. ($\Rightarrow$: a limes torlódási pont vagy a sorozat tagja; $\Leftarrow$: ha $a\in A'$, a $K_{1/n}(a)\setminus\{a\}$ pontjaiból sorozat készíthető.)
+- **Altér nyílt halmazai.** $(A,\rho|_{A\times A})$ nyílt halmazai pontosan az $U\cap A$ alakúak, $U$ nyílt $X$-ben: mert $K^A_r(a)=K_r(a)\cap A$, és az uniók/metszetek ezt örökítik.
+
+- **Pontosított bizonyítás (3. gyak 2. feladat).** Nyílt gömb: $b\in K_r(a)$ esetén az $s$ sugár $0<s<r-\|a-b\|$ (pozitív, mert $\|a-b\|<r$); $x\in K_s(b)$-re $\|x-a\|\le\|x-b\|+\|a-b\|<s+\|a-b\|<r$. Zárt gömb: $b\notin\overline K_r(a)$ esetén $0<s<\|a-b\|-r$; $x\in K_s(b)$-re $\|a-b\|\le\|x-a\|+\|x-b\|<\|x-a\|+\|a-b\|-r$, így $\|x-a\|>r$, azaz $K_s(b)\cap\overline K_r(a)=\emptyset$ (gyak 3. lap megoldása szerint).
+- **Definíciók (3. gyak emlékeztető).** $a\in A'\iff$ minden $K(a)$-ra $K(a)\cap A$ végtelen $\iff(K(a)\setminus\{a\})\cap A\ne\emptyset$; $a\in\operatorname{int}A\iff\exists K(a)\subset A$ (és $\operatorname{int}\emptyset=\emptyset$).
+
 ## Kapocs
 
 - [[concepts/analiii/halmaz-pontjai-metrikus-terben]] — a belső pont és a határ fogalma, amire a definíció épül
@@ -57,3 +70,4 @@ sorozatra $\|f_n\|_1 = \int_0^1 |f_n| = \frac{1}{2n} \to 0$, tehát $L^1$-ben a 
 - [[concepts/analiii/kompakt-halmazok]] — minden kompakt halmaz korlátos és zárt
 - [[concepts/analiii/osszefuggo-halmazok]] — $\mathbb{R}^p$-ben csak $\emptyset$ és az egész tér nyílt és zárt egyszerre
 - [[concepts/analiii/topologikus-ter]] — a műveleti tulajdonságok axiómává emelése
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

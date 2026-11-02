@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
+tags: [concept]
 sources: [Rezolúció_II.pdf]
 references: [Tk. 259. o., Tk. 261. o.]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

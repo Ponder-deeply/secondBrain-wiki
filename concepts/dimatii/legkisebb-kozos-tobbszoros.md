@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/elemi-szamelmelet]
-sources: [DimatIIEa01.pdf, DimatIIEa02.pdf]
+tags: [concept]
+sources: [DimatIIEa01.pdf, DimatIIEa02.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dimat2gyak02mo.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Legkisebb közös többszörös
@@ -31,8 +33,24 @@ $$(m,n)\cdot[m,n] = m\cdot n$$
 
 összefüggés. Gyakorlati haszna, hogy a legkisebb közös többszörös prímfelbontás nélkül, az [[concepts/dimatii/euklideszi-algoritmus]]sal is számolható.
 
+### Következmények (Farkas-diák)
+
+- Tetszőleges $a, b \in \mathbb{Z}$ számoknak létezik legkisebb közös többszöröse, és $(a,b)\cdot[a,b] = |ab|$.
+- $[ac, bc] = c\cdot[a,b]$ (pozitív $c$-re; a diák $c \in \mathbb{Z}$-vel írják, asszociáltság erejéig).
+- Több szám esetén is létezik, és páronként kiszámolható: $[a_1, a_2, \dots, a_n] = \big[[a_1,a_2], a_3, \dots, a_n\big]$.
+- Ha $a$ is és $b$ is relatív prím $c$-hez, akkor $ab$ is az.
+
+### Általános definíció (előadásdiák)
+
+*(Farkas Gábor előadásdiái.)* Egységelemes integritási tartományban legyen $a_1,\dots,a_n \in R$ és $T \subseteq R$ olyan, hogy minden $t \in T$-re $a_i \mid t$ ($\forall i$) és $a_i \mid t'\ (\forall i) \Rightarrow t \mid t'$. Ekkor $T$ elemei az $a_1,\dots,a_n$ legkisebb közös többszörösei: $\operatorname{lkkt}(a_1,\dots,a_n) = [a_1,\dots,a_n] = t$; csak asszociáltság erejéig egyértelmű, ezért kijelölünk egyet.
+
+### Feladattípusok és módszerek
+
+Az lkkt a legtöbb feladatban az lnko-ból adódik: $[a,b] = ab/(a,b)$; számított példák: $[168,219] = 12\,264$, $[756,795] = 200\,340$ ([[concepts/dimatii/euklideszi-algoritmus]], gyakorlat 2.). Közös többszörös feltételnél (pl. $z^n = w^n = 1$ mikor, ha a rendek $4$ és $6$) a megoldás $n \in [4,6]\mathbb{Z} = 12\mathbb{Z}$; lásd [[concepts/dimatii/komplex-egysegiyokok-hatvanyai]].
+
 ## Kapocs
 
 - [[concepts/dimatii/legnagyobb-kozos-oszto]] — a duális fogalom
 - [[concepts/dimatii/szamelmelet-alaptetele]] — a kanonikus alak, amiből a képlet adódik
 - [[concepts/dimatii/euklideszi-algoritmus]] — a hatékony számítási út
+

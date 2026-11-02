@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
-sources: [elte_eva_ea05_winforms_multithread.pdf]
+tags: [concept]
+sources: [elte_eva_ea05_winforms_multithread.pdf, elte_eva_gy06_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: pitfall
+element: earth
+updated: 2026-10-21
 ---
 
 # Felületi vezérlők kezelése párhuzamos végrehajtás során (`Invoke`, `BeginInvoke`)
@@ -48,6 +50,10 @@ private void Ready(object? sender, EventArgs e) {
     …
 }
 ```
+
+### Szinkronizációs kontextus és eseménykezelők (6. gyakorlat)
+
+A Windows Forms alkalmazások alapértelmezett szinkronizációs kontextusa (`SynchronizationContext.Current`: `WindowsFormsSynchronizationContext`) az `await` után `BeginInvoke`-kal visszavisz a UI szálra, így az `await` utáni kód külön `Invoke` nélkül is a felületi szálon folytatódik. A háttérszálon kiváltott modell-események kezelőjében viszont `InvokeRequired` + `BeginInvoke` védelem kell (pl. a `Task.Run`-on belül kiváltott haladásjelző esemény). Az `IProgress<T>`/`Progress<T>` a létrehozáskor eltárolt kontextuson továbbítja a `Report()` hívásokat, így kézi `Invoke` nélkül használható. Részletek: [[concepts/esemalk/docustat-tobbfajlos-aszinkron-betoltes]].
 
 ## Kapocs
 

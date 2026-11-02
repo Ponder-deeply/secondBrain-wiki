@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [09_Szerzodesek.md, 10_Egyes_szerzodesek.md]
 derivation: source
+kind: overview
+element: water
 updated: 2026-08-12
 ---
 

@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 7.7, "LYAH \"Modules\""]
 derivation: unsourced
+kind: definition
+element: earth
 updated: 2026-05-18
 ---
 

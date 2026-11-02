@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 

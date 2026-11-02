@@ -1,8 +1,11 @@
 ---
-tags: [concept, bigdata/hadoop-okoszisztema]
-sources: [EA2_hadoop.pdf]
+tags: [concept]
+sources: [EA2_hadoop.pdf, "2026_27_1 ESATL8-IP-18KVIBDAG - Big Data architektúrák és elemző módszerek Gy_ Gyakorlat 1 _ ELTE Moodle.md"]
+references: ["hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html"]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: water
+updated: 2026-10-07
 ---
 
 # MapReduce
@@ -152,14 +155,14 @@ osztályok beállítása, ki- és bemeneti útvonalak megadása,
 `job.waitForCompletion(true)`).
 
 **Map-only MapReduce**: ha nincs szükség reduce fázisra,
-`job.setNumreduceTasks(0)` hívással a job kizárólag a map fázist futtatja le,
+`job.setNumReduceTasks(0)` hívással a job kizárólag a map fázist futtatja le,
 és annak eredményét írja ki közvetlenül.
 
-### Writeable típusok
+### Writable típusok
 
-A Hadoop Java API a natív típusok helyett szerializálható `Writeable`
-csomagolókat használ, pl. `boolean → BooleanWriteable`, `int → IntWriteable`,
-`long → LongWriteable`, `float → FloatWriteable`, `double → DoubleWriteable`,
+A Hadoop Java API a natív típusok helyett szerializálható `Writable`
+csomagolókat használ, pl. `boolean → BooleanWritable`, `int → IntWritable`,
+`long → LongWritable`, `float → FloatWritable`, `double → DoubleWritable`,
 `String → Text`.
 
 ### Optimalizálási lehetőségek
@@ -167,8 +170,28 @@ csomagolókat használ, pl. `boolean → BooleanWriteable`, `int → IntWriteabl
 1. LZO tömörítés használata (`mapred.compress.map.output = true`).
 2. A map/reduce taskok számának és a blokkméreteknek a hangolása.
 3. Combiner használata a hálózati forgalom csökkentésére.
-4. A Writeable objektumok újrafelhasználása új példányok létrehozása
+4. A Writable objektumok újrafelhasználása új példányok létrehozása
    helyett (kevesebb GC-terhelés).
+
+### Gyakorlati példa: grep jellegű szűrés és egyedi napok számolása
+
+A grep-szerű feldolgozásban minden bemeneti sorról a mapper dönti el, érdekes-e;
+a HDFS fájl minden blokkjához külön mapper tartozhat, így a sorok párhuzamosan
+dolgozódnak fel, az adathoz közel (data locality).
+
+2026-os gyakorlati feladat: a `sensors100.json` Airport helyszínű
+`temperature` méréseiből határozzuk meg, **hány különböző nap** esett az egyes
+hőmérsékleti kategóriába (10 alatt, 10–20, 20–30, 30 felett); egy napot egy
+kategóriában csak egyszer szabad számolni, akkor is, ha aznap több mérés volt.
+
+- **Mapper**: szűri a helyszínt (`Airport`) és a típust (`temperature`), a
+  timestampből csak a dátumot veszi, a hőmérséklet alapján kategóriát
+  határoz; kimenet: kulcs = `(kategória, dátum)`, pl. `(10-20, 2026-09-04)`.
+- **Shuffle**: a Hadoop a mapper kimenetét kulcs szerint rendezi, így a
+  reducer rendezett bemenetet kap — az azonos `(kategória, dátum)` párok
+  egymás mellé kerülnek.
+- **Reducer**: az egyedi napokat kezeli (azonos kulcs többszöri előfordulása
+  egynek számít), és kategóriánként összesít (pl. `10-20 fok között: 18 nap`).
 
 ### Word Count példa
 
@@ -181,6 +204,18 @@ felelne meg. A map fázis kiszűri a nem releváns neveket és
 (hash-elosztás) alapján a megfelelő reducer node-okhoz mozgatja az azonos
 kulcsú párokat; a reduce fázis összegzi az egyes nevekhez tartozó
 előfordulásokat, és az eredményt a HDFS-re írja.
+
+### Paraméterek
+
+*Dokumentáció alapján, nem a gyakorlati forrásból.*
+
+- `Mapper<KEYIN, VALUEIN, KEYOUT, VALUEOUT>` — a négy típusparaméter a bemeneti és a kimeneti kulcs-érték pár típusa. `TextInputFormat` mellett a bemenet `<LongWritable offset, Text sor>`. A Reducer bemeneti típusa meg kell egyezzen a Mapper kimenetével.
+- `job.setNumReduceTasks(n)` — `n` reducer `n` kimeneti fájlt (`part-r-0000x`) ír; `0` esetén a job map-only.
+- `job.setCombinerClass(...)` — csak asszociatív és kommutatív reduce esetén szabad megadni (az összeg igen, az átlag nem). A Hadoop 0, 1 vagy több alkalommal is lefuttathatja.
+- `job.setPartitionerClass(...)` — kulcs → reducer leképezés; alapból hash.
+- `setMapOutputKeyClass` / `setMapOutputValueClass` — akkor kell, ha a map kimenetének típusa eltér a végső kimenetétől.
+- `FileOutputFormat.setOutputPath(job, path)` — a kimeneti könyvtár nem létezhet előre, különben a job el sem indul.
+- `job.waitForCompletion(true)` — `true` esetén kiírja a haladást; a visszatérési érték a siker.
 
 ## Kapocs
 

@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 4.5.5. szakasz, 4.5.5.1. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Feltételes szélsőérték és a Lagrange-multiplikátorok
@@ -61,6 +63,19 @@ A feltétel azt mondja, hogy $\operatorname{grad} f(c)$ **benne van** a $\operat
 ### Gyakorlati recept
 
 Az $F := f + \lambda g$ **Lagrange-függvény** $n + m$ ismeretlenre ($x_1,\dots,x_n,\lambda_1,\dots,\lambda_m$) $n+m$ egyenletet ad: $\operatorname{grad}_x F = 0$ és $g = 0$. A megoldások a feltételes szélsőérték **jelöltjei**; hogy melyik valóban az, azt a [[concepts/analiii/felteteles-szelsoertek-masodrendu-feltetelei|másodrendű feltételek]] döntik el.
+
+### Feladatok
+
+**Recept.** A Lagrange-féle szükséges feltétel: $f'(a)=\sum\lambda_jg_j'(a)$ és $g(a)=0$ (a $g'(a)$ rangja teljes). A megoldásokban a feltételt vagy behelyettesítjük (ha egy változó kifejezhető), vagy a $\lambda_j$ szorzókkal a rendszert közvetlenül megoldjuk. Ha a feltételhalmaz kompakt, a jelöltek értékeinek összevetése dönt (lásd [[concepts/analiii/abszolut-szelsoertek]]).
+
+**Munkapéldák.**
+
+1. $f=xy$, $g=x+y-1=0$: $y=\lambda$, $x=\lambda$, $x+y=1\Rightarrow x=y=\tfrac12$; behelyettesítve $f=x(1-x)$, tehát maximum $\tfrac14$.
+2. $f=\cos^2x+\cos^2y$, $g=x-y-\tfrac\pi4=0$: $y=x-\tfrac\pi4$, $f=1+\tfrac12(\cos2x+\sin2x)=1+\tfrac{\sqrt2}2\sin(2x+\tfrac\pi4)$. Feltételes maximum $1+\tfrac{\sqrt2}2$ az $x=\tfrac\pi8+k\pi$-nél, minimum $1-\tfrac{\sqrt2}2$ az $x=\tfrac{5\pi}8+k\pi$-nél.
+3. $f=\sum a_{ij}x_ix_j$ ($A$ szimmetrikus) az $\sum x_i^2=1$ feltétellel: a Lagrange-feltétel $Ax=\lambda x$, vagyis a jelöltek az $A$ egységnyi sajátvektorai, az értékük $f=\lambda$ (sajátérték). A feltételes maximum a legnagyobb, a minimum a legkisebb sajátérték — ez a kvadratikus alak egységgömbi szélsőértéke ([[concepts/analiii/kvadratikus-alak-definitsege]]).
+4. A gömbfelület legtávolabbi/legközelebbi pontja: $x^2+y^2+z^2=9$ és a $P$ pont távolságnégyzete $f=\|x-P\|^2$. $x-P=\lambda x$ miatt $x\parallel P$, tehát a legközelebbi pont $3P/\|P\|$, a legtávolabbi $-3P/\|P\|$, távolsága $\|P\|+3$. Pl. $P=(1,2,2)$ ($\|P\|=3$): legtávolabbi $(-1,-2,-2)$; $P=(-2,1,0)$: $\tfrac3{\sqrt5}(2,-1,0)$; $P=(1,5,-10)$: $-\tfrac3{\sqrt{126}}(1,5,-10)$.
+
+**További gyakorló feladatok:** $xy+yz$ a $x^2+y^2=2$, $y+z=2$ feltételekkel; $xyz$ az $x^2+y^2+z^2=1$, $x+y+z=0$ feltételekkel.
 
 ## Kapocs
 

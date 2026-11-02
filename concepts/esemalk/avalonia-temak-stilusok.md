@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Avalonia UI témák és stílusok
@@ -50,11 +52,12 @@ A vezérlők `Classes` gyűjteménye statikusan és adatkötéssel (`Binding`) i
 megadható, logikai értékek formájában:
 
 ```xml
+<!-- Classes="Large": nem kondícionális;
+     Classes.IsActive: kondícionális osztály,
+     adatkötéssel a nézetmodellre -->
 <Button ...
-    Classes="Large" <!-- nem kondícionális -->
+    Classes="Large"
     Classes.IsActive="{Binding IsButtonActive}">
-    <!- kondícionális osztály,
-        adatkötéssel a nézetmodellre -->
 <Button.Styles>
     <Style Selector="Button.Large">...</Style>
     <Style Selector="Button.IsActive">...</Style>
@@ -73,7 +76,7 @@ A stílusok `UserControl` szintjén is megadhatók tranzitívan, vagy
 - [[concepts/esemalk/wpf-stilus-triggerek]] — a WPF triggerek (`DataTrigger`
   stb.), amelyekhez az Avalonia feltételes osztálykötése (`Classes.X`)
   hasonlítható
-- [[concepts/esemalk/wpf-eroforrasok-fajlok]] — a `ResourceDictionary`
+- [[concepts/esemalk/wpf-eroforrasok-alapjai]] — a `ResourceDictionary`
   megosztott stílus-/sablonkészletként való használata WPF-ben
 - [[concepts/esemalk/avalonia-meret-tajolas-kezeles]] — a tájolásfüggő
   szelektor osztályok (`IsPortrait`/`IsLandscape`) gyakorlati alkalmazása

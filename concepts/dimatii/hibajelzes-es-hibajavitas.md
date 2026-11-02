@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/hibakorlatozo-es-linearis-kodok]
-sources: [DimatIIEa09.pdf, DimatIIEa10.pdf]
+tags: [concept]
+sources: [DimatIIEa09.pdf, DimatIIEa10.pdf, dm2gy11.pdf, dm2gy12.pdf]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Hibajelzés és hibajavítás
@@ -49,6 +51,32 @@ $t < \frac{d}{2}$ hiba esetén biztosan jól javítunk, hiszen a háromszög-egy
 Másrészt legyenek $u$ és $w$ olyan kódszavak, amelyek távolsága $d$, és legyen $v$ az a szó, amit úgy kapunk $u$-ból, hogy azon $t \ge \frac{d}{2}$ pozícióból, amelyekben eltérnek, a $w$ megfelelő pozíciójában lévő betűt írjuk. Ekkor $v$ az $u$-tól $t$ helyen, míg $w$-től $d - t \le \frac{d}{2} \le t$ helyen különbözik. Ha a kód $t$-hibajavító lenne, akkor $v$-t egyrészt $u$-ra, másrészt $w$-re kellene javítania.
 
 A kód ezáltal **pontosan $\left\lfloor \frac{d-1}{2} \right\rfloor$-hibajavító**.
+
+### Feladattípusok és módszerek: képességek meghatározása (2024. 11–12. sorozat)
+
+**Menet.** Kódolásból kódszavakat sorolunk fel (vagy lineáris kódnál a $\mathbf{H}$ oszlopaiból olvassuk le), $d=\min_{u\neq v}d(u,v)$, majd *hibajelző* képesség $d-1$, *hibajavító* $\lfloor\frac{d-1}2\rfloor$. **MDS**, ha $d=n-k+1$ (azaz $|C|=q^{n-d+1}$, lásd [[concepts/dimatii/singleton-korlat]]).
+
+A 2024. 11. sorozat 2–3–4. feladata (a távolságokat a kódszavak felsorolásával ellenőriztük):
+
+| kód | $n,k$ | $d$ | jelzés | javítás | MDS? |
+| --- | --- | --- | --- | --- | --- |
+| $(c_1,c_2,c_3,\ c_1+c_2+c_3+1)$ binárisan | 4, (nem lineáris) | 2 | 1 | 0 | $|C|=8=2^{4-2+1}$ igen |
+| $(c_1,c_2,c_3,\ c_1,\ c_2+c_3)$ | 5, 3 | 2 | 1 | 0 | nem |
+| $(c_1,c_2,c_3,\ c_1,\ 1-c_2c_3)$ | 5 | **1** | 0 | 0 | nem |
+| $(c_1,c_2,\ c_1+c_2)$ | 3, 2 | 2 | 1 | 0 | igen |
+| $(c_1,c_2,\ c_1+c_2,\ \max\{c_1,c_2\})$ | 4 | 2 | 1 | 0 | nem |
+| $(c_1,c_2,c_1+c_2)$, $\mathbb{F}_5$ vagy $\mathbb{F}_7$ fölött | 3, 2 | 2 | 1 | 0 | igen |
+| $(c_1,c_2,c_1+c_2,c_1c_2)$, $\mathbb{F}_7$ | 4, 2 | 2 | 1 | 0 | nem ($d<3$) |
+| $(c_1,c_2,c_3,c_1+c_2,c_1+c_3)$, $\mathbb{F}_3$ | 5, 3 | 2 | 1 | 0 | nem |
+| $(c_1,c_2,c_3,c_1+c_2,c_1+c_3,c_2+c_3)$, $\mathbb{F}_3$ | 6, 3 | 3 | 2 | 1 | nem ($d<4$) |
+| $(c_1,c_2,c_3,\ \sum c_i,\ c_1+2c_2+3c_3)$ mod 5 | 5, 3 | 3 | 2 | 1 | igen |
+| ugyanez mod 4 | 5 | 2 | 1 | 0 | — (a $\mathbb{Z}_4$ nem test) |
+
+Az $1-c_2c_3$-as kód $d=1$: a $(0,0,0)$ és $(0,0,1)$ kódszavak csak a harmadik koordinátában térnek el — az utolsó komponens a $c_2c_3$ szorzat miatt nem lineáris, és az információt nem védi. A $\mathbb{Z}_4$-es változatban a $2\cdot2=0$ nullosztó miatt két különböző üzenet kódolása kevés helyen térhet el, ezért a távolság csökken.
+
+**Gömbszámlálás.** A $(c_1,c_2,c_3,\ c_1+c_2,\ c_1+c_3,\ c_2+c_3)$ bináris kód ($n=6$, $d=3$): minden kódszó $1$ sugarú gömbje $1+6=7$ szót fed, a nyolc gömb páronként diszjunkt (mert $d=3$), így $8\cdot7=56$ szót fedünk $2^6=64$-ből; a **maradék $8$ szó** minden kódszótól legalább $2$ távolságra van. A lap „$\mathbb{F}_2^5$” jelölése valószínűleg elírás: a $6$ hosszú kódhoz $\mathbb{F}_2^6$ tartozik, és ebben $8$ ilyen szó van (felsorolással ellenőrizve).
+
+**Tipikus hibák.** $t=d/2$-t hibajavításnak venni ($d=4$-nél $1$ hibát javítunk, nem kettőt); $d=1$-nél a „jelzés $d-1=0$” elfelejtése; a kódolást lineárisnak hinni, ha egy komponens szorzat, $\max$ vagy konstans tagot tartalmaz.
 
 ## Kapocs
 

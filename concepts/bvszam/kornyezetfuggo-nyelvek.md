@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [6.-veremauto-és-környezetfüggetlen-nyelv.md]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-04-08
 ---
 

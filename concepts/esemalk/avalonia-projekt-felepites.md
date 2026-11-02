@@ -1,11 +1,13 @@
 ---
-tags: [concept, esemalk/avaloniaui-alapok]
+tags: [concept]
 sources: [elte_eva_ea09_avaloniaui.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-25
 ---
 
-# Avalonia projekt felépítése
+# Avalonia projekt felépítése és kihelyezése
 
 Egy Avalonia UI alkalmazás megoldása (solution) multi-projekt szerkezetű: egy
 közös, platformfüggetlen kódbázis és az egyes célplatformokhoz tartozó,
@@ -50,6 +52,26 @@ egyedi perzisztencia-megvalósítást (mivel az adattárolás módja
 platformonként eltér), és tartalmazhatnak speciális, csak az adott
 platformon elérhető nézetbeli elemeket, illetve lehetőséget a nézet
 adaptálására.
+
+### Alkalmazás leíró és kihelyezés
+
+Az Avalonia UI alkalmazások tulajdonságait és képességeit az *alkalmazás
+leíró* (*application manifest*) segítségével írhatjuk le, platformonként
+eltérő fájlformátumban.
+
+Az alkalmazás leíró tartalmazza az alkalmazás nevét, leírását, verzióját és
+a fejlesztő adatait, valamint megadja az engedélyeket a rendszerhez és más
+alkalmazásokhoz (pl. internet, kamera, pozicionálás, telefonkönyv).
+
+A leírást tartalmazó fájl platformonként más:
+
+- **Android**: `AndroidManifest.xml`
+- **Windows**: `Package.appxmanifest`
+- **iOS/macOS**: `Info.plist`
+
+A megfelelően konfigurált alkalmazások kihelyezhetők fizikai eszközökre,
+illetve elhelyezhetők a platform alkalmazásboltjában is — ehhez az
+alkalmazást megfelelő, szintén platformspecifikus aláírással kell ellátni.
 
 ## Kapocs
 

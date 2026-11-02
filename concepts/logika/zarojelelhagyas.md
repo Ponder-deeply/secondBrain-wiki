@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/iteletlogika-szintaxis]
-sources: [iteletlogika.pdf]
+tags: [concept]
+sources: [iteletlogika.pdf, Ítéletlogika_alapjai.pdf]
 references: [Pásztorné Varga Katalin – Várterész Magda, A matematikai logika alkalmazásszemléletű tárgyalása]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Zárójelelhagyás
@@ -45,9 +47,23 @@ Tetszőleges $A_1, \dots, A_n$ formulák esetén:
 
 A harmadik példa mutatja, hogy egy belső implikáció zárójele — mivel az implikáció a legalacsonyabb prioritású — nem hagyható el akkor sem, ha az egész formula fő összekötőjele is implikáció: a $((Y \supset X) \supset \neg Z)$ részformula zárójele a bal-jobb szerkezet egyértelműsítéséhez szükséges marad.
 
+### További példák a gyakorlatról
+
+A prioritás csökkenő sorrendben $\neg,\wedge,\vee,\supset$; $\wedge$ és $\vee$ zárójelezési iránya tetszőleges, a $\supset$ jobbról balra zárójelez ($A\supset\neg B\supset C\approx(A\supset(\neg B\supset C))$).
+
+| Teljesen zárójelezett | Zárójelelhagyás után |
+|---|---|
+| $((C\vee B)\wedge(\neg D\vee C))$ | $(C\vee B)\wedge(\neg D\vee C)$ |
+| $\neg(G\wedge(\neg F\supset D))$ | változatlan |
+| $((D\supset E)\wedge(E\supset D))$ | $(D\supset E)\wedge(E\supset D)$ |
+| $((C\vee B)\supset(\neg D\vee C))$ | $C\vee B\supset\neg D\vee C$ |
+| $(B\supset(\neg D\vee B))$ | $B\supset\neg D\vee B$ |
+| $((A\wedge B)\vee(A\supset(\neg B\supset A)))$ | $A\wedge B\vee(A\supset\neg B\supset A)$ |
+
 ## Kapocs
 
 - [[concepts/logika/iteletlogikai-formula]] — a teljesen zárójelezett formula definíciója, amelyet a zárójelelhagyás enyhít
 - [[concepts/logika/formulaszerkezet]] — a szerkezeti fa, amely a zárójelezéstől függetlenül egyértelmű
 - [[concepts/logika/igazsagtabla]] — a rövidített jelölés az igazságtáblák fejlécében
 - [[concepts/logika/logikai-osszetettseg]] — a hatáskör fogalma, amely a zárójelelhagyás szabályának alapja
+- [[concepts/logika/iteletlogikai-formalizalas]] — a gyakorló feladat, amelynek formuláin a zárójelelhagyás látszik

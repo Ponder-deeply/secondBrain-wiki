@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/spark-graphx]
+tags: [concept]
 sources: [EA4_spark_graphx.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Összefüggő komponensek keresése Pregellel
@@ -19,9 +21,13 @@ csúcs a komponense minimális id-jét fel nem veszi.
 - `vprog: math.min(msg, id)` — egy csúcs a saját aktuális állapotát (kezdetben
   a saját `id`-ja) a beérkezett üzenet és a jelenlegi érték minimumára
   cseréli.
-- `sendMsg: if n1.id < n2.id: n1 send n1.id` — egy csúcs csak akkor küldi el
-  a saját azonosítóját egy szomszédjának, ha annál kisebb az azonosítója;
-  így az információ csak "lefelé", a kisebb id irányába terjed.
+- `sendMsg: if n1.id < n2.id: n1 send n1.id` — itt az `id` a csúcs
+  *aktuális* komponens-értékét (csúcsattribútumát) jelenti, nem a rögzített
+  eredeti azonosítót (a forrásdia jelölése ebben pontatlan): egy csúcs csak
+  akkor küldi el az aktuális értékét egy szomszédjának, ha az kisebb a
+  szomszédénál; így a minimum több lépésen át, a nagyobb értékű csúcsok
+  felé terjed. Az eredeti id-k összehasonlításával a minimum csak egy
+  lépésnyire jutna el.
 - `aggrMsg: math.min(a, b)` — több beérkező üzenetet a minimumukkal aggregál.
 
 ### Végrehajtás
@@ -30,8 +36,8 @@ A forrás egy kis példagráfon mutatja be, hogy több superstepen keresztül
 (a csúcsok kezdeti azonosítói 2, 3, 4, 5, 7) a komponensen belüli legkisebb
 azonosító fokozatosan mindenhová eljut: az első körben a szomszédos csúcsok
 között terjed a legkisebb szomszédos érték, majd a következő körökben ez
-tovább minimalizálódik, amíg a komponens minden csúcsa ugyanazt a (globálisan
-legkisebb) azonosítót veszi fel — ez az azonosító jelöli ki magát a
+tovább minimalizálódik, amíg a komponens minden csúcsa ugyanazt a (komponensen
+belül legkisebb) azonosítót veszi fel — ez az azonosító jelöli ki magát a
 komponenst.
 
 Ez a mechanizmus a Pregel superstep-modell klasszikus alkalmazása: az

@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [13_ea_An3_2022_tavasz.pdf]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-09-14
 ---
 

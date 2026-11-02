@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-alapfogalmak-es-elokeszites]
+tags: [concept]
 sources: [BDAEM-2022-EA8.pptx]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-12
 ---
 

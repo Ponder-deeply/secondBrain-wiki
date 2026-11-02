@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/tablokalkulus]
-sources: [Tablókalkulus.pdf]
+tags: [concept]
+sources: [Tablókalkulus.pdf, Tablokalkulus_1_2_rész.pdf]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Analitikus tabló (ítéletlogika)
@@ -44,15 +46,29 @@ A tabló egy **ága zárt**, ha megjelenik rajta egy már nem tovább bontható 
 
 ### Teljesség
 
-**Tétel (teljesség).** Ha $C$ kielégíthetetlen, akkor $C$ (bármely) $T$ tablója zárt.
+**Tétel (teljesség).** Ha $C$ kielégíthetetlen, akkor $C$ (bármely) befejezett (teljes) $T$ tablója zárt.
 
-*Bizonyítás.* Tegyük fel indirekt, hogy $C$ kielégíthetetlen, de $T$-nek van nyitott ága. Egy ilyen ágon szereplő formulahalmaz **lefelé zárt**: ha rajta szerepel egy $\alpha$-formula, akkor $\alpha_1$ és $\alpha_2$ is szerepel rajta; ha egy $\beta$-formula, akkor $\beta_1$ és $\beta_2$ közül legalább az egyik. Egy ilyen szerkezetű, komplemens párt nem tartalmazó halmaz [[concepts/logika/hintikka-halmaz|Hintikka halmaz]], ami a Hintikka lemma szerint kielégíthető — tehát az ág minden formulája, így $C$ is, kielégíthető. Ez ellentmond a feltevésnek. $\blacksquare$
+*Bizonyítás.* Tegyük fel indirekt, hogy $C$ kielégíthetetlen, de $T$-nek van nyitott ága. Mivel $T$ befejezett, egy ilyen ágon szereplő formulahalmaz **lefelé zárt**: ha rajta szerepel egy $\alpha$-formula, akkor $\alpha_1$ és $\alpha_2$ is szerepel rajta; ha egy $\beta$-formula, akkor $\beta_1$ és $\beta_2$ közül legalább az egyik. Egy ilyen szerkezetű, komplemens párt nem tartalmazó halmaz [[concepts/logika/hintikka-halmaz|Hintikka halmaz]], ami a Hintikka lemma szerint kielégíthető — tehát az ág minden formulája, így $C$ is, kielégíthető. Ez ellentmond a feltevésnek. $\blacksquare$
 
 A helyesség és a teljesség együtt azt adja, hogy **a tablókalkulus a kielégíthetetlenség eldöntésének helyes és teljes szintaktikus módszere**: $C$ kielégíthetetlen pontosan akkor, ha van tablócáfolata. Mivel a kielégíthetőség/tautológia kérdése (lásd fent) mindig kielégíthetetlenségi kérdésre vezethető vissza, a tabló ezáltal mindkettőt eldönti — véges formula esetén véges lépésben.
 
 ### Formulahalmaz tablója
 
 Egy véges $\{F_1, \dots, F_n\}$ formulahalmaz tablójának gyökerében az $F_1 F_2 \dots F_n$ sorozat áll, és a tablót a szokásos módon, formulánként építjük tovább. Végtelen formulahalmaz tablóját ugyanígy, a formulák egy rögzített sorrendje szerint állítjuk elő.
+
+### Gyakorló feladatok (ítéletlogika)
+
+A gyakorlati diasor (2020/21) négy feladata ugyanazt az eldöntési kérdést járja körül jelölt és jelöletlen tablóval. A bontási szabály: előbb az $\alpha$-formulák, utána a $\beta$-formulák; a lezárt ágat $\otimes$ jelöli.
+
+**1. Helyes-e $\{(X\supset Y)\wedge(X\supset Z),\ X\} \models_0 Y\wedge Z$?** A dedukciós tétellel tautológia-kérdéssé alakítjuk: $((X\supset Y)\wedge(X\supset Z)) \supset (X\supset(Y\wedge Z))$ tautológia-e, azaz van-e tablócáfolata a formulának? Jelölt tabló: a gyökér $F\,(\dots)$; az $\alpha$-bontás után $T\,((X\supset Y)\wedge(X\supset Z))$ és $F\,(X\supset(Y\wedge Z))$, majd $T(X\supset Y)$, $T(X\supset Z)$, $TX$, $F(Y\wedge Z)$. A $T(X\supset Y)$ ágazik: $FX\ \otimes$ ($TX$-szel) | $TY$. A $TY$ ágon $F(Y\wedge Z)$ ágazik: $FY\ \otimes$ | $FZ$. Az $FZ$ ágon $T(X\supset Z)$ ágazik: $FX\ \otimes$ | $TZ\ \otimes$. Minden ág zárt, így a negált formula kielégíthetetlen, a formula tautológia, a következmény teljesül.
+
+**2. Tautológia-e $(\neg X\vee\neg Y)\supset\neg(X\wedge Y)$?** Jelölt tabló: $F(\dots)$ $\to$ $T(\neg X\vee\neg Y)$, $F\neg(X\wedge Y)$ $\to$ $T(X\wedge Y)$ $\to$ $TX$, $TY$; a $T(\neg X\vee\neg Y)$ ágazik $T\neg X$ | $T\neg Y$ $\to$ $FX\ \otimes$ | $FY\ \otimes$. Zárt: tautológia.
+
+**3. Ugyanez jelöletlen tablóval.** A gyökér a negált formula, $\neg((\neg X\vee\neg Y)\supset\neg(X\wedge Y))$; $\alpha$: $\neg X\vee\neg Y$ és $\neg\neg(X\wedge Y)$ $\to$ $X\wedge Y$ $\to$ $X$, $Y$; az ágazás $\neg X\ \otimes$ | $\neg Y\ \otimes$. Zárt tabló.
+
+**4. Helyes-e $\{X\vee(Y\wedge Z)\} \models_0 (X\vee Y)\wedge(X\vee Z)$?** Visszakövetkeztetéssel: kielégíthetetlen-e $\{X\vee(Y\wedge Z),\ \neg((X\vee Y)\wedge(X\vee Z))\}$ (egyetlen konjunkcióként a gyökérben)? A $X\vee(Y\wedge Z)$ ágazik: $X$ | $Y\wedge Z$. Mindkét ágon a $\neg((X\vee Y)\wedge(X\vee Z))$ ágazik $\neg(X\vee Y)$ | $\neg(X\vee Z)$. A bal ágon $\neg(X\vee Y)\to\neg X,\neg Y$ ellentmond $X$-nek, a $\neg(X\vee Z)\to\neg X$ szintén. A jobb ágon $Y,Z$ áll, így $\neg(X\vee Y)\to\neg Y$ és $\neg(X\vee Z)\to\neg Z$ ellentmond. Minden ág zárt: a következmény teljesül.
+
+A feladatok két bevett átfogalmazást mutatnak: **dedukciós tétel** (a következményből tautológia-kérdés, a gyökérben $F$-fel jelölt implikációlánc) és **visszakövetkeztetés** (a premisszák és a konklúzió negáltja együtt kielégíthetetlen-e).
 
 ## Kapocs
 
@@ -61,3 +77,4 @@ Egy véges $\{F_1, \dots, F_n\}$ formulahalmaz tablójának gyökerében az $F_1
 - [[concepts/logika/szemantikus-tulajdonsagok]] — a kielégíthetőség, kielégíthetetlenség és tautológia fogalma, amelyre a tabló épül
 - [[concepts/logika/elsorendu-tablo]] — a kalkulus kiterjesztése az elsőrendű logikára
 - [[concepts/bvszam/itelet-kalkulus]] — az ítéletlogika szintaxisa, amelyen a tabló dolgozik
+- [[concepts/logika/iteletlogikai-formalizalas]] — a dedukciós tételes és visszakövetkeztetéses átfogalmazás igazságtáblás megfelelője

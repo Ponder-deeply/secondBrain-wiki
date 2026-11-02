@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3.9 / ch 8, wiki.haskell.org/Type_class]
 derivation: unsourced
+kind: definition
+element: air
 updated: 2026-05-18
 ---
 

@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-06
+kind: theorem
+element: fire
+updated: 2026-10-21
 ---
 
 # Paraméteres integrál differenciálása
@@ -64,3 +66,4 @@ A bevezető példában $f(t,x) = \frac{x^t-1}{\log x}$, és $\frac{\partial}{\pa
 - [[concepts/analiii/gamma-fuggveny]] — a tétel legfontosabb következménye: a $\Gamma$-függvény differenciálhatósága.
 - [[concepts/analii/integralfuggveny]] — a bizonyítás azt mutatja meg, hogy $F$ a $G$ integrálfüggvénye, és onnan örökli a deriváltját.
 - [[concepts/analii/newton-leibniz-tetel]] — az egyváltozós formula, amely a belső $t$ szerinti integrált elvégzi.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

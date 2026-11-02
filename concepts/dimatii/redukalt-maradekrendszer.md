@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/kongruenciak]
-sources: [DimatIIEa02.pdf]
+tags: [concept]
+sources: [DimatIIEa02.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Redukált maradékrendszer
@@ -29,6 +31,8 @@ Ha $a_1, \dots, a_{\varphi(m)}$ redukált maradékrendszer modulo $m$, és $(a,m
 **Bizonyítás.** $(a_i, m) = 1$ és $(a,m) = 1 \Rightarrow (a\cdot a_i, m) = 1$. Továbbá a szorzatok páronként inkongruensek (az $a$-val való egyszerűsíthetőség miatt), és számuk $\varphi(m)$, tehát redukált maradékrendszert alkotnak. $\square$
 
 Ez a lemma közvetlenül adja az [[concepts/dimatii/euler-fermat-tetel]]t.
+
+**Jelölés (Farkas-diák).** Az $[a]_m$ redukált maradékosztály, ha $(a,m)=1$; RMR modulo $m$ az összes redukált maradékosztályból pontosan egy elemet tartalmaz. A TMR-lemma ($\{cb_j\}$ RMR) itt is a diák „omnibusz” tételének része — lásd [[concepts/dimatii/teljes-maradekrendszer]].
 
 ## Kapocs
 

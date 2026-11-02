@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/winforms-architektura-es-teszteles]
-sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
+tags: [concept]
+sources: [elte_eva_ea04_winforms_architecture_testing.pdf, elte_eva_gy05_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # Egységtesztek (MSTest)
@@ -45,7 +47,8 @@ public class RationalTest {
         Rational actual = new Rational(10, 5);
         Rational target = new Rational(2, 1);
         // az egyszerűsítést teszteljük
-        Assert.AreEqual(actual, target);
+        Assert.AreEqual(target, actual);
+        // (sorrend: elvárt, tényleges érték)
         // ha a kettő egyezik, akkor eredményes a teszteset
     }
 }
@@ -111,6 +114,14 @@ perzisztenciától függetlenül vizsgálja — ez a
 [[concepts/esemalk/retegek-szerelvenyekre-bontasa]] szerinti felbontás
 egyik közvetlen haszna.
 
+### Kiegészítés: gyakorlati tapasztalatok (5. gyakorlat)
+
+- Elvárt kivétel újabb MSTest-ben: `Assert.ThrowsExactly<T>(() => ...)` (aszinkron: `await Assert.ThrowsExactlyAsync<T>(...)`).
+- Gyűjtemények: `CollectionAssert.AreEqual` (sorrendet is vizsgál) és `AreEquivalent` (csak a tartalmat).
+- A `[TestInitialize]` minden teszt előtt, a `[TestCleanup]` minden teszt után lefut, ezzel a mellékhatásos tesztek elszigetelhetők.
+- Esemény-kiváltás számlálása lokális változót növelő lambdával: `model.Event += (s, e) => ++raised;`.
+- Részletes példa a `DocumentStatistics` modellre: [[concepts/esemalk/docustat-egysegtesztek]].
+
 ## Kapocs
 
 - [[concepts/esemalk/retegek-szerelvenyekre-bontasa]] — a modell önálló
@@ -119,4 +130,5 @@ egyik közvetlen haszna.
   programegységek egységtesztelése mock objektumok segítségével
 - [[concepts/esemalk/csharp-egysegteszt-keretrendszerek]] — az MSTest
   fogalmainak megfeleltetése NUnit és xUnit keretrendszerekben
+- [[concepts/esemalk/docustat-egysegtesztek]] — MSTest és xUnit a DocuStat modellen (5. gyakorlat)
 - [[subjects/esemalk]]

@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 4.3.3. Tétel, 4.4. viii) megjegyzés"]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-07
 ---
 

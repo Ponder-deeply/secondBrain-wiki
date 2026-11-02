@@ -3,6 +3,8 @@ tags: [concept]
 sources: [SimonP-Anal2.pdf]
 references: ["Simon Péter: Analízis II., 1.6. xii)–xiv) megjegyzés"]
 derivation: source
+kind: theorem
+element: fire
 updated: 2026-09-07
 ---
 

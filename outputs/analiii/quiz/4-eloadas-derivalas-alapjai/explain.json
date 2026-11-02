@@ -1,0 +1,185 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "4-eloadas-derivalas-alapjai",
+	"unitTitle": "4. előadás — Deriválás alapjai",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:47.158Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T14:01:33.769Z",
+			"model": "opus",
+			"direction": "",
+			"added": 5
+		}
+	],
+	"questions": [
+		{
+			"id": "i6gllzrn",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"q": "Definiálja a normált terek közötti korlátos lineáris leképezést, és mutassa meg, hogy minden ilyen leképezés egyenletesen folytonos!",
+			"answer": "Legyenek $(X,\\|\\cdot\\|_\\bullet)$, $(Y,\\|\\cdot\\|_*)$ normált terek a $\\mathbb{K}$ test felett. Az $f:X\\to Y$ korlátos lineáris leképezés, ha lineáris, azaz $f(x+\\lambda y)=f(x)+\\lambda f(y)$, és van olyan $M\\ge0$, hogy $\\|f(x)\\|_*\\le M\\|x\\|_\\bullet$ minden $x\\in X$-re. Az ilyen $M$-eket nevezzük korlátnak, az összes ilyen leképezés halmaza $\\mathcal{L}(X,Y)$. A linearitás miatt $f(x)-f(y)=f(x-y)$, ezért $\\|f(x)-f(y)\\|_*\\le M\\|x-y\\|_\\bullet$, vagyis $f$ Lipschitz-tulajdonságú. Ebből következik az egyenletes folytonosság: $\\varepsilon>0$-hoz $\\delta=\\varepsilon/M$ megfelel (ha $M>0$). A „korlátos” jelző tehát lineáris leképezésnél éppen a folytonosságot jelenti.",
+			"points": [
+				"linearitás: $f(x+\\lambda y)=f(x)+\\lambda f(y)$",
+				"korlátosság: $\\exists M\\ge0$, $\\|f(x)\\|_*\\le M\\|x\\|_\\bullet$ minden $x$-re",
+				"$f(x)-f(y)=f(x-y)$ a linearitásból",
+				"Lipschitz-becslés $\\|f(x)-f(y)\\|_*\\le M\\|x-y\\|_\\bullet$, ebből egyenletes folytonosság"
+			]
+		},
+		{
+			"id": "x4smpm8y",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"q": "Definiálja az operátornormát az $\\mathcal{L}(X,Y)$ téren! Milyen tulajdonságai vannak, és mi a jelentése hibabecslésben?",
+			"answer": "Legyen $K_f:=\\{M\\ge0:\\|f(x)\\|_*\\le M\\|x\\|_\\bullet\\ (x\\in X)\\}$ a korlátok halmaza, és $\\|f\\|:=\\inf K_f$. Az $\\mathcal{L}(X,Y)$ a szokásos függvényműveletekkel vektortér, és $f\\mapsto\\|f\\|$ norma rajta (a két norma által indukált norma), így $(\\mathcal{L}(X,Y),\\|\\cdot\\|)$ normált tér. Az infimum minimum, ezért $\\|f(x)\\|_*\\le\\|f\\|\\cdot\\|x\\|_\\bullet$ minden $x$-re: az operátornorma $f$ legkisebb korlátja. Ha $x$ helyett csak egy $z$ közelítést ismerünk, és $\\|x-z\\|_\\bullet<\\varepsilon$, akkor $\\|f(x)-f(z)\\|_*=\\|f(x-z)\\|_*\\le\\|f\\|\\varepsilon$. Az operátornorma tehát a lineáris modell hibafelerősítési tényezője.",
+			"points": [
+				"$\\|f\\|:=\\inf K_f$, ahol $K_f$ a korlátok halmaza",
+				"$\\mathcal{L}(X,Y)$ vektortér, és $\\|\\cdot\\|$ norma rajta (indukált norma)",
+				"az infimum minimum: $\\|f(x)\\|_*\\le\\|f\\|\\|x\\|_\\bullet$, ez a legkisebb korlát",
+				"hibabecslés: $\\|f(x)-f(z)\\|_*\\le\\|f\\|\\varepsilon$, hibafelerősítési tényező"
+			]
+		},
+		{
+			"id": "7lfssqxp",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"q": "Hogyan értelmezzük a $\\|A\\|_{(p,q)}$ mátrixnormát? Adja meg a $\\|A\\|_{(\\infty)}$ és $\\|A\\|_{(1)}$ képletét, és mondja meg, mit tudunk a $\\|A\\|_{(2)}$ spektrálnormáról!",
+			"answer": "Egy $A\\in\\mathbb{K}^{m\\times s}$ mátrixhoz az $f_A(x):=Ax$ leképezés tartozik, ez korlátos lineáris leképezés $(\\mathbb{K}^s,\\|\\cdot\\|_p)$-ből $(\\mathbb{K}^m,\\|\\cdot\\|_q)$-ba: $p=q=1$-re ez közvetlen számolással látszik, a többi esetre a normák ekvivalenciájából következik. Megfordítva, $\\mathcal{L}(\\mathbb{K}^s,\\mathbb{K}^m)$ minden eleme egyértelműen $f_A$ alakú, ezért $\\|A\\|_{(p,q)}:=\\|f_A\\|$ jól definiált. Erre $\\|Ax\\|_q\\le\\|A\\|_{(p,q)}\\|x\\|_p$, és ez a legkisebb ilyen konstans. A sornorma $\\|A\\|_{(\\infty)}=\\max_i\\sum_k|a_{ik}|$, az oszlopnorma $\\|A\\|_{(1)}=\\max_k\\sum_i|a_{ik}|$. A spektrálnormára csak egy felső becslés van: $\\|A\\|_{(2)}\\le\\sqrt{\\sum_{i,k}|a_{ik}|^2}$ (Frobenius-norma). Ez a korlát a sor- és oszlopnormával ellentétben nem feltétlenül a legkisebb.",
+			"points": [
+				"$f_A(x)=Ax$ korlátos lineáris leképezés, és minden lineáris leképezés egyértelműen ilyen alakú",
+				"$\\|A\\|_{(p,q)}:=\\|f_A\\|$, a legkisebb konstans, amire $\\|Ax\\|_q\\le C\\|x\\|_p$",
+				"sornorma: $\\max_i\\sum_k|a_{ik}|$; oszlopnorma: $\\max_k\\sum_i|a_{ik}|$",
+				"$\\|A\\|_{(2)}\\le$ Frobenius-norma, de ez a korlát nem feltétlenül minimális"
+			]
+		},
+		{
+			"id": "ibj1iugl",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"q": "Indokolja meg, miért azonosíthatók az $\\mathbb{R}^n\\to\\mathbb{R}^m$ lineáris leképezések az $m\\times n$-es mátrixokkal, és mi következik ebből!",
+			"answer": "Véges dimenzióban minden $L:\\mathbb{R}^n\\to\\mathbb{R}^m$ lineáris leképezés automatikusan korlátos, és előáll $L(x)=Ax$ alakban egy egyértelmű $A\\in\\mathbb{R}^{m\\times n}$ mátrixszal. Az $A$ oszlopai a kanonikus bázis képei, az $L(e_i)$ vektorok. A $\\varphi:L\\mapsto A$ megfeleltetés bijekció, és lineáris is: $\\varphi(\\alpha L+\\beta S)=\\alpha\\varphi(L)+\\beta\\varphi(S)$. Tehát izomorfizmus, $\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m)\\cong\\mathbb{R}^{m\\times n}$. Emiatt algebrailag mindegy, hogy lineáris leképezésről vagy mátrixról beszélünk. Ezért vezethető be az operátornorma közvetlenül a mátrixtéren, $\\|A\\|=\\max_{\\|x\\|\\le1}\\|Ax\\|$ alakban. Ugyanezért írható fel a derivált mátrixként, Jacobi-mátrixként.",
+			"points": [
+				"minden lineáris $L$ egyértelműen $L(x)=Ax$ alakú, az oszlopok $L(e_i)$",
+				"$\\varphi:L\\mapsto A$ bijektív és lineáris, vagyis izomorfizmus",
+				"következmény: a mátrixnorma operátornormaként értelmezhető a mátrixtéren",
+				"a derivált mátrixként (Jacobi-mátrixként) reprezentálható"
+			]
+		},
+		{
+			"id": "s9015hiw",
+			"page": "concepts/analiii/frechet-derivalt",
+			"q": "Hogyan írható át az egyváltozós differenciálhatóság úgy, hogy általánosítható legyen? Adja meg az $f\\in\\mathbb{R}^n\\to\\mathbb{R}^m$ függvény differenciálhatóságának definícióját pontos feltételekkel!",
+			"answer": "Egyváltozóban $f(a+h)-f(a)=qh+\\varepsilon(h)h$, ahol $\\varepsilon\\to0$. Az $L(x):=qx$ korlátos lineáris leképezéssel ez $f(a+h)-f(a)=L(h)+\\eta(h)|h|$ alakba írható. Ebben nincs osztás, és nem hivatkozik az egydimenziósságra, ezért általánosítható. Az $f\\in\\mathbb{R}^n\\to\\mathbb{R}^m$ függvény differenciálható az $a\\in\\operatorname{int}D_f$ pontban, ha van $L\\in\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m)$ és $\\eta\\in\\mathbb{R}^n\\to\\mathbb{R}^m$, amelyekkel $f(a+h)-f(a)=L(h)+\\eta(h)\\|h\\|_p$ minden $a+h\\in D_f$-re, ahol $\\eta(h)\\to0$, ha $\\|h\\|_p\\to0$. Ennek ekvivalens alakja: $\\frac{\\|f(a+h)-f(a)-L(h)\\|_q}{\\|h\\|_p}\\to0$. Jelölése $f\\in D\\{a\\}$, az $L$ neve $f'(a)$.",
+			"points": [
+				"egyváltozós átírás: $f(a+h)-f(a)=L(h)+\\eta(h)|h|$ osztás nélkül",
+				"feltétel: $a\\in\\operatorname{int}D_f$, $L$ korlátos lineáris",
+				"$\\eta(h)\\to0$, ha $\\|h\\|_p\\to0$",
+				"osztásos alak: $\\|f(a+h)-f(a)-L(h)\\|_q/\\|h\\|_p\\to0$"
+			]
+		},
+		{
+			"id": "ctfou0bd",
+			"page": "concepts/analiii/frechet-derivalt",
+			"q": "Bizonyítsa be, hogy ha $f\\in D\\{a\\}$, akkor a definícióban szereplő $L$ lineáris leképezés egyértelmű!",
+			"answer": "Tegyük fel, hogy $L$ és $\\tilde L$ is megfelel, $\\eta$, illetve $\\tilde\\eta$ hibataggal. Legyen $L^*:=L-\\tilde L$, és dolgozzunk a $\\|\\cdot\\|_\\infty$ normában. A két előállítást kivonva $\\frac{\\|L^*(h)\\|_\\infty}{\\|h\\|_\\infty}=\\|\\tilde\\eta(h)-\\eta(h)\\|_\\infty\\le\\|\\tilde\\eta(h)\\|_\\infty+\\|\\eta(h)\\|_\\infty\\to0$. Válasszuk $h:=te_i$-t. Mivel $\\|te_i\\|_\\infty=|t|$ és $L^*$ lineáris, a hányados értéke $\\|L^*(e_i)\\|_\\infty$, ami nem függ $t$-től. Egy $t$-től független szám csak úgy tarthat nullához $t\\to0$ esetén, ha nulla, tehát $L^*(e_i)=0$ minden $i$-re. Az $x=\\sum x_ie_i$ előállításból és a linearitásból $L^*\\equiv0$, azaz $L=\\tilde L$.",
+			"points": [
+				"két jó leképezés különbsége $L^*$; a hányados $\\|L^*(h)\\|/\\|h\\|\\to0$",
+				"a $h=te_i$ helyettesítéssel a hányados $\\|L^*(e_i)\\|_\\infty$, ami nem függ $t$-től",
+				"ezért $L^*(e_i)=0$ minden $i$-re",
+				"bázisfelbontás és linearitás: $L^*\\equiv0$"
+			]
+		},
+		{
+			"id": "yamh84ne",
+			"page": "concepts/analiii/frechet-derivalt",
+			"q": "Miért nem függ a differenciálhatóság definíciója a választott $\\|\\cdot\\|_p$, $\\|\\cdot\\|_q$ normáktól? Milyen technikai egyszerűsítések tehetők fel a definícióban, és mi a lineáris leképezés deriváltja?",
+			"answer": "$\\mathbb{R}^n$-ben és $\\mathbb{R}^m$-ben minden norma ekvivalens. Ezért a definiáló egyenlőség vagy minden $1\\le p,q\\le+\\infty$ mellett teljesül, vagy egyik mellett sem. A gyakorlatban azt a normát választjuk ($\\|\\cdot\\|_\\infty$, $\\|\\cdot\\|_1$ vagy $\\|\\cdot\\|_2$), amelyikkel a legkönnyebb számolni. Feltehető, hogy $\\eta(0)=0$, vagyis $\\eta\\in C\\{0\\}$: $h=0$-nál mindkét oldal $0$, mert $L(0)=0$ és $\\|0\\|=0$, így $\\eta(0)$ szabadon átdefiniálható. Elég továbbá egy $K_r(0)$ gömbön megkövetelni az egyenlőséget, mert $a\\in\\operatorname{int}D_f$ miatt van olyan $K_r(a)\\subset D_f$. Egy $L\\in\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m)$ leképezés minden pontban differenciálható, és $L'(a)=L$. Ez abból látszik, hogy $L(a+x)-L(a)=L(x)$, tehát $\\eta\\equiv0$ megfelel.",
+			"points": [
+				"véges dimenzióban minden norma ekvivalens, ezért a differenciálhatóság normafüggetlen",
+				"$\\eta(0)=0$ feltehető, mert $h=0$-nál mindkét oldal nulla",
+				"elég egy $K_r(0)$ gömbön, mert $a\\in\\operatorname{int}D_f$",
+				"lineáris $L$-re $L'(a)=L$, az $\\eta\\equiv0$ választással"
+			]
+		},
+		{
+			"id": "xg8c8wbg",
+			"page": "concepts/analiii/frechet-derivalt",
+			"q": "Ismertesse, hogyan igazolható a differenciálhatóság a definícióból, és alkalmazza a módszert az $f(x,y)=2x^2+3xy-y^2$ függvényre az $a=(1,2)$ pontban!",
+			"answer": "A módszer lépései: kifejtjük az $f(a+h)-f(a)$ megváltozást, és a $h$-ban lineáris tagokból felírjuk $L(h)=Ah$-t. Ezután megmutatjuk, hogy $\\frac{\\|f(a+h)-f(a)-Ah\\|}{\\|h\\|}\\to0$: a számlálót felülről becsüljük, tipikusan a $\\|\\cdot\\|_\\infty$ normában, majd közrefogást alkalmazunk. Most $h=(x,y)$ mellett $f(a+h)-f(a)=10x-y+(2x^2+3xy-y^2)$, a lineáris rész tehát $Ah=10x-y$. Mivel $|x|,|y|\\le\\|h\\|_\\infty$, a maradékra $|2x^2+3xy-y^2|\\le6\\|h\\|_\\infty^2$. Így a hányados legfeljebb $6\\|h\\|_\\infty\\to0$, tehát $f'(1,2)=[10\\ \\ -1]$. Ellenőrzésként $\\operatorname{grad}f=(4x+3y,3x-2y)$, ennek értéke az $(1,2)$ pontban $(10,-1)$.",
+			"points": [
+				"kifejtés és szétválasztás lineáris tagra és maradékra",
+				"a maradék becslése $\\|\\cdot\\|_\\infty$-ben, a hányados közrefogása",
+				"konkrétan: a lineáris rész $10x-y$, a maradék $\\le6\\|h\\|_\\infty^2$",
+				"eredmény: $f'(1,2)=[10\\ \\ -1]$, egyezik a gradienssel"
+			]
+		},
+		{
+			"id": "sizcgyn7",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Mátrixnormák",
+			"q": "Indokolja meg, miért korlátos lineáris leképezés minden $f_A(x) = Ax$ ($A \\in \\mathbb{K}^{m\\times s}$) tetszőleges $\\|\\cdot\\|_p$, $\\|\\cdot\\|_q$ normák mellett, és mi következik ebből!",
+			"answer": "Az $f_A$ linearitása a mátrixszorzás tulajdonságaiból adódik. A korlátosságot először $p = q = 1$ esetén igazoljuk egyszerű számolással: $\\|Ax\\|_1$ felülről becsülhető $\\|x\\|_1$ egy konstansszorosával. Mivel $\\mathbb{K}^s$-en és $\\mathbb{K}^m$-en minden $\\|\\cdot\\|_p$ norma ekvivalens, a becslés más normákra is átvihető, csak a konstans változik. Megfordítva, a lineáris algebrából tudjuk, hogy $\\mathcal{L}(\\mathbb{K}^s, \\mathbb{K}^m)$ minden eleme egyértelműen $f_A$ alakú. Ezért értelmes az $\\|A\\|_{(p,q)} := \\|f_A\\|$ mátrixnorma, amely a legkisebb $c$, amelyre $\\|Ax\\|_q \\le c\\|x\\|_p$.",
+			"points": [
+				"$f_A$ lineáris",
+				"$p = q = 1$ esetén egyszerű számolással korlátos",
+				"A $\\|\\cdot\\|_p$ normák ekvivalenciája miatt minden $p, q$-ra korlátos",
+				"$\\mathcal{L}(\\mathbb{K}^s,\\mathbb{K}^m)$ minden eleme egyértelműen $f_A$ alakú",
+				"Ezért értelmes az $\\|A\\|_{(p,q)} := \\|f_A\\|$ mátrixnorma"
+			]
+		},
+		{
+			"id": "1mdbzy3e",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Miért fontos",
+			"q": "Miért alapfogalma a differenciálszámításnak a korlátos lineáris leképezés és az operátornorma?",
+			"answer": "A Fréchet-derivált definíciója a függvény megváltozását egy korlátos lineáris leképezéssel közelíti, így maga a derivált is $\\mathcal{L}(X,Y)$-beli objektum. Véges dimenzióban ennek mátrixalakja a Jacobi-mátrix. A derivált operátornormája a differenciálszámítás becsléseinek alapmennyisége. Rá épül a középértéktétel becslése, a Taylor-formula maradéktagjának becslése, és a fixponttételes bizonyításokban ez adja a kontrakciós konstanst.",
+			"points": [
+				"A Fréchet-derivált korlátos lineáris leképezéssel közelíti a megváltozást",
+				"A derivált mátrixalakja a Jacobi-mátrix",
+				"Az operátornorma a becslések alapmennyisége: középértéktétel, Taylor-maradéktag",
+				"A fixponttételes bizonyításokban kontrakciós konstans"
+			]
+		},
+		{
+			"id": "hom1wiah",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Absztrakt normált terek: a Fréchet-derivált",
+			"q": "Definiálja a Fréchet-deriváltat tetszőleges normált terek között, és mutassa meg, hogyan kapjuk belőle a véges dimenziós deriváltat!",
+			"answer": "Legyenek $(X, \\|\\cdot\\|_X)$, $(Y, \\|\\cdot\\|_Y)$ normált terek, $f \\in X \\to Y$ és $a \\in \\operatorname{int} D_f$. Az $f$ differenciálható $a$-ban, ha van olyan $A \\in \\mathcal{L}(X,Y)$ korlátos lineáris leképezés és $\\eta \\in X \\to Y$ függvény, hogy $f(a+h) - f(a) = A(h) + \\eta(h)\\|h\\|_X$, ahol $\\eta(h) \\to 0$, ha $\\|h\\|_X \\to 0$. Ekvivalens alakban: $\\|f(a+h) - f(a) - A(h)\\|_Y / \\|h\\|_X \\to 0$. Az így egyértelműen létező $A$ a Fréchet-derivált. Az $X = \\mathbb{R}^n$, $Y = \\mathbb{R}^m$ eset ennek speciális esete, és mivel $\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m) \\approx \\mathbb{R}^{m\\times n}$, a derivált mátrixszal (a Jacobi-mátrixszal) reprezentálható.",
+			"points": [
+				"$a \\in \\operatorname{int} D_f$, $A \\in \\mathcal{L}(X,Y)$ korlátos lineáris",
+				"$f(a+h) - f(a) = A(h) + \\eta(h)\\|h\\|_X$, ahol $\\eta(h) \\to 0$",
+				"Ekvivalens osztásos alak",
+				"$A$ egyértelmű, ez a Fréchet-derivált",
+				"Véges dimenzióban $\\mathcal{L} \\approx \\mathbb{R}^{m\\times n}$, ezért mátrixszal reprezentálható"
+			]
+		},
+		{
+			"id": "jihvzjii",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A lineáris közelítés mint geometriai kép",
+			"q": "Magyarázza el a többváltozós differenciálhatóság szemléletes, geometriai tartalmát!",
+			"answer": "A definíció szerint az $a$ pont körül a $h \\mapsto A\\cdot h$ lineáris leképezés jól közelíti az $f(a+h) - f(a)$ megváltozást, ha $h$ kicsi ($h \\approx \\theta_n$). A hiba $\\|h\\|$-nál gyorsabban tűnik el. Egyváltozós esetben ennek geometriai megfelelője az érintőegyenes, $\\mathbb{R}^2 \\to \\mathbb{R}$ esetben pedig a grafikon érintősíkja. A totális differenciálhatóság pontosan azt garantálja, hogy a grafikonnak a pontban minden irányban elsőrendben illeszkedő érintő affin sokasága van, nem csak a koordinátairányokban.",
+			"points": [
+				"$h \\mapsto Ah$ lineáris leképezés közelíti a megváltozást kis $h$-ra",
+				"Egyváltozóban érintőegyenes, $\\mathbb{R}^2 \\to \\mathbb{R}$ esetén érintősík",
+				"A totális differenciálhatóság minden irányban elsőrendű illeszkedést ad"
+			]
+		},
+		{
+			"id": "x05s2hxq",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "Mutassa meg, hogy $f = (x^2+y^2)\\sin\\frac{1}{x^2+y^2}$, $f(0,0) = 0$ differenciálható az origóban, bár a parciális deriváltjai ott nem folytonosak!",
+			"answer": "Az origóban a parciális deriváltak a definícióból számolva $0$-k, ezért a derivált csak $A = [0\\ \\ 0]$ lehet. A 2-es normában $\\frac{|f(h)|}{\\|h\\|_2} = \\|h\\|_2\\left|\\sin\\frac{1}{\\|h\\|_2^2}\\right| \\le \\|h\\|_2 \\to 0$, tehát $f'(0,0) = (0,0)$, és $f$ differenciálható. Az origón kívül viszont $\\partial_x f = 2x\\sin\\frac1{x^2+y^2} - \\frac{2x}{x^2+y^2}\\cos\\frac1{x^2+y^2}$. Az $x_n = y_n = \\frac{1}{2\\sqrt{n\\pi}}$ sorozaton ($\\sin 2n\\pi = 0$, $\\cos 2n\\pi = 1$) ez $-2\\sqrt{n\\pi} \\to -\\infty$, ezért $\\partial_x f \\notin C\\{(0,0)\\}$. Tanulság: a parciális deriváltak folytonossága elégséges, de nem szükséges feltétele a differenciálhatóságnak.",
+			"points": [
+				"A jelölt derivált $A = [\\partial_x f(0,0)\\ \\ \\partial_y f(0,0)] = [0\\ \\ 0]$",
+				"2-es normában $|f|/\\|h\\| \\le \\|h\\| \\to 0$",
+				"$\\partial_x f(x_n, y_n) = -2\\sqrt{n\\pi} \\to -\\infty$ alkalmas sorozaton",
+				"A parciálisok folytonossága elégséges, de nem szükséges"
+			]
+		}
+	]
+}

@@ -1,18 +1,45 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
+tags: [concept]
 sources: [elte_eva_ea02_winforms_mv.pdf]
 derivation: source
-updated: 2026-09-13
+kind: model
+element: water
+updated: 2026-09-25
 ---
 
 # Modell/nézet architektúra
 
 A modell/nézet (MV, *model-view*) architektúra a legegyszerűbb felbontás, amely
 leválasztja a felhasználói felület megjelenítését a háttérbeli
-tevékenységektől, ezzel oldva a [[concepts/esemalk/monolitikus-architektura]]
-korlátait.
+tevékenységektől, ezzel oldva a monolitikus architektúra korlátait.
 
 ## Tartalom
+
+### Monolitikus architektúra
+
+A monolitikus architektúra (*monolithic architecture*) a legegyszerűbb
+felépítésű szoftver architektúra: nem különíti el egymástól az egyes
+feladatköröket, például a megjelenítést, az eseménykezelést és az
+adatelérést/adatkezelést — mindezek egyetlen, osztatlan "alkalmazás"
+komponensben helyezkednek el, amellyel a felhasználó közvetlenül
+kommunikál.
+
+Egyszerű alkalmazásoknál a monolitikus felépítés kényelmes, de összetettebb
+programoknál korlátozza:
+
+- az áttekinthetőséget és tesztelhetőséget (pl. nehezen látható át, hol
+  tároljuk a számításokhoz szükséges adatokat),
+- a módosíthatóságot és bővíthetőséget (pl. nehezen lehet a felület
+  kinézetét módosítani),
+- az újrafelhasználhatóságot (pl. komponens kiemelése és áthelyezése másik
+  alkalmazásba).
+
+Ez a felhalmozódó "technikai adósság" (*technical debt*) az az ár, amelyet a
+kezdetben egyszerűbb, de rétegzetlen felépítésért fizetünk. A korlátok
+feloldására szolgál a feladatkörök szétválasztása, aminek legegyszerűbb
+formája a modell/nézet architektúra.
+
+### A modell/nézet felbontás
 
 Összetettebb alkalmazásoknál az egyrétegű (monolitikus) felépítés korlátozza a
 program áttekinthetőségét és tesztelését, módosíthatóságát és
@@ -60,8 +87,6 @@ perzisztens adattárolást is leválasztjuk a modellről — ez a
 
 ## Kapocs
 
-- [[concepts/esemalk/monolitikus-architektura]] — az MV architektúra által
-  kiváltott, egyszerűbb, de kevésbé karbantartható felépítés
 - [[concepts/esemalk/haromreteg-architektura]] — a perzisztencia réteg
   leválasztásával kapott, továbbfejlesztett architektúra
 - [[concepts/esemalk/esemeny-letrehozasa-kivaltasa]] — hogyan jelez a modell a

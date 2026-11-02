@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/ler-erzekenysege-es-kondicionaltsag]
+tags: [concept]
 sources: [NM1_ea07.pdf]
 derivation: source
-updated: 2026-08-05
+kind: theorem
+element: water
+updated: 2026-09-30
 ---
 
 # LER érzékenysége — perturbációs tételek
@@ -82,7 +84,7 @@ Ha $\|M\| < 1$, akkor $(I + M)$ invertálható és indukált mátrixnormában
 
 $$\|(I + M)^{-1}\| \leq \frac{1}{1 - \|M\|}.$$
 
-**Biz.:** Az $I + M$ sajátértékeire $\varrho(M) \leq \|M\| < 1$, ezért $|\lambda_i(M)| < 1$, vagyis az egységsugarú körön kívül helyezkednek el, így $1 + \lambda_i(M) \neq 0$, tehát $I + M$ invertálható. Vizsgáljuk az inverz normáját:
+**Biz.:** Az $I + M$ sajátértékeire $\varrho(M) \leq \|M\| < 1$, ezért $|\lambda_i(M)| < 1$, vagyis az egységsugarú körön belül helyezkednek el, így $1 + \lambda_i(M) \neq 0$, tehát $I + M$ invertálható. Vizsgáljuk az inverz normáját:
 
 $$(I+M)^{-1} = I \cdot (I+M)^{-1} = (I+M-M)(I+M)^{-1} = I - M(I+M)^{-1},$$
 
@@ -114,6 +116,8 @@ Ugyanaz az $A$ mátrix, $\Delta A = \begin{bmatrix}0{,}01 & 0 \\ 0 & 0\end{bmatr
 - $\delta x = \frac{\|\Delta x\|}{\|x\|} = 3{,}4507$
 - $\delta x / \delta A = 4396{,}1$
 - $\operatorname{cond}(A) = 1623$
+
+Itt $\|\Delta A\|\cdot\|A^{-1}\| = \operatorname{cond}(A)\cdot\delta A \approx 1{,}27 > 1$, tehát a tétel feltétele **nem teljesül** — ezért lehet $\delta x / \delta A$ nagyobb $\operatorname{cond}(A)$-nál; a becslés nem sérül, egyszerűen nem alkalmazható.
 
 ## Egyesített tétel
 

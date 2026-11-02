@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Példa: dinamikus méretezhető színrács
@@ -43,7 +45,7 @@ ViewModel::ColorGridViewModel (ViewModelBase)
   «property»
   + RowCount(): Int32
   + ColumnCount(): Int32
-  + Fields(): ObservableCollection<ColorField>
+  + Fields(): ObservableCollection<ColorFieldViewModel>
   + ChangeSizeCommand(): DelegateCommand
     ◇── * ViewModel::ColorFieldViewModel (ViewModelBase)
           - _color: Color

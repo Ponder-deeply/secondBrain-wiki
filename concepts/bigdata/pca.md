@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-klaszterezes-es-dimenziocsokkentes]
+tags: [concept]
 sources: [BDAEM-2022-EA10.pptx]
 references: [Andrew Ng, PCA lecture slides]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-09-12
 ---
 

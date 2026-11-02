@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [6.-veremauto-és-környezetfüggetlen-nyelv.md]
 derivation: source
+kind: theorem
+element: fire
 updated: 2026-09-04
 ---
 

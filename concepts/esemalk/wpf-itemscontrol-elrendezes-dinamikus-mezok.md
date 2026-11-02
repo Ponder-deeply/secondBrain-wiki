@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # ItemsControl elrendezésének testreszabása és a dinamikus mezők mintája MVVM-ben
@@ -40,7 +42,8 @@ generált vezérlők köthető tulajdonságainak mintáját.
 ### A tartalmazó panel testreszabása: `ItemsPanel`/`ItemsPanelTemplate`
 
 Az `ItemsControl` elemeinek sorrendje alapesetben oszlopfolytonos, azaz
-egymás alatt helyezkednek el (mint egy `WrapPanel`-ben). Ez az
+egymás alatt helyezkednek el (mint egy függőleges `StackPanel`-ben, ez az
+alapértelmezett elrendező panel). Ez az
 `ItemsPanel` tulajdonságban felüldefiniálható; bármilyen
 [[concepts/esemalk/wpf-panelek|panel]] megadható (pl. `Grid`,
 `UniformGrid`, `Canvas`, `StackPanel`, …):
@@ -87,7 +90,7 @@ interfészt valósítja meg, hogy a nézet kövesse a változásait.
 - [[concepts/esemalk/wpf-adatkotes-gyujtemenyek-teljesfelulet]] — az
   `ItemsSource`/`ItemTemplate`/`DataTemplate` kötés alapjai, amelyekre ez a
   lap épül
-- [[concepts/esemalk/wpf-vezerlok-tartalmazasa]] — a `ContentControl` vs.
+- [[concepts/esemalk/wpf-vezerlok-tulajdonsagai]] — a `ContentControl` vs.
   `ItemsControl` tartalmazás, amelyre az `ItemsControl` épül
 - [[concepts/esemalk/wpf-panelek]] — az `ItemsPanel`-ben megadható panelek
   (`Grid`, `UniformGrid`, `Canvas`, `StackPanel`, …)

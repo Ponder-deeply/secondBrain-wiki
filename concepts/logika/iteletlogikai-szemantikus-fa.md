@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-iteletlogika]
+tags: [concept]
 sources: [Rezolúció_I.pdf]
 references: [Tk. 225-227. o.]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-09-30
 ---
 
 # Ítéletlogikai szemantikus fa
@@ -20,7 +22,7 @@ Ha az $S$ klózhalmaz összes interpretációját az $S$-ben szereplő összes �
 
 ### Zárt szemantikus fa
 
-Ha $S$ minden klóza illeszthető a fa valamely ágára — azaz a fa minden ága lezárható egy hozzá illesztett klózzal —, a szemantikus fát **zártnak** nevezzük. A lezáró csúcsot **cáfoló csúcsnak** ($\bullet$), az afölötti, két lezárt ágat összekötő csúcsot **levezető csúcsnak** ($\circ$) hívjuk.
+Ha a fa minden ágára illeszthető $S$ valamely klóza — azaz minden ág (interpretáció) hamissá teszi $S$ valamelyik klózát, így a fa minden ága lezárható —, a szemantikus fát **zártnak** nevezzük. A lezáró csúcsot **cáfoló csúcsnak** ($\bullet$), az afölötti, két lezárt ágat összekötő csúcsot **levezető csúcsnak** ($\circ$) hívjuk.
 
 Példa zárt szemantikus fára: $S = \{Y \vee \neg Z,\ X \vee Z,\ \neg X \vee \neg Y,\ \neg X \vee Z,\ \neg Z\}$ kielégíthetetlen, és bázisa $X, Y, Z$ szerint felépített szemantikus fája minden ágán van illeszthető klóz.
 

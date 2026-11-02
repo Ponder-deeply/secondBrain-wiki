@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [08.md]
 derivation: source
+kind: definition
+element: air
 updated: 2026-04-09
 ---
 

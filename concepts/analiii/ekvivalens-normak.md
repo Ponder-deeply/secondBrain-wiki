@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 02_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 02_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Ekvivalens normák
@@ -59,6 +61,15 @@ Ez az a szerkezeti tény, ami miatt $\mathbb{R}^p$-ben soha nem kell megmondani,
 
 **Tyihonov-tétel.** A fenti tétel általánosabb alakja: tetszőleges véges dimenziós $X$ lineáris téren bármely két norma ekvivalens egymással. Mivel minden $n$-dimenziós $X$ tér algebrailag izomorf $\mathbb{R}^n$-nel, ez visszavezethető a fenti, $\mathbb{R}^p$-re szóló tételre. A [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel|Bolzano–Weierstrass-féle kiválasztási tétel]] éppen ebből következően igaz minden véges dimenziós normált térben, és éppen ezért nem automatikus végtelen dimenzióban.
 
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 18–19, 23–24; An_III_Gyak_2022_tavasz.pdf 3. gyakorlat.*
+
+- **Véges dimenzióban minden norma ekvivalens** (bizonyításvázlat). Bázis $\{e_i\}$, $x=\sum\lambda_ie_i$, $\|x\|:=\max|\lambda_i|$. Egy másik $\|\cdot\|^*$-ra $\|x\|^*\le\sum|\lambda_i|\|e_i\|^*\le M\|x\|$, $M=\sum\|e_i\|^*$. Így $g(\lambda)=\|\sum\lambda_ie_i\|^*$ folytonos $(\mathbb R^n,\|\cdot\|_\infty)$-n; az egységgömb felülete (zárt, korlátos, tehát kompakt) rajta felveszi a minimumát $m$-et, $m>0$, mert a felület nem tartalmazza a nullvektort; $x/\|x\|$-re $\|x\|^*\ge m\|x\|$.
+- **Véges dimenziós normált térben egy halmaz akkor és csak akkor kompakt, ha korlátos és zárt.** A normák ekvivalenciája miatt az izomorfia $\mathbb R^n$-nel nem változtat a korlátosságon, zártságon, kompaktságon; így a Heine–Borel-tétel ([[concepts/analiii/heine-borel-tetel]]) átvihető.
+- **Legközelebbi elem véges dimenziós altérben.** $L\le X$ véges dimenziós altér, $x\in X$: az $L\cap\overline K_{\|x\|}(x)$ halmaz zárt és korlátos, tehát kompakt, és tartalmazza $0$-t; a folytonos $y\mapsto\|x-y\|$ ezen felveszi a minimumát, ami az $L$-beli legjobb közelítés.
+- **Végtelen dimenzióban nem ekvivalens normák:** a $C[0,1]$-ben a $\|\cdot\|_1$-ben korlátos, $\|\cdot\|_\infty$-ben nem korlátos háromszögfüggvény-sorozat (lásd [[concepts/analiii/normalt-vektorter]] Feladatok) és az $x^k$-sorozat ([[concepts/analiii/konvergencia-metrikus-terben]]).
+
 ## Kapocs
 
 - [[concepts/analiii/normalt-vektorter]] — a norma fogalma és az $L^q$-normák
@@ -68,3 +79,4 @@ Ez az a szerkezeti tény, ami miatt $\mathbb{R}^p$-ben soha nem kell megmondani,
 - [[concepts/analiii/cauchy-sorozat-es-teljes-ter]] — a normaekvivalencia miatt a Cauchy-tulajdonság is normafüggetlen
 - [[concepts/analiii/ekvivalens-metrikak]] — ugyanez a fogalom metrikákra, normastruktúra nélkül
 - [[concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel]] — a Tyihonov-tétel folyománya: véges dimenzióban minden korlátos sorozatnak van konvergens részsorozata, végtelen dimenzióban általában nem
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

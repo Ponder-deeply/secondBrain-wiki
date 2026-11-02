@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 2.6. Tétel és 2.1. iii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Egyenletes folytonosság metrikus terekben
@@ -60,6 +62,17 @@ ami ellentmond a $\sigma(f(x_n),f(t_n)) \ge \varepsilon$ feltevésnek. $\blacksq
 
 A **kétszeri részsorozat-kiválasztás** a bizonyítás kulcsa: egyetlen indexsorozat csak az egyik sorozatot teszi konvergenssé, a másikat egy második kiválasztással kell utolérni.
 
+### Feladatok
+
+**Módszer.** *Bizonyítás*: rögzített $\varepsilon$-ra a $|f(x)-f(t)|$-t felülről becsüljük a távolsággal ($\le C\|x-t\|$), és $\delta:=\varepsilon/C$. *Cáfolat* (nem egyenletes folytonosság): az állítás tagadása szerint elég $\varepsilon>0$-t és két sorozatot találni, amelyre $\|x_n-a_n\|\to0$, de $|f(x_n)-f(a_n)|\ge\varepsilon$. (Ez a cáfolat módszere, bizonyításra nem használható.) Kompakt halmazon [[concepts/analiii/weierstrass-tetel-kompakt-halmazon|folytonos]] függvény Heine szerint egyenletesen folytonos, ezért a hibát a nem kompakt tartomány szélén keressük.
+
+**Munkapéldák.**
+
+1. $f=2x+3y-5$ egyenletesen folytonos $\mathbb{R}^2$-en: $|f(x,y)-f(a,b)|\le2|x-a|+3|y-b|\le5\max\{|x-a|,|y-b|\}=5\|(x,y)-(a,b)\|_\infty<\varepsilon$, tehát $\delta=\varepsilon/5$ ($\|\cdot\|_1$-gyel $\delta=\varepsilon/3$ is jó).
+2. $f(x)=\|x\|$ minden normált térben egyenletesen folytonos, $\delta=\varepsilon$: a fordított háromszög-egyenlőtlenség miatt $\bigl|\|x\|-\|t\|\bigr|\le\|x-t\|$. Így $\sqrt{x^2+y^2}$ egyenletesen folytonos $\mathbb{R}^2$-en.
+3. $f=\sin\dfrac\pi{1-x^2-y^2}$ az $x^2+y^2<1$ nyílt egységkörön **nem** egyenletesen folytonos: $x_n=\sqrt{1-\frac1{1/2+2n}}$ (itt $\frac\pi{1-x_n^2}=\frac\pi2+2n\pi$, $f=1$) és $a_n=\sqrt{1-\frac1{2n}}$ ($\frac\pi{1-a_n^2}=2n\pi$, $f=0$). Mindkettő a $(-1,1)$-ben van, $|x_n-a_n|\to0$, de $|f(x_n,0)-f(a_n,0)|=1=:\varepsilon$. A zárt $\overline{K_R(0)}$ körlapon ($R<1$) viszont kompakt, így egyenletesen folytonos.
+4. $f=\dfrac{\sin(x^2+y^2+e^{x^4})}{1+\operatorname{arctg}^2x}$ **nem** egyenletesen folytonos $\mathbb{R}^2$-en: az $x=0$ egyenesen $f(0,y)=\sin(1+y^2)$, és $y_n=\sqrt{\tfrac\pi2-1+2n\pi}$, $b_n=\sqrt{2n\pi-1}$ esetén $|y_n-b_n|\to0$, de $|f(0,y_n)-f(0,b_n)|=|1-0|=1$. Ötlet: az egyik változót rögzítve egy nem egyenletesen folytonos egyváltozós függvényt kapunk (mint $x^2$).
+
 ## Kapocs
 
 - [[concepts/analiii/folytonossag-metrikus-terben]] — a gyengébb, pontonkénti fogalom
@@ -68,3 +81,4 @@ A **kétszeri részsorozat-kiválasztás** a bizonyítás kulcsa: egyetlen index
 - [[concepts/analiii/korlatos-linearis-lekepezes]] — Lipschitz-tulajdonságú, tehát egyenletesen folytonos leképezések
 - [[concepts/analiii/halmaztol-vett-tavolsagfuggveny]] — a legfontosabb Lipschitz-példa metrikus térben
 - [[concepts/analii/egyenletes-folytonossag]] — az egyváltozós eset
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

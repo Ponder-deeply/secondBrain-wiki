@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/elsorendu-logika-nyelv-es-szintaxis]
-sources: ["Elsőrendű_logika_ bevezetés.pdf"]
+tags: [concept]
+sources: ["Elsőrendű_logika_ bevezetés.pdf", Elsőrendű_logika_alapjai.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Szabad és kötött változó
@@ -47,3 +49,4 @@ Az elsőrendű ($L$) nyelven az **1. rendű állításokat** a zárt formulák �
 - [[concepts/logika/elsorendu-formula]] — a formula, amelyben az előfordulások szabadsága/kötöttsége értelmezve van
 - [[concepts/logika/nulladrendu-es-elsorendu-allitas]] — a zárt formula mint elsőrendű állítás, a nyitott formula mint paraméteres állítás
 - [[concepts/logika/term]] — a term, amelynek argumentumaiban a változók előfordulnak
+- [[concepts/logika/valtozoiban-tiszta-alak]] — a vegyes változó kiküszöbölése átnevezéssel

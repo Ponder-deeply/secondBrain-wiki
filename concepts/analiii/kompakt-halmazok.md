@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 03_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 03_ea_An3_2022_tavasz.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Kompakt halmazok
@@ -54,6 +56,15 @@ $$\operatorname{dist}(K,Z) = \lim |x_n - y_n| = \lim |x_{m_i} - y_{m_i}| = |a-b|
 
 A (b) rész ebből következik: ha $K \cap Z = \emptyset$, akkor $a \neq b$, tehát $|a-b| > 0$. $\blacksquare$
 
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 16–17, 20.*
+
+- **Kompakt halmaz zárt részhalmaza kompakt.** $B\subset A$ zárt, $A$ kompakt: $B$-beli sorozatnak $A$-ban van konvergens részsorozata, a limesz $B$-ben van, mert $B$ zárt.
+- **Metszet és unió.** $A_\gamma$ ($\gamma\in\Gamma\neq\emptyset$) kompakt ⇒ $\bigcap A_\gamma$ kompakt: zárt (a kompakt halmaz zárt) részhalmaza egy kompaktnak. Véges $\Gamma$ esetén $\bigcup A_\gamma$ kompakt: egy sorozatnak végtelen sok tagja esik valamelyik $A_\gamma$-ba, és abban van konvergens részsorozat.
+- **$P_n$ kompakt $C[0,1]$-ben.** A legfeljebb $n$-edfokú, legfeljebb $1$ abszolút értékű együtthatójú polinomok halmaza a $[-1,1]^{n+1}$ kompakt kocka folytonos (sőt Lipschitz: $\|\sum(a_i-b_i)x^i\|_\infty\le(n+1)\max|a_i-b_i|$) képe, tehát kompakt.
+- **Nem teljes tér ⇒ van korlátos, zárt, nem kompakt halmaz:** [[concepts/analiii/cauchy-sorozat-es-teljes-ter]] Feladatok.
+
 ## Kapocs
 
 - [[concepts/analiii/kompaktsag-ekvivalens-jellemzesei]] — a fedéses, a sorozatos és a torlódási pontos definíció ekvivalenciája
@@ -63,3 +74,4 @@ A (b) rész ebből következik: ha $K \cap Z = \emptyset$, akkor $a \neq b$, teh
 - [[concepts/analiii/halmaz-pontjai-metrikus-terben]] — a külső pont fogalma a zártság bizonyításában
 - [[concepts/analiii/weierstrass-tetel-kompakt-halmazon]] — kompakt halmaz folytonos képe kompakt
 - [[concepts/analiii/egyenletes-folytonossag-metrikus-terben]] — a Heine-tétel: kompakt tartományon a folytonosság egyenletes
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

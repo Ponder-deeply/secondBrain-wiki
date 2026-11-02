@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # WPF stílusok (Style)
@@ -46,7 +48,9 @@ vezérlő esetén — ezt a problémát oldja meg a `Style`.
 ```xml
 <Button Content="Blue Button">
   <Button.Style>
-    <Setter Target="Foreground" Value="Blue" />
+    <Style>
+      <Setter Property="Foreground" Value="Blue" />
+    </Style>
   </Button.Style>
 </Button>
 ```
@@ -56,7 +60,7 @@ vezérlő esetén — ezt a problémát oldja meg a `Style`.
 ```xml
 <Style x:Key="buttonStyle" TargetType="Button">
   <!-- megadható a céltípus is -->
-  <Setter Target="Foreground" Value="Blue" />
+  <Setter Property="Foreground" Value="Blue" />
 </Style>
 …
 <Button Style="{StaticResource buttonStyle}" />
@@ -98,8 +102,6 @@ keresztül — összetett objektum (pl. transzformáció).
   állított függőségi tulajdonságok
 - [[concepts/esemalk/wpf-vezerlok-megjelenese]] — a `Style` mint a
   megjelenés testreszabásának egyik eszköze, a `ControlTemplate` mellett
-- [[concepts/esemalk/wpf-transzformaciok]] — a `TranslateTransform` és
-  társai, amelyek `Setter.Value`-ként is megadhatók
 - [[concepts/esemalk/wpf-stilusok-dinamikus-felulet]] — stílusok
   alkalmazása dinamikusan generált vezérlőkre
 - [[subjects/esemalk]]

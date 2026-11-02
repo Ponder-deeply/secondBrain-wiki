@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/polinomok]
-sources: [DimatIIEa07.pdf]
+tags: [concept]
+sources: [DimatIIEa07.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy09.pdf, dm2gy10_Polinomok.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Irreducibilis polinom
@@ -41,6 +43,26 @@ A konstans nulla polinomot sem felbonthatatlannak, sem felbonthatónak nem nevez
 
 **Figyelem:** nem igaz, hogy egy felbonthatatlan polinomnak nem lehet gyöke — az elsőfokú polinom egyszerre felbonthatatlan és gyökös. Az ekvivalencia csak a $2 \le \deg(f) \le 3$ tartományban áll fenn, és negyedfokú polinomtól kezdve elromlik (két gyöktelen másodfokú szorzata gyöktelen, mégis felbontható).
 
+### Farkas-diák megjegyzései
+
+Test fölött a polinomok euklideszi gyűrűt alkotnak, ezért a felbonthatatlanok és a prímek egybeesnek; minden nem-nulla konstans polinom egység, és minden elsőfokú polinom felbonthatatlan.
+
+### Feladattípusok és módszerek: irreducibilitás és felbontás $\mathbb{Z}_p$ fölött (2020. 10., 2024. 9. sorozat)
+
+**Módszer.** $\mathbb{Z}_p$ fölött véges sok osztó van, ezért a döntés kimerítő: egy $n$-edik fokú $f$ pontosan akkor irreducibilis, ha nincs nála legfeljebb $\lfloor n/2\rfloor$ fokú főpolinom osztója.
+
+- $\deg f\in\{2,3\}$: elég a gyököket végigpróbálni $\mathbb{Z}_p$-ben (az elemek behelyettesítése).
+- $\deg f=4$ (és 5): a gyökmentesség **nem elég**, még a másodfokú osztókat is ki kell zárni. Példa: $x^4+x^2+1\in\mathbb{Z}_2[x]$-nek nincs gyöke ($f(0)=f(1)=1$), mégis felbontható: $=(x^2+x+1)^2$ — a 2024. 9. sorozat 9a feladata. Ugyanígy $x^4+1=(x+1)^4$ $\mathbb{Z}_2$ fölött. Ezzel szemben $x^4+x+1\in\mathbb{Z}_2[x]$ irreducibilis: nincs gyöke, és az egyetlen irreducibilis másodfokú főpolinom, $x^2+x+1$, nem osztja.
+- Felbontásnál az ismert kis irreducibilisekkel osztunk sorban (előbb elsőfokúakkal, azaz a gyökök kiemelésével), amíg a maradék irreducibilis.
+
+**Az irreducibilis polinomok listája.** $\mathbb{Z}_2$ fölött legfeljebb harmadfokig: $x,\ x+1,\ x^2+x+1,\ x^3+x+1,\ x^3+x^2+1$. $\mathbb{Z}_3$ fölött az irreducibilis másodfokú főpolinomok: $x^2+1,\ x^2+x+2,\ x^2+2x+2$ (a $9-6=3$ maradék a $\binom{3+1}{2}=6$ reducibilis után).
+
+**Számlálás.** $\mathbb{Z}_p$ fölött a reducibilis másodfokú főpolinomok száma $\binom{p+1}{2}=\tfrac{p(p+1)}2$ (két elsőfokú tényező szorzata, ismétlődés megengedett), az irreducibiliseké $p^2-\tfrac{p(p+1)}2=\tfrac{p(p-1)}2$. $p=7$: $28$ reducibilis, $21$ irreducibilis; $p=3$: $6$ és $3$ — az irreducibilisek száma egyezik a fenti listával.
+
+**Felbontások (az algoritmussal számolva).** $\mathbb{Z}_2$ fölött: $x^7+1=(x+1)(x^3+x+1)(x^3+x^2+1)$; $x^8+x^6+x^5+x^3+x^3+x^2+x+1$ (a két $x^3$ kiejti egymást: $x^3+x^3=0$) $=(x+1)^5(x^3+x^2+1)$. $\mathbb{Z}_3$ fölött $x^7+2x^4+x^2+2x+2=(x+1)(x^3+2x+1)(x^3+2x^2+2x+2)$ — tehát felbontható; a két harmadfokú tényező gyökmentes, ezért irreducibilis. $\mathbb{Z}_5$ fölött $x^3+x+1$, $x^3+x^2+1$, $x^3+4x^2+4x+4$ irreducibilisek (gyökmentesek, harmadfokúak): a $\mathbb{F}_{125}$ konstrukció bemenetei.
+
+**Tipikus hibák.** Negyedfokúnál a gyökmentességből irreducibilitást következtetni; $\mathbb{Z}_2$-ben a $2x^3=0$ típusú tagokat nem elhagyni; az együtthatókat redukálni felejteni a tényezők szorzásakor.
+
 ## Kapocs
 
 - [[concepts/dimatii/felbonthatatlan-es-prim]] — a felbonthatatlanság általános, gyűrűbeli fogalma
@@ -50,3 +72,4 @@ A konstans nulla polinomot sem felbonthatatlannak, sem felbonthatónak nem nevez
 - [[concepts/dimatii/irreducibilis-polinomok-c-es-r-folott]] — a teljes osztályozás $\mathbb{C}$ és $\mathbb{R}$ fölött
 - [[concepts/dimatii/schonemann-eisenstein-kriterium]] — elégséges feltétel $\mathbb{Z}[x]$-beli irreducibilitásra
 - [[concepts/dimatii/veges-testek]] — irreducibilis polinommal faktorizálva építünk $p^n$ elemű testet
+- [[concepts/dimatii/veges-testek]] — az irreducibilis polinomokkal épülő véges testek

@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 4.5, "LYAH \"Guards\""]
 derivation: unsourced
+kind: definition
+element: earth
 updated: 2026-05-18
 ---
 

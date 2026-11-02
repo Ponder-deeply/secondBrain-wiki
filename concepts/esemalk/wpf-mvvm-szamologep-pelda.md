@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-architektura]
+tags: [concept]
 sources: [elte_eva_ea07_wpf_architecture.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -65,7 +67,7 @@ végezni, és amely látja a korábbi műveleteket is.
       CommandParameter="+" Content="+" Height="60" … />
   ```
 
-Ez a példa a [[concepts/esemalk/wpf-mvvm-inputbindings]] lapon leírt
+Ez a példa a [[concepts/esemalk/wpf-mvvm-parancsok-icommand]] lapon leírt
 billentyűzetes vezérléssel és a [[concepts/esemalk/wpf-mvvm-egyedi-vezerlok]]
 lapon leírt egyedi `SelectedTextBox` vezérlővel bővül tovább (automatikus
 fókusz és a beírt szöveg automatikus kijelölése).
@@ -79,7 +81,7 @@ fókusz és a beírt szöveg automatikus kijelölése).
   `DelegateCommand` osztály, amelyet ez a példa felhasznál
 - [[concepts/esemalk/wpf-mvvm-inotifypropertychanged]] — a nézetmodell
   változáskövetése, amelyre a `NumberFieldValue` tulajdonság kötése épül
-- [[concepts/esemalk/wpf-mvvm-inputbindings]] — a számológép
+- [[concepts/esemalk/wpf-mvvm-parancsok-icommand]] — a számológép
   billentyűzetes vezérlése (`KeyBinding`)
 - [[concepts/esemalk/wpf-mvvm-egyedi-vezerlok]] — a `SelectedTextBox` egyedi
   vezérlő, amelyet a példa a szövegdoboz kiterjesztéseként hoz létre

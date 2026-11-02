@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/rezolucio-iteletlogika]
+tags: [concept]
 sources: [Rezolúció_I.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-08
 ---
 

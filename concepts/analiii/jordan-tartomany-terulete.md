@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, RopzhKerdesek.pdf]
 derivation: source
-updated: 2026-09-06
+kind: procedure
+element: fire
+updated: 2026-10-22
 ---
 
 # Jordan-tartomány területe vonalintegrállal
@@ -47,3 +49,4 @@ A képlet a terület mérését a határ bejárására redukálja: ez az elve a 
 - [[concepts/analiii/sikvektorok-keresztszorzata]] — a $\tfrac12\int \mathbf{x}\times\mathrm{d}\mathbf{x}$ alak szorzása
 - [[concepts/analiii/jordan-gorbetetel]] — a tartomány- és irányításfogalom
 - [[concepts/analii/sikido-terulete]] — az egyváltozós, függvénygrafikon alatti területszámítás
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

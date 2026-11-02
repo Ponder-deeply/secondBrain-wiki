@@ -2,7 +2,9 @@
 tags: [concept]
 sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
 derivation: source
-updated: 2026-09-06
+kind: definition
+element: fire
+updated: 2026-09-30
 ---
 
 # Általános vonalintegrál
@@ -56,9 +58,9 @@ $$\int_\gamma \langle f(\mathbf{x}), \mathrm{d}\mathbf{x}\rangle = \sum_{i=1}^p 
 
 $$\int_\gamma f(\mathbf{x})\cdot \mathrm{d}\mathbf{x} = \left( \int_\gamma f_1\,\mathrm{d}x - \int_\gamma f_2\,\mathrm{d}y,\ \int_\gamma f_2\,\mathrm{d}x + \int_\gamma f_1\,\mathrm{d}y \right) \quad \text{(komplex szorzás)} .$$
 
-### Példa: az $f(z) = z$ integrálja az egységkörvonalon
+### Példa: az $f(z) = \bar z$ integrálja az egységkörvonalon
 
-Legyen $\gamma(t) = (\cos t, \sin t)$, $0 \le t \le 2\pi$, tehát $\dot\gamma(t) = (-\sin t, \cos t)$, azaz $\mathrm{d}x = -\sin t\,\mathrm{d}t$ és $\mathrm{d}y = \cos t\,\mathrm{d}t$; koordinátás alakban $f(x,y) = (x, -y)$. A négy alapintegrál:
+Legyen $\gamma(t) = (\cos t, \sin t)$, $0 \le t \le 2\pi$, tehát $\dot\gamma(t) = (-\sin t, \cos t)$, azaz $\mathrm{d}x = -\sin t\,\mathrm{d}t$ és $\mathrm{d}y = \cos t\,\mathrm{d}t$; koordinátás alakban $f(x,y) = (x, -y)$, azaz $f(z) = \bar z$ (a konjugált). A négy alapintegrál:
 
 $$\int_\gamma x\,\mathrm{d}x = \int_0^{2\pi}\cos t\,(-\sin t)\,\mathrm{d}t = 0, \qquad \int_\gamma x\,\mathrm{d}y = \int_0^{2\pi}\cos^2 t\,\mathrm{d}t = \pi,$$
 
@@ -66,7 +68,9 @@ $$\int_\gamma (-y)\,\mathrm{d}x = \int_0^{2\pi}\sin^2 t\,\mathrm{d}t = \pi, \qqu
 
 Ezekből a komplex vonalintegrál $(0-0;\ \pi+\pi) = (0, 2\pi)$, azaz
 
-$$\int_{|z|=1} z\,\mathrm{d}z = 2\pi i .$$
+$$\int_{|z|=1} \bar z\,\mathrm{d}z = 2\pi i .$$
+
+Összevetésül: az $f(z) = z$ függvény integrálja ugyanitt $0$ ($z$-nek van primitív függvénye, $z^2/2$) — a konjugálás teszi a különbséget.
 
 ## Kapocs
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/bizonyitaselmelet]
+tags: [concept]
 sources: ["Szintaktikus következmény.pdf"]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-09-30
 ---
 
 # Bizonyításelmélet helyessége és teljessége
@@ -34,7 +36,7 @@ A gyenge teljesség csak véges premisszahalmazra állítja ugyanezt; az erős (
 1. Ha $\{F_1, F_2, \dots\} \models_0 G$, akkor $\{F_1, F_2, \dots\} \cup \{\neg G\}$ kielégíthetetlen.
 2. Ha $\{F_1, F_2, \dots\} \cup \{\neg G\}$ ellentmondásos (inkonzisztens), akkor $\{F_1, F_2, \dots\} \vdash_0 G$ — ez a [[concepts/logika/dedukcios-tetel]]-ben tárgyalt tétel közvetlen alkalmazása.
 
-A hiányzó láncszem az, hogy a **kielégíthetetlenség** (szemantikus tulajdonság) és az **ellentmondásosság/inkonzisztencia** (szintaktikus tulajdonság) ugyanúgy két diszjunkt osztályra bontja-e a formulahalmazok halmazát. Az egyik irány könnyű: ha egy formulahalmaz kielégíthetetlen, akkor ellentmondásos is. A nehezebb irányt — hogy kielégíthetetlenségből következik az ellentmondásosság — nem közvetlenül látjuk be, hanem a kontrapozícióját: ha egy formulahalmaz **konzisztens** (ellentmondásmentes), akkor **kielégíthető**.
+A hiányzó láncszem az, hogy a **kielégíthetetlenség** (szemantikus tulajdonság) és az **ellentmondásosság/inkonzisztencia** (szintaktikus tulajdonság) ugyanúgy két diszjunkt osztályra bontja-e a formulahalmazok halmazát. Az egyik irány könnyű: ha egy formulahalmaz ellentmondásos, akkor kielégíthetetlen is (ez a helyességből következik). A nehezebb irányt — hogy kielégíthetetlenségből következik az ellentmondásosság — nem közvetlenül látjuk be, hanem a kontrapozícióját: ha egy formulahalmaz **konzisztens** (ellentmondásmentes), akkor **kielégíthető**.
 
 ### Összegzés
 

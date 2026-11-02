@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/winforms-elemi-grafika]
+tags: [concept]
 sources: [elte_eva_ea03_winforms_dynamic.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Színek, tollak és ecsetek WinForms grafikában
@@ -24,7 +26,7 @@ színt, tollat vagy ecsetet vesznek paraméterül — ezeket a `Color`, `Pen` é
   tollakat (pl. `Pens.Green`, `Pens.Red`).
 - **`Brush` (ecset)** — a szín mellett speciális átmenettel, textúrával
   tudja ellátni a felületet, ezért különböző ecsettípusok használhatók
-  (`SolidColorBrush`, `TextureBrush`, `LinearGradientBrush`, ...). A
+  (`SolidBrush`, `TextureBrush`, `LinearGradientBrush`, ...). A
   `Brushes` osztály tartalmazza az egyszerű kitöltéseket (pl.
   `Brushes.Yellow`).
 
@@ -41,7 +43,7 @@ gr.DrawRectangle(myPen, 0, 0, 200, 100);
 
 Brush myBrush = new LinearGradientBrush(
     new Point(0, 0), new Point(100, 100),
-    Color.LightBlue, Color.LightRed);
+    Color.LightBlue, Color.LightCoral);
     // átmenetes ecset
 gr.FillPolygon(myBrush, ...); // sokszög kitöltés
 ```
@@ -50,5 +52,3 @@ gr.FillPolygon(myBrush, ...); // sokszög kitöltés
 
 - [[concepts/esemalk/winforms-grafika-alapok]] — a `Graphics` osztály és a
   rajzoló műveletek, amelyek a `Pen`/`Brush` paramétereket felhasználják
-- [[concepts/esemalk/winforms-rajzeszkoz-beallitasok]] — további rajzeszköz
-  beállítások (élsimítás, transzformáció)

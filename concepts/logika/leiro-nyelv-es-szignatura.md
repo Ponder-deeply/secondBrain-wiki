@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/elsorendu-logika-nyelv-es-szintaxis]
-sources: ["Elsőrendű_logika_ bevezetés.pdf"]
+tags: [concept]
+sources: ["Elsőrendű_logika_ bevezetés.pdf", Elsőrendű_logika_alapjai.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Leíró nyelv és szignatúra
@@ -60,3 +62,4 @@ Az elsőrendű logika leíró nyelvének ($L$) olyan ábécével kell rendelkezn
 - [[concepts/logika/term]] — a nyelv első kifejezéstípusa: a matematikai leképezéseket szimbolizáló kifejezés
 - [[concepts/logika/elsorendu-formula]] — a nyelv második kifejezéstípusa: a logikai leképezéseket szimbolizáló kifejezés
 - [[concepts/bvszam/elsorendu-logika]] — ugyanezen ábécé tömör, halmazelméleti felépítése a bvszam kurzuson
+- [[concepts/logika/elsorendu-formalizalas]] — gyakorlati példák egy- és többfajtájú formalizálásra

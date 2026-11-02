@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/spark-graphx]
+tags: [concept]
 sources: [EA4_spark_graphx.pdf]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-12
 ---
 

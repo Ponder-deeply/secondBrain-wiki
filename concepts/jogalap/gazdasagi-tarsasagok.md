@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [04_Tarsasagi_jog.md]
 derivation: source
+kind: comparison
+element: water
 updated: 2026-08-12
 ---
 

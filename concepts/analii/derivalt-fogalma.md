@@ -1,9 +1,15 @@
 ---
-tags: [concept]
-sources: [01_ea_an_ii_a_b_merged.pdf]
-references: ["An II A/B 1. előadás"]
+tags:
+  - concept
+sources:
+  - 01_ea_an_ii_a_b_merged.pdf
+references:
+  - An II A/B 1. előadás
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-04
+studied: true
 ---
 
 # Pontbeli derivált fogalma

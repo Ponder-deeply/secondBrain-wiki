@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [12_ea_An3_2022_tavasz.pdf]
+sources: [12_ea_An3_2022_tavasz.pdf, gyakorlat.pdf]
 derivation: source
-updated: 2026-09-14
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Síkgörbék ívhossza
@@ -48,6 +50,15 @@ Az integrandus primitív függvénye **nem elemi függvény** (elliptikus integr
 $$\ell = 4\sqrt{2}\,a \int_0^{\pi/4} \frac{1}{\sqrt{\cos(2\varphi)}}\,\mathrm{d}\varphi \approx 7{,}416\dots \cdot a.$$
 
 Ez szemlélteti, hogy egy görbe rektifikálhatósága és az ívhosszképlet léte nem garantálja, hogy az integrál zárt alakban kiszámítható — csak azt, hogy (numerikusan) közelíthető.
+
+### Feladatok
+
+**Ívhossz szerinti paraméterezés** *(gyakorlat.pdf, Differenciálgeometria 7.)*: az $s$ ívhossz-paraméter mellett $|\varphi'(s)|=1$.
+
+- Az origó középpontú, $4$ sugarú kör: $\varphi(s)=\left(4\cos\frac s4,\,4\sin\frac s4\right)$, $s\in[0,8\pi]$.
+- A $(1,2)$ és $(3,4)$ pontot összekötő szakasz (hossza $2\sqrt2$): $\varphi(s)=\left(1+\frac s{\sqrt2},\,2+\frac s{\sqrt2}\right)$, $s\in[0,2\sqrt2]$.
+
+Az ívhossz-paraméterezés és a görbület kapcsolatáról lásd [[concepts/analiii/gorbe-gorbulete]].
 
 ## Kapocs
 

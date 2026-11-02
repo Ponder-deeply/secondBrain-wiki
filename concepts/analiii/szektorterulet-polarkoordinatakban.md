@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [12_ea_An3_2022_tavasz.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-14
 ---
 

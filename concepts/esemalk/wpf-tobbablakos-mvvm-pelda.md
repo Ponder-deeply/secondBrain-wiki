@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/wpf-eroforrasok-es-stilusok]
+tags: [concept]
 sources: [elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
-updated: 2026-09-13
+kind: model
+element: earth
+updated: 2026-09-30
 ---
 
 # Többablakos MVVM alkalmazás példa: vizsgatétel-generátor
@@ -27,7 +29,7 @@ vizsgázók közül ketten ne kapják ugyanazt a tételt.
   ugyanaz az absztrakció/megvalósítás minta, amit
   [[concepts/esemalk/wpf-kornyezet-fuggosegkezeles]] ismertet
 - **Két nézet**: a főablak (`MainWindow`) és a beállítások ablak
-  (`SettingWindow`)
+  (`SettingsWindow`)
 - **Egy közös nézetmodell** (`ExamGeneratorViewModel`) szolgálja ki mindkét
   nézetet; ebbe fecskendezzük be a modellt
 
@@ -79,7 +81,7 @@ private void ViewModel_OpenSettings(…) {
     if (_settingsWindow == null) {
         // ha már egyszer létrehoztuk az ablakot, nem kell újra
         _settingsWindow = new SettingsWindow();
-        _settingsWindow.DataContext = _ViewModel;
+        _settingsWindow.DataContext = _viewModel;
         // a beállításoknak is átadjuk a nézetmodellt
     }
     _settingsWindow.ShowDialog();

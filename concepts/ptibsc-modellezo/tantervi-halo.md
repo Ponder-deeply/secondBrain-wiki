@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [Modellezo halo.pdf]
 derivation: source
+kind: overview
+element: air
 updated: 2026-04-07
 ---
 

@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [szelmJegyzet.pdf, "5.-környezetfüggetlen-gramm,-cnf,-cyk-pumpálási-lemma.md"]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-08-05
 ---
 

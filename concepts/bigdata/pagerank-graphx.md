@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/spark-graphx]
+tags: [concept]
 sources: [EA4_spark_graphx.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # PageRank GraphX-ben (Pregel-instanciáció)
@@ -37,8 +39,8 @@ A PageRank a Pregel API három függvényével írható le:
 
 A forrás egy kis példagráfon (csúcsok: 2, 3, 5, 7) mutatja be az iterációkat:
 
-1. Kezdetben minden csúcs rangja egyenletesen van elosztva (pl. `1/2`,
-   `1/2`), az élsúlyok a kimenő fokszám reciprokai.
+1. Az élsúlyok a kimenő fokszám reciprokai (a példában `1` és `1/2`); a
+   kezdeti superstep után minden csúcs rangja `0.15`.
 2. Az első superstepben minden csúcs elküldi a `sendMsg` szerinti üzenetet a
    szomszédainak (pl. `0.15*1`, `0.15*0.5` alakú részletszámítások jelennek
    meg a példában).

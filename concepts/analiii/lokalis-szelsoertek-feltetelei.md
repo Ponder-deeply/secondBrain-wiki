@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 08_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.5.1.1–4.5.1.3. Tétel"]
 derivation: source
-updated: 2026-09-14
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Lokális szélsőérték feltételei több változóban
@@ -80,6 +82,38 @@ Az 1. pont a másodrendű elégséges feltétel speciális esete a $2\times 2$-e
 2. Írd fel minden ilyen pontban a [[concepts/analiii/hesse-matrix|Hesse-mátrixot]].
 3. Döntsd el a definitséget [[concepts/analiii/kvadratikus-alak-definitsege|Sylvester-kritériummal]]: definit $\Rightarrow$ szélsőérték, indefinit $\Rightarrow$ nyeregpont (nincs szélsőérték, mert a szükséges feltétel sérül), szemidefinit-nem-definit $\Rightarrow$ a módszer nem dönt.
 
+### Stacionárius pont és megjegyzések (gyak 8. lap)
+
+Az $a\in\operatorname{int}D_f$ az $f$ **stacionárius pontja**, ha $f\in D\{a\}$ és $f'(a)=0$. Az elsőrendű szükséges feltétel szerint a lokális szélsőértékhelyek (differenciálható $f$ esetén) a stacionárius pontok között vannak: ezek az $\partial_1f=\dots=\partial_nf=0$ egyenletrendszer megoldásai. A feltétel nem elégséges ($x^3$, $a=0$). A másodrendű elégséges feltétel $f\in C^2\{a\}$ mellett használható; ha az eredmény indefinit Hesse-mátrix, az $a$ pontban nincs szélsőérték (tétel, $n$ tetszőleges), ha elfajult (szemidefinit, de nem definit), egyedi vizsgálat kell.
+
+### Feladatok (gyak 8. lap megoldásai szerint)
+
+A lap munkapéldái a fenti 2., 3., 4., 5., 6. példával egyeznek (újraszámolva, eltérés nincs); a lap módszerei:
+
+- *$x^3-3x^2+2xy+y^2$*: $y=-x$ után $3x^2-8x=0$; $D_2=12x-16$, $(0,0)$ nyeregpont ($D_2=-16$), $(\tfrac83,-\tfrac83)$ lokális minimum ($D_1=10,\ D_2=16$).
+- *$x^4+y^4-x^2-2xy-y^2$*: a stacionárius pontok $(0,0),(1,1),(-1,-1)$; a két utóbbi lokális minimum; az origóban $D_2=0$ miatt a feltétel nem alkalmazható, ezért a függvényt $x^4+y^4-(x+y)^2$ alakban írva: $y=-x$ mentén $2x^4>0$, az $x$-tengely mentén $x^2(x^2-1)<0$ ($0<|x|<1$), azaz nincs szélsőérték.
+- *$x^4y^5$*: az origó és a tengelyek a stacionárius pontok, $f''=\begin{bmatrix}12x^2y^5&20x^3y^4\\20x^3y^4&20x^4y^3\end{bmatrix}$ ezeken nulla. Az $f$ előjele az $y$ előjele ($x\ne0$), a stacionárius pontokban az érték $0$: az $y$-tengely $y>0$ pontjai (nem szigorú) lokális minimumhelyek, a $y<0$ pontjai lokális maximumhelyek (a lap szövege itt elírásból mindkettőnél $y>0$-t mond), az $x$-tengely pontjaiban (az origót is beleértve) nincs szélsőérték.
+- *$x^4+y^2$, $x^3+y^2$*: lásd 4. példa; a másodrendű szükséges feltétel nem elégséges.
+- A $2\times2$ Sylvester-kritériumot a [[concepts/analiii/kvadratikus-alak-definitsege|kvadratikus alak definitségénél]] a lap bizonyítja ($Q(h)=ah_1^2+2bh_1h_2+ch_2^2$).
+
+**Recept (gyakorlati forma).** (1) $\operatorname{grad} f=0$ megoldása: stacionárius pontok (a szükséges feltétel miatt minden szélsőérték ezek között van, ha $f$ differenciálható). (2) Hesse-mátrix a pontokban, Sylvester: definit $\Rightarrow$ szélsőérték, indefinit ($d_2<0$) $\Rightarrow$ nyeregpont. (3) **Elfajult eset** (szemidefinit, pl. $d_2=0$): a tételek nem döntenek, közvetlen vizsgálat kell:
+- *globális egyenlőtlenséggel* — ha $f(x)\ge f(a)$ mindenütt, akkor abszolút minimum (pl. $x^4+y^2\ge0$);
+- *egy irány vagy görbe mentén* — ha a ponthoz bármilyen közel van $f(x)>f(a)$ és $f(x)<f(a)$ is, nincs szélsőérték (pl. $x^3+y^2$ az $y=0$ mentén előjelet vált).
+
+**Munkapéldák.**
+
+1. $f=x^2+xy+y^2-5x-4y+1$: $\partial_1f=2x+y-5=0$, $\partial_2f=x+2y-4=0$, így $(2,1)$; $f''=\begin{bmatrix}2&1\\1&2\end{bmatrix}$, $d_1=2,\ d_2=3>0$, tehát lokális minimum, $f(2,1)=-6$.
+2. $f=x^3-3x^2+2xy+y^2$: $3x^2-6x+2y=0$, $2x+2y=0\Rightarrow y=-x$, $3x^2-8x=0$: $(0,0)$ és $(\tfrac83,-\tfrac83)$. $f''=\begin{bmatrix}6x-6&2\\2&2\end{bmatrix}$; $(0,0)$-ban $d_2=-16<0$ nyeregpont; $(\tfrac83,-\tfrac83)$-ban $\begin{bmatrix}10&2\\2&2\end{bmatrix}$ pozitív definit: lokális minimum, értéke $-\tfrac{256}{27}$.
+3. $f=x^4+y^4-x^2-2xy-y^2$: stacionárius: $4x^3=2x+2y=4y^3\Rightarrow x=y$, $4x(x^2-1)=0$, azaz $(0,0),(1,1),(-1,-1)$. $f''=\begin{bmatrix}12x^2-2&-2\\-2&12y^2-2\end{bmatrix}$. $(\pm1,\pm1)$ (azonos előjellel): $\begin{bmatrix}10&-2\\-2&10\end{bmatrix}$ pozitív definit, lokális minimum, $f=-2$. $(0,0)$: $\begin{bmatrix}-2&-2\\-2&-2\end{bmatrix}$, $d_2=0$, negatív szemidefinit: **nem dönt**. Az $x$-tengely mentén $f(x,0)=x^2(x^2-1)<0$ kis $x\ne0$-ra, az $y=-x$ mentén $f(x,-x)=2x^4>0$; így minden környezetben van negatív és pozitív érték is: **nincs** lokális szélsőérték.
+4. $f=x^4+y^2$ és $g=x^3+y^2$ az origóban: mindkettőnél $f'=g'=0$, a Hesse-mátrix $\begin{bmatrix}0&0\\0&2\end{bmatrix}$ pozitív szemidefinit, nem definit — a másodrendű szükséges feltétel mindkettőre teljesül. De $f\ge0=f(0,0)$, tehát abszolút minimum, míg $g(x,0)=x^3$ előjelet vált: nincs szélsőérték. **A másodrendű szükséges feltétel tehát nem elégséges.**
+5. $f=x^4y^5$: $\operatorname{grad}f=(4x^3y^5,5x^4y^4)=0$ pontosan a tengelyeken. Az $x$-tengely pontjaiban ($x\ne0$) és az origóban $y^5$ előjelet vált, így nincs szélsőérték; az $y$-tengely pontjaiban ($y\ne0$) kis környezetben $x^4\ge0$, így $f$ előjele $y^5$-é: $y>0$-nál (nem szigorú) lokális minimum, $y<0$-nál lokális maximum. Hasonlóan $x^3y^5$ (09_gyak_An_III_2022_tavasz.pdf is tárgyalja: a Hesse-determináns a tengelyeken $0$): $\operatorname{grad}=0$ a tengelyeken, és mindenütt előjelet vált ($\operatorname{sgn}=\operatorname{sgn}xy$), nincs lokális szélsőérték.
+6. $f=8x+\tfrac1y+\tfrac yx$ ($xy\ne0$): $8-\tfrac y{x^2}=0$, $-\tfrac1{y^2}+\tfrac1x=0\Rightarrow y=8x^2$, $y^2=x$, $64x^4=x$, $x=\tfrac14$, $y=\tfrac12$. $f''=\begin{bmatrix}2y/x^3&-1/x^2\\-1/x^2&2/y^3\end{bmatrix}=\begin{bmatrix}64&-16\\-16&16\end{bmatrix}$, $d_2=768>0$: lokális minimum, $f=6$.
+7. $f=(1+e^y)\cos x-ye^y$: $\partial_1f=-(1+e^y)\sin x=0\Rightarrow x=k\pi$; $\partial_2f=e^y(\cos x-1-y)=0\Rightarrow y=(-1)^k-1$. Pontok: $(2k\pi,0)$ és $((2k+1)\pi,-2)$. Az elsőkben $f''=\begin{bmatrix}-2&0\\0&-1\end{bmatrix}$ negatív definit: lokális maximum, $f=2$; a másodikakban $f''=\begin{bmatrix}1+e^{-2}&0\\0&-e^{-2}\end{bmatrix}$ indefinit: nyeregpont.
+8. $f=(2x^2+3y^2)e^{-x^2-y^2}$: $\partial_1f=2xe^{-x^2-y^2}(2-2x^2-3y^2)$, $\partial_2f=2ye^{-x^2-y^2}(3-2x^2-3y^2)$. Pontok: $(0,0)$ (minimum, mert $f\ge0=f(0,0)$), $(0,\pm1)$ (a Hesse-mátrix $\operatorname{diag}(-2/e,-12/e)$, lokális maximum, $f=3/e$), $(\pm1,0)$ ($\operatorname{diag}(-8/e,\,2/e)$ indefinit: nyeregpont). Hasonlóan $(x^2+y^2)e^{-x^2-y^2}$: $t=x^2+y^2$ szerint $te^{-t}$, a minimum az origóban, a (nem szigorú) maximum az $x^2+y^2=1$ körön, értéke $1/e$.
+9. $f=x^3+y^3+z^2+12xy+2z$ (három változó): ugyanaz a recept $3\times3$-as Hesse-mátrixszal és a teljes Sylvester-kritériummal.
+
+**További gyakorló feladatok** (megoldás nélkül, a forrásban): $x^4y^2(4-x-y)$, $x^3y^2(4-x-y)$, $2x^3-6x+y^3-12y+5$, $x^2+2y+\tfrac2{xy}$, $\tfrac yx+\tfrac xy+(x-1)^{2022}$, $(x^2+2y^2)e^{-x^2-y^2}$, $x^3+y^3-9xy$.
+
 ## Kapocs
 
 - [[concepts/analiii/tobbvaltozos-taylor-formula]] — mindhárom bizonyítás forrása.
@@ -88,3 +122,4 @@ Az 1. pont a másodrendű elégséges feltétel speciális esete a $2\times 2$-e
 - [[concepts/analiii/felteteles-szelsoertek]] — ugyanez korlátozó feltételekkel.
 - [[concepts/analiii/abszolut-szelsoertek]] — ugyanez a szükséges feltétel, korlátos zárt halmazon a globális szélsőérték keresésének első lépéseként.
 - [[concepts/analii/lokalis-szelsertekek]] — az egyváltozós eredeti.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

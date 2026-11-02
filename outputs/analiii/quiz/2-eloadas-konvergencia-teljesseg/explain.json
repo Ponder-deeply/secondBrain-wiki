@@ -1,0 +1,121 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "2-eloadas-konvergencia-teljesseg",
+	"unitTitle": "2. előadás — Konvergencia, teljesség",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:19:55.937Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 6
+		},
+		{
+			"at": "2026-10-22T13:16:18.331Z",
+			"model": "opus",
+			"direction": "",
+			"added": 2
+		}
+	],
+	"questions": [
+		{
+			"id": "i1gfxle3",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Mondja ki a Bolzano–Weierstrass-féle kiválasztási tételt az $(\\mathbb{R}^n,\\|\\cdot\\|_\\infty)$ normált térben, és vázolja a bizonyítás gondolatmenetét!",
+			"answer": "Tétel: $(\\mathbb{R}^n,\\|\\cdot\\|_\\infty)$-ben minden korlátos sorozatnak van konvergens részsorozata. A bizonyítás az egydimenziós Bolzano–Weierstrass-tételt alkalmazza egymás után a koordinátasorozatokra. A sorozat korlátos, ezért minden koordinátasorozata is korlátos számsorozat. Először kiválasztunk egy részsorozatot, amelyen az első koordináta konvergens. Ennek egy rész-részsorozatán a második koordináta is konvergens, és így tovább. Az első koordináta konvergenciája megmarad, mert konvergens sorozat részsorozata ugyanoda tart. $n$ lépés után olyan részsorozatot kapunk, amelynek az összes koordinátasorozata egyszerre konvergens. A koordinátánkénti konvergencia miatt ez a részsorozat konvergens $\\mathbb{R}^n$-ben.",
+			"points": [
+				"A tétel pontos állítása: korlátos sorozatnak van konvergens részsorozata $\\mathbb{R}^n$-ben",
+				"Az egydimenziós Bolzano–Weierstrass-tételt alkalmazzuk koordinátánként",
+				"Egymás után rész-részsorozatokat választunk, és a korábbi koordináták konvergenciája megmarad",
+				"A végén minden koordináta egyszerre konvergens, ez $\\mathbb{R}^n$-beli konvergenciát jelent"
+			]
+		},
+		{
+			"id": "t9v3gemo",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Miért igaz a Bolzano–Weierstrass-féle kiválasztási tétel $\\mathbb{R}^n$-en bármely normával, ha csak a $\\|\\cdot\\|_\\infty$ normára bizonyítottuk?",
+			"answer": "$\\mathbb{R}^n$-en minden norma ekvivalens a $\\|\\cdot\\|_\\infty$ normával: két pozitív konstans szorzójáig becsülik egymást. Emiatt egy sorozat pontosan akkor korlátos egy tetszőleges normában, ha a $\\|\\cdot\\|_\\infty$ normában korlátos. Ugyanígy egy részsorozat pontosan akkor konvergens egy tetszőleges normában, ha a $\\|\\cdot\\|_\\infty$ normában konvergens. Egy tetszőleges normában korlátos sorozat tehát $\\|\\cdot\\|_\\infty$-ben is korlátos. Ott van konvergens részsorozata, és ez a részsorozat az eredeti normában is konvergens. Így a tétel a norma választásától függetlenül igaz.",
+			"points": [
+				"$\\mathbb{R}^n$-en minden norma ekvivalens",
+				"Ekvivalens normákban ugyanazok a korlátos sorozatok",
+				"Ekvivalens normákban ugyanazok a konvergens sorozatok",
+				"Ezért a $\\|\\cdot\\|_\\infty$-beli eredmény átvihető"
+			]
+		},
+		{
+			"id": "aivr4hrz",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Mondja ki a Tyihonov-tételt a normák ekvivalenciájáról, és mutassa meg, miért következik belőle a kiválasztási tétel tetszőleges véges dimenziós normált térben!",
+			"answer": "Tyihonov-tétel: tetszőleges véges dimenziós $X$ lineáris téren bármely két norma ekvivalens. Ha $X$ $n$-dimenziós, akkor algebrailag izomorf $\\mathbb{R}^n$-nel. Az izomorfizmus segítségével a $\\|\\cdot\\|_\\infty$ norma átvihető $X$-re. A Tyihonov-tétel miatt $X$ adott $\\|\\cdot\\|$ normája ekvivalens ezzel az átvitt normával. Így a korlátosság és a konvergencia ugyanazt jelenti, mint $(\\mathbb{R}^n,\\|\\cdot\\|_\\infty)$-ben, ahol a tétel már igaz. Tehát $(X,\\|\\cdot\\|)$ minden korlátos sorozatának van konvergens részsorozata.",
+			"points": [
+				"A Tyihonov-tétel állítása: véges dimenziós lineáris téren bármely két norma ekvivalens",
+				"Minden $n$-dimenziós lineáris tér algebrailag izomorf $\\mathbb{R}^n$-nel",
+				"A normák ekvivalenciája megőrzi a korlátosságot és a konvergenciát",
+				"Következmény: minden véges dimenziós normált térben igaz a kiválasztási tétel"
+			]
+		},
+		{
+			"id": "drgqqwfb",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Mutassa meg, hogy az $f_k(x)=\\sin(2^k\\pi x)$, $x\\in[0,1]$ sorozat korlátos a $\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$ térben, és hogy $k\\neq l$ esetén $\\|f_k-f_l\\|_\\infty\\ge 1$!",
+			"answer": "A sorozat korlátos, mert $|\\sin|\\le1$ miatt $\\|f_k\\|_\\infty\\le1$ minden $k$-ra. Legyen $k<l$, és válasszuk az $x^*=\\frac{1}{2^{k+1}}$ pontot. Ekkor $f_k(x^*)=\\sin\\bigl(2^k\\pi\\cdot\\frac1{2^{k+1}}\\bigr)=\\sin\\frac\\pi2=1$. Ugyanitt $f_l(x^*)=\\sin(2^{l-k-1}\\pi)=0$, mert $l-k-1$ nemnegatív egész. A maximumnorma legalább akkora, mint az eltérés bármely pontban, ezért $\\|f_k-f_l\\|_\\infty\\ge|f_k(x^*)-f_l(x^*)|=1$.",
+			"points": [
+				"Korlátosság: $\\|f_k\\|_\\infty\\le 1$",
+				"Jól választott pont: $x^*=1/2^{k+1}$",
+				"$f_k(x^*)=1$ és $f_l(x^*)=0$, mert $l-k-1$ egész",
+				"A maximumnormát alulról becsüljük egy pontbeli eltéréssel: $\\ge1$"
+			]
+		},
+		{
+			"id": "lfthtv25",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Miért következik abból, hogy $\\|f_k-f_l\\|_\\infty\\ge1$ minden $k\\neq l$ esetén, hogy az $(f_k)$ sorozatnak nincs konvergens részsorozata?",
+			"answer": "Tegyük fel, hogy $(f_{\\nu_k})$ konvergens részsorozat, és $f\\in C[0,1]$-hez tart. Ekkor minden $\\varepsilon>0$-hoz van olyan küszöb, hogy a fölötti indexekre $\\|f_{\\nu_k}-f\\|_\\infty<\\varepsilon$. A háromszög-egyenlőtlenségből elég nagy $k\\neq l$ esetén $\\|f_{\\nu_k}-f_{\\nu_l}\\|_\\infty\\le\\|f_{\\nu_k}-f\\|_\\infty+\\|f_{\\nu_l}-f\\|_\\infty<2\\varepsilon$. Az $\\varepsilon<\\tfrac12$ választással ez ellentmond a $\\ge1$ becslésnek. Lényegében arról van szó, hogy a konvergens részsorozat Cauchy-tulajdonságú lenne, egymástól legalább $1$ távolságra lévő tagokkal azonban ez lehetetlen. Így a sorozat korlátos, mégsincs konvergens részsorozata, tehát a kiválasztási tétel $C[0,1]$-ben nem igaz.",
+			"points": [
+				"Indirekt feltevés: van $f$-hez tartó részsorozat",
+				"Háromszög-egyenlőtlenség: $\\|f_{\\nu_k}-f_{\\nu_l}\\|<2\\varepsilon$",
+				"Kis $\\varepsilon$-ra ez ellentmond a $\\ge1$ becslésnek",
+				"Következmény: korlátos sorozat, konvergens részsorozat nélkül"
+			]
+		},
+		{
+			"id": "n9bo8skh",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"q": "Miért mondjuk, hogy a Bolzano–Weierstrass-féle kiválasztási tétel dimenziófüggő jelenség, és hogyan rokon ez azzal, hogy $\\bigl(C[0,1],\\|\\cdot\\|_1\\bigr)$ nem Banach-tér?",
+			"answer": "A tétel minden véges dimenziós normált térben igaz, akármilyen normával: ez a koordinátánkénti kiválasztás és a Tyihonov-tétel következménye. A végtelen dimenziós $\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$ térben viszont a $\\sin(2^k\\pi x)$ sorozat korlátos, mégsincs konvergens részsorozata. Ezért a tétel érvényessége nem pusztán a norma vagy a metrika szerkezetéből adódik, hanem a véges dimenzióhoz kötődik. Hasonló a helyzet a teljességgel. $\\mathbb{R}^p$ minden normával teljes, a végtelen dimenziós $C[0,1]$ viszont az $\\|\\cdot\\|_1$ normával nem teljes. Mindkét példa azt mutatja, hogy az $\\mathbb{R}^n$-ből ismert kompaktsági és teljességi tulajdonságok végtelen dimenzióban nem automatikusak, külön kell igazolni vagy cáfolni őket.",
+			"points": [
+				"Véges dimenzióban a tétel mindig igaz, bármely normával",
+				"Végtelen dimenzióban van ellenpélda: $\\sin(2^k\\pi x)$ a $C[0,1]$-ben",
+				"A tétel nem topológiai, hanem dimenziófüggő",
+				"Párhuzam: $\\mathbb{R}^p$ minden normával teljes, $(C[0,1],\\|\\cdot\\|_1)$ nem az"
+			]
+		},
+		{
+			"id": "lthpyfam",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "base",
+			"q": "Mit állít a kiválasztási tulajdonság egy normált térről, hol igaz biztosan, és miért nem lehet tetszőleges normált térre általánosítani?",
+			"answer": "A kiválasztási tulajdonság azt jelenti, hogy a térben minden korlátos sorozatnak van konvergens részsorozata. $\\mathbb{R}^n$-ben ez igaz, és mivel ott minden norma ekvivalens, bármely normával igaz. Tetszőleges normált térre azonban nem öröklődik automatikusan: végtelen dimenzióban van korlátos sorozat konvergens részsorozat nélkül. Ilyen például a $\\sin(2^k\\pi x)$ sorozat a $\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$ térben. A tétel érvényessége tehát pontosan a véges dimenzióhoz kötődik.",
+			"points": [
+				"A tulajdonság: minden korlátos sorozatnak van konvergens részsorozata",
+				"$\\mathbb{R}^n$-ben (bármely normával) igaz",
+				"Végtelen dimenzióban van korlátos sorozat konvergens részsorozat nélkül",
+				"Az érvényesség a véges dimenzióhoz kötődik, nem öröklődik automatikusan"
+			]
+		},
+		{
+			"id": "q9gb2xp5",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/A tétel $\\mathbb{R}^n$-ben",
+			"q": "Az $\\mathbb{R}^n$-beli kiválasztási tétel bizonyításában miért kell minden koordináta szerint az előző részsorozatból választani, és miért nem elég koordinátánként külön-külön?",
+			"answer": "Egy korlátos sorozat minden koordinátasorozata korlátos számsorozat, tehát az egydimenziós Bolzano–Weierstrass-tétel szerint van konvergens részsorozata. Ha ezeket koordinátánként függetlenül választanánk, a különböző koordinátákhoz más-más indexhalmaz tartozna, és nem kapnánk egyetlen közös részsorozatot. Ezért előbb az első koordináta szerint választunk konvergens részsorozatot, majd ebből a második koordináta szerint egy konvergens rész-részsorozatot, és így tovább. Egy konvergens sorozat részsorozata ugyanoda tart, így a már elért konvergencia megmarad. $n$ lépés után az összes koordinátasorozat egyszerre konvergens, ami a $\\|\\cdot\\|_\\infty$ normában éppen a részsorozat konvergenciáját jelenti.",
+			"points": [
+				"A koordinátasorozatok korlátosak, rájuk az egydimenziós BW-tétel alkalmazható",
+				"A független választás különböző indexhalmazokat adna, nem lenne közös részsorozat",
+				"Az egymás utáni rész-részsorozat-kiválasztás megőrzi a korábbi koordináták konvergenciáját",
+				"A végén minden koordináta egyszerre konvergál, ami $\\|\\cdot\\|_\\infty$-ben konvergencia"
+			]
+		}
+	]
+}

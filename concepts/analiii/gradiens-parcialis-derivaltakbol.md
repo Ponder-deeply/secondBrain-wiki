@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 3.1.3. és 3.1.4. Tétel"]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: fire
+updated: 2026-10-21
 ---
 
 # A gradiens és a Jacobi-mátrix a parciális deriváltakból
@@ -55,6 +57,10 @@ $$f'(x,y) = \begin{pmatrix} 2x & -1 \\ 1 & 2 \\ 0 & 2y \end{pmatrix} \qquad \big
 
 Egy $\mathbb{R}^2 \to \mathbb{R}^3$ függvény Jacobi-mátrixa tehát $3\times 2$-es — az alak $\mathbb{R}^{m\times n}$, nem $\mathbb{R}^{n\times m}$.
 
+### Feladatok
+
+$f=2x^2+3xy-y^2$: $\partial_1f=4x+3y$, $\partial_2f=3x-2y$ folytonosak $\mathbb{R}^2$-n (polinomok), ezért $f\in D(\mathbb{R}^2)$ és $f'(x,y)=\operatorname{grad}f(x,y)=(4x+3y,\,3x-2y)$, speciálisan $f'(1,2)=(10,-1)$. Ez a gyors ellenőrzés a definíciós úton kapott eredményre; lásd [[concepts/analiii/frechet-derivalt]].
+
 ## Kapocs
 
 - [[concepts/analiii/fuggvenygrafikon-erintosikja]] — az $n=2$, $m=1$ eset: a gradiens az érintősík normálvektorának első két koordinátája.
@@ -63,3 +69,4 @@ Egy $\mathbb{R}^2 \to \mathbb{R}^3$ függvény Jacobi-mátrixa tehát $3\times 2
 - [[concepts/analiii/jacobi-matrix]] — a mátrix mint a derivált reprezentációja.
 - [[concepts/analiii/differencialhatosag-elegseges-feltetele]] — a hiányzó megfordítás.
 - [[concepts/analiii/iranymenti-derivalt]] — az $\partial_e f(a) = f'(a)e$ formula, amely a gradienst irányokra alkalmazza.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

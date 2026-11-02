@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [10.md, 11.md, 12.md, 10.md, szelmJegyzet.pdf]
 derivation: source
+kind: definition
+element: water
 updated: 2026-08-28
 ---
 

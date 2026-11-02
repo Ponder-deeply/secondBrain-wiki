@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-klaszterezes-es-dimenziocsokkentes]
+tags: [concept]
 sources: [BDAEM-2022-EA10.pptx]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: fire
+updated: 2026-09-30
 ---
 
 # Sajátvektor és sajátérték
@@ -36,7 +38,7 @@ Ha bevezetjük a $B = A - \lambda I$ mátrixot, akkor $Bx = 0$. Mivel $x$ nem
 lehet a nullvektor, $B$-nek **nem szabad** invertálhatónak lennie — ha
 invertálható lenne, abból $x = B^{-1} \cdot 0 = 0$ következne, ami ellentmond
 annak, hogy $x$ sajátvektor. Tehát $x$ pontosan akkor sajátvektora $A$-nak, ha
-$B$ szingluráris, azaz:
+$B$ szinguláris, azaz:
 $$\det(A - \lambda I) = 0$$
 
 Ez a *karakterisztikus egyenlet*, amelynek gyökei adják $A$ sajátértékeit.

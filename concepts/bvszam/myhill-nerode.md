@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [4.-myhill-nerode-és-minimál-automata.md]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-06-09
 ---
 

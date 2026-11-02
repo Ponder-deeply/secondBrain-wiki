@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-iteletlogika]
+tags: [concept]
 sources: [Rezolúció_I.pdf]
 references: [Tk. 93-96. o., Tk. 99-100. o.]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-09-30
 ---
 
 # Klóz és klózhalmaz
@@ -52,7 +54,7 @@ Egy $n$-változós formula az igazságtáblájával megadott $\{i,h\}^n \to \{i,
 - Egy formula **igazhalmaza** azon $I$ interpretációk halmaza, amelyekre a formula helyettesítési értéke igaz.
 - Egy formula **hamishalmaza** azon $I$ interpretációk halmaza, amelyekre a formula helyettesítési értéke hamis.
 
-Kielégíthetetlen formula igazhalmaza üres — ekkor a KKNF alakjában minden teljes elemi konjunkció szerepel. Ha szisztematikusan egyszerűsítünk, a klózok literálszáma addig csökken, amíg $0$ nem lesz (üres klóz). Így egy KNF alakú formuláról egyszerűsítéssel eldönthető, hogy kielégíthetetlen-e.
+Kielégíthetetlen formula igazhalmaza üres — ekkor a KKNF alakjában minden teljes elemi diszjunkció szerepel. Ha szisztematikusan egyszerűsítünk, a klózok literálszáma addig csökken, amíg $0$ nem lesz (üres klóz). Így egy KNF alakú formuláról egyszerűsítéssel eldönthető, hogy kielégíthetetlen-e.
 
 ### Klózhalmaz
 

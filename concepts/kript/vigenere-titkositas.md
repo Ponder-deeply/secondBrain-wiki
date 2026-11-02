@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [történelmi_titkosítók.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-04
 ---
 

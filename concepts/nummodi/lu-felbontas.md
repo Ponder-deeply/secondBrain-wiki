@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/lu-felbontas]
+tags: [concept]
 sources: [NM1_ea03.pdf, NM1_ea04.pdf]
 derivation: source
-updated: 2026-08-05
+kind: procedure
+element: water
+updated: 2026-10-21
 ---
 
 # LU-felbontás

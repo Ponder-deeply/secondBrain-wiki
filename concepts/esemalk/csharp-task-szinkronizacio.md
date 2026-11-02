@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
+tags: [concept]
 sources: [elte_eva_ea05_winforms_multithread.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Taszkok szinkronizálása
@@ -73,7 +75,7 @@ végrehajtásra.
     // taszk szinkronizációs objektum
 
   Task.Run(() => DoBackgroundWork())
-    .ContinueWith(() => { label.Text = "Ready."; },
+    .ContinueWith(t => { label.Text = "Ready."; },
       scheduler);
     // a DoBackgroundWork() futtatása aszinkron módon
     // háttérszálon történik;

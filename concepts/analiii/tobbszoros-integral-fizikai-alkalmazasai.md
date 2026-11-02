@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 11_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 11_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf]
 derivation: source
-updated: 2026-09-14
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # A többszörös integrál fizikai alkalmazásai
@@ -42,6 +44,11 @@ A $z$ koordinátára szukcesszív integrálással, $z$ szerint kifelé haladva: 
 $$S_z = \frac{1}{m}\int_{z=0}^{r}\left(\int_{x^2+y^2\leq r^2-z^2} z\varrho\,\mathrm{d}x\mathrm{d}y\right)\mathrm{d}z = \frac{\varrho}{m}\int_{z=0}^{r}\pi(r^2z - z^3)\,\mathrm{d}z = \frac{\pi\varrho}{m}\cdot\frac{r^4}{4} = \frac{3}{8}r.$$
 
 A félgömb súlypontja tehát az alaplaptól a sugár $3/8$ részére esik.
+
+### Feladatok
+
+- Az $y^2=x$, $y=0$, $x=4$ görbék által határolt síkidom súlypontja *(An III gyak. 12.)*: $t=\int_0^4\sqrt x\,\mathrm{d}x=\frac{16}3$, $\iint y=\int_0^4\frac x2\mathrm{d}x=4$, $\iint x=\int_0^4x^{3/2}\mathrm{d}x=\frac{64}5$, így $\bar x=\frac{12}5$, $\bar y=\frac34$.
+- Második Pappus–Guldin-szabály: ha $A=\{a\le x\le b,\ 0\le y\le f(x)\}$, a $y$ és $z$ tengelyek körüli forgástest térfogata $V=\pi\int_a^bf^2$. A súlypont $\bar y=\frac{\frac12\int f^2}{t(A)}$, és a súlypont által leírt kör kerülete $2\pi\bar y$, tehát $V=t(A)\cdot2\pi\bar y$.
 
 ## Kapocs
 

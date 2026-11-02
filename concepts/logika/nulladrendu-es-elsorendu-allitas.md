@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/elsorendu-logika-nyelv-es-szintaxis]
+tags: [concept]
 sources: ["Elsőrendű_logika_ bevezetés.pdf"]
 derivation: source
+kind: comparison
+element: air
 updated: 2026-09-08
 ---
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [BDAEM-2022-EA9.pptx]
 references: ["Breiman, L. (1996): Bagging predictors — a bootstrap aggregating eredeti forrása"]
 derivation: source
+kind: procedure
+element: water
 updated: 2026-09-12
 ---
 

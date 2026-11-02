@@ -1,0 +1,187 @@
+{
+	"version": 1,
+	"subject": "bigdata",
+	"unit": "spark",
+	"unitTitle": "Spark",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-07T20:36:59.556Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.\nMost, ehhez a generáláshoz (ez a legerősebb): Az ismert fuggvenyek, foleg aggragate hasznalataval elerheto fontos adatkezelesi folyamatok betanulása a célom, python hasznalataval. A legalapvetobb ilyen aaz average, ennel ertekesebb es bonyolultabb peldakat hozz.",
+			"added": 14
+		}
+	],
+	"questions": [
+		{
+			"id": "9aco56gp",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Ismertesd az `aggregate(zero, seqOp, combOp)` akció működését! Miben több a `reduce`-nál és a `fold`-nál, és mikor van rá szükség?",
+			"answer": "Az `aggregate` általánosított összesítés: a `zero` az akkumulátor kezdőértéke, a `seqOp(acc, x)` egy partíción belül egyenként olvasztja be az elemeket az akkumulátorba, a `combOp(acc1, acc2)` pedig a partíciók akkumulátorait egyesíti. A legfontosabb különbség, hogy az eredmény típusa eltérhet az elemekétől: számokból például `(összeg, darab)` vagy `(min, max)` pár lesz. A `reduce`-nak nincs kezdőértéke, és az eredménye az elemekkel azonos típusú. A `fold` kap kezdőértéket, de egyetlen függvényt használ, így ott is azonos a típus. Akkor kell `aggregate`, ha a cél mennyiség nem állítható elő közvetlenül az elemek páronkénti összevonásával, mint az átlag vagy több statisztika egyszerre. Mivel a partíciók párhuzamosan dolgoznak, a `combOp`-nak a sorrendtől függetlenül helyes eredményt kell adnia.",
+			"points": [
+				"`zero`: az akkumulátor kezdőértéke; `seqOp`: elem → akkumulátor egy partíción belül; `combOp`: akkumulátor + akkumulátor a partíciók között",
+				"Az eredmény típusa eltérhet az elem típusától (pl. pár vagy tuple)",
+				"A `reduce` és a `fold` csak azonos típusú, egyfüggvényes összevonás (a `fold` kezdőértékkel)",
+				"Felhasználás: átlag `(összeg, darab)`-bal, min és max egyszerre stb.",
+				"Az összevonás sorrendje nem garantált, mert a partíciók párhuzamosan futnak"
+			]
+		},
+		{
+			"id": "lv7ombdj",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Hasonlítsd össze a kulcsonkénti átlag kiszámítását `reduceByKey`-vel és `groupByKey`-vel! Melyiket érdemes használni és miért?",
+			"answer": "A `reduceByKey` változat: `mapValues(lambda x: (x, 1))`, majd `reduceByKey(lambda a, b: (a[0]+b[0], a[1]+b[1]))`, végül `mapValues(lambda x: x[0]/x[1])`. A `groupByKey` változat: `groupByKey().mapValues(lambda v: sum(v)/len(list(v)))`. A két eredmény azonos. A `reduceByKey` azonban a shuffle előtt minden partíción belül elő-összesítést (combinert) végez, így kulcsonként és partíciónként csak egy `(összeg, darab)` pár megy át a hálózaton. A `groupByKey` nem összesít előre: minden egyes érték átmegy a hálózaton, és egy kulcs összes értéke egyszerre a memóriába kerül. Nagy adaton ezért drága és memóriaigényes, aggregációhoz általában a `reduceByKey` a helyes választás.",
+			"points": [
+				"Mindkét változat kódja: `(x,1)` párok + `reduceByKey` + osztás, illetve `groupByKey` + `sum/len`",
+				"Az eredmény azonos",
+				"A `reduceByKey` combinerrel elő-összesít a shuffle előtt, így kevés adat megy a hálózatra",
+				"A `groupByKey` minden értéket shuffle-öl, ezért memóriaigényes és nagy adatnál drága",
+				"Következtetés: aggregációra `reduceByKey`"
+			]
+		},
+		{
+			"id": "1jejx68x",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Írd le és indokold azt az RDD-feldolgozási láncot, amely JSON-soros szenzoradatból (Airport, temperature) megadja, hogy az egyes hőmérséklet-kategóriákba (`<10`, `10-20`, `20-30`, `>30`) hány különböző nap tartozik!",
+			"answer": "A lánc: `sc.textFile(...)` soronként egy JSON-stringet ad, a `map(json.loads)` szótárrá alakítja. A `filter` csak a `location == \"Airport\"` és a `sensor_type == \"temperature\"` rekordokat tartja meg. A `map` minden rekordból `(kategória, dátum)` párt készít: a kategóriát egy segédfüggvény határozza meg az érték alapján, a dátum a `timestamp` `T` előtti része. Ezután jön a `distinct()`, mert egy napon belül sok mérés eshet ugyanabba a kategóriába, de egy napot kategóriánként csak egyszer szabad számolni. Végül `mapValues(lambda d: 1)` és `reduceByKey(lambda a, b: a + b)` adja meg kategóriánként a napok számát. A `distinct` és a `reduceByKey` shuffle-t okoz, a többi lépés partíción belül fut.",
+			"points": [
+				"`textFile` → `map(json.loads)` → `filter(location, sensor_type)`",
+				"`map` → `(kategória, dátum)` párok, ahol a dátum a timestamp `T` előtti része",
+				"A `distinct()` biztosítja, hogy egy nap kategóriánként egyszer számít",
+				"`mapValues(→1)` + `reduceByKey(+)` adja a darabszámot kategóriánként"
+			]
+		},
+		{
+			"id": "mr4yh20y",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Hogyan határozod meg RDD-vel a legmelegebb napot (dátum és hőmérséklet) `reduce` és `sortBy` segítségével? Mit kell teljesítenie a `reduce` függvényének, és teljesíti-e itt?",
+			"answer": "Először `(dátum, érték)` párokat képzünk a szűrt hőmérséklet-rekordokból. Az első megoldás: `reduce(lambda a, b: a if a[1] > b[1] else b)`, amely az egész RDD-t egyetlen párra, a legnagyobb értékűre vonja össze. A második megoldás: `sortBy(lambda x: x[1], ascending=False).first()`, vagyis érték szerint csökkenően rendezünk, és vesszük az első elemet. A `reduce` függvényének asszociatívnak és kommutatívnak kell lennie, mert a partíciók párhuzamosan dolgoznak, és az összevonás sorrendje nem garantált. A maximumválasztás ilyen művelet, így az eredmény a partíciózástól független. A `reduce` itt akció, a `sortBy` transzformáció, ezért a második változatban a `first()` akció indítja a számítást.",
+			"points": [
+				"`(dátum, érték)` párok előállítása",
+				"`reduce(lambda a,b: a if a[1]>b[1] else b)`",
+				"`sortBy(lambda x: x[1], ascending=False).first()`",
+				"A `reduce` függvénye asszociatív és kommutatív kell legyen, mert a sorrend nem garantált; a maximum ilyen"
+			]
+		},
+		{
+			"id": "ea6o9u4x",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Írd le a napi átlaghőmérséklet RDD-s kiszámítását a nyers JSON-sorokból egészen addig, hogy megkapod a legmelegebb és a leghidegebb napi átlagot!",
+			"answer": "A `textFile` és a `map(json.loads)` után a `filter` csak a hőmérséklet-méréseket tartja meg. A `map` minden rekordot `(dátum, (érték, 1))` párrá alakít, ahol a dátum a timestamp `T` előtti része. A `reduceByKey(lambda a, b: (a[0]+b[0], a[1]+b[1]))` naponként előállítja az `(összeg, darab)` párt, combinerrel elő-összesítve. A `mapValues(lambda p: p[0]/p[1])` ebből kiszámolja a napi átlagot; a kulcs és a partícionálás közben megmarad. Igény szerint `sortBy(lambda x: x[0])` rendez dátum szerint. A legmelegebb és a leghidegebb napi átlagot a `(dátum, átlag)` párokon `max`/`min` adja az átlag mint kulcs szerint, vagy egy `reduce` a megfelelő összehasonlítással.",
+			"points": [
+				"Szűrés a hőmérsékletre, dátumkulcs a timestampből",
+				"`(dátum, (érték, 1))` párok, majd `reduceByKey` az `(összeg, darab)` párra",
+				"`mapValues` osztással adja az átlagot (kulcs és partícionálás megmarad)",
+				"Rendezés dátum szerint, szélsőértékek `min`/`max`-szal (vagy `reduce`-szal)"
+			]
+		},
+		{
+			"id": "zbq69cia",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Hogyan számolsz DataFrame API-val szenzortípusonként egyszerre több aggregátumot, és hogyan tartod meg csak azokat a csoportokat, ahol az átlag 20 fölötti? Mi ennek az SQL-megfelelője?",
+			"answer": "A `df.groupBy(\"sensor_type\").agg(sum(\"value\").alias(\"Sum_value\"), avg(\"value\").alias(\"Avg_value\"), min(\"value\").alias(\"min_value\"))` egyetlen csoportosítással több aggregált oszlopot állít elő. Az `alias` nevet ad az aggregált oszlopnak, így az aggregáció után erre a névre lehet hivatkozni. A `.filter(\"Avg_value > 20\")` a már aggregált eredményen szűr, vagyis csoportokat dob el, nem egyedi rekordokat. SQL-ben ez a `HAVING` záradéknak felel meg; az aggregáció előtti `filter`/`where` a `WHERE` megfelelője. Egyetlen aggregátumhoz elég a rövid forma, például `groupBy(\"sensor_type\").avg(\"value\")`. Az `avg`, `sum`, `min` függvényeket a `pyspark.sql.functions` modulból kell importálni.",
+			"points": [
+				"`groupBy(...).agg(...)` több aggregátummal egy menetben",
+				"Az `alias` elnevezi az aggregált oszlopot, így később hivatkozni lehet rá",
+				"Az aggregáció utáni `filter` csoportokat szűr, ez az SQL `HAVING`",
+				"Különbség az aggregáció előtti szűréstől (`WHERE`)"
+			]
+		},
+		{
+			"id": "y766flcv",
+			"page": "concepts/bigdata/spark-broadcast-valtozo",
+			"q": "Mi a broadcast join, mikor és miért érdemes használni? Mutasd be a telefon–antenna példán!",
+			"answer": "Broadcast joinnál egy kis referenciatábla minden executorra átmásolódik, így a nagy adathalmazt nem kell a joinhoz shuffle-ölni. Az `F.broadcast(df)` csak tipp az optimalizálónak. Feltétele, hogy a kis tábla elférjen az executor memóriájában. A `spark.sql.autoBroadcastJoinThreshold` (alapból 10 MB) alatti táblákat a Spark tipp nélkül is broadcastolja, `-1` értékkel ez kikapcsolható. A példában a streaming `coords` (telefonpozíciók) és a statikus `antennas` tábla között `coords.crossJoin(F.broadcast(antennas))` készít minden pozíció–antenna párt. A Descartes-szorzat csak azért vállalható, mert az egyik oldal kicsi. Ezután kiszámoljuk a `distance2` négyzetes távolságot, és ablakonként, telefononként a legközelebbi antennát választjuk ki.",
+			"points": [
+				"A kis tábla minden executorra eljut, a nagy oldal shuffle nélkül kapcsolódik",
+				"`F.broadcast` csak tipp; a táblának el kell férnie a memóriában; automatikus küszöb 10 MB",
+				"A `crossJoin` csak akkor vállalható, ha az egyik oldal kicsi",
+				"Példa: `coords.crossJoin(F.broadcast(antennas))`, majd `distance2` és minimumkeresés"
+			]
+		},
+		{
+			"id": "614me027",
+			"page": "concepts/bigdata/spark-sql",
+			"q": "Hogyan futtatható ugyanaz a csoportosító aggregáció SQL-ként és DataFrame API-val? Mi a kapcsolat a két változat között, és hogyan ellenőrizhető?",
+			"answer": "SQL-hez a DataFrame-et `df.createOrReplaceTempView(\"sensorTemp\")` regisztrálja egy névvel. A temp view nem fizikai tábla és nem kerül HDFS-re, csak az aktuális SparkSession-höz kötött név. Ezután a `spark.sql(\"SELECT sensor_type, count(*) FROM sensorTemp GROUP BY sensor_type\")` lekérdezés DataFrame-et ad vissza, ami tovább láncolható. A DataFrame-megfelelő: `df.groupBy(\"sensor_type\").count()`. A két változat ugyanazon az optimalizálón megy át, ezért jellemzően hasonló végrehajtási tervet kapnak. Ez az `explain()`-nel ellenőrizhető; az `extended` mód a logikai terveket is mutatja. Az `explain()` nem futtat semmit, a végrehajtás lustán, az első akciónál indul.",
+			"points": [
+				"`createOrReplaceTempView`: a session-höz kötött név, nem fizikai tábla",
+				"A `spark.sql` eredménye DataFrame, láncolható",
+				"DataFrame-megfelelő: `groupBy(...).count()`",
+				"Azonos optimalizáló, hasonló terv; ellenőrzés `explain()`-nel, amely nem futtat semmit"
+			]
+		},
+		{
+			"id": "6v2dvtn1",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Miért érdemes kulcs-érték RDD-n az értékek átalakítására `mapValues`-t használni `map` helyett, különösen aggregációs láncokban?",
+			"answer": "A `mapValues(f)` csak az értéken dolgozik: a kulcs változatlan marad, ezért a Spark tudja, hogy a meglévő partícionálás továbbra is érvényes. Így egy utána következő kulcs szerinti művelet (pl. `reduceByKey`, `join`) nem shuffle-öl újra. A `map` a teljes párt kapja meg, és a kulcsot is módosíthatja, ezért a Spark elveszíti a partícionálási információt. Ez fölösleges shuffle-t okozhat. Az átlagolási láncban ezért `mapValues(lambda x: (x, 1))` és a végén `mapValues(lambda p: p[0]/p[1])` szerepel. A kód rövidebb is, mert nem kell a kulcsot kézzel visszaírni.",
+			"points": [
+				"A `mapValues` csak az értéket alakítja, a kulcs változatlan",
+				"Megtartja a partícionálást, így a következő kulcs szerinti művelet nem shuffle-öl újra",
+				"A kulcsot is érintő `map` elveszíti a partícionálást",
+				"Példa: `(x,1)` párok képzése és az osztás az átlagláncban"
+			]
+		},
+		{
+			"id": "zp5x5xny",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Miért és hogyan érdemes cache-elni egy összekapcsolt (join-olt) DataFrame-et, ha több aggregációt vagy akciót futtatsz rajta?",
+			"answer": "A Spark lustán értékel ki, ezért cache nélkül minden akció (`show()`, `count()`, egy újabb aggregáció) a teljes lineage-et újra lefuttatja, a joint is beleértve. A `.cache()` hívás után az első akció kiszámolja és a memóriába tölti az eredményt, a további akciók pedig már onnan olvasnak. Ez a Spark UI-ban is látszik. Maga a `cache()` lusta, nem számol semmit, csak megjelöli az adathalmazt. DataFrame-en a szintje `MEMORY_AND_DISK`, RDD-n `MEMORY_ONLY`. Ha már nincs rá szükség, az `unpersist()` felszabadítja a tárolt adatot.",
+			"points": [
+				"Cache nélkül minden akció újraszámolja a joint (lusta kiértékelés)",
+				"A `cache()` lusta: az első akció tölti fel, a többi onnan olvas",
+				"DataFrame-en `MEMORY_AND_DISK`, RDD-n `MEMORY_ONLY`",
+				"Felszabadítás `unpersist()`-tel; a hatás a Spark UI-ban ellenőrizhető"
+			]
+		},
+		{
+			"id": "4u1z0frc",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Hasonlítsd össze az előfordulások megszámolását `countByValue`/`countByKey` akcióval, illetve `map(→(x,1))` + `reduceByKey` lánccal! Mikor melyik a megfelelő?",
+			"answer": "A `countByValue()` az egyes értékek, a `countByKey()` a kulcsok előfordulásait számolja meg. Mindkettő akció, és az eredményt Python dictként a driverre hozza. Ezért csak akkor használhatók, ha kevés a különböző érték, különben a driver memóriája lesz a szűk keresztmetszet. A `map(lambda x: (x, 1)).reduceByKey(lambda a, b: a + b)` lánc transzformáció: az eredmény elosztott RDD marad, és a `reduceByKey` combinerrel elő-összesít a shuffle előtt. Ez nagy kardinalitás mellett is skálázódik, és az eredmény tovább feldolgozható (rendezés, join), vagy `saveAsTextFile`-lal kiírható. Ugyanez a minta a WordCount alapja.",
+			"points": [
+				"`countByValue`/`countByKey`: akció, az eredmény dict a driveren",
+				"Csak kevés különböző érték esetén használható",
+				"A `(x,1)` + `reduceByKey` elosztott marad, combinerrel elő-összesít, skálázódik",
+				"Az RDD-eredmény tovább láncolható vagy kiírható"
+			]
+		},
+		{
+			"id": "4mao36im",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Hogyan számolnád ki városonként az átlagos mért értéket, ha a mérések (`df`, `location` oszloppal) és a helyek (`dfLoc`: `location`, `city`, `id`) külön DataFrame-ben vannak? Milyen döntéseket kell meghozni?",
+			"answer": "Először összekapcsoljuk a két táblát: `df.join(dfLoc, on=\"location\", how=...)`. Az `on=` alakú join nem duplikálja a `location` oszlopot. A join típusa határozza meg, mely rekordok maradnak meg. `inner` esetén csak azok a mérések, amelyekhez van hely. `left` esetén minden mérés megmarad, és ahol nincs illeszkedő hely, ott a `city` NULL lesz, így ezek egy külön NULL csoportot alkotnak. Ezután `groupBy(\"city\").agg(avg(\"value\").alias(\"Avg_value\"))` adja az átlagot városonként, és szükség esetén `orderBy` rendez. Ha az eredményt több akció is használja, érdemes a join-olt DataFrame-et cache-elni.",
+			"points": [
+				"Join a `location` kulcson (`on=` alakkal nincs duplikált oszlop)",
+				"A join típusa (inner/left) határozza meg, mely mérések maradnak; leftnél NULL város",
+				"`groupBy(\"city\").agg(avg(\"value\").alias(...))`",
+				"Opcionális rendezés vagy cache többszöri használathoz"
+			]
+		},
+		{
+			"id": "ab9d9dvh",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Hasonlítsd össze ugyanannak az aggregációs feladatnak (pl. szenzoronkénti darabszám vagy legmelegebb nap) RDD-s és DataFrame-es megoldását!",
+			"answer": "DataFrame-mel a feladat deklaratív: `filter` a hőmérsékletre, `to_date(timestamp)`, majd `groupBy`/`agg(max)` vagy `orderBy(desc)`. A szenzoronkénti darabszám egyszerűen `groupBy(\"sensor_id\").count()` csökkenő rendezéssel. RDD-vel mindent kézzel kell megírni: `textFile`, `map` a JSON értelmezésére és a típusok kezelésére, `filter`, majd `reduce`/`sortBy` vagy `(kulcs, 1)` párok `reduceByKey`-vel. A DataFrame-változat rövidebb, a séma és a típusok ismertek. A fő különbség, hogy a DataFrame-lekérdezés az optimalizáló számára átlátható, így az átszervezheti a végrehajtást. Az RDD-s lambdák viszont fekete dobozok, ott a hatékonyságért a programozó felel. Mindkettő lustán kiértékelt, DAG-ütemezésű végrehajtásra fordul.",
+			"points": [
+				"DataFrame: `filter`, `to_date`, `groupBy`/`agg`, `orderBy`",
+				"RDD: kézi feldolgozás és típuskezelés, `map`/`filter`/`reduce`/`reduceByKey`",
+				"A DataFrame rövidebb és az optimalizáló számára átlátható",
+				"Mindkettő lusta, DAG-ütemezéssel fut"
+			]
+		},
+		{
+			"id": "9jrlhhvw",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Írd le a WordCount feldolgozási láncot Pythonban, és magyarázd el, hány stage-re bomlik a job és miért!",
+			"answer": "A lánc: `sc.textFile(path)` soronként ad elemet. A `flatMap(lambda line: line.split(\" \"))` szavakra bont és lapít; `map`-pel listák listája maradna. A `map(lambda w: (w, 1))` párokat képez, a `reduceByKey(lambda a, b: a + b)` szavanként összegez, végül egy akció (pl. `foreach` vagy `saveAsTextFile`) indítja el a számítást. A `flatMap` és a `map` keskeny (narrow) transzformációk, egy partíción belül futnak. A `reduceByKey` viszont kulcs szerinti újraparticionálást (shuffle-t) igényel, és `ShuffledRDD`-t hoz létre. A DAG Scheduler a shuffle-határ mentén bont, ezért a job két stage-ből áll. Az első stage a bemeneti partíciókon fut a `map`-ig, egy-egy taskkal partíciónként. A második stage az újraparticionált adaton végzi az összevonást és az akciót.",
+			"points": [
+				"`textFile` → `flatMap(split)` → `map((w,1))` → `reduceByKey(+)` → akció",
+				"`flatMap` vs. `map`: lapított eredmény",
+				"A narrow transzformációk egy stage-ben maradnak, a `reduceByKey` shuffle-t okoz",
+				"A shuffle-határ miatt két stage keletkezik; task partíciónként"
+			]
+		}
+	]
+}

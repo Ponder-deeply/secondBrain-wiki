@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 09_ea_An3_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Többváltozós integrálhatóság és kritériumai
@@ -63,6 +65,10 @@ Ez a függvény bármely Jordan-mérhető halmazon integrálható, és az integr
 
 A Jordan-mérték kiterjesztése a **Lebesgue-mérték**. A mértékelmélet kurzuson bebizonyítjuk, hogy bármely $A \in \mathcal{J}_p$ halmaz és korlátos $f : A \to \mathbb{R}$ esetén $f$ akkor és csak akkor Riemann-integrálható, ha egy **Lebesgue-nullmértékű** halmaz kivételével folytonos. A fenti ellenpélda éppen azt mutatja, hogy a Jordan-nullmértékűség ehhez túl erős követelmény.
 
+### Gyakorló példák
+
+Az $f=0$ ha $x,y$ racionális, $f=1$ különben függvény nem Riemann-integrálható a $[0,1]^2$-en. Az $f=1/q$ ($x=p/q$ racionális, $y$ racionális), különben $0$ függvény integrálható és az integrálja $0$, de a racionális $x$-hez tartozó $\int f(x,y)dy$ nem létezik: az iterált integrálok létezése tehát nem szükséges.
+
 ## Kapocs
 
 - [[concepts/analiii/jordan-mertek-szerinti-integral]] — az alsó és felső integrál, amelyek különbsége az oszcillációs összeg határértéke
@@ -71,3 +77,4 @@ A Jordan-mérték kiterjesztése a **Lebesgue-mérték**. A mértékelmélet kur
 - [[concepts/analii/integralhato-fuggvenyek]] — az egyváltozós Darboux-kritérium, amelynek ez a szó szerinti általánosítása; ott $\Omega(f,\tau) = \sum (M_i-m_i)(x_i-x_{i-1})$, itt a hosszak helyére Jordan-mértékek lépnek
 - [[concepts/analii/folytonos-fuggvenyek-integralhatasaga]] — az egyváltozós „folytonos $\Rightarrow$ integrálható" tétel, amelynek ez a nullmértékű kivételhalmazt megengedő erősítése
 - [[concepts/analii/riemann-fuggveny]] — az itt szereplő ellenpélda a Riemann-függvény többdimenziós rokona
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

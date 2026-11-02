@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 08_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 08_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Paraméteres integrál integrálhatósága
@@ -65,8 +67,20 @@ Ez a bizonyítás a fejezet másik két tételét (a folytonossági és a deriv�
 
 Ez a tétel nemcsak önmagában érdekes: az integráljel alatti deriválás improprius esetének bizonyítása éppen ezen múlik, hiszen ott a $\frac{\partial}{\partial t} f$ paraméteres integráljának $t$ szerinti integrálását kell az $x$ szerintivel felcserélni.
 
+### Feladatok
+
+**Paraméteres integrál kiszámítása a sorrend felcserélésével.** Igazoljuk, hogy $0<a<b$ esetén $\displaystyle\int_0^1 \frac{x^b-x^a}{\ln x}\,\mathrm{d}x=\ln\frac{b+1}{a+1}$. *(An III gyak. 10., további feladatok)*
+
+- Az $g(x)=\frac{x^b-x^a}{\ln x}$ folytonos $(0,1)$-en, $g(0+0)=0$, $g(1-0)=b-a$, ezért az integrál létezik.
+- Az $f(x,y)=x^y$ függvény folytonos a $[0,1]\times[a,b]$ téglán, így a Fubini-tétel szerint a két sorrend egyenlő.
+- Egyik sorrend: $\int_a^b\int_0^1 x^y\,\mathrm{d}x\,\mathrm{d}y=\int_a^b\frac{1}{y+1}\,\mathrm{d}y=\ln\frac{b+1}{a+1}$.
+- Másik sorrend: $\int_0^1\int_a^b x^y\,\mathrm{d}y\,\mathrm{d}x=\int_0^1\frac{x^b-x^a}{\ln x}\,\mathrm{d}x$. Az egyenlőség $-1<a<b$ esetén is igaz.
+
+A módszer: a nehezen primitiválható integrandust egy $\int_a^b\ldots\mathrm{d}y$ alakú paraméteres integrálként ismerjük fel, és megcseréljük a sorrendet.
+
 ## Kapocs
 
 - [[concepts/analiii/parameteres-integral]] — a fogalom, a domináns függvény és a folytonossági tétel.
 - [[concepts/analiii/parameteres-integral-differencialasa]] — annak bizonyítása erre a sorrendcserére épül.
 - [[concepts/analiii/szorzathalmaz-merteke-es-integralja]] — a sorrendcsere másik, szorzatalakú integrandusra vonatkozó esete.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

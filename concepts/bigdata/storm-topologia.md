@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/storm-stream-feldolgozas]
+tags: [concept]
 sources: [EA5_storm.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-12
 ---
 

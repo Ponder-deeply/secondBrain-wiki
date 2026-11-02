@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, 06_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, 06_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, 05_gyak_An_III_2022_tavasz.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.3. szakasz bevezetése"]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Magasabb rendű parciális deriváltak
@@ -58,6 +60,13 @@ $$\partial_{xx} f = 6x,\quad \partial_{xy} f = z,\quad \partial_{xz} f = y,\quad
 
 harmadrendben pedig például $\partial_{xxx} f = 6$, $\partial_{xyx} f = 0$, $\partial_{xyz} f = 1$.
 
+### Feladatok
+
+- $f=x^3y+x^2y^2+x+y^2$ másodrendű parciálisai az $(1,0)$-ban: $\partial_{xx}f=0$, $\partial_{xy}f=\partial_{yx}f=3$, $\partial_{yy}f=4$.
+- $f=x^3e^{y^2}$ az $(2,1)$-ben: $f=8e$, $\partial_xf=3x^2e^{y^2}=12e$, $\partial_yf=2x^3ye^{y^2}=16e$, $\partial_{xx}f=6xe^{y^2}=12e$, $\partial_{xy}f=6x^2ye^{y^2}=24e$, $\partial_{yy}f=2x^3e^{y^2}(1+2y^2)=48e$.
+- $f\in D^3$, $F(x,y,z)=f(xyz)$: $\partial_{123}F=g(xyz)$ alkalmas $g$-vel ([[concepts/analiii/lancszabaly]]).
+- Jelölés: e lap és a gyakorlati lapok (gyak 5., 6.) szerint $\partial_{ij}f=\partial_j(\partial_if)$, tehát $\partial_{12}f=\partial_2(\partial_1f)$. Ezzel az $xy\frac{x^2-y^2}{x^2+y^2}$ függvénynél $\partial_{12}f(0,0)=-1$ és $\partial_{21}f(0,0)=1$ (gyak 6. lap 4. feladat; $\partial_1f(0,t)=-t$, $\partial_2f(t,0)=t$). CORRECTION: korábban itt a fordított sorrendű jelölés és az $1$, $-1$ értékek szerepeltek, ami ellentmondott a lap definíciójának. A fordított jelölést használó jegyzetnél a két érték felcserélődik. Lásd [[concepts/analiii/young-tetel]].\n- A gyak 5. lap 3. feladata: $f=x^3y+x^2y^2+x+y^2$: $\\partial_xf=3x^2y+2xy^2+1$, $\\partial_yf=x^3+2x^2y+2y$, $\\partial_{xx}=6xy+2y^2$, $\\partial_{xy}=\\partial_{yx}=3x^2+4xy$, $\\partial_{yy}=2x^2+2$; az $(1,0)$-ban $0,3,3,4$ (a vegyes deriváltak egyeznek, mert $f$ polinom, [[concepts/analiii/young-tetel]]).
+
 ## Kapocs
 
 - [[concepts/analiii/hesse-matrix]] — a másodrendű parciális deriváltakból álló mátrix.
@@ -65,3 +74,4 @@ harmadrendben pedig például $\partial_{xxx} f = 6$, $\partial_{xyx} f = 0$, $\
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — a $\operatorname{grad} f \in D\{a\} \iff \partial_i f \in D\{a\}$ ekvivalencia.
 - [[concepts/analiii/folytonosan-differencialhato-fuggveny]] — a $k = 1$ eset.
 - [[concepts/analii/magasabb-rendu-derivaltak]] — az egyváltozós eredeti, ahol nincs definíciós akadály.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

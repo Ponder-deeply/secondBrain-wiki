@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [2.-lingram-és-regexp.md]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-04-07
 ---
 

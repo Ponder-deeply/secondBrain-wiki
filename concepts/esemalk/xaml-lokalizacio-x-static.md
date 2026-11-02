@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/lokalizacio]
+tags: [concept]
 sources: [elte_eva_ea12_localization.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Lokalizált erőforrások megjelenítése (WinForms tervező, WPF/Avalonia XAML)
@@ -44,7 +46,7 @@ erőforrásokat az `x:Static` hivatkozással tölthetjük be:
    ```
 2. ezt felhasználva tölthető be a kívánt erőforrás:
    ```xml
-   <Label Text="{x:Static resx:AppText.Test}" />
+   <Label Content="{x:Static resx:AppText.Test}" />
    ```
 
 ### Példák

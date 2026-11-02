@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/gepi-szamabrazolas-es-hibaszamitas]
+tags: [concept]
 sources: [NM1_ea01.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-08-05
 ---
 

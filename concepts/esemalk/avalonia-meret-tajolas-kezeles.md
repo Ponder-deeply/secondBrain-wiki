@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/avaloniaui-halado-temak]
+tags: [concept]
 sources: [elte_eva_ea10_avaloniaui_complex.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 
@@ -74,5 +76,5 @@ nézetmodell állapotát.
   `IsPortrait`/`IsLandscape` alapján) a stílusrendszer eszközei
 - [[concepts/esemalk/avalonia-kezmozdulat-kezeles]] — a mobil környezet másik
   jellemző alkalmazkodási igénye
-- [[concepts/esemalk/wpf-elrendezes-tulajdonsagok]] — a relatív elrendezés
+- [[concepts/esemalk/wpf-panelek]] — a relatív elrendezés
   WPF oldali megfelelője

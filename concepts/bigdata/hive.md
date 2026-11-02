@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/hadoop-okoszisztema]
+tags: [concept]
 sources: [EA2_hadoop.pdf]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: air
+updated: 2026-09-30
 ---
 
 # Hive
@@ -117,8 +119,9 @@ page_view;`, `DESCRIBE page_view;`, `DESCRIBE EXTENDED page_view;`,
   /user/data/staging/page_view`, majd `INSERT OVERWRITE TABLE ... PARTITION(...)
   SELECT ... WHERE ...` egy staging táblából a célpartícióba.
 - **Fájlrendszerről**: `LOAD DATA LOCAL INPATH ... INTO TABLE ... PARTITION(...)`
-  (a `LOCAL` kulcsszó nélkül a HDFS-en lévő inputfájlt a Hive **törli**
-  betöltés után).
+  (a `LOCAL` kulcsszó nélkül a HDFS-en lévő inputfájlt a Hive **áthelyezi**
+  (mozgatja) a tábla warehouse-könyvtárába, így az eredeti helyéről
+  eltűnik).
 
 ### Tábla létrehozása
 

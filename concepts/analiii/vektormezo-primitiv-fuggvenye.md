@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, gyakorlat.pdf]
 derivation: source
-updated: 2026-09-06
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Vektormező primitív függvénye
@@ -49,6 +51,19 @@ A puszta definícióból nem látszik, mikor van primitív függvénye egy vekto
 
 - **folytonos** $f$ esetén a vonalintegrálok úttól való függetlensége az ekvivalens jellemzés (konzervatív vektormezők);
 - **differenciálható** $f$ esetén a rotációmentesség szükséges feltétel, amely elég sok jó tulajdonságú tartományon (konvex, csillagszerű, egyszeresen összefüggő) elégséges is.
+
+### Feladatok
+
+**Módszer.** Vonalintegrál kiszámításához először megnézzük, van-e primitív függvény (a $\partial_jf_i=\partial_if_j$ szükséges feltétel, csillagszerű tartományon elégséges); ha igen, az integrál a végpontbeli értékek különbsége, az út alakja közömbös, zárt útra $0$. *(gyakorlat.pdf, Vonalintegrálok 2–4.)*
+
+- $\int_{(-1,1)}^{(2,3)}y\,\mathrm{d}x+x\,\mathrm{d}y$: a primitív függvény $xy$, az érték $6-(-1)=7$.
+- $\int_{(0,0)}^{(a,b)}f(x,y)(\mathrm{d}x+\mathrm{d}y)$, $f\in C$: a primitív függvény $G(x+y)$, $G'=f$, az érték $\int_0^{a+b}f$.
+- $\int_{(2,1)}^{(1,2)}\frac{y\,\mathrm{d}x-x\,\mathrm{d}y}{x^2}$: az integrandus $-\mathrm{d}\left(\frac yx\right)$, az érték $-\left(2-\frac12\right)=-\frac32$.
+- $\int_{(1,0)}^{(6,8)}\frac{x\,\mathrm{d}x+y\,\mathrm{d}y}{\sqrt{x^2+y^2}}$: a primitív függvény $\sqrt{x^2+y^2}$, az érték $10-1=9$.
+- $\int_{(a,b)}^{(c,d)}g(x)\,\mathrm{d}x+h(y)\,\mathrm{d}y=G(c)-G(a)+H(d)-H(b)$.
+- Ha $\varphi$ sima zárt út, akkor $\int_\varphi f(x^2+y^2)(x\,\mathrm{d}x+y\,\mathrm{d}y)=0$, mert a primitív függvény $\frac12F(x^2+y^2)$, $F'=f$.
+- Primitív függvény megadása: $f=(x^2+2xy-y^2,\ x^2-2xy-y^2)$ esetén $\partial_yf_1=2x-2y=\partial_xf_2$, és $F=\frac{x^3-y^3}3+x^2y-xy^2$ (integrálással, majd a hiányzó $g(y)$ meghatározásával).
+- $f=\left(\frac{y}{3x^2-2xy+3y^2},\,-\frac{x}{3x^2-2xy+3y^2}\right)$ ($x,y>0$; a nyomtatott feladatban az egyik tag elírt, itt $-2xy$-nal számoltunk): $\partial_yf_1=\partial_xf_2=\frac{3x^2-3y^2}{(3x^2-2xy+3y^2)^2}$, a $t=\frac yx$ helyettesítéssel $F=-\frac1{2\sqrt2}\operatorname{arctg}\frac{3y/x-1}{2\sqrt2}$.
 
 ## Kapocs
 

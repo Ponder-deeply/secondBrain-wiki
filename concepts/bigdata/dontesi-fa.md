@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [BDAEM-2022-EA7.pptx]
 derivation: source
-updated: 2026-09-12
+kind: model
+element: water
+updated: 2026-09-30
 ---
 
 # Döntési fa (Decision Tree)
@@ -37,7 +39,8 @@ adathalmaz-részlet. A következő split-et mindig a magasabb tisztaságot
 Az entrópia egy adathalmaz-részlet kevertségének (impurity) mértéke:
 
 - ha minden példa ugyanabba az osztályba tartozik: entrópia = 0,
-- ha a példák egyenletesen oszlanak meg az osztályok között: entrópia = 1.0.
+- ha a példák egyenletesen oszlanak meg az osztályok között: entrópia maximális — két osztály esetén
+  1.0, általában $k$ osztályra $\log_2 k$.
 
 Az entrópia definíciója (osztályonkénti $p_i$ arányokkal, minden osztályra
 összegezve):

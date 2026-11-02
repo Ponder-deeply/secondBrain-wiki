@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [wiki.haskell.org/Lazy_evaluation, Hutton ch 12]
 derivation: unsourced
+kind: definition
+element: water
 updated: 2026-05-18
 ---
 

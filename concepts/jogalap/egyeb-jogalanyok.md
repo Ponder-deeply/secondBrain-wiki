@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [05_Egyeb_jogalanyok.md]
 derivation: source
+kind: comparison
+element: air
 updated: 2026-08-12
 ---
 

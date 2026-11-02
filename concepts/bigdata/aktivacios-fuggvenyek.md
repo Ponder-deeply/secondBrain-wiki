@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/deep-learning-bevezetes]
+tags: [concept]
 sources: [BDAEM-2022-EA12.pdf]
 references: ["https://en.wikipedia.org/wiki/Activation_function"]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-12
 ---
 

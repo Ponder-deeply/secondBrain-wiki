@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/kongruenciak]
-sources: [DimatIIEa02.pdf]
+tags: [concept]
+sources: [DimatIIEa02.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: fire
+updated: 2026-10-21
 ---
 
 # Kínai maradéktétel

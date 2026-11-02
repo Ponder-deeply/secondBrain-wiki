@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
-sources: [Rezolúció_II.pdf]
+tags: [concept]
+sources: [Rezolúció_II.pdf, Szabo-Ivan-Elsorendu-logika-egyetemi-jegyzet.pdf]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Prenex forma
@@ -63,9 +65,14 @@ Ez már prenex formula; a magja DNF alakú.
 
 A prenex forma az első lépés a formula elsőrendű klózok konjunkciójává alakításához: a prenex formából [[concepts/logika/skolem-normalforma|Skolem normálforma]] állítható elő, amiből viszont [[concepts/logika/elsorendu-kloz|elsőrendű klózok]] konjunkciója írható fel.
 
+### Előfeltétel: kiigazított formula
+
+A nyolc kvantorkiemelési ekvivalencia (pl. $(\exists xF)\vee G\equiv\exists x(F\vee G)$, valamint a $\wedge$/$\vee$, $\exists$/$\forall$ és az oldalcsere variánsai, valamint a negáláson átvezetett $\neg\exists xF\equiv\forall x\neg F$, $\neg\forall xF\equiv\exists x\neg F$) akkor biztosan érvényesek, ha $F$-ben nincs szabad $x$. Ezt a [[concepts/logika/valtozoiban-tiszta-alak|kiigazított]] formula garantálja, ezért a kiemelés előtt át kell nevezni a kötött változókat, és előbb el kell tüntetni a $\to$, $\leftrightarrow$ jeleket.
+
 ## Kapocs
 
 - [[concepts/logika/elsorendu-formula]] — a kvantormentesség és a kvantorok fogalma, amire a prenex forma épül
 - [[concepts/logika/szabad-es-kotott-valtozo]] — a kvantorkiemelésnél szükséges változóátnevezés háttere
 - [[concepts/logika/skolem-normalforma]] — a prenex formából Skolem-formulává alakítás következő lépése
 - [[concepts/logika/elsorendu-kloz]] — a klózhalmazzá alakítás célformája
+- [[concepts/logika/valtozoiban-tiszta-alak]] — a kiigazítás: a kvantorkiemelés érvényességének feltétele

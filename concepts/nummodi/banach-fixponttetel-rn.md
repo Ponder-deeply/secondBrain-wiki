@@ -1,7 +1,9 @@
 ---
-tags: [concept, nummodi/iterativ-modszerek-ler-re]
+tags: [concept]
 sources: [NM1_ea08.pdf]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-08-05
 ---
 
@@ -110,3 +112,4 @@ tehát az iteráció bármely $x^{(0)} \in \mathbb{R}^2$ kezdőértékre konverg
 - [[concepts/nummodi/matrixnormak]] — spektrálsugár $\varrho(B)$, indukált normák
 - [[concepts/nummodi/vektornormak]] — vektornorma konvergencia-fogalma
 - [[concepts/nummodi/kondicioszam]] — kondíciószám kapcsolata az iteráció sebességével
+- [[concepts/nummodi/nemlinearis-egyenletek-fixpont]] — ugyanez a tétel $[a;b]$-n, nemlineáris egyenletekre

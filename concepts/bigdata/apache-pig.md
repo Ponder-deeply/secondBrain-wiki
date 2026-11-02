@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/hadoop-okoszisztema]
+tags: [concept]
 sources: [EA2_hadoop.pdf]
 derivation: source
+kind: model
+element: air
 updated: 2026-09-12
 ---
 

@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [BDAEM-2022-EA9.pptx]
 derivation: source
+kind: overview
+element: water
 updated: 2026-09-12
 ---
 

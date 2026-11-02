@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/algebrai-strukturak]
-sources: [DimatIIEa04.pdf]
+tags: [concept]
+sources: [DimatIIEa04.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy07_Polinomok.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Polinomgyűrű és a polinom alapfogalmai
@@ -54,6 +56,20 @@ alakba írjuk. Ekkor
 - $n$ a polinom **foka**, jelölése $\deg(f)$.
 
 **Példa.** Az $f = (1, 0, 2, 0, 0, 3, 0, \ldots)$ polinom felírható $f(x) = 1 + 0x + 2x^2 + 0x^3 + 0x^4 + 3x^5$ alakban; további szokásos alakjai $f(x) = 1 + 2x^2 + 3x^5$ és $f(x) = 3x^5 + 2x^2 + 1$.
+
+### Konstans polinomok és az $x$ változó (Farkas-diák)
+
+Az $a \mapsto f_a = (a, 0, 0, \ldots)$ megfeleltetés injektív és műveletőrző, és $a \cdot f = f_a \cdot f$, ezért $R$ elemei $R$ fölötti **konstans polinomoknak** tekinthetők. A **változó** az $x = (0, e, 0, \ldots)$ polinom (ahol $e$ az egységelem; vigyázat: lehet, hogy $e \notin R$, ha $R$-nek nincs egységeleme). A szorzás definíciójából $x^2 = (0, 0, e, 0, \ldots)$, általában $x^n = (0, \ldots, 0, e, 0, \ldots)$ ($e$ az $n$-edik pozíción), és $x^0 = (e, 0, \ldots)$; így
+
+$$f = (a_0, a_1, \ldots, a_n, \ldots) = (a_0, 0, \ldots) + \ldots + (0, \ldots, a_n, \ldots) = a_0 + a_1 x + \ldots + a_n x^n.$$
+
+A tételt a diák is kimondják: ha $R$ egységelemes / kommutatív / nullosztómentes, akkor $R[x]$ is az.
+
+### Feladattípusok és módszerek: bizonyítandó állítások (gyakorlati feladatsor, 7. hét)
+
+- **$R[x]$ gyűrű tetszőleges $R$ gyűrű fölött:** az összeadás együtthatónkénti, ezért $(R[x],+)$ Abel-csoport; a konvolúciós szorzás asszociativitása és disztributivitása az $R$-beli azonosságokból, az indexek átrendezésével adódik: $((fg)h)_k=\sum_{i+j+l=k}f_ig_jh_l=(f(gh))_k$.
+- **Mikor egységelemes integritási tartomány $R[x]$?** Pontosan akkor, ha $R$ az; példa $R=\mathbb{Z}$ (vagy bármely test). Lásd az öröklődő tulajdonságokat fent.
+- **Soha nem test $R[x]$:** az $x$ nem invertálható, mert bármely $g$-re az $xg$ konstans tagja $0\ne1$. Test fölött $R[x]$ euklideszi gyűrű, de sosem test.
 
 ## Kapocs
 

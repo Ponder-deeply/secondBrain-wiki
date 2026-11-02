@@ -2,6 +2,8 @@
 tags: [concept]
 sources: ["3.-automata,-det-&-nemdet.md"]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-04-07
 ---
 

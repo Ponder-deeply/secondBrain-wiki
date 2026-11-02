@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 1.2. xv)–xviii) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Félmetrika és félmetrikus tér
@@ -70,6 +72,12 @@ Speciális esetként adódik, hogy a számsorozatok halmazán
 $$\bigl((x_n),(y_n)\bigr) \mapsto \sup\Bigl\{\frac{|x_n-y_n|}{1+|x_n-y_n|} : n \in \mathbb{N}\Bigr\}$$
 
 metrika: a fenti „$N$-edik tagot néző" félmetrikák szuprémuma.
+
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 9. feladat.*
+
+- **Félmetrikából metrika.** $x\sim y\iff\rho(x,y)=0$ ekvivalenciareláció (tranzitivitás a háromszög-egyenlőtlenségből), és $\hat\rho(\hat x,\hat y)=\rho(x,y)$ jól definiált metrika az ekvivalenciaosztályokon: $\rho(x',y')\le\rho(x,y)+\rho(x,x')+\rho(y,y')=\rho(x,y)$ és fordítva, ha $x'\sim x$, $y'\sim y$. Alkalmazás: $X=R[0,1]$, $\rho(f,g)=\int_0^1|f-g|$ — az osztályok a majdnem mindenütt egyenlő függvények.
 
 ## Kapocs
 

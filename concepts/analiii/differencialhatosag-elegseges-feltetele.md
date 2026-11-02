@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, An_III_Gyak_2022_tavasz.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.1.5. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # A differenciálhatóság elégséges feltétele
@@ -60,6 +62,13 @@ $$h(a+x) - h(a) = \langle A, x\rangle + \eta(x)\cdot\|x\|_\infty,$$
 
 A gyakorlatban ez az egyetlen kézzelfogható eszköz a differenciálhatóság igazolására: a parciális deriváltak kiszámíthatók, és általában láthatóan folytonosak (elemi függvények kompozíciói). A definíció szerinti közvetlen ellenőrzés csak a patologikus eseteknél kerülhetetlen.
 
+### Feladatok
+
+A polinom és a racionális törtfüggvény parciális deriváltjai folytonosak, így $f\in D$ ellenőrizhető rajtuk (pl. $2x^2+3xy-y^2$, $(x^3+xy,x-y^2,1+y)$). A tétel fordítottja hamis: $(x^2+y^2)\sin\tfrac1{x^2+y^2}$ differenciálható az origóban, a parciálisai viszont nem folytonosak ott ($\partial_1f(x_n,0)\to-\infty$ a $\tfrac1{x_n^2}=2n\pi$ sorozaton). A jegyzet megjegyzése: az erős deriválhatóság nem vonja maga után a parciálisok folytonosságát. Részletek: [[concepts/analiii/parcialis-derivalt]], [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]].
+
+- **Nem szükséges feltétel (gyak 6. lap 3. feladat).** $f=(x^2+y^2)\sin\tfrac1{x^2+y^2}$, $f(0,0)=0$. (a) $\partial_xf=2x\sin\tfrac1{x^2+y^2}-\tfrac{2x}{x^2+y^2}\cos\tfrac1{x^2+y^2}$ ($(x,y)\ne0$), $\partial_xf(0,0)=\lim x\sin\tfrac1{x^2}=0$ ($|x\sin\tfrac1{x^2}|\le|x|$); $\partial_y$ szimmetrikusan. (b) A parciálisok nem folytonosak $0$-ban: az $x_n=y_n=\tfrac1{2\sqrt{n\pi}}$ sorozaton $\partial_xf(x_n,y_n)\to-\infty\ne0$. (c) Mégis $f\in D\{(0,0)\}$, $f'(0,0)=[0\ 0]$, mert $\dfrac{|f|}{\sqrt{x^2+y^2}}\le\sqrt{x^2+y^2}\to0$.
+- **Alkalmazás (gyak 6. lap 2. feladat).** $\sqrt{x^2-2y^2}$ parciálisai a nyílt $x^2>2y^2$ halmazon folytonosak, ezért ott totálisan deriválható ([[concepts/analiii/fuggvenygrafikon-erintosikja]]).
+
 ## Kapocs
 
 - [[concepts/analiii/parcialis-derivalt]] — a feltételekben szereplő objektumok.
@@ -67,3 +76,4 @@ A gyakorlatban ez az egyetlen kézzelfogható eszköz a differenciálhatóság i
 - [[concepts/analiii/folytonosan-differencialhato-fuggveny]] — a $C^1$ osztály, amelyet ez a tétel jellemez.
 - [[concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja]] — miért kell a folytonossági feltétel: ellenpéldák nélküle.
 - [[concepts/analii/kozeptertekek]] — a bizonyítás motorja, a Lagrange-középértéktétel.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

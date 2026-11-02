@@ -1,0 +1,221 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "2-eloadas-konvergencia-teljesseg",
+	"unitTitle": "2. előadás — Konvergencia, teljesség",
+	"type": "cloze",
+	"batches": [
+		{
+			"at": "2026-10-21T21:19:55.937Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T13:16:18.331Z",
+			"model": "opus",
+			"direction": "",
+			"added": 13
+		}
+	],
+	"questions": [
+		{
+			"id": "2zlx269h",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"q": "Metrikus térben az $(a_n)$ sorozat limesze $b$, ha $\\forall \\varepsilon>0\\ \\exists n_0\\ \\forall n>n_0:$ {{1}}, azaz $a_n\\in$ {{2}}.",
+			"blanks": [
+				"$d(a_n,b)<\\varepsilon$",
+				"$B(b,\\varepsilon)$"
+			]
+		},
+		{
+			"id": "x0bjc472",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"q": "$\\mathbb{R}^p$-ben ekvivalensek: (a) $\\mathbf{a}_n\\to\\mathbf{b}$; (b) {{1}}; (c) minden $1\\le i\\le p$ esetén {{2}}.",
+			"blanks": [
+				"$|\\mathbf{a}_n-\\mathbf{b}|\\to0$",
+				"$a_{n,i}\\to b_i$"
+			]
+		},
+		{
+			"id": "wuf2bxd6",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"q": "Ha $x_n\\to a$, akkor $\\rho(a,y)=\\lim\\rho(x_n,y)$, mert a {{1}} szerint $|\\rho(x_n,y)-\\rho(a,y)|\\le$ {{2}} $\\to0$.",
+			"blanks": [
+				"fordított háromszög-egyenlőtlenség",
+				"$\\rho(x_n,a)$"
+			]
+		},
+		{
+			"id": "61b0t0sa",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"q": "Az $(a_n)$ pontsorozat a $(H,d)$ metrikus térben Cauchy-tulajdonságú, ha $\\forall\\varepsilon>0\\ \\exists n_0\\ \\forall$ {{1}}: {{2}}.",
+			"blanks": [
+				"$m,n>n_0$",
+				"$d(a_m,a_n)<\\varepsilon$"
+			]
+		},
+		{
+			"id": "b397fv75",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"q": "Egy metrikus tér teljes, ha benne minden {{1}} konvergens. A teljes normált vektortereket {{2}}nek hívjuk.",
+			"blanks": [
+				"Cauchy-sorozat",
+				"Banach-tér"
+			]
+		},
+		{
+			"id": "y47sgmaw",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"q": "$\\mathbb{Q}$ a $d(x,y)=|x-y|$ metrikával nem teljes: a $1;\\,1{,}4;\\,1{,}41;\\,1{,}414;\\dots$ sorozat $\\mathbb{Q}$-ban is {{1}}, de nincs benne {{2}}.",
+			"blanks": [
+				"Cauchy",
+				"limesze"
+			]
+		},
+		{
+			"id": "bpuz1pvn",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"q": "A $\\bigl(C[-1,1],\\|\\cdot\\|_1\\bigr)$ térben a $-1$, $nx$, $1$ értékekből összerakott $f_n$ sorozat Cauchy, de nem tart semmilyen folytonos függvényhez, mert a „limesze” {{1}} lenne.",
+			"blanks": [
+				"az előjelfüggvény"
+			]
+		},
+		{
+			"id": "nmgbtixh",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"q": "Az $\\bigl(R[0,1],\\|\\cdot\\|_1\\bigr)$ térben előbb faktorizálni kell az $N=$ {{1}} altérrel. A kövér Cantor-halmazos példában az $f_n$ karakterisztikus függvények sorozata Cauchy, de a $C$ karakterisztikus függvénye, amely a limesz lenne, nem {{2}}.",
+			"blanks": [
+				"$\\{f : \\int_a^b|f| = 0\\}$",
+				"Riemann-integrálható"
+			]
+		},
+		{
+			"id": "hyixbhm6",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "base",
+			"q": "A gömbök nyelvén $a_n\\to b$ azt jelenti, hogy a sorozat minden $b$ körüli $\\varepsilon$ sugarú gömbbe {{1}} tag kivételével beleesik; a számsorozat-definícióban az abszolút érték helyére a {{2}} kerül.",
+			"blanks": [
+				"véges sok",
+				"metrika"
+			]
+		},
+		{
+			"id": "csvtncp9",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Nyílt és zárt gömbök",
+			"q": "$(H,d)$ metrikus térben az $a$ körüli $r>0$ sugarú nyílt gömb $B(a,r)=${{1}}, a zárt gömb pedig $\\overline{B}(a,r)=${{2}}.",
+			"blanks": [
+				"$\\{x\\in H : d(x,a)<r\\}$",
+				"$\\{x\\in H : d(x,a)\\le r\\}$"
+			]
+		},
+		{
+			"id": "xd9lqi2e",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/A limesz definíciója",
+			"q": "A sorozat {{1}}, ha van limesze, és {{2}}, ha nincs.",
+			"blanks": [
+				"konvergens",
+				"divergens"
+			]
+		},
+		{
+			"id": "cky7hlwu",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Trivialitások",
+			"q": "Konvergens sorozat minden {{1}} ugyanoda tart.",
+			"blanks": [
+				"részsorozata"
+			]
+		},
+		{
+			"id": "fqma2orc",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Koordinátánkénti konvergencia $\\mathbb{R}^p$-ben",
+			"q": "A tétel szerint egy $\\mathbb{R}^p$-beli vektorsorozat konvergenciája {{1}} darab {{2}} konvergenciájára esik szét.",
+			"blanks": [
+				"$p$",
+				"számsorozat"
+			]
+		},
+		{
+			"id": "0xzqyox1",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Konvergencia $C[a,b]$-ben",
+			"q": "$f_n\\xrightarrow{L_\\infty}g\\iff\\forall\\varepsilon>0\\ \\exists n_0\\ \\forall n>n_0$ {{1}}: $|f_n(x)-g(x)|<\\varepsilon$, ami pontosan az egyenletes konvergencia definíciója.",
+			"blanks": [
+				"$\\forall x\\in[a,b]$"
+			]
+		},
+		{
+			"id": "4emlzumn",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Az $f_k(x)=\\frac1{x+k}$ sorozat $[0,2]$-n $\\|\\cdot\\|_\\infty$-ben $0$-hoz tart, mert a szuprémum {{1}}; $x^k$ pedig $[0,\\alpha]$-n ($\\alpha<1$), mert $\\|x^k\\|_\\infty=${{2}}.",
+			"blanks": [
+				"$\\frac1k$",
+				"$\\alpha^k$"
+			]
+		},
+		{
+			"id": "xaukevd7",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "base",
+			"q": "A Cauchy-tulajdonság a konvergencia {{1}} megfogalmazása: nem hivatkozik a {{2}}.",
+			"blanks": [
+				"belső",
+				"limeszre"
+			]
+		},
+		{
+			"id": "4focnghp",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Cauchy-tulajdonság",
+			"q": "Ha $b=\\lim a_n$, és $n>n_0$ esetén $d(a_n,b)<\\varepsilon/2$, akkor $m,n>n_0$ esetén $d(a_m,a_n)\\le$ {{1}} $<\\varepsilon$.",
+			"blanks": [
+				"$d(a_m,b)+d(a_n,b)$"
+			]
+		},
+		{
+			"id": "og16joas",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$\\mathbb{R}^p$ Banach-tér",
+			"q": "Ha $(\\mathbf{a}_n)$ Cauchy-sorozat $\\mathbb{R}^p$-ben, akkor minden koordinátasorozata {{1}}, így $\\mathbb{R}$ {{2}} miatt konvergens.",
+			"blanks": [
+				"Cauchy",
+				"teljessége"
+			]
+		},
+		{
+			"id": "8kgdet4m",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$C[a,b]$ a maximumnormával Banach-tér",
+			"q": "Az (1)-ben $m\\to\\infty$ határátmenettel $\\max_x|f_n(x)-g(x)|\\le\\varepsilon$, tehát $f_n\\to g$ {{1}}, így $g\\in$ {{2}}.",
+			"blanks": [
+				"egyenletesen",
+				"$C[a,b]$"
+			]
+		},
+		{
+			"id": "yda1b3ee",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Ellenpéldák: az $L^1$ norma nem teljes",
+			"q": "Kövér Cantor-halmaz: $H_1=[0,1]$, és $H_n$ minden intervallumából kivesszük a középső {{1}} részt; legyen $C=${{2}}.",
+			"blanks": [
+				"$\\frac{1}{2^n}$",
+				"$\\bigcap H_n$"
+			]
+		},
+		{
+			"id": "y6awh3sd",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "Diszkrét térben egy Cauchy-sorozatra $\\varepsilon<1$-gyel van $k_0$, hogy $k,l>k_0$ esetén $\\rho(x_k,x_l)<1$, azaz {{1}}; így a sorozat {{2}}, tehát konvergens.",
+			"blanks": [
+				"$x_k=x_l$",
+				"kvázikonstans"
+			]
+		}
+	]
+}

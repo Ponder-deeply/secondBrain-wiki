@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
+tags: [concept]
 sources: [Rezolúció_II.pdf]
 references: [Tk. 273. o.]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-09-30
 ---
 
 # Legáltalánosabb illesztő helyettesítés
@@ -29,7 +31,7 @@ Legyen $W$ a vizsgált atomi formulahalmaz.
 
 A 4. lépés feltétele az ún. *occurs check*: ha $x_k$ előfordulna $t_k$-ban, a helyettesítés végtelen termet eredményezne, ezért ilyenkor nincs illesztő helyettesítés.
 
-### Példa — sikeres unifikáció
+### Példa — sikertelen unifikáció
 
 $W = \{Q(f(a), g(x)),\ Q(y,y)\}$
 

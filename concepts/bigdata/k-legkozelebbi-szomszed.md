@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [gyak3.pdf]
 derivation: inferred
-updated: 2026-09-12
+kind: model
+element: water
+updated: 2026-09-30
 ---
 
 # K legközelebbi szomszéd (K-NN)
@@ -24,7 +26,7 @@ osztályozásakor számítja ki. Egy új $x$ ponthoz:
    [[concepts/bigdata/tavolsag-hasonlosag-meresek]]);
 2. kiválasztjuk a $K$ legközelebbi tanítópontot;
 3. az új pont osztálya a $K$ szomszéd közötti **többségi szavazással**
-   dőlbe el (regresszió esetén az átlaguk adja az előrejelzést).
+   dől el (regresszió esetén az átlaguk adja az előrejelzést).
 
 ### A $K$ megválasztása
 

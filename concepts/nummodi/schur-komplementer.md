@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/megmaradasi-tetelek-es-specialis-felbontasok]
+tags: [concept]
 sources: [NM1_ea04.pdf]
 derivation: source
-updated: 2026-08-05
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Schur-komplementer

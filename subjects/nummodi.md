@@ -2,6 +2,7 @@
 tags:
   - subject
 sources:
+  - NM1_ea00.pdf
   - NM1_ea01.pdf
   - NM1_ea02.pdf
   - NM1_ea03.pdf
@@ -13,22 +14,45 @@ sources:
   - NM1_ea09.pdf
   - NM1_ea10.pdf
   - NM1_ea11.pdf
+  - NM1_ea12.pdf
   - NM1_ea13.pdf
+  - NM1AB_kovetelmenyek.pdf
+  - nummodi-canvas-hogyan-keszuljek-a-vizsgara.md
+  - nummodi-canvas-tanmenet.md
+  - nummodi-canvas-tudnivalok-a-hianyzasokrol.md
+  - nummodi-canvas-tudnivalok-a-vizsgarol.md
 derivation: source
-updated: 2026-08-05
+math: 85
+updated: 2026-10-23
 ---
 
 # Numerikus módszerek 1. (nummodi)
 
-Bevezetés a numerikus analízis alapvető módszereibe: lebegőpontos számábrázolás, közelítő számítások hibaelemzése, lineáris egyenletrendszerek direkt és iteratív megoldása, mátrixfelbontások, kondícionáltság, valamint nemlineáris egyenletek megoldása.
+Bevezetés a numerikus analízis alapvető módszereibe: lebegőpontos számábrázolás, közelítő számítások hibaelemzése, lineáris egyenletrendszerek direkt és iteratív megoldása, mátrixfelbontások, kondícionáltság, nemlineáris egyenletek megoldása és polinomok kiértékelése. A szóbeli vizsga mind a 28 tételéhez tartozik kidolgozott lap (lásd a tételjegyzéket lent).
 
 ## Tárgykör
 
 - Oktató: Krebsz Anna (ELTE IK)
-- Félév: iv. félév
+- Félév: v. félév (2026/27 ősz)
 - Kapcsolódó anyagok: `Wiki/outputs/nummodi/`
 - [[concepts/nummodi/tematika]] — a kurzus tematikája félév és témakör szerint
 - [[concepts/nummodi/kovetelmenyek]] — szóbeli tételjegyzék, 28 tétel Alap/Complex bontásban
+- [[concepts/nummodi/beugro-kerdesek]] — a beugró 75 kérdésének rövid, pontos válaszai
+- [[concepts/nummodi/peldatar-feladattipusok]] — a példatár feladattípusai és megoldási menetei (ZH-felkészülés)
+
+## Követelmények
+
+A félév követelményei (Programtervező informatikus BSc, A és B szakirány; forrás: a kari követelményrendszer és a Canvas-oldalak, 2026/27/1):
+
+- **Jelenlét:** az előadások látogatása kötelező, legalább **8 előadáson** jelen kell lenni (katalógusrendszer); a vizsgára jelentkezést az ennek nem megfelelőktől letiltják. Az előző félév legalább 4,0-s kreditindexe alapján az 1. héten elektronikus kérvényben felmentés kérhető. Ütköző előadás esetén a félév elején e-mailben kell jelezni mindkét oktatónak (név, Neptun-kód, hová jár be), a félév végén igazolni kell.
+- **Gyakorlati jegy:** két évfolyam-ZH (írásban, részletes indoklással; csak üres papír és toll, számológép sem), egyenként max. 50 pont, **18 pont** a sikeres szint. Mindkét ZH sikeres: összpontszám alapján 83–100 jeles (5), 67–82 jó (4), 51–66 közepes (3), 36–50 elégséges (2). Egy sikertelen ZH-t a félév végi javító ZH-n lehet pótolni (az eredmény felülírja a régit; sikertelen javítás vagy kihagyás: elégtelen); két sikertelen ZH: elégtelen (1). Jobb jegyért az egyik ZH javítható. Elégtelen gyakorlati jegyre egyszeri utóvizsga (gyakUV) tehető: mindkét témakörből külön-külön 40% kell; 40–70% között elégséges (2), 70% felett közepes (3).
+- **Házi feladatok:** a Canvasban kiadott feladatokra feladatonként 1 pont, félévente legfeljebb 10 pont; határidő az adott ZH, a javító ZH előtt már nem adhatók be; csak akkor számítanak, ha mindkét ZH sikeres.
+- **Vizsgára bocsátás:** legalább elégséges gyakorlati jegy (Neptunba beírva) és Neptunon keresztüli jelentkezés; arcképes igazolvány, papír, toll és a tételjegyzék viszik magukkal. Jelenléti vizsga.
+- **Vizsga, 1. rész — beugró:** 15 pontos, 20 perces írásbeli a Canvasban közzétett kérdésekből ([[concepts/nummodi/beugro-kerdesek]]); **8 pont** kell a szóbelire bocsátáshoz, különben a vizsgajegy elégtelen (1). Minden szóbeli előtt újra meg kell írni, még ha korábban sikerült is. Időbeosztás a vizsga napján: beugró 8:00–8:20, szóbeli 8:30-tól kb. 11:00-ig.
+- **Vizsga, 2. rész — szóbeli:** a vizsgáztató által kijelölt egy tétel kidolgozása részletesen (definíciók, tételek, bizonyítások), kb. 30–45 perc felkészüléssel ([[concepts/nummodi/kovetelmenyek]]). Az **a) rész** alaptudás: legalább egy előadáson elhangzott nem triviális tétel vagy levezetés kell az elégséges (2)-höz, teljes ismeretével legfeljebb közepes (3). A **b) rész** nagyobb bizonyítás vagy levezetés; csak ezzel szerezhető jó (4) vagy jeles (5), de nem helyettesíti az a) részt. A jegy eldöntésére más tételből is kérdezhetnek.
+- **Beugró kiváltása félév közben:** a két gyakorlati ZH után 15–15 pontos kérdéssor (az 1. ZH után az 1–34., a 2. ZH után a 35–66. beugrókérdésekből); mindkettőből 8–8 pont és legalább elégséges (2) gyakorlati jegy kell. Nem pótolható és nem javítható későbbi időpontban; a gyakorlati jegybe nem számít bele. Kiváltás esetén is kötelező a szóbeli.
+- **Felkészülési tanács (Canvas):** a vizsgára tanulás a feladatmegoldással indul, ehhez keresendők ki a definíciók és tételek; a bizonyításokat félév közben apránként érdemes átnézni; a vizsgaidőszakban az előadásanyag átnézése, összevetés a tételjegyzékkel, a nehéz bizonyítások lépéseinek vázlatos kiírása. A tételjegyzék szerkezete lehetővé teszi a nehezebb (b) bizonyítások kihagyását, ha közepes jegy a cél.
+- **Irodalom:** Gergó Lajos: *Numerikus módszerek* (ELTE Eötvös Kiadó, 2013); Bozsik József – Krebsz Anna: *Numerikus módszerek példatár* (2010; [[concepts/nummodi/peldatar-feladattipusok]]); Stoyan Gisbert – Takó Galina: *Numerikus módszerek 1.* (Typotex, 2002).
 
 ## Fogalomlapok
 
@@ -60,7 +84,8 @@ A GE blokkos értelmezése a Schur-komplementer fogalmán keresztül; a mátrixt
 
 - [[concepts/nummodi/schur-komplementer]] — $[A\mid A_{11}] = A_{22} - A_{21}A_{11}^{-1}A_{12}$; megmaradási tételek (det, szimmetria, pozitív definitség, diagonális dominancia, sávszélesség, profil)
 - [[concepts/nummodi/progonka-modszer]] — rövidített GE tridiagonális LER-re; előre/vissza rekurzió; $8n + O(1)$ műveletigény; köbös spline alkalmazás
-- [[concepts/nummodi/ldu-felbontas]] — $A = LDU$; szimmetrikus esetben $A = LDL^T$; Cholesky-felbontás ($A = LL^T$) pozitív definit esetben; $\tfrac{1}{3}n^3$ igény
+- [[concepts/nummodi/ldu-felbontas]] — $A = LDU$; szimmetrikus esetben $A = LDL^T$, $\tfrac{1}{3}n^3$ igény
+- [[concepts/nummodi/cholesky-felbontas]] — $A = LL^T$ szimmetrikus pozitív definit mátrixra: létezés és egyértelműség, közvetlen képletek, $\tfrac13 n^3$ + $n$ gyökvonás, összevetés $LDL^T$-vel
 
 ### QR-felbontás és ortogonalizáció (5. előadás)
 
@@ -95,16 +120,31 @@ Az iteratív módszerek az $Ax = b$ rendszert $x = Bx + c$ fixpontalakká írjá
 - [[concepts/nummodi/iteracios-modszerek-ler]] — általános keret ($A = P + Q$, $A = L+D+U$), fixpont-iteráció, átmenetmátrix $B$, ILU-előkészítés
 - [[concepts/nummodi/banach-fixponttetel-rn]] — fixpont és kontrakció; Banach-tétel 4 állítása teljes bizonyítással; $\varrho(B) < 1$ ekvivalens feltétel
 - [[concepts/nummodi/jacobi-iteracio]] — $B_J = -D^{-1}(L+U)$, komponensenkénti és reziduumos alak, SDD konvergenciatétel, csillapított $J(\omega)$
+- [[concepts/nummodi/gauss-seidel-iteracio]] — $B_S = -(L+D)^{-1}U$, „helyben” számolható koordinátás alak, reziduumos algoritmus, SDD és SZPD konvergencia
+- [[concepts/nummodi/relaxalt-gauss-seidel-iteracio]] — $S(\omega)$; szükséges feltétel $0 < \omega < 2$ (determinánsos bizonyítás); tridiagonális és SZPD tételek, optimális $\omega_0$; Jacobi–Gauss–Seidel összevetés
+- [[concepts/nummodi/richardson-iteracio]] — $x^{(k+1)} = (I - pA)x^{(k)} + pb$; konvergens pontosan $p \in (0, 2/M)$-re, $p_0 = 2/(M+m)$, $q = (M-m)/(M+m)$
+- [[concepts/nummodi/ilu-felbontas]] — részleges LU-felbontás $A = LU - Q$ pozícióhalmazzal, helyességi tétel, SDD-létezés; ILU-iteráció és az általános kétrétegű iteráció
 
-A Gauss–Seidel-, relaxációs, Richardson- és ILU-módszerek (21–24. tétel) lapjai még nincsenek megírva.
+A 10. előadás harmadik része (kerekítési hibák hatása az iterációkra, $\lim\|z^{(k)}\| \le \varepsilon/(1 - \|B\|)$) egyik tételhez sem tartozik, ezért nincs külön lapja.
 
-**Megjegyzés:** A forrás (NM1_ea10.md) a kerekítési hibák iteratív módszerekre gyakorolt hatásáról szóló szekciót nem tartalmazza (csonka PDF-konverzió).
+### Nemlineáris egyenletek és polinomok (11–13. előadás)
 
-### Nemlineáris egyenletek és polinomok (11., 13. előadás)
+Gyökkereső módszerek nemlineáris $f(x) = 0$ egyenletekre: intervallumfelezés (lassú, robusztus), fixpont-iteráció (konvergencia a Banach-tételből), valamint a Newton-, húr- és szelőmódszer, amelyeket konvergenciarendjük különböztet meg. A 13. előadás önálló blokk: a gyökbecslési tétel megmondja, hol keressük a gyököket, a Horner-algoritmus pedig a kiértékelési eszköz, amelyre a gyökkeresők támaszkodnak.
 
-Gyökkereső módszerek nemlineáris $f(x) = 0$ egyenletekre: intervallumfelezés (lassú, robusztus) és fixpont-iteráció (potenciálisan gyors, konvergencia-analízist igényel). A 13. előadás önálló blokk: a gyökbecslési tétel megmondja, hol keressük a gyököket, a Horner-algoritmus pedig a kiértékelési eszköz, amelyre a gyökkeresők támaszkodnak.
+- [[concepts/nummodi/nemlinearis-egyenletek-fixpont]] — a feladat; Bolzano, Brouwer (bizonyítással), kontrakció $[a;b]$-n, $|\varphi'| < 1$ elégséges feltétel, Banach-tétel, lokális fixponttétel
+- [[concepts/nummodi/konvergenciarend]] — $p$-edrendű konvergencia, elemi tulajdonságok; $p$-edrendű fixpont-iterációk tétele bizonyítással
+- [[concepts/nummodi/intervallumfelezes]] — algoritmus és $(b-a)/2^k$ hibabecslés
+- [[concepts/nummodi/newton-modszer]] — levezetés; monoton és lokális konvergenciatétel bizonyítással; többváltozós Newton-módszer
+- [[concepts/nummodi/hurmodszer-szelomodszer]] — húr- és szelőmódszer képlete, konvergenciatételei; összevetés a Newton-módszerrel
+- [[concepts/nummodi/polinom-gyokbecsles]] — $r < |x_k| < R$ körgyűrű, bizonyítás reciprok-polinommal
+- [[concepts/nummodi/horner-algoritmus]] — $\mathcal{O}(n)$ kiértékelés, deriváltak és Taylor-együtthatók ismételt Horner-sorokkal
 
-Ezek anyagának lapjai (25–28. tétel) még nincsenek megírva.
+### Gyakorló- és vizsgaanyagok
+
+A beugró kérdései és a példatár feladatai az elméleti lapokra épülnek, a vizsga írásbeli, illetve a ZH-k számonkérési formáját fedik le.
+
+- [[concepts/nummodi/beugro-kerdesek]] — a beugró 75 kérdésének rövid, pontos válaszai témakörönként (1–34. és 35–66. kérdés a ZH-s kiváltáshoz)
+- [[concepts/nummodi/peldatar-feladattipusok]] — a példatár 1–4. és 9. fejezetének feladattípusai, megoldási menetei és megoldott minták
 
 ## Tételjegyzék (szóbeli)
 
@@ -120,7 +160,7 @@ A 28 vizsgatétel kidolgozása, egy lap tételenként — lásd [[concepts/nummo
 | 6 | Az LU-felbontás direkt módon | [[concepts/nummodi/lu-felbontas]] |
 | 7 | A Schur-komplementer | [[concepts/nummodi/schur-komplementer]] |
 | 8 | LDU-felbontás | [[concepts/nummodi/ldu-felbontas]] |
-| 9 | A Cholesky-féle $LL^T$-felbontás | [[concepts/nummodi/ldu-felbontas]] |
+| 9 | A Cholesky-féle $LL^T$-felbontás | [[concepts/nummodi/cholesky-felbontas]] |
 | 10 | QR-felbontás Gram–Schmidt ortogonalizációval | [[concepts/nummodi/gram-schmidt-ortogonalizacio]] |
 | 11 | A Householder-transzformáció I. | [[concepts/nummodi/householder-transzformacio]] |
 | 12 | A Householder-transzformáció II. | [[concepts/nummodi/householder-transzformacio]] |
@@ -132,14 +172,14 @@ A 28 vizsgatétel kidolgozása, egy lap tételenként — lásd [[concepts/nummo
 | 18 | Iterációs módszerek konvergenciája | [[concepts/nummodi/iteracios-modszerek-ler]] |
 | 19 | A Jacobi-iteráció | [[concepts/nummodi/jacobi-iteracio]] |
 | 20 | A csillapított Jacobi-iteráció | [[concepts/nummodi/jacobi-iteracio]] |
-| 21 | A Gauss–Seidel-iteráció | — *(nincs lap)* |
-| 22 | A Gauss–Seidel relaxációs módszer | — *(nincs lap)* |
-| 23 | A Richardson-típusú iterációk | — *(nincs lap)* |
-| 24 | ILU algoritmus (részleges LU-felbontás) | — *(nincs lap)* |
-| 25 | Nemlineáris egyenletek megoldása I. | — *(nincs lap)* |
-| 26 | Nemlineáris egyenletek megoldása II. | — *(nincs lap)* |
-| 27 | Nemlineáris egyenletek megoldása III. | — *(nincs lap)* |
-| 28 | Polinomok gyökeinek becslése | — *(nincs lap)* |
+| 21 | A Gauss–Seidel-iteráció | [[concepts/nummodi/gauss-seidel-iteracio]]; b): [[concepts/nummodi/relaxalt-gauss-seidel-iteracio]] |
+| 22 | A Gauss–Seidel relaxációs módszer | [[concepts/nummodi/relaxalt-gauss-seidel-iteracio]] |
+| 23 | A Richardson-típusú iterációk | [[concepts/nummodi/richardson-iteracio]] |
+| 24 | A részleges LU-felbontás és az ILU algoritmus | [[concepts/nummodi/ilu-felbontas]] |
+| 25 | Nemlineáris egyenletek megoldása I. (fixponttételek, konvergenciarend) | [[concepts/nummodi/nemlinearis-egyenletek-fixpont]], [[concepts/nummodi/konvergenciarend]] |
+| 26 | Nemlineáris egyenletek megoldása II. (húr-, szelő-, Newton-módszer) | [[concepts/nummodi/hurmodszer-szelomodszer]], [[concepts/nummodi/newton-modszer]] |
+| 27 | Nemlineáris egyenletek megoldása III. (intervallumfelezés, Newton-módszer) | [[concepts/nummodi/intervallumfelezes]], [[concepts/nummodi/newton-modszer]] |
+| 28 | Polinomok gyökeinek becslése, Horner-algoritmus | [[concepts/nummodi/polinom-gyokbecsles]], [[concepts/nummodi/horner-algoritmus]] |
 
 ## Kapocs
 

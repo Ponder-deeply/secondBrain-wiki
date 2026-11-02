@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 derivation: source
-updated: 2026-09-06
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Hölder- és Minkowski-egyenlőtlenség
@@ -49,8 +51,17 @@ $$\sum |a_i|\,|a_i+b_i|^{q/r} \leq \|a\|_q \cdot \|a+b\|_q^{q/r} = \|a\|_q \cdot
 
 és ugyanígy $b$-re. Beírva $\|a+b\|_q^q \leq (\|a\|_q + \|b\|_q)\,\|a+b\|_q^{q-1}$, végül $\|a+b\|_q^{q-1}$-nel leosztunk. $\blacksquare$
 
+### Feladatok
+
+*Forrás: gyakorlat.pdf, Egyenlőtlenségek 8–10. feladat.*
+
+- **Síkbeli háromszög-egyenlőtlenség.** $\sqrt{(x+u)^2+(y+v)^2}\le\sqrt{x^2+y^2}+\sqrt{u^2+v^2}$: négyzetre emelve $xu+yv\le\sqrt{x^2+y^2}\sqrt{u^2+v^2}$, ami a $2$-dimenziós Cauchy–Schwarz-egyenlőtlenség.
+- **Cauchy–Schwarz $n$-ben.** $|\langle x,y\rangle|\le\|x\|\|y\|$ minden $\mathbb R^n$-beli $x,y$-ra; egyenlőség akkor és csak akkor, ha a vektorok lineárisan függők (a $\|x+ty\|^2\ge0$ másodfokú polinom diszkriminánsa $\le0$).
+- **Minkowski a Cauchy–Schwarzból.** $\|x+y\|^2=\|x\|^2+2\langle x,y\rangle+\|y\|^2\le(\|x\|+\|y\|)^2$.
+
 ## Kapocs
 
 - [[concepts/analiii/normalt-vektorter]] — a tétel célja: $\|\cdot\|_q$ normavolta
 - [[concepts/analiii/ekvivalens-normak]] — a CBS-egyenlőtlenség adja a $\|x\|_1 \leq \sqrt{p}\,|x|$ becslést
 - [[concepts/analii/integral-egyenlotlensegek]] — az egyenlőtlenségek integrálos rokonai Analízis II-ből
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

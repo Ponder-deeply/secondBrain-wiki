@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 3, "LYAH \"Believe the type\""]
 derivation: unsourced
+kind: overview
+element: air
 updated: 2026-05-18
 ---
 

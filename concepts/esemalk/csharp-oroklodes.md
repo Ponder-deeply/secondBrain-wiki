@@ -1,11 +1,13 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
-# C# öröklődés
+# C# öröklődés és interfészek
 
 A .NET keretrendszerben az osztályok egy teljes származtatási hierarchiában
 vannak; az öröklődés révén a referencia osztályok (`class`) felüldefiniálható
@@ -24,7 +26,7 @@ explicit, illetve biztonságos típuskonverzióra (`as`).
 ```csharp
 class BaseClass /* : Object */ { // ősosztály
     public Int32 Value;
-    public BaseClass(Int32 v) { value = v; }
+    public BaseClass(Int32 v) { Value = v; }
 }
 
 class DerivedClass : BaseClass { // leszármazott
@@ -34,7 +36,7 @@ class DerivedClass : BaseClass { // leszármazott
 
 Object o = new DerivedClass(1); // polimorfizmus
 if (o is BaseClass)             // típusazonosítás, konverzió
-    Console.WriteLine((o as BaseClass).Value)
+    Console.WriteLine((o as BaseClass).Value);
 ```
 
 **Felüldefiniálás és elrejtés.** Öröklődés során a műveletek és
@@ -62,6 +64,33 @@ class BaseClass { // ősosztály
     }
 }
 ```
+
+### Interfészek
+
+Az *interfész* (`interface`) egy tisztán absztrakt osztály: deklarációk
+halmaza, amelyet osztályok implementálnak — a többszörös öröklődés
+kiküszöbölésére szükséges, mivel az osztályöröklődés C#-ban csak
+egyszeres lehet.
+
+Az interfész csak láthatóságot és tagok szignatúráját tartalmazza, törzs
+nélkül; egy osztály (vagy `struct`) tetszőleges számú interfészt
+implementálhat, miközben legfeljebb egy ősosztálya lehet.
+
+```csharp
+interface IDoubleCompatible {
+    Double ToDouble(); // láthatóság, törzs nélkül
+}
+...
+struct Rational : IDoubleCompatible {
+    ...
+    // interfész megvalósítása:
+    public Double ToDouble() { ... }
+}
+```
+
+Mivel az interfész tisztán absztrakt, önmagában nem példányosítható —
+ugyanúgy, ahogy egy absztrakt osztály sem —, csak azt implementáló
+konkrét típuson keresztül érhető el a funkcionalitása.
 
 ## Kapocs
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/kongruenciak]
-sources: [DimatIIEa02.pdf]
+tags: [concept]
+sources: [DimatIIEa02.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Teljes maradékrendszer
@@ -32,6 +34,8 @@ számok szintén teljes maradékrendszert alkotnak.
 **Bizonyítás.** $i \neq j$ esetén $aa_i + b \equiv aa_j + b \pmod m \iff aa_i \equiv aa_j \pmod m$. Mivel $(a,m) = 1$, a [[concepts/dimatii/kongruencia]] egyszerűsítési szabálya szerint $a$-val egyszerűsíthetünk: $a_i \equiv a_j \pmod m$, ami ellentmondás. Tehát a felsorolt $m$ szám páronként inkongruens, így teljes maradékrendszert alkot. $\square$
 
 Ez a lemma a [[concepts/dimatii/euler-fermat-tetel]] bizonyításának kulcsa; ugyanez a gondolat működik a [[concepts/dimatii/redukalt-maradekrendszer]]re is.
+
+**Megjegyzés (Farkas-diák).** A lemma a diák „omnibusz” tétele: $\{a_i\}$ TMR, $\{b_j\}$ RMR modulo $m$, $(c,m)=1$, $d\in\mathbb{Z}$ $\Rightarrow$ $\{ca_i + d\}$ TMR és $\{cb_j\}$ RMR. Bizonyítás indirekt: ha $ca_i + d \equiv ca_j + d$, akkor $(c,m)=1$ miatt $a_i \equiv a_j$, ellentmondás, és pontosan $m$ elem van; az RMR-nél $(c,m)=1$ és $(b_i,m)=1 \Rightarrow (cb_i,m)=1$.
 
 ## Kapocs
 

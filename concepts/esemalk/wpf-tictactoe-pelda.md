@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/wpf-alapok]
+tags: [concept]
 sources: [elte_eva_ea06_wpf_basics.pdf, elte_eva_ea08_wpf_complex_resources.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 

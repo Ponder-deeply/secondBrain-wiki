@@ -1,0 +1,97 @@
+name: Build and deploy site
+
+# Renders this mirror with Quartz (an Obsidian-aware static site generator)
+# and publishes it to GitHub Pages. Runs after every sync from the private
+# vault. The sync never touches .github/, so this file lives here only.
+#
+# Setup (once): Settings -> Pages -> Build and deployment -> Source:
+# "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  QUARTZ_VERSION: v4.5.2
+  SITE_URL: ponder-deeply.github.io/secondBrain-wiki
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the mirror
+        uses: actions/checkout@v4
+        with:
+          path: mirror
+
+      - name: Fetch Quartz
+        run: git clone --depth 1 --branch "$QUARTZ_VERSION" https://github.com/jackyzha0/quartz.git quartz
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: quartz/package-lock.json
+
+      - name: Install Quartz
+        working-directory: quartz
+        run: npm ci
+
+      # Patch the stock config rather than replacing it, so a Quartz bump
+      # only has to keep these few strings stable. Fails if one misses.
+      - name: Configure Quartz
+        working-directory: quartz
+        run: |
+          perl -0pi \
+            -e 's|pageTitle: "Quartz 4"|pageTitle: "Brain — jegyzetwiki"|;' \
+            -e 's|analytics: \{\s*provider: "plausible",\s*\}|analytics: null|;' \
+            -e 's|locale: "en-US"|locale: "hu-HU"|;' \
+            -e 's|baseUrl: "quartz.jzhao.xyz"|baseUrl: "$ENV{SITE_URL}"|;' \
+            -e 's|priority: \["frontmatter", "git", "filesystem"\]|priority: ["frontmatter", "filesystem"]|;' \
+            -e 's|markdownLinkResolution: "shortest"|markdownLinkResolution: "absolute"|;' \
+            -e 's|\n\s*Plugin.CustomOgImages\(\),||;' \
+            quartz.config.ts
+          for want in 'pageTitle: "Brain' 'analytics: null' 'locale: "hu-HU"' \
+                      "baseUrl: \"$SITE_URL\"" '"frontmatter", "filesystem"' \
+                      'markdownLinkResolution: "absolute"'; do
+            grep -qF "$want" quartz.config.ts || { echo "config patch missed: $want"; exit 1; }
+          done
+          if grep -q 'Plugin.CustomOgImages()' quartz.config.ts; then
+            echo "config patch missed: CustomOgImages"; exit 1
+          fi
+
+      # index.md becomes the home page. README and LICENSE describe the
+      # repository, not the wiki, so they stay off the site.
+      - name: Stage content
+        run: |
+          rm -rf quartz/content
+          rsync -a --exclude .git --exclude .github \
+            --exclude README.md --exclude LICENSE mirror/ quartz/content/
+
+      - name: Build
+        working-directory: quartz
+        run: npx quartz build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

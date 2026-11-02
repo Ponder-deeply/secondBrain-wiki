@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [07.md]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-09-04
 ---
 

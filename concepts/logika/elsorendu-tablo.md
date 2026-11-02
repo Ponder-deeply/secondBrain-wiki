@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/tablokalkulus]
-sources: [Tablókalkulus.pdf]
+tags: [concept]
+sources: [Tablókalkulus.pdf, Tablokalkulus_1_2_rész.pdf]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Elsőrendű analitikus tabló
@@ -96,6 +98,24 @@ A tabló **befejezett szisztematikus tabló**, ha nyitott ága vagy végtelen, v
 
 *Megjegyzés.* A tétel megfordítása triviálisan igaz (ha $S$ kielégíthető, minden véges részhalmaza is az), és a tétel megszámlálhatónál nagyobb számosságú formulahalmazra is érvényben marad.
 
+### Gyakorló feladatok (elsőrendű)
+
+A gyakorlati diasor szerint az elsőrendű tablókalkulus is kielégíthetetlenséget vizsgál (ha $A$ tablója zárt, $A$ kielégíthetetlen). A szabályok: $\alpha$, $\beta$ és a kvantoros $\gamma$ ($T\forall xA$, $F\exists xA$ — valamilyen helyettesítés) és $\delta$ ($T\exists xA$, $F\forall xA$ — **mindig új** szimbólum az adott ágon). Érdemes bontási sorrend: $\alpha$, $\delta$, $\beta$, $\gamma$.
+
+**1. Helyes-e $\{\forall xP(x)\supset Q(a)\} \models \exists y(P(y)\supset Q(a))$?** A dedukciós tétellel a $(\forall xP(x)\supset Q(a))\supset\exists y(P(y)\supset Q(a))$ formula logikai igazságát vizsgáljuk. A gyökér $F(\dots)$; $\alpha$: $T(\forall xP(x)\supset Q(a))$ és $F\exists y(P(y)\supset Q(a))$ ($\gamma$). A $T(\dots\supset Q(a))$ ($\beta$) ágazik:
+
+- *bal ág*: $F\forall xP(x)$ ($\delta$) $\to$ $FP(b)$ **új $b$-vel**. A $\gamma$-formulát ($F\exists y(\dots)$) most $y\|a$-val és $y\|b$-vel is példányosítjuk: $y\|b$: $F(P(b)\supset Q(a))$ $\to$ $TP(b)$, $FQ(a)$, és $TP(b)$ ellentmond $FP(b)$-nek $\otimes$.
+- *jobb ág*: $TQ(a)$; a $\gamma$ példánya $y\|a$: $F(P(a)\supset Q(a))\to TP(a),FQ(a)$, és $FQ(a)$ ellentmond $TQ(a)$-nak $\otimes$.
+
+A tabló zárt, a következmény teljesül. Tanulság: a $\gamma$-formula az ágon marad, és a $\delta$ által bevezetett új paraméterre *újra* alkalmazható — a lezáráshoz éppen ez kell.
+
+**2. Helyes-e $\{\forall x\exists yQ(x,y)\supset\forall xP(x),\ \neg\forall xP(x)\} \models \neg\forall x\exists yQ(x,y)$?** Visszakövetkeztetéssel: a konklúzió negáltja ($\neg\neg\forall x\exists yQ$, azaz $\forall x\exists yQ(x,y)$) hozzávétele után kielégíthetetlen-e a halmaz. Tabló: $T\neg\forall xP(x)\to F\forall xP(x)$ ($\delta$) $\to FP(a)$. A $T(\forall x\exists yQ\supset\forall xP)$ ($\beta$) ágazik:
+
+- *jobb ág*: $T\forall xP(x)$ ($\gamma$), $a$-ra példányosítva $TP(a)$, ellentmond $FP(a)$-nak $\otimes$.
+- *bal ág*: $F\forall x\exists yQ(x,y)$ ($\delta$) új $b$-vel $\to F\exists yQ(b,y)$ ($\gamma$). A $T\forall x\exists yQ(x,y)$ ($\gamma$) $b$-vel: $T\exists yQ(b,y)$ ($\delta$), új $c$-vel $\to TQ(b,c)$. Az $F\exists yQ(b,y)$ ($\gamma$) $c$-vel: $FQ(b,c)$, ellentmond $TQ(b,c)$-nek $\otimes$.
+
+Zárt tabló, a következmény teljesül.
+
 ## Kapocs
 
 - [[concepts/logika/jelolt-formula-es-formulatipusok]] — az $\alpha$/$\beta$ típus és a közvetlen tabló alapfogalma
@@ -104,3 +124,4 @@ A tabló **befejezett szisztematikus tabló**, ha nyitott ága vagy végtelen, v
 - [[concepts/logika/elsorendu-szemantikus-fa]] — a véges univerzum feletti interpretációk fás felsorolása, amelyre a tabló gondolata épül
 - [[concepts/logika/szemantikus-tulajdonsagok]] — a kielégíthetőség és kielégíthetetlenség fogalma
 - [[concepts/bvszam/elsorendu-logika-eldonthetetlenseg]] — az elsőrendű logika algoritmikus eldönthetetlensége, ami a tabló esetleges nemterminálását indokolja
+- [[concepts/logika/valtozoiban-tiszta-alak]] — a $\delta$-szabály „új szimbólum” követelménye hasonló átnevezési fegyelem

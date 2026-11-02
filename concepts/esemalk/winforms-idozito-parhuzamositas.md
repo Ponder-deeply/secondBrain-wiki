@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/tobbszalu-programozas-csharp-ban]
+tags: [concept]
 sources: [elte_eva_ea05_winforms_multithread.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 

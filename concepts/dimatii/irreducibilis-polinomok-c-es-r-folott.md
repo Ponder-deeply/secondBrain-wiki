@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/polinomok]
-sources: [DimatIIEa07.pdf]
+tags: [concept]
+sources: [DimatIIEa07.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, dm2gy10_Polinomok.pdf]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Irreducibilis polinomok $\mathbb{C}$ és $\mathbb{R}$ fölött
@@ -44,6 +46,21 @@ Az algebra alaptételét itt felhasználtuk, de nem bizonyítottuk.
 $$f(\overline{c}) = \sum_{j=0}^{\deg(f)} f_j(\overline{c})^j = \sum_{j=0}^{\deg(f)} \overline{f_j}\cdot\overline{c^j} = \overline{\left(\sum_{j=0}^{\deg(f)} f_jc^j\right)} = \overline{f(c)} = \overline{0} = 0.$$
 
 Ez az észrevétel adja, hogy a $g(x) = (x-c)(x-\overline{c})$ tényező valós együtthatós.
+
+### Farkas-diák megfogalmazása
+
+Az algebra alaptételéből minden $f \in \mathbb{C}[x]$ felírható $f(x) = a_n (x - c_1)^{\alpha_1} \cdots (x - c_k)^{\alpha_k}$ alakban, ahol $c_i \in \mathbb{C}$ páronként különbözők és $\alpha_1 + \ldots + \alpha_k = n = \deg f$; így $\mathbb{C}$ fölött az irreducibilis polinomok pontosan az elsőfokúak. Valós esetben: ha $c \in \mathbb{C} \setminus \mathbb{R}$ gyöke $f \in \mathbb{R}[x]$-nek, akkor $x - c$ és $x - \bar c$ felbonthatatlanok és nem asszociáltak, ezért $g(x) = (x - c)(x - \bar c) \mid f(x)$.
+
+### Feladattípusok és módszerek: felbontás $\mathbb{C}$ és $\mathbb{R}$ fölött (2020. 10. feladatsor)
+
+**Módszer.** $\mathbb{C}$ fölött a felbontás gyöktényezős (elsőfokú tényezők); $\mathbb{R}$ fölött a nem valós gyököket konjugált párokba csoportosítjuk, a páros szorzata valós másodfokú: $(x-c)(x-\overline c)=x^2-2\mathrm{Re}(c)x+|c|^2$.
+
+- **Egy gyök ismert.** $3x^4-5x^3+3x^2+4x-2$ egyik gyöke $1+i$: a valós együtthatók miatt $1-i$ is gyök, szorzatuk $x^2-2x+2$, és $3x^4-5x^3+3x^2+4x-2=(x^2-2x+2)(3x^2+x-1)$ (a szorzással ellenőrizve), a többi gyök $1-i$ és $\tfrac{-1\pm\sqrt{13}}6$.
+- **Nevezetes azonosságok.** $x^8-16=(x^4-4)(x^4+4)$, és $x^4+4=(x^2+2x+2)(x^2-2x+2)$ (Sophie Germain-azonosság), így $\mathbb{R}$ fölött $x^8-16=(x-\sqrt2)(x+\sqrt2)(x^2+2)(x^2+2x+2)(x^2-2x+2)$; $\mathbb{C}$ fölött mind a nyolc gyök egy-egy gyöktényezőt ad. Hasonlóan $x^6+27=(x^2+3)(x^4-3x^2+9)$ és $x^4-3x^2+9=(x^2+3)^2-9x^2=(x^2+3x+3)(x^2-3x+3)$, így $\mathbb{R}$ fölött $x^6+27=(x^2+3)(x^2+3x+3)(x^2-3x+3)$.
+- **Helyettesítéses alakok.** $x^{2n}-2x^n-3=(x^n-3)(x^n+1)$ ($y=x^n$ másodfokú egyenlet), $x^{2n}+x^n+1$ az $y^2+y+1$ gyökeinek ($\omega,\omega^2$) $n$-edik gyökei.
+- **Minimális fokú polinom adott gyökökhöz.** A gyökök konjugáltjait is hozzávesszük: ha $1$ kétszeres, $2$, $3$ és $1+i$ egyszeres gyök, a minimális valós polinom $(x-1)^2(x-2)(x-3)(x^2-2x+2)=x^6-9x^5+33x^4-65x^3+74x^2-46x+12$ (fok $6$); ha $i$ háromszoros és $-1-i$ egyszeres, akkor a konjugáltak ($-i$ háromszoros, $-1+i$ egyszeres) is kellenek: $(x^2+1)^3(x^2+2x+2)$, fok $8$.
+
+**Tipikus hibák.** Valós együtthatós polinomnál a konjugált gyököt kihagyni (így a minimális fok alulbecsült); $\mathbb{R}$ fölött $x^4+4$-et irreducibilisnek venni, mert nincs valós gyöke (másodfokúak szorzata); a konjugált gyök multiplicitását nem másolni.
 
 ## Kapocs
 

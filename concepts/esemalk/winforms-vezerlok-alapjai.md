@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/winforms-statikus-ui]
+tags: [concept]
 sources: [elte_eva_ea01_winforms_static.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-12
 ---
 

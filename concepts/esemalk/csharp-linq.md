@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
-sources: [elte_eva_ea00_csharp.pdf]
+tags: [concept]
+sources: [elte_eva_ea00_csharp.pdf, elte_eva_gy01_munkafuzet.pdf]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: earth
+updated: 2026-10-21
 ---
 
 # Nyelvbe ágyazott lekérdezések (LINQ)
@@ -46,7 +48,7 @@ Int32 evenCount = s1.Sum(x => x % 2 == 0 ? 1 : 0);
     // megadjuk, mit összegezzen, így a páros számok számlálása lesz
 var union = s1.Union(s2);
     // két gyűjtemény uniója: { 1, 2, 3, 4 }
-var evens = union.Select(x => x % 2 == 0);        // páros számok kiválogatása
+var evens = union.Where(x => x % 2 == 0);         // páros számok kiválogatása
 Int32 evenCount2 =
     s1.Union(s2).Sum(x => x % 2 == 0 ? 1 : 0);    // unió, majd a páros számok számlálása
 ```
@@ -54,10 +56,14 @@ Int32 evenCount2 =
 Bonyolultabb lekérdezések is megvalósíthatóak (pl. unió, csoportosítás,
 összekapcsolás, rendezés stb.).
 
+### Gyakorlati példa: szóstatisztika (1. gyakorlat)
+
+A `DocumentStatistics` osztályban a szűrés és rendezés LINQ-val: `words.Where(s => s.Length > 0).ToArray()`; `SkipWhile`/`Reverse`/`String.Concat` a szavak szélén lévő nem betű karakterek levágására; `DistinctWordCount.Where(...).Where(...).OrderByDescending(p => p.Value)` *method syntax*-szal, vagy `from ... orderby ... descending select ...` *query syntax*-szal; `Sum` az összes szó számához. Lásd [[concepts/esemalk/docustat-modell-szovegstatisztika]].
+
 ## Kapocs
 
 - [[concepts/esemalk/csharp-tipusok]] — a lekérdezés eredménye gyűjteménytípus
   (`IEnumerable`)
-- [[concepts/esemalk/csharp-nevterek]] — a LINQ metódusok a `System.Linq`
+- [[concepts/esemalk/csharp-nyelv-jellemzoi]] — a LINQ metódusok a `System.Linq`
   névtérben érhetőek el
 - [[subjects/esemalk]] — a kurzus áttekintése

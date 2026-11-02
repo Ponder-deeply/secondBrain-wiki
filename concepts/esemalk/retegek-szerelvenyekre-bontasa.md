@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/winforms-architektura-es-teszteles]
+tags: [concept]
 sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
 derivation: source
-updated: 2026-09-13
+kind: model
+element: earth
+updated: 2026-09-30
 ---
 
 # Rétegek szerelvényekre bontása — perzisztencia interfész minta
@@ -29,12 +31,12 @@ eredményezi:
 
 A View a Modellre, a Modell a Persistence interfészre mutat; a Persistence
 implementáció a Persistence interfészt valósítja meg, a View pedig
-közvetlenül példányosítja és átadja a modellnek. Ezáltal a Modell és a View
+közvetlenül példányosítja és átadja a modellnek. Ezáltal a Modell
 csak az interfészt ismeri, a konkrét adatkezelési módot nem — ez a
 [[concepts/esemalk/mock-objektumok|mock objektumokkal]] való teszteléshez is
 szükséges leválasztás.
 
-A nézet és a perzisztencia külön osztálykönyvtárként (nem futtatható
+A modell és a perzisztencia külön osztálykönyvtárként (nem futtatható
 szerelvényként) szerepel, csak a View a futtatható alkalmazás.
 
 ### Példa: Tic-Tac-Toe
@@ -86,6 +88,6 @@ valósítja meg.
   osztálykönyvtár fogalma, amelyre a felbontás támaszkodik
 - [[concepts/esemalk/mock-objektumok]] — az interfész mögé rejtett
   perzisztencia tesztelhetőségének alapja
-- [[concepts/esemalk/dotnet-fajlrendszer-kezeles]] — a `File` osztály
+- [[concepts/esemalk/stream-alapu-fajlkezeles]] — a `File` osztály
   `ReadAllBytes`/`WriteAllBytes` műveletei a bináris perzisztenciában
 - [[subjects/esemalk]]

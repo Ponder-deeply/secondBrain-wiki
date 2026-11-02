@@ -1,9 +1,11 @@
 ---
 tags: [synthesis]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf, gyakorlat.pdf, 05_gyak_An_III_2022_tavasz.pdf, 06_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 3.2. ii), iv), x), xi), xii) megjegyzés"]
 derivation: inferred
-updated: 2026-09-14
+kind: overview
+element: water
+updated: 2026-10-21
 ---
 
 # A differenciálhatósági fogalmak hierarchiája
@@ -69,6 +71,19 @@ Az 5. példa azért tanulságos, mert itt már a **legegyszerűbb** — a koordi
 
 Minden ellenpélda ugyanazt a rést használja ki: a parciális és az iránymenti derivált **egydimenziós** információ, a differenciálhatóság pedig **teljes környezetbeli**. Egy origón átmenő egyeneseken vett tetszőleges viselkedés nem szabja meg, mi történik egy parabola vagy más görbe mentén. Ezért nincs az az egyenesekre támaszkodó feltétel, amely elegendő lenne — és ezért kell a [[concepts/analiii/differencialhatosag-elegseges-feltetele|3.1.5. Tételben]] a parciális deriváltak környezetbeli létezése és folytonossága.
 
+### Feladatok
+
+Ellenpéldák, amelyekkel a gyakorlatokon az egyes nyilak megfordítását cáfoljuk:
+
+- **Folytonos, parciálisan deriválható, nem differenciálható:** $f=\sqrt{|xy|}$. (1) $|f|\le\tfrac12(|x|+|y|)$, tehát $\delta=2\varepsilon$ az 1-es normában. (2) $\partial_1f(0,0)=\partial_2f(0,0)=0$. (3) Ha $f'(0,0)=(0,0)$ lenne, $\dfrac{\sqrt{|xy|}}{\|h\|}\to0$ kellene; az $x=y$ mentén $\tfrac12$.
+- **Minden irányban deriválható, nem differenciálható:** $\dfrac{xy^2}{x^2+y^2}$ ($\partial_ef(0)=\cos\alpha\sin^2\alpha$ nem lineáris $e$-ben, miközben $\partial_1f=\partial_2f=0$; a lineáris esetben $\partial_ef=0$ lenne), $\dfrac{x^3}{x^2+y^2}$, $\sqrt[3]{x^3+y^3}$.
+- **Minden irányban deriválható, nem is folytonos:** $f=1$ az $\{y=x^2,\ x>0\}$ ágon, különben $0$.
+- **Differenciálható, de a parciálisok nem folytonosak:** $(x^2+y^2)\sin\tfrac1{x^2+y^2}$ — tehát az „elégséges feltétel" nem szükséges ([[concepts/analiii/differencialhatosag-elegseges-feltetele]]).
+- **Vegyes parciálisok:** $xy\dfrac{x^2-y^2}{x^2+y^2}$ ($\partial_{12}f(0,0)=\partial_2(\partial_1f)(0,0)=-1\ne1=\partial_{21}f(0,0)$, gyak 6. lap); itt $f$ nem kétszer differenciálható az origóban — lásd [[concepts/analiii/young-tetel]].
+- **Egy irányú és külön-külön folytonosság:** $\dfrac{x^2y}{x^4+y^2}$ minden origón átmenő egyenesen folytonos, de nem folytonos ([[concepts/analiii/folytonossag-metrikus-terben]]).
+
+- **Hivatalos megoldások (gyak 5–6. lap).** Az $\sqrt{|xy|}$: folytonos ($\le\|\cdot\|_\infty$), parciálisai $0$, nem differenciálható ($x=y$ mentén $\tfrac1{\sqrt2}$ a hányados 2-es normában). A $\dfrac{xy^2}{x^2+y^2}$: folytonos ($|f|\le|x|$), minden irányban deriválható ($\cos\alpha\sin^2\alpha$), de nem differenciálható ($x=y$ mentén a hányados $\tfrac1{\sqrt8}$). A $(x^2+y^2)\sin\tfrac1{x^2+y^2}$: differenciálható az origóban ($f'=[0\ 0]$), de $\partial_1f,\partial_2f$ nem folytonosak ott. Összefoglalva a lapok megjegyzése: a pontbeli folytonosságból nem következik a differenciálhatóság, és a parciálisok létezéséből sem.
+
 ## Kapocs
 
 - [[concepts/analiii/frechet-derivalt]] — a lánc legerősebb (nem $C^1$) tagja.
@@ -77,3 +92,4 @@ Minden ellenpélda ugyanazt a rést használja ki: a parciális és az iránymen
 - [[concepts/analiii/parcialis-derivalt]] — a lánc leggyengébb tagja.
 - [[concepts/analiii/differencialhatosag-elegseges-feltetele]] — a megfordítás ára.
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — az az implikáció, amelyet az ellenpéldák nem fordítanak meg.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

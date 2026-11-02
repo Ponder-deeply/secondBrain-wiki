@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [12_ea_An3_2022_tavasz.pdf]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-14
 ---
 

@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [wiki.haskell.org/Partial_application — nem ezt; wiki.haskell.org/Bottom]
 derivation: unsourced
+kind: comparison
+element: water
 updated: 2026-05-18
 ---
 

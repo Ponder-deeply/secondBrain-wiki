@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [03_Szemelyek_joga.md]
 derivation: source
+kind: definition
+element: air
 updated: 2026-08-12
 ---
 

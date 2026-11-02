@@ -1,8 +1,10 @@
 ---
-tags: [concept, esemalk/avaloniaui-alapok]
+tags: [concept]
 sources: [elte_eva_ea09_avaloniaui.pdf]
 derivation: source
-updated: 2026-09-13
+kind: procedure
+element: earth
+updated: 2026-09-30
 ---
 
 # Avalonia MVVM architektúra és adatkötés
@@ -23,8 +25,8 @@ Az elnevezett elemekre (`x:Name`) is hivatkozhatunk a kötésben
 
 ```xml
 <TextBox x:Name="MyTextBox" />
-<Label Text="{Binding #MyTextBox.Text.Length}" />
-<!-- a címke a szövegdoboz tartalmának hosszát jelenítse meg -->
+<TextBlock Text="{Binding #MyTextBox.Text.Length}" />
+<!-- a szövegblokk a szövegdoboz tartalmának hosszát jelenítse meg -->
 ```
 
 Ez az `x:Reference` / `#name` szintaxis lehetővé teszi, hogy a nézet egy
@@ -34,7 +36,7 @@ nézetmodellben külön tulajdonságot kellene létrehozni hozzá.
 Az architektúra a WPF MVVM mintájával azonos elveken nyugszik (lásd
 [[concepts/esemalk/wpf-mvvm-alapok]] és
 [[concepts/esemalk/wpf-adatkotes-alapjai]]): a nézetmodellt az alapvető
-eszközök (`ICommand`, `INotifyPropertyChange`, stb.) segítségével építjük
+eszközök (`ICommand`, `INotifyPropertyChanged`, stb.) segítségével építjük
 fel, és a nézetmodell réteg — megfelelő tervezés esetén — kompatibilis a
 WPF és a MAUI alkalmazások nézetmodell rétegével. Az Avalonia projekt
 sablon (Template Studio) létrehozásakor tervezési mintaként (*design
@@ -66,7 +68,7 @@ A nézet kiválasztása azonban már függ az alkalmazás életciklusától
 - [[concepts/esemalk/wpf-adatkotes-alapjai]] — az adatkötés (`Binding`)
   alapjai WPF-ben, `DataContext`, `Mode`
 - [[concepts/esemalk/wpf-mvvm-inotifypropertychanged]] — a
-  változáskövetés (`INotifyPropertyChange`) eszköze
+  változáskövetés (`INotifyPropertyChanged`) eszköze
 - [[concepts/esemalk/wpf-mvvm-tamogato-csomagok]] — MVVM-et támogató
   programcsomagok, köztük a Community Toolkit megfelelője
 - [[concepts/esemalk/avalonia-mvvm-toolkit]] — az MVVM Toolkit

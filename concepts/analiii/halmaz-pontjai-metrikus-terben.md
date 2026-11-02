@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 1.7.3.–1.7.4. Tétel, 1.8. viii)–ix) megjegyzés"]
 derivation: source
-updated: 2026-09-07
+kind: definition
+element: air
+updated: 2026-10-21
 ---
 
 # Belső, külső, határ-, izolált és torlódási pont
@@ -33,6 +35,13 @@ Az izolált pont és a torlódási pont kizárja egymást: egy $H$-beli pont vag
 
 **Sorozatos jellemzés.** Az $\alpha$ akkor és csak akkor torlódási pontja a $H \neq \emptyset$ halmaznak, ha van olyan $(x_n) : \mathbb{N}\to H\setminus\{\alpha\}$ sorozat, amelyre $\lim(x_n)=\alpha$; a sorozat ráadásul injektívnek is választható.
 
+### Feladatok
+
+*Forrás: An_III_Gyak_2022_tavasz.pdf 3. gyakorlat Házi 1., Gyakorló 3.*
+
+- **Torlódási pont jellemzése:** $a\in A'\iff\forall K(a):\ A\cap(K(a)\setminus\{a\})\neq\emptyset$ — a definíció, hogy $a$ nem izolált pontja a halmaznak.
+- **Példa.** $A=\{(\tfrac1n,\tfrac1m):n,m\in\mathbb N^+\}\subset(\mathbb R^2,\|\cdot\|_2)$: $A'=\{(0,0)\}\cup\{(\tfrac1n,0)\}\cup\{(0,\tfrac1m)\}$ ($n,m\in\mathbb N^+$). Az $A$ minden pontja izolált; $(\tfrac1n,0)$ az $m\to\infty$ sorozat limesze, az origó pedig a $(\tfrac1n,\tfrac1n)$ sorozaté.
+
 ## Kapocs
 
 - [[concepts/analiii/nyilt-es-zart-halmazok]] — a nyíltság és zártság ezekre a fogalmakra épül
@@ -40,3 +49,4 @@ Az izolált pont és a torlódási pont kizárja egymást: egy $H$-beli pont vag
 - [[concepts/analiii/sehol-sem-suru-halmazok]] — a sehol sem sűrűség az $\operatorname{int}\operatorname{cl} S = \emptyset$ feltétel
 - [[concepts/analiii/metrikus-ter]] — az alapstruktúra
 - [[concepts/analiii/kompaktsag-ekvivalens-jellemzesei]] — a torlódási pontos kompaktság-jellemzés
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

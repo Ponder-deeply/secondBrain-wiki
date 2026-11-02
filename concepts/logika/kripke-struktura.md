@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/temporalis-logika]
+tags: [concept]
 sources: [LTL_CTL.pdf]
 derivation: source
+kind: model
+element: fire
 updated: 2026-09-08
 ---
 

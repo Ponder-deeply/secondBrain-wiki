@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, gyakorlat.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 2.9. Tétel és 2.1. iv)–v) megjegyzések"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Koordinátafüggvények folytonossága
@@ -42,6 +44,11 @@ $$f_1 = P_1 \circ f, \qquad f_2 = P_2 \circ f.$$
 
 A tétel „$\Rightarrow$" iránya tehát a kompozíció folytonosságának is következménye. A $(\mathbb{K}^m,\rho_p)$ esetben $P_i(x) = x_i$ az $i$-edik projekció, egy $U \subset Y\times Z$ halmaz vetületei pedig $U^{(1)} = P_1[U]$, $U^{(2)} = P_2[U]$. Egy $A \subset \mathbb{K}^s$ halmaz akkor és csak akkor korlátos, ha minden $P_i[A]$ vetülete korlátos.
 
+### Feladatok
+
+- A $P_i:\mathbb{R}^n\to\mathbb{R}$, $P_i(x)=x_i$ projekció folytonos: $|P_i(x)-P_i(y)|\le\|x-y\|$.
+- Ha $g:I\to\mathbb{R}$ folytonos, akkor $F(x)=(x,g(x))$ folytonos, mert mindkét koordinátafüggvénye az ($x\mapsto x$ és $g$).
+
 ## Kapocs
 
 - [[concepts/analiii/folytonossag-metrikus-terben]] — az alapfogalom, amit a tétel koordinátákra bont
@@ -49,3 +56,4 @@ A tétel „$\Rightarrow$" iránya tehát a kompozíció folytonosságának is k
 - [[concepts/analiii/konvergencia-metrikus-terben]] — a sorozatok koordinátánkénti konvergenciája
 - [[concepts/analiii/koordinatafuggvenyek-differencialhatosaga]] — ugyanez a séma differenciálhatóságra
 - [[concepts/analiii/fuggvenyhatarertek-metrikus-terben]] — a határértékre vonatkozó megfelelője
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

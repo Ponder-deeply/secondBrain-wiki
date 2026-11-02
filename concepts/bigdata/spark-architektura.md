@@ -1,7 +1,9 @@
 ---
-tags: [concept, bigdata/spark]
+tags: [concept]
 sources: [EA3_spark.pdf]
 derivation: source
+kind: model
+element: water
 updated: 2026-09-12
 ---
 

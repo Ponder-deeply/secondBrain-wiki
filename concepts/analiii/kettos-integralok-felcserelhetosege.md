@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 10_gyak_An_III_2022_tavasz.pdf, gyakorlat.pdf]
 derivation: source
-updated: 2026-09-06
+kind: pitfall
+element: water
+updated: 2026-10-21
 ---
 
 # Kettős integrálok felcserélhetősége
@@ -58,6 +60,17 @@ $$\int_{x=0}^{1}\left(\int_{y=0}^{1} f(x,y)\,\mathrm{d}y\right)\mathrm{d}x = \in
 A másik sorrendben viszont racionális $y$ esetén $\int_{x=0}^{1} D(x)R(y)\,\mathrm{d}x$ nem létezik (a Dirichlet-függvény nem integrálható), ezért a külső integrál nem is értelmes.
 
 Jó házi feladat olyan példát keresni, ahol mindkét kettős integrál létezik, különböznek, és ráadásul $f \geq 0$.
+
+### Feladatok
+
+**Mit állít és mit nem.** A gyakorlat szerint a felcserélhetőség egyenlő *értéket* ad, de nem azonos *munkát*: $\iint_{[1,3]\times[0,\pi/2]}x\sin(xy)$ az egyik sorrendben azonnali belső integrál, a másikban parciális integrálás és egy primitív függvény keresése, amely az $y=0$-ban folytonosan kiterjesztett $\frac{-2\cos2y\sin y}{y}$ (mindkét sorrend $2+\frac4\pi$-t ad; részletek: [[concepts/analiii/szukcessziv-integralas]]). Az 1. szukcesszív tétel (a) $f\in R(I)$, (b) minden $f_x$ integrálható, (c) minden $f^y$ integrálható feltételei közül az ellenpéldák mindig valamelyiket sértik; folytonos $f$ téglán mind teljesül. *(10. gyak. 1–2. oldal)*
+
+Klasszikus ellenpéldák a gyakorlatról *(gyakorlat.pdf, Többdimenziós integrálok 2–4.)*:
+
+- $f=0$ ha $x,y$ racionálisak, $1$ különben: nem integrálható $[0,1]^2$-en (minden téglában mindkét értéket felveszi, így az alsó és felső összeg $0$, ill. $1$).
+- $f(x,y)=\frac1q$, ha $x=\frac pq$ racionális (relatív prím) és $y$ racionális, $0$ egyébként: $f$ integrálható, $\iint f=0$, de racionális $x$ esetén $\int_0^1f(x,y)\,\mathrm{d}y$ nem létezik (a $y$-tól függő értékek $\frac1q$ és $0$ között ugrálnak); a másik sorrend $\int_0^1\left(\int_0^1f\,\mathrm{d}x\right)\mathrm{d}y=0$. A kettős integrál létezése tehát nem garantálja mindkét szukcesszív integrál létezését.
+- $f(x,y)=x$ ha $y$ racionális, $0$ ha $y$ irracionális, $[-1,1]\times[0,1]$-en: $\int_{-1}^1f\,\mathrm{d}x=0$ minden $y$-ra, így $\int_0^1\left(\int_{-1}^1f\,\mathrm{d}x\right)\mathrm{d}y=0$, de $f$ nem integrálható.
+- Az $f(x,y)=\frac{x-y}{(x+y)^3}$ ($xy\ne0$, különben $0$) függvényre $f\notin R([0,1]^2)$ (a $(0,0)$ körül korlátlan), mégis mindkét szukcesszív integrál létezik; érdemes kiszámolni őket. *(An III gyak. 10., további feladatok; az eredmény nincs megadva, az egyik sorrendben $\frac12$, a másikban $-\frac12$ adódik.)*
 
 ## Kapocs
 

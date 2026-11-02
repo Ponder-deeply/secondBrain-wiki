@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 7, "LYAH \"Higher order functions\""]
 derivation: unsourced
+kind: definition
+element: earth
 updated: 2026-05-18
 ---
 

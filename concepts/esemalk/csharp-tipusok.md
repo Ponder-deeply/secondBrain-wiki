@@ -1,11 +1,13 @@
 ---
-tags: [concept, esemalk/csharp-nyelvi-alapok]
+tags: [concept]
 sources: [elte_eva_ea00_csharp.pdf]
 derivation: source
-updated: 2026-09-12
+kind: definition
+element: earth
+updated: 2026-09-30
 ---
 
-# Típusok (C#)
+# C# típusok, változók és példányosítás
 
 A C# nyelv szigorúan típusos: minden érték típusa fordítási időben ismert, és
 a nyelv nem enged meg értékvesztést. Minden típus objektumorientáltan van
@@ -46,10 +48,10 @@ A primitív típusok is „intelligensek": számos műveletet és speciális
   `String.Empty`
 - konverziós műveletek: `Double.Parse(…)`
 - karakterműveletek: `Char.ToLower(…)`
-- szövegműveletek: `str.Length`, `str.Find(…)`, `str.Replace(…)`
+- szövegműveletek: `str.Length`, `str.IndexOf(…)`, `str.Replace(…)`
 
 A konstans literálok is intelligens objektumok, pl. `10.ToString()`,
-`"Hello World".SubString(0, 5)`.
+`"Hello World".Substring(0, 5)`.
 
 ### Típuskezelés és típuskonverzió
 
@@ -72,8 +74,23 @@ z = Convert.ToString(y); // vagy y.ToString();
 x = Convert.ToInt32(z);  // vagy Int32.Parse(z);
 ```
 
+### Változók és példányosítás
+
+Változókat bármely (nem névtér) blokkon belül létrehozhatunk a programkódban
+típus, név és kezdőérték megadásával.
+
+- Pl.: `Int32 myInt = 10;`
+- Felhasználás előtt mindenképpen kezdőértéket kell kapnia a változónak.
+- Összetett (referencia-) típusok esetén a `new` operátort használjuk, pl.:
+  `Stack<Int32> s = new Stack<Int32>();`
+- A típusnév feloldható fordítási időben is a `var` kulcsszóval, pl.:
+  `var myInt = 10;`
+- Típusok futási időben is feloldhatóak (`dynamic`), és manipulálhatóak
+  (pl. `ExpandoObject`).
+- Konstansokat a `const` kulcsszóval, konstruktorban értékül adható mezőket a
+  `readonly` kulcsszóval adhatunk meg.
+
 ## Kapocs
 
-- [[concepts/esemalk/csharp-osztalyok]] — a `class` és `struct` mint
+- [[concepts/esemalk/csharp-osztaly-szerkezete]] — a `class` és `struct` mint
   referencia-, illetve érték szerint kezelt osztály
-- [[concepts/esemalk/csharp-valtozok-peldanyositas]] — típusok példányosítása

@@ -3,6 +3,8 @@ tags: [concept]
 sources: [01_ea_an_ii_a_b_merged.pdf]
 references: ["An II A/B 5. előadás"]
 derivation: source
+kind: pitfall
+element: water
 updated: 2026-09-04
 ---
 

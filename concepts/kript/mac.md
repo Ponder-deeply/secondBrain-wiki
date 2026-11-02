@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [hash.pdf, mac_feladatok.pdf]
 derivation: source
+kind: definition
+element: water
 updated: 2026-04-22
 ---
 

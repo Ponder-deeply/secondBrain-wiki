@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [1.-bevezetés.md, "3.-automata,-det-&-nemdet.md"]
 derivation: source
+kind: theorem
+element: fire
 updated: 2026-04-08
 ---
 

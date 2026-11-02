@@ -1,0 +1,65 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "5-eloadas-derivalt-lancszabaly",
+	"unitTitle": "5. előadás — Derivált, láncszabály",
+	"type": "short",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:16.688Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		}
+	],
+	"questions": [
+		{
+			"id": "mngrt1e1",
+			"page": "concepts/analiii/gradiens-parcialis-derivaltakbol",
+			"q": "Számítsa ki az $f(x,y) := (x^2 - y,\\ x + 2y,\\ y^2)$ függvény Jacobi-mátrixát az $(1,3)$ pontban!",
+			"answer": "$f'(1,3) = \\begin{pmatrix} 2 & -1 \\\\ 1 & 2 \\\\ 0 & 6 \\end{pmatrix}$, mert $f'(x,y)$ $i$-edik sorának $k$-adik eleme $\\partial_k f_i(x,y)$: a sorok $(2x,-1)$, $(1,2)$, $(0,2y)$."
+		},
+		{
+			"id": "lesou66d",
+			"page": "concepts/analiii/gradiens-parcialis-derivaltakbol",
+			"q": "Legyen $f(x,y) = 2x^2+3xy-y^2$. Indokolja, hogy $f \\in D(\\mathbb{R}^2)$, és számítsa ki $f'(0,1)$-et!",
+			"answer": "$\\partial_1 f = 4x+3y$ és $\\partial_2 f = 3x-2y$ polinomok, tehát folytonosak $\\mathbb{R}^2$-n, így $f\\in D(\\mathbb{R}^2)$ és $f'(x,y)=\\operatorname{grad} f(x,y)$; ebből $f'(0,1) = (3,-2)$."
+		},
+		{
+			"id": "2dt1x75l",
+			"page": "concepts/analiii/gradiens-parcialis-derivaltakbol",
+			"q": "Ha $f \\in \\mathbb{R}^n \\to \\mathbb{R}^m$ differenciálható $a$-ban, milyen méretű az $f'(a)$ mátrix, és mi az $i$-edik sor $k$-adik eleme?",
+			"answer": "$f'(a) \\in \\mathbb{R}^{m\\times n}$, az $i$-edik sor $k$-adik eleme $\\partial_k f_i(a)$ (a sorindex a koordinátafüggvényt, az oszlopindex a változót jelöli)."
+		},
+		{
+			"id": "r36019sf",
+			"page": "concepts/analiii/lancszabaly",
+			"q": "Legyen $g(t) := (t, t^2)$ és $f(x,y) := x+y$. Számítsa ki a láncszabállyal $(f\\circ g)'(1)$-et!",
+			"answer": "$(f\\circ g)'(1) = \\langle \\operatorname{grad} f(g(1)), g'(1)\\rangle = \\langle (1,1), (1,2)\\rangle = 3$."
+		},
+		{
+			"id": "7biy51go",
+			"page": "concepts/analiii/lancszabaly",
+			"q": "Legyen $g \\in \\mathbb{R}^n \\to \\mathbb{R}^m$ differenciálható $a$-ban és $f \\in \\mathbb{R}^m \\to \\mathbb{R}^s$ differenciálható $g(a)$-ban. Milyen típusú mátrixok szorzataként áll elő $(f\\circ g)'(a)$, és milyen típusú az eredmény?",
+			"answer": "$(f\\circ g)'(a) = f'(g(a))\\cdot g'(a)$, ahol $f'(g(a))\\in\\mathbb{R}^{s\\times m}$ és $g'(a)\\in\\mathbb{R}^{m\\times n}$, így a szorzat $\\mathbb{R}^{s\\times n}$-beli; a sorrend kötött, mert a mátrixszorzás nem kommutatív."
+		},
+		{
+			"id": "ifd2k2yk",
+			"page": "concepts/analiii/lancszabaly",
+			"q": "Legyen $f(x,y)=x^2+2y^2$ és $g(u,v)=(u-v^2,\\ uv)$. Számítsa ki $(f\\circ g)'(1,1)$-et a láncszabállyal!",
+			"answer": "$g(1,1)=(0,1)$, $f'(0,1)=(0,4)$, $g'(1,1)=\\begin{bmatrix}1&-2\\\\1&1\\end{bmatrix}$, így $(f\\circ g)'(1,1)=(0,4)\\cdot g'(1,1)=(4,4)$."
+		},
+		{
+			"id": "mbpmald5",
+			"page": "concepts/analiii/lancszabaly",
+			"q": "Legyen $f(u,v,w) := u+vw$ és $g(x_1,x_2,x_3) := (x_1^2+x_2^2+x_3^2,\\ x_1x_2x_3,\\ x_1)$. Mennyi $(f\\circ g)'(1,1,1)$?",
+			"answer": "$f'(g(x))=[1\\ \\ x_1\\ \\ x_1x_2x_3]$, a szorzat $F'(x)=[2x_1+2x_1x_2x_3\\ \\ 2x_2+x_1^2x_3\\ \\ 2x_3+x_1^2x_2]$, tehát $F'(1,1,1)=[4\\ \\ 3\\ \\ 3]$."
+		},
+		{
+			"id": "m3veg6fp",
+			"page": "concepts/analiii/lancszabaly",
+			"q": "Hogyan következik a láncszabályból, hogy egy $a$-ban differenciálható $f$ esetén $\\partial_e f(a) = f'(a)e$?",
+			"answer": "A $t\\mapsto a+te$ függvény differenciálható, deriváltja $e$, így $f_e(t):=f(a+te)$-re a láncszabály szerint $\\partial_e f(a)=f_e'(0)=f'(a)\\cdot e$."
+		}
+	]
+}

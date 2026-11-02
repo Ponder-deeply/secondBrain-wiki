@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/tablokalkulus]
+tags: [concept]
 sources: [Tablókalkulus.pdf]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-09-30
 ---
 
 # Hintikka halmaz és a Hintikka lemma
@@ -22,7 +24,7 @@ Egy $S$ formulahalmazt **Hintikka halmaznak** nevezünk, ha lefelé zárt és ne
 
 **Lemma.** Minden $H$ Hintikka halmaz kielégíthető.
 
-*Bizonyítás.* Mivel $H$ lefelé zárt, a benne szereplő ítéletváltozók vagy csak negálatlanul, vagy csak negáltan fordulnak elő (különben komplemens pár lenne bennük). Gyűjtsük ki az összes előforduló ítéletváltozót, és definiáljuk az $I$ interpretációt: ha $X$ negálatlanul szerepel, $I(X) = i$; ha negáltan, $I(X) = h$. Megmutatjuk logikai összetettség szerinti indukcióval, hogy $H$ minden elemére a helyettesítési érték $I$-ben $i$.
+*Bizonyítás.* Mivel $H$ nem tartalmaz komplemens párt, a benne szereplő ítéletváltozók vagy csak negálatlanul, vagy csak negáltan fordulnak elő. Gyűjtsük ki az összes előforduló ítéletváltozót, és definiáljuk az $I$ interpretációt: ha $X$ negálatlanul szerepel, $I(X) = i$; ha negáltan, $I(X) = h$. Megmutatjuk logikai összetettség szerinti indukcióval, hogy $H$ minden elemére a helyettesítési érték $I$-ben $i$.
 
 - Alapeset: ha $L$ literál eleme $H$-nak, akkor $I$ definíciója szerint $|L|^I = i$.
 - Indukciós lépés: tegyük fel, hogy az állítás fennáll $n$-nél kisebb logikai összetettségű formulákra. Ha a vizsgált formula $\alpha$-típusú, akkor $H$ (lefelé zártság miatt) tartalmazza $\alpha_1$-et és $\alpha_2$-t is, ezek kisebb összetettségűek, tehát az indukciós feltevés szerint igazak $I$-ben — emiatt $\alpha$ is igaz $I$-ben. Ha a formula $\beta$-típusú, $H$ tartalmazza $\beta_1$ és $\beta_2$ legalább egyikét, ami $I$-ben igaz, ezért $\beta$ is igaz $I$-ben.

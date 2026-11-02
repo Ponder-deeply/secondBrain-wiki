@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/iteletlogika-szemantika]
-sources: [iteletlogika.pdf]
+tags: [concept]
+sources: [iteletlogika.pdf, Ítéletlogika_alapjai.pdf]
 references: [Pásztorné Varga Katalin – Várterész Magda, A matematikai logika alkalmazásszemléletű tárgyalása]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: water
+updated: 2026-10-21
 ---
 
 # Kielégíthetőség, tautológia és szemantikus következmény
@@ -75,7 +77,7 @@ Legyen $F$ feltételhalmazban $n$ változó szerepel. A **legszűkebb következm
 
 Az [[concepts/logika/igazsagtabla]] felírásával közvetlenül eldönthető minden fenti tulajdonság: ha egy formula igazságtáblájának minden sora $i$, tautológia; ha minden sora $h$, kielégíthetetlen; egyébként kielégíthető, de nem tautológia. Szemantikus következmény vizsgálatakor csak azokban a sorokban kell a következményformula értékét nézni, ahol a feltételhalmaz minden eleme igaz.
 
-**Példa.** Helyes-e a $\{\neg A, \neg A \vee B, B \supset A\} \models_0 \neg A \supset B$ következmény? A feltételhalmaz a $(h,i)$ és $(h,h)$ interpretációkban (az $A,B$ bázison) kielégíthető. A $(h,i)$ interpretációban a következmény igaz, de a $(h,h)$ interpretációban hamis — tehát a következmény **nem helyes**.
+**Példa.** Helyes-e a $\{\neg A, \neg A \vee B, B \supset A\} \models_0 \neg A \supset B$ következmény? A feltételhalmaz (az $A,B$ bázison) csak a $(h,h)$ interpretációban kielégíthető — a $(h,i)$ interpretációban $B \supset A$ hamis. A $(h,h)$ interpretációban viszont a következmény hamis — tehát a következmény **nem helyes**.
 
 ## Kapocs
 
@@ -83,3 +85,4 @@ Az [[concepts/logika/igazsagtabla]] felírásával közvetlenül eldönthető mi
 - [[concepts/logika/igazsagtabla]] — a szemantikai tulajdonságok kimerítő ellenőrzésének eszköze
 - [[concepts/logika/kovetkeztetesforma]] — a helyes következtetésforma pontos definíciója szemantikus következménnyel
 - [[concepts/logika/iteletlogikai-formula]] — elemi konjunkció és elemi diszjunkció, az egyszerűsítési szabályokban használt fogalmak
+- [[concepts/logika/iteletlogikai-formalizalas]] — gyakorlati példa a következmény igazságtáblás vizsgálatára (betörős feladat)

@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [13_HKR_reszletek.md]
 derivation: source
+kind: overview
+element: air
 updated: 2026-08-12
 ---
 

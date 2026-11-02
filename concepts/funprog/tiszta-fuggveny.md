@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [wiki.haskell.org/Pure]
 derivation: unsourced
+kind: definition
+element: air
 updated: 2026-05-18
 ---
 

@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
+tags: [concept]
 sources: [Rezolúció_II.pdf]
 references: [Tk. 6.3.80, Tk. 6.3.83, Tk. 6.3.88, Tk. 278. o./6.3.90. példa]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-09-30
 ---
 
 # Elsőrendű rezolúció
@@ -28,7 +30,7 @@ A faktorizáció (2–4. eset) azért szükséges, mert előfordulhat, hogy egy 
 Egy $S$ elsőrendű klózhalmazból való **rezolúciós levezetés** egy véges $k_1, k_2, \dots, k_n$ klózsorozat, ahol minden $j = 1, 2, \dots, n$-re
 
 1. vagy $k_j \in S$,
-2. vagy van olyan $1 \le s, t \le j$, hogy $k_j$ a $k_s, k_t$ klózpár elsőrendű rezolvense.
+2. vagy van olyan $1 \le s, t < j$, hogy $k_j$ a $k_s, k_t$ klózpár elsőrendű rezolvense.
 
 A levezetés célja az üres klóz ($\square$) levezetése — ez a megállási feltétel, akárcsak az ítéletlogikai [[concepts/logika/rezolucios-kalkulus|rezolúciós kalkulusban]].
 
@@ -48,13 +50,13 @@ Az üres klóz levezetése igazolja, hogy $S$ kielégíthetetlen.
 
 **Tétel:** ha egy $S$ elsőrendű klózhalmazból levezethető az üres klóz, akkor $S$ kielégíthetetlen.
 
-**Bizonyítás vázlata:** legyen $k_1, k_2, \dots, k_n = \square$ egy levezetés. Tegyük fel indirekt, hogy $S$ kielégíthető. Megmutatható, hogy a levezetés minden klóza $S$ következménye: ha $k_j \in S$, akkor triviálisan $S \models k_j$; ha $k_j$ egy $s,t \le j$ indexű $k_s, k_t$ elsőrendű rezolvense, akkor $S \models k_s$ és $S \models k_t$, és a rezolvensre vonatkozó tétel szerint $\{k_s, k_t\} \models k_j$, tehát $S \models k_j$. Így $S \models \square$ is teljesülne, de az üres klóz azonosan hamis — ellentmondás. Tehát $S$ kielégíthetetlen.
+**Bizonyítás vázlata:** legyen $k_1, k_2, \dots, k_n = \square$ egy levezetés. Tegyük fel indirekt, hogy $S$ kielégíthető. Megmutatható, hogy a levezetés minden klóza $S$ következménye: ha $k_j \in S$, akkor triviálisan $S \models k_j$; ha $k_j$ egy $s,t < j$ indexű $k_s, k_t$ elsőrendű rezolvense, akkor $S \models k_s$ és $S \models k_t$, és a rezolvensre vonatkozó tétel szerint $\{k_s, k_t\} \models k_j$, tehát $S \models k_j$. Így $S \models \square$ is teljesülne, de az üres klóz azonosan hamis — ellentmondás. Tehát $S$ kielégíthetetlen.
 
 ### Teljesség
 
 **Tétel:** ha az $S$ klózhalmaz kielégíthetetlen, akkor $S$-nek van elsőrendű rezolúciós cáfolata.
 
-**Bizonyítás vázlata:** $S$ kielégíthetetlen, tehát a [[concepts/logika/herbrand-tetel|H1 tétel]] szerint van végesen zárt szemantikus fája. A véges zárt szemantikus fa biztosítja, hogy a fát lezáró alapklózhalmazból az üres klózra létezik [[concepts/logika/herbrand-tetel|alaprezolúciós]] levezetés. Ezt kell "felemelni" ($S$-beli, nem alap klózokra vonatkozó levezetéssé) — ezt biztosítja a **lifting lemma**: ha $C_1, C_2$ elsőrendű klózok valamely $\sigma$ helyettesítéssel kapott $C_1\sigma, C_2\sigma$ példányainak elsőrendű rezolvense $C^*$, akkor $C^*$ a $C_1, C_2$ klózok $C$ elsőrendű rezolvensének valamely példánya. A lemma ismételt alkalmazásával az alaprezolúciós cáfolatból egyértelműen előállítható egy elsőrendű rezolúciós cáfolat $S$-ből.
+**Bizonyítás vázlata:** $S$ kielégíthetetlen, tehát a [[concepts/logika/herbrand-tetel|H1 tétel]] szerint van végesen zárt szemantikus fája. A véges zárt szemantikus fa biztosítja, hogy a fát lezáró alapklózhalmazból az üres klózra létezik [[concepts/logika/herbrand-tetel|alaprezolúciós]] levezetés. Ezt kell "felemelni" ($S$-beli, nem alap klózokra vonatkozó levezetéssé) — ezt biztosítja a **lifting lemma**: ha $C_1, C_2$ elsőrendű klózok valamely $\sigma$ helyettesítéssel kapott $C_1\sigma, C_2\sigma$ példányainak elsőrendű rezolvense $C^*$, akkor $C^*$ a $C_1, C_2$ klózok $C$ elsőrendű rezolvensének valamely példánya. A lemma ismételt alkalmazásával az alaprezolúciós cáfolatból előállítható egy elsőrendű rezolúciós cáfolat $S$-ből.
 
 ## Kapocs
 

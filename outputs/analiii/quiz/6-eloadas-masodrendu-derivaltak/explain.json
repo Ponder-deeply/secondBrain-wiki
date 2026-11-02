@@ -1,0 +1,113 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "6-eloadas-masodrendu-derivaltak",
+	"unitTitle": "6. előadás — Másodrendű deriváltak",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:20.608Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		}
+	],
+	"questions": [
+		{
+			"id": "tldjvwz4",
+			"page": "concepts/analiii/young-tetel",
+			"q": "Mondd ki a Young-tételt pontos feltételekkel, és magyarázd el, mire vezethető vissza a bizonyítása!",
+			"answer": "Legyen $2\\le n$, $f\\in\\mathbb{R}^n\\to\\mathbb{R}$, $a\\in\\operatorname{int}D_f$, $2\\le s\\in\\mathbb{N}$ és $f\\in C^s\\{a\\}$. Ekkor tetszőleges $k_1,\\dots,k_s\\in\\{1,\\dots,n\\}$ indexekre és ezek bármely $j_1,\\dots,j_s$ permutációjára $\\partial_{k_1\\dots k_s}f(a)=\\partial_{j_1\\dots j_s}f(a)$, vagyis az $s$-edrendű parciális deriváltak nem függnek a deriválás sorrendjétől. Teljes indukcióval elég az $s=2$ esetet belátni. Az $i\\ne j$ esetben a többi változó rögzíthető, így $n=2$ is feltehető. Tehát azt kell igazolni, hogy $f\\in D^2\\{a\\}$ esetén $\\partial_{12}f(a)=\\partial_{21}f(a)$.",
+			"points": [
+				"Feltételek: $a\\in\\operatorname{int}D_f$, $f\\in C^s\\{a\\}$, $s\\ge2$",
+				"Állítás: az $s$-edrendű parciális derivált értéke az indexek bármely permutációjára ugyanaz",
+				"Teljes indukcióval elég az $s=2$, $n=2$, $i\\ne j$ eset",
+				"A visszavezetett állítás: $f\\in D^2\\{a\\}\\Rightarrow\\partial_{12}f(a)=\\partial_{21}f(a)$"
+			]
+		},
+		{
+			"id": "sizevz2b",
+			"page": "concepts/analiii/young-tetel",
+			"q": "Mutasd meg ellenpéldával, hogy a Young-tétel a differenciálhatósági feltétel nélkül hamis! Számold ki a vegyes deriváltakat, és mondd meg, mi a tanulság!",
+			"answer": "Legyen $f(x,y)=xy\\frac{x^2-y^2}{x^2+y^2}$, ha $(x,y)\\ne(0,0)$, és $f(0,0)=0$. Ekkor $\\partial_1f(0,t)=\\lim_{\\tau\\to0}f(\\tau,t)/\\tau=\\lim_{\\tau\\to0}\\frac{t(\\tau^2-t^2)}{\\tau^2+t^2}=-t$ (és $t=0$-ra is $0$), így $\\partial_{12}f(0,0)=\\partial_2(\\partial_1f)(0,0)=-1$. Hasonlóan $\\partial_2f(t,0)=t$, tehát $\\partial_{21}f(0,0)=1$. A két vegyes derivált létezik, de nem egyenlő. Ezért $f$ nem lehet kétszer differenciálható az origóban, mert ha az volna, a Young-tétel szerint a két érték egyezne. A tanulság: a másodrendű parciálisok puszta létezése nem elég, a felcserélhetőséghez környezetbeli, elég sokszori differenciálhatóság kell.",
+			"points": [
+				"Az ellenpélda: $f=xy\\frac{x^2-y^2}{x^2+y^2}$, $f(0,0)=0$",
+				"$\\partial_1f(0,t)=-t$, ebből $\\partial_{12}f(0,0)=-1$",
+				"$\\partial_2f(t,0)=t$, ebből $\\partial_{21}f(0,0)=1$",
+				"Következmény: $f\\notin D^2\\{(0,0)\\}$",
+				"A létezés kevés, differenciálhatóság kell (a $\\partial_{ij}f(a)$ létezéséhez nem kell, hogy $\\partial_if$ differenciálható legyen)"
+			]
+		},
+		{
+			"id": "13ss986v",
+			"page": "concepts/analiii/young-tetel",
+			"q": "Vázold a Young-tétel bizonyítását az $n=2$, $s=2$ esetben!",
+			"answer": "Legyen $K_r(a)\\subset D_f$, és $u,v\\in(-r,r)$ esetén $\\Delta(u,v)=f(a_1+u,a_2+v)-f(a_1+u,a_2)-f(a_1,a_2+v)+f(a_1,a_2)$. Rögzített $v$ mellett legyen $\\varphi(u)=f(a_1+u,a_2+v)-f(a_1+u,a_2)$; ekkor $\\Delta(u,v)=\\varphi(u)-\\varphi(0)$. Mivel $\\varphi$ differenciálható, a Lagrange-középértéktétel szerint van olyan $\\xi$, hogy ez egyenlő $(\\partial_1f(a_1+\\xi,a_2+v)-\\partial_1f(a_1+\\xi,a_2))u$-val. Mivel $\\partial_1f$ differenciálható $a$-ban, a lineáris közelítés szerint ez a kifejezés $\\partial_{12}f(a)uv$-hez tart, így $\\Delta(u,u)/u^2\\to\\partial_{12}f(a)$. Ha $\\Delta$-t a másik változó szerint bontjuk fel, és $\\partial_2f$-re alkalmazzuk ugyanezt, ugyanannak a határértéknek $\\partial_{21}f(a)$ adódik. A határérték egyértelmű, ezért $\\partial_{12}f(a)=\\partial_{21}f(a)$.",
+			"points": [
+				"A $\\Delta(u,v)$ másodrendű differencia definíciója",
+				"$\\Delta=\\varphi(u)-\\varphi(0)$ és a Lagrange-középértéktétel alkalmazása",
+				"A $\\partial_1f$ differenciálhatósága $a$-ban miatt $\\Delta(u,u)/u^2\\to\\partial_{12}f(a)$",
+				"Szimmetrikus számolással ugyanez a határérték $\\partial_{21}f(a)$, és a határérték egyértelmű"
+			]
+		},
+		{
+			"id": "l8wgjpdu",
+			"page": "concepts/analiii/young-tetel",
+			"q": "Miért alapvető a Young-tétel a további elméletben? Sorold fel, mit tesz lehetővé, és indokold!",
+			"answer": "Először is a Hesse-mátrix szimmetriáját adja, hiszen $\\partial_{ij}f(a)=\\partial_{ji}f(a)$. Szimmetrikus mátrixhoz tartozik a $Q^f_a(h)=\\langle f''(a)h,h\\rangle$ kvadratikus alak, és erre épülnek a szélsőérték-feltételek. Másodszor a multiindexes $\\partial^if$ jelölés csak azért jóldefiniált, mert a deriválások sorrendje közömbös: elég megmondani, melyik változó szerint hányszor deriválunk. Ezért írható fel a többváltozós Taylor-polinom $\\sum\\frac{\\partial^if(a)}{i!}(x-a)^i$ alakban. Harmadszor a Young-tételből adódik a $\\partial_if_j=\\partial_jf_i$ rotációmentességi feltétel, amely szükséges ahhoz, hogy egy vektormezőnek legyen primitív függvénye.",
+			"points": [
+				"A Hesse-mátrix szimmetrikus, így tartozik hozzá kvadratikus alak",
+				"A multiindexes $\\partial^if$ jelölés jóldefiniált (a sorrend közömbös)",
+				"Rotációmentesség ($\\partial_if_j=\\partial_jf_i$) mint szükséges feltétel primitív függvény létezéséhez"
+			]
+		},
+		{
+			"id": "0skaonq1",
+			"page": "concepts/analiii/tobbvaltozos-taylor-formula",
+			"q": "Mondd ki a többváltozós Taylor-formulát Lagrange-maradéktaggal, és vázold a bizonyítás ötletét!",
+			"answer": "Ha $f\\in\\mathbb{R}^n\\to\\mathbb{R}$, $f\\in D^{s+1}$ és $[a,b]\\subset D_f$, akkor van olyan $c\\in[a,b]$, hogy $f(b)=T_{a,s}f(b)+\\sum_{|i|=s+1}\\frac{\\partial^if(c)}{i!}(b-a)^i$. A bizonyítás visszavezeti az állítást egy változóra. Legyen $h=b-a$ és $F(t)=f(a+th)$. A láncszabály többszöri alkalmazásával $F\\in D^{s+1}$ és $[0,1]\\subset D_F$. Az egyváltozós Taylor-formula szerint van $\\xi\\in(0,1)$, amellyel $F(1)=\\sum_{k=0}^s\\frac{F^{(k)}(0)}{k!}+\\frac{F^{(s+1)}(\\xi)}{(s+1)!}$. Ezután $k$ szerinti indukcióval, a láncszabállyal belátjuk, hogy $\\frac{F^{(k)}(t)}{k!}=\\sum_{|i|=k}\\frac{\\partial^if(a+th)}{i!}h^i$. Így $c=a+\\xi h$ megfelel.",
+			"points": [
+				"Feltételek: $f\\in D^{s+1}$, $[a,b]\\subset D_f$, és a maradéktagban egy $c\\in[a,b]$ pont szerepel",
+				"A maradéktag: $\\sum_{|i|=s+1}\\frac{\\partial^if(c)}{i!}(b-a)^i$",
+				"Visszavezetés egy változóra: $F(t)=f(a+th)$, az egyváltozós Taylor-formula alkalmazása",
+				"Az $\\frac{F^{(k)}(t)}{k!}=\\sum_{|i|=k}\\frac{\\partial^if(a+th)}{i!}h^i$ azonosság indukcióval, a láncszabállyal"
+			]
+		},
+		{
+			"id": "35tptikd",
+			"page": "concepts/analiii/tobbvaltozos-taylor-formula",
+			"q": "Mondd ki a Taylor-formulát Peano-féle maradéktaggal! Mi az $s=1$ eset, és hogyan megy az indukciós lépés?",
+			"answer": "Ha $f\\in D^s\\{a\\}$ (csak egyetlen pontban), akkor van olyan $\\eta$ függvény, amelyre $\\lim_0\\eta=0$ és $f(a+h)-f(a)=\\sum_{k=1}^s\\sum_{|i|=k}\\frac{\\partial^if(a)}{i!}h^i+\\eta(h)\\|h\\|^s$. Másképp: $\\frac{f(x)-T_{a,s}f(x)}{\\|x-a\\|^s}\\to0$, ha $x\\to a$. Az $s=1$ eset pontosan az $f\\in D\\{a\\}$ definíciója. Az indukciós lépésben minden $|i|=s$ multiindexre $\\partial^if(a+h)=\\partial^if(a)+\\varepsilon_i(h)$, ahol $\\varepsilon_i(h)\\to0$. Felírjuk az $(s-1)$-edrendű Lagrange-maradéktagos formulát egy $\\nu\\in(0,1)$-gyel, és a maradéktagba ezt helyettesítjük be. Így $\\eta(h)=\\sum_{|i|=s}\\frac{\\varepsilon_i(\\nu h)}{i!}\\frac{h^i}{\\|h\\|^s}$ adódik. Mivel a $h^i/\\|h\\|^s$ hányadosok korlátosak, $\\eta(h)\\to0$.",
+			"points": [
+				"Feltétel: $f\\in D^s\\{a\\}$ egyetlen pontban",
+				"Állítás: $f(x)-T_{a,s}f(x)=o(\\|x-a\\|^s)$, vagyis van $\\eta\\to0$ a megadott alakban",
+				"Az $s=1$ eset maga a $D\\{a\\}$ definíció",
+				"Indukció: Lagrange-alak $\\nu$-vel, $\\partial^if(a+\\nu h)=\\partial^if(a)+\\varepsilon_i(\\nu h)$, és a $h^i/\\|h\\|^s$ hányadosok korlátosak"
+			]
+		},
+		{
+			"id": "86zl5asy",
+			"page": "concepts/analiii/tobbvaltozos-taylor-formula",
+			"q": "Hasonlítsd össze a Lagrange- és a Peano-féle maradéktagos Taylor-formulát! Melyiket mire használjuk?",
+			"answer": "A Lagrange-alakhoz egy egész szakaszon, illetve környezetben $D^{s+1}$ kell. A hibát egy ismeretlen közbülső $c$ pontban vett $(s+1)$-edrendű deriváltakkal adja meg. Ezért konkrét numerikus hibabecslésre alkalmas: ha ezek a deriváltak korlátosak a szakaszon, a hiba $\\|b-a\\|^{s+1}$ nagyságrendű. A Peano-alak kevesebbet tesz fel, csak egyetlen pontban $D^s$-t. A hibát csak nagyságrendben adja meg: $o(\\|h\\|^s)$. Az elmélet szempontjából mégis ez a hasznosabb. Az $s=2$ esete, $f(a+h)-f(a)=\\langle\\operatorname{grad}f(a),h\\rangle+\\tfrac12Q^f_a(h)+\\eta(h)\\|h\\|^2$, az a formula, amelyre a szélsőérték-feltételek bizonyításai épülnek.",
+			"points": [
+				"Feltételek: Lagrange esetén $D^{s+1}$ egy környezetben, Peano esetén $D^s$ egy pontban",
+				"A hiba alakja: közbülső pontbeli deriváltak, illetve $o(\\|h\\|^s)$ nagyságrend",
+				"Lagrange: numerikus hibabecslés",
+				"Peano $s=2$ esete: a gradienses és a $\\tfrac12Q^f_a(h)$ tagos alak a szélsőérték-elmélet alapja"
+			]
+		},
+		{
+			"id": "g46mkyr9",
+			"page": "concepts/analiii/tobbvaltozos-taylor-formula",
+			"q": "Mutasd be a Lagrange-maradéktagos hibabecslés módszerét az $f(x,y)=\\ln(1+x+y)$ függvény origó körüli első Taylor-polinomján, ha $|x|,|y|\\le0{,}01$!",
+			"answer": "Az origó egy környezetében (pl. $K_{1/4}(0)$-ban) $f\\in D^2$, és $T_{0,1}f=x+y$, mert $f(0,0)=0$ és $\\partial_1f(0,0)=\\partial_2f(0,0)=1$. Mindhárom másodrendű parciális derivált $-1/(1+x+y)^2$. A Lagrange-maradék $\\sum_{|i|=2}\\frac{\\partial^if(\\nu x,\\nu y)}{i!}h^i$ valamely $\\nu\\in(0,1)$-gyel. Mivel $1+\\nu x+\\nu y\\ge0{,}98$, a maradék abszolút értéke legfeljebb $\\frac1{0{,}98^2}\\left(\\frac{x^2}2+|xy|+\\frac{y^2}2\\right)\\le\\frac{2\\cdot0{,}01^2}{0{,}98^2}\\approx0{,}000208$. Tehát $|\\ln(1+x+y)-(x+y)|\\le0{,}000208$. Például $x=y=0{,}01$-re $0{,}019792\\le\\ln1{,}02\\le0{,}022080$.",
+			"points": [
+				"$T_{0,1}f=x+y$, és a másodrendű parciálisok $-1/(1+x+y)^2$",
+				"A Lagrange-maradék egy közbülső $(\\nu x,\\nu y)$ pontban vett másodrendű deriváltakkal",
+				"A nevező alsó becslése: $1+\\nu x+\\nu y\\ge0{,}98$",
+				"Az eredmény: a hiba legfeljebb kb. $0{,}000208$"
+			]
+		}
+	]
+}

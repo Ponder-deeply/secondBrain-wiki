@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/reaktiv-programozas]
+tags: [concept]
 sources: [elte_eva_ea11_reactive.pdf]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-13
 ---
 

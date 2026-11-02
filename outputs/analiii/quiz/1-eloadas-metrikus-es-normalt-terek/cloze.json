@@ -1,0 +1,271 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "1-eloadas-metrikus-es-normalt-terek",
+	"unitTitle": "1. előadás — Metrikus és normált terek",
+	"type": "cloze",
+	"batches": [
+		{
+			"at": "2026-10-21T21:20:05.007Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T12:39:26.238Z",
+			"model": "opus",
+			"direction": "",
+			"added": 18
+		}
+	],
+	"questions": [
+		{
+			"id": "yk0w9ff8",
+			"page": "concepts/analiii/metrikus-ter",
+			"q": "Az $(M,d)$ pár metrikus tér, ha $M\\neq\\emptyset$, és a $d:M\\times M\\to[0,\\infty)$ függvényre $d(x,y)=0\\iff$ {{1}}, $d(x,y)=$ {{2}}, továbbá $d(x,y)+d(y,z)\\ge$ {{3}} minden $x,y,z\\in M$ esetén.",
+			"blanks": [
+				"x=y",
+				"d(y,x)",
+				"d(x,z)"
+			]
+		},
+		{
+			"id": "t5tjnxiy",
+			"page": "concepts/analiii/normalt-vektorter",
+			"q": "A $\\|\\cdot\\|$ norma homogenitása: $\\|cx\\|=$ {{1}}. A norma a $d(x,y)=$ {{2}} képlettel metrikát indukál.",
+			"blanks": [
+				"|c|\\cdot\\|x\\|",
+				"\\|y-x\\|"
+			]
+		},
+		{
+			"id": "o4ox6b70",
+			"page": "concepts/analiii/normalt-vektorter",
+			"q": "$\\mathbb R^n$-ben $\\|x\\|_\\infty\\le\\|x\\|_p\\le$ {{1}}, és mivel ennek a szorzója $1$-hez tart, ha $p\\to\\infty$, a {{2}} szerint $\\lim_{p\\to\\infty}\\|x\\|_p=\\|x\\|_\\infty$.",
+			"blanks": [
+				"n^{1/p}\\|x\\|_\\infty",
+				"rendőrelv"
+			]
+		},
+		{
+			"id": "f5ss0itl",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"q": "Az $a$ pont a $H$ belső pontja, ha $\\exists r>0$: {{1}}; és külső pontja, ha $\\exists r>0$: {{2}}.",
+			"blanks": [
+				"B(a,r)\\subset H",
+				"B(a,r)\\cap H=\\emptyset"
+			]
+		},
+		{
+			"id": "oixi0v7f",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"q": "Bármely $H\\subset M$ halmazra a tér diszjunkt felbontása: $M=\\operatorname{int}H\\ \\dot\\cup\\ $ {{1}} $\\ \\dot\\cup\\ $ {{2}}.",
+			"blanks": [
+				"\\partial H",
+				"\\operatorname{ext} H"
+			]
+		},
+		{
+			"id": "7ka62b5r",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"q": "Az $\\alpha$ akkor és csak akkor torlódási pontja a $H\\neq\\emptyset$ halmaznak, ha van olyan $(x_n):\\mathbb N\\to$ {{1}} sorozat, amelyre $\\lim(x_n)=\\alpha$; a sorozat ráadásul {{2}} is választható.",
+			"blanks": [
+				"H\\setminus\\{\\alpha\\}",
+				"injektívnek"
+			]
+		},
+		{
+			"id": "hvvo3ia7",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"q": "A $H$ halmaz zárt, ha a {{1}} nyílt, vagy ekvivalensen, ha a határára {{2}} teljesül.",
+			"blanks": [
+				"komplementere",
+				"\\partial H\\subset H"
+			]
+		},
+		{
+			"id": "zbueafbo",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"q": "A nyílt gömb nyíltságának bizonyításában $b\\in K_r(a)$ esetén $0<s<$ {{1}} sugarat választunk; ekkor a {{2}} miatt $K_s(b)\\subset K_r(a)$.",
+			"blanks": [
+				"r-\\|a-b\\|",
+				"háromszög-egyenlőtlenség"
+			]
+		},
+		{
+			"id": "myzdha1a",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "base",
+			"q": "A metrikus tér egy {{1}} ponthalmaz és egy három axiómának eleget tevő {{2}}.",
+			"blanks": [
+				"nemüres",
+				"távolságfüggvény"
+			]
+		},
+		{
+			"id": "zz9wl07u",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Definíció",
+			"q": "A $d(x,y)=d(y,x)$ tulajdonság neve {{1}}, a $d(x,y)+d(y,z)\\ge d(x,z)$ tulajdonságé {{2}}.",
+			"blanks": [
+				"szimmetria",
+				"háromszög-egyenlőtlenség"
+			]
+		},
+		{
+			"id": "6c2t0mle",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Példák",
+			"q": "$\\mathbb{R}^p$-ben a maximum-metrika $d(x,y)=$ {{1}}, a taxi-metrika pedig $d(x,y)=$ {{2}}.",
+			"blanks": [
+				"$\\max_{1\\le i\\le p}|y_i-x_i|$",
+				"$\\sum_{i=1}^p|y_i-x_i|$"
+			]
+		},
+		{
+			"id": "1lk6cxm6",
+			"page": "concepts/analiii/metrikus-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "Ha $f:Y\\to X$ {{1}} és $(X,\\rho)$ metrikus tér, akkor a $\\sigma(x,y)=$ {{2}} függvény metrika $Y$-on.",
+			"blanks": [
+				"injekció",
+				"$\\rho(f(x),f(y))$"
+			]
+		},
+		{
+			"id": "qg2rzs2m",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "base",
+			"q": "A normált tér olyan {{1}}, amelyen a vektorok hossza mérhető; a norma automatikusan {{2}} indukál.",
+			"blanks": [
+				"vektortér",
+				"metrikát"
+			]
+		},
+		{
+			"id": "9863znlr",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Definíció",
+			"q": "A norma háromszög-egyenlőtlensége: minden $x,y\\in V$-re $\\|x+y\\|\\le$ {{1}}.",
+			"blanks": [
+				"$\\|x\\|+\\|y\\|$"
+			]
+		},
+		{
+			"id": "uzios7vw",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Normák $C[a,b]$-n",
+			"q": "$C[a,b]$-n a leggyakoribb norma a {{1}}: $\\|f\\|_\\infty=$ {{2}}.",
+			"blanks": [
+				"maximumnorma",
+				"$\\max|f|$"
+			]
+		},
+		{
+			"id": "vfb9voxo",
+			"page": "concepts/analiii/normalt-vektorter",
+			"gate": "tartalom/Feladatok",
+			"q": "$C[a,b]$-n az $\\|\\cdot\\|_1$ pozitív definitsége azon múlik, hogy ha $\\int|f|=0$ és $f$ {{1}}, akkor $f\\equiv0$.",
+			"blanks": [
+				"folytonos"
+			]
+		},
+		{
+			"id": "y84a82vz",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "base",
+			"q": "A pontok osztályozásából képzett halmazok: a belső, a külső, a határ, a {{1}} és a lezárt.",
+			"blanks": [
+				"derivált halmaz"
+			]
+		},
+		{
+			"id": "dqpja389",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/A pontok osztályozása",
+			"q": "Az $a$ pont a $H$ határpontja, ha sem nem {{1}}, sem nem {{2}} pontja $H$-nak.",
+			"blanks": [
+				"belső",
+				"külső"
+			]
+		},
+		{
+			"id": "8gggrieo",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Derivált halmaz és lezárt",
+			"q": "$\\operatorname{cl}H=H\\cup$ {{1}}, és a lezárt elemeit a $H$ {{2}} pontjainak is nevezzük.",
+			"blanks": [
+				"$H'$",
+				"érintkezési"
+			]
+		},
+		{
+			"id": "wlqnp4cc",
+			"page": "concepts/analiii/halmaz-pontjai-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$a\\in A'\\iff\\forall K(a):\\ A\\cap\\bigl($ {{1}} $\\bigr)\\neq\\emptyset$.",
+			"blanks": [
+				"$K(a)\\setminus\\{a\\}$"
+			]
+		},
+		{
+			"id": "wnxxxdqq",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "base",
+			"q": "A nyíltság és a zártság nem egymást {{1}}, és nem is {{2}} tulajdonságok.",
+			"blanks": [
+				"kizáró",
+				"kimerítő"
+			]
+		},
+		{
+			"id": "8xtnmtl2",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Definíciók",
+			"q": "$H$ zárt, ha bármely $H$-beli {{1}} pontsorozat limesze is {{2}} van.",
+			"blanks": [
+				"konvergens",
+				"$H$-ban"
+			]
+		},
+		{
+			"id": "gyrwllo9",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Példák",
+			"q": "A nyílt gömbök {{1}} halmazok, a zárt gömbök {{2}} halmazok.",
+			"blanks": [
+				"nyílt",
+				"zárt"
+			]
+		},
+		{
+			"id": "1u0j8lmh",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Műveleti tulajdonságok",
+			"q": "Nyílt halmazok {{1}} rendszerének uniója nyílt, de metszetük csak {{2}} sok halmaz esetén garantáltan nyílt.",
+			"blanks": [
+				"tetszőleges",
+				"véges"
+			]
+		},
+		{
+			"id": "d8bpsmzh",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/A topológia metrikafüggése",
+			"q": "Az $f_n(x)=1-nx$ ($x<1/n$), $0$ ($x\\ge1/n$) függvényekre $\\|f_n\\|_1=$ {{1}}, míg $\\|f_n\\|_\\infty=$ {{2}}.",
+			"blanks": [
+				"$\\frac{1}{2n}$",
+				"$1$"
+			]
+		},
+		{
+			"id": "k2pwmvdo",
+			"page": "concepts/analiii/nyilt-es-zart-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "A zárt gömb zártságának bizonyításakor azt mutatjuk meg, hogy a {{1}} nyílt.",
+			"blanks": [
+				"komplementere"
+			]
+		}
+	]
+}

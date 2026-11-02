@@ -1,7 +1,9 @@
 ---
-tags: [concept, logika/tablokalkulus]
+tags: [concept]
 sources: [Tablókalkulus.pdf]
 derivation: source
+kind: definition
+element: air
 updated: 2026-09-08
 ---
 

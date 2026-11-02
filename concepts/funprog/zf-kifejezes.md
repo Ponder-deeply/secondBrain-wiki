@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 5.5, "LYAH \"Starting out\""]
 derivation: unsourced
+kind: definition
+element: earth
 updated: 2026-05-18
 ---
 

@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/iteletlogika-szintaxis]
+tags: [concept]
 sources: [iteletlogika.pdf]
 references: [Pásztorné Varga Katalin – Várterész Magda, A matematikai logika alkalmazásszemléletű tárgyalása]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

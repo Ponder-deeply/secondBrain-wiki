@@ -1,8 +1,10 @@
 ---
-tags: [concept, dimatii/kongruenciak]
-sources: [DimatIIEa01.pdf, DimatIIEa02.pdf]
+tags: [concept]
+sources: [DimatIIEa01.pdf, DimatIIEa02.pdf, Farkas-Gabor-Diszkret-matematika-II-eloadasdiak.pdf, Lehman-Leighton-Meyer-Mathematics-for-Computer-Science.pdf, dimat2gyak03mo.pdf]
 derivation: source
-updated: 2026-09-08
+kind: definition
+element: fire
+updated: 2026-10-21
 ---
 
 # Kongruencia
@@ -49,6 +51,28 @@ $$ac \equiv bc \pmod m \iff a \equiv b \ \left(\operatorname{mod} \tfrac{m}{(c,m
 
 **Példa.** $2\cdot 7 \equiv 2\cdot 3 \pmod 8 \Rightarrow 7 \equiv 3 \pmod{\frac{8}{2}}$.
 
+### További tulajdonságok (Farkas-diák)
+
+- **Polinomokra:** ha $a \equiv b \pmod m$ és $f(x) \in \mathbb{Z}[x]$, akkor $f(a) \equiv f(b) \pmod m$ (az összeadás- és szorzástartásból adódik).
+- **Megjegyzés:** $a' \equiv a \pmod m \Rightarrow (a, m) = (a', m)$ — a modulushoz vett lnko az osztály tulajdonsága.
+- Az egyszerűsítési tétel bizonyítása a diákon két irányban: $\Rightarrow$ $m \mid (a-b)c \Rightarrow \frac{m}{d} \mid (a-b)\frac{c}{d}$, és $\left(\frac{m}{d}, \frac{c}{d}\right) = 1$, így $\frac{m}{d} \mid a-b$; $\Leftarrow$ ha $a - b = \frac{m}{d}q$, akkor $(a-b)c = m q \frac{c}{d}$, és $\frac{c}{d}$ egész, tehát $m \mid ac - bc$.
+
+### Maradéktétel és osztályfelbontás (Lehman–Leighton–Meyer 9.6)
+
+**Lemma (maradékos jellemzés).** $a \equiv b \pmod n \iff \operatorname{rem}(a,n) = \operatorname{rem}(b,n)$.
+
+*Bizonyítás.* Legyen $a = q_1 n + r_1$, $b = q_2 n + r_2$ ($r_1, r_2 \in [0, n)$). Ekkor $a - b = (q_1 - q_2)n + (r_1 - r_2)$, ahol $r_1 - r_2 \in (-n, n)$. $n \mid a - b \iff n \mid r_1 - r_2$, és az $(-n, n)$ intervallum egyetlen $n$-többszöröse a $0$, tehát $r_1 = r_2$. $\square$
+
+Ebből azonnal $a \equiv \operatorname{rem}(a,n) \pmod n$. A kongruencia $n$ osztályra bontja $\mathbb{Z}$-t: pl. mod $3$ a $\{\dots,-3,0,3,\dots\}$, $\{\dots,-2,1,4,\dots\}$ és $\{\dots,-1,2,5,\dots\}$ halmazokra. Modulo $n$ így csak $n$ „fajta” szám van, ezért a moduláris számolás a közönséges számolás egyszerűsítése. A modulus mindig pozitív ($n \le 0$ nem hasznos).
+
+**Jelölési figyelmeztetés.** A „$\pmod n$” a reláció egészére vonatkozik, nem a jobb oldali tagra: $29 \equiv 15 \pmod 7$ azt jelenti, hogy $7 \mid 14$, és mindkettő maradéka $1$.
+
+### Feladattípusok (gyakorlat 3.)
+
+**Oszthatóság bizonyítása kongruenciával.** A tagokat a modulus szerint közös alapra hozzuk. Példa: $3^{3n+1}5^{2n+1} + 2^{5n+1}11^n \equiv 0 \pmod{17}$. Az első tag $= 3^n\cdot 3^{2n+1}5^{2n+1} = 3^n\cdot 15^{2n+1} \equiv 3^n(-2)^{2n+1} = -3^n 2^{2n+1}$, mert $15 \equiv -2$. A második tagban $11 \equiv -2\cdot 3$ és $2^{5n+1} = 2\cdot 32^n \equiv 2(-2)^n$, így $\equiv 2(-2)^n(-2)^n 3^n = 2^{2n+1}3^n$. A két tag összege $0$. Hasonlóan mod $23$: $61 \equiv -8$, $2^{5k+3} \equiv 9^k\cdot 8$, és a kifejezés $-8(-8)^k + (-8)^k\cdot 8 \equiv 0$.
+
+**Egységgyök-egyenlet kongruenciára visszavezetve.** $z = \tfrac{1+i}{\sqrt2}$ primitív $8$-adik egységgyök, $z^k = z^n \iff k \equiv n \pmod 8$. Így $z^{3x} = i = z^2 \iff 3x \equiv 2 \pmod 8 \iff x \equiv 6 \pmod 8$ ($3x \equiv 18$, és $(3,8) = 1$-gyel egyszerűsítünk).
+
 ## Kapocs
 
 - [[concepts/dimatii/oszthatosag]] — a definiáló reláció
@@ -57,3 +81,4 @@ $$ac \equiv bc \pmod m \iff a \equiv b \ \left(\operatorname{mod} \tfrac{m}{(c,m
 - [[concepts/dimatii/linearis-kongruencia]] — az $ax \equiv b \pmod m$ egyenlet
 - [[concepts/dimatii/szimultan-kongruenciak]] — kongruenciarendszerek
 - [[concepts/kript/linearis-kongruencialis-generator]] — kongruenciákra épülő álvéletlen-generátor
+- [[concepts/dimatii/maradekosztaly]] — a maradékokkal való számolás általános elve és a $\mathbb{Z}_n$ gyűrű (Lehman–Leighton–Meyer 9.7)

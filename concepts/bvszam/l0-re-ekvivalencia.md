@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [10.md]
 derivation: source
+kind: theorem
+element: water
 updated: 2026-09-04
 ---
 

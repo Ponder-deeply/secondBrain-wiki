@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [haskell.org/onlinereport/haskell2010 §10.3, wiki.haskell.org/Layout]
 derivation: unsourced
+kind: pitfall
+element: earth
 updated: 2026-05-18
 ---
 

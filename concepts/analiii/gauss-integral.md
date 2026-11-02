@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 10_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, 10_ea_An3_2022_tavasz.pdf, gyakorlat.pdf]
 derivation: source
-updated: 2026-09-14
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Gauss-integrál
@@ -54,6 +56,10 @@ $$\int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x = \lim_{R \to \infty} I(R) = \sq
 ### Miért fontos
 
 A $\frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}x^2}$ függvény éppen a standard normális eloszlás sűrűségfüggvénye; a harmadik formula az, ami a $\frac{1}{\sqrt{2\pi}}$ normálótényezőt megmagyarázza.
+
+### Feladatok
+
+A gyakorlaton (gyakorlat.pdf, Többdimenziós integrálok 11–12.) a $\int_0^\infty e^{-x^2}\mathrm{d}x$ improprius integrál kiszámítása a polárkoordinátás helyettesítés bevezetése után szerepel; a módszer a fenti bizonyítás, az eredmény $\frac{\sqrt\pi}2$.
 
 ## Kapocs
 

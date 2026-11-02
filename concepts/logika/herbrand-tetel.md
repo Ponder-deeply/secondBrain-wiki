@@ -1,9 +1,11 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
-sources: [Rezolúció_II.pdf]
+tags: [concept]
+sources: [Rezolúció_II.pdf, Szabo-Ivan-Elsorendu-logika-egyetemi-jegyzet.pdf]
 references: [Tk. 6.3.60, Tk. 6.3.61, Tk. 263. o., Tk. 264. o., Tk. 265. o.]
 derivation: source
-updated: 2026-09-08
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Herbrand tételek
@@ -53,6 +55,18 @@ Herbrand univerzuma $\{a, g(a), f(a), g(f(a)), g(g(a)), f(f(a)), f(g(a)), \dots\
 
 Az eljárás lényege: a Herbrand bázis és a hozzá tartozó [[concepts/logika/iteletlogikai-szemantikus-fa|szemantikus fa]] segítségével a kielégíthetetlenség véges sok alapklóz ítéletlogikai rezolúciójával igazolható — ez az alaprezolúció, és ez alapozza meg az [[concepts/logika/elsorendu-rezolucio|elsőrendű rezolúciós kalkulus]] teljességi bizonyítását.
 
+### Szabó Iván jegyzete: Herbrand-struktúra, kiterjesztés, kompaktság
+
+A tételt egy rövid előadásvázlat más oldalról tárgyalja ([[concepts/logika/skolem-normalforma]] zárt Skolem normálformáira, egyenlőség nélkül):
+
+- **Herbrand-struktúra.** Az $\mathcal{A}$ struktúra Herbrand-struktúra, ha univerzuma az **alaptermek** halmaza, és a függvényjelek önmagukra alkalmazódnak: $I(f)(t_1,\dots,t_n)=f(t_1,\dots,t_n)$. A predikátumok interpretációjára nincs megkötés. Ha a formulákban nincs konstans, újat kell bevezetni, hogy legyen alapterm. Következmény: $\mathcal{A}(t)=t$ minden alaptermre, és minden objektumra mutat alapterm.
+- **Herbrand-kiterjesztés** $E(\Sigma)$: a kvantorok elhagyása és a magban a változók alaptermekkel való behelyettesítése; pl. $\forall x\forall y\,p(x)\wedge q(x,f(y))$ kiterjesztésében szerepel $p(c)\wedge q(c,f(c))$ és $p(f(c))\wedge q(f(c),f(c))$. Az alaprezolúció ilyen alappéldányokból gyárt annyit, hogy ellentmondjanak egymásnak.
+- **Herbrand tétel.** Zárt Skolem normálformák halmaza pontosan akkor kielégíthető, ha van Herbrand-modellje.
+- **Kompaktsági tétel.** $\Sigma$ pontosan akkor kielégíthető, ha minden véges részhalmaza kielégíthető; ekvivalensen, ha $\Sigma$ kielégíthetetlen, van kielégíthetetlen véges része. Így végtelen $E(\Sigma)$ esetén elég az elemeit egyesével generálni (megszámlálható sok jelünk van), és ha $\Sigma$ kielégíthetetlen, előbb-utóbb ellentmondás áll elő.
+- **Következmény.** Ha zárt Skolem normálformák halmaza kielégíthető, van megszámlálható modellje is (a Herbrand-modell univerzuma az alaptermek halmaza, ami megszámlálható).
+
+A kompaktság tabló-bizonyítását lásd [[concepts/logika/elsorendu-tablo]].
+
 ## Kapocs
 
 - [[concepts/logika/herbrand-univerzum]] — a Herbrand univerzum és interpretáció fogalma, amire a tételek épülnek
@@ -60,3 +74,4 @@ Az eljárás lényege: a Herbrand bázis és a hozzá tartozó [[concepts/logika
 - [[concepts/logika/elsorendu-kloz]] — az alappéldányok és alapklózok forrása
 - [[concepts/logika/elsorendu-rezolucio]] — az alaprezolúció elsőrendű általánosítása, amelynek teljessége a H1 tételen alapul
 - [[concepts/logika/rezolucios-kalkulus]] — az ítéletlogikai rezolúció, amit az alaprezolúció alapklózokra alkalmaz
+- [[concepts/logika/skolem-normalforma]] — a zárt Skolem normálforma, amelyre a Szabó-féle tárgyalás épül

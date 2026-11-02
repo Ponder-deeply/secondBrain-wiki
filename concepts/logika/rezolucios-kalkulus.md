@@ -1,8 +1,10 @@
 ---
-tags: [concept, logika/rezolucio-iteletlogika]
+tags: [concept]
 sources: [Rezolúció_I.pdf]
 references: [Tk. 227-238. o.]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

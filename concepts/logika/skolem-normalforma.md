@@ -1,19 +1,21 @@
 ---
-tags: [concept, logika/rezolucio-elsorendu-logika]
-sources: [Rezolúció_II.pdf]
+tags: [concept]
+sources: [Rezolúció_II.pdf, Szabo-Ivan-Elsorendu-logika-egyetemi-jegyzet.pdf]
 derivation: source
-updated: 2026-09-08
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Skolem normálforma
 
-A Skolem normálforma (Skolem formula) olyan prenex formula, amelynek prefixumában — az egzisztenciális kvantoroknak megfelelő individuumváltozók függvényszimbólumokkal (Skolem-függvényekkel) való kiváltása után — kizárólag univerzális kvantorok szerepelnek; eldönthető formulaosztály, és kielégíthetőség szempontjából ekvivalens az eredeti formulával.
+A Skolem normálforma (Skolem formula) olyan prenex formula, amelynek prefixumában — az egzisztenciális kvantoroknak megfelelő individuumváltozók függvényszimbólumokkal (Skolem-függvényekkel) való kiváltása után — kizárólag univerzális kvantorok szerepelnek; kielégíthetőség szempontjából ekvivalens az eredeti formulával.
 
 ## Tartalom
 
 ### Fogalom
 
-A Skolem formula a $\forall x_1, \forall x_2, \dots, \forall x_n A$ alakú [[concepts/logika/prenex-forma|prenex formula]], ahol a prefixumban csak univerzális kvantorok szerepelnek. Ez eldönthető formulaosztály (a rá vonatkozó kielégíthetőségi eldöntésprobléma algoritmikusan eldönthető).
+A Skolem formula a $\forall x_1, \forall x_2, \dots, \forall x_n A$ alakú [[concepts/logika/prenex-forma|prenex formula]], ahol a prefixumban csak univerzális kvantorok szerepelnek. A diasor ezt eldönthető formulaosztálynak nevezi, ez azonban általában nem igaz: függvényszimbólumok jelenlétében a Skolem formulák kielégíthetősége algoritmikusan eldönthetetlen, csak a kielégíthetetlenség félig eldönthető ([[concepts/logika/herbrand-tetel|Herbrand-tétel]], rezolúció). Eldönthető viszont például a függvényszimbólumot nem tartalmazó $\exists^*\forall^*$ prefixumú formulák osztálya (Bernays–Schönfinkel), amelyek Skolem alakjában csak Skolem-konstansok jelennek meg.
 
 ### A Skolem alakra hozás algoritmusa
 
@@ -25,9 +27,9 @@ Ha egy egzisztenciális kvantor előtt nem áll univerzális kvantor a prefixumb
 
 **1. példa:** $\forall x \exists y P(x,y)$ Skolem alakja $\forall x P(x, f(x))$ — $f$ egyváltozós Skolem-függvény, mert az $y$-hoz tartozó egzisztenciális kvantor előtt egy univerzális kvantor ($\forall x$) áll.
 
-**2. példa:** a $\exists x \exists y \forall y_1 \forall y_2(\lnot P(x,y) \vee Q(y_1) \vee P(x,a) \vee P(x,y_2) \wedge \lnot R(x,y_2))$ prenex formulában $x$ és $y$ egzisztenciális kvantorai előtt nincs univerzális kvantor, ezért a hozzájuk tartozó Skolem-függvények $0$ argumentumúak (Skolem-konstansok, pl. $q, r$). A Skolem alak:
+**2. példa:** a $\exists x \exists y \forall y_1 \forall y_2(\lnot P(x,y) \vee \lnot Q(y_1) \vee P(x,a) \vee (P(y_2,x) \wedge \lnot R(x,y_2)))$ prenex formulában (a [[concepts/logika/prenex-forma|prenex forma]] példájának eredménye) $x$ és $y$ egzisztenciális kvantorai előtt nincs univerzális kvantor, ezért a hozzájuk tartozó Skolem-függvények $0$ argumentumúak (Skolem-konstansok, pl. $q, r$). A Skolem alak:
 
-$$\forall y_1 \forall y_2(\lnot P(q,r) \vee \lnot Q(y_1) \vee P(q,a) \vee P(q,y_2) \wedge \lnot R(q,y_2))$$
+$$\forall y_1 \forall y_2(\lnot P(q,r) \vee \lnot Q(y_1) \vee P(q,a) \vee (P(y_2,q) \wedge \lnot R(q,y_2)))$$
 
 ### Kielégíthetőség-tartás
 
@@ -41,9 +43,18 @@ A Skolem normálforma a köztes lépés a tetszőleges elsőrendű formula [[con
 2. tetszőleges prenex formula átírható Skolem alakba;
 3. tetszőleges Skolem normálforma felírható elsőrendű klózok konjunkciójaként.
 
+### Szabó Iván jegyzete szerint: s-ekvivalencia és zárttá tétel
+
+- A Skolem alak a prenex alakból úgy áll elő, hogy a prefixum kvantorain végigmegyünk, és minden $\exists y$-ra töröljük a $\exists y$ részt, a magban pedig $y$ minden előfordulását $f(x_1,\dots,x_n)$-re cseréljük, ahol $x_1,\dots,x_n$ az $y$ előtt deklarált $\forall$-kötött változók, $f$ pedig *új*, sehol máshol nem szereplő Skolem-függvényjel (formulahalmaznál az egész halmazra nézve új).
+- **Példa a prefixumra:** $\forall w\,\exists v\,\exists x\,\forall y\,\exists z$ esetén $v\mapsto g(w)$, $x\mapsto h(w)$ (új jel, $f,g$ már foglalt), $z\mapsto i(w,y)$; a Skolem prefixum $\forall w\,\forall y$.
+- Az eredmény *nem ekvivalens* az eredetivel (új függvényjelek jelennek meg), hanem **s-ekvivalens** (satisfiability): az eredeti formula pontosan akkor kielégíthető, ha a Skolem alakja az. Ez formulahalmazra is érvényes, ha minden elemnél teljesen új függvényjeleket vezetünk be.
+- Mivel $\Sigma\models F$ gyakran $\Sigma\cup\{\neg F\}$ kielégíthetetlenségével bizonyítható, az s-ekvivalencia elég. A bemenetet még **le is zárjuk**: minden szabad változóelőfordulást új konstansra cserélünk, hogy a formulák zártak legyenek.
+- Sorrend: nyilak eltüntetése $\to$ kiigazítás ([[concepts/logika/valtozoiban-tiszta-alak]]) $\to$ prenex alak $\to$ Skolem alak.
+
 ## Kapocs
 
 - [[concepts/logika/prenex-forma]] — az előző lépés, amelyből a Skolem alak előáll
 - [[concepts/logika/elsorendu-kloz]] — a Skolem normálforma magjából felírt klózok konjunkciója
 - [[concepts/logika/herbrand-univerzum]] — a Skolem-függvények és -konstansok szerepe a Herbrand univerzum felépítésében
 - [[concepts/logika/term]] — a Skolem-függvény alkalmazásával kapott kifejezések termek
+- [[concepts/logika/valtozoiban-tiszta-alak]] — a prenex alakra hozás előfeltétele (kiigazítás)

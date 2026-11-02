@@ -1,8 +1,10 @@
 ---
-tags: [concept, nummodi/gepi-szamabrazolas-es-hibaszamitas]
+tags: [concept]
 sources: [NM1_ea01.pdf]
 derivation: source
-updated: 2026-08-05
+kind: definition
+element: water
+updated: 2026-09-30
 ---
 
 # Algoritmus stabilitása
@@ -26,7 +28,7 @@ Vagyis a kimenet változása arányos a bemenet változásával — a hibák nem
 Tekintsük az integrálsorozatot:
 $$T_n := \int_0^1 f_n(x)\,dx = \int_0^1 \frac{x^n}{x + 10}\,dx.$$
 
-Az integráció-per-partes elvégzése után kapott rekurzió:
+Az $\frac{x^n}{x+10} = x^{n-1} - 10\cdot\frac{x^{n-1}}{x+10}$ felbontást integrálva kapott rekurzió:
 $$T_0 = \ln(1{,}1), \quad T_n = \frac{1}{n} - 10 \cdot T_{n-1} \quad (n = 1, 2, \ldots).$$
 
 **Előre haladó rekurzió** (növekvő $n$ irányában) **instabil**: az inicializálási hiba minden lépésben 10-szereződik ($T_{n-1}$ együtthatója $-10$), ezért $T_{20}$ értéke teljesen hibás ($\approx 7{,}48 \cdot 10^3$ helyett a helyes $\approx 0{,}0043$).

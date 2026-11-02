@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [1.-bevezetés.md]
 derivation: source
+kind: definition
+element: air
 updated: 2026-04-07
 ---
 

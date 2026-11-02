@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 1.5, "LYAH \"Recursion\""]
 derivation: unsourced
+kind: procedure
+element: earth
 updated: 2026-05-18
 ---
 

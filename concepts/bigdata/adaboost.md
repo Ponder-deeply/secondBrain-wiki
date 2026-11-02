@@ -1,8 +1,10 @@
 ---
-tags: [concept, bigdata/gepi-tanulas-osztalyozas-es-regresszio]
+tags: [concept]
 sources: [BDAEM-2022-EA9.pptx]
 derivation: source
-updated: 2026-09-12
+kind: procedure
+element: water
+updated: 2026-09-30
 ---
 
 # Boosting és AdaBoost
@@ -40,7 +42,7 @@ egymás után:
   súly) — minél kisebb egy klasszifikátor hibája, annál nagyobb súllyal
   esik latba a végső döntésben;
 - ez alapján frissíti a tanuló rekordok súlyait a következő körre (a
-  rosszul osztályozottakét növelve, a jólét csökkentve);
+  rosszul osztályozottakét növelve, a jókét csökkentve);
 - a végső osztályozás a bázisklasszifikátorok **súlyozott szavazata**
   (ellentétben a bagging egyenlő súlyú többségi szavazásával, lásd
   [[concepts/bigdata/bagging]]), ahol a súlyokat éppen az egyes

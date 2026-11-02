@@ -2,6 +2,8 @@
 tags: [concept]
 sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf]
 derivation: source
+kind: definition
+element: fire
 updated: 2026-09-06
 ---
 

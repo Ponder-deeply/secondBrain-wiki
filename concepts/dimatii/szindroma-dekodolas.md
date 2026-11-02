@@ -1,7 +1,9 @@
 ---
-tags: [concept, dimatii/hibakorlatozo-es-linearis-kodok]
+tags: [concept]
 sources: [DimatIIEa09.pdf, DimatIIEa10.pdf]
 derivation: source
+kind: procedure
+element: fire
 updated: 2026-09-08
 ---
 

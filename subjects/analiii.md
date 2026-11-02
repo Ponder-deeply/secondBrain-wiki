@@ -1,10 +1,11 @@
 ---
 tags:
   - subject
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, 01_ea_An3_2025_osz.pdf, 02_ea_An3_2022_tavasz.pdf, 03_ea_An3_2022_tavasz.pdf, 04_ea_An3_2022_tavasz.pdf, 05_ea_An3_2022_tavasz.pdf, 06_ea_An3_2022_tavasz.pdf, 07_ea_An3_2022_tavasz.pdf, 08_ea_An3_2022_tavasz.pdf, 09_ea_An3_2022_tavasz.pdf, 10_ea_An3_2022_tavasz.pdf, 11_ea_An3_2022_tavasz.pdf, 12_ea_An3_2022_tavasz.pdf, 13_ea_An3_2022_tavasz.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, tematika-analiii.pdf, EloadasHetiTematika.pdf, GyakorlatHetiTematika.pdf, analiii-canvas-tanmenet.md, zhInformaciok.md, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, 01_ea_An3_2025_osz.pdf, 02_ea_An3_2022_tavasz.pdf, 03_ea_An3_2022_tavasz.pdf, 04_ea_An3_2022_tavasz.pdf, 05_ea_An3_2022_tavasz.pdf, 06_ea_An3_2022_tavasz.pdf, 07_ea_An3_2022_tavasz.pdf, 08_ea_An3_2022_tavasz.pdf, 09_ea_An3_2022_tavasz.pdf, 10_ea_An3_2022_tavasz.pdf, 11_ea_An3_2022_tavasz.pdf, 12_ea_An3_2022_tavasz.pdf, 13_ea_An3_2022_tavasz.pdf, 01_gyak_An_III_2024_25_Ifelev.pdf, 02_gyak_An_III_2024_25_Ifelev.pdf, 03_gyak_An_III_2022_tavasz.pdf, 04_gyak_An_III_2022_tavasz.pdf, 05_gyak_An_III_2022_tavasz.pdf, 06_gyak_An_III_2022_tavasz.pdf, 07_gyak_An_III_2022_tavasz.pdf, 08_gyak_An_III_2022_tavasz.pdf, 09_gyak_An_III_2022_tavasz.pdf, 10_gyak_An_III_2022_tavasz.pdf, 11_gyak_An_III_2022_tavasz.pdf]
 references: ["Kós Géza: Analízis 3 előadásjegyzet, 2024", "Simon Péter: Analízis II., 3–4. fejezet", "Fridli Sándor: Analízis III. tematika"]
 derivation: source
-updated: 2026-09-23
+math: 100
+updated: 2026-10-21
 ---
 
 # Analízis III.
@@ -17,9 +18,54 @@ Az egyváltozós analízis fogalmait — konvergencia, folytonosság, integrál,
 
 Előfeltétel: az [[subjects/analii]] anyaga (derivált, Riemann-integrál, primitív függvény, Taylor-formula).
 
+## Követelmények és vizsga
+
+A félévi követelményrendszer (`analiii-canvas-tanmenet.md`) és a ZH-időpontok (`zhInformaciok.md`) szerint:
+
+- **ZH-k:** 1. ZH 2026. november 5., 2. ZH 2026. december 10., mindkettő csütörtökön 18 órakor, a gyakorlati és a megajánlott jegyért is. A ZH feladatmegoldást kér számon (feladatonként max. 40 pont, sikeres: legalább 11 pont); pótZH a félév végén.
+- **Röpdolgozatok:** 10 gyakorlat elején, max. 10 perc: 2 definíció/tétel (2 × 1 pont) és 1 előző órai/házi példa (2 pont), összesen 40 pont ($F$). Sikeres, ha az elméleti és a gyakorlati részpontszám is legalább 8. A kérdéssor: `RopzhKerdesek.pdf` (előadásonként).
+- **Gyakorlati jegy:** $Ö = F/2 + Z_1 + Z_2$; 2-es 30–45, 3-as 46–60, 4-es 61–80, 5-ös 81–100 pont. Elégtelen jegyre egyszeri utóvizsga (mindkét ZH-témakörből külön legalább 30%).
+- **Megajánlott vizsgajegy:** legalább elégséges gyakorlati jegy (nem utóvizsgán szerzett), a heti számonkérés definíció/tétel pontjaiból legalább 12/20, és a két ZH-n egy-egy előadáson elhangzott tétel kimondása és bizonyítása (egyenként 4 pont, mindkettőre legalább 2, összesen legalább 5). Bizonyításra kért tételek: `ElozetesMegajanlottVizsgaTetelek1.pdf` (1. rész); kérdéslista: `ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf` (1. rész, 54 kérdés).
+- **Vizsga:** írásbeli (kötelező) és szóbeli rész. Az írásbeli 2 tétel kimondása és bizonyítása plusz 15 kérdés; sikeres, ha a 15-ből legalább 8 jó és a két tétel közül legalább az egyik kimondása és bizonyítása rendben van. A kérdések és tételek előre közzétett listákból jönnek. Nem megengedett eszköz használata esetén szóbeli bizottsági vizsga következik.
+
+### Az 1. rész bizonyítandó tételei
+
+1. Vektorsorozat és koordinátasorozatai konvergenciájának kapcsolata — [[concepts/analiii/konvergencia-metrikus-terben]]
+2. $(C[a,b], \|\cdot\|_\infty)$ teljes normált tér — [[concepts/analiii/cauchy-sorozat-es-teljes-ter]]
+3. $\mathbb{R}^n$-ben bármely két norma ekvivalens — [[concepts/analiii/ekvivalens-normak]]
+4. Zárt halmazok jellemzése torlódási pontokkal — [[concepts/analiii/nyilt-es-zart-halmazok]]
+5. Zárt halmazok jellemzése sorozatokkal — [[concepts/analiii/nyilt-es-zart-halmazok]]
+6. A deriváltmátrix egyértelmű — [[concepts/analiii/frechet-derivalt]]
+7. Vektorértékű függvény és koordinátafüggvényei differenciálhatósága — [[concepts/analiii/koordinatafuggvenyek-differencialhatosaga]]
+8. Elégséges feltétel a totális deriválhatóságra parciális deriváltakkal — [[concepts/analiii/differencialhatosag-elegseges-feltetele]]
+9. Az összetett függvény deriválási szabálya — [[concepts/analiii/lancszabaly]]
+10. Young tétele — [[concepts/analiii/young-tetel]]
+
+## Heti tematika
+
+A 2026/27. őszi félév tematikája (`EloadasHetiTematika.pdf`, `GyakorlatHetiTematika.pdf`; tárgyleírás: `tematika-analiii.pdf`, 5 kredit, kollokvium + gyakorlati jegy, felelős: Fridli Sándor).
+
+| Hét | Előadás | Gyakorlat |
+|---|---|---|
+| 1 | Térstruktúrák: $\mathbb{R}^n$, metrikus és normált terek, ekvivalens normák, euklideszi terek | Integrálszámítás (primitív függvény, Riemann- és improprius integrál) |
+| 2 | Konvergens sorozatok normált terekben, Cauchy-kritérium, Banach-terek, Bolzano–Weierstrass | Metrikus és normált terek 1. |
+| 3 | Folytonosság és határérték, átviteli elv, nyílt/zárt/kompakt halmazok, Weierstrass tétele | Metrikus és normált terek 2.: teljesség, nyílt és zárt halmazok, függvénysorozatok |
+| 4 | Differenciálszámítás 1.: parciális és iránymenti derivált, lineáris leképezések, totális derivált, Jacobi-mátrix, érintősík | Folytonosság és határérték ($\mathbb{R}^2	o\mathbb{R}$) |
+| 5 | Differenciálszámítás 2.: folytonosság és deriválhatóság, elégséges feltétel, láncszabály | Parciális, iránymenti és totális derivált |
+| 6 | Differenciálszámítás 3.: Hesse-mátrix, Young-tétel, Taylor-polinom, Lagrange-maradéktag | Deriváltak kapcsolata, érintősík, láncszabály |
+| 7 | Differenciálszámítás 4.: Peano-maradéktag, lokális szélsőérték, kvadratikus alakok | Taylor-polinomok és -formula |
+| 8 | Differenciálszámítás 5.: abszolút szélsőérték, Heine-tétel, paraméteres integrál | Lokális szélsőértékek |
+| 9 | Integrálszámítás 1.: többszörös integrál, integrálhatóság, Fubini, normáltartomány | Abszolút szélsőértékek |
+| 10 | Integrálszámítás 2.: integráltranszformáció, polárkoordináták, Gauss-integrál | Szukcesszív integrálás, normáltartomány |
+| 11 | Integrálszámítás 3.: hármas integrál, henger- és gömbi koordináták, alkalmazások | Sorrendcsere, polárkoordinátás helyettesítés, terület és térfogat |
+| 12 | Görbék és felületek 1.: görbe, érintő, ívhossz, síkgörbék, Bézier-görbék | Kettős és hármas integrálok alkalmazásai |
+| 13 | Görbék és felületek 2.: felületek a térben | — |
+
+A gyakorlatokhoz kapcsolódó feladattípusok a megfelelő fogalomlapok `Feladatok` részeiben vannak (források: `An_III_Gyak_2022_tavasz.pdf`, `Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf`, `gyakorlat.pdf`; a `01_gyak_An_III_2024_25_Ifelev.pdf` … `11_gyak_An_III_2022_tavasz.pdf` lapok hivatalos megoldásokat is tartalmaznak, ezekkel ellenőrizve és bővítve a `Feladatok` részeket; az 1. gyakorlat egyváltozós integrálszámítás, lásd [[subjects/analii]]).
+
 ## Előadások (2026 őszi félév állása szerint)
 
-A tárgy anyaga a jelen félév tényleges előadássorrendje szerint, a flashcard index lecture-bontása alapján. Az alábbi 8 blokk a mostanáig megtartott előadásokat fedi le; frissítendő, ahogy a félév halad.
+A tárgy anyaga a jelen félév tényleges előadássorrendje szerint, a flashcard index lecture-bontása alapján. Az 1–8. blokk a mostanáig megtartott előadásokat fedi le. A 9–13. blokk még nem hangzott el: a 2022 tavaszi diasor (`09_ea_An3_2022_tavasz.pdf`–`13_ea_An3_2022_tavasz.pdf`) és a heti tematika alapján előre besorolva; frissítendő, ahogy a félév halad.
 
 
 ### 1. előadás — Metrikus és normált terek
@@ -95,9 +141,51 @@ A tárgy anyaga a jelen félév tényleges előadássorrendje szerint, a flashca
 - [[concepts/analiii/parameteres-integral-differencialasa]] — deriválás az integráljel alatt
 - [[concepts/analiii/parameteres-integral-integralhatosaga]] — az integrálási sorrend felcserélhetősége
 
-## Még nem előadott anyag
+### 9. előadás — Többszörös integrál, Fubini-tétel
 
-A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán túl — a korábbi topikus csoportosítás szerint, változatlanul.
+- [[concepts/analiii/jordan-mertek-szerinti-integral]] — felosztás, alsó és felső összegek, alsó és felső integrál
+- [[concepts/analiii/also-felso-osszegek-kockazassal]] — végtelenül finomodó felosztássorozatok
+- [[concepts/analiii/tobbvaltozos-integralhatosag]] — oszcillációs összeg; „nullmértékűtől eltekintve folytonos" elégséges feltétel
+- [[concepts/analiii/tobbvaltozos-integral-muveletei]] — műveleti tulajdonságok és tartomány szerinti additivitás
+- [[concepts/analiii/grafikon-alatti-halmaz-terfogata]] — a mérték és az integrál összezárása
+- [[concepts/analiii/lebontasi-tetel]] — a szukcesszív integrálás kulcslemmája
+- [[concepts/analiii/szukcessziv-integralas]] — egymás utáni egyváltozós integrálások, normáltartomány
+- [[concepts/analiii/kettos-integralok-felcserelhetosege]] — a sorrendcsere feltételei és ellenpéldái
+
+
+### 10. előadás — Integráltranszformáció, polárkoordináták
+
+- [[concepts/analiii/mertek-es-integraltranszformacio]] — a többváltozós helyettesítés; Jacobi-determináns
+- [[concepts/analiii/polarkoordinatas-helyettesites]] — a legfontosabb konkrét eset
+- [[concepts/analiii/gauss-integral]] — $\int_{-\infty}^{\infty} e^{-x^2} = \sqrt{\pi}$ polárkoordinátákkal
+
+
+### 11. előadás — Hármas integrál, henger- és gömbi koordináták
+
+- [[concepts/analiii/hengerkoordinatas-helyettesites]] — polárkoordináta plusz egy változatlan tengely, Jacobi-determináns $r$
+- [[concepts/analiii/gombi-koordinatas-helyettesites]] — térbeli polárkoordináta, Jacobi-determináns $r^2\sin\theta$
+- [[concepts/analiii/tobbszoros-integral-fizikai-alkalmazasai]] — tömeg, tömegközéppont, tehetetlenségi nyomaték
+
+
+### 12. előadás — Görbék, ívhossz, Bézier-görbék
+
+- [[concepts/analiii/parameteres-gorbe]] — görbe mint folytonos $[a,b]\to\mathbb{R}^m$ függvény értékkészlete
+- [[concepts/analiii/gorbe-erintoje]] — egyszerű sima görbe és az érintő fogalma
+- [[concepts/analiii/sikgorbe-megadasi-modok]] — explicit, implicit, paraméteres és polárkoordinátás alak
+- [[concepts/analiii/sikgorbe-ivhossza]] — rektifikálhatóság, ívhossz paraméteres és polárkoordinátás alakban
+- [[concepts/analiii/szektorterulet-polarkoordinatakban]] — $t(T)=\tfrac12\int r^2\,\mathrm{d}\varphi$
+- [[concepts/analiii/bezier-gorbe]] — Bernstein-polinomok, Weierstrass- és Bernstein-approximáció, Bézier-görbe
+
+
+### 13. előadás — Felületek a térben
+
+- [[concepts/analiii/parameteres-felulet]] — felületelem, felszínelem, a lampion-ellenpélda, a felület megadásának három módja
+- [[concepts/analiii/feluleti-gorbe]] — a paramétertartományban futó görbe képe a felületen
+- [[concepts/analiii/feluleti-erintosik]] — a felület pontbeli érintősíkja a felületi görbék érintőiből
+
+## További anyag
+
+A tárgy azon fogalomlapjai, amelyek egyik előadásblokkhoz sem kötődnek (a Kós- és Simon-jegyzet többletanyaga) — topikus csoportosításban.
 
 
 ### Metrikus és normált terek
@@ -107,8 +195,10 @@ A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán
 - [[concepts/analiii/felmetrikus-ter]] — a $\rho(x,y)=0\Rightarrow x=y$ axióma elhagyása és a faktorizálás
 - [[concepts/analiii/metrikabol-uj-metrika]] — metrika transzformálása monoton szubadditív függvénnyel; altér-metrika
 - [[concepts/analiii/metrikus-terek-szorzata]] — szorzatmetrika, szorzatnorma; minden koordinátánként dől el
+- [[concepts/analiii/elemi-egyenlotlensegek]] — számtani–mértani közép, Bernoulli, háromszög-, Cauchy–Schwarz- és Minkowski-egyenlőtlenség; indukciós becslések
 
 #### Konvergencia és topológia
+- [[concepts/analiii/fuggvenysorozat-egyenletes-konvergenciaja]] — függvénysorozatok pontonkénti és egyenletes (normabeli) konvergenciája; a 3. gyakorlat példái
 
 - [[concepts/analiii/topologikus-ter]] — a nyílt halmazok három tulajdonsága axiómaként
 
@@ -140,6 +230,10 @@ A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán
 
 - [[concepts/analiii/folytonosan-differencialhato-fuggveny]] — a $C^1$ osztály
 - [[concepts/analiii/cauchy-riemann-egyenletek]] — komplex differenciálhatóság mint valós differenciálhatóság plusz lineáris megkötés
+
+#### Gyakorlati módszerek
+
+- [[concepts/analiii/tobbvaltozos-hatarertek-modszerei]] — többváltozós határérték és folytonosság vizsgálata: behelyettesítés, két út, közrefogás, polárkoordináták
 
 #### Műveletek differenciálható függvényekkel
 
@@ -183,30 +277,14 @@ A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán
 
 ### Többváltozós integrál
 
-#### Az integrál fogalma
-
-- [[concepts/analiii/jordan-mertek-szerinti-integral]] — felosztás, alsó és felső összegek, alsó és felső integrál
-- [[concepts/analiii/also-felso-osszegek-kockazassal]] — végtelenül finomodó felosztássorozatok
-- [[concepts/analiii/tobbvaltozos-integralhatosag]] — oszcillációs összeg; „nullmértékűtől eltekintve folytonos" elégséges feltétel
-- [[concepts/analiii/tobbvaltozos-integral-muveletei]] — műveleti tulajdonságok és tartomány szerinti additivitás
-- [[concepts/analiii/grafikon-alatti-halmaz-terfogata]] — a mérték és az integrál összezárása
-
 #### Az integrál kiszámítása
 
-- [[concepts/analiii/lebontasi-tetel]] — a szukcesszív integrálás kulcslemmája
-- [[concepts/analiii/szukcessziv-integralas]] — egymás utáni egyváltozós integrálások, normáltartomány
-- [[concepts/analiii/kettos-integralok-felcserelhetosege]] — a sorrendcsere feltételei és ellenpéldái
 - [[concepts/analiii/szorzathalmaz-merteke-es-integralja]] — szorzathalmaz mértéke, szeparálható integrandus
-- [[concepts/analiii/tobbszoros-integral-fizikai-alkalmazasai]] — tömeg, tömegközéppont, tehetetlenségi nyomaték
 
 #### Transzformáció és paraméteres integrálok
 
-- [[concepts/analiii/mertek-es-integraltranszformacio]] — a többváltozós helyettesítés; Jacobi-determináns
-- [[concepts/analiii/polarkoordinatas-helyettesites]] — a legfontosabb konkrét eset
-- [[concepts/analiii/hengerkoordinatas-helyettesites]] — polárkoordináta plusz egy változatlan tengely, Jacobi-determináns $r$
-- [[concepts/analiii/gombi-koordinatas-helyettesites]] — térbeli polárkoordináta, Jacobi-determináns $r^2\sin\theta$
-- [[concepts/analiii/gauss-integral]] — $\int_{-\infty}^{\infty} e^{-x^2} = \sqrt{\pi}$ polárkoordinátákkal
 - [[concepts/analiii/gamma-fuggveny]] — a faktoriális kiterjesztése; a paraméteres integrálok mintapéldája
+- [[concepts/analiii/wallis-formula-es-stirling-formula]] — Wallis-integrálok, a Gauss-integrál elemi levezetése, Stirling-formula
 
 ### Vonalintegrál és primitív függvény
 
@@ -254,18 +332,10 @@ A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán
 
 #### Görbék
 
-- [[concepts/analiii/parameteres-gorbe]] — görbe mint folytonos $[a,b]\to\mathbb{R}^m$ függvény értékkészlete
-- [[concepts/analiii/gorbe-erintoje]] — egyszerű sima görbe és az érintő fogalma
-- [[concepts/analiii/sikgorbe-megadasi-modok]] — explicit, implicit, paraméteres és polárkoordinátás alak
-- [[concepts/analiii/sikgorbe-ivhossza]] — rektifikálhatóság, ívhossz paraméteres és polárkoordinátás alakban
-- [[concepts/analiii/szektorterulet-polarkoordinatakban]] — $t(T)=\tfrac12\int r^2\,\mathrm{d}\varphi$
-- [[concepts/analiii/bezier-gorbe]] — Bernstein-polinomok, Weierstrass- és Bernstein-approximáció, Bézier-görbe
+- [[concepts/analiii/gorbe-gorbulete]] — görbület, Frenet-triéder (T, N, B), simulósík és simulókör, torzió
 
 #### Felületek és térbeli integráltételek
 
-- [[concepts/analiii/parameteres-felulet]] — felületelem, felszínelem, a lampion-ellenpélda, a felület megadásának három módja
-- [[concepts/analiii/feluleti-gorbe]] — a paramétertartományban futó görbe képe a felületen
-- [[concepts/analiii/feluleti-erintosik]] — a felület pontbeli érintősíkja a felületi görbék érintőiből
 - [[concepts/analiii/feluleti-integral]] — felszín szerinti integrál és fluxus
 - [[concepts/analiii/green-tetel-harom-dimenzioban]] — minden térbeli integráltétel közös építőköve
 - [[concepts/analiii/altalanos-stokes-tetel]] — a négy térbeli tétel közös alakja bilineáris szorzással
@@ -274,27 +344,27 @@ A tárgy teljes anyagát lefedő fogalomlapok, a jelen félév előrehaladásán
 - [[concepts/analiii/osszekapcsolodasi-szam]] — Biot–Savart, Ampère, Gauss-féle linking number
 - [[concepts/analiii/korulfordulasi-szam-valtozatok]] — megkerülés, átdöfés, átbújás közös sémán
 
+## Követelmények
+
+Forrás: a 2026/27/1 Canvas-tanmenet és a Zh információk. Programtervező informatikus BSc, A szakirány; 5 kredit, kollokvium + gyakorlati jegy, előfeltétel: Analízis II. Az órák jelenléti jellegűek, felvétel nincs.
+
+- **Gyakorlati jegy.** 10 gyakorlaton max. 10 perces röpdolgozat: 2 definíció/tétel (2×1 pont) + egy példa (2 pont), összesen $F$ ≤ 40; sikeres, ha az elméleti és a gyakorlati részpontszám is legalább 8. Két zh (feladatmegoldás, egyenként max. 40 pont, sikeres ≥ 11 pont: $Z_1$, $Z_2$); igazolatlan hiányzás = nincs jegy; az egyik sikertelen zh pótolható a félév végén. $Ö = F/2 + Z_1 + Z_2$: 30–45 → 2, 46–60 → 3, 61–80 → 4, 81–100 → 5. Egyszeri gyakorlati utóvizsga (mindkét zh-témakörből külön 30%).
+- **Megajánlott vizsgajegy.** Feltétel: legalább 2-es gyakorlati jegy (nem utóvizsgán szerezve); a heti számonkérés definíció/tétel pontjaiból legalább 12/20 (12–13 → 2, 14–15 → 3, 16–17 → 4, 18–20 → 5); a két zh-n egy-egy tétel kimondása és bizonyítása (4–4 pont, összesen legalább 5, egyenként legalább 2, a helyes kimondás 1 pont; 5 → 2, 6 → 3, 7 → 4, 8 → 5). Tételpontot csak a két zh-n lehet szerezni. Korábbi félévben szerzett gyakorlati jegy esetén két 45 perces elméleti dolgozat (10 kérdés, ≥ 6 jó + egy tétel).
+- **Vizsga.** Írásbeli (kötelező) + szóbeli (javításra). Írásbeli: 2 tétel kimondása és bizonyítása + 15 kérdés az előre közzétett listákból; sikeres, ha ≥ 8/15 jó és legalább az egyik tétel rendben van. Nem megengedett eszköz használata esetén szóbeli bizottsági vizsga.
+- **Időpontok.** 1. zh: 2026. november 5., 18:00; 2. zh: 2026. december 10., 18:00 (gyakorlati és megajánlott jegyhez egyaránt).
+- **Tematika.** 12 előadás-/gyakorlathét: térstruktúrák és konvergencia → folytonosság, topológia, kompaktság → differenciálszámítás (parciális, totális, láncszabály, Hesse, Young, Taylor, szélsőértékek) → paraméteres integrál → többszörös integrál; a gyakorlatok az 1. héten az egyváltozós integrálszámítást ismétlik. Az exam-kérdések: [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]].
+
+## Gyakorlat és vizsgakészülés
+
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a megajánlott vizsgajegy 54 kérdése, a 10 bizonyítandó tétel és a röpdolgozati kérdések, fogalomlapokhoz rendelve
+- [[concepts/analiii/tobbvaltozos-hatarertek-vizsgalata]] — határérték és folytonosság: pályák, közrefogás, a csapdák
+- [[concepts/analiii/differencialhatosag-igazolasa-definicioval]] — deriválhatóság igazolása, iránymenti derivált, érintősík számolása
+- [[concepts/analiii/differencialhatosag-ellenpeldai]] — klasszikus ellenpéldák (parciálisok, iránymenti deriváltak, Young)
+
+A kidolgozott példák az egyes fogalomlapok "Gyakorlat" szakaszaiban is megtalálhatók (lokális és abszolút szélsőérték, Taylor-polinom, egyenletes folytonosság, metrikák konstrukciója).
+
 ## Hiányzó anyagrészek
 
-A tárgyleírás alábbi tétele még egyetlen laphoz sem tartozik.
+A tárgyleírás tételei közül a görbék görbülete és a Frenet-formulák a [[concepts/analiii/gorbe-gorbulete]] lappal (forrás: `gyakorlat.pdf`) lefedettek; a 12. előadás (`12_ea_An3_2022_tavasz.pdf`) a Bézier-görbéknél megáll, nem tárgyalja. A gyakorlati feladatok (`An_III_Gyak_2022_tavasz.pdf`, `Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf`, `gyakorlat.pdf`) a fogalomlapok `Feladatok` részeibe kerültek.
 
-- **Görbék görbülete, Frenet-formulák.** A görbék oldalán a
-  [[concepts/analiii/parameteres-gorbe]], [[concepts/analiii/gorbe-erintoje]]
-  és [[concepts/analiii/sikgorbe-megadasi-modok]], a felületek oldalán a
-  [[concepts/analiii/parameteres-felulet]], [[concepts/analiii/feluleti-gorbe]]
-  és [[concepts/analiii/feluleti-erintosik]] immár lefedi a megadási módokat és
-  az érintősíkot; a görbék görbülete és a Frenet-apparátus továbbra sincs
-  laphoz kötve. A 12. előadás (`12_ea_An3_2022_tavasz.pdf`) a Bézier-görbéknél
-  megáll, nem tárgyalja.
-
-Forrása az ELTE-IK `Analizis-3-gyakorlati-jegyzet-ELTE-IK.pdf`, amely még
-konvertálatlan.
-
-Megjegyzés a henger- és gömbi koordinátákhoz: [[concepts/analiii/hengerkoordinatas-helyettesites]]
-és [[concepts/analiii/gombi-koordinatas-helyettesites]] lapja immár létezik, de
-`derivation: unsourced` — a `11_ea_An3_2022_tavasz.pdf` diasora e két témát csak
-névvel (definíció/tétel felsorolásként) említi, tényleges levezetés nélkül, így
-egyetlen vaultbeli forrás sem fedi a tényleges tárgyalásukat. A „Paraméteres
-görbe mint önálló fogalom" hiány a [[concepts/analiii/parameteres-gorbe]] és
-[[concepts/analiii/gorbe-erintoje]] lapok létrejöttével megoldódott.
-
+Megjegyzés a henger- és gömbi koordinátákhoz: a `11_ea_An3_2022_tavasz.pdf` diasora e két témát csak névvel említi, levezetés nélkül; a [[concepts/analiii/hengerkoordinatas-helyettesites]] és a [[concepts/analiii/gombi-koordinatas-helyettesites]] lap tartalma a gyakorlati jegyzetekből (`An_III_Gyak_2022_tavasz.pdf`, `gyakorlat.pdf`) származik (`derivation: inferred`).

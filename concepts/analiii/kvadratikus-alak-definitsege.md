@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 07_ea_An3_2022_tavasz.pdf, An_III_Gyak_2022_tavasz.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf, 08_gyak_An_III_2022_tavasz.pdf]
 references: ["Simon Péter: Analízis II., 4.4. iv)–vii), xv) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Kvadratikus alak definitsége
@@ -71,6 +73,16 @@ $$Q \text{ indefinit} \iff ac < b^2.$$
 
 $Q(u,v) := 2u^2 + 2uv - v^2$, azaz $A = \begin{bmatrix} 2 & 1\\ 1 & -1\end{bmatrix}$. Itt $ac - b^2 = -2 - 1 = -3 < 0$, tehát indefinit; közvetlenül is: $Q(0,1) = -1 < 0 < 2 = Q(1,0)$.
 
+### Feladatok
+
+**A $2\times2$-es Sylvester-kritérium bizonyítása** (az $A=\begin{bmatrix}a&b\\b&c\end{bmatrix}$ alakra): $Q(h)=ah_1^2+2bh_1h_2+ch_2^2$ pozitív definit $\iff a>0,\ \det A>0$; negatív definit $\iff a<0,\ \det A>0$; indefinit $\iff\det A<0$. Ötlet: $h_2\ne0$ esetén $Q=h_2^2P(h_1/h_2)$ a $P(u)=au^2+2bu+c$ polinommal, és $P$ előjele a diszkriminánson ($4(b^2-ac)=-4\det A$) múlik; $h_2=0$-nál $Q=ah_1^2$ adja az $a$ előjelét.
+
+**A teljes Sylvester-kritérium (gyak 8. lap).** Ha $A$ szimmetrikus és $D_k$ a bal felső $k\times k$-as aldetermináns ($k=1,\dots,n$): $Q$ pozitív definit $\iff D_1>0,D_2>0,\dots,D_n>0$; negatív definit $\iff D_1<0,D_2>0,D_3<0,\dots,(-1)^nD_n>0$.
+
+**Szemidefinit, de nem definit — példák (gyak 8. lap, 4. feladat).** $f=x^4+y^2$ és $g=x^3+y^2$ az origóban: $f''(0,0)=g''(0,0)=\begin{bmatrix}0&0\\0&2\end{bmatrix}$, $Q(h)=2h_2^2\ge0$, de $Q(1,0)=0$: pozitív szemidefinit, nem pozitív definit. Ettől még $f$-nek az origóban abszolút minimuma van ($f\ge0=f(0,0)$), $g$-nek viszont nincs szélsőértéke ($g(\pm r/2,0)=\pm(r/2)^3$). Ezért ez a kategória a szélsőértéknél nem dönt.
+
+**Gyakorlati olvasat.** A Hesse-mátrix főminorait (bal felső aldeterminánsait) kell kiszámolni: $d_1=\partial_{11}f$, $d_2=\det f''$. Ha $d_2=0$, a mátrix szemidefinit vagy az alak elfajult, és a Sylvester-kritérium nem alkalmazható (lásd a [[concepts/analiii/lokalis-szelsoertek-feltetelei|feladatokat]]).
+
 ## Kapocs
 
 - [[concepts/analiii/hesse-matrix]] — az a szimmetrikus mátrix, amelyre ezt alkalmazzuk.
@@ -78,3 +90,4 @@ $Q(u,v) := 2u^2 + 2uv - v^2$, azaz $A = \begin{bmatrix} 2 & 1\\ 1 & -1\end{bmatr
 - [[concepts/analiii/felteteles-szelsoertek-masodrendu-feltetelei]] — a feltételes változat, ahol a definitséget egy altérre szorítjuk.
 - [[concepts/analiii/heine-borel-tetel]] — az egységgömb kompaktsága.
 - [[concepts/analiii/kompakt-halmazok]] — a szélsőérték-létezés forrása.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

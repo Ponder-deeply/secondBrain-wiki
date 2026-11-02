@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf]
+sources: [SimonP-Anal2.pdf, 04_ea_An3_2022_tavasz.pdf, RopzhKerdesek.pdf]
 references: ["Simon Péter: Analízis II., 2.1. vi) megjegyzés"]
 derivation: source
-updated: 2026-09-14
+kind: definition
+element: water
+updated: 2026-10-22
 ---
 
 # Korlátos lineáris leképezés és operátornorma
@@ -85,3 +87,4 @@ A [[concepts/analiii/frechet-derivalt|Fréchet-derivált]] definíciója korlát
 - [[concepts/analiii/egyenletes-folytonossag-metrikus-terben]] — a Lipschitz-tulajdonság következménye
 - [[concepts/analiii/frechet-derivalt]] — a derivált mint korlátos lineáris leképezés
 - [[concepts/analiii/jacobi-matrix]] — a leképezést reprezentáló mátrix
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

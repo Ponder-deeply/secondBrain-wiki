@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/avaloniaui-alapok]
+tags: [concept]
 sources: [elte_eva_ea09_avaloniaui.pdf]
 derivation: source
+kind: overview
+element: air
 updated: 2026-09-13
 ---
 

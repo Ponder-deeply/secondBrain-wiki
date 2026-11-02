@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [SimonP-Anal2.pdf]
+sources: [SimonP-Anal2.pdf, ElozetesMegajanlottVizsgaTetelek1.pdf, RopzhKerdesek.pdf, ElozetesKerdesekMegajanlottVizsgajegyhez1.pdf]
 references: ["Simon Péter: Analízis II., 3.1.2. Tétel"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Koordinátafüggvények differenciálhatósága
@@ -51,3 +53,4 @@ Figyelem: a koordinátánkénti visszavezetés a **differenciálhatóságra** m�
 - [[concepts/analiii/frechet-derivalt]] — a definíció és a derivált egyértelműsége, amelyre a bizonyítás támaszkodik.
 - [[concepts/analiii/jacobi-matrix]] — a sorvektoros írásmód, amelyben a tétel megfogalmazódik.
 - [[concepts/analiii/gradiens-parcialis-derivaltakbol]] — a gradiens szerkezete; a két tétel együtt adja a Jacobi-mátrix elemeit.
+- [[concepts/analiii/vizsgakerdesek-es-bizonyitando-tetelek]] — a témához tartozó megajánlott vizsgajegy- és röpdolgozat-kérdések.

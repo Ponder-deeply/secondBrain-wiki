@@ -1,8 +1,10 @@
 ---
 tags: [concept]
-sources: []
-derivation: unsourced
-updated: 2026-09-14
+sources: [An_III_Gyak_2022_tavasz.pdf, gyakorlat.pdf]
+derivation: inferred
+kind: procedure
+element: fire
+updated: 2026-10-21
 ---
 
 # Gömbi (térbeli polár-) koordinátás helyettesítés
@@ -44,6 +46,12 @@ $$V = \iiint_H r^2\sin\theta\,\mathrm{d}r\,\mathrm{d}\theta\,\mathrm{d}\varphi =
 ### Mikor érdemes használni
 
 Gömbi koordináták akkor egyszerűsítik a számolást, ha a tartomány vagy az integrandus az origó körül gömbszimmetrikus (pl. gömb, gömbhéj, kúp az origóból nézve), szemben a hengerkoordinátákkal, amelyek tengelyszimmetrikus, de $z$-ben nem gömbszerűen változó tartományokra valók.
+
+### Feladatok
+
+- Az $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\le1$ ellipszoid térfogata: $x=ar\sin\theta\cos\varphi$, $y=br\sin\theta\sin\varphi$, $z=cr\cos\theta$, Jacobi-determináns $abc\,r^2\sin\theta$, így $V=abc\cdot\frac{4\pi}{3}$. *(An III gyak. 12.)*
+- $\iiint_H\sqrt{x^2+y^2+z^2}$, $H$ az $x^2+y^2+z^2\le z$ gömb: a határ $\rho=\cos\theta$, $0\le\theta\le\frac\pi2$; $2\pi\int_0^{\pi/2}\sin\theta\int_0^{\cos\theta}\rho^3\,\mathrm{d}\rho\,\mathrm{d}\theta=\frac{\pi}{10}$. *(gyakorlat.pdf, Többdimenziós integrálok 13d)*
+- Ellenőrző alkalmazások a gyakorlatról: gömb térfogata és felszíne, gömb tehetetlenségi nyomatéka a középpontján átmenő tengelyre. *(gyakorlat.pdf, 16.)*
 
 ## Kapocs
 

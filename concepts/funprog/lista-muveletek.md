@@ -3,6 +3,8 @@ tags: [concept]
 sources: []
 references: [Hutton ch 5, Hoogle base Data.List]
 derivation: unsourced
+kind: overview
+element: earth
 updated: 2026-05-18
 ---
 

@@ -1,9 +1,11 @@
 ---
 tags: [concept]
-sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf]
+sources: [Kos-Geza-Analizis-3-eloadasjegyzet-2024.pdf, SimonP-Anal2.pdf, gyakorlat.pdf]
 references: ["Simon Péter: Analízis II., 1.5.2. Tétel (Banach–Tyihonov–Cacciopoli)"]
 derivation: source
-updated: 2026-09-07
+kind: theorem
+element: water
+updated: 2026-10-21
 ---
 
 # Banach-fixponttétel teljes metrikus térben
@@ -55,6 +57,12 @@ $$d(y_n,x) \leq \frac{\alpha^n}{1-\alpha}\cdot d(y_0,y_1) \qquad (n\in\mathbb{N}
 Ugyanez az eltolt sorozatra alkalmazva az **a posteriori** alakot adja — lásd [[concepts/analiii/fixponttetel-gombon]].
 
 *Egyértelműség.* Ha $x$ és $x'$ is fixpont, akkor $d(x,x') = d\bigl(f(x),f(x')\bigr) \leq \alpha\, d(x,x')$, ami $\alpha < 1$ mellett csak $d(x,x') = 0$ esetén állhat fenn. $\blacksquare$
+
+### Feladatok
+
+*Forrás: gyakorlat.pdf „Metrikus terek" 25. feladat.*
+
+- **A kontrakció a metrikától függ.** $f(x)=\frac x2$ az $\mathbb R$-en kontrakció a szokásos metrikában, de a diszkrét metrikában nem (távolságok $1\to1$). Fordítva, $f(x)=\sqrt x$ a $(0,\infty)$-en a szokásos metrikában nem kontrakció (a derivált $0$ körül nem korlátos), a $\sigma(x,y)=|\ln x-\ln y|$ visszahúzott metrikában viszont igen: $\sigma(f(x),f(y))=\frac12\sigma(x,y)$.
 
 ## Kapocs
 

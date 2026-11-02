@@ -3,6 +3,8 @@ tags: [concept]
 sources: [07_Gy_An_II_A_B.pdf, 08_Gy_An_II_A_B.pdf, 09_Gy_An_II_A_B.pdf, 10_Gy_An_II_A_B.pdf]
 references: ["An II A/B 11–12. gyakorlat"]
 derivation: source
+kind: overview
+element: fire
 updated: 2026-09-04
 ---
 

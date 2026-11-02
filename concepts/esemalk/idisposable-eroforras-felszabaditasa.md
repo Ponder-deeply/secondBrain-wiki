@@ -1,7 +1,9 @@
 ---
-tags: [concept, esemalk/architektura-es-esemenykezeles]
+tags: [concept]
 sources: [elte_eva_ea04_winforms_architecture_testing.pdf]
 derivation: source
+kind: procedure
+element: earth
 updated: 2026-09-13
 ---
 

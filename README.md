@@ -4,6 +4,9 @@ Egyetemi anyagokból épített, kézzel gondozott fogalomwiki. Minden lap egy
 fogalom: rövid összefoglaló, kifejtés, majd a kapcsolódó lapokra mutató
 hivatkozások.
 
+**Weboldalként olvasható:** <https://ponder-deeply.github.io/secondBrain-wiki/>
+(kereséssel, gráfnézettel, renderelt képletekkel).
+
 A tartalom **magyar nyelvű**. Obsidian-vaultként a legkényelmesebb olvasni —
 klónozd, és nyisd meg a mappát Obsidiannal —, de a lapok sima Markdown-fájlok,
 GitHubon is olvashatók.
@@ -13,7 +16,7 @@ GitHubon is olvashatók.
 ```
 concepts/<tárgy>/   fogalomlapok, tárgyanként egy mappa
 subjects/           tárgyanként egy gyűjtőlap
-outputs/            generált melléktermékek (ábrák, animációk, összefoglalók)
+outputs/            tanulási segédanyagok (kártyapaklik, kvízek, ZH-felkészítők)
 index.md            a tárgyak katalógusa — innen érdemes indulni
 ```
 
