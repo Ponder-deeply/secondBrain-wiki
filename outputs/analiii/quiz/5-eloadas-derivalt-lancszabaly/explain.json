@@ -1,0 +1,113 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "5-eloadas-derivalt-lancszabaly",
+	"unitTitle": "5. előadás — Derivált, láncszabály",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:16.688Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		}
+	],
+	"questions": [
+		{
+			"id": "ssc5shxk",
+			"page": "concepts/analiii/nivofelulet-es-gradiens",
+			"q": "Mi az $f\\in\\mathbb{R}^n\\to\\mathbb{R}$ függvény nívófelülete? Mondja ki és bizonyítsa be, hogy a gradiens merőleges a nívófelületre írt görbék érintővektorára!",
+			"answer": "A nívófelület $N_c := \\{x \\in D_f : f(x) = c\\}$ ($c\\in R_f$), azaz azon pontok halmaza, ahol $f$ ugyanazt az értéket veszi fel. Állítás: ha $g\\in\\mathbb{R}\\to N_{f(a)}$ felületi görbe, $a=g(\\alpha)$, $f\\in D\\{a\\}$ és $g\\in D\\{\\alpha\\}$, akkor $\\langle \\operatorname{grad} f(a), g'(\\alpha)\\rangle = 0$. Bizonyítás: mivel a görbe a nívófelületen halad, $F(t):=f(g(t))=f(a)$ konstans, tehát $F'(\\alpha)=0$. A láncszabály szerint viszont $F'(\\alpha)=f'(g(\\alpha))\\cdot g'(\\alpha)=\\langle\\operatorname{grad} f(a), g'(\\alpha)\\rangle$. A kettőt összevetve kapjuk az állítást.",
+			"points": [
+				"$N_c := \\{x \\in D_f : f(x) = c\\}$ definíciója",
+				"Feltételek: $g$ a nívófelületen halad, $a=g(\\alpha)$, $f\\in D\\{a\\}$, $g\\in D\\{\\alpha\\}$",
+				"$F=f\\circ g$ konstans, ezért $F'(\\alpha)=0$",
+				"A láncszabály: $F'(\\alpha)=\\langle\\operatorname{grad} f(a), g'(\\alpha)\\rangle$"
+			]
+		},
+		{
+			"id": "orb376bj",
+			"page": "concepts/analiii/nivofelulet-es-gradiens",
+			"q": "Fejtse ki a gradiens geometriai jelentését a nívófelületek segítségével! Hogyan kapcsolódik ez az iránymenti deriválthoz?",
+			"answer": "A $g'(\\alpha)$ vektor a nívófelület $a$-beli érintővektora, és mivel a merőlegesség minden, a nívófelületen haladó differenciálható görbére teljesül, a gradiens a nívófelület teljes érintőterére merőleges. Az érintő irányokban a függvény elsőrendben nem változik, ezért a gradiens a legmeredekebb növekedés iránya. Ugyanezt mutatja a $\\partial_e f(a)=\\langle \\operatorname{grad} f(a), e\\rangle$ képlet: a skalárszorzat pontosan akkor nulla, ha $e$ merőleges a gradiensre. Példa: $f(x,y)=x^2+y^2$ nívóvonalai koncentrikus körök, a $(0,1)$ pontban $\\operatorname{grad} f=(0,2)$ sugárirányú, a kör érintője $(1,0)$, és ezek skalárszorzata $0$.",
+			"points": [
+				"A merőlegesség minden görbére igaz, így a gradiens merőleges a teljes érintőtérre",
+				"Érintő irányban elsőrendben nincs változás, ezért a gradiens a legmeredekebb növekedés iránya",
+				"$\\partial_e f(a)=\\langle\\operatorname{grad} f(a),e\\rangle$, ami $0$, ha $e\\perp\\operatorname{grad} f(a)$",
+				"Szemléltető példa (pl. koncentrikus körök, sugárirányú gradiens)"
+			]
+		},
+		{
+			"id": "nge8ltvq",
+			"page": "concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja",
+			"q": "Írja fel a $C^1$, differenciálhatóság, folytonosság, iránymenti és parciális deriválhatóság közötti implikációkat egy pontban! Miben tér el ez az egyváltozós esettől, és miért nem fordíthatók meg a nyilak?",
+			"answer": "Ha $a\\in\\operatorname{int} D_f$: $f\\in C^1\\{a\\}\\Rightarrow f\\in D\\{a\\}$, és $D\\{a\\}$-ból egyrészt $f\\in C\\{a\\}$, másrészt minden $\\|e\\|=1$-re létezik $\\partial_e f(a)=f'(a)e$, ebből pedig minden $\\partial_i f(a)$ ($e=e_i$). A folytonossági és a deriválhatósági ág független: a folytonosságból semmilyen deriválhatóság nem következik, és a parciális vagy iránymenti deriválhatóságból sem következik a folytonosság. Egyváltozóban a deriválhatóság maga után vonja a folytonosságot, itt viszont csak a teljes (Fréchet-értelmű) differenciálhatóság teszi ezt. Ellenpéldák: az $f=1$, ha $x=0$ vagy $y=0$, különben $0$ függvénynek léteznek a parciálisai, de nem folytonos; az $y=x^2\\ne0$ parabolán $1$, különben $0$ függvénynek minden iránymenti deriváltja $0$, mégsem folytonos; a $\\sqrt{|xy|}$ folytonos, a parciálisai léteznek, mégsem differenciálható. Az ok: a parciális és az iránymenti derivált csak egyeneseken vett, egydimenziós információ, a differenciálhatóság viszont a teljes környezetre vonatkozik.",
+			"points": [
+				"Az implikációlánc: $C^1\\Rightarrow D\\Rightarrow C$, illetve $D\\Rightarrow\\exists\\partial_e\\Rightarrow\\exists\\partial_i$",
+				"A két ág független, és ez eltér az egyváltozós esettől",
+				"Legalább egy ellenpélda, amely valamelyik nyíl megfordítását cáfolja",
+				"Ok: az egyeneseken vett információ nem szabja meg a görbék menti viselkedést"
+			]
+		},
+		{
+			"id": "o8w13cec",
+			"page": "concepts/analiii/differencialhatosagi-fogalmak-hierarchiaja",
+			"q": "Bizonyítsa be, hogy a differenciálhatóságból következik a folytonosság, majd mutassa meg, hogy a $\\sqrt{|xy|}$ függvény az origóban folytonos és parciálisan deriválható, mégsem differenciálható!",
+			"answer": "Ha $f\\in D\\{a\\}$, akkor $f(a+h)-f(a)=f'(a)h+\\eta(h)\\|h\\|$ alkalmas $\\eta(h)\\to0$ függvénnyel, így $\\|f(a+h)-f(a)\\|\\le\\|f'(a)\\|\\,\\|h\\|+\\|\\eta(h)\\|\\,\\|h\\|\\to0$, vagyis $f\\in C\\{a\\}$. A $\\sqrt{|xy|}$ függvény folytonos, mert $|f|\\le\\tfrac12(|x|+|y|)$. A tengelyeken azonosan $0$, ezért $\\partial_1 f(0,0)=\\partial_2 f(0,0)=0$. Ha differenciálható lenne, a 3.1.3. Tétel miatt $f'(0,0)=\\operatorname{grad} f(0,0)=(0,0)$ volna, tehát $\\sqrt{|xy|}/\\|h\\|\\to0$ kellene. Az $x=y$ átlón azonban ez a hányados konstans és nem nulla (2-es normában $\\tfrac1{\\sqrt2}$), mert $f(x,x)=|x|$. Így $f\\notin D\\{(0,0)\\}$.",
+			"points": [
+				"$\\|f(a+h)-f(a)\\|\\le\\|f'(a)\\|\\|h\\|+\\|\\eta(h)\\|\\|h\\|\\to0$",
+				"$\\sqrt{|xy|}$ folytonossága becsléssel, és $\\partial_1 f=\\partial_2 f=0$",
+				"Differenciálhatóság esetén csak $f'(0,0)=(0,0)$ jöhetne szóba",
+				"Az $x=y$ átlón a hibahányados nem tart $0$-hoz"
+			]
+		},
+		{
+			"id": "o1jnjg41",
+			"page": "concepts/analiii/koordinatafuggvenyek-differencialhatosaga",
+			"q": "Mondja ki a koordinátafüggvények differenciálhatóságáról szóló tételt, és bizonyítsa be mindkét irányát!",
+			"answer": "Tétel (3.1.2.): az $f=(f_1,\\dots,f_m)\\in\\mathbb{R}^n\\to\\mathbb{R}^m$ függvény pontosan akkor differenciálható az $a\\in\\operatorname{int} D_f$ pontban, ha minden $f_i$ differenciálható $a$-ban; ekkor $f'(a)$ $i$-edik sora $\\operatorname{grad} f_i(a)$. ($\\Rightarrow$): Ha $A_i$ az $f'(a)$ sorai, akkor $f(a+h)-f(a)=f'(a)h+\\eta(h)\\|h\\|_2$-t koordinátánként kiolvasva $f_i(a+h)-f_i(a)=\\langle A_i,h\\rangle+\\eta_i(h)\\|h\\|_2$. Mivel $\\eta\\to0$ ekvivalens azzal, hogy minden $\\eta_i\\to0$, kapjuk, hogy $f_i\\in D\\{a\\}$ és $A_i=\\operatorname{grad} f_i(a)$. ($\\Leftarrow$): Az $f_i$-k felbontásait egymás alá írva, $A$ sorai a $\\operatorname{grad} f_i(a)$-k, $\\eta=(\\eta_1,\\dots,\\eta_m)$, így $f(a+h)-f(a)=Ah+\\eta(h)\\|h\\|_2$ és $\\eta\\to0$. Ezért $f\\in D\\{a\\}$, és a derivált egyértelműsége miatt $f'(a)=A$.",
+			"points": [
+				"Állítás: akkor és csak akkor differenciálható, ha minden koordinátafüggvény az, $a\\in\\operatorname{int}D_f$",
+				"$f'(a)$ sorai a $\\operatorname{grad} f_i(a)$ vektorok",
+				"Kulcs: a vektorértékű $\\eta\\to0$ ekvivalens azzal, hogy minden $\\eta_i\\to0$",
+				"A visszafelé iránynál a derivált egyértelműsége adja $f'(a)=A$-t"
+			]
+		},
+		{
+			"id": "s9ka1hlx",
+			"page": "concepts/analiii/koordinatafuggvenyek-differencialhatosaga",
+			"q": "Miért hasznos a koordinátafüggvényekre vonatkozó tétel a Jacobi-mátrix kiszámításában? Mely regularitási fogalmakra működik a koordinátánkénti visszavezetés, és mire nem elég?",
+			"answer": "A tétel a többváltozós vektorfüggvények differenciálhatóságát teljesen visszavezeti a többváltozós valós függvényekére: $f$ akkor és csak akkor differenciálható, ha minden $f_i$ az, és $f'(a)$ sorai a $\\operatorname{grad} f_i(a)$ vektorok. A gradiensre vonatkozó 3.1.3. Tétel szerint ezek komponensei a parciális deriváltak, így a Jacobi-mátrix elemei $\\partial_k f_i(a)$-k, tehát ténylegesen kiszámíthatók. A folytonosság szintén koordinátánként dönthető el. A parciális deriválhatóság azonban sem skalár-, sem vektorértékű esetben nem elegendő a differenciálhatósághoz, ezért a koordinátákra bontás a differenciálhatóságot csak differenciálhatóságra vezeti vissza.",
+			"points": [
+				"A vektorértékű eset visszavezethető a skalárértékűre",
+				"A 3.1.3. Tétellel együtt: a Jacobi-mátrix elemei $\\partial_k f_i(a)$",
+				"A folytonosság is koordinátánkénti",
+				"A parciális deriválhatóság egyik esetben sem elég a differenciálhatósághoz"
+			]
+		},
+		{
+			"id": "thlpdcol",
+			"page": "concepts/analiii/differencialhatosag-elegseges-feltetele",
+			"q": "Mondja ki a differenciálhatóság elégséges feltételéről szóló tételt pontos feltételekkel! Mi a feltételek aszimmetriájának lényege, és szükséges-e a feltétel?",
+			"answer": "Legyen $h\\in\\mathbb{R}^n\\to\\mathbb{R}$ és $a\\in\\operatorname{int}D_h$. Tegyük fel, hogy valamely $i$ indexre: van olyan $r>0$, hogy $K_r(a)\\subset D_h$, és minden $x\\in K_r(a)$ pontban léteznek a $\\partial_j h(x)$ parciálisok ($j\\ne i$); ezek a $\\partial_j h$ függvények folytonosak $a$-ban; továbbá létezik $\\partial_i h(a)$. Ekkor $h\\in D\\{a\\}$, és $h'(a)=\\operatorname{grad} h(a)$. Az aszimmetria: egyetlen kitüntetett változó szerint elég a puszta pontbeli parciális deriválhatóság, a többinél viszont kell a környezetbeli létezés és a pontbeli folytonosság. A feltétel nem szükséges: $(x^2+y^2)\\sin\\frac1{x^2+y^2}$ ($f(0,0)=0$) differenciálható az origóban, $f'(0,0)=[0\\ 0]$, a parciálisai azonban nem folytonosak ott.",
+			"points": [
+				"Környezetbeli létezés és $a$-beli folytonosság $j\\ne i$ esetén",
+				"Egy változó szerint elég, ha $\\partial_i h(a)$ létezik",
+				"A következmény: $h\\in D\\{a\\}$, $h'(a)=\\operatorname{grad} h(a)$",
+				"Nem szükséges: $(x^2+y^2)\\sin\\frac1{x^2+y^2}$ ellenpélda"
+			]
+		},
+		{
+			"id": "d92z4jau",
+			"page": "concepts/analiii/differencialhatosag-elegseges-feltetele",
+			"q": "Vázolja a differenciálhatóság elégséges feltételéről szóló tétel bizonyítását! Hol használjuk fel a parciálisok környezetbeli létezését, és hol a folytonosságukat?",
+			"answer": "Feltehető $i=1$, és a $\\|\\cdot\\|_\\infty$ normát használjuk. A $h(a+x)-h(a)$ különbséget teleszkópikus összegre bontjuk úgy, hogy minden tagban csak egy koordináta változzon; $n=2$-re ez $h(B)-h(A)=(h(C)-h(A))+(h(B)-h(C))$. Az első tagot $\\partial_1 h(a)$ létezése kezeli: ez $\\partial_1 h(a)x_1+\\omega(x_1)x_1$, ahol $\\omega\\to0$. A többi tagra az egyváltozós Lagrange-középértéktételt alkalmazzuk, amely a $\\partial_i h(a_{x,i})x_i$ alakot adja közbülső pontokkal; ehhez kell, hogy a parciálisok egy egész környezetben létezzenek. Átrendezve $h(a+x)-h(a)=\\langle A,x\\rangle+\\langle\\varphi(x),x\\rangle$, ahol $\\varphi$ komponensei $\\omega(x_1)$ és $\\partial_i h(a_{x,i})-\\partial_i h(a)$. A $\\partial_i h$ függvények $a$-beli folytonossága és a $\\|a_{x,i}-a\\|_\\infty\\le\\|x\\|_\\infty$ becslés miatt $\\varphi(x)\\to0$. Végül $\\eta(x):=\\langle\\varphi(x),x/\\|x\\|_\\infty\\rangle$, és a Cauchy–Bunyakovszkij-egyenlőtlenségből $|\\eta|\\le n\\|\\varphi\\|_\\infty\\to0$, tehát $h\\in D\\{a\\}$.",
+			"points": [
+				"Teleszkópikus felbontás egykoordinátás lépésekre",
+				"Az első tagnál csak a pontbeli $\\partial_1 h(a)$ létezése kell",
+				"A Lagrange-középértéktétel miatt kell a környezetbeli létezés",
+				"A folytonosság adja, hogy $\\varphi(x)\\to0$; ebből $\\eta\\to0$ (Cauchy–Bunyakovszkij)"
+			]
+		}
+	]
+}

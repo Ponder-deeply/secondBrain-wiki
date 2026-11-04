@@ -1,0 +1,507 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "2-eloadas-konvergencia-teljesseg",
+	"unitTitle": "2. előadás — Konvergencia, teljesség",
+	"type": "mcq",
+	"batches": [
+		{
+			"at": "2026-10-22T13:16:18.331Z",
+			"model": "opus",
+			"direction": "",
+			"added": 35
+		}
+	],
+	"questions": [
+		{
+			"id": "up365xcb",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "base",
+			"q": "A számsorozat-limesz $\\varepsilon$–$n_0$ definícióját metrikus térbe visszük át. Mire cseréljük a $|a_n-b|$ kifejezést?",
+			"choices": [
+				"$d(a_n,a_{n+1})$-re",
+				"$d(a_n,b)$-re",
+				"$|d(a_n,0)-d(b,0)|$-ra",
+				"$d(a_1,a_n)$-re"
+			],
+			"correct": 1,
+			"explain": "Az abszolút érték helyére a metrika kerül, tehát $d(a_n,b)<\\varepsilon$ a feltétel. A $d(a_n,a_{n+1})$ szomszédos tagokat hasonlít, nem a limeszt."
+		},
+		{
+			"id": "ph84ri70",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "base",
+			"q": "Hogyan fogalmazható meg a gömbök nyelvén, hogy $a_n\\to b$ metrikus térben?",
+			"choices": [
+				"Van olyan $b$ körüli gömb, amely minden tagot tartalmaz",
+				"Minden $b$ körüli gömbbe végtelen sok tag esik",
+				"Minden $b$ körüli $\\varepsilon$-gömbbe véges sok kivétellel minden tag esik",
+				"Minden $b$ körüli gömbbe csak véges sok tag esik"
+			],
+			"correct": 2,
+			"explain": "A limesz azt jelenti, hogy minden $\\varepsilon$ sugarú gömbön kívül csak véges sok tag marad. Ha csak végtelen sok tag esik bele, az kevesebb ennél: a többi tag máshol is lehet."
+		},
+		{
+			"id": "2v7fsixd",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Nyílt és zárt gömbök",
+			"q": "Melyik halmaz a $\\overline{B}(a,r)$ zárt gömb a $(H,d)$ metrikus térben?",
+			"choices": [
+				"$\\{x\\in H: d(x,a)<r\\}$",
+				"$\\{x\\in H: d(x,a)=r\\}$",
+				"$\\{x\\in H: d(x,a)\\ge r\\}$",
+				"$\\{x\\in H: d(x,a)\\le r\\}$"
+			],
+			"correct": 3,
+			"explain": "A zárt gömbben $d(x,a)\\le r$ áll. A $<r$ feltétel a $B(a,r)$ nyílt gömböt adja."
+		},
+		{
+			"id": "z2d6obwf",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Nyílt és zárt gömbök",
+			"q": "Melyik halmaz az $a$ körüli $r$ sugarú nyílt gömb az euklideszi $\\mathbb{R}^p$ térben?",
+			"choices": [
+				"$\\{x\\in\\mathbb{R}^p: |x-a|<r\\}$",
+				"$\\{x\\in\\mathbb{R}^p: |x|-|a|<r\\}$",
+				"$\\{x\\in\\mathbb{R}^p: |x-a|\\le r\\}$",
+				"$\\{x\\in\\mathbb{R}^p: |x-a|>r\\}$"
+			],
+			"correct": 0,
+			"explain": "Az euklideszi térben a metrika $|x-a|$, és a nyílt gömbben szigorú egyenlőtlenség áll. A $\\le r$ változat a zárt gömb."
+		},
+		{
+			"id": "j4nb5q4l",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/A limesz definíciója",
+			"q": "A limesz definíciójában melyik megfogalmazás NEM egyenértékű a „$\\exists n_0\\ \\forall n>n_0$” kitétellel?",
+			"choices": [
+				"$\\exists n_0\\ \\forall n\\ge n_0$",
+				"„elég nagy $n$-re”",
+				"„végtelen sok $n$-re”",
+				"„véges sok $n$ kivételével”"
+			],
+			"correct": 2,
+			"explain": "A „végtelen sok $n$-re” gyengébb feltétel: végtelen sok kivétel is maradhat. A „$\\forall n\\ge n_0$” alak csak eltolja a küszöböt, ezért egyenértékű."
+		},
+		{
+			"id": "bte6wcvw",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/A limesz definíciója",
+			"q": "Melyik feltétel jelenti metrikus térben azt, hogy $a_n\\to b$?",
+			"choices": [
+				"$\\exists\\varepsilon>0\\ \\forall n_0\\ \\exists n>n_0: a_n\\in B(b,\\varepsilon)$",
+				"$\\forall\\varepsilon>0\\ \\exists n: a_n\\in B(b,\\varepsilon)$",
+				"$\\exists n_0\\ \\forall\\varepsilon>0\\ \\forall n>n_0: a_n\\in B(b,\\varepsilon)$",
+				"$\\forall\\varepsilon>0\\ \\exists n_0\\ \\forall n>n_0: a_n\\in B(b,\\varepsilon)$"
+			],
+			"correct": 3,
+			"explain": "A helyes kvantorsorrend $\\forall\\varepsilon\\ \\exists n_0\\ \\forall n>n_0$, így $n_0$ függhet $\\varepsilon$-tól. Ha az $n_0$ kerül előre, az a végül konstans sorozatokat írja le, ami erősebb feltétel."
+		},
+		{
+			"id": "q7y64k5n",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Trivialitások",
+			"q": "Melyik módosítás változtathatja meg egy konvergens sorozat konvergenciáját?",
+			"choices": [
+				"Véges sok új elem hozzáadása",
+				"A tagok átrendezése",
+				"Végtelen sok tag cseréje egy $c\\neq b$ pontra",
+				"Az elemek véges sokszori ismétlése"
+			],
+			"correct": 2,
+			"explain": "Ha végtelen sok tag $c\\neq b$, akkor a sorozat nem tarthat $b$-hez, és a limesz egyértelmű. A hozzáadás, az átrendezés és a véges ismétlés a felsorolt trivialitások szerint nem változtat a konvergencián."
+		},
+		{
+			"id": "gu8rcnt4",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Trivialitások",
+			"q": "Melyik feltétel egyenértékű metrikus térben azzal, hogy $a_n\\to b$?",
+			"choices": [
+				"$d(a_n,a_{n+1})\\to0$",
+				"$d(a_n,b)\\to0$ számsorozatként",
+				"$(d(a_n,b))$ monoton fogyó",
+				"$(d(a_n,b))$ korlátos"
+			],
+			"correct": 1,
+			"explain": "$a_n\\to b$ pontosan akkor, ha a $d(a_n,b)$ számsorozat $0$-hoz tart. A $d(a_n,a_{n+1})\\to0$ feltételből még a Cauchy-tulajdonság sem következik."
+		},
+		{
+			"id": "pn425lz1",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Koordinátánkénti konvergencia $\\mathbb{R}^p$-ben",
+			"q": "Melyik feltétel NEM egyenértékű $\\mathbf{a}_n\\to\\mathbf{b}$-vel $\\mathbb{R}^p$-ben?",
+			"choices": [
+				"$|\\mathbf{a}_n-\\mathbf{b}|\\to0$",
+				"$\\forall i: a_{n,i}\\to b_i$",
+				"$|\\mathbf{a}_n|\\to|\\mathbf{b}|$",
+				"$\\forall\\varepsilon\\ \\exists n_0\\ \\forall n>n_0: |\\mathbf{a}_n-\\mathbf{b}|<\\varepsilon$"
+			],
+			"correct": 2,
+			"explain": "Az, hogy a hosszak tartanak egymáshoz, nem elég: például $(-1)^n\\mathbf{e}_1$ hossza állandóan 1, mégis divergens. A többi feltétel a tétel (a), (b), (c) pontja."
+		},
+		{
+			"id": "5hl8ioxt",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Koordinátánkénti konvergencia $\\mathbb{R}^p$-ben",
+			"q": "Konvergens-e $\\mathbb{R}^2$-ben az $\\mathbf{a}_n=\\bigl(\\tfrac1n,(-1)^n\\bigr)$ sorozat?",
+			"choices": [
+				"Igen, a $(0,0)$ ponthoz tart",
+				"Nem, mert a második koordinátája divergens",
+				"Igen, a $(0,1)$ ponthoz tart",
+				"Nem, mert az első koordinátája divergens"
+			],
+			"correct": 1,
+			"explain": "A vektorsorozat pontosan akkor konvergens, ha minden koordinátasorozata az, de $(-1)^n$ divergens. Az első koordináta $0$-hoz tart, ez önmagában nem elég."
+		},
+		{
+			"id": "pj98pe7a",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Konvergencia $C[a,b]$-ben",
+			"q": "$C[a,b]$-ben melyik ismert konvergenciafogalommal egyezik meg a $\\|\\cdot\\|_\\infty$ metrikában vett $f_n\\to g$?",
+			"choices": [
+				"A pontonkénti konvergenciával",
+				"Az egyenletes konvergenciával",
+				"Az $\\|\\cdot\\|_1$-beli konvergenciával",
+				"Az integrálok konvergenciájával"
+			],
+			"correct": 1,
+			"explain": "A tétel szerint $\\|f_n-g\\|_\\infty\\to0$ pontosan az egyenletes konvergencia. A pontonkénti konvergencia gyengébb ennél, mert ott az $n_0$ függhet $x$-től."
+		},
+		{
+			"id": "ba7bh6kj",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Konvergencia $C[a,b]$-ben",
+			"q": "Mi igaz arra a szerepre, amelyet a maximumnorma a konvergenciában játszik $C[a,b]$-ben?",
+			"choices": [
+				"Új, az eddigiektől független konvergenciát vezet be",
+				"Az egyenletes konvergenciát fogalmazza meg metrikus térben",
+				"Gyengébb fogalmat ad, mint a pontonkénti konvergencia",
+				"Csak monoton függvénysorozatokra ad konvergenciát"
+			],
+			"correct": 1,
+			"explain": "A maximumnorma a már ismert egyenletes konvergenciát „öltözteti metrikus térbe”. Nem gyengébb a pontonkéntinél, sőt erősebb nála."
+		},
+		{
+			"id": "v0ryiofj",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Mi igaz az $f_k(x)=x^k$ sorozatra $C[0,1]$-ben?",
+			"choices": [
+				"Mindkét normában $0$-hoz tart",
+				"$\\|\\cdot\\|_\\infty$-ben divergens, $\\|\\cdot\\|_1$-ben $0$-hoz tart",
+				"$\\|\\cdot\\|_\\infty$-ben $0$-hoz tart, $\\|\\cdot\\|_1$-ben divergens",
+				"Mindkét normában divergens"
+			],
+			"correct": 1,
+			"explain": "A pontonkénti limesz $x=1$-ben ugrik, tehát nem folytonos, ezért $\\|\\cdot\\|_\\infty$-ben a sorozat divergens. Ugyanakkor $\\|x^k\\|_1=\\frac1{k+1}\\to0$."
+		},
+		{
+			"id": "5nsfqisu",
+			"page": "concepts/analiii/konvergencia-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Mennyi az $f_k(x)=\\frac{kx}{1+k^2x^2}$ függvény maximuma $[0,2]$-n, és hol veszi fel?",
+			"choices": [
+				"$1$, az $x=\\frac1k$ pontban",
+				"$\\frac12$, az $x=\\frac1{k^2}$ pontban",
+				"$\\frac12$, az $x=\\frac1k$ pontban",
+				"$\\frac1k$, az $x=0$ pontban"
+			],
+			"correct": 2,
+			"explain": "A maximum az $x=\\frac1k$ pontban van, értéke $\\frac{1}{1+1}=\\frac12$, így $\\|\\cdot\\|_\\infty$-ben a sorozat nem tart a pontonkénti limeszhez, a $0$-hoz. Az $x=\\frac1{k^2}$ pontban az érték csak $\\frac{1/k}{1+1/k^2}<\\frac12$."
+		},
+		{
+			"id": "tpblir6n",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "base",
+			"q": "Miért nevezzük a Cauchy-tulajdonságot a konvergencia belső megfogalmazásának?",
+			"choices": [
+				"Mert nem hivatkozik a limeszre",
+				"Mert csak a tér belső pontjaira vonatkozik",
+				"Mert csak korlátos sorozatokra értelmes",
+				"Mert nem használja a metrikát"
+			],
+			"correct": 0,
+			"explain": "A Cauchy-feltétel csak a tagok egymás közti távolságát nézi, limeszt nem említ. A metrikát viszont használja: a $d(a_m,a_n)$ távolságokat."
+		},
+		{
+			"id": "5iev6qz3",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "base",
+			"q": "Mi jellemzi a teljes metrikus teret?",
+			"choices": [
+				"Minden korlátos sorozata konvergens",
+				"Benne a Cauchy-tulajdonság elég a konvergenciához",
+				"Minden sorozata Cauchy-tulajdonságú",
+				"Benne minden sorozatnak van limesze"
+			],
+			"correct": 1,
+			"explain": "Teljes térben a Cauchy-tulajdonságból már következik a konvergencia. A korlátosság ehhez nem elég: korlátos sorozat nem feltétlenül Cauchy."
+		},
+		{
+			"id": "jvvv47fw",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Cauchy-tulajdonság",
+			"q": "Tetszőleges metrikus térben mi a viszony a konvergens és a Cauchy-tulajdonságú sorozatok között?",
+			"choices": [
+				"Minden Cauchy-sorozat konvergens",
+				"A két fogalom mindig ekvivalens",
+				"Minden konvergens sorozat Cauchy",
+				"A két fogalom független egymástól"
+			],
+			"correct": 2,
+			"explain": "A „konvergens ⇒ Cauchy” irány triviális, és minden metrikus térben igaz. A fordított irány csak teljes térben érvényes, $\\mathbb{Q}$-ban például nem."
+		},
+		{
+			"id": "ao44wqdn",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Cauchy-tulajdonság",
+			"q": "A „konvergens ⇒ Cauchy” bizonyításában mekkora küszöböt írunk elő $d(a_n,b)$-re, hogy végül $d(a_m,a_n)<\\varepsilon$ legyen?",
+			"choices": [
+				"$\\varepsilon$",
+				"$2\\varepsilon$",
+				"$\\varepsilon^2$",
+				"$\\varepsilon/2$"
+			],
+			"correct": 3,
+			"explain": "A háromszög-egyenlőtlenség miatt $d(a_m,a_n)\\le d(a_m,b)+d(a_n,b)<\\varepsilon/2+\\varepsilon/2$. Az $\\varepsilon$ küszöbbel csak $2\\varepsilon$ jönne ki."
+		},
+		{
+			"id": "hpwic0xs",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Teljes tér, Banach-tér",
+			"q": "Mi történik $\\mathbb{R}$-ben a szokásos metrikával az $1;\\,1{,}4;\\,1{,}41;\\,1{,}414;\\dots$ sorozattal?",
+			"choices": [
+				"$\\sqrt2$-höz tart",
+				"$1{,}42$-höz tart",
+				"Nincs limesze",
+				"Divergens, mert nem Cauchy"
+			],
+			"correct": 0,
+			"explain": "A sorozat Cauchy, és $\\mathbb{R}$ teljes, ezért konvergens; a limesze $\\sqrt2$. A „nincs limesze” csak $\\mathbb{Q}$-ban igaz, mert $\\sqrt2\\notin\\mathbb{Q}$."
+		},
+		{
+			"id": "6egjq37p",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Teljes tér, Banach-tér",
+			"q": "Mit mondhatunk $\\mathbb{R}$ és $\\mathbb{Q}$ teljességéről a $d(x,y)=|x-y|$ metrikával?",
+			"choices": [
+				"$\\mathbb{Q}$ teljes, $\\mathbb{R}$ nem",
+				"Mindkettő teljes",
+				"$\\mathbb{R}$ teljes, $\\mathbb{Q}$ nem",
+				"Egyik sem teljes"
+			],
+			"correct": 2,
+			"explain": "$\\mathbb{R}$ teljes, $\\mathbb{Q}$ viszont nem: a $\\sqrt2$-höz tartó racionális sorozat Cauchy, de $\\mathbb{Q}$-ban nincs limesze. Az, hogy $\\mathbb{Q}\\subset\\mathbb{R}$, nem teszi $\\mathbb{Q}$-t teljessé."
+		},
+		{
+			"id": "j0nxi3tj",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$\\mathbb{R}^p$ Banach-tér",
+			"q": "Miért elég $\\mathbb{R}^p$ teljességét az $L^2$ normával igazolni?",
+			"choices": [
+				"Mert az $L^2$ norma a legnagyobb norma",
+				"Mert $\\mathbb{R}^p$-n csak euklideszi norma létezik",
+				"Mert a normák ekvivalensek, így a Cauchy-tulajdonság ugyanaz",
+				"Mert az $L^2$ norma skaláris szorzatból származik"
+			],
+			"correct": 2,
+			"explain": "A normák ekvivalenciája miatt a Cauchy-tulajdonság minden normában ugyanazt jelenti, ezért bármelyikkel dolgozhatunk. A skaláris szorzat léte kényelmes, de a bizonyítás nem erre támaszkodik."
+		},
+		{
+			"id": "irk7m33f",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$\\mathbb{R}^p$ Banach-tér",
+			"q": "Melyik becsléssel látjuk be, hogy egy $\\mathbb{R}^p$-beli Cauchy-sorozat koordinátasorozatai is Cauchy-sorozatok?",
+			"choices": [
+				"$|\\mathbf{a}_n-\\mathbf{a}_m|\\le|a_{n,i}-a_{m,i}|$",
+				"$|a_{n,i}-a_{m,i}|\\le|\\mathbf{a}_n-\\mathbf{a}_m|$",
+				"$|a_{n,i}|\\le|a_{m,i}|$",
+				"$|\\mathbf{a}_n|\\le p\\,|a_{n,i}|$"
+			],
+			"correct": 1,
+			"explain": "Egy koordináta eltérése legfeljebb akkora, mint a vektorok $L^2$-távolsága, így a Cauchy-tulajdonság átöröklődik a koordinátákra. A fordított egyenlőtlenség általában hamis, és nem is ezt kell igazolni."
+		},
+		{
+			"id": "3j94fdwt",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$C[a,b]$ a maximumnormával Banach-tér",
+			"q": "Hogyan kapjuk meg a $\\bigl(C[a,b],\\|\\cdot\\|_\\infty\\bigr)$ teljességének bizonyításában a limeszfüggvény-jelöltet, $g$-t?",
+			"choices": [
+				"Pontonkénti limeszként, mert minden $(f_n(x))$ Cauchy",
+				"$g(x)=\\sup_n f_n(x)$ formában",
+				"Az integrálok limeszéből",
+				"Egy Bolzano–Weierstrass-féle részsorozattal"
+			],
+			"correct": 0,
+			"explain": "Rögzített $x$-re $|f_n(x)-f_m(x)|\\le\\|f_n-f_m\\|$, ezért $(f_n(x))$ Cauchy számsorozat, tehát $\\mathbb{R}$-ben konvergens. A szuprémum általában nem limesz."
+		},
+		{
+			"id": "t84gtbov",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/$C[a,b]$ a maximumnormával Banach-tér",
+			"q": "A $C[a,b]$ teljességének bizonyítása végén miért teljesül, hogy $g\\in C[a,b]$?",
+			"choices": [
+				"A pontonkénti limesz mindig folytonos",
+				"Folytonos függvények egyenletes limesze folytonos",
+				"Mert $g$ korlátos $[a,b]$-n",
+				"Mert $[a,b]$ zárt intervallum"
+			],
+			"correct": 1,
+			"explain": "Előbb belátjuk, hogy $f_n\\to g$ egyenletesen, és az egyenletes limesz megőrzi a folytonosságot. A pontonkénti limesz nem feltétlenül folytonos, lásd $x^k$-t $[0,1]$-en."
+		},
+		{
+			"id": "r86n7jzg",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Ellenpéldák: az $L^1$ norma nem teljes",
+			"q": "Miért kell az $\\bigl(R[0,1],\\|\\cdot\\|_1\\bigr)$ teret faktorizálni?",
+			"choices": [
+				"Mert $R[0,1]$ nem vektortér",
+				"Mert nemcsak a konstans $0$ abszolút integrálja nulla",
+				"Mert az integrál nem lineáris",
+				"Mert $\\|\\cdot\\|_1$-re nem igaz a háromszög-egyenlőtlenség"
+			],
+			"correct": 1,
+			"explain": "Faktorizálás nélkül $\\|f\\|_1=0$-ból nem következne $f=0$, mert nemcsak a konstans $0$ abszolút integrálja tűnik el. A háromszög-egyenlőtlenség viszont teljesül, nem az a gond."
+		},
+		{
+			"id": "5msxcjmk",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Ellenpéldák: az $L^1$ norma nem teljes",
+			"q": "Mit mutat, hogy még $\\bigl(R[0,1],\\|\\cdot\\|_1\\bigr)$ sem teljes?",
+			"choices": [
+				"A Riemann-integrál nem elég általános",
+				"Az $\\|\\cdot\\|_1$ nem norma $C[0,1]$-en",
+				"A kövér Cantor-halmaz üres",
+				"Minden függvénytér nem teljes"
+			],
+			"correct": 0,
+			"explain": "A Cauchy-sorozat „limesze” kiesik a Riemann-integrálható függvények közül, ezért a Riemann-integrál nem elég általános; kiterjesztése a Mértékelmélet tárgya. $\\bigl(C[a,b],\\|\\cdot\\|_\\infty\\bigr)$ például teljes, így nem igaz, hogy egyetlen függvénytér sem teljes."
+		},
+		{
+			"id": "vfzcqh3s",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "Mi a $\\bigl(C[0,1],\\max|f-g|\\bigr)$ teljességét igazoló gondolatmenet lépéssora?",
+			"choices": [
+				"Cauchy ⇒ korlátos ⇒ BW-részsorozat ⇒ konvergens",
+				"Cauchy ⇒ $\\|\\cdot\\|_1$-limesz ⇒ folytonos",
+				"Cauchy ⇒ pontonkénti ⇒ egyenletes limesz ⇒ folytonos",
+				"Pontonkénti ⇒ Cauchy ⇒ egyenletes ⇒ korlátos"
+			],
+			"correct": 2,
+			"explain": "Koordinátánként (pontonként) Cauchy, ebből pontonkénti limesz, ez egyenletes limesz is, tehát folytonos. A Bolzano–Weierstrass-féle út itt nem működik, mert végtelen dimenzióban a kiválasztási tétel nem igaz."
+		},
+		{
+			"id": "ehj5l4vw",
+			"page": "concepts/analiii/cauchy-sorozat-es-teljes-ter",
+			"gate": "tartalom/Feladatok",
+			"q": "$\\mathbb{N}$-en legyen $\\rho(m,n)=\\frac1{1+\\min\\{m,n\\}}$ ($m\\neq n$). Mi igaz a $k\\mapsto k$ sorozatra?",
+			"choices": [
+				"Konvergens",
+				"Cauchy, de nem konvergens",
+				"Nem Cauchy",
+				"Végül konstans"
+			],
+			"correct": 1,
+			"explain": "$\\rho(k,l)\\to0$, mert $\\min(k,l)\\to\\infty$, tehát a sorozat Cauchy. Konvergens sorozat ebben a térben végül konstans, a $k\\mapsto k$ viszont nem az."
+		},
+		{
+			"id": "tfy4qel3",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "base",
+			"q": "Melyik térben igaz biztosan, hogy minden korlátos sorozatnak van konvergens részsorozata?",
+			"choices": [
+				"$\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$-ben",
+				"$\\mathbb{R}^n$-ben bármely normával",
+				"Minden normált térben",
+				"Minden teljes normált térben"
+			],
+			"correct": 1,
+			"explain": "$\\mathbb{R}^n$-ben a tétel bármely normával igaz. $C[0,1]$ teljes, végtelen dimenziós tér, és ott van korlátos, konvergens részsorozat nélküli sorozat."
+		},
+		{
+			"id": "zxranyac",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "base",
+			"q": "Mihez kötődik pontosan a kiválasztási tulajdonság érvényessége normált terekben?",
+			"choices": [
+				"A tér teljességéhez",
+				"A véges dimenzióhoz",
+				"A norma megválasztásához",
+				"A tér zártságához"
+			],
+			"correct": 1,
+			"explain": "Az anyag szerint a tétel érvényessége pontosan a véges dimenzióhoz kötődik. Teljesség nem elég: $C[0,1]$ a maximumnormával teljes, mégis hamis benne a tétel."
+		},
+		{
+			"id": "cw6rzve7",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/A tétel $\\mathbb{R}^n$-ben",
+			"q": "Melyik egydimenziós tételt alkalmazza egymás után a koordinátasorozatokra a kiválasztási tétel bizonyítása $\\mathbb{R}^n$-ben?",
+			"choices": [
+				"A Rolle-tételt",
+				"A Bolzano–Weierstrass-tételt",
+				"A Weierstrass-féle approximációs tételt",
+				"A Banach-féle fixponttételt"
+			],
+			"correct": 1,
+			"explain": "Minden koordinátára az egydimenziós Bolzano–Weierstrass-tétellel választunk konvergens rész-részsorozatot. A többi felsorolt tétel nem részsorozatok kiválasztásáról szól."
+		},
+		{
+			"id": "5sh7bzkj",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/A tétel $\\mathbb{R}^n$-ben",
+			"q": "Melyik normával mondja ki és bizonyítja először az anyag a kiválasztási tételt $\\mathbb{R}^n$-ben?",
+			"choices": [
+				"$\\|\\cdot\\|_1$",
+				"$\\|\\cdot\\|_2$",
+				"$\\|\\cdot\\|_\\infty$",
+				"Tetszőleges $p$-normával"
+			],
+			"correct": 2,
+			"explain": "A tétel az $(\\mathbb{R}^n,\\|\\cdot\\|_\\infty)$ térre szól, mert abban a koordinátánkénti konvergencia közvetlenül adja a normabeli konvergenciát. A többi normára a normák ekvivalenciája viszi át."
+		},
+		{
+			"id": "97d83lpa",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/A tétel általában hamis végtelen dimenzióban",
+			"q": "Legyen $f_k(x)=\\sin(2^k\\pi x)$, $k<l$ és $x^*=\\frac1{2^{k+1}}$. Mennyi $f_l(x^*)$?",
+			"choices": [
+				"$1$",
+				"$-1$",
+				"$\\frac12$",
+				"$0$"
+			],
+			"correct": 3,
+			"explain": "$f_l(x^*)=\\sin(2^{l-k-1}\\pi)=0$, mert $l-k-1$ nemnegatív egész. Az $1$ értéket $f_k$ veszi fel ebben a pontban."
+		},
+		{
+			"id": "kmihj4s6",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/A tétel általában hamis végtelen dimenzióban",
+			"q": "Mit mutat az $f_k(x)=\\sin(2^k\\pi x)$ példa?",
+			"choices": [
+				"$C[0,1]$ a $\\|\\cdot\\|_\\infty$ normával nem teljes",
+				"A kiválasztási tétel hamis $\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$-ben",
+				"A $\\|\\cdot\\|_\\infty$ nem norma $C[0,1]$-en",
+				"Az $f_k$ függvények nem folytonosak"
+			],
+			"correct": 1,
+			"explain": "A sorozat korlátos, mégsincs konvergens részsorozata, tehát a kiválasztási tétel itt nem érvényes. $\\bigl(C[0,1],\\|\\cdot\\|_\\infty\\bigr)$ teljes, a példa nem a teljességről szól."
+		},
+		{
+			"id": "58g4znpe",
+			"page": "concepts/analiii/bolzano-weierstrass-kivalasztasi-tetel",
+			"gate": "tartalom/Következmény",
+			"q": "Milyen jelenség az anyag szerint a Bolzano–Weierstrass-féle kiválasztási tétel érvényessége?",
+			"choices": [
+				"Topológiai jelenség",
+				"Dimenziófüggő jelenség",
+				"Normafüggő jelenség $\\mathbb{R}^n$-ben",
+				"A teljességtől függő jelenség"
+			],
+			"correct": 1,
+			"explain": "Az anyag szerint a jelenség nem topológiai, hanem dimenziófüggő: véges dimenzióban mindig igaz, végtelenben általában nem. $\\mathbb{R}^n$-en a tétel minden normával igaz, ezért nem normafüggő."
+		}
+	]
+}

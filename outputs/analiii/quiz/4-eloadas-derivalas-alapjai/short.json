@@ -1,0 +1,434 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "4-eloadas-derivalas-alapjai",
+	"unitTitle": "4. előadás — Deriválás alapjai",
+	"type": "short",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:47.158Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T14:01:33.769Z",
+			"model": "opus",
+			"direction": "",
+			"added": 33
+		}
+	],
+	"questions": [
+		{
+			"id": "hqatt9bk",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"q": "Számítsa ki az $f(x,y) := xe^{x^2+y^2} - 3y$ függvény $\\partial_x f(a_1,a_2)$ és $\\partial_y f(a_1,a_2)$ parciális deriváltjait tetszőleges $(a_1,a_2)\\in\\mathbb{R}^2$ pontban!",
+			"answer": "A másik változót rögzítve, egy változóban deriválva: $\\partial_x f(a_1,a_2) = (1+2a_1^2)\\,e^{a_1^2+a_2^2}$ (a szorzatszabály miatt), és $\\partial_y f(a_1,a_2) = 2a_1 a_2\\, e^{a_1^2+a_2^2} - 3$."
+		},
+		{
+			"id": "h43632j1",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"q": "Számítsa ki az $f(x,y)=\\sqrt{|xy|}$ függvény $\\partial_1 f(0,0)$ és $\\partial_2 f(0,0)$ parciális deriváltjait! Hogyan kell ezeket kiszámolni?",
+			"answer": "A definícióból (differenciahányados határértékével) kell számolni, mert a képlet deriválása az origóban nem működik: $\\partial_1 f(0,0)=\\lim_{x\\to0}\\frac{f(x,0)-f(0,0)}{x}=\\lim_{x\\to0}\\frac{0}{x}=0$, és ugyanígy $\\partial_2 f(0,0)=0$."
+		},
+		{
+			"id": "xongiphm",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"q": "Számítsa ki az $f(x,y,z)=x^2y+x\\sqrt{1+z}$ függvény iránymenti deriváltját az $(1,2,3)$ pontban a $v=2i+j-2k$ vektor irányában!",
+			"answer": "$\\operatorname{grad}f(1,2,3)=(6,1,\\tfrac14)$. A vektort normálni kell: $\\|v\\|_2=3$, ezért $e=\\tfrac13(2,1,-2)$. Ebből $\\partial_e f=\\langle\\operatorname{grad}f,e\\rangle=\\tfrac13(12+1-\\tfrac12)=\\tfrac{25}{6}$."
+		},
+		{
+			"id": "obkftpju",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"q": "Legyen $f(x,y)=\\dfrac{xy^2}{x^2+y^2}$, $f(0,0)=0$. Számítsa ki $\\partial_v f(0,0)$-t a $v=(\\cos\\alpha,\\sin\\alpha)$ irányban, és mondja meg, miből látszik már ebből, hogy $f\\notin D\\{(0,0)\\}$!",
+			"answer": "$F_v(t)=f(t\\cos\\alpha,t\\sin\\alpha)=t\\cos\\alpha\\sin^2\\alpha$, tehát $\\partial_v f(0,0)=\\cos\\alpha\\sin^2\\alpha$. Ha $f$ differenciálható lenne, akkor $\\partial_v f(0,0)=f'(0,0)v$ lineáris volna $v$-ben; a $\\cos\\alpha\\sin^2\\alpha$ viszont nem lineáris (hiszen $f'(0,0)=(0,0)$ lenne, ami mindenhol $0$-t adna)."
+		},
+		{
+			"id": "i2adp8ng",
+			"page": "concepts/analiii/jacobi-matrix",
+			"q": "Írja fel az $f(x,y)=(x^3+xy,\\ x-y^2,\\ 1+y)$ függvény Jacobi-mátrixát általános pontban és az $(1,2)$ pontban! Miért differenciálható $f$?",
+			"answer": "A sorok a komponensfüggvények gradiensei: $f'(x,y)=\\begin{bmatrix}3x^2+y&x\\\\1&-2y\\\\0&1\\end{bmatrix}$, így $f'(1,2)=\\begin{bmatrix}5&1\\\\1&-4\\\\0&1\\end{bmatrix}\\in\\mathbb{R}^{3\\times2}$. Mind a 6 elem polinom, tehát folytonos, ezért $f\\in D$."
+		},
+		{
+			"id": "wlet1q71",
+			"page": "concepts/analiii/jacobi-matrix",
+			"q": "Határozza meg az $f(x,y)=(x^2+xy,\\ y^2-2x^2)$ függvény deriváltmátrixát az $a=(-1,1)$ pontban!",
+			"answer": "$f'(x,y)=\\begin{bmatrix}2x+y&x\\\\-4x&2y\\end{bmatrix}$, ezért $f'(-1,1)=\\begin{bmatrix}-1&-1\\\\4&2\\end{bmatrix}$."
+		},
+		{
+			"id": "oodzq76q",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"q": "Írja fel a $z=\\sqrt{x^2-2y^2}$ felület érintősíkjának egyenletét és egy normálvektorát a $(3,2)$ pont fölött! Miért létezik az érintősík?",
+			"answer": "$f(3,2)=1$, $\\partial_1 f=\\frac{x}{\\sqrt{x^2-2y^2}}=3$, $\\partial_2 f=\\frac{-2y}{\\sqrt{x^2-2y^2}}=-4$. Az érintősík: $z-1=3(x-3)-4(y-2)$, azaz $3x-4y-z=0$, normálvektor $(3,-4,-1)$. Létezik, mert a parciálisok a nyílt $x^2>2y^2$ tartományon folytonosak, tehát $f$ totálisan differenciálható."
+		},
+		{
+			"id": "yn2p09x2",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"q": "Adja meg a $z=x^2+3y^2$ grafikon érintősíkjának egyenletét és normálvektorát a $(3,2)$ pont fölött!",
+			"answer": "$f(3,2)=21$, $f'(3,2)=(6,12)$, így az érintősík $z=21+6(x-3)+12(y-2)$, egy normálvektor $(6,12,-1)$."
+		},
+		{
+			"id": "gvx51cjs",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "base",
+			"q": "Számítsa ki a $h(x,y) = x^3 y$ függvény $\\partial_1 h(1,2)$ parciális deriváltját!",
+			"answer": "$y = 2$ rögzítésével a parciális függvény $h_{a,1}(t) = 2t^3$, ennek deriváltja $6t^2$, így $\\partial_1 h(1,2) = 6$.",
+			"numeric": {
+				"value": 6,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "5p5yubmy",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Parciális függvények",
+			"q": "$h(x,y) = x^2 + xy$, $a = (2,3)$. Mennyi a $h_{a,2}$ parciális függvény értéke a $t = 5$ helyen?",
+			"answer": "$h_{a,2}(t) = h(2,t) = 4 + 2t$, így $h_{a,2}(5) = 14$.",
+			"numeric": {
+				"value": 14,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "i38sf5nv",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Számítsa ki a $h(x,y) = x^2 y^3$ függvény $\\partial_2 h(1,2)$ parciális deriváltját!",
+			"answer": "$x$ konstans, így $\\partial_2 h = 3x^2 y^2$, ami az $(1,2)$ pontban $12$.",
+			"numeric": {
+				"value": 12,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "9pftrt7n",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A parciális deriváltfüggvény",
+			"q": "$h(x,y) = x^2 y$. Mennyi a $\\partial_1 h$ parciális deriváltfüggvény értéke a $(3,-1)$ pontban?",
+			"answer": "$\\partial_1 h(x,y) = 2xy$, így $\\partial_1 h(3,-1) = -6$.",
+			"numeric": {
+				"value": -6,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "i82dlcuk",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Példa",
+			"q": "$h(x,y) = x^2 + 2xy^2 + x + 3y + 1$. Mennyi $\\partial_2 h(1,2)$?",
+			"answer": "$\\partial_2 h(u,v) = 4uv + 3$, így $\\partial_2 h(1,2) = 8 + 3 = 11$.",
+			"numeric": {
+				"value": 11,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "xm7sj1qo",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Szekciófüggvény és a parciális deriváltfüggvény",
+			"q": "$f(x,y) = xy^2$, $a = (1,3)$. Írja fel a $G_1$ szekciófüggvényt, és adja meg $\\partial_1 f(a) = G_1'(a_1)$ értékét!",
+			"answer": "$G_1(t) = f(t,3) = 9t$, ennek deriváltja $9$, tehát $\\partial_1 f(1,3) = 9$.",
+			"numeric": {
+				"value": 9,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "iwutyq1n",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Jelölésváltozatok",
+			"q": "$f(x,y,z) = x^3 + y^2z + z^3 + xyz$. Mennyi $\\dfrac{\\partial f}{\\partial y}(1,2,3)$?",
+			"answer": "$\\partial_y f = 2yz + xz$, ami az $(1,2,3)$ pontban $12 + 3 = 15$.",
+			"numeric": {
+				"value": 15,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "4aqyo7db",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Visszafelé: függvény a parciális deriváltjaiból",
+			"q": "$\\partial_x f = x^2y$, $\\partial_y f = \\frac{x^3}{3} + 1$ és $f(0,0) = 0$. Mennyi $f(3,2)$?",
+			"answer": "$f(x,y) = \\frac{x^3y}{3} + y + c$, és $f(0,0) = 0$ miatt $c = 0$. Így $f(3,2) = \\frac{27\\cdot2}{3} + 2 = 20$.",
+			"numeric": {
+				"value": 20,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "kaa9zt07",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = \\dfrac{x}{y} - \\dfrac{y^2}{x}$ ($x,y > 0$). Mennyi $\\partial_x f(1,1)$?",
+			"answer": "$\\partial_x f = \\frac1y + \\frac{y^2}{x^2}$, ami az $(1,1)$ pontban $1 + 1 = 2$.",
+			"numeric": {
+				"value": 2,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "c038jvcg",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "base",
+			"q": "$h(x,y) = x + 2y$, $e = (0{,}6;\\ 0{,}8)$. Számítsa ki a $h_e(t) = h(a+te)$ függvény deriváltjával $\\partial_e h(a)$-t (tetszőleges $a$-ra)!",
+			"answer": "$h_e(t) = h(a) + t(0{,}6 + 1{,}6)$, ezért $h_e'(0) = 2{,}2$.",
+			"numeric": {
+				"value": 2.2,
+				"tolAbs": 0.001
+			}
+		},
+		{
+			"id": "be3so407",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "$h(x,y) = x^2 + y^2$, $a = (1,0)$, $e = \\tfrac{1}{\\sqrt2}(1,1)$. Számítsa ki definíció szerint $\\partial_e h(a) = h_e'(0)$-t!",
+			"answer": "$h_e(t) = (1 + t/\\sqrt2)^2 + t^2/2$, ennek deriváltja a $0$-ban $2/\\sqrt2 = \\sqrt2 \\approx 1{,}414$.",
+			"numeric": {
+				"value": 1.4142,
+				"tolAbs": 0.01
+			}
+		},
+		{
+			"id": "23adqgt4",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A parciális derivált mint speciális eset",
+			"q": "$h(x,y,z) = xyz$, $a = (1,2,3)$, $e = (0,0,1)$. Mennyi $\\partial_e h(a)$?",
+			"answer": "Az $e_3$ irányú iránymenti derivált $\\partial_3 h(a) = xy = 2$.",
+			"numeric": {
+				"value": 2,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "23xr9al1",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Differenciálhatóságból: $\\partial_e f(a) = f'(a)e$",
+			"q": "$f(x,y) = x^2y$, $a = (1,2)$, $e = (0{,}6;\\ 0{,}8)$. Számítsa ki $\\partial_e f(a)$-t a $\\langle\\operatorname{grad} f(a), e\\rangle$ képlettel!",
+			"answer": "$\\operatorname{grad} f = (2xy, x^2) = (4,1)$, így $\\partial_e f = 4\\cdot0{,}6 + 1\\cdot0{,}8 = 3{,}2$.",
+			"numeric": {
+				"value": 3.2,
+				"tolAbs": 0.001
+			}
+		},
+		{
+			"id": "1tdp6ai6",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A megfordítás hamis",
+			"q": "$f = 1$, ha $y = x^2 \\ne 0$, különben $0$. Az origón átmenő $e = (0{,}6;\\ 0{,}8)$ irányú egyenes melyik $t \\ne 0$ értéknél metszi a parabolát?",
+			"answer": "$0{,}8t = (0{,}6t)^2$, ebből $t = 0{,}8/0{,}36 \\approx 2{,}222$. Mivel ez az egyetlen nemnulla metszéspont, a $0$ egy környezetében $f_e \\equiv 0$.",
+			"numeric": {
+				"value": 2.2222,
+				"tolAbs": 0.01
+			}
+		},
+		{
+			"id": "vccukiw3",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Az irány mint 2-es normában vett egységvektor",
+			"q": "$\\operatorname{grad} f(a) = (2,1)$, az irányt az $u = (3,4)$ vektor adja. Mennyi $\\partial_e f(a)$ a helyes normálás után?",
+			"answer": "$\\|u\\|_2 = 5$, így $e = (0{,}6;\\ 0{,}8)$, és $\\partial_e f = 1{,}2 + 0{,}8 = 2$.",
+			"numeric": {
+				"value": 2,
+				"tolAbs": 0.001
+			}
+		},
+		{
+			"id": "ykln3cx7",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Vektorértékű és $m > 1$ eset",
+			"q": "$f(x,y) = (x^2, 3xy)$, $a = (1,2)$, $e = (1,0)$. Mennyi a $\\partial_e f(a) \\in \\mathbb{R}^2$ vektor második komponense?",
+			"answer": "$f_e(t) = ((1+t)^2, 6(1+t))$, ennek második komponense a $0$-ban $6$-ot ad deriváltként, így $\\partial_e f(a) = (2,6)$.",
+			"numeric": {
+				"value": 6,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "kyvxpnh4",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = e^{y-2x}\\sin\\pi xy$. Mekkora az $(1,2)$ pontbeli iránymenti deriváltak maximuma?",
+			"answer": "$\\operatorname{grad} f(1,2) = (2\\pi, \\pi)$, a maximum $\\|\\operatorname{grad} f\\| = \\pi\\sqrt5 \\approx 7{,}025$, az $e = \\tfrac{1}{\\sqrt5}(2,1)$ irányban.",
+			"numeric": {
+				"value": 7.0248,
+				"tolAbs": 0.01
+			}
+		},
+		{
+			"id": "h11gfdnb",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "base",
+			"q": "Hány eleme van egy $f \\in \\mathbb{R}^4 \\to \\mathbb{R}^3$ függvény Jacobi-mátrixának?",
+			"answer": "$f'(a) \\in \\mathbb{R}^{3\\times4}$, ezért $3\\cdot4 = 12$ eleme van.",
+			"numeric": {
+				"value": 12,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "y8f04wjs",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltmátrix",
+			"q": "$f(x,y) = (xy,\\ x + y^2)$, $a = (1,2)$, $h = (1,1)$. Mennyi az $f'(a)h$ vektor második komponense?",
+			"answer": "$f'(x,y) = \\begin{bmatrix} y & x \\\\ 1 & 2y \\end{bmatrix}$, ami az $(1,2)$ pontban $\\begin{bmatrix} 2 & 1 \\\\ 1 & 4 \\end{bmatrix}$. Így $f'(a)h = (3,5)$, a második komponens $5$.",
+			"numeric": {
+				"value": 5,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "43cazvyf",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$m = 1$: a gradiens",
+			"q": "$f(x,y) = x^2 + 3xy$, $a = (1,2)$, $h = (1,-1)$. Mennyi $\\langle \\operatorname{grad} f(a), h\\rangle$?",
+			"answer": "$\\operatorname{grad} f = (2x + 3y, 3x) = (8,3)$, így $\\langle (8,3), (1,-1)\\rangle = 5$.",
+			"numeric": {
+				"value": 5,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "s4ev3mgz",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$n = 1$: a deriváltvektor",
+			"q": "$f(t) = (t^3, \\cos t)$. Mennyi az $f'(2)$ deriváltvektor első komponense?",
+			"answer": "$f'(t) = (3t^2, -\\sin t)$, az első komponens $3\\cdot4 = 12$.",
+			"numeric": {
+				"value": 12,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "vf68wut7",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltfüggvény általában",
+			"q": "$f(x,y) = (x^2y,\\ x + y)$. Mennyi az $f'(x,y)$ mátrix $(1,1)$ eleme az $(1,3)$ pontban?",
+			"answer": "Az $(1,1)$ elem $\\partial_1 f_1 = 2xy$, ami az $(1,3)$ pontban $6$.",
+			"numeric": {
+				"value": 6,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "nnl8oy1q",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Sorvektoros írásmód",
+			"q": "$A$ sorai $A_1 = (1,2)$, $A_2 = (3,-1)$, és $x = (2,1)$. Mennyi az $Ax$ vektor második koordinátája?",
+			"answer": "$\\langle A_2, x\\rangle = 3\\cdot2 + (-1)\\cdot1 = 5$.",
+			"numeric": {
+				"value": 5,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "ybt5noah",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Blokkfelbontás: vektorváltozó szerinti parciális derivált",
+			"q": "$f \\in \\mathbb{R}^5 \\to \\mathbb{R}^3$, és $i$ egy $s = 2$ elemű multiindex. Hány eleme van a $\\partial_i f(a)$ parciális deriváltmátrixnak?",
+			"answer": "$\\partial_i f(a) \\in \\mathbb{R}^{m\\times s} = \\mathbb{R}^{3\\times2}$, tehát $6$ eleme van.",
+			"numeric": {
+				"value": 6,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "c0wg6hwj",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A mátrixreprezentáció mint izomorfizmus",
+			"q": "$L(x,y) = (2x - y,\\ x + 4y)$. Mennyi a $\\varphi(L) = A$ mátrix $(2,2)$ eleme?",
+			"answer": "$L(x) = Ax$ esetén $A = \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix}$, így a $(2,2)$ elem $4$.",
+			"numeric": {
+				"value": 4,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "okqc2rki",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = (x^3 + xy,\\ x - y^2,\\ 1 + y)$. Mennyi az $f'(2,1)$ Jacobi-mátrix $(1,1)$ eleme?",
+			"answer": "$\\partial_1 f_1 = 3x^2 + y$, ami a $(2,1)$ pontban $12 + 1 = 13$.",
+			"numeric": {
+				"value": 13,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "mvg35gok",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "base",
+			"q": "$f(x,y) = x^2 + y^2$. Az $(1,1)$ pont fölötti érintősík milyen $z$ értéket ad az $(x,y) = (2,1)$ helyen?",
+			"answer": "Az érintősík $z = 2 + 2(x-1) + 2(y-1)$, így $(2,1)$-ben $z = 4$.",
+			"numeric": {
+				"value": 4,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "2vlu979z",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Sík egyenlete normálvektorral",
+			"q": "A sík normálvektora $\\mathbf{n} = (1,2,-1)$, és átmegy a $P_0 = (1,0,2)$ ponton. Mennyi $z$, ha a $(2,1,z)$ pont a síkon van?",
+			"answer": "$1\\cdot(2-1) + 2\\cdot(1-0) - (z-2) = 0$, ebből $z = 5$.",
+			"numeric": {
+				"value": 5,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "xl8rxgzh",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/A linearizálásból az érintősíkig",
+			"q": "$f(x,y) = xy$, $(x_0,y_0) = (2,3)$. Mennyi a linearizálással (érintősíkkal) kapott közelítő érték a $(2{,}1;\\ 3)$ pontban?",
+			"answer": "$z = 6 + 3(x-2) + 2(y-3)$, így $z = 6 + 0{,}3 = 6{,}3$.",
+			"numeric": {
+				"value": 6.3,
+				"tolAbs": 0.001
+			}
+		},
+		{
+			"id": "nxlgzmtp",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Definíció",
+			"q": "$f(x,y) = x^2y$. Mennyi az $(1,2)$ pont fölötti érintősík $(\\partial_1 f, \\partial_2 f, -1)$ normálvektorának első komponense?",
+			"answer": "$\\partial_1 f = 2xy = 4$, így $\\mathbf{n} = (4,1,-1)$, az első komponens $4$.",
+			"numeric": {
+				"value": 4,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "9rcna1t4",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Miért kell a totális differenciálhatóság",
+			"q": "$f(x,y) = x^2 + y$. Mekkora a $y_0 = 0$ síkkal vett metszetgörbe érintőjének meredeksége az $x_0 = 1$ pontban?",
+			"answer": "A metszetgörbe $x \\mapsto f(x,0) = x^2$, ennek deriváltja $1$-ben $2$, ami éppen $\\partial_1 f(1,0)$.",
+			"numeric": {
+				"value": 2,
+				"tolAbs": 0
+			}
+		},
+		{
+			"id": "xrarhm6x",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Kapcsolat a nívófelülettel",
+			"q": "$f(x,y) = x^2 + y^2$, $F = f(x,y) - z$. Mekkora a $\\operatorname{grad} F$ vektor 2-es normája az $(1,2,5)$ pontban?",
+			"answer": "$\\operatorname{grad} F = (2x, 2y, -1) = (2,4,-1)$, a normája $\\sqrt{21} \\approx 4{,}583$.",
+			"numeric": {
+				"value": 4.5826,
+				"tolAbs": 0.01
+			}
+		},
+		{
+			"id": "lulcqz7r",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Feladatok",
+			"q": "$f(x,y) = xy + y^2$. Az $(1,1)$ pont fölötti érintősík milyen $z$ értéket ad az $(x,y) = (0,0)$ helyen?",
+			"answer": "$f(1,1) = 2$ és $\\operatorname{grad} f = (y, x + 2y) = (1,3)$, így $z = 2 + (x-1) + 3(y-1)$, ami $(0,0)$-ban $-2$.",
+			"numeric": {
+				"value": -2,
+				"tolAbs": 0
+			}
+		}
+	]
+}

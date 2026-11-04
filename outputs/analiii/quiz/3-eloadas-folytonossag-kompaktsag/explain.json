@@ -1,0 +1,457 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "3-eloadas-folytonossag-kompaktsag",
+	"unitTitle": "3. előadás — Folytonosság, kompaktság",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:20:00.533Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T13:41:26.783Z",
+			"model": "opus",
+			"direction": "",
+			"added": 26
+		}
+	],
+	"questions": [
+		{
+			"id": "3f5o0xmu",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"q": "Mondja ki és bizonyítsa a folytonosság átviteli elvét metrikus terek között!",
+			"answer": "Legyenek $(X,\\rho)$, $(Y,\\sigma)$ metrikus terek, $f\\in X\\to Y$, $a\\in D_f$. Ekkor $f\\in C\\{a\\}$ pontosan akkor teljesül, ha minden $D_f$-beli, $a$-hoz tartó $(x_n)$ sorozatra $f(x_n)\\to f(a)$. ($\\Rightarrow$) Adott $K(f(a))$-hoz a folytonosság ad egy $k(a)$ környezetet, amelyre $f[k(a)\\cap D_f]\\subset K(f(a))$. Mivel $x_n\\to a$, egy küszöbindextől kezdve $x_n\\in k(a)$, így $f(x_n)\\in K(f(a))$. ($\\Leftarrow$) Indirekt: ha $f$ nem folytonos $a$-ban, akkor van olyan $K(f(a))$, hogy minden $k(a)$-ban akad olyan $x\\in D_f$, amelyre $f(x)\\notin K(f(a))$. A $k_{1/n}(a)$ környezetekből választott $x_n$ pontokra $x_n\\to a$, de $f(x_n)\\not\\to f(a)$, ami ellentmondás.",
+			"points": [
+				"Pontos kimondás: $a\\in D_f$, minden $D_f$-beli $x_n\\to a$ sorozatra $f(x_n)\\to f(a)$",
+				"$\\Rightarrow$: környezetes definíció és a sorozat küszöbindexe",
+				"$\\Leftarrow$: indirekt, $\\delta=1/n$ választással sorozatot építünk",
+				"Az ellentmondás: $x_n\\to a$, de $f(x_n)\\notin K(f(a))$"
+			]
+		},
+		{
+			"id": "v6v3d7x9",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"q": "Hogyan jellemezhető a folytonosság nyílt halmazokkal (2.1. Tétel)? Vázolja a bizonyítást!",
+			"answer": "Az $f\\in X\\to Y$ függvény akkor és csak akkor folytonos, ha minden $Z\\subset Y$ nyílt halmazhoz van olyan $A\\subset X$ nyílt halmaz, hogy $f^{-1}[Z]=A\\cap D_f$. Mindenütt értelmezett $f$ esetén ez azt jelenti, hogy minden nyílt halmaz ősképe nyílt. ($\\Rightarrow$) Minden $a\\in f^{-1}[Z]$ pontra $Z$ nyíltsága miatt van $K(f(a))\\subset Z$, a folytonosság miatt pedig van olyan $k(a)$, hogy $k(a)\\cap D_f\\subset f^{-1}[Z]$. Az $A:=\\bigcup k(a)$ halmaz nyílt, és $f^{-1}[Z]=A\\cap D_f$. ($\\Leftarrow$) A $Z:=K(f(a))$ választással $a\\in A$, ezért van $k(a)\\subset A$, amelyre $f[k(a)\\cap D_f]\\subset K(f(a))$. A jellemzés jelentősége, hogy a folytonosságot tisztán topológiai fogalommá teszi.",
+			"points": [
+				"Állítás: $f^{-1}[Z]=A\\cap D_f$ alkalmas nyílt $A$-val, minden nyílt $Z$-re",
+				"Mindenütt értelmezett $f$ esetén: a nyílt halmazok ősképe nyílt",
+				"$\\Rightarrow$: az $A$ halmaz a $k(a)$ környezetek uniója, ezért nyílt",
+				"$\\Leftarrow$: a $Z=K(f(a))$ környezetet alkalmazzuk",
+				"A folytonosság így csak a nyílt halmazok rendszerén múlik, a metrikán nem"
+			]
+		},
+		{
+			"id": "sdu13zyj",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"q": "Elég-e a folytonossághoz, hogy a függvény az origón átmenő minden egyenes mentén folytonos? Indokolja az $f=\\dfrac{x^2y}{x^4+y^2}$, $f(0,0)=0$ példával!",
+			"answer": "Nem elég. Az $x=0$ és az $y=0$ egyenes mentén $f\\equiv0$. Az $y=mx$ ($m\\ne0$) egyenes mentén $f=\\dfrac{mx}{x^2+m^2}\\to0=f(0,0)$, tehát a függvény minden origón átmenő egyenesre megszorítva folytonos. Az $y=mx^2$ parabolák mentén viszont $f(x,mx^2)=\\dfrac{m}{1+m^2}$, ami nem függ $x$-től. $m=1$ esetén a $\\bigl(\\tfrac1n,\\tfrac1{n^2}\\bigr)\\to(0,0)$ sorozaton $f\\to\\tfrac12\\ne0$, így az átviteli elv szerint $f$ nem folytonos. A tanulság: az egyenesek mentén kapott közös érték csak szükséges feltétel, cáfolni görbékkel is kell, bizonyítani pedig $\\varepsilon$–$\\delta$-val vagy közrefogással lehet.",
+			"points": [
+				"Egyenesek mentén (külön a tengelyek és az $y=mx$, $m\\ne0$) a határérték $0$",
+				"Az $y=mx^2$ parabolák mentén az érték $\\frac{m}{1+m^2}$, ez $m=1$-re $\\tfrac12$",
+				"Átviteli elv: egyetlen rossz sorozat elég a cáfolathoz",
+				"A közös érték az egyenesek mentén csak szükséges feltétel"
+			]
+		},
+		{
+			"id": "4ukdbu4z",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"q": "Mondja ki és bizonyítsa a koordinátafüggvények folytonosságáról szóló tételt (2.9. Tétel)!",
+			"answer": "Legyen $f=(f_1,\\dots,f_m)\\in\\mathbb{K}_1^s\\to\\mathbb{K}_2^m$, ahol a tereken a $\\rho_p$, illetve a $\\rho_q$ metrika adott. Ekkor $f\\in C\\{a\\}$ pontosan akkor teljesül, ha minden $i$-re $f_i\\in C\\{a\\}$. A bizonyítás az átviteli elven alapul: $f$ folytonossága azt jelenti, hogy minden $x_n\\to a$ sorozatra $f(x_n)\\to f(a)$. Az $(f_i(x_n))$ sorozat éppen az $(f(x_n))$ sorozat $i$-edik koordinátasorozata, ezért az állítás a koordinátánkénti konvergencia tételéből következik. Mivel a $\\rho_p$ metrikák ekvivalensek, a tétel bármely $p,q$ mellett érvényes. A $\\Rightarrow$ irány a kompozíció tételéből is adódik, mert $f_i=P_i\\circ f$, és a $P_i$ projekció folytonos.",
+			"points": [
+				"Kimondás: $f\\in C\\{a\\}\\iff$ minden $f_i\\in C\\{a\\}$",
+				"Átviteli elv: a feladat sorozatok konvergenciájára vezethető vissza",
+				"Koordinátánkénti konvergencia tétele",
+				"A $\\rho_p$ metrikák ekvivalenciája miatt $p,q$ tetszőleges",
+				"$f_i=P_i\\circ f$, és a projekciók folytonosak"
+			]
+		},
+		{
+			"id": "qxacx4x2",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"q": "Bizonyítsa, hogy metrikus térben minden kompakt halmaz korlátos és zárt! Igaz-e a megfordítás?",
+			"answer": "Korlátosság: a $B(a,r)$ ($r>0$) gömbök lefedik $K$-t. A kompaktság miatt véges sok is lefedi, és ezek közül a legnagyobb egymagában is lefedi $K$-t. Zártság: legyen $c\\notin K$. A $G_r=M\\setminus\\overline{B}(c,r)$ nyílt halmazok uniója $M\\setminus\\{c\\}\\supset K$. Véges sok közül a legbővebb egyedül is lefedi $K$-t, így $K\\cap B(c,r)=\\emptyset$, tehát $c$ külső pont. A megfordítás általános metrikus térben nem igaz. Ellenpélda: $\\ell_\\infty$-ben a $0$–$1$ sorozatok $A$ halmaza korlátos és zárt, de bármely két különböző eleme $1$ távolságra van egymástól, ezért egyik $A$-beli sorozatnak sincs konvergens részsorozata. $\\mathbb{R}^p$-ben a megfordítás igaz (Borel tétele).",
+			"points": [
+				"Korlátosság: a koncentrikus gömbök fedéséből véges részfedés, a legnagyobb gömb elég",
+				"Zártság: a $M\\setminus\\overline B(c,r)$ halmazok fedéséből következik, hogy $c$ külső pont",
+				"Általános metrikus térben a megfordítás hamis",
+				"Ellenpélda: a $\\{0,1\\}$-értékű sorozatok $\\ell_\\infty$-ben (páronkénti távolság $1$)",
+				"$\\mathbb{R}^p$-ben a megfordítás igaz"
+			]
+		},
+		{
+			"id": "b4c7fhdz",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"q": "Mit állít a Lebesgue-szám lemma, és hogyan következik belőle, hogy egy sorozatkompakt halmaz minden nyílt lefedéséből kiválasztható véges lefedés?",
+			"answer": "Lemma: ha $A$ kompakt, akkor bármely nyílt lefedéséhez van olyan $r>0$, hogy minden $a\\in A$ pontra $K_r(a)$ benne van valamelyik $T_\\gamma$-ban. Ennek bizonyítása indirekt: ha nem így lenne, lennének olyan $x_n$ pontok, hogy $K_{1/n}(x_n)$ egyik $T_\\gamma$-ba sem fér bele. Egy konvergens részsorozat $a$ határértéke valamely $T_\\gamma$-ban van, és nagy $n$-re $K_{1/\\nu_n}(x_{\\nu_n})\\subset K_\\sigma(a)\\subset T_\\gamma$, ami ellentmondás. A tétel ebből szintén indirekt módon jön: ha nincs véges lefedés, akkor egy $r$ sugarú gömb sem fedi $A$-t, így rekurzívan olyan $x_n$ pontok választhatók, hogy $\\rho(x_n,x_m)\\ge r$ ($n\\ne m$). Ennek a sorozatnak nincs Cauchy-részsorozata, tehát konvergens részsorozata sem, ami ellentmond a kompaktságnak.",
+			"points": [
+				"A lemma kimondása: egységes $r>0$, amellyel minden $K_r(a)$ valamelyik $T_\\gamma$-ban van",
+				"A lemma bizonyítása: $1/n$ sugarú rossz gömbök és konvergens részsorozat adják az ellentmondást",
+				"Szükségesség: indirekt úton, páronként legalább $r$ távolságra lévő pontok sorozata",
+				"Ennek nincs Cauchy-, tehát konvergens részsorozata sem"
+			]
+		},
+		{
+			"id": "03xkuq2j",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"q": "Mondja ki Borel tételét $\\mathbb{R}^p$-ben, és vázolja a Lindelöf-lemmán alapuló bizonyítást!",
+			"answer": "Állítás: $K\\subset\\mathbb{R}^p$ akkor és csak akkor kompakt, ha korlátos és zárt. Az odafelé irány általános metrikus térben is igaz. A megfordításhoz először azt látjuk be, hogy minden nyílt halmaz előáll a benne fekvő racionális gömbök uniójaként. Ebből adódik a Lindelöf-lemma: bármely nyílt fedésből kiválasztható egy megszámlálható részfedés ugyanazzal az unióval. Legyen tehát a fedés $G_{i_1},G_{i_2},\\dots$, és $K_n=K\\setminus(G_{i_1}\\cup\\dots\\cup G_{i_n})$. Ezek csökkenő, korlátos, zárt halmazok. Ha valamelyik üres, akkor kész a véges fedés. Ha egyik sem üres, akkor a Cantor-metszettétel szerint a metszetük nemüres, vagyis van olyan pontja $K$-nak, amelyet egyik $G_{i_n}$ sem fed, ez pedig ellentmondás.",
+			"points": [
+				"Kimondás: $\\mathbb{R}^p$-ben kompakt $\\iff$ korlátos és zárt",
+				"Racionális gömbök: megszámlálhatóan sok van belőlük, és minden nyílt halmaz ezek uniója",
+				"Lindelöf-lemma: megszámlálható részfedés választható",
+				"$K_n$ csökkenő korlátos zárt halmazok, Cantor-metszettétel, ellentmondás"
+			]
+		},
+		{
+			"id": "h0otk35r",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"q": "Mondja ki és bizonyítsa a Weierstrass-tételt kompakt halmazon, majd vezesse le belőle, hogy valós értékű függvény esetén van maximum!",
+			"answer": "Ha $f\\in X\\to Y$ folytonos és $D_f$ kompakt, akkor $R_f$ is kompakt. Bizonyítás: legyen $y_n=f(x_n)\\in R_f$. $D_f$ kompaktsága miatt van olyan részsorozat, amelyre $x_{\\nu_n}\\to a\\in D_f$. A folytonosság és az átviteli elv miatt $y_{\\nu_n}=f(x_{\\nu_n})\\to f(a)\\in R_f$. Ha $f\\in X\\to\\mathbb{R}$, akkor $R_f$ kompakt, tehát korlátos, így $M=\\sup R_f$ valós. Van olyan $y_n\\in R_f$ sorozat, amelyre $M-\\frac1n<y_n\\le M$, vagyis $y_n\\to M$. Ugyanezzel a részsorozatos érveléssel $M=f(a)\\in R_f$, tehát a maximumot $f$ felveszi; a minimum ugyanígy adódik. A kompaktság nem hagyható el: nyílt tartományon a tétel nem alkalmazható.",
+			"points": [
+				"Kimondás: kompakt $D_f$ és folytonos $f$ esetén $R_f$ kompakt",
+				"Sorozatkompaktság: részsorozat konvergál $D_f$-ben, majd átviteli elv",
+				"Valós esetben a $\\sup$-hoz tartó sorozat határértéke felvett érték",
+				"Feltételek: a $D_f$ kompaktsága és $f$ folytonossága nem hagyható el"
+			]
+		},
+		{
+			"id": "m7sxz3r5",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "base",
+			"q": "Mit tesz az átviteli elv a folytonossággal és a határértékkel, és miért hasznos ez a műveleti szabályoknál?",
+			"answer": "Az átviteli elv a folytonosságot és a határértéket sorozatok konvergenciájára fordítja le: $f$ pontosan akkor folytonos $a$-ban, ha minden $a$-hoz tartó $D_f$-beli sorozat képe $f(a)$-hoz tart. Ezért egy függvényekre vonatkozó állítást elég sorozatokra igazolni. A sorozatok összegére, szorzatára, hányadosára vonatkozó szabályok így közvetlenül átvihetők a függvények folytonosságára és határértékére.",
+			"points": [
+				"a folytonosság ekvivalens a sorozatos feltétellel",
+				"minden $a$-hoz tartó $D_f$-beli sorozat képe $f(a)$-hoz tart",
+				"így a sorozatos műveleti szabályok átemelhetők a függvényekre"
+			]
+		},
+		{
+			"id": "gipjw4ww",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A határérték átviteli elve",
+			"q": "Mondja ki a határérték átviteli elvét! Hogyan látjuk be, hogy a sorozatok mentén kapott határérték nem függ a sorozattól?",
+			"answer": "Legyen $a\\in D_f'$. $\\lim_a f$ pontosan akkor létezik, ha minden $(x_n):\\mathbb{N}\\to D_f\\setminus\\{a\\}$, $x_n\\to a$ sorozatra $(f(x_n))$-nek van határértéke, és ekkor ez mindig $\\lim_a f$. A függetlenséghez két ilyen sorozatot, $(x_n)$-et és $(\\tilde x_n)$-et összefésülünk ($x_n^*$ páros indexeken $x_{n/2}$, páratlanokon $\\tilde x_{(n-1)/2}$). Ez is ilyen sorozat, így $(f(x_n^*))$ konvergens. Két részsorozata $(f(x_n))$ és $(f(\\tilde x_n))$, ezért a határértékük egyezik; legyen ez $A$. Ha $\\lim_a f=A$ nem állna fenn, akkor $k_{1/n}(a)$-ból olyan $x_n\\ne a$ pontokat választhatnánk, amelyekre $f(x_n)\\notin K(A)$, ez pedig ellentmondás.",
+			"points": [
+				"feltétel: $a\\in D_f'$, sorozatok $D_f\\setminus\\{a\\}$-ból",
+				"a két sorozat összefésülése is megengedett sorozat",
+				"a konvergens sorozat részsorozatainak határértéke azonos",
+				"végül indirekt érv $k_{1/n}(a)$ választással"
+			]
+		},
+		{
+			"id": "f7z1p628",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Mire jó",
+			"q": "Vezesse le az átviteli elvvel, hogy a Banach-fixponttételben az $x_{n+1}=f(x_n)$ iteráció $\\alpha$ határértéke fixpont!",
+			"answer": "Legyen $\\alpha=\\lim(x_n)$. Az eltolt sorozat, $(x_{n+1})$, ugyanehhez tart, tehát $\\alpha=\\lim(x_{n+1})$. Az iteráció definíciója szerint $x_{n+1}=f(x_n)$, így $\\alpha=\\lim(f(x_n))$. Mivel $f$ folytonos $\\alpha$-ban, az átviteli elv szerint $\\lim f(x_n)=f(\\lim x_n)=f(\\alpha)$. Tehát $f(\\alpha)=\\alpha$.",
+			"points": [
+				"$\\lim(x_n)=\\lim(x_{n+1})=\\alpha$",
+				"$x_{n+1}=f(x_n)$ behelyettesítése",
+				"az átviteli elv: $\\lim f(x_n)=f(\\lim x_n)$",
+				"ebből $f(\\alpha)=\\alpha$"
+			]
+		},
+		{
+			"id": "h8qir71d",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/A tagadás használható alakja",
+			"q": "Fogalmazza meg, mit jelent, hogy $f$-nek az $a\\in D_f'$ helyen nincs határértéke, és hogyan lesz ebből sorozatos bizonyítási recept!",
+			"answer": "A nemlétezés azt jelenti, hogy minden $A\\in Y$-hoz van $\\varepsilon>0$, hogy minden $\\delta>0$ mellett van olyan $x\\in D_f$, $0<\\rho(x,a)<\\delta$, amelyre $\\sigma(f(x),A)\\ge\\varepsilon$. A $\\delta:=1/n$ választással minden $n$-re kapunk ilyen $x_n$-et. Ezekre $x_n\\to a$, $x_n\\ne a$, és $\\sigma(f(x_n),A)\\ge\\varepsilon$, tehát $f(x_n)\\not\\to A$. Így a nemlétezést olyan sorozatokkal bizonyítjuk, amelyeken a függvényértékek nem tartanak a jelölthöz.",
+			"points": [
+				"kvantorsorrend: minden $A$-hoz van $\\varepsilon$, minden $\\delta$-hoz van $x$",
+				"$0<\\rho(x,a)<\\delta$ és $\\sigma(f(x),A)\\ge\\varepsilon$",
+				"$\\delta=1/n$ választás: $x_n\\to a$, $x_n\\ne a$",
+				"$f(x_n)$ távol marad $A$-tól"
+			]
+		},
+		{
+			"id": "3hdq9yya",
+			"page": "concepts/analiii/atviteli-elv-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Írja le a $\\nexists\\lim_{(0,0)}f$ sorozatos cáfolási sablonját, és alkalmazza az $f=\\dfrac{x^2}{x^2+y^2}$ függvényre!",
+			"answer": "Két, az origóhoz tartó, $(0,0)$-tól különböző sorozatot választunk, más-más irányból (például a tengelyek mentén vagy átlósan). Ha a függvényértékek ezeken különböző határértékekhez tartanak, akkor a határérték egyértelműsége és az átviteli elv miatt nincs határérték. Az $f=\\frac{x^2}{x^2+y^2}$ függvényre az $(\\tfrac1n,0)$ sorozaton $f=1$, a $(0,\\tfrac1n)$ sorozaton $f=0$. A két érték különbözik, tehát $\\lim_{(0,0)}f$ nem létezik.",
+			"points": [
+				"két $0$-hoz tartó sorozat, különböző irányból",
+				"különböző határértékek → az egyértelműség miatt nincs határérték",
+				"$(\\tfrac1n,0)$-n $1$, $(0,\\tfrac1n)$-n $0$"
+			]
+		},
+		{
+			"id": "7ry8z2mk",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Definíció",
+			"q": "Definiálja a pontbeli folytonosságot metrikus terek között, adja meg a környezetes átfogalmazást, és mondja meg, mi változik az egyváltozós esethez képest!",
+			"answer": "Legyen $(X,\\rho)$, $(Y,\\sigma)$ metrikus tér, $f\\in X\\to Y$, $a\\in D_f$. $f\\in C\\{a\\}$, ha minden $\\varepsilon>0$-hoz van $\\delta>0$, hogy $x\\in D_f$, $\\rho(x,a)<\\delta$ esetén $\\sigma(f(x),f(a))<\\varepsilon$. Ha ez minden $a\\in D_f$-ben teljesül, $f$ folytonos. Környezetekkel: minden $K(f(a))$-hoz van $k(a)$, hogy $f[k(a)\\cap D_f]\\subset K(f(a))$. Az egyváltozós esethez képest csak $|f(x)-f(a)|$ helyére $\\sigma$, $|x-a|$ helyére $\\rho$ kerül, mert csak a távolság lényeges, a rendezés és az algebra nem.",
+			"points": [
+				"$\\varepsilon$–$\\delta$ definíció $\\rho$-val és $\\sigma$-val, $a\\in D_f$",
+				"globális folytonosság: minden pontban",
+				"környezetes alak: $f[k(a)\\cap D_f]\\subset K(f(a))$",
+				"csak a távolságfogalom számít"
+			]
+		},
+		{
+			"id": "8blbmyw9",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/2.3. Tétel — kompozíció",
+			"q": "Mondja ki a kompozíció folytonosságáról szóló tételt (2.3. Tétel), és bizonyítsa az átviteli elvvel!",
+			"answer": "Legyen $g\\in X\\to Y$, $f\\in Y\\to Z$ metrikus terek között, $a\\in D_g$, $g(a)\\in D_f$, $g\\in C\\{a\\}$ és $f\\in C\\{g(a)\\}$. Ekkor $f\\circ g\\in C\\{a\\}$. Bizonyítás: legyen $(x_n)$ egy $D_{f\\circ g}$-beli, $a$-hoz tartó sorozat. $g$ folytonossága és az átviteli elv miatt $g(x_n)\\to g(a)$, ahol $g(x_n)\\in D_f$. Most $f$ folytonossága miatt $f(g(x_n))\\to f(g(a))$. Az átviteli elv másik iránya szerint ez azt jelenti, hogy $f\\circ g\\in C\\{a\\}$.",
+			"points": [
+				"feltételek: $g\\in C\\{a\\}$, $g(a)\\in D_f$, $f\\in C\\{g(a)\\}$",
+				"első lépés: $g(x_n)\\to g(a)$",
+				"második lépés: $f(g(x_n))\\to f(g(a))$",
+				"az átviteli elv kétszeri alkalmazása"
+			]
+		},
+		{
+			"id": "3sjeoe2u",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Műveletek folytonos függvényekkel",
+			"q": "Milyen feltételek mellett folytonos $f+\\lambda g$, $f\\cdot g$ és $f/g$ egy pontban, és miért öröklődnek ezek az egyváltozós esetből?",
+			"answer": "Legyen $X$ metrikus tér, $(Y,\\|\\cdot\\|)$ normált tér, $a\\in D_f\\cap D_g$, és $f,g\\in C\\{a\\}$. Ekkor minden $\\lambda\\in\\mathbb{K}$-ra $f+\\lambda g\\in C\\{a\\}$. Ha $Y=\\mathbb{K}$, akkor $f\\cdot g\\in C\\{a\\}$ is, és $g(a)\\ne0$ esetén $f/g\\in C\\{a\\}$. A normált térre a lineáris műveletek miatt van szükség, a szorzatra és a hányadosra a $\\mathbb{K}$-beli szorzás miatt. A bizonyítás az átviteli elven át szó szerint öröklődik: sorozatokra kell alkalmazni a sorozatok műveleti szabályait.",
+			"points": [
+				"$Y$ normált tér, $a\\in D_f\\cap D_g$, $f,g\\in C\\{a\\}$ → $f+\\lambda g$ folytonos",
+				"$Y=\\mathbb{K}$ esetén a szorzat is folytonos",
+				"a hányadoshoz $g(a)\\ne0$ kell",
+				"a bizonyítás az átviteli elv és a sorozatos szabályok"
+			]
+		},
+		{
+			"id": "h1x3i9if",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Ekvivalens metrikák és izolált pontok",
+			"q": "Miért automatikusan folytonos $f$ a $D_f$ izolált pontjában, és miért nem függ a folytonosság ekvivalens metrikák cseréjétől?",
+			"answer": "Ha $a\\in D_f\\setminus D_f'$, akkor van $v>0$, hogy $k_v(a)\\cap D_f=\\{a\\}$. Így $\\delta=v$ mellett az egyetlen szóba jövő pont $a$, és $\\sigma(f(a),f(a))=0<\\varepsilon$. A folytonosság tehát csak torlódási pontban mond valamit, ott pedig ekvivalens azzal, hogy $\\lim_a f=f(a)$. Ha $\\rho\\sim\\rho^*$ és $\\sigma\\sim\\sigma^*$, akkor a pontbeli és a globális folytonosság sem változik a metrikacserétől. Ezért $\\mathbb{K}^s$-en és $\\mathbb{K}^m$-en bármelyik $\\rho_p$ használható.",
+			"points": [
+				"izolált pont: $k_v(a)\\cap D_f=\\{a\\}$",
+				"$\\sigma(f(a),f(a))=0<\\varepsilon$",
+				"torlódási pontban a folytonosság $\\lim_a f=f(a)$",
+				"ekvivalens metrikák mellett a folytonosság változatlan, bármely $\\rho_p$ jó"
+			]
+		},
+		{
+			"id": "ure5v87j",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Zárt szinthalmazok",
+			"q": "Bizonyítsa, hogy folytonos $f:X\\to Y$ szinthalmazai zártak! Mi kell, ha $f$ nem mindenütt értelmezett?",
+			"answer": "Legyen $X_y=\\{x\\in X:f(x)=y\\}$, és legyen $x_n\\in X_y$, $x_n\\to\\alpha$. A folytonosság (átviteli elv) miatt $f(\\alpha)=\\lim f(x_n)=y$, tehát $\\alpha\\in X_y$. Így $X_y$ tartalmazza a benne haladó konvergens sorozatok határértékét, vagyis zárt. Ha $f\\in X\\to Y$ csak részben értelmezett, akkor $D_f$ zártsága kell, hogy $\\alpha\\in D_f$ legyen. Speciálisan zárt halmazon értelmezett folytonos $f\\in\\mathbb{K}^s\\to\\mathbb{K}^m$ zérushelyeinek halmaza zárt.",
+			"points": [
+				"sorozatos zártság: $x_n\\in X_y$, $x_n\\to\\alpha$",
+				"$f(\\alpha)=\\lim f(x_n)=y$ (átviteli elv)",
+				"részben értelmezett $f$-nél $D_f$ zártsága kell",
+				"következmény: a zérushelyek halmaza zárt"
+			]
+		},
+		{
+			"id": "b2wmudgp",
+			"page": "concepts/analiii/folytonossag-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "Adjon teljes $\\varepsilon$–$\\delta$ bizonyítást arra, hogy $f=\\dfrac{x^2y^3}{2x^2+y^2}$, $f(0,0)=0$ folytonos az origóban! Miért kell $\\min\\{1,\\cdot\\}$?",
+			"answer": "Rögzített $\\varepsilon>0$ mellett az origóban $|f-f(0,0)|=0<\\varepsilon$. Ha $(x,y)\\ne(0,0)$ és $\\|(x,y)\\|<1$, akkor $|f|\\le\\frac{x^2}{x^2+y^2}|y|^3\\le|y|^3\\le|y|^2\\le x^2+y^2=\\|(x,y)\\|^2$. Ez $<\\varepsilon$, ha $\\|(x,y)\\|<\\sqrt\\varepsilon$. Tehát bármely $\\delta\\in(0,\\min\\{1,\\sqrt\\varepsilon\\})$ jó. A $\\min\\{1,\\cdot\\}$ azért kell, mert a $|y|^3\\le|y|^2$ lépés csak $|y|<1$-re igaz.",
+			"points": [
+				"az origóban a különbség $0$",
+				"becslés: $|f|\\le|y|^3\\le|y|^2\\le\\|(x,y)\\|^2$",
+				"$\\delta\\in(0,\\min\\{1,\\sqrt\\varepsilon\\})$",
+				"a $\\min\\{1,\\cdot\\}$ a $|y|<1$ feltétel miatt kell"
+			]
+		},
+		{
+			"id": "j8g03owb",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Koordinátafüggvények",
+			"q": "Definiálja a többváltozós függvény, a vektorfüggvény és a koordinátafüggvény fogalmát $f\\in\\mathbb{K}_1^s\\to\\mathbb{K}_2^m$ esetén!",
+			"answer": "Legyen $\\mathbb{K}_1,\\mathbb{K}_2\\in\\{\\mathbb{R},\\mathbb{C}\\}$, $1\\le s,m$ és $f\\in\\mathbb{K}_1^s\\to\\mathbb{K}_2^m$. Ha $s>1$, $f$ többváltozós; ha $m>1$, vektorfüggvény. Az $x\\in D_f$ helyen $f(x)=(y_1,\\dots,y_m)$ jelöléssel az $f_i:D_f\\to\\mathbb{K}_2$, $f_i(x):=y_i$ függvény az $i$-edik koordinátafüggvény. Ekkor $f=(f_1,\\dots,f_m)$, és minden $f_i$ értelmezési tartománya maga $D_f$.",
+			"points": [
+				"$s>1$: többváltozós, $m>1$: vektorfüggvény",
+				"$f_i(x)=y_i$, ahol $f(x)=(y_1,\\dots,y_m)$",
+				"$f_i:D_f\\to\\mathbb{K}_2$",
+				"$f=(f_1,\\dots,f_m)$"
+			]
+		},
+		{
+			"id": "ior193qo",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Szorzattér és projekciók",
+			"q": "Hogyan kapcsolódnak szorzattérben a projekciók a koordinátafüggvényekhez, és hogyan adja ez a koordinátatétel „$\\Rightarrow$” irányát?",
+			"answer": "Az $Y\\times Z$ szorzattéren a $P_1(y,z)=y$ és $P_2(y,z)=z$ projekciók a szorzatmetrika definíciója folytán folytonosak. Az $f=(f_1,f_2)\\in X\\to Y\\times Z$ koordinátafüggvényei épp $f_1=P_1\\circ f$ és $f_2=P_2\\circ f$. Ha $f\\in C\\{a\\}$, akkor a kompozíció folytonosságáról szóló tétel szerint $f_1$ és $f_2$ is folytonos $a$-ban. Az ekvivalencia ($f\\in C\\{a\\}\\iff f_1,f_2\\in C\\{a\\}$) véges sok tényezőre is érvényes.",
+			"points": [
+				"a $P_1$, $P_2$ projekciók folytonosak (szorzatmetrika)",
+				"$f_i=P_i\\circ f$",
+				"a kompozíciós tétel adja a „$\\Rightarrow$” irányt",
+				"véges sok tényezőre is igaz"
+			]
+		},
+		{
+			"id": "k1b858re",
+			"page": "concepts/analiii/koordinatafuggvenyek-folytonossaga",
+			"gate": "tartalom/Feladatok",
+			"q": "Igazolja, hogy a $P_i(x)=x_i$ projekció folytonos $\\mathbb{R}^n$-en, és hogy folytonos $g:I\\to\\mathbb{R}$ esetén $F(x)=(x,g(x))$ is folytonos!",
+			"answer": "A projekcióra $|P_i(x)-P_i(y)|=|x_i-y_i|\\le\\|x-y\\|$, tehát $P_i$ Lipschitz-függvény ($1$ konstanssal), így folytonos: $\\delta=\\varepsilon$ választható. Az $F(x)=(x,g(x))$ függvény koordinátafüggvényei az $x\\mapsto x$ identitás és $g$, és mindkettő folytonos. A koordinátafüggvények folytonosságáról szóló tétel szerint ezért $F$ is folytonos.",
+			"points": [
+				"$|P_i(x)-P_i(y)|\\le\\|x-y\\|$, tehát Lipschitz",
+				"a Lipschitz-függvény folytonos",
+				"$F$ koordinátái: $x\\mapsto x$ és $g$",
+				"a koordinátatétel adja $F$ folytonosságát"
+			]
+		},
+		{
+			"id": "o2fu6u1a",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Definíció",
+			"q": "Definiálja a kompakt halmazt nyílt fedésekkel, és fogalmazza meg a tagadását!",
+			"answer": "Legyen $(M,d)$ metrikus tér. $K\\subset M$ kompakt, ha bármely nyílt $G_i$ ($i\\in I$) halmazrendszerre, amelyre $K\\subset\\bigcup_{i\\in I}G_i$, van olyan véges $V\\subset I$, hogy $K\\subset\\bigcup_{i\\in V}G_i$. Az $I$ indexhalmaz tetszőlegesen nagy számosságú lehet. A tagadás: $K$ nem kompakt, ha van olyan nyílt fedése, amelyből semmilyen véges részrendszer nem fedi le $K$-t.",
+			"points": [
+				"minden nyílt fedésre teljesülnie kell",
+				"a fedés tetszőleges számosságú lehet",
+				"véges $V\\subset I$, amelyre $K\\subset\\bigcup_{i\\in V}G_i$",
+				"tagadás: létezik fedés, amelyből nem választható véges fedés"
+			]
+		},
+		{
+			"id": "r7qc7xly",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Kompakt és zárt halmaz távolsága",
+			"q": "Bizonyítsa, hogy $\\mathbb{R}^p$-ben nemüres kompakt $K$ és zárt $Z$ távolsága felvétetik, és diszjunkt esetben pozitív!",
+			"answer": "Vannak $x_n\\in K$, $y_n\\in Z$, hogy $|x_n-y_n|\\to\\operatorname{dist}(K,Z)$. Bolzano–Weierstrass szerint van $x_{n_i}\\to a$, és $a\\in K$, mert $K$ zárt. $(y_{n_i})$ korlátos, mert $|y_{n_i}|\\le|y_{n_i}-x_{n_i}|+|x_{n_i}-a|+|a|$, és a jobb oldal tagjai konvergensek. Újra Bolzano–Weierstrass: van $y_{m_i}\\to b$, és $b\\in Z$, mert $Z$ zárt. Ekkor $\\operatorname{dist}(K,Z)=\\lim|x_{m_i}-y_{m_i}|=|a-b|$. Ha $K\\cap Z=\\emptyset$, akkor $a\\ne b$, így a távolság pozitív.",
+			"points": [
+				"az infimumhoz tartó $x_n\\in K$, $y_n\\in Z$ sorozatok",
+				"Bolzano–Weierstrass: $x_{n_i}\\to a\\in K$",
+				"$(y_{n_i})$ korlátos a háromszög-egyenlőtlenség miatt, részsorozata $b\\in Z$-hez tart",
+				"$\\operatorname{dist}=|a-b|$; diszjunkt esetben $a\\ne b$"
+			]
+		},
+		{
+			"id": "dnlfmq9s",
+			"page": "concepts/analiii/kompakt-halmazok",
+			"gate": "tartalom/Feladatok",
+			"q": "Igazolja, hogy kompakt halmazok tetszőleges rendszerének metszete kompakt, véges rendszerük uniója is kompakt!",
+			"answer": "Legyenek $A_\\gamma$ ($\\gamma\\in\\Gamma\\ne\\emptyset$) kompaktak. Mindegyik zárt, ezért $\\bigcap A_\\gamma$ zárt, és része bármelyik kompakt $A_\\gamma$-nak. Kompakt halmaz zárt részhalmaza kompakt, mert egy $B$-beli sorozatnak $A$-ban van konvergens részsorozata, és a határérték $B$ zártsága miatt $B$-ben van. Így a metszet kompakt. Véges $\\Gamma$ esetén egy uniós sorozatnak végtelen sok tagja esik valamelyik $A_\\gamma$-ba, ezekből $A_\\gamma$-ban konvergens részsorozat választható. Ezért az unió is kompakt.",
+			"points": [
+				"a kompakt halmaz zárt, így a metszet zárt",
+				"a metszet zárt részhalmaza egy kompaktnak, tehát kompakt",
+				"unió: végtelen sok tag esik valamelyik $A_\\gamma$-ba",
+				"az unióhoz $\\Gamma$ végessége kell"
+			]
+		},
+		{
+			"id": "8z96iazm",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Sorozatos kompaktság",
+			"q": "Definiálja a sorozatos kompaktságot, és lássa be, hogy minden véges nemüres halmaz kompakt!",
+			"answer": "Az $(X,\\rho)$ metrikus tér $\\emptyset\\ne A\\subset X$ halmaza kompakt, ha minden $(x_n):\\mathbb{N}\\to A$ sorozatnak van $(x_{\\nu_n})$ részsorozata, amely konvergens, és $\\lim(x_{\\nu_n})\\in A$. Ha $A$ véges, akkor a sorozat végtelen sok tagja véges sok értéken oszlik el, így van $a\\in A$, amely végtelen sokszor fordul elő. Ezekből az indexekből álló $(\\nu_n)$-re $x_{\\nu_n}=a$, ami konstans, tehát konvergens részsorozat, és a határértéke $a\\in A$.",
+			"points": [
+				"minden $A$-beli sorozatnak van konvergens részsorozata",
+				"a részsorozat határértéke $A$-ban van",
+				"véges $A$: valamely $a$ végtelen sokszor szerepel",
+				"a konstans részsorozat $a\\in A$-hoz tart"
+			]
+		},
+		{
+			"id": "g81kv0b9",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/A fő tétel",
+			"q": "Bizonyítsa, hogy ha $A$ minden nyílt lefedéséből kiválasztható véges lefedés, akkor minden $A$-beli sorozatnak van $A$-ban konvergens részsorozata!",
+			"answer": "Legyen $(x_n):\\mathbb{N}\\to A$. Ha az értékkészlet véges, van konstans részsorozat, és az $A$-ban konvergál. Ha $B$, az értékkészlet, végtelen, belátjuk, hogy van $A$-beli torlódási pontja. Ha nem volna, minden $a\\in A$-hoz volna $K(a)$, amelyre $(K(a)\\setminus\\{a\\})\\cap B=\\emptyset$. Ezek nyílt lefedést adnak, amelyből véges sok, $a\\in A_0$, is lefedi $A$-t. Ekkor $B=\\bigcup_{a\\in A_0}(K(a)\\cap B)$ véges volna, mert minden tag legfeljebb egyelemű; ez ellentmondás. Tehát van $a\\in B'\\cap A$, és választhatók $\\nu_n<\\nu_{n+1}$ indexek, hogy $\\rho(x_{\\nu_n},a)<1/n$. Így $x_{\\nu_n}\\to a\\in A$.",
+			"points": [
+				"véges értékkészlet → konstans részsorozat",
+				"végtelen értékkészletnél indirekt feltevés: nincs $A$-beli torlódási pont",
+				"a $K(a)$ környezetek fedése, véges részfedés → $B$ véges, ellentmondás",
+				"$a\\in B'\\cap A$-hoz $\\rho(x_{\\nu_n},a)<1/n$ részsorozat"
+			]
+		},
+		{
+			"id": "8a01ned0",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Összefoglalva",
+			"q": "Sorolja fel a kompaktság három ekvivalens megfogalmazását metrikus térben, és mondja ki speciális esetként a Borel-lefedési tételt!",
+			"answer": "Metrikus térben az alábbiak ekvivalensek egy $A$ halmazra. (1) $A$ minden nyílt lefedéséből kiválasztható véges lefedés (Borel-féle, fedéses kompaktság). (2) $A$ minden végtelen részhalmazának van $A$-beli torlódási pontja. (3) Minden $A$-beli sorozatnak van $A$-ban konvergens részsorozata (Bolzano–Weierstrass-féle, sorozatos kompaktság). A Borel-lefedési tétel az $X=\\mathbb{R}$, $\\rho(x,y)=|x-y|$, $A=[a,b]$ eset: ha nyílt halmazok lefedik $[a,b]$-t, akkor közülük véges sok is lefedi.",
+			"points": [
+				"fedéses megfogalmazás",
+				"torlódási pontos megfogalmazás ($A$-beli torlódási pont)",
+				"sorozatos megfogalmazás ($A$-ban konvergens részsorozat)",
+				"Borel-lefedési tétel $[a,b]$-re"
+			]
+		},
+		{
+			"id": "hxonyd3x",
+			"page": "concepts/analiii/kompaktsag-ekvivalens-jellemzesei",
+			"gate": "tartalom/Két öröklődési szabály",
+			"q": "Bizonyítsa, hogy kompakt halmaz zárt részhalmaza kompakt, és mondja ki az egymásba skatulyázott kompaktokról szóló állítást!",
+			"answer": "Legyen $A$ kompakt, $B\\subset A$ zárt, és $(x_n)$ egy $B$-beli sorozat. Ez $A$-beli sorozat is, ezért $A$ kompaktsága miatt van $A$-ban konvergens részsorozata. Mivel $B$ zárt, ennek határértéke $B$-ben van, tehát $B$ kompakt. Az egymásba skatulyázott kompaktok: ha $\\emptyset\\ne A_{n+1}\\subset A_n$ kompaktak, akkor $\\bigcap_n A_n$ nemüres és kompakt. Ez a Cantor-metszettétel absztrakt változata, és a korlátos zárt intervallumokra vonatkozó Cantor-axióma ennek speciális esete.",
+			"points": [
+				"$B$-beli sorozatnak van $A$-ban konvergens részsorozata",
+				"$B$ zártsága miatt a határérték $B$-ben van",
+				"nemüres, csökkenő kompaktok metszete nemüres és kompakt",
+				"a Cantor-axióma speciális eset"
+			]
+		},
+		{
+			"id": "oe2wcrs6",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Racionális gömbök",
+			"q": "Bizonyítsa, hogy $\\mathbb{R}^p$-ben minden nyílt halmaz a benne fekvő racionális gömbök uniója!",
+			"answer": "Legyen $G$ nyílt és $a\\in G$; van $r>0$, hogy $B(a,r)\\subset G$. A $\\mathbb{Q}^p$ sűrűsége miatt van $b\\in B(a,r/3)\\cap\\mathbb{Q}^p$, és van racionális $s$, amelyre $r/3<s<2r/3$. Ekkor $|a-b|<r/3<s$, tehát $a\\in B(b,s)$. Bármely $x\\in B(b,s)$-re $|x-a|\\le|x-b|+|b-a|<\\frac{2r}3+\\frac r3=r$, tehát $B(b,s)\\subset B(a,r)\\subset G$. Így $G$ minden pontját lefedi egy $G$-ben fekvő racionális gömb, vagyis $G$ ezek uniója.",
+			"points": [
+				"$B(a,r)\\subset G$ a nyíltság miatt",
+				"racionális $b\\in B(a,r/3)$ és $s\\in(r/3,2r/3)$ választása",
+				"$a\\in B(b,s)$, mert $|a-b|<s$",
+				"$B(b,s)\\subset B(a,r)$ a háromszög-egyenlőtlenség miatt"
+			]
+		},
+		{
+			"id": "jag8fr0x",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Lindelöf-lemma",
+			"q": "Mondja ki és bizonyítsa a Lindelöf-lemmát!",
+			"answer": "Állítás: $\\mathbb{R}^p$-beli nyílt $G_i$ ($i\\in I$) halmazok rendszeréhez van megszámlálható $J\\subset I$, hogy $\\bigcup_{i\\in J}G_i=\\bigcup_{i\\in I}G_i$. Soroljuk fel a racionális gömböket: $B_1,B_2,\\dots$. Legyen $K=\\{k:\\exists i,\\,B_k\\subset G_i\\}$, és minden $k\\in K$-hoz válasszunk egy $i_k$-t, amelyre $B_k\\subset G_{i_k}$; legyen $J=\\{i_k:k\\in K\\}$, ez megszámlálható. A $\\subset$ irány triviális. Mivel minden $G_i$ a benne fekvő racionális gömbök uniója, $\\bigcup_I G_i=\\bigcup_{k\\in K}B_k\\subset\\bigcup_{k\\in K}G_{i_k}=\\bigcup_J G_i$.",
+			"points": [
+				"az állítás: megszámlálható részrendszer ugyanazzal az unióval",
+				"a racionális gömbök felsorolása, $K$ és $i_k$ választása",
+				"$J$ megszámlálható",
+				"$G_i=\\bigcup_{B_k\\subset G_i}B_k$ miatt az uniók egyeznek"
+			]
+		},
+		{
+			"id": "0gq0qcmm",
+			"page": "concepts/analiii/heine-borel-tetel",
+			"gate": "tartalom/Alternatív bizonyítás, Lindelöf-lemma nélkül (kockafelezés)",
+			"q": "Vázolja Borel tételének kockafelezéses bizonyítását (korlátos, zárt ⇒ kompakt)!",
+			"answer": "Indirekt: tegyük fel, hogy $K$ korlátos és zárt, és van olyan nyílt fedése, amelyből nem választható véges fedés. Egy halmaz „rossz”, ha semelyik véges sok $G_i$ sem fedi le; $K$ rossz. Legyen $D_0\\supset K$ zárt kocka. Ha $D_n$ megvan, felezéssel $2^p$ kis kockára bontjuk, és ezek közül valamelyik $D_{n+1}$-re $D_{n+1}\\cap K$ rossz, különben a véges fedések együtt $D_n\\cap K$-t is fednék. A $D_n\\cap K$ halmazok csökkenők, nemüresek, korlátosak és zártak, így a Cantor-metszettétel és a felezés miatt metszetük egyetlen $c\\in K$ pont. Valamely $G_i\\ni c$ nyílt, ezért $B(c,r)\\subset G_i$. Elég nagy $n$-re $D_n\\subset B(c,r)\\subset G_i$, tehát egyetlen $G_i$ lefedi a rossz $D_n\\cap K$-t: ellentmondás.",
+			"points": [
+				"indirekt feltevés, a „rossz” halmaz fogalma",
+				"$2^p$ részre felezés, a rosszság öröklődése",
+				"Cantor-metszettétel: a metszet egyetlen $c\\in K$ pont",
+				"$D_n\\subset B(c,r)\\subset G_i$ ellentmondás"
+			]
+		},
+		{
+			"id": "d03ilzrp",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Mire használjuk",
+			"q": "Hogyan használjuk a Weierstrass-tételt többváltozós abszolút szélsőérték-feladatokban?",
+			"answer": "A tétel a feladat létezési fele: ha a tartomány $\\mathbb{R}^p$-ben korlátos és zárt, akkor a Heine–Borel-tétel szerint kompakt. Ilyen tartományon a folytonos valós függvény felveszi a minimumát és a maximumát. A tétel azonban nem adja meg a szélsőérték helyét. Ezt a lokális szélsőérték feltételeivel (a belső pontokban) és a peremvizsgálattal kell megkeresni.",
+			"points": [
+				"korlátos és zárt ⇒ kompakt (Heine–Borel)",
+				"folytonos függvény szélsőértéke garantáltan létezik",
+				"a hely keresése: lokális feltételek és peremvizsgálat"
+			]
+		},
+		{
+			"id": "i9q3xq89",
+			"page": "concepts/analiii/weierstrass-tetel-kompakt-halmazon",
+			"gate": "tartalom/Ha a tartomány nem kompakt",
+			"q": "Elhagyhatók-e a Weierstrass-tétel feltételei? Hogyan járunk el, ha a szélsőérték-feladat tartománya nem kompakt?",
+			"answer": "A feltételek nem hagyhatók el: nyílt tartományon, például $\\{x>0,y>0\\}$-n, a tétel nem alkalmazható, a szélsőérték létezése nem garantált. Ilyenkor a gyakorlaton a keresett szélsőértéket egy kompakt halmazra szűkítik: egy alkalmas $P$ ponthoz az $\\{f\\le f(P)\\}$ szintvonal-halmaz lezárására. Ezen a kompakt halmazon már alkalmazható a tétel (például a tartályfeladatban).",
+			"points": [
+				"a kompaktság nem hagyható el, nyílt tartományon a tétel nem alkalmazható",
+				"példa: $\\{x>0,y>0\\}$",
+				"szűkítés az $\\{f\\le f(P)\\}$ halmaz kompakt lezárására",
+				"ott a tétel alkalmazható"
+			]
+		}
+	]
+}

@@ -1,0 +1,1375 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "4-eloadas-derivalas-alapjai",
+	"unitTitle": "4. előadás — Deriválás alapjai",
+	"type": "mcq",
+	"batches": [
+		{
+			"at": "2026-10-22T14:01:33.769Z",
+			"model": "opus",
+			"direction": "",
+			"added": 97
+		}
+	],
+	"questions": [
+		{
+			"id": "df3wz1j9",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "base",
+			"q": "Mi a $h \\in \\mathbb{R}^n \\to \\mathbb{R}$ függvény $i$-edik változó szerinti parciális deriváltja?",
+			"choices": [
+				"A parciális függvény közönséges deriváltja",
+				"A $h$ gradiensének $i$-edik normája",
+				"A $h$ tetszőleges irányú iránymenti deriváltja",
+				"A Jacobi-mátrix $i$-edik sorának összege"
+			],
+			"correct": 0,
+			"explain": "A többi változó rögzítésével kapott egyváltozós parciális függvényt deriváljuk közönségesen. Az iránymenti derivált ennél általánosabb fogalom: a parciális derivált csak a koordinátatengely irányú esete."
+		},
+		{
+			"id": "2te7xbp8",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "base",
+			"q": "Mire szolgál a parciális derivált a többváltozós deriválásban?",
+			"choices": [
+				"A normák ekvivalenciájának igazolására",
+				"Az operátornorma kiszámítására",
+				"A Jacobi-mátrix elemeinek kiszámítására",
+				"A függvény folytonosságának eldöntésére"
+			],
+			"correct": 2,
+			"explain": "A parciális derivált a Jacobi-mátrix elemeinek kiszámítási eszköze. A folytonosságot nem dönti el: van olyan függvény, amelynek léteznek a parciális deriváltjai, mégsem folytonos."
+		},
+		{
+			"id": "v9zqfa5v",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Parciális függvények",
+			"q": "Miért nem üres soha a $D^{(a)}_{h,i}$ halmaz?",
+			"choices": [
+				"Mert $D_h$ mindig nyílt halmaz",
+				"Mert $a_i \\in D^{(a)}_{h,i}$ teljesül",
+				"Mert $0 \\in D^{(a)}_{h,i}$ mindig teljesül",
+				"Mert $h$ az $a$-ban folytonos"
+			],
+			"correct": 1,
+			"explain": "Ha $t = a_i$, a pont maga $a \\in D_h$, ezért $a_i$ mindig eleme a halmaznak. A $0$ akkor eleme, ha $a$ $i$-edik koordinátájának $0$-ra cserélésével is $D_h$-beli pontot kapunk, ez pedig nem feltétlenül teljesül."
+		},
+		{
+			"id": "1yj6r4rw",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Parciális függvények",
+			"q": "Geometriailag mi a $h_{a,i}$ parciális függvény?",
+			"choices": [
+				"$h$ leszűkítése az $a$-n átmenő, $i$-edik tengellyel párhuzamos egyenesre",
+				"$h$ leszűkítése az $a$-n átmenő, $i$-edik tengelyre merőleges síkra",
+				"$h$ leszűkítése az $a$-n átmenő tetszőleges egyenesre",
+				"$h$ grafikonjának az $a$ pontbeli érintősíkja"
+			],
+			"correct": 0,
+			"explain": "Csak az $i$-edik koordináta változik, ezért a pontok egy $i$-edik tengellyel párhuzamos egyenesen vannak. Tetszőleges irányú egyenes az iránymenti deriválthoz tartozik."
+		},
+		{
+			"id": "92ei6874",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Mikor mondjuk, hogy $h$ az $a$-ban az $i$-edik változó szerint parciálisan deriválható?",
+			"choices": [
+				"Ha $h_{a,i} \\in D\\{0\\}$",
+				"Ha $h \\in D\\{a\\}$",
+				"Ha $h_{a,i}$ folytonos $a_i$-ben",
+				"Ha $h_{a,i} \\in D\\{a_i\\}$"
+			],
+			"correct": 3,
+			"explain": "A parciális függvényt az $a_i$ pontban kell deriválni, mert ott veszi fel a $h(a)$ értéket. A $D\\{0\\}$ az iránymenti derivált $h_e$ függvényére vonatkozik."
+		},
+		{
+			"id": "nly8aw5d",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Melyik határérték adja $\\partial_i h(a)$-t?",
+			"choices": [
+				"$\\lim_{t\\to0}\\frac{h(a_1,\\dots,a_i+t,\\dots,a_n)-h(a)}{t}$",
+				"$\\lim_{t\\to0}\\frac{h(a_1+t,\\dots,a_n+t)-h(a)}{t}$",
+				"$\\lim_{t\\to0}\\frac{h(a_1,\\dots,a_i+t,\\dots,a_n)-h(a)}{\\|a\\|}$",
+				"$\\lim_{t\\to0}\\frac{h(a_1,\\dots,t,\\dots,a_n)-h(a)}{t}$"
+			],
+			"correct": 0,
+			"explain": "Csak az $i$-edik koordinátát toljuk el $t$-vel, és $t$-vel osztunk. Ha az összes koordinátát toljuk el, az egy másik (nem egységnyi) irányú megváltozás."
+		},
+		{
+			"id": "is76cm9c",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A parciális deriváltfüggvény",
+			"q": "Mi a $\\partial_i h$ parciális deriváltfüggvény értelmezési tartománya?",
+			"choices": [
+				"A teljes $D_h$",
+				"$\\{a \\in D_h : h \\in D\\{a\\}\\}$",
+				"$\\{a \\in D_h : \\exists\\, \\partial_i h(a)\\}$",
+				"$\\operatorname{int} D_h$"
+			],
+			"correct": 2,
+			"explain": "Az értelmezési tartomány $D_{h,i}$, vagyis azok a pontok, ahol az $i$-edik parciális derivált létezik. A totális differenciálhatóság ennél erősebb feltétel, ezért az a halmaz általában kisebb."
+		},
+		{
+			"id": "5dsk4yob",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/A parciális deriváltfüggvény",
+			"q": "Milyen típusú leképezés a $h \\in \\mathbb{R}^n \\to \\mathbb{R}$ függvény $\\partial_i h$ parciális deriváltfüggvénye?",
+			"choices": [
+				"$\\mathbb{R} \\to \\mathbb{R}$",
+				"$\\mathbb{R}^n \\to \\mathbb{R}$",
+				"$\\mathbb{R}^n \\to \\mathbb{R}^n$",
+				"$\\mathbb{R} \\to \\mathbb{R}^n$"
+			],
+			"correct": 1,
+			"explain": "Pontokhoz rendel hozzá valós számokat: $D_{h,i} \\subset D_h \\subset \\mathbb{R}^n$, az értékek pedig $\\partial_i h(x) \\in \\mathbb{R}$. Az $\\mathbb{R}^n \\to \\mathbb{R}^n$ típus a gradiensé."
+		},
+		{
+			"id": "y8gz0h0u",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Példa",
+			"q": "Legyen $h(x,y) = x^2 + 2xy^2 + x + 3y + 1$. Mennyi $\\partial_1 h(u,v)$?",
+			"choices": [
+				"$2u + 2v^2$",
+				"$2u + 4uv + 1$",
+				"$2u + 2v^2 + 1$",
+				"$4uv + 3$"
+			],
+			"correct": 2,
+			"explain": "$h_{a,1}(t) = t^2 + 2tv^2 + t + 3v + 1$, ennek deriváltja $2t + 2v^2 + 1$, ami $t = u$-ban $2u + 2v^2 + 1$. A $4uv + 3$ a második változó szerinti parciális derivált."
+		},
+		{
+			"id": "avjroa2s",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Példa",
+			"q": "$h(x,y) = x^2 + 2xy^2 + x + 3y + 1$ és $a = (u,v)$ esetén mi a $h_{a,2}(t)$ parciális függvény?",
+			"choices": [
+				"$t^2 + 2tv^2 + t + 3v + 1$",
+				"$u^2 + 2ut^2 + u + 3t + 1$",
+				"$u^2 + 2uv^2 + u + 3v + t$",
+				"$u^2 + 2u t + u + 3t + 1$"
+			],
+			"correct": 1,
+			"explain": "Az első koordinátát $u$-ban rögzítjük, a második helyére $t$ kerül. Az első opció $h_{a,1}$, vagyis éppen fordítva rögzít."
+		},
+		{
+			"id": "zfixdpy4",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Szekciófüggvény és a parciális deriváltfüggvény",
+			"q": "Milyen viszonyban van a $G_i$ szekciófüggvény a $h_{a,i}$ parciális függvénnyel?",
+			"choices": [
+				"$G_i$ a $h_{a,i}$ deriváltja",
+				"$G_i(t) = h_{a,i}(a_i + t)$",
+				"Ugyanaz az objektum, csak más néven",
+				"$G_i$ a $h_{a,i}$ inverze"
+			],
+			"correct": 2,
+			"explain": "Mindkettőben $t$ az $i$-edik koordináta helyén fut, tehát a két függvény azonos. Az eltolt $h_{a,i}(a_i + t)$ alak az iránymenti derivált $h_e$ függvénye."
+		},
+		{
+			"id": "ylpcglxw",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Szekciófüggvény és a parciális deriváltfüggvény",
+			"q": "A $G_i$ szekciófüggvénnyel kifejezve mennyi $\\partial_i f(a)$?",
+			"choices": [
+				"$G_i'(0)$",
+				"$G_i(a_i)$",
+				"$G_i'(a_i)$",
+				"$G_i'(1)$"
+			],
+			"correct": 2,
+			"explain": "Mivel $G_i = f_{a,i}$, a parciális derivált $G_i'(a_i)$. A $G_i'(0)$ akkor lenne helyes, ha $t$ az $a_i$-től mért eltérést jelentené."
+		},
+		{
+			"id": "6u8patmh",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Jelölésváltozatok",
+			"q": "Legyen $f(x,y,z) = x^3 + y^2 z + z^3 + xyz$. Mennyi $\\partial_z f$?",
+			"choices": [
+				"$y^2 + 3z^2 + xy$",
+				"$2yz + xz$",
+				"$y^2 + 3z^2$",
+				"$y^2 z + 3z^2 + xy$"
+			],
+			"correct": 0,
+			"explain": "$x$-et és $y$-t konstansnak tekintve: $(y^2 z)' = y^2$, $(z^3)' = 3z^2$, $(xyz)' = xy$. A $2yz + xz$ az $y$ szerinti parciális derivált."
+		},
+		{
+			"id": "56qeff0w",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Jelölésváltozatok",
+			"q": "Egy $h(x,y)$ függvénynél melyik jelölés jelenti ugyanazt, mint $\\dfrac{\\partial h}{\\partial y}$?",
+			"choices": [
+				"$\\partial_1 h$",
+				"$\\partial_2 h$",
+				"$h'$",
+				"$\\operatorname{grad} h$"
+			],
+			"correct": 1,
+			"explain": "$y$ a második változó, ezért $\\partial_y h = \\partial_2 h$. A $\\partial_1 h$ az első változó, vagyis $x$ szerinti parciális derivált."
+		},
+		{
+			"id": "eghk73lc",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Visszafelé: függvény a parciális deriváltjaiból",
+			"q": "Melyik differenciálható $f$ teljesíti: $\\partial_x f = x^2 y$ és $\\partial_y f = \\frac{x^3}{3} + 1$?",
+			"choices": [
+				"$\\frac{x^3 y}{3} + c$",
+				"$\\frac{x^3 y}{3} + x + c$",
+				"$x^2 y^2 + y + c$",
+				"$\\frac{x^3 y}{3} + y + c$"
+			],
+			"correct": 3,
+			"explain": "Az első feltételből $f = \\frac{x^3y}{3} + \\varphi(y)$, a második feltétel szerint $\\varphi'(y) = 1$, így $\\varphi(y) = y + c$. Az $\\frac{x^3y}{3} + c$ alakból az $y$ szerinti $+1$ hiányzik."
+		},
+		{
+			"id": "qq51529n",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Visszafelé: függvény a parciális deriváltjaiból",
+			"q": "Ha $\\partial_x f(x,y) = x^2 y$-t $x$ szerint integráljuk, mi lép az integrációs konstans helyére?",
+			"choices": [
+				"Egy $c \\in \\mathbb{R}$ szám",
+				"Egy $\\varphi(y)$ függvény",
+				"Egy $\\psi(x)$ függvény",
+				"Egy $\\varphi(x,y)$ tetszőleges függvény"
+			],
+			"correct": 1,
+			"explain": "$x$ szerint deriválva minden csak $y$-tól függő tag eltűnik, ezért az „állandó” egy $\\varphi(y)$ függvény. A $\\psi(x)$ az $y$ szerinti integrálásnál jelenik meg."
+		},
+		{
+			"id": "0edi0k5q",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = x^3y + x^2y^2 + x + y^2$. Mennyi $\\partial_{yy} f(1,0)$?",
+			"choices": [
+				"$0$",
+				"$3$",
+				"$2$",
+				"$4$"
+			],
+			"correct": 3,
+			"explain": "$\\partial_y f = x^3 + 2x^2 y + 2y$, ebből $\\partial_{yy} f = 2x^2 + 2$, ami $(1,0)$-ban $4$. A $3$ a vegyes $\\partial_{xy} f(1,0)$ értéke."
+		},
+		{
+			"id": "mbetgj7d",
+			"page": "concepts/analiii/parcialis-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = \\sqrt{3(x-1)^4 + 2y^2}$. Mi igaz az $(1,0)$ pontban?",
+			"choices": [
+				"$\\partial_x f$ és $\\partial_y f$ is létezik",
+				"$\\partial_x f$ létezik ($=0$), $\\partial_y f$ nem",
+				"$\\partial_y f$ létezik ($=0$), $\\partial_x f$ nem",
+				"Egyik parciális derivált sem létezik"
+			],
+			"correct": 1,
+			"explain": "$x$ mentén $f = \\sqrt3(x-1)^2$, ez sima, a deriváltja $0$. $y$ mentén $f = \\sqrt2|y|$, ennek $0$-ban csúcsa van, ezért ott nem deriválható."
+		},
+		{
+			"id": "1ocw0mww",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "base",
+			"q": "Az $a$-n átmenő, $e$ irányú egyenesre szűkített egyváltozós függvényt hol deriváljuk az iránymenti deriválthoz?",
+			"choices": [
+				"Az $a$ pontban",
+				"A $t = 1$ helyen",
+				"A $t = \\|a\\|$ helyen",
+				"A nulla helyen"
+			],
+			"correct": 3,
+			"explain": "$h_e(t) = h(a + te)$, és $t = 0$ felel meg az $a$ pontnak, ezért $\\partial_e h(a) = h_e'(0)$. Az „$a$ pontban” nem értelmes, mert $h_e$ egyváltozós függvény."
+		},
+		{
+			"id": "0zrsqc72",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "base",
+			"q": "Melyik irányra esik egybe az iránymenti derivált a parciális deriválttal?",
+			"choices": [
+				"A gradiens irányára",
+				"Bármely nemnulla vektorra",
+				"A koordinátatengely irányú egységvektorra",
+				"Az $a$ helyvektorának irányára"
+			],
+			"correct": 2,
+			"explain": "A parciális derivált a koordinátatengely irányú egységvektorhoz tartozó iránymenti derivált. A gradiens irányában a legnagyobb meredekséget kapjuk, ami más fogalom."
+		},
+		{
+			"id": "60wazv8g",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Hogyan értelmezzük a $D^{(a)}_{h,e}$ halmazt?",
+			"choices": [
+				"$\\{t \\in \\mathbb{R} : a + te \\in D_h\\}$",
+				"$\\{t \\in \\mathbb{R} : te \\in D_h\\}$",
+				"$\\{x \\in \\mathbb{R}^n : a + x \\in D_h\\}$",
+				"$\\{t \\in \\mathbb{R} : a_i + t \\in D_h\\}$"
+			],
+			"correct": 0,
+			"explain": "Azok a $t$ paraméterek tartoznak ide, amelyekre az egyenes $a + te$ pontja a $D_h$ értelmezési tartományban van. A $te \\in D_h$ alak az origón átmenő egyenest írná le, nem az $a$-n átmenőt."
+		},
+		{
+			"id": "g5fh0myw",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Mit garantál az $a \\in \\operatorname{int} D_h$ feltétel a $h_e$ függvényre?",
+			"choices": [
+				"$h_e \\in D\\{0\\}$",
+				"$0 \\in \\operatorname{int} D^{(a)}_{h,e}$",
+				"$h_e$ folytonos a $0$-ban",
+				"$D^{(a)}_{h,e} = \\mathbb{R}$"
+			],
+			"correct": 1,
+			"explain": "Ha $a$ belső pont, akkor egy kis gömb $D_h$-ban van, így $t$ kicsi értékeire $a + te \\in D_h$, vagyis $0$ belső pontja $D^{(a)}_{h,e}$-nek. A deriválhatóságot ez nem garantálja."
+		},
+		{
+			"id": "mj6k48cv",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A parciális derivált mint speciális eset",
+			"q": "Ha $e$ az $i$-edik egységvektor, mivel egyenlő $h_e(t)$?",
+			"choices": [
+				"$h_{a,i}(t)$",
+				"$h_{a,i}(a_i + t)$",
+				"$h_{a,i}(a_i)\\cdot t$",
+				"$h_{a,i}(t - a_i)$"
+			],
+			"correct": 1,
+			"explain": "$a + te$ $i$-edik koordinátája $a_i + t$, a többi változatlan, tehát $h_e(t) = h_{a,i}(a_i + t)$. A $h_{a,i}(t)$ alak elhagyja az $a_i$-vel való eltolást."
+		},
+		{
+			"id": "tjpgc2x0",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A parciális derivált mint speciális eset",
+			"q": "$h \\in \\mathbb{R}^3 \\to \\mathbb{R}$. Melyik $e$ irányú iránymenti derivált egyenlő $\\partial_2 h(a)$-val?",
+			"choices": [
+				"$e = (1,0,0)$",
+				"$e = (0,0,1)$",
+				"$e = (0,1,0)$",
+				"$e = \\tfrac{1}{\\sqrt3}(1,1,1)$"
+			],
+			"correct": 2,
+			"explain": "A második változó szerinti parciális derivált a második koordinátatengely irányú, $(0,1,0)$ egységvektorhoz tartozó iránymenti derivált. Az $(1,1,1)/\\sqrt3$ egy átlós irány."
+		},
+		{
+			"id": "co2e1f43",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Differenciálhatóságból: $\\partial_e f(a) = f'(a)e$",
+			"q": "Ha $f \\in \\mathbb{R}^n \\to \\mathbb{R}$ és $f \\in D\\{a\\}$, mivel egyenlő $\\partial_e f(a)$ ($\\|e\\| = 1$)?",
+			"choices": [
+				"$\\|\\operatorname{grad} f(a)\\|$",
+				"$\\langle \\operatorname{grad} f(a), e\\rangle$",
+				"$\\operatorname{grad} f(a) \\cdot \\|e\\|$",
+				"$\\sum_i \\partial_i f(a)$"
+			],
+			"correct": 1,
+			"explain": "$m = 1$ esetén az $f'(a)e$ mátrix-vektor-szorzat a gradiens és $e$ skaláris szorzata. A gradiens normája csak a legnagyobb meredekségű irányban adódik."
+		},
+		{
+			"id": "d7mijyeb",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Differenciálhatóságból: $\\partial_e f(a) = f'(a)e$",
+			"q": "A $\\partial_e f(a) = f'(a)e$ bizonyításában melyik a döntő lépés?",
+			"choices": [
+				"Az $x := te$ helyettesítés és $\\|te\\| = |t|$",
+				"A parciális deriváltak folytonossága",
+				"A Lagrange-féle középértéktétel alkalmazása",
+				"A normák ekvivalenciája"
+			],
+			"correct": 0,
+			"explain": "Az $x = te$ helyettesítés után a hibatag $\\eta(te)\\cdot|t|$ lesz, így éppen az egyváltozós differenciálhatóság kritériumát kapjuk. A parciális deriváltak folytonosságára nincs szükség, elég az $f \\in D\\{a\\}$ feltétel."
+		},
+		{
+			"id": "lyoyzhor",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A megfordítás hamis",
+			"q": "$f = 1$, ha $y = x^2 \\ne 0$, egyébként $0$. Miért $\\partial_e f(0,0) = 0$ minden irányban?",
+			"choices": [
+				"Mert $f$ folytonos az origóban",
+				"Mert minden egyenes csak a $0$-ban metszi a parabolát (lokálisan)",
+				"Mert a parabola érinti az összes egyenest",
+				"Mert $f$ differenciálható az origóban"
+			],
+			"correct": 1,
+			"explain": "Az origó egy környezetében minden $a + te$ egyenes csak a $0$-ban metszi a parabolát, ott pedig $f = 0$, ezért $f_e \\equiv 0$. A függvény nem folytonos, így nem is differenciálható."
+		},
+		{
+			"id": "abjcu7pd",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/A megfordítás hamis",
+			"q": "Mi következik abból, hogy egy pontban minden iránymenti derivált létezik?",
+			"choices": [
+				"A differenciálhatóság, de a folytonosság nem",
+				"A folytonosság, de a differenciálhatóság nem",
+				"Sem a differenciálhatóság, sem a folytonosság",
+				"A differenciálhatóság és a folytonosság is"
+			],
+			"correct": 2,
+			"explain": "A parabolás ellenpélda minden irányban deriválható, mégsem folytonos. A „csak folytonosság” csapda: még az sem következik."
+		},
+		{
+			"id": "4mme9gte",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Az irány mint 2-es normában vett egységvektor",
+			"q": "Melyik normában kötjük ki, hogy az irányvektorra $\\|v\\| = 1$ teljesüljön?",
+			"choices": [
+				"$\\|\\cdot\\|_1$",
+				"$\\|\\cdot\\|_\\infty$",
+				"Bármelyik $\\|\\cdot\\|_p$-ben, ugyanaz jön ki",
+				"$\\|\\cdot\\|_2$ (euklideszi)"
+			],
+			"correct": 3,
+			"explain": "Az euklideszi normával lesz értelmes a $\\langle f'(a), v\\rangle$ alak, és ez a normálás adja a valódi sebességet a $v$ irányban. Más normában normálva a $v$ vektor, és vele az eredmény is skalárszorosára változik."
+		},
+		{
+			"id": "a0c6zynu",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Az irány mint 2-es normában vett egységvektor",
+			"q": "Mit biztosít az irányvektor $\\|v\\|_2 = 1$ normálása?",
+			"choices": [
+				"Hogy $\\partial_v f(a)$ a $v$ irányú sebesség legyen, ne annak skalárszorosa",
+				"Hogy minden függvény deriválható legyen a $v$ irányban",
+				"Hogy $\\partial_v f(a)$ mindig nemnegatív legyen",
+				"Hogy $\\partial_v f(a)$ ne függjön $v$-től"
+			],
+			"correct": 0,
+			"explain": "A $v$ hosszával a derivált is skálázódik, ezért normálunk. A deriválhatóság létezését a normálás nem befolyásolja."
+		},
+		{
+			"id": "cir5nybz",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Vektorértékű és $m > 1$ eset",
+			"q": "Ha $f \\in \\mathbb{R}^n \\to \\mathbb{R}^m$, $m > 1$, hol van $\\partial_e f(a)$?",
+			"choices": [
+				"$\\mathbb{R}$-ben",
+				"$\\mathbb{R}^n$-ben",
+				"$\\mathbb{R}^{m\\times n}$-ben",
+				"$\\mathbb{R}^m$-ben"
+			],
+			"correct": 3,
+			"explain": "$f_e(t) = f(a + te)$ értékei $\\mathbb{R}^m$-beliek, ezért a deriváltja is $\\mathbb{R}^m$-beli. Az $\\mathbb{R}^{m\\times n}$ a teljes $f'(a)$ deriváltmátrix tere."
+		},
+		{
+			"id": "770i164n",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Vektorértékű és $m > 1$ eset",
+			"q": "$f(x,y) = (x^2, xy)$, $a = (1,1)$, $e = (1,0)$. Mennyi $\\partial_e f(a)$?",
+			"choices": [
+				"$(2,1)$",
+				"$(1,2)$",
+				"$(2,0)$",
+				"$3$"
+			],
+			"correct": 0,
+			"explain": "$f_e(t) = ((1+t)^2, 1+t)$, ennek deriváltja $0$-ban $(2,1)$. A skalár $3$ helytelen, mert $m > 1$ esetén a derivált vektor."
+		},
+		{
+			"id": "qvk1vw10",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = x^2 - xy + y^2$, $a = (1,1)$, $e = (\\cos\\alpha, \\sin\\alpha)$. Mekkora $\\partial_e f(a)$ maximuma és hol?",
+			"choices": [
+				"$2$, $\\alpha = \\tfrac\\pi4$-nél",
+				"$\\sqrt2$, $\\alpha = \\tfrac\\pi4$-nél",
+				"$\\sqrt2$, $\\alpha = \\tfrac{5\\pi}4$-nél",
+				"$\\tfrac{1+\\sqrt3}{2}$, $\\alpha = \\tfrac\\pi3$-nál"
+			],
+			"correct": 1,
+			"explain": "$\\partial_e f(1,1) = \\cos\\alpha + \\sin\\alpha$, ennek maximuma $\\sqrt2$, a gradiens irányában ($\\alpha = \\pi/4$). Az $\\alpha = 5\\pi/4$ irányban a minimum, $-\\sqrt2$ adódik."
+		},
+		{
+			"id": "vup7bzbu",
+			"page": "concepts/analiii/iranymenti-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "Differenciálható $f$-re mennyi $\\max_{\\|e\\|_2=1} \\partial_e f(a)$, és mi indokolja?",
+			"choices": [
+				"$\\|\\operatorname{grad} f(a)\\|_1$, a háromszög-egyenlőtlenség",
+				"$\\max_i |\\partial_i f(a)|$, a koordinátánkénti becslés",
+				"$\\|\\operatorname{grad} f(a)\\|_2$, a Cauchy–Schwarz-egyenlőtlenség",
+				"$\\|\\operatorname{grad} f(a)\\|_2^2$, a Pitagorasz-tétel"
+			],
+			"correct": 2,
+			"explain": "Cauchy–Schwarz szerint $\\langle\\operatorname{grad} f, e\\rangle \\le \\|\\operatorname{grad} f\\|$, és egyenlőség áll fenn, ha $e$ a gradiens irányába mutat. Az $1$-es norma ennél nagyobb lehet, ezért nem lehet a maximum."
+		},
+		{
+			"id": "kcxs54j4",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "base",
+			"q": "Mikor korlátos egy normált terek közötti $f$ lineáris leképezés?",
+			"choices": [
+				"Ha $f(X)$ korlátos halmaz",
+				"Ha $\\|f(x)\\| \\le M\\|x\\|$ alkalmas $M$-mel",
+				"Ha $\\|f(x)\\| \\le M$ minden $x$-re",
+				"Ha $\\|f(x)\\| \\ge M\\|x\\|$ alkalmas $M>0$-val"
+			],
+			"correct": 1,
+			"explain": "A korlátosság a normák arányára vonatkozik: $\\|f(x)\\| \\le M\\|x\\|$. Nem nulla lineáris leképezés képe sosem korlátos halmaz, ezért az $f(X)$ korlátosságát kérő opció hibás."
+		},
+		{
+			"id": "la9rplnv",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "base",
+			"q": "Mi az operátornorma egy korlátos lineáris leképezésre?",
+			"choices": [
+				"A legnagyobb $M$, amelyre $\\|f(x)\\| \\le M\\|x\\|$",
+				"A $\\|f(x)\\|$ értékek összege",
+				"A legkisebb $M$, amelyre $\\|f(x)\\| \\le M\\|x\\|$",
+				"A mátrix elemeinek abszolút maximuma"
+			],
+			"correct": 2,
+			"explain": "Az operátornorma a legkisebb korlát. Legnagyobb korlát nincs, mert minden korlátnál nagyobb szám is korlát."
+		},
+		{
+			"id": "orm849ye",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Definíció",
+			"q": "Mit nevezünk egy korlátos lineáris leképezés korlátjának?",
+			"choices": [
+				"Minden $M \\ge 0$ számot, amelyre $\\|f(x)\\|_* \\le M\\|x\\|_\\bullet$",
+				"Csak a legkisebb ilyen $M$ számot",
+				"A $\\sup\\|f(x)\\|_*$ értéket",
+				"Az $\\|f(0)\\|_*$ értéket"
+			],
+			"correct": 0,
+			"explain": "A definíció szerint minden olyan $M$ korlát, amely teljesíti az egyenlőtlenséget. A legkisebb korlát az operátornorma."
+		},
+		{
+			"id": "7jml6px8",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Definíció",
+			"q": "Melyik feltétel a linearitás a korlátos lineáris leképezés definíciójában?",
+			"choices": [
+				"$f(x + y) = f(x)f(y)$",
+				"$f(x + \\lambda y) = f(x) + \\lambda f(y)$",
+				"$\\|f(x + y)\\| \\le \\|f(x)\\| + \\|f(y)\\|$",
+				"$f(\\lambda x) = |\\lambda| f(x)$"
+			],
+			"correct": 1,
+			"explain": "A linearitás egyetlen képletben fogalmazza meg az additivitást és a homogenitást. A háromszög-egyenlőtlenség normatulajdonság, nem linearitás."
+		},
+		{
+			"id": "ovr5b4i5",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Egyenletes folytonosság",
+			"q": "Milyen becslés adja egy korlátos lineáris $f$ egyenletes folytonosságát?",
+			"choices": [
+				"$\\|f(x) - f(y)\\|_* \\le M\\|x-y\\|_\\bullet$",
+				"$\\|f(x) - f(y)\\|_* \\le M\\|x-y\\|_\\bullet^2$",
+				"$\\|f(x)\\|_* \\le M + \\|x\\|_\\bullet$",
+				"$\\|f(x) - f(y)\\|_* \\ge M\\|x-y\\|_\\bullet$"
+			],
+			"correct": 0,
+			"explain": "Ez Lipschitz-becslés, és ebből közvetlenül következik az egyenletes folytonosság. A négyzetes alak nem ebből a gondolatmenetből adódik."
+		},
+		{
+			"id": "loizm38h",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Egyenletes folytonosság",
+			"q": "A Lipschitz-becslés levezetésében melyik lépés használja a linearitást?",
+			"choices": [
+				"$\\|f(x-y)\\|_* \\le M\\|x-y\\|_\\bullet$",
+				"$\\|x - y\\|_\\bullet \\le \\|x\\|_\\bullet + \\|y\\|_\\bullet$",
+				"$f(x) - f(y) = f(x - y)$",
+				"$\\|f(x)\\|_* \\ge 0$"
+			],
+			"correct": 2,
+			"explain": "A különbséget a linearitás miatt egyetlen képpé, $f(x-y)$-ná írhatjuk át. Az ezt követő $\\le M\\|x-y\\|$ becslés már a korlátosságból jön."
+		},
+		{
+			"id": "lt5qzn1m",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Az operátornorma",
+			"q": "Hogyan definiáljuk az $\\|f\\|$ operátornormát a $K_f$ korlátok halmazával?",
+			"choices": [
+				"$\\|f\\| := \\sup K_f$",
+				"$\\|f\\| := \\inf K_f$",
+				"$\\|f\\| := \\inf\\{\\|f(x)\\|_* : x \\in X\\}$",
+				"$\\|f\\| := \\#K_f$"
+			],
+			"correct": 1,
+			"explain": "Az operátornorma a korlátok infimuma, amely ráadásul minimum. A $\\sup K_f$ végtelen, mert $K_f$ felülről nem korlátos."
+		},
+		{
+			"id": "6utyllpp",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Az operátornorma",
+			"q": "Ha $\\|x - z\\|_\\bullet < \\varepsilon$, mekkora lehet legfeljebb az öröklődő $\\|f(x) - f(z)\\|_*$ hiba?",
+			"choices": [
+				"$\\varepsilon / \\|f\\|$",
+				"$\\|f\\| + \\varepsilon$",
+				"$\\|f\\|^2 \\varepsilon$",
+				"$\\|f\\|\\cdot\\varepsilon$"
+			],
+			"correct": 3,
+			"explain": "$\\|f(x-z)\\|_* \\le \\|f\\|\\cdot\\|x-z\\|_\\bullet \\le \\|f\\|\\varepsilon$, ezért az operátornorma a hibafelerősítési tényező. Az összeadásos alak nem következik a lineáris becslésből."
+		},
+		{
+			"id": "9q7bcg10",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/$\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m)\\cong\\mathbb{R}^{m\\times n}$: a lineáris leképezések és a mátrixok izomorfiája",
+			"q": "Ha $L(x) = Ax$ és $e_1, \\dots, e_n$ a kanonikus bázis, mik az $A$ mátrix oszlopai?",
+			"choices": [
+				"Az $e_i$ bázisvektorok",
+				"Az $L(e_i)$ vektorok",
+				"Az $L^{-1}(e_i)$ vektorok",
+				"Az $L$ koordinátafüggvényeinek gradiensei"
+			],
+			"correct": 1,
+			"explain": "Az $i$-edik oszlop $Ae_i = L(e_i)$. A koordinátafüggvények gradiensei a sorok, nem az oszlopok."
+		},
+		{
+			"id": "soet6ity",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/$\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m)\\cong\\mathbb{R}^{m\\times n}$: a lineáris leképezések és a mátrixok izomorfiája",
+			"q": "Hogyan értelmezzük az izomorfia alapján közvetlenül a mátrixtéren az $\\|A\\|_{m,n}$ operátornormát?",
+			"choices": [
+				"$\\max_{\\|x\\|^{(n)}\\le1}\\|Ax\\|^{(m)}$",
+				"$\\min_{\\|x\\|^{(n)}=1}\\|Ax\\|^{(m)}$",
+				"$\\max_{i,k}|a_{ik}|$",
+				"$\\sum_{i,k}|a_{ik}|$"
+			],
+			"correct": 0,
+			"explain": "Az operátornorma az $Ax$ normájának maximuma az egységgömbön. A minimum a legkisebb nyújtást adná, nem a legkisebb korlátot."
+		},
+		{
+			"id": "ujjmzqgw",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Mátrixnormák",
+			"q": "Mi a $\\|A\\|_{(\\infty)}$ mátrixnorma ($A = (a_{ik})$)?",
+			"choices": [
+				"$\\max_k \\sum_i |a_{ik}|$ (oszlopnorma)",
+				"$\\sqrt{\\sum_{i,k}|a_{ik}|^2}$",
+				"$\\max_i \\sum_k |a_{ik}|$ (sornorma)",
+				"$\\max_{i,k}|a_{ik}|$"
+			],
+			"correct": 2,
+			"explain": "A $\\|\\cdot\\|_\\infty$-hez tartozó indukált norma az abszolút sorösszegek maximuma. Az oszlopnorma az $\\|A\\|_{(1)}$."
+		},
+		{
+			"id": "4wm806mr",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Mátrixnormák",
+			"q": "Mit tudunk a $\\|A\\|_{(2)}$ spektrálnormáról a jegyzet szerint?",
+			"choices": [
+				"Egyenlő a Frobenius-normával",
+				"Csak felső becslés adódik rá: a Frobenius-norma",
+				"Egyenlő a sornormával",
+				"Mindig nagyobb a Frobenius-normánál"
+			],
+			"correct": 1,
+			"explain": "$\\|A\\|_{(2)} \\le \\sqrt{\\sum|a_{ik}|^2}$, és ez a korlát nem feltétlenül a legkisebb. A sor- és az oszlopnorma ezzel szemben pontos képlet a megfelelő normákra."
+		},
+		{
+			"id": "p44zntyk",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Miért fontos",
+			"q": "Melyik becslésnek NEM alapmennyisége a derivált operátornormája a jegyzet szerint?",
+			"choices": [
+				"A középértéktétel",
+				"A Taylor-formula maradéktagja",
+				"A kontrakciós konstans fixponttételnél",
+				"A parciális deriváltak létezése"
+			],
+			"correct": 3,
+			"explain": "A jegyzet a középértéktételt, a Taylor-maradéktagot és a kontrakciós konstanst sorolja fel. A parciális deriváltak létezése nem norma típusú becslés."
+		},
+		{
+			"id": "e1v2l5q0",
+			"page": "concepts/analiii/korlatos-linearis-lekepezes",
+			"gate": "tartalom/Miért fontos",
+			"q": "Mi a Fréchet-derivált mátrixalakja?",
+			"choices": [
+				"A Hesse-mátrix",
+				"A Jacobi-mátrix",
+				"A Gram-mátrix",
+				"Az inverz mátrix"
+			],
+			"correct": 1,
+			"explain": "A deriváltat mint korlátos lineáris leképezést a Jacobi-mátrix reprezentálja. A Hesse-mátrix a második deriváltakból áll."
+		},
+		{
+			"id": "vldfksh4",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "base",
+			"q": "Milyen gyorsan kell eltűnnie a hibának $f$ $a$-beli differenciálhatóságához?",
+			"choices": [
+				"$\\|h\\|$-nál gyorsabban",
+				"$\\|h\\|$-val azonos rendben",
+				"$\\sqrt{\\|h\\|}$-nál lassabban",
+				"Elég, ha korlátos marad"
+			],
+			"correct": 0,
+			"explain": "A hiba $\\eta(h)\\|h\\|$ alakú, ahol $\\eta(h) \\to 0$, tehát kis ordó $\\|h\\|$-ban. Az azonos rendű hiba a folytonosságnak felelne meg, nem a differenciálhatóságnak."
+		},
+		{
+			"id": "ysaknsk3",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "base",
+			"q": "Milyen pontban értelmezzük az $f \\in \\mathbb{R}^n \\to \\mathbb{R}^m$ differenciálhatóságát?",
+			"choices": [
+				"Tetszőleges $a \\in D_f$-ben",
+				"$a \\in \\partial D_f$ határpontban",
+				"$a \\in \\operatorname{int} D_f$ belső pontban",
+				"Csak az origóban"
+			],
+			"correct": 2,
+			"explain": "A definíció belső pontot kér, hogy $a + h$ minden irányban $D_f$-ben legyen kis $h$-ra. Határpontban nem minden irány áll rendelkezésre."
+		},
+		{
+			"id": "nqib1m3u",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Az egyváltozós eset átírása",
+			"q": "Az egyváltozós átírásban milyen $L$ leképezést vezetünk be?",
+			"choices": [
+				"$L(x) := x + q$",
+				"$L(x) := qx$",
+				"$L(x) := f(a)x$",
+				"$L(x) := f(a + x)$"
+			],
+			"correct": 1,
+			"explain": "A $q$ derivált a $qx$ korlátos lineáris leképezéssé válik. Az $x + q$ affin, nem lineáris."
+		},
+		{
+			"id": "te1za1cs",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Az egyváltozós eset átírása",
+			"q": "Miért általánosítható az $f(a+h) - f(a) = L(h) + \\eta(h)|h|$ alak több változóra?",
+			"choices": [
+				"Mert csak polinomokra érvényes",
+				"Mert $h$-val oszt",
+				"Mert nincs benne osztás, és nem hivatkozik az egydimenziósságra",
+				"Mert $L$ mindig az identitás"
+			],
+			"correct": 2,
+			"explain": "Vektorral nem tudunk osztani, ezért az osztásmentes alak szükséges, és ebben semmi sem hivatkozik az egydimenziósságra. A $h$-val osztó differenciahányados éppen emiatt nem általánosítható."
+		},
+		{
+			"id": "7cvq9pcr",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Melyik a differenciálhatóság ekvivalens, osztásos alakja?",
+			"choices": [
+				"$\\frac{\\|f(a+h)-f(a)-L(h)\\|_q}{\\|h\\|_p} \\to 0$",
+				"$\\frac{\\|f(a+h)-f(a)\\|_q}{\\|h\\|_p} \\to 0$",
+				"$\\|f(a+h)-f(a)-L(h)\\|_q \\to 0$",
+				"$\\frac{f(a+h)-f(a)}{h} \\to L$"
+			],
+			"correct": 0,
+			"explain": "A lineáris közelítés hibájának a $\\|h\\|$-hoz viszonyítva kell eltűnnie. Ha csak maga a hiba tart $0$-hoz, az a folytonossághoz elég, a differenciálhatósághoz nem."
+		},
+		{
+			"id": "b688mwz0",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A definíció",
+			"q": "Miért tehető fel a definícióban, hogy $\\eta(0) = 0$?",
+			"choices": [
+				"Mert $\\eta$ lineáris",
+				"Mert $h = 0$-ra $(\\ast)$ mindkét oldala $0$, így $\\eta(0)$ szabadon átírható",
+				"Mert $f(a) = 0$ feltehető",
+				"Mert $a \\in \\operatorname{int} D_f$"
+			],
+			"correct": 1,
+			"explain": "$L(0) = 0$ és $\\|0\\|_p = 0$, ezért $\\eta(0)$ értéke nem befolyásolja $(\\ast)$-ot. Az $a \\in \\operatorname{int} D_f$ feltétel a gömbre szorítkozást indokolja, nem ezt."
+		},
+		{
+			"id": "z2r4f4h1",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A definíció nem függ a normától",
+			"q": "Miért nem függ a differenciálhatóság a választott $\\|\\cdot\\|_p$, $\\|\\cdot\\|_q$ normáktól?",
+			"choices": [
+				"Mert mindig $p = q = 2$-t használunk",
+				"Mert $L$ minden normában ugyanannyi",
+				"Mert $\\mathbb{R}^n$-ben és $\\mathbb{R}^m$-ben minden norma ekvivalens",
+				"Mert $\\eta$ folytonos"
+			],
+			"correct": 2,
+			"explain": "A normák ekvivalenciája miatt $(\\ast)$ vagy minden $p, q$ mellett teljesül, vagy egyik mellett sem. A $p = q = 2$ csak egy kényelmes választás, nem kötelező."
+		},
+		{
+			"id": "gvnknfdo",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A definíció nem függ a normától",
+			"q": "$(\\ast)$ teljesül $p = 1$, $q = \\infty$ mellett. Mit mondhatunk más $p, q$ választásra?",
+			"choices": [
+				"Csak $p \\le q$ esetén teljesül",
+				"Csak $p = 1$ mellett teljesül",
+				"Más normában ismét ellenőrizni kell",
+				"Minden $1 \\le p, q \\le +\\infty$ mellett teljesül"
+			],
+			"correct": 3,
+			"explain": "A normák ekvivalenciája miatt a feltétel normafüggetlen. Újraellenőrizni tehát felesleges."
+		},
+		{
+			"id": "lzp6bhpc",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A derivált egyértelműsége",
+			"q": "Az egyértelműség bizonyításában milyen speciális $h$-t választunk?",
+			"choices": [
+				"$h := t e_i$",
+				"$h := t(1,\\dots,1)$",
+				"$h := L^\\ast(e_i)$",
+				"$h := a$"
+			],
+			"correct": 0,
+			"explain": "$\\|te_i\\|_\\infty = |t|$, így a hányados $\\|L^\\ast(e_i)\\|_\\infty$ lesz, ami nem függ $t$-től. Az $(1,\\dots,1)$ irányból csak az oszlopok összegére kapnánk információt."
+		},
+		{
+			"id": "pffgv728",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A derivált egyértelműsége",
+			"q": "Miért következik a bizonyításban, hogy $L^\\ast(e_i) = 0$?",
+			"choices": [
+				"Mert $L^\\ast$ korlátos",
+				"Mert egy $t$-től független szám tart $0$-hoz, így $0$",
+				"Mert $\\eta$ és $\\tilde\\eta$ egyenlő",
+				"Mert $e_i$ egységvektor"
+			],
+			"correct": 1,
+			"explain": "$\\|L^\\ast(e_i)\\|_\\infty$ konstans, és $t \\to 0$ esetén $0$-hoz tart, tehát $0$. Az $\\eta = \\tilde\\eta$ egyenlőséget a bizonyítás nem tételezi fel."
+		},
+		{
+			"id": "bxp237cg",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Lineáris leképezés deriváltja önmaga",
+			"q": "Mi az $L \\in \\mathcal{L}(\\mathbb{R}^n, \\mathbb{R}^m)$ leképezés deriváltja az $a$ pontban?",
+			"choices": [
+				"$L(a)$",
+				"$0$",
+				"$L$",
+				"$\\|L\\|$"
+			],
+			"correct": 2,
+			"explain": "$L(a + x) - L(a) = L(x)$, ezért a derivált maga $L$, minden pontban. Az $L(a)$ egy vektor, nem lineáris leképezés."
+		},
+		{
+			"id": "ffuev1kb",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Lineáris leképezés deriváltja önmaga",
+			"q": "Milyen $\\eta$ választás igazolja, hogy a lineáris $L$ differenciálható?",
+			"choices": [
+				"$\\eta(x) = x$",
+				"$\\eta \\equiv 0$",
+				"$\\eta(x) = L(x)$",
+				"$\\eta(x) = \\|x\\|$"
+			],
+			"correct": 1,
+			"explain": "A megváltozás pontosan $L(x)$, tehát nincs hibatag: $\\eta \\equiv 0$. Az $\\eta(x) = L(x)$ választás a megváltozást megduplázná."
+		},
+		{
+			"id": "5czcgcgb",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Absztrakt normált terek: a Fréchet-derivált",
+			"q": "Normált terek között milyen objektum az $f \\in X \\to Y$ Fréchet-deriváltja?",
+			"choices": [
+				"Egy $Y$-beli vektor",
+				"Egy $\\mathcal{L}(X,Y)$-beli korlátos lineáris leképezés",
+				"Egy tetszőleges folytonos $X \\to Y$ függvény",
+				"Egy $X$-beli vektor"
+			],
+			"correct": 1,
+			"explain": "Az $A$ közelítésnek korlátos lineárisnak kell lennie, vagyis $A \\in \\mathcal{L}(X,Y)$. Tetszőleges folytonos függvény nem elég: a linearitás lényeges."
+		},
+		{
+			"id": "11e9f0wb",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Absztrakt normált terek: a Fréchet-derivált",
+			"q": "Miért reprezentálható a véges dimenziós derivált mátrixszal?",
+			"choices": [
+				"Mert $\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m) \\approx \\mathbb{R}^{m\\times n}$",
+				"Mert minden norma a 2-es norma",
+				"Mert $f$ polinom",
+				"Mert $\\eta \\equiv 0$"
+			],
+			"correct": 0,
+			"explain": "Az izomorfia miatt a lineáris leképezést egy $m\\times n$-es mátrix adja meg. A normák megválasztásának ehhez nincs köze."
+		},
+		{
+			"id": "86kdh9vb",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A lineáris közelítés mint geometriai kép",
+			"q": "Mi a lineáris közelítés geometriai megfelelője egy $\\mathbb{R}^2 \\to \\mathbb{R}$ függvénynél?",
+			"choices": [
+				"Az érintőegyenes",
+				"A nívóvonal",
+				"Az érintősík",
+				"A normálegyenes"
+			],
+			"correct": 2,
+			"explain": "Egyváltozóban a lineáris közelítés az érintőegyenes, $\\mathbb{R}^2 \\to \\mathbb{R}$ esetén a grafikon érintősíkja. A nívóvonal az értelmezési tartományban fekszik, nem a grafikonon."
+		},
+		{
+			"id": "ig1emqky",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/A lineáris közelítés mint geometriai kép",
+			"q": "Mit garantál geometriailag a totális differenciálhatóság a grafikonra?",
+			"choices": [
+				"Csak a koordinátairányú érintők létezését",
+				"Minden irányban elsőrendben illeszkedő érintő affin sokaságot",
+				"A grafikon konvexitását",
+				"A második deriváltak létezését"
+			],
+			"correct": 1,
+			"explain": "A totális differenciálhatóság minden irányban egyszerre biztosítja az elsőrendű illeszkedést. A koordinátairányú érintők már a parciális deriválhatóságból adódnak."
+		},
+		{
+			"id": "3tjlsz0n",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "$f = x^3 + xy$. Mi $f'(2,3)$?",
+			"choices": [
+				"$[12\\ \\ 2]$",
+				"$[15\\ \\ 3]$",
+				"$[2\\ \\ 15]$",
+				"$[15\\ \\ 2]$"
+			],
+			"correct": 3,
+			"explain": "$\\operatorname{grad} f = (3x^2 + y, x)$, ami $(2,3)$-ban $(15, 2)$. A $[12\\ \\ 2]$ eredmény a $+y$ tagot hagyja ki."
+		},
+		{
+			"id": "f8devho9",
+			"page": "concepts/analiii/frechet-derivalt",
+			"gate": "tartalom/Feladatok",
+			"q": "Miért nem differenciálható $\\sqrt{|xy|}$ az origóban, holott $\\partial_1 f = \\partial_2 f = 0$?",
+			"choices": [
+				"Mert nem folytonos az origóban",
+				"Mert $\\frac{\\sqrt{|xy|}}{|x|+|y|}$ az $x = y$ mentén $\\frac12 \\ne 0$",
+				"Mert a parciális deriváltak nem léteznek",
+				"Mert $f$ nem korlátos"
+			],
+			"correct": 1,
+			"explain": "Ha differenciálható lenne, $f'(0,0) = 0$ lenne, és a hányadosnak $0$-hoz kellene tartania, de az átló mentén $\\frac12$. A függvény folytonos, ezért nem a folytonosság hiányzik."
+		},
+		{
+			"id": "j9o4ikvc",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "base",
+			"q": "Mi miatt írható az $f'(a)$ derivált mátrixként?",
+			"choices": [
+				"A normák ekvivalenciája miatt",
+				"Az $\\mathcal{L}(\\mathbb{R}^n,\\mathbb{R}^m) \\approx \\mathbb{R}^{m\\times n}$ azonosítás miatt",
+				"A parciális deriváltak folytonossága miatt",
+				"A Cauchy–Schwarz-egyenlőtlenség miatt"
+			],
+			"correct": 1,
+			"explain": "Minden lineáris leképezéshez pontosan egy mátrix tartozik, így a derivált mátrixként írható. A parciális deriváltak folytonossága csak elégséges feltétele a differenciálhatóságnak."
+		},
+		{
+			"id": "6l4ottxm",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "base",
+			"q": "Mekkora az $f \\in \\mathbb{R}^3 \\to \\mathbb{R}^2$ függvény Jacobi-mátrixa?",
+			"choices": [
+				"$3 \\times 2$",
+				"$3 \\times 3$",
+				"$2 \\times 3$",
+				"$2 \\times 2$"
+			],
+			"correct": 2,
+			"explain": "$f'(a) \\in \\mathbb{R}^{m\\times n}$, vagyis $m = 2$ sor és $n = 3$ oszlop. A $3\\times2$ a sorok és az oszlopok számát cseréli fel."
+		},
+		{
+			"id": "hpohuyu4",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltmátrix",
+			"q": "Az $f(a+h) - f(a) = f'(a)h + \\eta(h)\\|h\\|$ előállításban mely norma állhat $\\|\\cdot\\|$ helyén?",
+			"choices": [
+				"Csak a $\\|\\cdot\\|_2$",
+				"Csak a $\\|\\cdot\\|_\\infty$",
+				"Csak az operátornorma",
+				"Bármelyik $\\|\\cdot\\|_p$ norma"
+			],
+			"correct": 3,
+			"explain": "A differenciálhatóság normafüggetlen, ezért bármelyik $\\|\\cdot\\|_p$ megfelel. Az operátornorma a lineáris leképezésekre vonatkozik, nem a $h$ vektorra."
+		},
+		{
+			"id": "bojee1m6",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltmátrix",
+			"q": "Hány $A$ mátrix tartozik az $L = f'(a)$ deriválthoz úgy, hogy $L(x) = Ax$?",
+			"choices": [
+				"Pontosan egy",
+				"Legalább kettő",
+				"Végtelen sok",
+				"A normától függ"
+			],
+			"correct": 0,
+			"explain": "A derivált egyértelmű, és minden lineáris leképezéshez pontosan egy mátrix tartozik. A normaválasztás a mátrixot nem változtatja meg."
+		},
+		{
+			"id": "hlrqffex",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$m = 1$: a gradiens",
+			"q": "$f \\in \\mathbb{R}^n \\to \\mathbb{R}$ esetén hol van $f'(a)$, és minek tekintjük?",
+			"choices": [
+				"$\\mathbb{R}^{n\\times1}$, deriváltvektor",
+				"$\\mathbb{R}^{1\\times n} \\approx \\mathbb{R}^n$, gradiens",
+				"$\\mathbb{R}^{n\\times n}$, Hesse-mátrix",
+				"$\\mathbb{R}$, skalár derivált"
+			],
+			"correct": 1,
+			"explain": "$m = 1$ esetén a Jacobi-mátrix $1\\times n$-es, ezt vektornak tekintve kapjuk a gradienst. A deriváltvektor az $n = 1$ esethez tartozik."
+		},
+		{
+			"id": "l99esrpv",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$m = 1$: a gradiens",
+			"q": "Milyen típusú leképezés a $\\operatorname{grad} f$ gradiensfüggvény ($f \\in \\mathbb{R}^n \\to \\mathbb{R}$)?",
+			"choices": [
+				"$\\mathbb{R}^n \\to \\mathbb{R}$",
+				"$\\mathbb{R} \\to \\mathbb{R}^n$",
+				"$\\mathbb{R}^n \\to \\mathbb{R}^n$",
+				"$\\mathbb{R}^n \\to \\mathbb{R}^{n\\times n}$"
+			],
+			"correct": 2,
+			"explain": "Minden olyan ponthoz, ahol $f$ differenciálható, egy $\\mathbb{R}^n$-beli vektort rendel. Az $\\mathbb{R}^n \\to \\mathbb{R}$ maga $f$ típusa."
+		},
+		{
+			"id": "yx2dunrc",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$n = 1$: a deriváltvektor",
+			"q": "$f \\in \\mathbb{R} \\to \\mathbb{R}^m$ esetén milyen alakú $f'(a)$?",
+			"choices": [
+				"$\\mathbb{R}^{m\\times1} \\approx \\mathbb{R}^m$",
+				"$\\mathbb{R}^{1\\times m}$ sormátrix",
+				"$\\mathbb{R}^{m\\times m}$",
+				"$\\mathbb{R}$"
+			],
+			"correct": 0,
+			"explain": "$n = 1$ esetén a Jacobi-mátrix $m\\times1$-es oszlop, ez a deriváltvektor. Sormátrix az $m = 1$ esetben adódik."
+		},
+		{
+			"id": "zxdvuzni",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/$n = 1$: a deriváltvektor",
+			"q": "$f \\in \\mathbb{R} \\to \\mathbb{R}^m$. Milyen típusú az $f'$ deriváltfüggvény?",
+			"choices": [
+				"$\\mathbb{R}^m \\to \\mathbb{R}$",
+				"$\\mathbb{R} \\to \\mathbb{R}^m$",
+				"$\\mathbb{R} \\to \\mathbb{R}$",
+				"$\\mathbb{R}^m \\to \\mathbb{R}^m$"
+			],
+			"correct": 1,
+			"explain": "Minden valós ponthoz egy $\\mathbb{R}^m$-beli deriváltvektort rendel, tehát ugyanolyan típusú, mint $f$. Az $\\mathbb{R}^m \\to \\mathbb{R}$ a skalárértékű többváltozós függvények típusa."
+		},
+		{
+			"id": "886e3lio",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltfüggvény általában",
+			"q": "Milyen típusú az $f \\in \\mathbb{R}^n \\to \\mathbb{R}^m$ függvény $f'$ deriváltfüggvénye?",
+			"choices": [
+				"$\\mathbb{R}^n \\to \\mathbb{R}^m$",
+				"$\\mathbb{R}^m \\to \\mathbb{R}^{n\\times m}$",
+				"$\\mathbb{R}^n \\to \\mathbb{R}^{m\\times n}$",
+				"$\\mathbb{R}^{m\\times n} \\to \\mathbb{R}^n$"
+			],
+			"correct": 2,
+			"explain": "Minden olyan $x \\in \\mathbb{R}^n$ pontban, ahol $f$ differenciálható, egy $m\\times n$-es mátrixot ad. Az $\\mathbb{R}^n \\to \\mathbb{R}^m$ típus csak $n = 1$ vagy $m = 1$ esetén jön ki."
+		},
+		{
+			"id": "4es4nrfb",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A deriváltfüggvény általában",
+			"q": "Mikor ugyanolyan típusú vektorfüggvény $f'$, mint $f$?",
+			"choices": [
+				"Akkor és csak akkor, ha $n = m$",
+				"Akkor és csak akkor, ha $n = 1$ vagy $m = 1$",
+				"Mindig",
+				"Soha"
+			],
+			"correct": 1,
+			"explain": "Csak ezekben a határesetekben fajul a mátrix vektorrá. Az $n = m > 1$ esetben a derivált négyzetes mátrix, nem vektor."
+		},
+		{
+			"id": "42rctfu6",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Sorvektoros írásmód",
+			"q": "Az $A$ mátrix $A_1, \\dots, A_m$ sorvektoraival mivel egyenlő $Ax$?",
+			"choices": [
+				"$\\sum_i A_i x_i$",
+				"$(\\langle A_1, x\\rangle, \\dots, \\langle A_m, x\\rangle)$",
+				"$(\\|A_1\\|x_1, \\dots, \\|A_m\\|x_m)$",
+				"$\\langle A_1 + \\dots + A_m, x\\rangle$"
+			],
+			"correct": 1,
+			"explain": "$Ax$ $i$-edik koordinátája az $i$-edik sor és $x$ skaláris szorzata. Az $\\sum_i A_i x_i$ összeg összekeveri a sorokat és az oszlopokat."
+		},
+		{
+			"id": "ha2uhwgj",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Sorvektoros írásmód",
+			"q": "A Jacobi-mátrix sorai mivel azonosíthatók?",
+			"choices": [
+				"A koordinátafüggvények gradienseivel",
+				"Az $f(e_i)$ vektorokkal",
+				"Az iránymenti deriváltakkal",
+				"A parciális függvényekkel"
+			],
+			"correct": 0,
+			"explain": "Az $i$-edik sor az $f_i$ koordinátafüggvény gradiense. Az oszlopok a változók szerinti parciális deriváltvektorok."
+		},
+		{
+			"id": "jr58pfmw",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Blokkfelbontás: vektorváltozó szerinti parciális derivált",
+			"q": "Hol van a $\\partial_i f(a)$ vektorváltozó szerinti parciális derivált ($s$ elemű multiindex)?",
+			"choices": [
+				"$\\mathbb{R}^{s\\times m}$",
+				"$\\mathbb{R}^{m\\times n}$",
+				"$\\mathbb{R}^{m\\times s}$",
+				"$\\mathbb{R}^{s}$"
+			],
+			"correct": 2,
+			"explain": "$f_{a,i}$ egy $\\mathbb{R}^s \\to \\mathbb{R}^m$ függvény, ezért a deriváltja $m\\times s$-es. Az $\\mathbb{R}^{m\\times n}$ a teljes Jacobi-mátrix tere."
+		},
+		{
+			"id": "zygdwpr5",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Blokkfelbontás: vektorváltozó szerinti parciális derivált",
+			"q": "Ha $f \\in D\\{a\\}$, hogyan kapjuk meg $\\partial_i f(a)$-t az $f'(a)$ mátrixból?",
+			"choices": [
+				"Az $i_1, \\dots, i_s$ sorokat vesszük",
+				"Az $i_1, \\dots, i_s$ oszlopokat vesszük",
+				"A komplementer oszlopokat vesszük",
+				"Transzponáljuk $f'(a)$-t"
+			],
+			"correct": 1,
+			"explain": "A változók az oszlopoknak felelnek meg, ezért az $i$ multiindexhez tartozó oszlopokból álló részmátrix adja $\\partial_i f(a)$-t. A sorok a koordinátafüggvényekhez tartoznak."
+		},
+		{
+			"id": "9pdez1if",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A mátrixreprezentáció mint izomorfizmus",
+			"q": "Milyen tulajdonságú a $\\varphi : L \\mapsto A$ megfeleltetés, amelyen a Jacobi-mátrix létezése múlik?",
+			"choices": [
+				"Injektív, de nem szürjektív",
+				"Bijektív, de nem lineáris",
+				"Bijektív és mindkét irányban lineáris",
+				"Lineáris, de nem injektív"
+			],
+			"correct": 2,
+			"explain": "A $\\varphi$ izomorfizmus: bijektív, és mindkét irányban lineáris. Bijektivitás linearitás nélkül nem tenné lehetővé a műveletek átvitelét."
+		},
+		{
+			"id": "rjkozsii",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/A mátrixreprezentáció mint izomorfizmus",
+			"q": "Hogyan viszonyul egymáshoz a derivált (mint lineáris leképezés) és a Jacobi-mátrix?",
+			"choices": [
+				"A Jacobi-mátrix csak közelítése a deriváltnak",
+				"Ugyanazt az objektumot írják le két nyelven",
+				"A Jacobi-mátrix a derivált inverze",
+				"Csak $m = n$ esetén felelnek meg egymásnak"
+			],
+			"correct": 1,
+			"explain": "Az izomorfizmus miatt a két leírás ugyanazt az objektumot adja. A megfeleltetés tetszőleges $m$-re és $n$-re érvényes, nem csak $m = n$ esetén."
+		},
+		{
+			"id": "k1w0xqba",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Feladatok",
+			"q": "Ha $f \\in \\mathbb{R}^2 \\to \\mathbb{R}$ és $f \\in D\\{a\\}$, mi $f'(a)$?",
+			"choices": [
+				"$\\begin{bmatrix}\\partial_1 f(a)\\\\ \\partial_2 f(a)\\end{bmatrix}$",
+				"$[\\partial_1 f(a)\\ \\ \\partial_2 f(a)]$",
+				"$\\partial_1 f(a) + \\partial_2 f(a)$",
+				"$[\\partial_2 f(a)\\ \\ \\partial_1 f(a)]$"
+			],
+			"correct": 1,
+			"explain": "Skalárértékű esetben a derivált $1\\times2$-es sormátrix, amelynek elemei a parciális deriváltak. Oszlopként felírva $2\\times1$-es lenne, ami nem $m\\times n$ alakú."
+		},
+		{
+			"id": "lplei2kw",
+			"page": "concepts/analiii/jacobi-matrix",
+			"gate": "tartalom/Feladatok",
+			"q": "Miért van szükség a differenciálhatóság elégséges feltételére?",
+			"choices": [
+				"Mert a Jacobi-mátrix nem mindig létezik",
+				"Mert a definícióból a vizsgálat általában nem egyszerű",
+				"Mert a definíció normafüggő",
+				"Mert a parciális deriváltak sosem folytonosak"
+			],
+			"correct": 1,
+			"explain": "A jegyzet szerint a definícióból a deriválhatóságot általában nehéz igazolni, ezért kell az elégséges feltétel. A definíció normafüggetlen, ez tehát nem lehet ok."
+		},
+		{
+			"id": "fzre839w",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "base",
+			"q": "Mi a függvénygrafikon érintősíkja a jegyzet szerint?",
+			"choices": [
+				"A grafikont másodrendben közelítő sík",
+				"A grafikont elsőrendben legjobban közelítő sík",
+				"Az $xy$-síkkal párhuzamos sík a pont fölött",
+				"A gradiensre merőleges sík az $xy$-síkban"
+			],
+			"correct": 1,
+			"explain": "Az érintősík a totális differenciálhatóság pontjában elsőrendben közelít a legjobban. Másodrendű közelítést a Taylor-polinom második fokú része ad."
+		},
+		{
+			"id": "zrj10vc5",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "base",
+			"q": "Miből épül fel az érintősík normálvektora?",
+			"choices": [
+				"A gradiensből",
+				"A Hesse-mátrixból",
+				"Az $f(x_0, y_0)$ értékből",
+				"A pont helyvektorából"
+			],
+			"correct": 0,
+			"explain": "A normálvektor $(\\operatorname{grad} f, -1)$. A függvényérték csak azt adja meg, melyik ponton megy át a sík."
+		},
+		{
+			"id": "bcbd98jf",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Sík egyenlete normálvektorral",
+			"q": "Melyik a $P_0 = (x_0, y_0, z_0)$-on átmenő, $\\mathbf{n} = (A,B,C)$ normálvektorú sík egyenlete?",
+			"choices": [
+				"$Ax_0 + By_0 + Cz_0 = 0$",
+				"$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$",
+				"$(x - x_0)/A = (y - y_0)/B = (z - z_0)/C$",
+				"$A(x + x_0) + B(y + y_0) + C(z + z_0) = 0$"
+			],
+			"correct": 1,
+			"explain": "$\\langle \\mathbf{r} - \\mathbf{r}_0, \\mathbf{n}\\rangle = 0$ koordinátákban kiírva ezt adja. A törtes alak egy egyenes egyenlete, nem síké."
+		},
+		{
+			"id": "7mbbn8nx",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Sík egyenlete normálvektorral",
+			"q": "Mikor van az $\\mathbf{r}$ pont az $S$ síkon ($P_0 \\in S$, $\\mathbf{n}$ normálvektor)?",
+			"choices": [
+				"Ha $\\mathbf{r} - \\mathbf{r}_0$ párhuzamos $\\mathbf{n}$-nel",
+				"Ha $\\mathbf{r}$ merőleges $\\mathbf{n}$-re",
+				"Ha $\\mathbf{r} - \\mathbf{r}_0$ merőleges $\\mathbf{n}$-re",
+				"Ha $\\|\\mathbf{r} - \\mathbf{r}_0\\| = \\|\\mathbf{n}\\|$"
+			],
+			"correct": 2,
+			"explain": "A síkban fekvő $\\mathbf{r} - \\mathbf{r}_0$ vektor merőleges a normálvektorra. Ha maga $\\mathbf{r}$ merőleges $\\mathbf{n}$-re, az csak origón átmenő síkra lenne jó feltétel."
+		},
+		{
+			"id": "37d84uhh",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/A linearizálásból az érintősíkig",
+			"q": "Melyik az érintősík $(\\ast)$ egyenlete ($z_0 = f(x_0,y_0)$)?",
+			"choices": [
+				"$z - z_0 = \\partial_1 f(x - x_0) + \\partial_2 f(y - y_0)$",
+				"$z = \\partial_1 f\\, x + \\partial_2 f\\, y$",
+				"$z - z_0 = \\partial_2 f(x - x_0) + \\partial_1 f(y - y_0)$",
+				"$z + z_0 = \\partial_1 f(x - x_0) + \\partial_2 f(y - y_0)$"
+			],
+			"correct": 0,
+			"explain": "A linearizálást egyenlőséggé téve, $(x_0,y_0)$-beli parciális deriváltakkal kapjuk az egyenletet. A harmadik opció felcseréli a két parciális deriváltat."
+		},
+		{
+			"id": "is2opesn",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/A linearizálásból az érintősíkig",
+			"q": "Melyik ponton megy át a $(\\ast)$ érintősík?",
+			"choices": [
+				"$(x_0, y_0, 0)$",
+				"$(0, 0, f(x_0,y_0))$",
+				"$(x_0, y_0, f(x_0,y_0))$",
+				"$(\\partial_1 f, \\partial_2 f, -1)$"
+			],
+			"correct": 2,
+			"explain": "$x = x_0$, $y = y_0$ esetén $z = z_0 = f(x_0,y_0)$, ez a grafikon pontja. Az utolsó opció a normálvektor, nem pont."
+		},
+		{
+			"id": "z8qp90ma",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Definíció",
+			"q": "Mikor van a grafikonnak érintősíkja a $P = (x_0, y_0, f(x_0,y_0))$ pontban?",
+			"choices": [
+				"Ha $f$ folytonos $(x_0,y_0)$-ban",
+				"Ha léteznek a parciális deriváltak",
+				"Ha $f$ minden irányban deriválható",
+				"Ha $f \\in D\\{(x_0,y_0)\\}$"
+			],
+			"correct": 3,
+			"explain": "Az érintősík létezését a definíció a totális differenciálhatósághoz köti. Az összes iránymenti derivált létezése ehhez még nem elég."
+		},
+		{
+			"id": "k3rzls98",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Definíció",
+			"q": "Az alábbiak közül melyik szintén normálvektora az érintősíknak?",
+			"choices": [
+				"$(-\\partial_1 f, -\\partial_2 f, 1)$",
+				"$(\\partial_1 f, \\partial_2 f, 1)$",
+				"$(\\partial_2 f, \\partial_1 f, -1)$",
+				"$(\\partial_1 f, \\partial_2 f, 0)$"
+			],
+			"correct": 0,
+			"explain": "Ez a $(\\partial_1 f, \\partial_2 f, -1)$ normálvektor $(-1)$-szerese, ezért szintén normálvektor. A $(\\partial_1 f, \\partial_2 f, 1)$ vektor nem skalárszorosa, mert csak a harmadik koordináta előjele változott."
+		},
+		{
+			"id": "p6ap2dmc",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Miért kell a totális differenciálhatóság",
+			"q": "Mi létezik biztosan, ha $f$-nek csak a parciális deriváltjai léteznek?",
+			"choices": [
+				"A grafikon érintősíkja",
+				"A koordinátasíkokkal párhuzamos metszetgörbék érintőegyenesei",
+				"Minden iránymenti derivált",
+				"A gradiens mint deriváltmátrix"
+			],
+			"correct": 1,
+			"explain": "A parciális deriváltak a két metszetgörbe érintőit adják. Ezek az érintők nem feltétlenül feszítenek ki a felületet minden irányban közelítő síkot."
+		},
+		{
+			"id": "rsttbmoy",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Kapcsolat a nívófelülettel",
+			"q": "Melyik nívófelületként írható fel a $z = f(x,y)$ felület?",
+			"choices": [
+				"$F(x,y,z) := f(x,y) + z = 0$",
+				"$F(x,y,z) := f(x,y) - z = 0$",
+				"$F(x,y,z) := f(x,y)\\cdot z = 0$",
+				"$F(x,y) := f(x,y) = 0$"
+			],
+			"correct": 1,
+			"explain": "$F := f(x,y) - z$, és ennek gradiense $(\\partial_1 f, \\partial_2 f, -1)$, éppen az érintősík normálvektora. A $+z$ alak gradiense $(\\partial_1 f, \\partial_2 f, +1)$ lenne."
+		},
+		{
+			"id": "9cl3pb12",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Kapcsolat a nívófelülettel",
+			"q": "Minek a speciális esete az $\\mathbf{n} = (\\operatorname{grad} f(x_0,y_0), -1)$ normálvektor?",
+			"choices": [
+				"A nívófelület–gradiens merőlegességnek",
+				"A Cauchy–Schwarz-egyenlőtlenségnek",
+				"A középértéktételnek",
+				"A normák ekvivalenciájának"
+			],
+			"correct": 0,
+			"explain": "A gradiens merőleges a nívófelületre, itt $F = f - z$ nívófelületére, ahol az egyik koordináta maga $z$. A Cauchy–Schwarz a legnagyobb meredekségű irányhoz kell."
+		},
+		{
+			"id": "os9g0vgm",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Feladatok",
+			"q": "Milyen sík illeszthető érintősíkként az $x^2 + y^2$ forgásparaboloidhoz az origóban?",
+			"choices": [
+				"A $z = 0$ vízszintes sík",
+				"Az $x = 0$ sík",
+				"A $z = x + y$ sík",
+				"Nem illeszthető érintősík"
+			],
+			"correct": 0,
+			"explain": "A gradiens az origóban $(0,0)$, ezért az érintősík $z = 0$. A kúp csúcsában nincs érintősík, a forgásparaboloid viszont ott differenciálható."
+		},
+		{
+			"id": "eb2pq3t8",
+			"page": "concepts/analiii/fuggvenygrafikon-erintosikja",
+			"gate": "tartalom/Feladatok",
+			"q": "Mi a $z = x^2 + y^2$ felület érintősíkja az $(1,2)$ pont fölött?",
+			"choices": [
+				"$z = 5 + 2(x-1) + 4(y-2)$",
+				"$z = 5 + 4(x-1) + 2(y-2)$",
+				"$z = 2(x-1) + 4(y-2)$",
+				"$z = 5 + 2x + 4y$"
+			],
+			"correct": 0,
+			"explain": "$f(1,2) = 5$ és $\\operatorname{grad} f = (2x, 2y) = (2,4)$, így $z = 5 + 2(x-1) + 4(y-2)$. A második opció felcseréli a parciális deriváltakat."
+		}
+	]
+}

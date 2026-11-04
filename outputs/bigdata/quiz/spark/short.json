@@ -1,0 +1,101 @@
+{
+	"version": 1,
+	"subject": "bigdata",
+	"unit": "spark",
+	"unitTitle": "Spark",
+	"type": "short",
+	"batches": [
+		{
+			"at": "2026-10-07T20:36:59.556Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.\nMost, ehhez a generáláshoz (ez a legerősebb): Az ismert fuggvenyek, foleg aggragate hasznalataval elerheto fontos adatkezelesi folyamatok betanulása a célom, python hasznalataval. A legalapvetobb ilyen aaz average, ennel ertekesebb es bonyolultabb peldakat hozz.",
+			"added": 14
+		}
+	],
+	"questions": [
+		{
+			"id": "i9rpfgsg",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Adj meg Pythonban egy `aggregate` hívást (zero, seqOp, combOp), amely egy számokból álló RDD minimumát és maximumát egyetlen menetben, `(min, max)` párként adja vissza!",
+			"answer": "`rdd.aggregate((float('inf'), float('-inf')), lambda acc, x: (min(acc[0], x), max(acc[1], x)), lambda a, b: (min(a[0], b[0]), max(a[1], b[1])))` – a kezdőérték $(\\infty, -\\infty)$, a seqOp egy elemet olvaszt a párba, a combOp két partíció párját egyesíti."
+		},
+		{
+			"id": "gzz2ujg0",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Mi lesz az eredménye a `sc.parallelize([1, 2, 3, 4], 2).fold(-5, lambda a, b: a + b)` hívásnak, és miért?",
+			"answer": "$-5$. Az összeg 10, de a $-5$ kezdőérték mindkét partícióban és az összevonáskor is bekerül, vagyis $3$-szor: $10 - 5\\cdot(2+1) = -5$."
+		},
+		{
+			"id": "7urhizny",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Milyen kezdőértéket kell adni a `fold`-nak összegzéshez, illetve maximumkereséshez, hogy az eredmény ne függjön a partíciók számától?",
+			"answer": "A művelet semleges elemét: összegnél $0$-t, maximumnál $-\\infty$-t (`float('-inf')`). Mivel a kezdőérték minden partícióban és az összevonáskor is bekerül, csak semleges elem mellett független az eredmény a partíciószámtól."
+		},
+		{
+			"id": "5839om8q",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Mit számol ki a `df.selectExpr(\"avg(value)\", \"count(distinct(sensor_id))\")` kifejezés?",
+			"answer": "Egyetlen sort ad két oszloppal: a `value` oszlop átlagát a teljes DataFrame-en és a különböző `sensor_id` értékek számát (hány különböző szenzor van)."
+		},
+		{
+			"id": "y46lhcvz",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Miért adhat kiszámíthatatlan eredményt a `reduce(lambda a, b: a + b)` egy stringekből álló RDD-n?",
+			"answer": "Mert a stringek összefűzése nem kommutatív (sorrendfüggő), a `reduce` viszont asszociatív és kommutatív függvényt vár: a partíciók párhuzamosan dolgoznak, és az összevonás sorrendje nem garantált."
+		},
+		{
+			"id": "17tq4ue4",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Hogyan kapcsolod a `df` szenzoradatokhoz a `dfLoc` helyadatokat a közös `location` oszlop alapján úgy, hogy a `df` minden rekordja megmaradjon és a `location` oszlop ne duplikálódjon?",
+			"answer": "`df.join(dfLoc, on=\"location\", how=\"left\")` – a `left` join a bal oldal összes rekordját megtartja, az `on=` oszlopnévvel megadott join pedig nem duplikálja az oszlopot (a másik változat: `df.join(dfLoc, df.location == dfLoc.location, how=\"left\").drop(dfLoc.location)`)."
+		},
+		{
+			"id": "58bpw6w4",
+			"page": "concepts/bigdata/spark-dataframe",
+			"q": "Írd fel DataFrame API-val, hogyan kapod meg szenzoronként a mérések számát a legtöbb mérést végzőtől kezdve!",
+			"answer": "`df.groupBy(\"sensor_id\").count().orderBy(df_count[\"count\"].desc())`, azaz `groupBy(\"sensor_id\").count()`, majd a keletkező `count` oszlop szerint csökkenő rendezés (pl. `.orderBy(col(\"count\").desc())`)."
+		},
+		{
+			"id": "z1rl6lvu",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Egy JSON-sorokból álló RDD-ben (`map(json.loads)` után) hogyan állítod elő a napi aggregációhoz szükséges dátumkulcsot a `timestamp` mezőből?",
+			"answer": "A `timestamp` `T` előtti részét veszed: `x[\"timestamp\"].split(\"T\")[0]`, és ezt használod a `(dátum, ...)` párok kulcsaként."
+		},
+		{
+			"id": "w97z9m4f",
+			"page": "concepts/bigdata/spark-transzformaciok-es-akciok",
+			"q": "Egy RDD két partíciója `[2, 4]` és `[6, 8]`. Kövesd végig az `aggregate((0,0), lambda acc,x: (acc[0]+x, acc[1]+1), lambda a,b: (a[0]+b[0], a[1]+b[1]))` futását! Milyen akkumulátorok keletkeznek, és mi az átlag?",
+			"answer": "A seqOp partíciónként $(6, 2)$-t és $(14, 2)$-t ad, a combOp ezekből $(20, 4)$-et, az átlag pedig $20/4 = 5$."
+		},
+		{
+			"id": "1nzmrj0s",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Miért nem lehet a kulcsonkénti átlagot közvetlenül `reduceByKey(lambda a, b: (a + b) / 2)`-vel számolni? Adj ellenpéldát!",
+			"answer": "Mert az átlag nem asszociatív, a `reduceByKey` függvényének viszont asszociatívnak és kommutatívnak kell lennie. Például $\\text{avg}(\\text{avg}(1,2),3) = 2{,}25$, a helyes átlag viszont $2$. Ezért `(összeg, darab)` párt redukálunk."
+		},
+		{
+			"id": "0mpk2sle",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Mit ad a `leftOuterJoin` a következő bemeneten: bal `[(\"x\",10), (\"y\",30)]`, jobb `[(\"x\",15), (\"z\",15)]`?",
+			"answer": "`[(\"x\", (10, 15)), (\"y\", (30, None))]` – a bal oldal minden kulcsa megmarad, a hiányzó jobb oldali érték `None`, a `z` kulcs kimarad."
+		},
+		{
+			"id": "ufyq5a2w",
+			"page": "concepts/bigdata/spark-kulcs-ertek-muveletek",
+			"q": "Miért kell `list(...)` a `groupByKey().mapValues(lambda v: sum(v)/len(list(v)))` kifejezésben?",
+			"answer": "Mert a `groupByKey` `(K, ResultIterable)` párokat ad, és a `ResultIterable` lusta bejáró, amelynek nincs közvetlenül hossza. A `len`-hez előbb listává kell alakítani."
+		},
+		{
+			"id": "3tsy98lp",
+			"page": "concepts/bigdata/spark-broadcast-valtozo",
+			"q": "Miért adja vissza az `agg(F.min(F.struct(\"distance2\", \"antenna_id\")))` a legközelebbi antennát, és miért számít a mezők sorrendje?",
+			"answer": "Mert az `F.struct` értékeit a Spark lexikografikusan, mezősorrendben hasonlítja össze, így a minimum a legkisebb `distance2`-vel rendelkező structot adja, a hozzá tartozó `antenna_id`-vel együtt. Ehhez a `distance2`-nek az első helyen kell állnia."
+		},
+		{
+			"id": "hghoevqe",
+			"page": "concepts/bigdata/spark-sql",
+			"q": "Egy `groupBy(...).count()` lekérdezés `explain()` kimenetében mit jelöl az `Exchange` és a két `HashAggregate` csomópont?",
+			"answer": "Az `Exchange` a shuffle. Az első `HashAggregate` a shuffle előtti részaggregáció partíciónként, a második a shuffle utáni végső aggregáció."
+		}
+	]
+}

@@ -1,0 +1,397 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "1-eloadas-metrikus-es-normalt-terek",
+	"unitTitle": "1. előadás — Metrikus és normált terek",
+	"type": "explain",
+	"batches": [
+		{
+			"at": "2026-10-21T21:20:05.007Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T12:39:26.238Z",
+			"model": "opus",
+			"direction": "",
+			"added": 21
+		}
+	],
+	"questions": [
+		{
+			"id": "dbyxrjfu",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"q": "Mondja ki a Hölder-egyenlőtlenséget, és bizonyítsa az $1<q,r<\\infty$ esetet!",
+			"answer": "Ha $1\\le q,r\\le\\infty$ és $\\frac1q+\\frac1r=1$ (konjugált kitevőpár), akkor bármely $a,b\\in\\mathbb{R}^p$ vektorra $\\sum_{i=1}^p|a_ib_i|\\le\\|a\\|_q\\|b\\|_r$. Ha $a$ vagy $b$ nullvektor, mindkét oldal $0$. Az egyenlőtlenség homogén, ezért $a$ és $b$ leosztható a saját normájával, így feltehető, hogy $\\|a\\|_q=\\|b\\|_r=1$. A súlyozott számtani–mértani közép egyenlőtlensége az $|a_i|^q,|b_i|^r$ számokra, $1/q$ és $1/r$ súlyokkal: $|a_ib_i|\\le\\frac1q|a_i|^q+\\frac1r|b_i|^r$. Ezt összegezve $\\sum|a_ib_i|\\le\\frac1q+\\frac1r=1=\\|a\\|_q\\|b\\|_r$. A $q=r=2$ eset a Cauchy–Bunyakovszkij–Schwarz-egyenlőtlenség.",
+			"points": [
+				"Pontos kimondás konjugált kitevőpárral: $\\frac1q+\\frac1r=1$",
+				"Homogenitás miatt normálás: $\\|a\\|_q=\\|b\\|_r=1$",
+				"Súlyozott számtani–mértani közép: $|a_ib_i|\\le\\frac1q|a_i|^q+\\frac1r|b_i|^r$",
+				"Összegzés után $\\frac1q+\\frac1r=1$ adódik"
+			]
+		},
+		{
+			"id": "2w6u51i2",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"q": "Vezesse le a Minkowski-egyenlőtlenséget a Hölder-egyenlőtlenségből $1<q<\\infty$ esetén! Mi a jelentősége?",
+			"answer": "Állítás: $\\|a+b\\|_q\\le\\|a\\|_q+\\|b\\|_q$, vagyis ez éppen az $L^q$-norma háromszög-egyenlőtlensége. Legyen $r=\\frac{q}{q-1}$ a $q$ konjugáltja; ekkor $\\frac qr=q-1$. Felírjuk: $\\|a+b\\|_q^q=\\sum|a_i+b_i|\\,|a_i+b_i|^{q/r}\\le\\sum|a_i|\\,|a_i+b_i|^{q/r}+\\sum|b_i|\\,|a_i+b_i|^{q/r}$. Mindkét összegre a Hölder-egyenlőtlenséget alkalmazzuk a $q,r$ kitevőkkel, például $\\sum|a_i|\\,|a_i+b_i|^{q/r}\\le\\|a\\|_q\\|a+b\\|_q^{q-1}$. Így $\\|a+b\\|_q^q\\le(\\|a\\|_q+\\|b\\|_q)\\|a+b\\|_q^{q-1}$, és ha $a+b\\neq0$, leosztunk $\\|a+b\\|_q^{q-1}$-nel. A $q=1$ és a $q=\\infty$ eset koordinátánként adódik. A következmény: $\\|\\cdot\\|_q$ minden $1\\le q\\le\\infty$ esetén norma.",
+			"points": [
+				"$r=\\frac{q}{q-1}$ konjugált kitevő, $q/r=q-1$",
+				"$|a_i+b_i|^q$ felbontása és a háromszög-egyenlőtlenség tagonként",
+				"Hölder alkalmazása mindkét összegre",
+				"Leosztás $\\|a+b\\|_q^{q-1}$-nel ($a+b\\ne0$)",
+				"Következmény: $\\|\\cdot\\|_q$ norma, ha $1\\le q\\le\\infty$"
+			]
+		},
+		{
+			"id": "lparr3rq",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"q": "Mondja ki és bizonyítsa, hogy $\\mathbb{R}^p$-ben bármely norma ekvivalens az euklideszi normával!",
+			"answer": "Tétel: bármely $\\|\\cdot\\|$ normához léteznek $c_1,c_2>0$ számok, hogy $c_1|x|\\le\\|x\\|\\le c_2|x|$ minden $x$-re. Felső becslés: $x=\\sum x_ie_i$, és a háromszög-egyenlőtlenség, a homogenitás, valamint $|x_i|\\le|x|$ miatt $\\|x\\|\\le(\\|e_1\\|+\\dots+\\|e_p\\|)|x|$. Az alsó becslést indirekt módon látjuk be. Ha nincs ilyen $c_1$, akkor minden $n$-re van $x_n$, amelyre $\\|x_n\\|<\\frac1n|x_n|$, és skálázással feltehető $|x_n|=1$. Bolzano–Weierstrass szerint van egy $x_{n_k}\\to y$ részsorozat, amelyre $|y|=1$, tehát $y\\ne0$. A felső becslés miatt $\\|x_{n_k}-y\\|\\le c_2|x_{n_k}-y|\\to0$. Ebből $0<\\|y\\|\\le\\|x_{n_k}\\|+\\|y-x_{n_k}\\|<\\frac1{n_k}+c_2|y-x_{n_k}|\\to0$, ami ellentmondás. Következmény: véges dimenzióban a konvergencia és a topológia nem függ a normától.",
+			"points": [
+				"Ekvivalencia definíciója: $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$",
+				"Felső becslés bázisvektorokkal: $c_2=\\sum\\|e_i\\|$",
+				"Alsó becslés indirekt módon, $|x_n|=1$ normálással",
+				"Bolzano–Weierstrass részsorozat, a limesz $y\\neq0$, ellentmondás",
+				"Következmény: a konvergencia és a topológia normafüggetlen"
+			]
+		},
+		{
+			"id": "apip6gz4",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"q": "Mutassa meg az $f_k(x)=x^k$ sorozat segítségével, hogy $C[0,1]$-en $\\|\\cdot\\|_1$ és $\\|\\cdot\\|_\\infty$ nem ekvivalens! Miért elég ehhez a konvergencia viselkedése?",
+			"answer": "$\\|f_k\\|_1=\\int_0^1x^k\\,\\mathrm dx=\\frac1{k+1}\\to0$, tehát $\\|\\cdot\\|_1$-ben $f_k\\to0$. A $\\|\\cdot\\|_\\infty$ normában viszont a sorozat divergens. A maximumnormában vett konvergencia ugyanis pontonkénti konvergenciát is ad, pontonként pedig $f_k(x)\\to0$, ha $x<1$, de $f_k(1)=1$. Ilyen pontonkénti limesz nem lehet folytonos függvény. Ekvivalens normák esetén a $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$ becslésből $\\|x_n-\\alpha\\|\\to0\\iff\\|x_n-\\alpha\\|'\\to0$, vagyis egy sorozat vagy mindkét normában konvergens (ugyanazzal a limesszel), vagy egyikben sem. Mivel itt ez nem teljesül, a két norma nem ekvivalens. Ez összhangban van azzal, hogy a tér végtelen dimenziós: a minden norma ekvivalens állítás csak véges dimenzióban igaz.",
+			"points": [
+				"$\\|f_k\\|_1=\\frac1{k+1}\\to0$",
+				"$\\|\\cdot\\|_\\infty$-ben divergens: a pontonkénti limesz nem folytonos ($f_k(1)=1$)",
+				"Ekvivalens normáknál ugyanazok a konvergens sorozatok és ugyanaz a limesz",
+				"Végtelen dimenzióban a normák ekvivalenciája nem garantált"
+			]
+		},
+		{
+			"id": "a9u4haqh",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"q": "Definiálja két metrika ekvivalenciáját, és bizonyítsa, hogy ekvivalens metrikák ugyanazt a topológiát adják! Elég-e az ekvivalenciához, hogy ugyanazok a sorozatok konvergensek?",
+			"answer": "$\\rho\\sim\\sigma$, ha léteznek $c,C>0$ számok, hogy $c\\rho(x,y)\\le\\sigma(x,y)\\le C\\rho(x,y)$ minden $x,y$-ra. A becslésből $K^{(\\rho)}_{r/C}(a)\\subset K^{(\\sigma)}_r(a)$ és $K^{(\\sigma)}_{cr}(a)\\subset K^{(\\rho)}_r(a)$. Ha ugyanis $\\rho(x,a)<r/C$, akkor $\\sigma(x,a)\\le C\\rho(x,a)<r$. Ezért ha egy $\\sigma$-gömb benne van $A$-ban, akkor egy $\\rho$-gömb is, és fordítva: a belső pont fogalma, és így a nyíltság is független a metrikától. A zárt halmazok a nyíltak komplementerei, így a zártság is megmarad, a kompaktság pedig a konvergencián keresztül. A konvergens sorozatok egyezése nem elég. $\\mathbb R$-en $\\rho=|x-y|$ és $\\sigma=\\min\\{1,|x-y|\\}$ ugyanazokat a sorozatokat találja konvergensnek, de nem ekvivalensek: $\\sigma\\le1$ korlátos, $\\rho$ nem, ezért nincs olyan $c>0$, amelyre $c\\rho\\le\\sigma$.",
+			"points": [
+				"Definíció: $c\\rho\\le\\sigma\\le C\\rho$ alkalmas $c,C>0$-val",
+				"Gömbök egymásba illesztése: $K^{(\\rho)}_{r/C}(a)\\subset K^{(\\sigma)}_r(a)$",
+				"Belső pont, így a nyíltság metrikafüggetlen; a zártság és a kompaktság is",
+				"Ellenpélda: $|x-y|$ és $\\min\\{1,|x-y|\\}$ – azonos konvergencia, mégsem ekvivalensek"
+			]
+		},
+		{
+			"id": "4p2x0v3x",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"q": "Bizonyítsa, hogy $\\mathbb{K}^n$-en a $\\rho_p$ metrikák $1\\le p\\le\\infty$ esetén ekvivalensek, és mutassa meg, hogy $0<p<q<1$ esetén ez elromlik!",
+			"answer": "Mivel a $\\sim$ reláció tranzitív, elég belátni, hogy $\\rho_p\\sim\\rho_\\infty$. Egyrészt $\\rho_p(x,y)=(\\sum|x_i-y_i|^p)^{1/p}\\le(n\\rho_\\infty^p)^{1/p}=n^{1/p}\\rho_\\infty(x,y)$. Másrészt minden $i$-re $\\rho_p(x,y)\\ge|x_i-y_i|$, így $\\rho_p\\ge\\rho_\\infty$. Tehát $\\rho_\\infty\\le\\rho_p\\le n^{1/p}\\rho_\\infty$. Ezért $\\mathbb K^n$-ben a nyíltság, a zártság és a kompaktság nem függ $p$-től. Ha $0<p<q<1$, legyen $x=(u,0)$ és $y=(0,0)$; ekkor $\\rho_p=u^p$, $\\rho_q=u^q$. Ekvivalencia esetén $u^p\\le Cu^q$, azaz $u^{p-q}\\le C$ kellene minden $u>0$-ra. Ez lehetetlen, mert $p-q<0$ miatt $u^{p-q}\\to\\infty$, ha $u\\to0+$.",
+			"points": [
+				"Tranzitivitás miatt elég $\\rho_p\\sim\\rho_\\infty$",
+				"$\\rho_\\infty\\le\\rho_p\\le n^{1/p}\\rho_\\infty$ levezetése",
+				"Következmény: a topológia $p$-től független",
+				"Ellenpélda $p<q<1$-re: $x=(u,0)$, $u^{p-q}\\to\\infty$"
+			]
+		},
+		{
+			"id": "6eby39tt",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"q": "Mi a paralelogramma-szabály, és hogyan dönti el, hogy a $(\\mathbb{K}^n,\\|\\cdot\\|_p)$ normák közül melyik származik skaláris szorzatból?",
+			"answer": "Ha $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$, akkor $\\|x+y\\|^2+\\|x-y\\|^2=2(\\|x\\|^2+\\|y\\|^2)$. Ez a skaláris szorzat kifejtéséből jön: a vegyes tagok, $\\langle x,y\\rangle+\\langle y,x\\rangle$ kiesnek. A Neumann–Jordan-tétel szerint a norma pontosan akkor származik skaláris szorzatból, ha teljesíti a paralelogramma-azonosságot. Ebből a szükségesség egyszerű számolás, az elégségesség mélyebb: polarizációval állítjuk vissza a skaláris szorzatot. Legyen $n=2$, $x=e_1$, $y=e_2$. Ha $1\\le p<\\infty$, akkor a bal oldal $\\|(1,1)\\|_p^2+\\|(1,-1)\\|_p^2=2^{1+2/p}$, a jobb oldal $4$, így $p=2$. Ha $p=\\infty$, a bal oldal $2\\ne4$. Tehát pontosan a $p=2$ norma származik skaláris szorzatból.",
+			"points": [
+				"Paralelogramma-azonosság képlete és levezetése kifejtéssel",
+				"Neumann–Jordan: a norma akkor és csak akkor származik skaláris szorzatból, ha teljesül az azonosság",
+				"Teszt $e_1,e_2$-vel: $2^{1+2/p}=4\\Rightarrow p=2$",
+				"$p=\\infty$: $2\\neq4$"
+			]
+		},
+		{
+			"id": "5x1z8k0s",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"q": "Definiálja a skaláris szorzatot, és mutassa meg a Cauchy–Bunyakovszkij-egyenlőtlenség segítségével, hogy a skaláris szorzat sorozatfolytonos! Mikor Hilbert-tér egy euklideszi tér?",
+			"answer": "Az $s:X^2\\to\\mathbb K$ függvény skaláris szorzat, ha teljesül: $\\langle x,y\\rangle=\\overline{\\langle y,x\\rangle}$; $\\langle x,x\\rangle>0$, ha $x\\ne0$; és az első változóban homogén és additív. A $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$ norma, és érvényes a $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$ egyenlőtlenség. Ha $x_n\\to\\alpha$ és $y_n\\to\\beta$, akkor $|\\langle x_n,\\beta\\rangle-\\langle\\alpha,\\beta\\rangle|=|\\langle x_n-\\alpha,\\beta\\rangle|\\le\\|x_n-\\alpha\\|\\|\\beta\\|\\to0$. A kétváltozós esetben a konvergens sorozat korlátos, $C=\\sup\\|x_n\\|<\\infty$, így $|\\langle x_n,y_n\\rangle-\\langle\\alpha,\\beta\\rangle|\\le C\\|y_n-\\beta\\|+\\|x_n-\\alpha\\|\\|\\beta\\|\\to0$. Az euklideszi tér Hilbert-tér, ha az indukált normával teljes, azaz Banach-tér. Ilyen $\\mathbb K^n$ és $\\ell^2$. $C[a,b]$ az $\\int fg$ skaláris szorzattal nem Hilbert-tér, mert az $L^2$-normára nézve nem teljes.",
+			"points": [
+				"A skaláris szorzat négy axiómája (hermitikus szimmetria, pozitív definitség, homogenitás és additivitás az első változóban)",
+				"Cauchy–Bunyakovszkij: $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$",
+				"Sorozatfolytonosság becslése, a konvergens sorozat korlátosságával",
+				"Hilbert-tér = teljes euklideszi tér; $C[a,b]$ nem az"
+			]
+		},
+		{
+			"id": "t2pqhgib",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "base",
+			"q": "Melyik normaaxióma igazolásához kell a Hölder- és a Minkowski-egyenlőtlenség az $\\|\\cdot\\|_q$ esetében, és mi a két tétel logikai viszonya?",
+			"answer": "Az $\\|\\cdot\\|_q$ esetében a háromszög-egyenlőtlenség a nem triviális axióma, és éppen ez a Minkowski-egyenlőtlenség: $\\|a+b\\|_q\\le\\|a\\|_q+\\|b\\|_q$. A Minkowski-egyenlőtlenséget a Hölder-egyenlőtlenségből vezetjük le. A Hölder-egyenlőtlenség a $\\sum|a_ib_i|$ szorzatösszeget becsli egy konjugált kitevőpárral ($\\frac1q+\\frac1r=1$): $\\sum|a_ib_i|\\le\\|a\\|_q\\|b\\|_r$. A két egyenlőtlenség együtt adja, hogy $\\|\\cdot\\|_q$ minden $1\\le q\\le\\infty$ esetén norma.",
+			"points": [
+				"A nem triviális axióma a háromszög-egyenlőtlenség",
+				"A Minkowski-egyenlőtlenség maga a háromszög-egyenlőtlenség",
+				"A Hölder-egyenlőtlenség konjugált kitevőpárral becsli a szorzatösszeget",
+				"A sorrend: Hölder ⇒ Minkowski",
+				"Eredmény: norma minden $1\\le q\\le\\infty$-re"
+			]
+		},
+		{
+			"id": "a6dnp3ln",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Hölder-egyenlőtlenség",
+			"q": "Tárgyalja a Hölder-egyenlőtlenség speciális eseteit (nullvektor, $q=1$, $r=\\infty$), és indokolja, miért tehető fel az általános esetben, hogy $\\|a\\|_q=\\|b\\|_r=1$!",
+			"answer": "Ha $a$ vagy $b$ a nullvektor, mindkét oldal $0$, és az egyenlőtlenség teljesül. A $q=1$, $r=\\infty$ esetben a bal oldal $(\\sum|a_i|)\\max|b_i|$, ez tagonként legalább $\\sum|a_ib_i|$, mert $|b_i|\\le\\max|b_j|$; a $q=\\infty$, $r=1$ eset szimmetrikus. Az általános esetben ($1<q,r<\\infty$, $a,b\\ne0$) az egyenlőtlenség homogén: ha $a$-t $\\lambda$-val, $b$-t $\\mu$-vel szorozzuk, mindkét oldal $|\\lambda\\mu|$-vel változik. Ezért $a/\\|a\\|_q$-re és $b/\\|b\\|_r$-re elég belátni, vagyis feltehető $\\|a\\|_q=\\|b\\|_r=1$. Ekkor a súlyozott számtani–mértani közép miatt $|a_ib_i|\\le\\frac1q|a_i|^q+\\frac1r|b_i|^r$, és ezt összegezve $\\frac1q+\\frac1r=1$ adódik.",
+			"points": [
+				"Nullvektor esetén mindkét oldal $0$",
+				"$q=1,r=\\infty$: $(\\sum|a_i|)\\max|b_i|\\ge\\sum|a_ib_i|$",
+				"Az egyenlőtlenség homogén, ezért normálható",
+				"Normálás után súlyozott számtani–mértani közép és összegzés"
+			]
+		},
+		{
+			"id": "5371b3tl",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Cauchy–Bunyakovszkij–Schwarz-egyenlőtlenség",
+			"q": "Vezesse le a Cauchy–Bunyakovszkij–Schwarz-egyenlőtlenséget a Hölder-egyenlőtlenségből, és indokolja a lánc minden lépését!",
+			"answer": "A $q=r=2$ konjugált kitevőpár, mert $\\frac12+\\frac12=1$. Erre a párra a Hölder-egyenlőtlenség így szól: $\\sqrt{\\sum|a_i|^2}\\sqrt{\\sum|b_i|^2}\\ge\\sum|a_ib_i|$, azaz $\\|a\\|_2\\|b\\|_2\\ge\\sum|a_ib_i|$. A háromszög-egyenlőtlenség miatt $|\\sum a_ib_i|\\le\\sum|a_ib_i|$, így $\\sum|a_ib_i|\\ge|\\langle a,b\\rangle|$. A kettőt összefűzve $|\\langle a,b\\rangle|\\le\\|a\\|_2\\|b\\|_2$.",
+			"points": [
+				"$q=r=2$ konjugált pár",
+				"Hölder: $\\|a\\|_2\\|b\\|_2\\ge\\sum|a_ib_i|$",
+				"$\\sum|a_ib_i|\\ge|\\langle a,b\\rangle|$ a háromszög-egyenlőtlenségből",
+				"A teljes lánc: $\\|a\\|_2\\|b\\|_2\\ge\\sum|a_ib_i|\\ge|\\langle a,b\\rangle|$"
+			]
+		},
+		{
+			"id": "t7dbaha2",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Minkowski-egyenlőtlenség",
+			"q": "Igazolja a Minkowski-egyenlőtlenséget a $q=1$ és a $q=\\infty$ esetben, és indokolja, miért jogos az általános esetben a végső osztás!",
+			"answer": "$q=1$-re tagonként alkalmazzuk a háromszög-egyenlőtlenséget: $|a_i+b_i|\\le|a_i|+|b_i|$, majd összegzünk. $q=\\infty$-re $\\max|a_i+b_i|\\le\\max(|a_i|+|b_i|)\\le\\max|a_i|+\\max|b_i|$. Az általános esetben ($1<q<\\infty$) a Hölder-egyenlőtlenséggel az $\\|a+b\\|_q^q\\le(\\|a\\|_q+\\|b\\|_q)\\|a+b\\|_q^{q-1}$ becslést kapjuk. Ha $\\|a+b\\|_q=0$, az állítás triviális. Ha $a+b\\ne0$, akkor $\\|a+b\\|_q^{q-1}>0$, így leoszthatunk vele, és $\\|a+b\\|_q\\le\\|a\\|_q+\\|b\\|_q$ marad.",
+			"points": [
+				"$q=1$: tagonkénti háromszög-egyenlőtlenség és összegzés",
+				"$q=\\infty$: a maximumok becslése",
+				"Az általános becslés: $\\|a+b\\|_q^q\\le(\\|a\\|_q+\\|b\\|_q)\\|a+b\\|_q^{q-1}$",
+				"Az osztás $a+b\\ne0$ miatt jogos, a nulla eset triviális"
+			]
+		},
+		{
+			"id": "g0iy723g",
+			"page": "concepts/analiii/holder-es-minkowski-egyenlotlenseg",
+			"gate": "tartalom/Feladatok",
+			"q": "Bizonyítsa a Cauchy–Schwarz-egyenlőtlenséget $\\mathbb{R}^n$-ben a diszkrimináns-módszerrel, és vezesse le belőle az euklideszi norma háromszög-egyenlőtlenségét!",
+			"answer": "Minden $t\\in\\mathbb{R}$-re $0\\le\\|x+ty\\|^2=\\|x\\|^2+2t\\langle x,y\\rangle+t^2\\|y\\|^2$. Ez $t$-ben másodfokú polinom ($y\\ne0$ esetén), és sehol sem negatív, ezért a diszkriminánsa $\\le0$: $4\\langle x,y\\rangle^2-4\\|x\\|^2\\|y\\|^2\\le0$. Ebből $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$. Egyenlőség pontosan akkor áll, ha a vektorok lineárisan függők. A háromszög-egyenlőtlenséghez: $\\|x+y\\|^2=\\|x\\|^2+2\\langle x,y\\rangle+\\|y\\|^2\\le\\|x\\|^2+2\\|x\\|\\|y\\|+\\|y\\|^2=(\\|x\\|+\\|y\\|)^2$.",
+			"points": [
+				"$\\|x+ty\\|^2\\ge0$ másodfokú polinom $t$-ben",
+				"A diszkrimináns $\\le0$, ebből $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$",
+				"Egyenlőség pontosan lineáris függőség esetén",
+				"$\\|x+y\\|^2$ kifejtése, majd becslés Cauchy–Schwarzzal"
+			]
+		},
+		{
+			"id": "llt0i8z1",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "base",
+			"q": "Mit jelent két norma ekvivalenciája, mit garantál, és miben különbözik ebből a szempontból a véges és a végtelen dimenzió?",
+			"answer": "Két norma ekvivalens, ha konstans szorzókkal kölcsönösen becsülhetők egymással. Ekkor ugyanazokat a sorozatokat találják konvergensnek, és ugyanazt a topológiát adják, vagyis ugyanazok a halmazok nyíltak és zártak. Véges dimenzióban bármely két norma ekvivalens, ezért ott a normaválasztás nem befolyásolja a konvergenciát és a topológiát. Végtelen dimenzióban ez általában nem igaz, például $C[0,1]$-en, és ott a normaválasztás lényeges.",
+			"points": [
+				"Kölcsönös becslés konstans szorzóval",
+				"Ugyanazok a konvergens sorozatok és ugyanaz a topológia",
+				"Véges dimenzióban minden norma ekvivalens",
+				"Végtelen dimenzióban általában nem"
+			]
+		},
+		{
+			"id": "5sm0h9ne",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Definíció",
+			"q": "Definiálja a normák ekvivalenciáját, és indokolja, miért kell mindkét irányú becslés, és miért szigorúan pozitív konstansokkal!",
+			"answer": "A $\\|\\cdot\\|$ és a $\\|\\cdot\\|'$ norma ekvivalens, ha léteznek $c_1,c_2>0$ számok, hogy minden $x$-re $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$. A konstansok rögzítettek, nem függnek $x$-től. A felső becslés azt adja, hogy ami az egyik normában kicsi, az a másikban is kicsi; az alsó becslés a fordított irányt. Az alsó becslés átírható $\\|x\\|\\le\\frac1{c_1}\\|x\\|'$ alakba, ehhez kell, hogy $c_1>0$ legyen. Így a reláció szimmetrikus. $c_1=0$ esetén az alsó becslés semmitmondó volna.",
+			"points": [
+				"$\\exists c_1,c_2>0$: $c_1\\|x\\|\\le\\|x\\|'\\le c_2\\|x\\|$ minden $x$-re",
+				"A konstansok nem függnek $x$-től",
+				"Mindkét irány kell, ez adja a szimmetriát",
+				"$c_1>0$ kell, különben az alsó becslés üres"
+			]
+		},
+		{
+			"id": "xedk6qe0",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Példa — az $L^1$, $L^2$, $L^\\infty$ normák",
+			"q": "Igazolja az $\\frac1{\\sqrt p}|x|\\le\\|x\\|_\\infty\\le\\|x\\|_1\\le\\sqrt p\\,|x|$ láncot $\\mathbb{R}^p$-ben, és mondja meg, mi következik belőle!",
+			"answer": "Az első egyenlőtlenség: $\\frac1{\\sqrt p}|x|$ az $|x_i|^2$ számok átlagának gyöke, ez legfeljebb $\\sqrt{\\max|x_i|^2}=\\|x\\|_\\infty$. A második: a legnagyobb $|x_i|$ legfeljebb az összes $|x_i|$ összege. A harmadik a Cauchy–Schwarz-egyenlőtlenség az $(1,\\dots,1)$ és az $(|x_1|,\\dots,|x_p|)$ vektorra: $\\sum1\\cdot|x_i|\\le\\sqrt p\\,|x|$. A lánc szerint az $L^1$, $L^2$ és $L^\\infty$ normák páronként kölcsönösen becsülhetők konstans szorzóval, tehát ekvivalensek.",
+			"points": [
+				"Az első lépés: átlag $\\le$ maximum",
+				"A második: maximum $\\le$ összeg",
+				"A harmadik: Cauchy–Schwarz a csupa-1 vektorral",
+				"Következmény: $L^1$, $L^2$, $L^\\infty$ páronként ekvivalens"
+			]
+		},
+		{
+			"id": "f169k3g0",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Végtelen dimenzióban nem áll fenn",
+			"q": "Mit jelent, hogy $C[0,1]$-en $\\|f\\|_{(2)}=\\int_0^1x|f|$ és $\\|f\\|_{(3)}=\\int_0^1(1-x)|f|$ aránya sem alulról, sem felülről nem korlátos? Mit mond ez az ekvivalenciáról?",
+			"answer": "Mindkét függvény norma $C[0,1]$-en. Ha a $\\|f\\|_{(2)}/\\|f\\|_{(3)}$ arány felülről nem korlátos, akkor nincs olyan $c_2$, amellyel $\\|f\\|_{(2)}\\le c_2\\|f\\|_{(3)}$ teljesülne. Ha alulról nem korlátos (pozitív konstanssal), akkor nincs olyan $c_1>0$, amellyel $c_1\\|f\\|_{(3)}\\le\\|f\\|_{(2)}$ teljesülne. Így az ekvivalencia mindkét fele bukik, és a két norma nem ekvivalens. Intuitívan: az $x$ súly a $0$ közelébe, az $(1-x)$ súly az $1$ közelébe koncentrált függvényeket bünteti kevésbé. Ez is mutatja, hogy végtelen dimenzióban a normák ekvivalenciája nem automatikus.",
+			"points": [
+				"Mindkettő norma $C[0,1]$-en",
+				"Felülről nem korlátos arány: nincs $c_2$",
+				"Alulról nem korlátos arány: nincs $c_1>0$",
+				"A két norma nem ekvivalens; végtelen dimenzióban ez lehetséges"
+			]
+		},
+		{
+			"id": "sei9ieyr",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/A normák ekvivalenciájának tétele",
+			"q": "Az $\\mathbb{R}^p$-beli normák ekvivalenciájának alsó becslésénél hol és miért használjuk a Bolzano–Weierstrass-tételt és a felső becslést, és miért lényeges, hogy $|y|=1$?",
+			"answer": "Indirekt módon feltesszük, hogy nincs $c_1$. Ekkor minden $n$-re van $x_n$, amelyre $\\|x_n\\|<\\frac1n|x_n|$, és skálázással elérhető, hogy $|x_n|=1$. Az $(x_n)$ sorozat korlátos, így a Bolzano–Weierstrass-tétel szerint van konvergens $(x_{n_k})$ részsorozata, melynek limesze $y$. A koordinátánkénti konvergencia miatt $|y|=1$, tehát $y\\neq0$, és így $\\|y\\|>0$. A felső becslés adja, hogy $\\|x_{n_k}-y\\|\\le c_2|x_{n_k}-y|\\to0$, vagyis az euklideszi konvergencia átvihető a $\\|\\cdot\\|$ normára. Ezzel $0<\\|y\\|\\le\\|x_{n_k}\\|+\\|y-x_{n_k}\\|<\\frac1{n_k}+c_2|y-x_{n_k}|\\to0$, ami ellentmondás.",
+			"points": [
+				"Indirekt feltevés, majd normálás: $|x_n|=1$",
+				"Bolzano–Weierstrass: konvergens részsorozat, limesze $y$",
+				"$|y|=1$, ezért $y\\neq0$ és $\\|y\\|>0$",
+				"A felső becslés viszi át a konvergenciát $\\|\\cdot\\|$-re",
+				"Ellentmondás: $\\|y\\|\\to0$ adódna"
+			]
+		},
+		{
+			"id": "zpvmyrt6",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Következmény",
+			"q": "Milyen következményei vannak a normák ekvivalenciájának véges dimenzióban (Tyihonov-tétel), és miért nem automatikus a Bolzano–Weierstrass-tétel végtelen dimenzióban?",
+			"answer": "A Tyihonov-tétel szerint tetszőleges véges dimenziós lineáris téren bármely két norma ekvivalens. Ez visszavezethető $\\mathbb{R}^n$-re, mert minden $n$-dimenziós tér algebrailag izomorf $\\mathbb{R}^n$-nel. Ezért véges dimenzióban a konvergencia normafüggetlen (ugyanazok a sorozatok konvergensek, ugyanazzal a limesszel), és a topológia is az (ugyanazok a nyílt és zárt halmazok, belsők, határok). Emiatt nem kell megmondani, melyik normát használjuk. A Bolzano–Weierstrass-féle kiválasztási tétel ebből következően igaz minden véges dimenziós normált térben. Végtelen dimenzióban viszont ez a háttér hiányzik, ezért ott a tétel nem automatikus.",
+			"points": [
+				"Tyihonov: véges dimenzióban bármely két norma ekvivalens",
+				"Visszavezetés $\\mathbb{R}^n$-re izomorfiával",
+				"A konvergencia és a topológia normafüggetlen",
+				"A Bolzano–Weierstrass-tétel véges dimenzióban ebből következik, végtelenben nem automatikus"
+			]
+		},
+		{
+			"id": "c8eb8j6d",
+			"page": "concepts/analiii/ekvivalens-normak",
+			"gate": "tartalom/Feladatok",
+			"q": "Bizonyítsa, hogy egy $X$ normált tér véges dimenziós $L$ alterében minden $x\\in X$-hez létezik legjobb közelítés!",
+			"answer": "Tekintsük az $L\\cap\\overline K_{\\|x\\|}(x)$ halmazt. Ez tartalmazza a $0$-t, mert $\\|x-0\\|=\\|x\\|$. Korlátos és zárt részhalmaza a véges dimenziós $L$-nek, ezért kompakt, hiszen véges dimenzióban kompakt $\\iff$ korlátos és zárt; ez a normák ekvivalenciájából és a Heine–Borel-tételből következik. Az $y\\mapsto\\|x-y\\|$ függvény folytonos, így a kompakt halmazon felveszi a minimumát. Ezen a halmazon kívül minden $L$-beli $y$-ra $\\|x-y\\|>\\|x\\|\\ge$ minimum, ezért ez a minimum az egész $L$-en is a legjobb közelítés.",
+			"points": [
+				"Az $L\\cap\\overline K_{\\|x\\|}(x)$ halmaz nemüres (tartalmazza a $0$-t)",
+				"Korlátos és zárt, tehát véges dimenzióban kompakt",
+				"A norma folytonos, így van minimum",
+				"A halmazon kívüli pontok rosszabbak, ezért a minimum globális"
+			]
+		},
+		{
+			"id": "k02bycfw",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Definíció",
+			"q": "Definiálja a metrikák ekvivalenciáját, és igazolja, hogy $\\sim$ ekvivalenciareláció az $X$-en értelmezett metrikák halmazán!",
+			"answer": "$\\rho\\sim\\sigma$, ha léteznek $c,C>0$ számok, hogy minden $x,y\\in X$-re $c\\rho(x,y)\\le\\sigma(x,y)\\le C\\rho(x,y)$. Reflexivitás: $\\rho\\sim\\rho$ a $c=C=1$ konstansokkal. Szimmetria: a becslésből $\\frac1C\\sigma\\le\\rho\\le\\frac1c\\sigma$, és itt $\\frac1C,\\frac1c>0$. Tranzitivitás: ha $c\\rho\\le\\sigma\\le C\\rho$ és $d\\sigma\\le\\tau\\le D\\sigma$, akkor $cd\\rho\\le\\tau\\le CD\\rho$. Innen ered az „ekvivalens” elnevezés.",
+			"points": [
+				"Definíció: $c\\rho\\le\\sigma\\le C\\rho$, $c,C>0$",
+				"Reflexivitás: $c=C=1$",
+				"Szimmetria: $1/C$ és $1/c$ konstansokkal",
+				"Tranzitivitás: a konstansok szorzataival"
+			]
+		},
+		{
+			"id": "x5qze7om",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/A $\\rho_p$ metrikák $p \\geq 1$ esetén ekvivalensek",
+			"q": "Vezesse le a $\\rho_\\infty\\le\\rho_p\\le n^{1/p}\\rho_\\infty$ becslésből az $n^{-1/p}\\rho_p\\le\\rho_q\\le n^{1/q}\\rho_p$ általános becslést ($1\\le p,q<\\infty$)!",
+			"answer": "A $\\mathbb{K}^n$-beli becslés szerint $\\rho_\\infty(x,y)\\le\\rho_p(x,y)\\le n^{1/p}\\rho_\\infty(x,y)$, mert minden tag legfeljebb $\\rho_\\infty^p$, és van olyan tag, amely egyenlő vele. Ugyanez $q$-ra: $\\rho_\\infty\\le\\rho_q\\le n^{1/q}\\rho_\\infty$. Felső becslés: $\\rho_q\\le n^{1/q}\\rho_\\infty\\le n^{1/q}\\rho_p$. Alsó becslés: $\\rho_q\\ge\\rho_\\infty\\ge n^{-1/p}\\rho_p$. Ezzel minden $1\\le p,q<\\infty$ esetén explicit konstansokat kaptunk, ami a tranzitivitás konkrét formája.",
+			"points": [
+				"$\\rho_\\infty\\le\\rho_p\\le n^{1/p}\\rho_\\infty$ és ennek indoka",
+				"Ugyanez $q$-ra",
+				"Felső becslés: $\\rho_q\\le n^{1/q}\\rho_p$",
+				"Alsó becslés: $\\rho_q\\ge n^{-1/p}\\rho_p$"
+			]
+		},
+		{
+			"id": "6it8f25v",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Mit őriz meg az ekvivalencia?",
+			"q": "Igazolja, hogy ekvivalens metrikák ugyanazokat a sorozatokat találják konvergensnek, ugyanazzal a határértékkel, és indokolja, miért egyezik meg a zárt és a kompakt halmazok rendszere is!",
+			"answer": "Ha $c\\rho\\le\\sigma\\le C\\rho$, akkor bármely $(x_n)$ sorozatra és $\\alpha$ pontra $c\\rho(x_n,\\alpha)\\le\\sigma(x_n,\\alpha)\\le C\\rho(x_n,\\alpha)$. Ezért $\\rho(x_n,\\alpha)\\to0\\iff\\sigma(x_n,\\alpha)\\to0$, vagyis a konvergencia és a limesz is megegyezik. A nyílt halmazok rendszere is azonos, és a zárt halmazok a nyíltak komplementerei, így $\\mathcal C_\\rho(X)=\\mathcal C_\\sigma(X)$. A kompaktság a konvergencián keresztül fogalmazható meg, ezért $\\mathcal K_\\rho(X)=\\mathcal K_\\sigma(X)$. Következmény: $\\mathbb{K}^n$-ben a nyíltság, a zártság és a kompaktság nem függ attól, melyik $\\rho_p$ ($1\\le p\\le\\infty$) metrikát használjuk.",
+			"points": [
+				"A becslés a $\\rho(x_n,\\alpha)$ távolságokra",
+				"Rendőrelv: ugyanaz a konvergencia, ugyanaz a limesz",
+				"Zártság: a nyíltak komplementerei",
+				"Kompaktság: a konvergencián keresztül",
+				"Alkalmazás a $\\rho_p$ metrikákra $\\mathbb{K}^n$-ben"
+			]
+		},
+		{
+			"id": "s0oya3fv",
+			"page": "concepts/analiii/ekvivalens-metrikak",
+			"gate": "tartalom/Geometriai kép",
+			"q": "Írja le a metrikák ekvivalenciájának geometriai jelentését, és illusztrálja $\\mathbb{R}^2$-ben a $\\rho_1$, $\\rho_2$, $\\rho_\\infty$ gömbjeivel!",
+			"answer": "Az ekvivalencia geometriailag azt jelenti, hogy a környezetek egymásba illeszthetők: bármely $a$ pontra és $r>0$ sugárra vannak olyan $u,v>0$ számok, hogy $K^{(\\sigma)}_u(a)\\subset K^{(\\rho)}_r(a)\\subset K^{(\\sigma)}_v(a)$. $\\mathbb{R}^2$-ben a $\\rho_1$-gömbök rombuszok, a $\\rho_2$-gömbök körlemezek, a $\\rho_\\infty$-gömbök négyzetek. Ezek az alakzatok kölcsönösen egymásba illeszthetők: minden rombuszba belefér egy kisebb kör, és minden rombusz belefér egy nagyobb négyzetbe. Ezért minden pont környezetei mindhárom metrikában ugyanazok, így ugyanazok a belső pontok és a nyílt halmazok is.",
+			"points": [
+				"A gömbök kölcsönös egymásba illesztése $u,v>0$ sugarakkal",
+				"$\\rho_1$: rombusz, $\\rho_2$: körlemez, $\\rho_\\infty$: négyzet",
+				"Mindhárom alakzat egymásba illeszthető",
+				"Ezért ugyanazok a környezetek és a nyílt halmazok"
+			]
+		},
+		{
+			"id": "45zoauwl",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "base",
+			"q": "Miért mondjuk, hogy a skaláris szorzat erősebb struktúra a normánál?",
+			"answer": "Minden skaláris szorzat normát generál a $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$ képlettel, így minden euklideszi tér normált tér is. A skaláris szorzat ezen felül szöget és merőlegességet is értelmez, amit a norma egymagában nem tud. Fordítva nem minden norma származik skaláris szorzatból. Például a $\\mathbb{K}^n$-beli $\\|\\cdot\\|_p$ normák közül pontosan a $p=2$ ilyen. A skaláris szorzat tehát a normánál többet hordozó, szűkebb struktúra.",
+			"points": [
+				"Normát generál: $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$",
+				"Szöget és merőlegességet is értelmez",
+				"Nem minden norma származik skaláris szorzatból",
+				"Példa: a $\\|\\cdot\\|_p$ normák közül csak $p=2$"
+			]
+		},
+		{
+			"id": "sbfsacgl",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Definíció",
+			"q": "Vezesse le a skaláris szorzat axiómáiból a $\\langle x,\\lambda y\\rangle=\\overline\\lambda\\langle x,y\\rangle$ és a $\\langle0,x\\rangle=0$ azonosságot! Mi változik valós esetben?",
+			"answer": "Az axiómák: hermitikus szimmetria, pozitív definitség, valamint homogenitás és additivitás az első változóban. A hermitikus szimmetria és az első változóbeli homogenitás alapján $\\langle x,\\lambda y\\rangle=\\overline{\\langle\\lambda y,x\\rangle}=\\overline{\\lambda\\langle y,x\\rangle}=\\overline\\lambda\\,\\overline{\\langle y,x\\rangle}=\\overline\\lambda\\langle x,y\\rangle$. A $\\langle0,x\\rangle=\\langle0\\cdot0,x\\rangle=0\\cdot\\langle0,x\\rangle=0$ a homogenitásból jön, a $\\langle x,0\\rangle=0$ pedig ebből a szimmetriával. Valós esetben a konjugálás elmarad: $\\langle x,y\\rangle=\\langle y,x\\rangle$ és $\\langle x,\\lambda y\\rangle=\\lambda\\langle x,y\\rangle$, tehát a skaláris szorzat mindkét változójában lineáris.",
+			"points": [
+				"A négy axióma felsorolása",
+				"$\\langle x,\\lambda y\\rangle=\\overline\\lambda\\langle x,y\\rangle$ a szimmetria és a homogenitás kombinációjából",
+				"$\\langle0,x\\rangle=\\langle x,0\\rangle=0$",
+				"Valós esetben szimmetrikus és mindkét változóban lineáris"
+			]
+		},
+		{
+			"id": "ec3m9mqk",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Példák",
+			"q": "Adjon három példát skaláris szorzat térre, és mutassa meg, melyik normát indukálják!",
+			"answer": "$\\mathbb{K}^n$-en $\\langle x,y\\rangle=\\sum_{i=1}^nx_i\\overline{y_i}$. Az $\\ell^2$ téren (a négyzetesen összegezhető sorozatok terén) $\\langle x,y\\rangle=\\sum_{n=0}^\\infty x_n\\overline{y_n}$. $C[a,b]$-n $\\langle f,g\\rangle=\\int_a^bfg$. Mindhárom esetben $\\sqrt{\\langle x,x\\rangle}=\\|x\\|_2$, vagyis az indukált norma az $L^2$-norma. Az $n=1$ esetben $\\langle x,y\\rangle=x\\overline y$ és $\\|x\\|=|x|$.",
+			"points": [
+				"$\\mathbb{K}^n$: $\\sum x_i\\overline{y_i}$",
+				"$\\ell^2$: $\\sum x_n\\overline{y_n}$",
+				"$C[a,b]$: $\\int_a^bfg$",
+				"Az indukált norma mindhárom esetben az $L^2$-norma"
+			]
+		},
+		{
+			"id": "c9qowbt7",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Az indukált norma és a Cauchy–Bunyakovszkij-egyenlőtlenség",
+			"q": "Mondja ki a Cauchy–Bunyakovszkij-egyenlőtlenséget, írja fel a három példatérben, és mondja meg, mire használjuk az indukált norma esetében!",
+			"answer": "Tetszőleges euklideszi térben $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$, ahol $\\|x\\|=\\sqrt{\\langle x,x\\rangle}$. $\\mathbb{K}^n$-ben: $|\\sum x_iy_i|\\le\\sqrt{\\sum|x_i|^2}\\sqrt{\\sum|y_i|^2}$. $\\ell^2$-ben ugyanez végtelen összegekre. $C[a,b]$-n: $|\\int fg|\\le\\sqrt{\\int f^2}\\sqrt{\\int g^2}$. Az egyenlőtlenség a kulcsa annak, hogy $\\sqrt{\\langle x,x\\rangle}$ teljesíti a háromszög-egyenlőtlenséget, tehát valóban norma. Koordinátás alakja a Hölder-egyenlőtlenség $q=r=2$ esete.",
+			"points": [
+				"Állítás: $|\\langle x,y\\rangle|\\le\\|x\\|\\|y\\|$",
+				"A három koordinátás/integrálos alak",
+				"Ez a kulcs az indukált norma háromszög-egyenlőtlenségéhez",
+				"Kapcsolat: Hölder $q=r=2$"
+			]
+		},
+		{
+			"id": "0t4cd59w",
+			"page": "concepts/analiii/skalaris-szorzat-ter",
+			"gate": "tartalom/Neumann–Jordan-tétel",
+			"q": "Mondja ki a Neumann–Jordan-tételt, magyarázza el, miért különböző nehézségű a két iránya, és adjon rá alkalmazást!",
+			"answer": "Tétel: egy $(X,\\|\\cdot\\|)$ normált térben a norma pontosan akkor származik skaláris szorzatból ($\\|x\\|=\\sqrt{\\langle x,x\\rangle}$), ha minden $x,y$ elemre teljesül a paralelogramma-azonosság. A szükségesség egyszerű: a skaláris szorzat kifejtésekor a vegyes tagok kiesnek. Az elégségesség mélyebb, mert a skaláris szorzatot magából a normából kell polarizációval visszaállítani, és igazolni kell, hogy az így kapott függvény teljesíti az axiómákat. Alkalmazás: a $(\\mathbb{R}^n,\\|\\cdot\\|_p)$ és a $(C[a,b],\\|\\cdot\\|_p)$ terek normája pontosan $p=2$ esetén származtatható skaláris szorzatból.",
+			"points": [
+				"A tétel pontos kimondása (akkor és csak akkor)",
+				"Szükségesség: egyszerű kifejtés",
+				"Elégségesség: polarizációval, hosszabb bizonyítás",
+				"Alkalmazás: $\\|\\cdot\\|_p$ pontosan $p=2$-re"
+			]
+		}
+	]
+}

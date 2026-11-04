@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Brain — jegyzetwiki</title>
+      <link>https://ponder-deeply.github.io/secondBrain-wiki</link>
+      <description>Legutóbbi 10 jegyzet on Brain — jegyzetwiki</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>tetelek-kategorizalas</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/nummodi/tetelek-kategorizalas</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/nummodi/tetelek-kategorizalas</guid>
+    <description><![CDATA[ NM1 szóbeli tételek – kategorizálás és kapcsolatháló Forrás: Wiki/concepts/nummodi/tetelek/ (28 tétel). Munkadátum: 2026-06-09. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>sources</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/research/schools-of-hands-on-self-practicable-massage-techniques/sources</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/research/schools-of-hands-on-self-practicable-massage-techniques/sources</guid>
+    <description><![CDATA[ Sources: schools of hands-on, self-practicable massage techniques Curated links on massage/bodywork schools that a person can practice on themselves — sweeping the modality overview, self trigger-point and myofascial work, reflexology/acupressure, Ayurvedic Abhyanga, Thai Reusi Dat Ton, plus the cli... ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>Telekom ZH — feladattípusok és gyakorlás</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/telekom/zh-felkeszito</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/telekom/zh-felkeszito</guid>
+    <description><![CDATA[ Telekom ZH — feladattípusok és gyakorlás A ZH két részből áll: számolós kérdések (átviteli idő, késleltetés, újraküldés, bitbeszúrás, Hamming-távolság, CRC) és egy Wireshark-rész (egy .pcap + TLS-kulcsnapló alapján). ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>Bizonyítandó tételek</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/0bizonyitando-tetelek</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/0bizonyitando-tetelek</guid>
+    <description><![CDATA[ Bizonyítandó tételek A Bevezetés a számításelméletbe tárgy bvszam wiki-jéből kigyűjtött tételek a teljes állítással és bizonyítással, a kurzus tematikai felépítését követve. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>alapfogalmak-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/alapfogalmak-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/alapfogalmak-deck</guid>
+    <description><![CDATA[ alapfogalmak 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>bonyolultsagelmelet-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/bonyolultsagelmelet-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/bonyolultsagelmelet-deck</guid>
+    <description><![CDATA[ bonyolultsagelmelet 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>eldonthetetlenseg-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/eldonthetetlenseg-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/eldonthetetlenseg-deck</guid>
+    <description><![CDATA[ eldonthetetlenseg 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>grammatikak-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/grammatikak-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/grammatikak-deck</guid>
+    <description><![CDATA[ grammatikak 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>kornyezetfuggetlen-nyelvek-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/kornyezetfuggetlen-nyelvek-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/kornyezetfuggetlen-nyelvek-deck</guid>
+    <description><![CDATA[ kornyezetfuggetlen-nyelvek 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item><item>
+    <title>matematikai-alapok-deck</title>
+    <link>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/matematikai-alapok-deck</link>
+    <guid>https://ponder-deeply.github.io/secondBrain-wiki/outputs/bvszam/matematikai-alapok-deck</guid>
+    <description><![CDATA[ matematikai-alapok 1. ]]></description>
+    <pubDate>Wed, 04 Nov 2026 12:16:51 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

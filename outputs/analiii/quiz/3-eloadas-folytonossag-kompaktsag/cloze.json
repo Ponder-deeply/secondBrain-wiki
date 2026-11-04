@@ -1,0 +1,157 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "3-eloadas-folytonossag-kompaktsag",
+	"unitTitle": "3. előadás — Folytonosság, kompaktság",
+	"type": "cloze",
+	"batches": [
+		{
+			"at": "2026-10-21T21:20:00.533Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		},
+		{
+			"at": "2026-10-22T13:41:26.783Z",
+			"model": "opus",
+			"direction": "",
+			"added": 7
+		}
+	],
+	"questions": [
+		{
+			"id": "yln63rlj",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "Ha $a$ a $D_f$ {{1}}, akkor $f$-nek az $a$ helyen $A$ a határértéke, ha minden $K(A)$ környezethez van olyan $k(a)$ környezet, hogy $f\\bigl[\\bigl({{2}}\\bigr)\\cap D_f\\bigr]\\subset K(A)$.",
+			"blanks": [
+				"torlódási pontja",
+				"k(a)\\setminus\\{a\\}"
+			]
+		},
+		{
+			"id": "uemte5yq",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "Ha $a\\in D_f'\\cap D_f$, akkor $f\\in C\\{a\\}$ pontosan akkor teljesül, ha $\\lim_a f$ létezik, és $\\lim_a f = {{1}}$.",
+			"blanks": [
+				"f(a)"
+			]
+		},
+		{
+			"id": "g7nwwlah",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "Ha $a\\in D_f\\setminus D_f'$, vagyis $a$ {{1}} pont, akkor $f$ automatikusan {{2}} $a$-ban, határértékről viszont nem beszélünk.",
+			"blanks": [
+				"izolált",
+				"folytonos"
+			]
+		},
+		{
+			"id": "aszidsja",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "$\\mathbb{R}^2\\to\\mathbb{R}$ esetben $\\lim_{(a_1,a_2)}f=A$ azt jelenti, hogy $\\forall\\varepsilon>0\\;\\exists\\delta>0$: ${{1}}<\\|(x,y)-(a_1,a_2)\\|<\\delta\\Rightarrow {{2}}<\\varepsilon$.",
+			"blanks": [
+				"0",
+				"|f(x,y)-A|"
+			]
+		},
+		{
+			"id": "u29c8rk6",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "$\\dfrac{xy}{\\sqrt{x^2+y^2}}\\to0$ az origóban, mert $|xy|\\le{{1}}$, ezért $|f|\\le\\tfrac12\\|(x,y)\\|_2$. Az $\\varepsilon$–$\\delta$ bizonyításban így $\\delta={{2}}$ választható.",
+			"blanks": [
+				"\\tfrac12(x^2+y^2)",
+				"2\\varepsilon"
+			]
+		},
+		{
+			"id": "qjg3m9cg",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "Konjugálttal bővítve $\\dfrac{x^2+y^2}{\\sqrt{x^2+y^2+1}-1}={{1}}$, ezért a határérték az origóban {{2}}.",
+			"blanks": [
+				"\\sqrt{x^2+y^2+1}+1",
+				"2"
+			]
+		},
+		{
+			"id": "9s96eqgc",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "Polárkoordinátákkal $(x^2+y^2)\\ln(x^2+y^2)={{1}}$, és ez $0$-hoz tart, mert $t\\ln t\\to{{2}}$, ha $t\\to0+$.",
+			"blanks": [
+				"r^2\\ln r^2",
+				"0"
+			]
+		},
+		{
+			"id": "z9beivfu",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"q": "$\\dfrac{xy^4}{x^2+3y^2}\\to0$ az origóban, mert $\\dfrac{y^4}{x^2+3y^2}\\le{{1}}$.",
+			"blanks": [
+				"\\tfrac{y^2}{3}"
+			]
+		},
+		{
+			"id": "q43ohvn4",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "base",
+			"q": "Az $f$ függvény $a$-beli határértéke az az egyértelmű $A\\in Y$, amelynek minden környezetét felveszi $f$ az $a$ egy {{1}} környezetén.",
+			"blanks": [
+				"kipontozott"
+			]
+		},
+		{
+			"id": "996y6if5",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Definíció",
+			"q": "Hasznos fordulat: $\\lim_a f=A\\iff\\lim_a\\bigl({{1}}\\bigr)=0$.",
+			"blanks": [
+				"f-A"
+			]
+		},
+		{
+			"id": "0zfl73wj",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Az egyértelműség",
+			"q": "Ha $0<r<\\sigma(A,B)/2$ és $y\\in K_r(A)$, akkor $\\sigma(y,B)\\ge\\sigma(A,B)-\\sigma(y,A)>\\sigma(A,B)-r>{{1}}$, így $y\\notin K_r(B)$.",
+			"blanks": [
+				"r"
+			]
+		},
+		{
+			"id": "74czccx1",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Lokalitás",
+			"q": "A határérték {{1}} tulajdonság: az $a\\in D_f$ kérdés és az {{2}} helyettesítési érték szempontjából érdektelen.",
+			"blanks": [
+				"lokális",
+				"f(a)"
+			]
+		},
+		{
+			"id": "un8iw9i8",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Műveletek",
+			"q": "Normált $Y$ esetén, ha $A=\\lim_a f$ és $B=\\lim_a g$, akkor minden $\\lambda\\in\\mathbb{K}$-ra $\\lim_a(f+\\lambda g)={{1}}$.",
+			"blanks": [
+				"A+\\lambda B"
+			]
+		},
+		{
+			"id": "ak3592lz",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Koordinátánként",
+			"q": "$f=(f_1,\\dots,f_m)\\in\\mathbb{K}^s\\to\\mathbb{K}^m$ esetén $\\lim_a f={{1}}$, amint mind az $m$ koordinátahatárérték létezik.",
+			"blanks": [
+				"(\\lim_a f_1,\\dots,\\lim_a f_m)"
+			]
+		},
+		{
+			"id": "rbps4yae",
+			"page": "concepts/analiii/fuggvenyhatarertek-metrikus-terben",
+			"gate": "tartalom/Feladatok",
+			"q": "$(x^2+y^2)^{x^2y^2}={{1}}\\to e^0=1$ az origóban, mert $|x^2y^2\\ln(x^2+y^2)|\\le r^4|\\ln r^2|\\to0$.",
+			"blanks": [
+				"e^{x^2y^2\\ln(x^2+y^2)}"
+			]
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+	"version": 1,
+	"subject": "analiii",
+	"unit": "6-eloadas-masodrendu-derivaltak",
+	"unitTitle": "6. előadás — Másodrendű deriváltak",
+	"type": "short",
+	"batches": [
+		{
+			"at": "2026-10-21T21:21:20.608Z",
+			"model": "opus/medium",
+			"direction": "Általános: Vizsgára készülök. A kérdések azt kérjék számon, amit a vizsgán kérdeznek: definíciók pontos feltételekkel, tételek feltételei és állításai, „miért” érvek, hasonló fogalmak különbsége, egy módszer alkalmazása kis példán. Ne kérdezz lexikális apróságot (ki vezette be, melyik dián van), és ne olyat, aminek a válasza a kérdés szövegéből kiolvasható.",
+			"added": 8
+		}
+	],
+	"questions": [
+		{
+			"id": "k0y2m0zo",
+			"page": "concepts/analiii/magasabbrendu-parcialis-derivaltak",
+			"q": "Számítsd ki az $f=x^3y+x^2y^2+x+y^2$ függvény $\\partial_{xx}f$, $\\partial_{xy}f$ és $\\partial_{yy}f$ másodrendű parciális deriváltjait az $(1,0)$ pontban!",
+			"answer": "$\\partial_xf=3x^2y+2xy^2+1$, $\\partial_yf=x^3+2x^2y+2y$, ebből $\\partial_{xx}f=6xy+2y^2$, $\\partial_{xy}f=3x^2+4xy$, $\\partial_{yy}f=2x^2+2$. Az $(1,0)$ pontban: $\\partial_{xx}f=0$, $\\partial_{xy}f=\\partial_{yx}f=3$, $\\partial_{yy}f=4$."
+		},
+		{
+			"id": "dwte1fkh",
+			"page": "concepts/analiii/magasabbrendu-parcialis-derivaltak",
+			"q": "Legyen $f(x,y,z)=x^3+y^2z+z^3+xyz$. Add meg a $\\partial_{yz}f$ függvényt és a $\\partial_{xyz}f$ harmadrendű parciális deriváltat!",
+			"answer": "$\\partial_y f=2yz+xz$, ezért $\\partial_{yz}f=2y+x$. $\\partial_x f=3x^2+yz$, $\\partial_{xy}f=z$, tehát $\\partial_{xyz}f=1$."
+		},
+		{
+			"id": "8g0uqre8",
+			"page": "concepts/analiii/magasabbrendu-parcialis-derivaltak",
+			"q": "Miért nem lehet a többváltozós harmadik deriváltat egyszerűen a második derivált $f''=(\\operatorname{grad} f)'$ deriváltjaként definiálni, és mi a helyette használt definíció?",
+			"answer": "Az $f''$ egy $\\mathbb{R}^n\\to\\mathbb{R}^{n\\times n}$ típusú függvény, ilyen leképezések deriváltját nem értelmeztük. Ezért indukcióval a parciális deriváltfüggvényekkel definiálunk: $f\\in D^{s+1}\\{a\\}$, ha egy $K(a)$ környezet minden pontjában $f\\in D^s\\{x\\}$, és minden $s$-edrendű parciális deriváltfüggvénye differenciálható $a$-ban."
+		},
+		{
+			"id": "fqu537bw",
+			"page": "concepts/analiii/hesse-matrix",
+			"q": "Írd fel az $f(x,y,z)=x^3+y^2z+z^3+xyz$ függvény Hesse-mátrixát az $(1,0,2)$ pontban!",
+			"answer": "A másodrendű parciálisok: $\\partial_{xx}f=6x$, $\\partial_{xy}f=z$, $\\partial_{xz}f=y$, $\\partial_{yy}f=2z$, $\\partial_{yz}f=2y+x$, $\\partial_{zz}f=6z$. Ezekbe behelyettesítve $f''(1,0,2)=\\begin{bmatrix}6&2&0\\\\2&4&1\\\\0&1&12\\end{bmatrix}$."
+		},
+		{
+			"id": "m1hnrgo2",
+			"page": "concepts/analiii/hesse-matrix",
+			"q": "$n=2$ esetén írd ki a $\\sum_{|i|=2}\\frac{\\partial^i f(a)}{i!}h^i$ összeget, és mutasd meg, hogy ez $\\tfrac12\\langle f''(a)h,h\\rangle$-val egyenlő!",
+			"answer": "$i\\in\\{(2,0),(1,1),(0,2)\\}$, $i!=2,1,2$, így az összeg $\\tfrac12\\partial_1^2f(a)h_1^2+\\partial_{12}f(a)h_1h_2+\\tfrac12\\partial_2^2f(a)h_2^2$. Mivel a Young-tétel miatt $\\partial_{12}f=\\partial_{21}f$, a vegyes tag $\\tfrac12(\\partial_{12}f+\\partial_{21}f)h_1h_2$ alakba írható, és így az összeg $\\tfrac12\\sum_{j,l}\\partial_{jl}f(a)h_jh_l=\\tfrac12\\langle f''(a)h,h\\rangle$."
+		},
+		{
+			"id": "t3cpysay",
+			"page": "concepts/analiii/tobbvaltozos-taylor-polinom",
+			"q": "Írd fel a $P=2x^2-xy-y^2-6x-3y+5$ polinom másodrendű Taylor-polinomját az $a=(1,-2)$ pontban! Mekkora az eltérés $P$ és $T_{a,2}P$ között?",
+			"answer": "$P(a)=5$, $\\partial_1P(a)=\\partial_2P(a)=0$, $\\partial_{11}P=4$, $\\partial_{12}P=-1$, $\\partial_{22}P=-2$, így $T_{a,2}P=5+2(x-1)^2-(x-1)(y+2)-(y+2)^2$. Mivel a harmadrendű deriváltak nullák, a Lagrange-maradék $0$, vagyis $P=T_{a,2}P$ az egész síkon."
+		},
+		{
+			"id": "pxvnoa1t",
+			"page": "concepts/analiii/tobbvaltozos-taylor-polinom",
+			"q": "Határozd meg az $f(x,y)=\\ln(1+x)\\ln(1+y)$ függvény második Taylor-polinomját az origóban!",
+			"answer": "$\\partial_xf=\\ln(1+y)/(1+x)$, $\\partial_{xx}f=-\\ln(1+y)/(1+x)^2$, $\\partial_{xy}f=1/((1+x)(1+y))$, ezért $f(0,0)=0$, $f'(0,0)=0$ és $f''(0,0)=\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}$. Így $T_{0,2}f=\\tfrac12\\cdot 2xy=xy$."
+		},
+		{
+			"id": "k84y8ds1",
+			"page": "concepts/analiii/tobbvaltozos-taylor-polinom",
+			"q": "Közelítsd az $1{,}02^{3{,}01}$ értéket az $f(x,y)=x^y$ függvény $(1,3)$ pont körüli első Taylor-polinomjával!",
+			"answer": "$f(1,3)=1$, $\\partial_xf=yx^{y-1}$ miatt $\\partial_xf(1,3)=3$, és $\\partial_yf=x^y\\ln x$ miatt $\\partial_yf(1,3)=0$. Így $T_1f=1+3(x-1)$, tehát $1{,}02^{3{,}01}\\approx1+3\\cdot0{,}02=1{,}06$ (a pontos érték kb. $1{,}0614$)."
+		}
+	]
+}
